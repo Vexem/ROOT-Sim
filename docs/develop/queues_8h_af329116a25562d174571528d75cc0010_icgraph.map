@@ -1,0 +1,7 @@
+<map id="generate_mark" name="generate_mark">
+<area shape="rect" id="node2" href="$communication_8h.html#ae0329023aeab7047bcb7b4708698a008" title="ParallelScheduleNewEvent" alt="" coords="163,5,343,32"/>
+<area shape="rect" id="node5" href="$scheduler_8h.html#af405fd79c1cd59fccce27658d6e11941" title="initialize_worker_thread" alt="" coords="174,56,333,83"/>
+<area shape="rect" id="node3" href="$init_8h.html#a417eb072179d09f441dbae3125049e46" title="SystemInit" alt="" coords="423,5,508,32"/>
+<area shape="rect" id="node4" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="587,31,637,57"/>
+<area shape="rect" id="node6" href="$main_8c.html#ab05afef7d356edc20f6c99c6af0a33a8" title="main_simulation_loop" alt="" coords="392,56,539,83"/>
+</map>

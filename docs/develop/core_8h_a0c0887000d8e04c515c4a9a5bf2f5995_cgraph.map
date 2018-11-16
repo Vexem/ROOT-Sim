@@ -1,0 +1,5 @@
+<map id="distribute_lps_on_kernels" name="distribute_lps_on_kernels">
+<area shape="rect" id="node2" href="$core_8c.html#aa5d3c29f381884d4bb7cd0983b3c541a" title="rootsim_error" alt="" coords="336,5,435,32"/>
+<area shape="rect" id="node3" href="$dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="225,56,285,83"/>
+<area shape="rect" id="node4" href="$platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="334,56,437,83"/>
+</map>

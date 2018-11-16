@@ -1,0 +1,7 @@
+<map id="create_threads" name="create_threads">
+<area shape="rect" id="node2" href="$dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="211,56,271,83"/>
+<area shape="rect" id="node5" href="$thread_8c.html#a9a978a7c6a81cdde2633f5ef7e01b7f4" title="__helper_create_thread" alt="" coords="163,107,320,133"/>
+<area shape="rect" id="node3" href="$platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="369,5,471,32"/>
+<area shape="rect" id="node4" href="$core_8c.html#aa5d3c29f381884d4bb7cd0983b3c541a" title="rootsim_error" alt="" coords="371,56,469,83"/>
+<area shape="rect" id="node6" href="$atomic_8h.html#a710db68e3b3e156fe414d7745c54ccd9" title="iCAS" alt="" coords="393,107,447,133"/>
+</map>

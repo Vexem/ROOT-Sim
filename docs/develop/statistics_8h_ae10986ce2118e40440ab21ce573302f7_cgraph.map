@@ -1,0 +1,8 @@
+<map id="statistics_post_other_data" name="statistics_post_other_data">
+<area shape="rect" id="node2" href="$statistics_8c.html#a166fb1561ef7dcaea468f5f56561e19a" title="statistics_start" alt="" coords="243,5,351,32"/>
+<area shape="rect" id="node3" href="$memusage_8c.html#a8a5c7f9731dfe1f991cdaa336934cdc8" title="getCurrentRSS" alt="" coords="242,56,353,83"/>
+<area shape="rect" id="node4" href="$core_8c.html#aa5d3c29f381884d4bb7cd0983b3c541a" title="rootsim_error" alt="" coords="248,107,347,133"/>
+<area shape="rect" id="node5" href="$statistics_8c.html#af862b3aad7f1795fdb1133222c8a0d87" title="statistics_flush_gvt" alt="" coords="230,157,365,184"/>
+<area shape="rect" id="node6" href="$statistics_8c.html#a5b6ed6b20c419e7c19651ff3e2617c47" title="statistics_flush_gvt\l_buffer" alt="" coords="414,150,549,191"/>
+<area shape="rect" id="node7" href="$statistics_8c.html#a7bc10ad1f07cc57a8c34bef4ae781b5d" title="get_file" alt="" coords="597,157,661,184"/>
+</map>

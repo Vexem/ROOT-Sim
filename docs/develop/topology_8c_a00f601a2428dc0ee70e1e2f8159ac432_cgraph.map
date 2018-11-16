@@ -1,0 +1,10 @@
+<map id="a_star" name="a_star">
+<area shape="rect" id="node2" href="$dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="137,31,197,57"/>
+<area shape="rect" id="node5" href="$topology_8c.html#a7ef1731105f39b4c97a5cc7ff3473401" title="GetReceiver" alt="" coords="119,81,214,108"/>
+<area shape="rect" id="node7" href="$topology_8c.html#a76a3f88d780ea92228c02c44ffcf3cf3" title="compare_astar" alt="" coords="113,132,221,159"/>
+<area shape="rect" id="node8" href="$dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a" title="rsfree" alt="" coords="139,183,194,209"/>
+<area shape="rect" id="node3" href="$platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="270,5,373,32"/>
+<area shape="rect" id="node4" href="$core_8c.html#aa5d3c29f381884d4bb7cd0983b3c541a" title="rootsim_error" alt="" coords="272,56,371,83"/>
+<area shape="rect" id="node6" href="$core_8h.html#ac2b1b08baf23849d226a2302773d3e40" title="LidToGid" alt="" coords="284,107,359,133"/>
+<area shape="rect" id="node9" href="$platform_8c.html#ae2af2cd130d16958394ae21e9d13035f" title="__real_free" alt="" coords="278,183,365,209"/>
+</map>

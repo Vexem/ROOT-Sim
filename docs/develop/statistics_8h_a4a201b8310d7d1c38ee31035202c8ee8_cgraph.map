@@ -1,0 +1,8 @@
+<map id="statistics_init" name="statistics_init">
+<area shape="rect" id="node2" href="$statistics_8c.html#a3035806634335aef4b24643ee79200f1" title="_rmdir" alt="" coords="159,5,217,32"/>
+<area shape="rect" id="node4" href="$statistics_8c.html#ac7254a0e4869450a54de7d4a07d96cb2" title="_mkdir" alt="" coords="157,56,219,83"/>
+<area shape="rect" id="node5" href="$dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="158,157,218,184"/>
+<area shape="rect" id="node7" href="$statistics_8c.html#ae26c0a2330d13fd767f5974722151d1d" title="new_file" alt="" coords="153,107,223,133"/>
+<area shape="rect" id="node3" href="$core_8c.html#aa5d3c29f381884d4bb7cd0983b3c541a" title="rootsim_error" alt="" coords="275,81,373,108"/>
+<area shape="rect" id="node6" href="$platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="273,157,375,184"/>
+</map>

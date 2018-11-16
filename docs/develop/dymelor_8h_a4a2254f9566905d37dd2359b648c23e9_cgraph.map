@@ -1,0 +1,14 @@
+<map id="dymelor_init" name="dymelor_init">
+<area shape="rect" id="node2" href="$buddy_8c.html#accf456c506e2226878e1856369eedfca" title="allocator_init" alt="" coords="163,132,258,159"/>
+<area shape="rect" id="node10" href="$dymelor_8h.html#af44fc43c08c5bed7cc73ffb237bef482" title="recoverable_init" alt="" coords="154,385,267,412"/>
+<area shape="rect" id="node13" href="$dymelor_8h.html#aab19b1a0d7f56000239cefa682975743" title="unrecoverable_init" alt="" coords="147,309,274,336"/>
+<area shape="rect" id="node3" href="$dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="519,259,579,285"/>
+<area shape="rect" id="node6" href="$core_8h.html#a9955b1515a2c92396ca0212388334706" title="GidToKernel" alt="" coords="335,5,430,32"/>
+<area shape="rect" id="node7" href="$core_8h.html#ae5f6229b772f341c48f260fcc5c1305a" title="GidToLid" alt="" coords="345,56,420,83"/>
+<area shape="rect" id="node8" href="$mm_8h.html#ad69145071f3a00155c36729cce90ddb5" title="get_segment" alt="" coords="501,157,598,184"/>
+<area shape="rect" id="node9" href="$buddy_8c.html#a1e061ddd725e8ce3096a01144cb2f16a" title="buddy_new" alt="" coords="339,208,427,235"/>
+<area shape="rect" id="node4" href="$platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="657,259,759,285"/>
+<area shape="rect" id="node5" href="$core_8c.html#aa5d3c29f381884d4bb7cd0983b3c541a" title="rootsim_error" alt="" coords="659,309,757,336"/>
+<area shape="rect" id="node11" href="$dymelor_8c.html#a3a7beb7e973dcc535935cc2fe724d83d" title="malloc_state_init" alt="" coords="323,411,443,437"/>
+<area shape="rect" id="node12" href="$dymelor_8c.html#a85112cc6ca87655111a1c696a4bcdbe4" title="malloc_area_init" alt="" coords="491,411,607,437"/>
+</map>

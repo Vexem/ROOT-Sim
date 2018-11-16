@@ -1,0 +1,14 @@
+<map id="get_file" name="get_file">
+<area shape="rect" id="node2" href="$statistics_8c.html#a5b6ed6b20c419e7c19651ff3e2617c47" title="statistics_flush_gvt\l_buffer" alt="" coords="118,130,253,171"/>
+<area shape="rect" id="node3" href="$statistics_8h.html#aeff52bbf045362270639b2baed20762b" title="statistics_stop" alt="" coords="316,79,423,105"/>
+<area shape="rect" id="node11" href="$statistics_8c.html#af862b3aad7f1795fdb1133222c8a0d87" title="statistics_flush_gvt" alt="" coords="302,159,437,185"/>
+<area shape="rect" id="node4" href="$core_8h.html#a3921baf034c32267c392af389d1f3f2a" title="simulation_shutdown" alt="" coords="501,73,645,100"/>
+<area shape="rect" id="node5" href="$core_8c.html#a9b05d2af2e233e2616633eaa706682ee" title="exit_from_simulation\l_model" alt="" coords="710,5,853,46"/>
+<area shape="rect" id="node9" href="$main_8c.html#ab05afef7d356edc20f6c99c6af0a33a8" title="main_simulation_loop" alt="" coords="901,172,1048,199"/>
+<area shape="rect" id="node10" href="$serial_8h.html#ad6ad0d134746a428ef1ece46a3bdcc43" title="serial_simulation" alt="" coords="722,121,841,148"/>
+<area shape="rect" id="node6" href="$core_8h.html#a7fb819521b1ab5fc7644ad216fe7b465" title="base_init" alt="" coords="937,27,1012,53"/>
+<area shape="rect" id="node7" href="$init_8h.html#a417eb072179d09f441dbae3125049e46" title="SystemInit" alt="" coords="1096,56,1181,83"/>
+<area shape="rect" id="node8" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1229,121,1280,148"/>
+<area shape="rect" id="node12" href="$statistics_8h.html#ae10986ce2118e40440ab21ce573302f7" title="statistics_post_other_data" alt="" coords="486,169,661,196"/>
+<area shape="rect" id="node13" href="$gvt_2gvt_8h.html#a899b50ab45427cf145360ff3a6c29808" title="gvt_operations" alt="" coords="728,223,835,249"/>
+</map>

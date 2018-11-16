@@ -1,0 +1,5 @@
+<map id="calqueue_init" name="calqueue_init">
+<area shape="rect" id="node2" href="$serial_8h.html#ad2b461e9e9044364a28a61cfadcacdd8" title="serial_init" alt="" coords="152,5,229,32"/>
+<area shape="rect" id="node3" href="$init_8h.html#a417eb072179d09f441dbae3125049e46" title="SystemInit" alt="" coords="277,5,363,32"/>
+<area shape="rect" id="node4" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="411,5,461,32"/>
+</map>

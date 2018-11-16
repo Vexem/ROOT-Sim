@@ -1,0 +1,12 @@
+<map id="log_delete" name="log_delete">
+<area shape="rect" id="node2" href="$ccgs_8h.html#af8c1dd6d3ab2078085039fec6c7b0d9f" title="ccgs_compute_snapshot" alt="" coords="137,5,303,32"/>
+<area shape="rect" id="node7" href="$fossil_8c.html#acd3044f262ede5818078a42d747329cf" title="fossil_collection" alt="" coords="163,56,277,83"/>
+<area shape="rect" id="node8" href="$state_8h.html#ae8237df0b39ec098c8786a533c3d92d5" title="rollback" alt="" coords="187,107,253,133"/>
+<area shape="rect" id="node3" href="$gvt_2gvt_8h.html#a62e7abde0dac08e56aa2a57401aed27b" title="adopt_new_gvt" alt="" coords="353,5,463,32"/>
+<area shape="rect" id="node4" href="$gvt_2gvt_8h.html#a899b50ab45427cf145360ff3a6c29808" title="gvt_operations" alt="" coords="685,56,792,83"/>
+<area shape="rect" id="node5" href="$main_8c.html#ab05afef7d356edc20f6c99c6af0a33a8" title="main_simulation_loop" alt="" coords="867,107,1013,133"/>
+<area shape="rect" id="node6" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1061,107,1112,133"/>
+<area shape="rect" id="node9" href="$scheduler_8h.html#ac48128e72b303ea22d8ec641a9516b15" title="schedule" alt="" coords="371,107,445,133"/>
+<area shape="rect" id="node10" href="$gvt_2gvt_8c.html#a895d5bfff43f3ee72f9cf7097abf609b" title="GVT_phases" alt="" coords="512,56,611,83"/>
+<area shape="rect" id="node11" href="$scheduler_8h.html#af405fd79c1cd59fccce27658d6e11941" title="initialize_worker_thread" alt="" coords="659,157,818,184"/>
+</map>

@@ -1,0 +1,25 @@
+<map id="/home/travis/build/HPDCS/ROOT&#45;Sim/src/statistics/statistics.c" name="/home/travis/build/HPDCS/ROOT&#45;Sim/src/statistics/statistics.c">
+<area shape="rect" id="node12" href="$thread_8h.html" title="This module implements Kernel Level Thread supports. " alt="" coords="2061,587,2160,613"/>
+<area shape="rect" id="node16" href="$memusage_8h.html" title="This module provides system&#45;dependend functions to retrieve the current/peak memory usage..." alt="" coords="149,184,275,211"/>
+<area shape="rect" id="node17" href="$process_8h.html" title="This header defines a LP control block, keeping information about both simulation state and execution..." alt="" coords="1640,259,1779,285"/>
+<area shape="rect" id="node18" href="$state_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="837,437,925,464"/>
+<area shape="rect" id="node23" href="$core_8h.html" title="This header defines all the shared symbols which are needed by different subsystems. " alt="" coords="1229,512,1315,539"/>
+<area shape="rect" id="node25" href="$dymelor_8h.html" title="This is the Memory Management Subsystem main header file. " alt="" coords="810,348,915,375"/>
+<area shape="rect" id="node28" href="$timer_8h.html" title="This header defines the timers which the simulator uses to monitor its internal behaviour. " alt="" coords="435,437,525,464"/>
+<area shape="rect" id="node39" href="$scheduler_8h.html" title="Scheduling Subsystem main header file. Scheduler&#45;specific data structures and defines should be place..." alt="" coords="1149,184,1297,211"/>
+<area shape="rect" id="node40" href="$queues_8h.html" title="Event and State queueing Subsystem main header. " alt="" coords="1346,259,1467,285"/>
+<area shape="rect" id="node42" href="$gvt_2gvt_8h.html" title="gvt/gvt.h" alt="" coords="713,348,785,375"/>
+<area shape="rect" id="node43" href="$statistics_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="1661,184,1803,211"/>
+<area shape="rect" id="node44" href="$init_8h.html" title="This module implements the simulator initialization routines. " alt="" coords="1711,109,1789,136"/>
+<area shape="rect" id="node14" href="$atomic_8h.html" title="This module implements atomic and non&#45;blocking operations used within ROOT&#45;Sim to coordinate threads ..." alt="" coords="1989,661,2091,688"/>
+<area shape="rect" id="node24" href="$numerical_8h.html" title="This header is used to define symbols which must be accessible by the simulator but not by the applic..." alt="" coords="1561,587,1668,613"/>
+<area shape="rect" id="node30" href="$ecs_8h.html" title="mm/ecs.h" alt="" coords="1860,348,1939,375"/>
+<area shape="rect" id="node31" href="$list_8h.html" title="This header defines macros for accessing the general&#45;purpose list implementation used in the simulato..." alt="" coords="1926,587,2036,613"/>
+<area shape="rect" id="node34" href="$msgchannel_8h.html" title="This module implements an (M, 1) channel to transfer message pointers. " alt="" coords="1746,437,1909,464"/>
+<area shape="rect" id="node35" href="$ult_8h.html" title="The User&#45;Level Thread module allows the creation/scheduling of a user&#45;level thread in an architecture..." alt="" coords="1093,348,1168,375"/>
+<area shape="rect" id="node36" href="$communication_8h.html" title="This is the main header file, containing all data structures and defines used by the communication su..." alt="" coords="1295,348,1508,375"/>
+<area shape="rect" id="node37" href="$cross__state__manager_8h.html" title="arch/x86/linux/cross\l_state_manager/cross\l_state_manager.h" alt="" coords="1634,333,1784,389"/>
+<area shape="rect" id="node19" href="$ROOT-Sim_8h.html" title="This header defines all the symbols which are needed to develop a Model to be simulated on top of ROO..." alt="" coords="913,587,1012,613"/>
+<area shape="rect" id="node26" href="$bitmap_8h.html" title="This header implements a minimal bitmap data type. " alt="" coords="1000,437,1133,464"/>
+<area shape="rect" id="node41" href="$stf_8h.html" title="Smallest Timestamp First scheduler main header. " alt="" coords="1047,259,1155,285"/>
+</map>

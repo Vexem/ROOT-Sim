@@ -1,0 +1,51 @@
+<map id="/home/travis/build/HPDCS/ROOT&#45;Sim/src/ROOT&#45;Sim.h" name="/home/travis/build/HPDCS/ROOT&#45;Sim/src/ROOT&#45;Sim.h">
+<area shape="rect" id="node2" href="$core_8h.html" title="This header defines all the shared symbols which are needed by different subsystems. " alt="" coords="2853,109,3017,165"/>
+<area shape="rect" id="node9" href="$init_8c.html" title="This module implements the simulator initialization routines. " alt="" coords="5731,629,5895,685"/>
+<area shape="rect" id="node12" href="$gvt_2gvt_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/gvt/gvt.c" alt="" coords="4939,629,5103,685"/>
+<area shape="rect" id="node13" href="$numerical_8c.html" title="In this module there are the implementations of Piece&#45;Wise Deterministic numerical distribution imple..." alt="" coords="643,629,807,685"/>
+<area shape="rect" id="node23" href="$scheduler_8h.html" title="Scheduling Subsystem main header file. Scheduler&#45;specific data structures and defines should be place..." alt="" coords="2496,525,2660,581"/>
+<area shape="rect" id="node24" href="$topology_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/lib/topology.c" alt="" coords="924,629,1088,685"/>
+<area shape="rect" id="node28" href="$serial_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/serial/serial.c" alt="" coords="6224,629,6388,685"/>
+<area shape="rect" id="node45" href="$state_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="4971,213,5135,269"/>
+<area shape="rect" id="node47" href="$gvt_2gvt_8h.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/gvt/gvt.h" alt="" coords="4408,525,4572,581"/>
+<area shape="rect" id="node50" href="$serial_8h.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/serial/serial.h" alt="" coords="6104,525,6268,581"/>
+<area shape="rect" id="node3" href="$ult_8c.html" title="The User&#45;Level Thread module allows the creation/scheduling of a user&#45;level thread in an architecture..." alt="" coords="3293,525,3457,581"/>
+<area shape="rect" id="node4" href="$ult_8h.html" title="The User&#45;Level Thread module allows the creation/scheduling of a user&#45;level thread in an architecture..." alt="" coords="2549,317,2713,373"/>
+<area shape="rect" id="node5" href="$unrecoverable_8c.html" title="LP&#39;s memory pre&#45;allocator. This layer stands below DyMeLoR, and is the connection point to the Linux ..." alt="" coords="1532,629,1696,685"/>
+<area shape="rect" id="node7" href="$communication_8c.html" title="This module implements all the communication routines, for exchanging messages among different logica..." alt="" coords="2858,629,3075,685"/>
+<area shape="rect" id="node8" href="$core_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/core/core.c" alt="" coords="4528,629,4692,685"/>
+<area shape="rect" id="node10" href="$ccgs_8c.html" title="Consistent and Committed Global State (CCGS) is a subsystem that (poeriodically) recomputes a global ..." alt="" coords="4749,629,4913,685"/>
+<area shape="rect" id="node14" href="$main_8c.html" title="This module contains the entry point for the simulator, and some core functions. " alt="" coords="5477,629,5641,685"/>
+<area shape="rect" id="node15" href="$checkpoints_8c.html" title="This module implements the routines to save and restore checkpoints, both full and incremental..." alt="" coords="1911,629,2075,685"/>
+<area shape="rect" id="node16" href="$recoverable_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/mm/recoverable.c" alt="" coords="2100,629,2264,685"/>
+<area shape="rect" id="node17" href="$state_8c.html" title="The state module is responsible for managing LPs&#39; simulation states. In particular, it allows to take a snapshot, to restore a previous snapshot, and to silently re&#45;execute a portion of simulation events to bring a LP to a partiuclar LVT value for which no simulation state. " alt="" coords="3537,629,3701,685"/>
+<area shape="rect" id="node18" href="$queues_8c.html" title="This module implements the event/message queues subsystem. " alt="" coords="3123,629,3287,685"/>
+<area shape="rect" id="node19" href="$binding_8c.html" title="Implements load sharing rules for LPs among worker threads. " alt="" coords="3851,629,4015,685"/>
+<area shape="rect" id="node20" href="$control_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/scheduler/control.c" alt="" coords="4212,629,4376,685"/>
+<area shape="rect" id="node21" href="$process_8c.html" title="This header defines type&#45;safe operations for LP control block management. " alt="" coords="1721,629,1885,685"/>
+<area shape="rect" id="node22" href="$scheduler_8c.html" title="Re&#45;entrant scheduler for LPs on worker threads. " alt="" coords="1329,629,1493,685"/>
+<area shape="rect" id="node27" href="$stf_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/scheduler/stf.c" alt="" coords="2479,629,2643,685"/>
+<area shape="rect" id="node29" href="$statistics_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/statistics/statistics.c" alt="" coords="2668,629,2832,685"/>
+<area shape="rect" id="node30" href="$communication_8h.html" title="This is the main header file, containing all data structures and defines used by the communication su..." alt="" coords="2827,317,3044,373"/>
+<area shape="rect" id="node31" href="$msgchannel_8c.html" title="This module implements an (M, 1) channel to transfer message pointers. " alt="" coords="915,421,1083,477"/>
+<area shape="rect" id="node32" href="$bitmap_8h.html" title="This header implements a minimal bitmap data type. " alt="" coords="5459,213,5623,269"/>
+<area shape="rect" id="node33" href="$dymelor_8h.html" title="This is the Memory Management Subsystem main header file. " alt="" coords="3664,317,3828,373"/>
+<area shape="rect" id="node37" href="$calqueue_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/datatypes/calqueue.c" alt="" coords="3485,421,3649,477"/>
+<area shape="rect" id="node39" href="$buddy_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/mm/buddy.c" alt="" coords="333,421,497,477"/>
+<area shape="rect" id="node40" href="$platform_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/mm/platform.c" alt="" coords="3296,421,3460,477"/>
+<area shape="rect" id="node41" href="$msgchannel_8h.html" title="This module implements an (M, 1) channel to transfer message pointers. " alt="" coords="1000,317,1168,373"/>
+<area shape="rect" id="node42" href="$slab_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/datatypes/slab.c" alt="" coords="573,421,737,477"/>
+<area shape="rect" id="node43" href="$mm_8h.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/mm/mm.h" alt="" coords="457,317,621,373"/>
+<area shape="rect" id="node48" href="$queues_8h.html" title="Event and State queueing Subsystem main header. " alt="" coords="2259,421,2423,477"/>
+<area shape="rect" id="node49" href="$stf_8h.html" title="Smallest Timestamp First scheduler main header. " alt="" coords="1664,421,1828,477"/>
+<area shape="rect" id="node6" href="$process_8h.html" title="This header defines a LP control block, keeping information about both simulation state and execution..." alt="" coords="2853,421,3017,477"/>
+<area shape="rect" id="node11" href="$fossil_8c.html" title="In this module all the housekeeping operations related to GVT computation phase are present..." alt="" coords="5183,629,5347,685"/>
+<area shape="rect" id="node25" href="$wrapper_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/lib&#45;wrapper/wrapper.c" alt="" coords="2289,629,2453,685"/>
+<area shape="rect" id="node26" href="$dymelor_8c.html" title="LP&#39;s memory pre&#45;allocator. This layer stands below DyMeLoR, and is the connection point to the Linux ..." alt="" coords="1113,629,1277,685"/>
+<area shape="rect" id="node34" href="$memusage_8c.html" title="This module provides system&#45;dependend functions to retrieve the current/peak memory usage..." alt="" coords="3928,421,4092,477"/>
+<area shape="rect" id="node35" href="$thread_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/arch/thread.c" alt="" coords="4117,421,4281,477"/>
+<area shape="rect" id="node36" href="$x86_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/arch/x86.c" alt="" coords="4307,421,4471,477"/>
+<area shape="rect" id="node38" href="$treiber_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/datatypes/treiber.c" alt="" coords="4496,421,4660,477"/>
+<area shape="rect" id="node44" href="$segment_8c.html" title="Segment Allocator. " alt="" coords="144,421,308,477"/>
+<area shape="rect" id="node46" href="$ccgs_8h.html" title="Consistent and Committed Global State (CCGS) is a subsystem that (poeriodically) recomputes a global ..." alt="" coords="5357,525,5521,581"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="unrecoverable_init" name="unrecoverable_init">
+<area shape="rect" id="node2" href="$dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="378,5,438,32"/>
+<area shape="rect" id="node4" href="$core_8c.html#aa5d3c29f381884d4bb7cd0983b3c541a" title="rootsim_error" alt="" coords="517,56,616,83"/>
+<area shape="rect" id="node5" href="$dymelor_8c.html#a3a7beb7e973dcc535935cc2fe724d83d" title="malloc_state_init" alt="" coords="181,107,301,133"/>
+<area shape="rect" id="node3" href="$platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="515,5,618,32"/>
+<area shape="rect" id="node6" href="$dymelor_8c.html#a85112cc6ca87655111a1c696a4bcdbe4" title="malloc_area_init" alt="" coords="350,157,466,184"/>
+</map>

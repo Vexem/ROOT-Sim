@@ -1,0 +1,11 @@
+<map id="insert_bottom_half" name="insert_bottom_half">
+<area shape="rect" id="node2" href="$core_8h.html#ae5f6229b772f341c48f260fcc5c1305a" title="GidToLid" alt="" coords="191,5,265,32"/>
+<area shape="rect" id="node3" href="$communication_8c.html#aebec05b86f3467473116d555954b80f4" title="validate_msg" alt="" coords="320,43,419,69"/>
+<area shape="rect" id="node5" href="$msgchannel_8c.html#a1ae9825eb7701f2b3f546de2cf071fe2" title="insert_msg" alt="" coords="185,132,271,159"/>
+<area shape="rect" id="node4" href="$communication_8c.html#ab442ee81854e910ac0b21e3caf21cc48" title="mark_to_gid" alt="" coords="472,43,565,69"/>
+<area shape="rect" id="node6" href="$atomic_8h.html#a7a6b9868956dd8e51e5de80e16c76fc4" title="spin_lock" alt="" coords="331,93,408,120"/>
+<area shape="rect" id="node7" href="$dymelor_8h.html#a480bc47d84033faa5410d5a3c4470ff7" title="rsrealloc" alt="" coords="334,144,405,171"/>
+<area shape="rect" id="node9" href="$core_8c.html#aa5d3c29f381884d4bb7cd0983b3c541a" title="rootsim_error" alt="" coords="320,195,419,221"/>
+<area shape="rect" id="node10" href="$atomic_8h.html#a4e8c9d1c6101995f1ecd2141d77e4824" title="spin_unlock" alt="" coords="324,245,415,272"/>
+<area shape="rect" id="node8" href="$platform_8c.html#af571772318d146f693e37e7a580103c0" title="__real_realloc" alt="" coords="467,144,570,171"/>
+</map>

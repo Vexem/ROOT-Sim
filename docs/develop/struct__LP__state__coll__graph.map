@@ -1,0 +1,10 @@
+<map id="_LP_state" name="_LP_state">
+<area shape="rect" id="node2" href="$struct__msg__channel.html" title="_msg_channel" alt="" coords="128,304,235,331"/>
+<area shape="rect" id="node3" href="$structspinlock__t.html" title="Spinlock definition. " alt="" coords="36,203,116,229"/>
+<area shape="rect" id="node4" href="$struct__msg__buff.html" title="_msg_buff" alt="" coords="238,203,319,229"/>
+<area shape="rect" id="node5" href="$struct__msg__t.html" title="Message Type definition. " alt="" coords="246,111,311,137"/>
+<area shape="rect" id="node8" href="$struct__outgoing__t.html" title="This structure is used by the communication subsystem to handle outgoing messages. " alt="" coords="312,253,400,280"/>
+<area shape="rect" id="node6" href="$struct__gid__t.html" title="_gid_t" alt="" coords="250,5,307,32"/>
+<area shape="rect" id="node7" href="$structatomic__t.html" title="Atomic counter definition. " alt="" coords="142,203,214,229"/>
+<area shape="rect" id="node9" href="$struct__lid__t.html" title="_lid_t" alt="" coords="404,304,458,331"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="my_virt_drv_exit" name="my_virt_drv_exit">
+<area shape="rect" id="node2" href="$my__page__fault_8c.html#a64533932a8050163ce3670fcb4097921" title="unregister_my_page\l_fault_handler" alt="" coords="173,5,312,46"/>
+<area shape="rect" id="node3" href="$my__page__fault_8c.html#acd25be9cc02d40beb35171d758bc1a65" title="my_load_idt" alt="" coords="361,12,453,39"/>
+</map>

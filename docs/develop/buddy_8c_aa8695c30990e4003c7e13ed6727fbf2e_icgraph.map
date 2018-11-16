@@ -1,0 +1,23 @@
+<map id="left_child" name="left_child">
+<area shape="rect" id="node2" href="$buddy_8c.html#ad74e6a21a9d853095ac794316f8e6aaf" title="choose_better_child" alt="" coords="128,309,267,336"/>
+<area shape="rect" id="node3" href="$buddy_8c.html#a4618c2f86e9c1bab6fb7b1d470369b04" title="buddy_alloc" alt="" coords="344,309,435,336"/>
+<area shape="rect" id="node16" href="$buddy_8c.html#a908ff223d4c32bca662a6312e90bc9b4" title="buddy_free" alt="" coords="154,411,241,437"/>
+<area shape="rect" id="node4" href="$dymelor_8h.html#aaddcbcb0ea217fe3feec3981cec273a4" title="pool_get_memory" alt="" coords="523,309,648,336"/>
+<area shape="rect" id="node5" href="$dymelor_8h.html#a1f7d977353fa17d93a71e5872780944e" title="do_malloc" alt="" coords="722,309,803,336"/>
+<area shape="rect" id="node6" href="$recoverable_8c.html#a3687f50774c89e7a09833a71adbb7771" title="__wrap_malloc" alt="" coords="867,157,976,184"/>
+<area shape="rect" id="node13" href="$unrecoverable_8c.html#ac3b7265f19dc2d2307cc95861d23e0ec" title="umalloc" alt="" coords="888,309,955,336"/>
+<area shape="rect" id="node7" href="$wrapper_8c.html#a849c010b96eae768d42712e2060efbe1" title="__wrap_strdup" alt="" coords="1044,5,1151,32"/>
+<area shape="rect" id="node8" href="$wrapper_8c.html#a0159c74a123b68c5434b8747172aa255" title="__wrap_strndup" alt="" coords="1040,56,1155,83"/>
+<area shape="rect" id="node9" href="$ROOT-Sim_8h.html#adebe424adaebf0abecac23c41891fbee" title="SetupObstacles" alt="" coords="1040,107,1155,133"/>
+<area shape="rect" id="node10" href="$ROOT-Sim_8h.html#a687b119a53a0db5787416bc460299cd2" title="ComputeMinTour" alt="" coords="1036,157,1159,184"/>
+<area shape="rect" id="node11" href="$recoverable_8c.html#a5dc7f457bad412e9964501f2273aea0e" title="__wrap_realloc" alt="" coords="1043,208,1152,235"/>
+<area shape="rect" id="node12" href="$recoverable_8c.html#a818524883cd69709fe0e3499d6748d14" title="__wrap_calloc" alt="" coords="1045,259,1150,285"/>
+<area shape="rect" id="node14" href="$unrecoverable_8c.html#a5d3ff7555bbe0e389e59ac667830adb4" title="urealloc" alt="" coords="1064,309,1131,336"/>
+<area shape="rect" id="node15" href="$unrecoverable_8c.html#ab87c1732c7d963efcd08cf86167fe21a" title="ucalloc" alt="" coords="1066,360,1129,387"/>
+<area shape="rect" id="node17" href="$dymelor_8h.html#a6e384930ff168ef10a50a2a8fe9561f4" title="pool_release_memory" alt="" coords="315,411,464,437"/>
+<area shape="rect" id="node18" href="$recoverable_8c.html#a9871eb799f492c7534c0fa54ad294d0f" title="clean_buffers_on_gvt" alt="" coords="512,411,659,437"/>
+<area shape="rect" id="node19" href="$gvt_2gvt_8h.html#a62e7abde0dac08e56aa2a57401aed27b" title="adopt_new_gvt" alt="" coords="707,411,818,437"/>
+<area shape="rect" id="node20" href="$gvt_2gvt_8h.html#a899b50ab45427cf145360ff3a6c29808" title="gvt_operations" alt="" coords="868,411,975,437"/>
+<area shape="rect" id="node21" href="$main_8c.html#ab05afef7d356edc20f6c99c6af0a33a8" title="main_simulation_loop" alt="" coords="1024,411,1171,437"/>
+<area shape="rect" id="node22" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1219,411,1269,437"/>
+</map>

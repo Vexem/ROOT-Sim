@@ -1,0 +1,8 @@
+<map id="buddy_free" name="buddy_free">
+<area shape="rect" id="node2" href="$dymelor_8h.html#a6e384930ff168ef10a50a2a8fe9561f4" title="pool_release_memory" alt="" coords="141,5,291,32"/>
+<area shape="rect" id="node3" href="$recoverable_8c.html#a9871eb799f492c7534c0fa54ad294d0f" title="clean_buffers_on_gvt" alt="" coords="339,5,485,32"/>
+<area shape="rect" id="node4" href="$gvt_2gvt_8h.html#a62e7abde0dac08e56aa2a57401aed27b" title="adopt_new_gvt" alt="" coords="534,5,645,32"/>
+<area shape="rect" id="node5" href="$gvt_2gvt_8h.html#a899b50ab45427cf145360ff3a6c29808" title="gvt_operations" alt="" coords="693,5,800,32"/>
+<area shape="rect" id="node6" href="$main_8c.html#ab05afef7d356edc20f6c99c6af0a33a8" title="main_simulation_loop" alt="" coords="848,5,995,32"/>
+<area shape="rect" id="node7" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1043,5,1093,32"/>
+</map>
