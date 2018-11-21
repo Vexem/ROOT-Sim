@@ -3,7 +3,7 @@ title: ROOT-Sim
 layout: default
 ---
 
-# The ROme Optimistic Simulator
+# The ROme OpTimistic Simulator
 
 Welcome to the ROOT-Sim website! ROOT-Sim is a HPC library targeting optimistic simulation. This runtime environment is able to deliver
 very fast simulation runs on massively parallel multicore machines and or distributed compute clusters/supercomputers.
