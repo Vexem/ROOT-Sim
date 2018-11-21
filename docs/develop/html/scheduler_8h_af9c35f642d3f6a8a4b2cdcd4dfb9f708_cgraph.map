@@ -1,0 +1,6 @@
+<map id="activate_LP" name="activate_LP">
+<area shape="rect" id="node2" href="$ecs_8h.html#af96855eb85637b829d7d3aa20f97ad3c" title="lp_alloc_schedule" alt="" coords="156,5,289,32"/>
+<area shape="rect" id="node3" href="$core_8c.html#aa5d3c29f381884d4bb7cd0983b3c541a" title="rootsim_error" alt="" coords="168,56,277,83"/>
+<area shape="rect" id="node4" href="$core_8h.html#ac2b1b08baf23849d226a2302773d3e40" title="LidToGid" alt="" coords="185,107,260,133"/>
+<area shape="rect" id="node5" href="$ecs_8h.html#a93b282f8af3c72bdbd5d0533a4cc2355" title="lp_alloc_deschedule" alt="" coords="148,157,297,184"/>
+</map>

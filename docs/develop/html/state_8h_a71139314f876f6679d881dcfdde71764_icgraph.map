@@ -1,0 +1,7 @@
+<map id="set_checkpoint_period" name="set_checkpoint_period">
+<area shape="rect" id="node2" href="$scheduler_8h.html#aaff5c2b077d953e96db63a1c3a58f418" title="initialize_LP" alt="" coords="219,5,313,32"/>
+<area shape="rect" id="node3" href="$scheduler_8h.html#af405fd79c1cd59fccce27658d6e11941" title="initialize_worker_thread" alt="" coords="361,5,532,32"/>
+<area shape="rect" id="node4" href="$main_8c.html#ab05afef7d356edc20f6c99c6af0a33a8" title="main_simulation_loop" alt="" coords="580,5,741,32"/>
+<area shape="rect" id="node5" href="$main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="789,5,911,32"/>
+<area shape="rect" id="node6" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="823,56,877,83"/>
+</map>

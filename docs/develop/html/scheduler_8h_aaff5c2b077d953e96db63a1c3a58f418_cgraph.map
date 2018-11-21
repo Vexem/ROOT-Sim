@@ -1,0 +1,9 @@
+<map id="initialize_LP" name="initialize_LP">
+<area shape="rect" id="node2" href="$state_8c.html#a71139314f876f6679d881dcfdde71764" title="set_checkpoint_period" alt="" coords="148,5,313,32"/>
+<area shape="rect" id="node3" href="$dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="199,56,262,83"/>
+<area shape="rect" id="node6" href="$core_8h.html#ac2b1b08baf23849d226a2302773d3e40" title="LidToGid" alt="" coords="399,107,474,133"/>
+<area shape="rect" id="node7" href="$scheduler_8c.html#a0c3c08456ef1aaa86ea0b0a3c4251945" title="LP_main_loop" alt="" coords="175,157,286,184"/>
+<area shape="rect" id="node4" href="$platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="382,5,491,32"/>
+<area shape="rect" id="node5" href="$core_8c.html#aa5d3c29f381884d4bb7cd0983b3c541a" title="rootsim_error" alt="" coords="560,157,669,184"/>
+<area shape="rect" id="node8" href="$statistics_8c.html#a59e37e49114d5cae5acf1e6c5ef300a1" title="statistics_post_data" alt="" coords="361,208,512,235"/>
+</map>

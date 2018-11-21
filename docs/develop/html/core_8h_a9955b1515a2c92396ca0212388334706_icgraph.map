@@ -1,0 +1,20 @@
+<map id="GidToKernel" name="GidToKernel">
+<area shape="rect" id="node2" href="$communication_8h.html#ab5250867c0edfc326732c059b0c0c3b5" title="Send" alt="" coords="173,107,228,133"/>
+<area shape="rect" id="node15" href="$core_8h.html#a7fb819521b1ab5fc7644ad216fe7b465" title="base_init" alt="" coords="161,157,240,184"/>
+<area shape="rect" id="node17" href="$core_8c.html#a0a384497f48902d463bda1d5968225eb" title="__attribute__" alt="" coords="148,208,253,235"/>
+<area shape="rect" id="node18" href="$mm_8h.html#accf456c506e2226878e1856369eedfca" title="allocator_init" alt="" coords="149,259,252,285"/>
+<area shape="rect" id="node3" href="$communication_8h.html#ae204ff37e50f04446529be1aa62225b0" title="send_antimessages" alt="" coords="320,5,471,32"/>
+<area shape="rect" id="node12" href="$communication_8h.html#aa0958a4c98d8911fbf2ebcb8dce7cba5" title="send_outgoing_msgs" alt="" coords="537,107,696,133"/>
+<area shape="rect" id="node13" href="$scheduler_8h.html#a0f922b117b3836e11f731935807037b7" title="rollback_control_message" alt="" coords="301,56,489,83"/>
+<area shape="rect" id="node14" href="$scheduler_8h.html#aacd9fe9684de21c933680f355acb5766" title="process_control_msg" alt="" coords="537,157,696,184"/>
+<area shape="rect" id="node4" href="$state_8h.html#ae8237df0b39ec098c8786a533c3d92d5" title="rollback" alt="" coords="581,56,652,83"/>
+<area shape="rect" id="node5" href="$scheduler_8h.html#ac48128e72b303ea22d8ec641a9516b15" title="schedule" alt="" coords="744,107,823,133"/>
+<area shape="rect" id="node6" href="$gvt_2gvt_8c.html#a895d5bfff43f3ee72f9cf7097abf609b" title="GVT_phases" alt="" coords="871,56,972,83"/>
+<area shape="rect" id="node8" href="$main_8c.html#ab05afef7d356edc20f6c99c6af0a33a8" title="main_simulation_loop" alt="" coords="1239,132,1400,159"/>
+<area shape="rect" id="node11" href="$scheduler_8h.html#af405fd79c1cd59fccce27658d6e11941" title="initialize_worker_thread" alt="" coords="1020,157,1191,184"/>
+<area shape="rect" id="node7" href="$gvt_2gvt_8h.html#a899b50ab45427cf145360ff3a6c29808" title="gvt_operations" alt="" coords="1047,56,1164,83"/>
+<area shape="rect" id="node9" href="$main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="1448,132,1569,159"/>
+<area shape="rect" id="node10" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1481,208,1536,235"/>
+<area shape="rect" id="node16" href="$init_8h.html#a417eb072179d09f441dbae3125049e46" title="SystemInit" alt="" coords="571,208,662,235"/>
+<area shape="rect" id="node19" href="$dymelor_8h.html#a4a2254f9566905d37dd2359b648c23e9" title="dymelor_init" alt="" coords="345,259,445,285"/>
+</map>

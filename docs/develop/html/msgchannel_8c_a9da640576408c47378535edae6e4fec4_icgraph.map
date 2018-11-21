@@ -1,0 +1,6 @@
+<map id="init_channel" name="init_channel">
+<area shape="rect" id="node2" href="$process_8h.html#a2df46ca177ccf4dd0164f6b579f7a22f" title="initialize_control\l_blocks" alt="" coords="152,5,276,47"/>
+<area shape="rect" id="node3" href="$scheduler_8h.html#ab258cc2856e5f6bb125907cc23358fbd" title="scheduler_init" alt="" coords="324,13,435,39"/>
+<area shape="rect" id="node4" href="$init_8h.html#a417eb072179d09f441dbae3125049e46" title="SystemInit" alt="" coords="483,13,573,39"/>
+<area shape="rect" id="node5" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="621,13,676,39"/>
+</map>

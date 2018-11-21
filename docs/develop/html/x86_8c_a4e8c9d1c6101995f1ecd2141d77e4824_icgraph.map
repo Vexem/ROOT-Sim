@@ -1,0 +1,19 @@
+<map id="spin_unlock" name="spin_unlock">
+<area shape="rect" id="node2" href="$msgchannel_8h.html#a2d02bf5d1d8c1e8835d65ba1e0397e56" title="insert_msg" alt="" coords="149,124,243,151"/>
+<area shape="rect" id="node17" href="$msgchannel_8h.html#ae3a1affc608f87d792d99392c71e377a" title="get_msg" alt="" coords="157,182,235,208"/>
+<area shape="rect" id="node3" href="$queues_8h.html#a9ff164dd6a938afa7e892f4028c2a033" title="insert_bottom_half" alt="" coords="291,118,433,144"/>
+<area shape="rect" id="node4" href="$communication_8h.html#ab5250867c0edfc326732c059b0c0c3b5" title="Send" alt="" coords="481,92,536,119"/>
+<area shape="rect" id="node5" href="$communication_8h.html#ae204ff37e50f04446529be1aa62225b0" title="send_antimessages" alt="" coords="603,42,753,68"/>
+<area shape="rect" id="node14" href="$communication_8h.html#aa0958a4c98d8911fbf2ebcb8dce7cba5" title="send_outgoing_msgs" alt="" coords="820,143,979,170"/>
+<area shape="rect" id="node15" href="$scheduler_8h.html#a0f922b117b3836e11f731935807037b7" title="rollback_control_message" alt="" coords="584,92,772,119"/>
+<area shape="rect" id="node16" href="$scheduler_8h.html#aacd9fe9684de21c933680f355acb5766" title="process_control_msg" alt="" coords="820,16,979,43"/>
+<area shape="rect" id="node6" href="$state_8h.html#ae8237df0b39ec098c8786a533c3d92d5" title="rollback" alt="" coords="864,92,935,119"/>
+<area shape="rect" id="node7" href="$scheduler_8h.html#ac48128e72b303ea22d8ec641a9516b15" title="schedule" alt="" coords="1075,92,1153,119"/>
+<area shape="rect" id="node8" href="$gvt_2gvt_8c.html#a895d5bfff43f3ee72f9cf7097abf609b" title="GVT_phases" alt="" coords="1249,143,1351,170"/>
+<area shape="rect" id="node10" href="$main_8c.html#ab05afef7d356edc20f6c99c6af0a33a8" title="main_simulation_loop" alt="" coords="1617,118,1779,144"/>
+<area shape="rect" id="node13" href="$scheduler_8h.html#af405fd79c1cd59fccce27658d6e11941" title="initialize_worker_thread" alt="" coords="1399,92,1569,119"/>
+<area shape="rect" id="node9" href="$gvt_2gvt_8h.html#a899b50ab45427cf145360ff3a6c29808" title="gvt_operations" alt="" coords="1425,143,1543,170"/>
+<area shape="rect" id="node11" href="$main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="1827,118,1948,144"/>
+<area shape="rect" id="node12" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1860,168,1915,195"/>
+<area shape="rect" id="node18" href="$queues_8h.html#a54eca9bfa893cac072d1b1d3010c2944" title="process_bottom_halves" alt="" coords="1027,194,1201,220"/>
+</map>

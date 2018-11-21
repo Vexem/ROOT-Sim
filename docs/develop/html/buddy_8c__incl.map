@@ -1,0 +1,12 @@
+<map id="/home/travis/build/HPDCS/ROOT&#45;Sim/src/mm/buddy.c" name="/home/travis/build/HPDCS/ROOT&#45;Sim/src/mm/buddy.c">
+<area shape="rect" id="node7" href="$core_8h.html" title="This header defines all the shared symbols which are needed by different subsystems. " alt="" coords="701,259,796,285"/>
+<area shape="rect" id="node19" href="$dymelor_8h.html" title="This is the Memory Management Subsystem main header file. " alt="" coords="851,109,966,136"/>
+<area shape="rect" id="node26" href="$mm_8h.html" title="mm/mm.h" alt="" coords="345,184,435,211"/>
+<area shape="rect" id="node8" href="$ROOT-Sim_8h.html" title="This header defines all the symbols which are needed to develop a Model to be simulated on top of ROO..." alt="" coords="855,333,954,360"/>
+<area shape="rect" id="node16" href="$numerical_8h.html" title="This header is used to define symbols which must be accessible by the simulator but not by the applic..." alt="" coords="666,333,781,360"/>
+<area shape="rect" id="node17" href="$thread_8h.html" title="This module implements Kernel Level Thread supports. " alt="" coords="432,333,540,360"/>
+<area shape="rect" id="node18" href="$atomic_8h.html" title="This module implements atomic and non&#45;blocking operations used within ROOT&#45;Sim to coordinate threads ..." alt="" coords="432,408,543,435"/>
+<area shape="rect" id="node20" href="$bitmap_8h.html" title="This header implements a minimal bitmap data type. " alt="" coords="909,184,1055,211"/>
+<area shape="rect" id="node22" href="$state_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="787,184,884,211"/>
+<area shape="rect" id="node23" href="$timer_8h.html" title="This header defines the timers which the simulator uses to monitor its internal behaviour. " alt="" coords="1223,184,1322,211"/>
+</map>

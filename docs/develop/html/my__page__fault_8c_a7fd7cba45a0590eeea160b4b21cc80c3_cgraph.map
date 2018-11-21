@@ -1,0 +1,14 @@
+<map id="root_sim_page_fault" name="root_sim_page_fault">
+<area shape="rect" id="node2" href="$cross__state__manager_8c.html#a051bc56cf477faf7fa51521deafa3023" title="get_pte_sticky_bit" alt="" coords="430,5,567,32"/>
+<area shape="rect" id="node3" href="$cross__state__manager_8c.html#a4d7ee4a88ceeda294ee709d5dd393bbf" title="set_presence_bit" alt="" coords="433,57,564,84"/>
+<area shape="rect" id="node4" href="$cross__state__manager_8c.html#a481976f08050a4512ae29e217a958ebd" title="get_presence_bit" alt="" coords="433,111,565,137"/>
+<area shape="rect" id="node5" href="$cross__state__manager_8c.html#a142536d889c40d2f2571f505981fc583" title="get_pde_sticky_bit" alt="" coords="429,167,569,193"/>
+<area shape="rect" id="node6" href="$cross__state__manager_8c.html#a8ebbb3cced92d39cfc6673d4bab78b04" title="set_single_pte_sticky_flag" alt="" coords="405,280,592,307"/>
+<area shape="rect" id="node7" href="$cross__state__manager_8c.html#a017162a0e55d4d2c062673ee5fca472b" title="set_single_page_privilege" alt="" coords="406,331,591,357"/>
+<area shape="rect" id="node8" href="$cross__state__manager_8c.html#a7dee6069da4b066458aaba04069bf629" title="rootsim_load_cr3" alt="" coords="649,432,781,459"/>
+<area shape="rect" id="node9" href="$cross__state__manager_8c.html#a3b80c9ec104b8748f5d05b51308c4f3a" title="rs_ktblmgr_ioctl" alt="" coords="437,483,560,509"/>
+<area shape="rect" id="node12" href="$cross__state__manager_8c.html#a94128ddad0031d4587b660ce122d6600" title="EXPORT_SYMBOL" alt="" coords="433,381,564,408"/>
+<area shape="rect" id="node13" href="$cross__state__manager_8c.html#a7fd7cba45a0590eeea160b4b21cc80c3" title="root_sim_page_fault" alt="" coords="205,229,357,256"/>
+<area shape="rect" id="node10" href="$cross__state__manager_8c.html#acaa3fda864e1e69778df5f971fc8d964" title="set_page_privilege" alt="" coords="645,483,786,509"/>
+<area shape="rect" id="node11" href="$cross__state__manager_8c.html#addfa4300939ef737fb0f219e855ea157" title="set_pte_sticky_flags" alt="" coords="640,533,791,560"/>
+</map>

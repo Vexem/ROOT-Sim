@@ -1,0 +1,32 @@
+<map id="simulation_shutdown" name="simulation_shutdown">
+<area shape="rect" id="node2" href="$statistics_8c.html#aeff52bbf045362270639b2baed20762b" title="statistics_stop" alt="" coords="225,259,340,285"/>
+<area shape="rect" id="node13" href="$thread_8c.html#a9f5993fbefc809165c4b74bb8da463d0" title="thread_barrier" alt="" coords="437,461,550,488"/>
+<area shape="rect" id="node18" href="$statistics_8c.html#aaa24b8c29fb4c68de95998bd43421bbb" title="statistics_fini" alt="" coords="231,563,335,589"/>
+<area shape="rect" id="node21" href="$dymelor_8c.html#acb2ad979faeabdfb1a4c79cd69514171" title="dymelor_fini" alt="" coords="233,613,332,640"/>
+<area shape="rect" id="node27" href="$scheduler_8c.html#a8ed8d4a13d66c1d3a221fb82e72f8e0e" title="scheduler_fini" alt="" coords="228,740,337,767"/>
+<area shape="rect" id="node29" href="$gvt_2gvt_8c.html#a10977cb9180000f423f184cca0b6338d" title="gvt_fini" alt="" coords="249,664,316,691"/>
+<area shape="rect" id="node30" href="$communication_8c.html#a6bd2f352e0326608e9a2bef2efbde184" title="communication_fini" alt="" coords="209,803,356,829"/>
+<area shape="rect" id="node31" href="$core_8c.html#a4263f8cc078e5ee19cc22ec610a7cdf2" title="base_fini" alt="" coords="243,512,322,539"/>
+<area shape="rect" id="node3" href="$statistics_8c.html#a0346e881c85552e375308b5b791ae380" title="print_header" alt="" coords="442,411,545,437"/>
+<area shape="rect" id="node4" href="$statistics_8c.html#aa0225117b62fc184e71a61e815f37398" title="print_timer_stats" alt="" coords="428,5,559,32"/>
+<area shape="rect" id="node5" href="$statistics_8c.html#ab7b584959699657a63a49384f07fd7a9" title="format_size" alt="" coords="659,132,757,159"/>
+<area shape="rect" id="node6" href="$memusage_8c.html#a1b63b75d05bcc786d0f45106704b78fe" title="getPeakRSS" alt="" coords="443,107,543,133"/>
+<area shape="rect" id="node7" href="$statistics_8c.html#a88cbd2dda098fe2cfab8fd44d7a7d8be" title="print_termination_status" alt="" coords="404,157,583,184"/>
+<area shape="rect" id="node8" href="$statistics_8c.html#a7def9239926b6eb236bb366cce87717d" title="print_gvt_stats_file" alt="" coords="422,208,565,235"/>
+<area shape="rect" id="node9" href="$process_8c.html#af353b001d256b2541c44f0dcf87c0655" title="LPS_bound_foreach" alt="" coords="419,309,567,336"/>
+<area shape="rect" id="node11" href="$statistics_8c.html#a478c22a412c225c6a44a07a90d307232" title="print_common_stats" alt="" coords="416,259,571,285"/>
+<area shape="rect" id="node17" href="$statistics_8c.html#a86e8ce4bec166c2cf3d95d2d809e2855" title="print_config_to_file" alt="" coords="423,360,564,387"/>
+<area shape="rect" id="node10" href="$core_8h.html#ac2b1b08baf23849d226a2302773d3e40" title="LidToGid" alt="" coords="671,309,745,336"/>
+<area shape="rect" id="node12" href="$gvt_2gvt_8c.html#a234e866bb1e37fa25dec9bb40134234d" title="get_last_gvt" alt="" coords="658,259,758,285"/>
+<area shape="rect" id="node14" href="$atomic_8h.html#a52336e036d2da5656c6db69b121458ba" title="atomic_dec" alt="" coords="660,461,756,488"/>
+<area shape="rect" id="node15" href="$atomic_8h.html#ab61334506e238ad3190ce02fc53af0fb" title="atomic_inc_and_test" alt="" coords="631,411,785,437"/>
+<area shape="rect" id="node16" href="$x86_8c.html#a7a6b9868956dd8e51e5de80e16c76fc4" title="spin_lock" alt="" coords="833,411,913,437"/>
+<area shape="rect" id="node19" href="$dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a" title="rsfree" alt="" coords="844,689,903,716"/>
+<area shape="rect" id="node20" href="$platform_8c.html#ae2af2cd130d16958394ae21e9d13035f" title="__real_free" alt="" coords="961,689,1053,716"/>
+<area shape="rect" id="node22" href="$dymelor_8h.html#a7432116bb2473418232bf3f2fada2acd" title="recoverable_fini" alt="" coords="432,664,555,691"/>
+<area shape="rect" id="node23" href="$dymelor_8h.html#aceefad0ae70e661a3ac697101862daca" title="unrecoverable_fini" alt="" coords="424,613,563,640"/>
+<area shape="rect" id="node24" href="$buddy_8c.html#a4efde26b534d03e963a4ff4903f8ba88" title="allocator_fini" alt="" coords="442,715,545,741"/>
+<area shape="rect" id="node25" href="$buddy_8c.html#ac4aab19dbf8f5238f5a4f159d64b5ded" title="buddy_destroy" alt="" coords="650,689,766,716"/>
+<area shape="rect" id="node26" href="$buddy_8c.html#a225b4e1d308e424f33c743fd12d3a7f3" title="free_pages" alt="" coords="661,639,755,665"/>
+<area shape="rect" id="node28" href="$scheduler_8c.html#a097e3d5ca2fe391f45ddb86f37524bb8" title="destroy_LPs" alt="" coords="444,765,543,792"/>
+</map>

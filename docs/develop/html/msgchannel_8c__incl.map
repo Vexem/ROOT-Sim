@@ -1,0 +1,15 @@
+<map id="/home/travis/build/HPDCS/ROOT&#45;Sim/src/datatypes/msgchannel.c" name="/home/travis/build/HPDCS/ROOT&#45;Sim/src/datatypes/msgchannel.c">
+<area shape="rect" id="node5" href="$atomic_8h.html" title="This module implements atomic and non&#45;blocking operations used within ROOT&#45;Sim to coordinate threads ..." alt="" coords="217,408,328,435"/>
+<area shape="rect" id="node8" href="$core_8h.html" title="This header defines all the shared symbols which are needed by different subsystems. " alt="" coords="927,259,1021,285"/>
+<area shape="rect" id="node16" href="$communication_8h.html" title="This is the main header file, containing all data structures and defines used by the communication su..." alt="" coords="796,109,1032,136"/>
+<area shape="rect" id="node17" href="$list_8h.html" title="This header defines macros for accessing the general&#45;purpose list implementation used in the simulato..." alt="" coords="65,333,185,360"/>
+<area shape="rect" id="node20" href="$msgchannel_8h.html" title="This module implements an (M, 1) channel to transfer message pointers. " alt="" coords="1056,109,1236,136"/>
+<area shape="rect" id="node21" href="$mm_8h.html" title="mm/mm.h" alt="" coords="453,184,543,211"/>
+<area shape="rect" id="node24" href="$dymelor_8h.html" title="This is the Memory Management Subsystem main header file. " alt="" coords="1261,109,1375,136"/>
+<area shape="rect" id="node9" href="$ROOT-Sim_8h.html" title="This header defines all the symbols which are needed to develop a Model to be simulated on top of ROO..." alt="" coords="1089,333,1187,360"/>
+<area shape="rect" id="node14" href="$numerical_8h.html" title="This header is used to define symbols which must be accessible by the simulator but not by the applic..." alt="" coords="849,333,963,360"/>
+<area shape="rect" id="node15" href="$thread_8h.html" title="This module implements Kernel Level Thread supports. " alt="" coords="463,333,571,360"/>
+<area shape="rect" id="node25" href="$bitmap_8h.html" title="This header implements a minimal bitmap data type. " alt="" coords="1134,184,1281,211"/>
+<area shape="rect" id="node27" href="$state_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="1012,184,1109,211"/>
+<area shape="rect" id="node28" href="$timer_8h.html" title="This header defines the timers which the simulator uses to monitor its internal behaviour. " alt="" coords="1401,184,1499,211"/>
+</map>

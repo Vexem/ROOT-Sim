@@ -1,0 +1,6 @@
+<map id="OnGVT_light" name="OnGVT_light">
+<area shape="rect" id="node2" href="$core_8h.html#a7fb819521b1ab5fc7644ad216fe7b465" title="base_init" alt="" coords="153,5,232,32"/>
+<area shape="rect" id="node5" href="$serial_8h.html#ad6ad0d134746a428ef1ece46a3bdcc43" title="serial_simulation" alt="" coords="280,56,409,83"/>
+<area shape="rect" id="node3" href="$init_8h.html#a417eb072179d09f441dbae3125049e46" title="SystemInit" alt="" coords="299,5,390,32"/>
+<area shape="rect" id="node4" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="457,31,512,57"/>
+</map>

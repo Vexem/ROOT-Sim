@@ -1,0 +1,8 @@
+<map id="__wrap_malloc" name="__wrap_malloc">
+<area shape="rect" id="node2" href="$wrapper_8c.html#a849c010b96eae768d42712e2060efbe1" title="__wrap_strdup" alt="" coords="175,5,290,32"/>
+<area shape="rect" id="node3" href="$wrapper_8c.html#a0159c74a123b68c5434b8747172aa255" title="__wrap_strndup" alt="" coords="171,56,294,83"/>
+<area shape="rect" id="node4" href="$ROOT-Sim_8h.html#adebe424adaebf0abecac23c41891fbee" title="SetupObstacles" alt="" coords="171,107,294,133"/>
+<area shape="rect" id="node5" href="$ROOT-Sim_8h.html#a687b119a53a0db5787416bc460299cd2" title="ComputeMinTour" alt="" coords="168,157,297,184"/>
+<area shape="rect" id="node6" href="$recoverable_8c.html#a5dc7f457bad412e9964501f2273aea0e" title="__wrap_realloc" alt="" coords="175,208,290,235"/>
+<area shape="rect" id="node7" href="$recoverable_8c.html#a818524883cd69709fe0e3499d6748d14" title="__wrap_calloc" alt="" coords="178,259,287,285"/>
+</map>

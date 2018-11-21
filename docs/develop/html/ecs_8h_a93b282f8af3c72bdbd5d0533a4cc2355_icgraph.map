@@ -1,0 +1,12 @@
+<map id="lp_alloc_deschedule" name="lp_alloc_deschedule">
+<area shape="rect" id="node2" href="$scheduler_8h.html#af9c35f642d3f6a8a4b2cdcd4dfb9f708" title="activate_LP" alt="" coords="203,56,297,83"/>
+<area shape="rect" id="node3" href="$state_8h.html#a06d03ae99ad76ae042e7b04f4c85e79c" title="silent_execution" alt="" coords="345,31,471,57"/>
+<area shape="rect" id="node5" href="$scheduler_8h.html#ac48128e72b303ea22d8ec641a9516b15" title="schedule" alt="" coords="637,56,716,83"/>
+<area shape="rect" id="node4" href="$state_8h.html#ae8237df0b39ec098c8786a533c3d92d5" title="rollback" alt="" coords="519,31,589,57"/>
+<area shape="rect" id="node6" href="$gvt_2gvt_8c.html#a895d5bfff43f3ee72f9cf7097abf609b" title="GVT_phases" alt="" coords="764,5,865,32"/>
+<area shape="rect" id="node8" href="$main_8c.html#ab05afef7d356edc20f6c99c6af0a33a8" title="main_simulation_loop" alt="" coords="1132,56,1293,83"/>
+<area shape="rect" id="node11" href="$scheduler_8h.html#af405fd79c1cd59fccce27658d6e11941" title="initialize_worker_thread" alt="" coords="913,107,1084,133"/>
+<area shape="rect" id="node7" href="$gvt_2gvt_8h.html#a899b50ab45427cf145360ff3a6c29808" title="gvt_operations" alt="" coords="940,5,1057,32"/>
+<area shape="rect" id="node9" href="$main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="1341,56,1463,83"/>
+<area shape="rect" id="node10" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1375,107,1429,133"/>
+</map>

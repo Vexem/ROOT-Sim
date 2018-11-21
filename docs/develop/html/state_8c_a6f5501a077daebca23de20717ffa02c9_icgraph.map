@@ -1,0 +1,11 @@
+<map id="force_LP_checkpoint" name="force_LP_checkpoint">
+<area shape="rect" id="node2" href="$scheduler_8h.html#a5766f78dcd3778582d506c3dec34594e" title="receive_control_msg" alt="" coords="205,33,360,60"/>
+<area shape="rect" id="node9" href="$scheduler_8h.html#ac48128e72b303ea22d8ec641a9516b15" title="schedule" alt="" coords="456,84,535,111"/>
+<area shape="rect" id="node3" href="$queues_8h.html#a54eca9bfa893cac072d1b1d3010c2944" title="process_bottom_halves" alt="" coords="408,33,583,60"/>
+<area shape="rect" id="node4" href="$gvt_2gvt_8c.html#a895d5bfff43f3ee72f9cf7097abf609b" title="GVT_phases" alt="" coords="631,33,732,60"/>
+<area shape="rect" id="node6" href="$main_8c.html#ab05afef7d356edc20f6c99c6af0a33a8" title="main_simulation_loop" alt="" coords="999,59,1160,85"/>
+<area shape="rect" id="node5" href="$gvt_2gvt_8h.html#a899b50ab45427cf145360ff3a6c29808" title="gvt_operations" alt="" coords="807,33,924,60"/>
+<area shape="rect" id="node7" href="$main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="1208,59,1329,85"/>
+<area shape="rect" id="node8" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1241,109,1296,136"/>
+<area shape="rect" id="node10" href="$scheduler_8h.html#af405fd79c1cd59fccce27658d6e11941" title="initialize_worker_thread" alt="" coords="780,135,951,161"/>
+</map>

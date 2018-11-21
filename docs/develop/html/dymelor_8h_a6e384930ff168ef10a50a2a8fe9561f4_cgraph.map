@@ -1,0 +1,6 @@
+<map id="pool_release_memory" name="pool_release_memory">
+<area shape="rect" id="node2" href="$buddy_8c.html#a908ff223d4c32bca662a6312e90bc9b4" title="buddy_free" alt="" coords="217,56,311,83"/>
+<area shape="rect" id="node3" href="$buddy_8c.html#a4e37c16339bbf6e05891b7560074a8da" title="parent" alt="" coords="370,5,434,32"/>
+<area shape="rect" id="node4" href="$buddy_8c.html#aa8695c30990e4003c7e13ed6727fbf2e" title="left_child" alt="" coords="363,56,441,83"/>
+<area shape="rect" id="node5" href="$buddy_8c.html#a9f638a94a98040170ae77d44dee7848e" title="right_child" alt="" coords="359,107,445,133"/>
+</map>

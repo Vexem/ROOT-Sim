@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['rcx',['rcx',['../struct__fault__info__t.html#a2ca1b00ffdb84487b3e47dda506fb555',1,'_fault_info_t']]],
+  ['read',['read',['../struct__msg__buff.html#afd6d14a76eaaeada76c5536b7533a953',1,'_msg_buff']]],
+  ['read_5fdest',['read_dest',['../structdisassembly__state.html#a533bb92a3ec357b118596fb3fdc3a852',1,'disassembly_state']]],
+  ['read_5fmodrm',['read_modrm',['../structdisassembly__state.html#a2a27c9ef27a802749851253a3be9f124',1,'disassembly_state']]],
+  ['rebinding_5ftimer',['rebinding_timer',['../binding_8c.html#a3237da9e3dbcb5cda3e54631e07fe1e9',1,'binding.c']]],
+  ['receiver',['receiver',['../struct__msg__t.html#a9929e6071b8f22ef3a19c213c81078ed',1,'_msg_t::receiver()'],['../struct__msg__hdr__t.html#a8e33bb09c82781bca6768a01c95edf4f',1,'_msg_hdr_t::receiver()']]],
+  ['recoverable_5fstate',['recoverable_state',['../dymelor_8h.html#a40eb22a5a9640f2ffdbf1af950c5aa61',1,'recoverable_state():&#160;recoverable.c'],['../recoverable_8c.html#a40eb22a5a9640f2ffdbf1af950c5aa61',1,'recoverable_state():&#160;recoverable.c']]],
+  ['recovery_5fcost_5fper_5fbyte',['recovery_cost_per_byte',['../dymelor_8h.html#a46bb5514bb5b48f0a4d1d0de78bbe36f',1,'dymelor.h']]],
+  ['recovery_5ftime',['recovery_time',['../structstat__t.html#ac8a8b510af8402a091fec38b7aa0a739',1,'stat_t']]],
+  ['refcount',['refcount',['../structslab__header.html#a07904f11be36d533caf77c01491a623e',1,'slab_header']]],
+  ['reference_5fcount',['reference_count',['../schedule_8c.html#acfe541c47dd8548d96a592e048633b4c',1,'schedule.c']]],
+  ['rendezvous_5fmark',['rendezvous_mark',['../struct__msg__t.html#a0574e7d28eb3da6c8a3726f349e6b5e8',1,'_msg_t::rendezvous_mark()'],['../struct__msg__hdr__t.html#a9ecdbc7026dcd65c979fd420711963d9',1,'_msg_hdr_t::rendezvous_mark()']]],
+  ['reprocessed_5fevents',['reprocessed_events',['../structstat__t.html#a33d0bcf5810a6b196ea54e875cf43307',1,'stat_t']]],
+  ['resize_5fenabled',['resize_enabled',['../calqueue_8c.html#ac5457ae33d1e9b03cb258143f20e0a51',1,'calqueue.c']]],
+  ['restore_5fpml4',['restore_pml4',['../cross__state__manager_8c.html#a1d5432198835cce8bed8af01f889bee0',1,'cross_state_manager.c']]],
+  ['restore_5fpml4_5fentries',['restore_pml4_entries',['../cross__state__manager_8c.html#a10705f9336de893151bebf49502fcf2a',1,'cross_state_manager.c']]],
+  ['rex',['rex',['../structdisassembly__state.html#a88557af0850c66d04f72817fc01b74a4',1,'disassembly_state']]],
+  ['rip',['rip',['../struct__fault__info__t.html#ab62f3d29e6880eb4ebfdaf52237b1639',1,'_fault_info_t']]],
+  ['root_5fsim_5ffault_5finfo',['root_sim_fault_info',['../cross__state__manager_8c.html#a773e1b330dbfb7b0f1ad9219e79037b3',1,'cross_state_manager.c']]],
+  ['root_5fsim_5fprocesses',['root_sim_processes',['../cross__state__manager_8c.html#a81e54fcde5deb772feb0ad4f376e9129',1,'cross_state_manager.c']]],
+  ['rootsim_5fconfig',['rootsim_config',['../core_8c.html#ae16855ae14bd366969eecad7446d51a6',1,'rootsim_config():&#160;core.c'],['../init_8h.html#ae16855ae14bd366969eecad7446d51a6',1,'rootsim_config():&#160;core.c']]],
+  ['rootsim_5fpager',['rootsim_pager',['../cross__state__manager_8c.html#adbc655879a1d11d7e725b0d28e751337',1,'cross_state_manager.c']]],
+  ['rows',['rows',['../struct__gvt__buffer.html#a7db6362f9dd612b9498dd362ff17ef11',1,'_gvt_buffer']]]
+];

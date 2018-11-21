@@ -1,0 +1,7 @@
+<map id="initialize_binding_blocks" name="initialize_binding_blocks">
+<area shape="rect" id="node2" href="$binding_8h.html#ae26b2a8055156e8648f8ad806f5fa5b0" title="rebind_LPs" alt="" coords="180,13,271,39"/>
+<area shape="rect" id="node3" href="$main_8c.html#ab05afef7d356edc20f6c99c6af0a33a8" title="main_simulation_loop" alt="" coords="537,13,699,39"/>
+<area shape="rect" id="node6" href="$scheduler_8h.html#af405fd79c1cd59fccce27658d6e11941" title="initialize_worker_thread" alt="" coords="319,38,489,65"/>
+<area shape="rect" id="node4" href="$main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="747,13,868,39"/>
+<area shape="rect" id="node5" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="780,63,835,90"/>
+</map>

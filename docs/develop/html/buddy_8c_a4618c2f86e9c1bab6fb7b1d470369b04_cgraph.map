@@ -1,0 +1,7 @@
+<map id="buddy_alloc" name="buddy_alloc">
+<area shape="rect" id="node2" href="$core_8c.html#aa5d3c29f381884d4bb7cd0983b3c541a" title="rootsim_error" alt="" coords="171,5,281,32"/>
+<area shape="rect" id="node3" href="$buddy_8c.html#ad74e6a21a9d853095ac794316f8e6aaf" title="choose_better_child" alt="" coords="151,107,301,133"/>
+<area shape="rect" id="node4" href="$buddy_8c.html#aa8695c30990e4003c7e13ed6727fbf2e" title="left_child" alt="" coords="353,81,432,108"/>
+<area shape="rect" id="node5" href="$buddy_8c.html#a9f638a94a98040170ae77d44dee7848e" title="right_child" alt="" coords="349,144,436,171"/>
+<area shape="rect" id="node6" href="$buddy_8c.html#a4e37c16339bbf6e05891b7560074a8da" title="parent" alt="" coords="194,208,258,235"/>
+</map>

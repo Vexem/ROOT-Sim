@@ -1,0 +1,22 @@
+<map id="__wrap_realloc" name="__wrap_realloc">
+<area shape="rect" id="node2" href="$dymelor_8h.html#a480bc47d84033faa5410d5a3c4470ff7" title="rsrealloc" alt="" coords="187,159,263,185"/>
+<area shape="rect" id="node4" href="$recoverable_8c.html#a3687f50774c89e7a09833a71adbb7771" title="__wrap_malloc" alt="" coords="168,235,283,261"/>
+<area shape="rect" id="node18" href="$recoverable_8c.html#ad81079124eeb23ae75a56eba434043f0" title="__wrap_free" alt="" coords="176,309,275,336"/>
+<area shape="rect" id="node3" href="$platform_8c.html#af571772318d146f693e37e7a580103c0" title="__real_realloc" alt="" coords="331,132,440,159"/>
+<area shape="rect" id="node5" href="$dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="526,259,589,285"/>
+<area shape="rect" id="node8" href="$dymelor_8c.html#a80799008fa38222dc3c1ecf0b7be4a73" title="do_malloc" alt="" coords="342,183,429,209"/>
+<area shape="rect" id="node6" href="$platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="675,208,784,235"/>
+<area shape="rect" id="node7" href="$core_8c.html#aa5d3c29f381884d4bb7cd0983b3c541a" title="rootsim_error" alt="" coords="853,247,962,273"/>
+<area shape="rect" id="node9" href="$dymelor_8c.html#ae10242575deefaa5500b5426c745f2eb" title="compute_size" alt="" coords="502,208,613,235"/>
+<area shape="rect" id="node10" href="$dymelor_8c.html#a85112cc6ca87655111a1c696a4bcdbe4" title="malloc_area_init" alt="" coords="494,5,621,32"/>
+<area shape="rect" id="node11" href="$buddy_8c.html#aaddcbcb0ea217fe3feec3981cec273a4" title="pool_get_memory" alt="" coords="488,56,627,83"/>
+<area shape="rect" id="node17" href="$dymelor_8c.html#a664ec4ed3ccc0c11db1c283485f6cf83" title="find_next_free" alt="" coords="501,107,613,133"/>
+<area shape="rect" id="node12" href="$buddy_8c.html#a4618c2f86e9c1bab6fb7b1d470369b04" title="buddy_alloc" alt="" coords="681,88,778,115"/>
+<area shape="rect" id="node13" href="$buddy_8c.html#ad74e6a21a9d853095ac794316f8e6aaf" title="choose_better_child" alt="" coords="832,120,983,147"/>
+<area shape="rect" id="node14" href="$buddy_8c.html#aa8695c30990e4003c7e13ed6727fbf2e" title="left_child" alt="" coords="1035,95,1113,121"/>
+<area shape="rect" id="node15" href="$buddy_8c.html#a9f638a94a98040170ae77d44dee7848e" title="right_child" alt="" coords="1031,145,1117,172"/>
+<area shape="rect" id="node16" href="$buddy_8c.html#a4e37c16339bbf6e05891b7560074a8da" title="parent" alt="" coords="875,19,939,45"/>
+<area shape="rect" id="node19" href="$dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a" title="rsfree" alt="" coords="528,360,587,387"/>
+<area shape="rect" id="node21" href="$dymelor_8c.html#a8252a6bb813980afb6f613826fa977d9" title="do_free" alt="" coords="350,309,421,336"/>
+<area shape="rect" id="node20" href="$platform_8c.html#ae2af2cd130d16958394ae21e9d13035f" title="__real_free" alt="" coords="683,360,775,387"/>
+</map>

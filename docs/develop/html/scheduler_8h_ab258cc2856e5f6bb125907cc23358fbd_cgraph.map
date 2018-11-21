@@ -1,0 +1,7 @@
+<map id="scheduler_init" name="scheduler_init">
+<area shape="rect" id="node2" href="$process_8c.html#a2df46ca177ccf4dd0164f6b579f7a22f" title="initialize_control\l_blocks" alt="" coords="164,23,288,65"/>
+<area shape="rect" id="node3" href="$dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="483,5,545,32"/>
+<area shape="rect" id="node6" href="$msgchannel_8c.html#a9da640576408c47378535edae6e4fec4" title="init_channel" alt="" coords="336,56,435,83"/>
+<area shape="rect" id="node4" href="$platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="593,5,703,32"/>
+<area shape="rect" id="node5" href="$core_8c.html#aa5d3c29f381884d4bb7cd0983b3c541a" title="rootsim_error" alt="" coords="593,56,703,83"/>
+</map>

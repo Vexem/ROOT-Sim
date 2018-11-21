@@ -1,0 +1,29 @@
+<map id="adopt_new_gvt" name="adopt_new_gvt">
+<area shape="rect" id="node2" href="$state_8c.html#a4b61d3cadcd61cbcb821aa8ce79e1e1a" title="find_time_barrier" alt="" coords="197,132,328,159"/>
+<area shape="rect" id="node3" href="$ccgs_8c.html#af8c1dd6d3ab2078085039fec6c7b0d9f" title="ccgs_compute_snapshot" alt="" coords="172,183,353,209"/>
+<area shape="rect" id="node17" href="$fossil_8c.html#acd3044f262ede5818078a42d747329cf" title="fossil_collection" alt="" coords="202,259,323,285"/>
+<area shape="rect" id="node23" href="$dymelor_8h.html#a86d7e2de342ae5eef0b4928b5cbb5bc6" title="clean_buffers_on_gvt" alt="" coords="184,411,341,437"/>
+<area shape="rect" id="node4" href="$checkpoints_8c.html#a609f1bba5b42a22d238662029f56852f" title="log_state" alt="" coords="443,81,524,108"/>
+<area shape="rect" id="node11" href="$checkpoints_8c.html#a8575ee3e492e8cd36e4de14b09ead323" title="log_restore" alt="" coords="436,157,531,184"/>
+<area shape="rect" id="node13" href="$core_8h.html#ac2b1b08baf23849d226a2302773d3e40" title="LidToGid" alt="" coords="446,31,521,57"/>
+<area shape="rect" id="node14" href="$checkpoints_8c.html#a727e4cd3fa1d7b332b9f212733eec8d3" title="log_delete" alt="" coords="439,360,527,387"/>
+<area shape="rect" id="node5" href="$statistics_8c.html#a59e37e49114d5cae5acf1e6c5ef300a1" title="statistics_post_data" alt="" coords="764,107,915,133"/>
+<area shape="rect" id="node7" href="$checkpoints_8c.html#a8c0d8e6f20535afac64e182da5dfa4f9" title="log_full" alt="" coords="631,5,698,32"/>
+<area shape="rect" id="node6" href="$core_8c.html#aa5d3c29f381884d4bb7cd0983b3c541a" title="rootsim_error" alt="" coords="963,107,1072,133"/>
+<area shape="rect" id="node8" href="$dymelor_8h.html#ab72247530e122f0e6503db111c18d273" title="get_log_size" alt="" coords="789,5,890,32"/>
+<area shape="rect" id="node9" href="$dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="808,157,871,184"/>
+<area shape="rect" id="node10" href="$platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="963,157,1072,184"/>
+<area shape="rect" id="node12" href="$checkpoints_8c.html#a41641c526e3e22affb04e96e68a1428e" title="restore_full" alt="" coords="618,157,711,184"/>
+<area shape="rect" id="node15" href="$dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a" title="rsfree" alt="" coords="635,360,694,387"/>
+<area shape="rect" id="node16" href="$platform_8c.html#ae2af2cd130d16958394ae21e9d13035f" title="__real_free" alt="" coords="793,360,885,387"/>
+<area shape="rect" id="node18" href="$communication_8c.html#a323ad017762155352c38983e67e8adeb" title="msg_release" alt="" coords="431,309,535,336"/>
+<area shape="rect" id="node22" href="$communication_8c.html#a762b3dacaa82c4590e0572ac08117153" title="msg_hdr_release" alt="" coords="417,259,549,285"/>
+<area shape="rect" id="node19" href="$slab_8c.html#a891cd5abfed9deb98413ab7e7c29ef61" title="slab_free" alt="" coords="625,309,705,336"/>
+<area shape="rect" id="node21" href="$treiber_8c.html#a2b19a4e911e4d06cf5337a15f089836a" title="treiber_push" alt="" coords="613,259,716,285"/>
+<area shape="rect" id="node20" href="$slab_8c.html#ac0e4a2a4ab26d7f2399eecbb72fc4cff" title="slab_is_valid" alt="" coords="789,309,890,336"/>
+<area shape="rect" id="node24" href="$buddy_8c.html#a6e384930ff168ef10a50a2a8fe9561f4" title="pool_release_memory" alt="" coords="401,461,565,488"/>
+<area shape="rect" id="node25" href="$buddy_8c.html#a908ff223d4c32bca662a6312e90bc9b4" title="buddy_free" alt="" coords="618,461,711,488"/>
+<area shape="rect" id="node26" href="$buddy_8c.html#a4e37c16339bbf6e05891b7560074a8da" title="parent" alt="" coords="807,512,871,539"/>
+<area shape="rect" id="node27" href="$buddy_8c.html#aa8695c30990e4003c7e13ed6727fbf2e" title="left_child" alt="" coords="800,411,879,437"/>
+<area shape="rect" id="node28" href="$buddy_8c.html#a9f638a94a98040170ae77d44dee7848e" title="right_child" alt="" coords="796,461,883,488"/>
+</map>

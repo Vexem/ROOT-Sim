@@ -1,0 +1,12 @@
+<map id="calqueue_put" name="calqueue_put">
+<area shape="rect" id="node2" href="$dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="577,31,640,57"/>
+<area shape="rect" id="node5" href="$calqueue_8c.html#a091fb2fd34edc1674dcf7418485419b5" title="resize" alt="" coords="161,124,221,151"/>
+<area shape="rect" id="node3" href="$platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="703,5,812,32"/>
+<area shape="rect" id="node4" href="$core_8c.html#aa5d3c29f381884d4bb7cd0983b3c541a" title="rootsim_error" alt="" coords="703,56,812,83"/>
+<area shape="rect" id="node6" href="$calqueue_8c.html#a4e8867b10c2140a383aaaff9556f17be" title="new_width" alt="" coords="269,175,356,201"/>
+<area shape="rect" id="node8" href="$calqueue_8c.html#abb2b24c674d45ee24727e52597008041" title="calqueue_put" alt="" coords="405,61,513,88"/>
+<area shape="rect" id="node9" href="$dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a" title="rsfree" alt="" coords="430,200,489,227"/>
+<area shape="rect" id="node11" href="$calqueue_8c.html#a7cb34614a7eb1a793956d7cca2b418cb" title="localinit" alt="" coords="277,124,348,151"/>
+<area shape="rect" id="node7" href="$calqueue_8c.html#a73051a4cdab05e4724a45e77a5572c9d" title="calqueue_deq" alt="" coords="404,264,515,291"/>
+<area shape="rect" id="node10" href="$platform_8c.html#ae2af2cd130d16958394ae21e9d13035f" title="__real_free" alt="" coords="563,200,655,227"/>
+</map>

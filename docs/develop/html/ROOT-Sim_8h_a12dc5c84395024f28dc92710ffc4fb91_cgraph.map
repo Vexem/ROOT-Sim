@@ -1,0 +1,7 @@
+<map id="DiscardObstacles" name="DiscardObstacles">
+<area shape="rect" id="node2" href="$dymelor_8h.html#adfe96d5ee00e58a98b9e1ce800612bf1" title="__wrap_free" alt="" coords="187,31,285,57"/>
+<area shape="rect" id="node3" href="$dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a" title="rsfree" alt="" coords="477,5,536,32"/>
+<area shape="rect" id="node5" href="$dymelor_8c.html#a8252a6bb813980afb6f613826fa977d9" title="do_free" alt="" coords="333,56,404,83"/>
+<area shape="rect" id="node4" href="$platform_8c.html#ae2af2cd130d16958394ae21e9d13035f" title="__real_free" alt="" coords="609,5,701,32"/>
+<area shape="rect" id="node6" href="$core_8c.html#aa5d3c29f381884d4bb7cd0983b3c541a" title="rootsim_error" alt="" coords="452,56,561,83"/>
+</map>

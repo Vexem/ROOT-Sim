@@ -1,0 +1,16 @@
+<map id="ucalloc" name="ucalloc">
+<area shape="rect" id="node2" href="$unrecoverable_8c.html#ac3b7265f19dc2d2307cc95861d23e0ec" title="umalloc" alt="" coords="120,120,192,147"/>
+<area shape="rect" id="node3" href="$dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="413,56,475,83"/>
+<area shape="rect" id="node6" href="$dymelor_8c.html#a80799008fa38222dc3c1ecf0b7be4a73" title="do_malloc" alt="" coords="240,157,327,184"/>
+<area shape="rect" id="node4" href="$platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="561,5,671,32"/>
+<area shape="rect" id="node5" href="$core_8c.html#aa5d3c29f381884d4bb7cd0983b3c541a" title="rootsim_error" alt="" coords="739,107,849,133"/>
+<area shape="rect" id="node7" href="$dymelor_8c.html#ae10242575deefaa5500b5426c745f2eb" title="compute_size" alt="" coords="389,157,499,184"/>
+<area shape="rect" id="node8" href="$dymelor_8c.html#a85112cc6ca87655111a1c696a4bcdbe4" title="malloc_area_init" alt="" coords="381,208,507,235"/>
+<area shape="rect" id="node9" href="$buddy_8c.html#aaddcbcb0ea217fe3feec3981cec273a4" title="pool_get_memory" alt="" coords="375,259,513,285"/>
+<area shape="rect" id="node15" href="$dymelor_8c.html#a664ec4ed3ccc0c11db1c283485f6cf83" title="find_next_free" alt="" coords="388,309,500,336"/>
+<area shape="rect" id="node10" href="$buddy_8c.html#a4618c2f86e9c1bab6fb7b1d470369b04" title="buddy_alloc" alt="" coords="567,247,665,273"/>
+<area shape="rect" id="node11" href="$buddy_8c.html#ad74e6a21a9d853095ac794316f8e6aaf" title="choose_better_child" alt="" coords="719,233,869,260"/>
+<area shape="rect" id="node12" href="$buddy_8c.html#aa8695c30990e4003c7e13ed6727fbf2e" title="left_child" alt="" coords="921,208,1000,235"/>
+<area shape="rect" id="node13" href="$buddy_8c.html#a9f638a94a98040170ae77d44dee7848e" title="right_child" alt="" coords="917,271,1004,297"/>
+<area shape="rect" id="node14" href="$buddy_8c.html#a4e37c16339bbf6e05891b7560074a8da" title="parent" alt="" coords="762,335,826,361"/>
+</map>

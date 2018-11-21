@@ -1,0 +1,7 @@
+<map id="/home/travis/build/HPDCS/ROOT&#45;Sim/src/mm/mm.h" name="/home/travis/build/HPDCS/ROOT&#45;Sim/src/mm/mm.h">
+<area shape="rect" id="node2" href="$msgchannel_8c.html" title="This module implements an (M, 1) channel to transfer message pointers. " alt="" coords="5,109,188,165"/>
+<area shape="rect" id="node3" href="$slab_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/datatypes/slab.c" alt="" coords="213,109,375,165"/>
+<area shape="rect" id="node4" href="$buddy_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/mm/buddy.c" alt="" coords="399,109,562,165"/>
+<area shape="rect" id="node5" href="$dymelor_8c.html" title="LP&#39;s memory pre&#45;allocator. This layer stands below DyMeLoR, and is the connection point to the Linux ..." alt="" coords="586,109,749,165"/>
+<area shape="rect" id="node6" href="$segment_8c.html" title="Segment Allocator. " alt="" coords="773,109,935,165"/>
+</map>

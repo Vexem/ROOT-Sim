@@ -1,0 +1,11 @@
+<map id="resize" name="resize">
+<area shape="rect" id="node2" href="$calqueue_8c.html#a73051a4cdab05e4724a45e77a5572c9d" title="calqueue_deq" alt="" coords="113,5,224,32"/>
+<area shape="rect" id="node7" href="$calqueue_8h.html#a6ce456642093e0ebcd9563dd723781d8" title="calqueue_put" alt="" coords="115,107,223,133"/>
+<area shape="rect" id="node3" href="$calqueue_8c.html#a4e8867b10c2140a383aaaff9556f17be" title="new_width" alt="" coords="319,56,405,83"/>
+<area shape="rect" id="node4" href="$calqueue_8h.html#a180e22d3d13d9685adb6326484a1b418" title="calqueue_get" alt="" coords="500,5,608,32"/>
+<area shape="rect" id="node5" href="$serial_8h.html#ad6ad0d134746a428ef1ece46a3bdcc43" title="serial_simulation" alt="" coords="656,5,785,32"/>
+<area shape="rect" id="node6" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="833,31,888,57"/>
+<area shape="rect" id="node8" href="$serial_8h.html#a0de71d13e4269fdcd423e611e8d3504e" title="SerialScheduleNewEvent" alt="" coords="272,107,452,133"/>
+<area shape="rect" id="node9" href="$init_8h.html#a417eb072179d09f441dbae3125049e46" title="SystemInit" alt="" coords="675,56,766,83"/>
+<area shape="rect" id="node10" href="$serial_8h.html#ad2b461e9e9044364a28a61cfadcacdd8" title="serial_init" alt="" coords="513,56,595,83"/>
+</map>

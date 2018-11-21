@@ -1,0 +1,18 @@
+<map id="__wrap_strdup" name="__wrap_strdup">
+<area shape="rect" id="node2" href="$dymelor_8h.html#a26407e99c6266e774c65131ef12b03b8" title="__wrap_malloc" alt="" coords="168,119,283,145"/>
+<area shape="rect" id="node16" href="$wrapper_8c.html#abf78ab9cfb29334ed7f0b7b388fbd42d" title="__real_strcpy" alt="" coords="172,169,279,196"/>
+<area shape="rect" id="node17" href="$dymelor_8h.html#af3e133eb1e589a684794f815e55eafaa" title="dirty_mem" alt="" coords="180,220,271,247"/>
+<area shape="rect" id="node3" href="$dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="503,56,566,83"/>
+<area shape="rect" id="node6" href="$dymelor_8c.html#a80799008fa38222dc3c1ecf0b7be4a73" title="do_malloc" alt="" coords="331,157,417,184"/>
+<area shape="rect" id="node4" href="$platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="652,5,761,32"/>
+<area shape="rect" id="node5" href="$core_8c.html#aa5d3c29f381884d4bb7cd0983b3c541a" title="rootsim_error" alt="" coords="830,107,939,133"/>
+<area shape="rect" id="node7" href="$dymelor_8c.html#ae10242575deefaa5500b5426c745f2eb" title="compute_size" alt="" coords="479,157,590,184"/>
+<area shape="rect" id="node8" href="$dymelor_8c.html#a85112cc6ca87655111a1c696a4bcdbe4" title="malloc_area_init" alt="" coords="471,208,598,235"/>
+<area shape="rect" id="node9" href="$buddy_8c.html#aaddcbcb0ea217fe3feec3981cec273a4" title="pool_get_memory" alt="" coords="465,259,604,285"/>
+<area shape="rect" id="node15" href="$dymelor_8c.html#a664ec4ed3ccc0c11db1c283485f6cf83" title="find_next_free" alt="" coords="479,309,591,336"/>
+<area shape="rect" id="node10" href="$buddy_8c.html#a4618c2f86e9c1bab6fb7b1d470369b04" title="buddy_alloc" alt="" coords="658,247,755,273"/>
+<area shape="rect" id="node11" href="$buddy_8c.html#ad74e6a21a9d853095ac794316f8e6aaf" title="choose_better_child" alt="" coords="809,233,960,260"/>
+<area shape="rect" id="node12" href="$buddy_8c.html#aa8695c30990e4003c7e13ed6727fbf2e" title="left_child" alt="" coords="1012,208,1091,235"/>
+<area shape="rect" id="node13" href="$buddy_8c.html#a9f638a94a98040170ae77d44dee7848e" title="right_child" alt="" coords="1008,271,1095,297"/>
+<area shape="rect" id="node14" href="$buddy_8c.html#a4e37c16339bbf6e05891b7560074a8da" title="parent" alt="" coords="853,335,917,361"/>
+</map>

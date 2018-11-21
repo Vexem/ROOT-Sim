@@ -1,0 +1,6 @@
+<map id="allocator_fini" name="allocator_fini">
+<area shape="rect" id="node2" href="$buddy_8c.html#ac4aab19dbf8f5238f5a4f159d64b5ded" title="buddy_destroy" alt="" coords="156,5,272,32"/>
+<area shape="rect" id="node3" href="$dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a" title="rsfree" alt="" coords="320,31,379,57"/>
+<area shape="rect" id="node5" href="$buddy_8c.html#a225b4e1d308e424f33c743fd12d3a7f3" title="free_pages" alt="" coords="167,107,261,133"/>
+<area shape="rect" id="node4" href="$platform_8c.html#ae2af2cd130d16958394ae21e9d13035f" title="__real_free" alt="" coords="427,31,519,57"/>
+</map>

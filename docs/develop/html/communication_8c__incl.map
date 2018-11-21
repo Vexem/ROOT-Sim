@@ -1,0 +1,25 @@
+<map id="/home/travis/build/HPDCS/ROOT&#45;Sim/src/communication/communication.c" name="/home/travis/build/HPDCS/ROOT&#45;Sim/src/communication/communication.c">
+<area shape="rect" id="node4" href="$core_8h.html" title="This header defines all the shared symbols which are needed by different subsystems. " alt="" coords="846,437,941,464"/>
+<area shape="rect" id="node15" href="$atomic_8h.html" title="This module implements atomic and non&#45;blocking operations used within ROOT&#45;Sim to coordinate threads ..." alt="" coords="1551,587,1662,613"/>
+<area shape="rect" id="node16" href="$gvt_2gvt_8h.html" title="This header defines all the Global Virtual Time symbols needed by the platform. The current implement..." alt="" coords="94,273,173,300"/>
+<area shape="rect" id="node18" href="$queues_8h.html" title="Event and State queueing Subsystem main header. " alt="" coords="950,184,1082,211"/>
+<area shape="rect" id="node19" href="$communication_8h.html" title="This is the main header file, containing all data structures and defines used by the communication su..." alt="" coords="959,273,1195,300"/>
+<area shape="rect" id="node20" href="$statistics_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="780,109,932,136"/>
+<area shape="rect" id="node21" href="$process_8h.html" title="This header defines a LP control block, keeping information about both simulation state and execution..." alt="" coords="723,184,874,211"/>
+<area shape="rect" id="node22" href="$dymelor_8h.html" title="This is the Memory Management Subsystem main header file. " alt="" coords="1320,273,1435,300"/>
+<area shape="rect" id="node29" href="$list_8h.html" title="This header defines macros for accessing the general&#45;purpose list implementation used in the simulato..." alt="" coords="1615,273,1735,300"/>
+<area shape="rect" id="node36" href="$scheduler_8h.html" title="Scheduling Subsystem main header file. Scheduler&#45;specific data structures and defines should be place..." alt="" coords="590,109,751,136"/>
+<area shape="rect" id="node38" href="$slab_8h.html" title="datatypes/slab.h" alt="" coords="1899,273,2027,300"/>
+<area shape="rect" id="node39" href="$treiber_8h.html" title="datatypes/treiber.h" alt="" coords="1950,109,2093,136"/>
+<area shape="rect" id="node5" href="$ROOT-Sim_8h.html" title="This header defines all the symbols which are needed to develop a Model to be simulated on top of ROO..." alt="" coords="557,512,656,539"/>
+<area shape="rect" id="node13" href="$numerical_8h.html" title="This header is used to define symbols which must be accessible by the simulator but not by the applic..." alt="" coords="680,512,795,539"/>
+<area shape="rect" id="node14" href="$thread_8h.html" title="This module implements Kernel Level Thread supports. " alt="" coords="1022,512,1130,539"/>
+<area shape="rect" id="node17" href="$state_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="558,363,655,389"/>
+<area shape="rect" id="node28" href="$ecs_8h.html" title="mm/ecs.h" alt="" coords="798,273,885,300"/>
+<area shape="rect" id="node32" href="$msgchannel_8h.html" title="This module implements an (M, 1) channel to transfer message pointers. " alt="" coords="798,363,978,389"/>
+<area shape="rect" id="node33" href="$ult_8h.html" title="The User&#45;Level Thread module allows the creation/scheduling of a user&#45;level thread in an architecture..." alt="" coords="349,273,432,300"/>
+<area shape="rect" id="node34" href="$cross__state__manager_8h.html" title="This is the main header for the Linux Kernel Module which implements per&#45;kernel&#45;thread different page..." alt="" coords="608,259,773,315"/>
+<area shape="rect" id="node23" href="$bitmap_8h.html" title="This header implements a minimal bitmap data type. " alt="" coords="1205,363,1352,389"/>
+<area shape="rect" id="node25" href="$timer_8h.html" title="This header defines the timers which the simulator uses to monitor its internal behaviour. " alt="" coords="1427,363,1525,389"/>
+<area shape="rect" id="node37" href="$stf_8h.html" title="Smallest Timestamp First scheduler main header. " alt="" coords="556,184,671,211"/>
+</map>

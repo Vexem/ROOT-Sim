@@ -1,0 +1,6 @@
+<map id="LP_knapsack" name="LP_knapsack">
+<area shape="rect" id="node2" href="$binding_8c.html#ac24aaee55e50bfc240c058c2a0a7e5f6" title="compare_lp_cost" alt="" coords="173,5,303,32"/>
+<area shape="rect" id="node3" href="$statistics_8c.html#aa03405d73ac9baf8f24daac8dab057d1" title="statistics_get_lp_data" alt="" coords="157,56,319,83"/>
+<area shape="rect" id="node5" href="$process_8c.html#a949974614cde62232966df647ceb7149" title="LPS_bound_set" alt="" coords="178,107,298,133"/>
+<area shape="rect" id="node4" href="$core_8c.html#aa5d3c29f381884d4bb7cd0983b3c541a" title="rootsim_error" alt="" coords="367,56,476,83"/>
+</map>

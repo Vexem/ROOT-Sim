@@ -41,7 +41,7 @@ These are the requirements to build ROOT-Sim. Note that if you exclude specific 
 | Linux      | 2.6.5           |
 | gcc        | 6.0.0           |
 | OpenMPI(*) | 3.0.1           |
-| MPICH(*)   | 3.0.1           |
+| MPICH(*)   | 3.2.0           |
 
 (*) Only one between OpenMPI and MPICH are required.
 

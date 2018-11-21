@@ -1,0 +1,12 @@
+<map id="free_pages" name="free_pages">
+<area shape="rect" id="node2" href="$mm_8h.html#a4efde26b534d03e963a4ff4903f8ba88" title="allocator_fini" alt="" coords="147,107,249,133"/>
+<area shape="rect" id="node3" href="$dymelor_8h.html#acb2ad979faeabdfb1a4c79cd69514171" title="dymelor_fini" alt="" coords="297,107,396,133"/>
+<area shape="rect" id="node4" href="$core_8h.html#a3921baf034c32267c392af389d1f3f2a" title="simulation_shutdown" alt="" coords="444,107,600,133"/>
+<area shape="rect" id="node5" href="$core_8c.html#a9b05d2af2e233e2616633eaa706682ee" title="exit_from_simulation\l_model" alt="" coords="651,19,806,61"/>
+<area shape="rect" id="node9" href="$main_8c.html#ab05afef7d356edc20f6c99c6af0a33a8" title="main_simulation_loop" alt="" coords="648,107,809,133"/>
+<area shape="rect" id="node11" href="$serial_8h.html#ad6ad0d134746a428ef1ece46a3bdcc43" title="serial_simulation" alt="" coords="1027,132,1156,159"/>
+<area shape="rect" id="node6" href="$core_8h.html#a7fb819521b1ab5fc7644ad216fe7b465" title="base_init" alt="" coords="879,5,957,32"/>
+<area shape="rect" id="node7" href="$init_8h.html#a417eb072179d09f441dbae3125049e46" title="SystemInit" alt="" coords="1046,5,1137,32"/>
+<area shape="rect" id="node8" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1204,56,1259,83"/>
+<area shape="rect" id="node10" href="$main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="857,107,979,133"/>
+</map>

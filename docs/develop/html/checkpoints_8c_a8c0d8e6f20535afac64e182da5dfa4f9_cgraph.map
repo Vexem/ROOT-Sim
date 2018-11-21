@@ -1,0 +1,7 @@
+<map id="log_full" name="log_full">
+<area shape="rect" id="node2" href="$dymelor_8h.html#ab72247530e122f0e6503db111c18d273" title="get_log_size" alt="" coords="145,5,246,32"/>
+<area shape="rect" id="node3" href="$dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="164,56,227,83"/>
+<area shape="rect" id="node5" href="$core_8c.html#aa5d3c29f381884d4bb7cd0983b3c541a" title="rootsim_error" alt="" coords="319,107,428,133"/>
+<area shape="rect" id="node6" href="$statistics_8c.html#a59e37e49114d5cae5acf1e6c5ef300a1" title="statistics_post_data" alt="" coords="120,157,271,184"/>
+<area shape="rect" id="node4" href="$platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="319,56,428,83"/>
+</map>
