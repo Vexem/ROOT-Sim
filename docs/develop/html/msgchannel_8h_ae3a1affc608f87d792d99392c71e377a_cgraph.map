@@ -1,8 +1,0 @@
-<map id="get_msg" name="get_msg">
-<area shape="rect" id="node2" href="$atomic_8h.html#a7a6b9868956dd8e51e5de80e16c76fc4" title="spin_lock" alt="" coords="177,5,257,32"/>
-<area shape="rect" id="node3" href="$msgchannel_8c.html#a305b8b2ed9f8d7acf84282acad3c88b7" title="switch_channel_buffers" alt="" coords="132,56,301,83"/>
-<area shape="rect" id="node4" href="$atomic_8h.html#a4e8c9d1c6101995f1ecd2141d77e4824" title="spin_unlock" alt="" coords="169,107,265,133"/>
-<area shape="rect" id="node5" href="$atomic_8h.html#a52336e036d2da5656c6db69b121458ba" title="atomic_dec" alt="" coords="169,157,265,184"/>
-<area shape="rect" id="node6" href="$communication_8c.html#aebec05b86f3467473116d555954b80f4" title="validate_msg" alt="" coords="163,208,270,235"/>
-<area shape="rect" id="node7" href="$communication_8c.html#ab442ee81854e910ac0b21e3caf21cc48" title="mark_to_gid" alt="" coords="349,208,451,235"/>
-</map>

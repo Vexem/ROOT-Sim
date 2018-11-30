@@ -2,7 +2,6 @@ var thread_8h =
 [
     [ "_helper_thread", "struct__helper__thread.html", "struct__helper__thread" ],
     [ "barrier_t", "structbarrier__t.html", "structbarrier__t" ],
-    [ "__ROOTSIM_THREAD_H", "thread_8h.html#ace3ed06f6c96e262dcb8fcae25942452", null ],
     [ "create_thread", "thread_8h.html#af408b745c1a66868dd7907255a4f1cdc", null ],
     [ "HALF_UINT_BITS", "thread_8h.html#a2ae777b689a44d6b26e457053e46e4bb", null ],
     [ "master_thread", "thread_8h.html#a17cccdaf0ea5bb102a9aa0a429ea1e48", null ],

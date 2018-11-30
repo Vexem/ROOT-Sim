@@ -1,6 +1,7 @@
 <map id="process_bottom_halves" name="process_bottom_halves">
-<area shape="rect" id="node2" href="$gvt_2gvt_8c.html#a895d5bfff43f3ee72f9cf7097abf609b" title="GVT_phases" alt="" coords="213,5,312,32"/>
-<area shape="rect" id="node4" href="$main_8c.html#ab05afef7d356edc20f6c99c6af0a33a8" title="main_simulation_loop" alt="" coords="515,31,661,57"/>
-<area shape="rect" id="node3" href="$gvt_2gvt_8h.html#a899b50ab45427cf145360ff3a6c29808" title="gvt_operations" alt="" coords="360,5,467,32"/>
-<area shape="rect" id="node5" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="709,31,760,57"/>
+<area shape="rect" id="node2" href="$gvt_2gvt_8c.html#a895d5bfff43f3ee72f9cf7097abf609b" title="GVT_phases" alt="" coords="228,5,329,32"/>
+<area shape="rect" id="node4" href="$main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="543,31,704,57"/>
+<area shape="rect" id="node3" href="$gvt_2gvt_8h.html#a899b50ab45427cf145360ff3a6c29808" title="gvt_operations" alt="" coords="377,5,495,32"/>
+<area shape="rect" id="node5" href="$main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="752,31,873,57"/>
+<area shape="rect" id="node6" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="785,81,840,108"/>
 </map>

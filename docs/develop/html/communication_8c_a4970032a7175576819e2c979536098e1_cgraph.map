@@ -1,8 +1,0 @@
-<map id="get_msg_from_slab" name="get_msg_from_slab">
-<area shape="rect" id="node2" href="$treiber_8c.html#ad108d3156af43abc437528a2220606d0" title="treiber_detach" alt="" coords="201,5,316,32"/>
-<area shape="rect" id="node3" href="$slab_8c.html#a891cd5abfed9deb98413ab7e7c29ef61" title="slab_free" alt="" coords="219,56,299,83"/>
-<area shape="rect" id="node5" href="$dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a" title="rsfree" alt="" coords="229,157,288,184"/>
-<area shape="rect" id="node7" href="$slab_8c.html#a13199823c54d944aa128966cb35c5aa3" title="slab_alloc" alt="" coords="217,107,301,133"/>
-<area shape="rect" id="node4" href="$slab_8c.html#ac0e4a2a4ab26d7f2399eecbb72fc4cff" title="slab_is_valid" alt="" coords="364,81,465,108"/>
-<area shape="rect" id="node6" href="$platform_8c.html#ae2af2cd130d16958394ae21e9d13035f" title="__real_free" alt="" coords="369,157,461,184"/>
-</map>

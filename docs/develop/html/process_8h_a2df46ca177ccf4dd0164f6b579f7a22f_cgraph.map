@@ -1,6 +1,0 @@
-<map id="initialize_control_blocks" name="initialize_control_blocks">
-<area shape="rect" id="node2" href="$dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="324,5,387,32"/>
-<area shape="rect" id="node5" href="$msgchannel_8c.html#a9da640576408c47378535edae6e4fec4" title="init_channel" alt="" coords="177,56,276,83"/>
-<area shape="rect" id="node3" href="$platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="435,5,544,32"/>
-<area shape="rect" id="node4" href="$core_8c.html#aa5d3c29f381884d4bb7cd0983b3c541a" title="rootsim_error" alt="" coords="435,56,544,83"/>
-</map>

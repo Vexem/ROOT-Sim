@@ -1,6 +1,0 @@
-<map id="my_load_idt" name="my_load_idt">
-<area shape="rect" id="node2" href="$my__page__fault_8h.html#a021cbe7ba04ffeb3022bc0d58232d9a6" title="register_my_page_fault\l_handler" alt="" coords="152,5,324,47"/>
-<area shape="rect" id="node5" href="$my__page__fault_8h.html#a64533932a8050163ce3670fcb4097921" title="unregister_my_page\l_fault_handler" alt="" coords="372,64,525,105"/>
-<area shape="rect" id="node3" href="$intercept__page__fault_8c.html#a2a68435ae246f9919d8f02c1ef93b1ca" title="my_virt_drv_init" alt="" coords="387,13,510,39"/>
-<area shape="rect" id="node4" href="$intercept__page__fault_8c.html#a47b090f1043c0655431ec883bd811414" title="my_virt_drv_exit" alt="" coords="573,42,700,69"/>
-</map>

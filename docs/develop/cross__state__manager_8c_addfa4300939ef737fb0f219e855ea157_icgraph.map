@@ -1,5 +1,5 @@
 <map id="set_pte_sticky_flags" name="set_pte_sticky_flags">
-<area shape="rect" id="node2" href="$cross__state__manager_8c.html#a3b80c9ec104b8748f5d05b51308c4f3a" title="rs_ktblmgr_ioctl" alt="" coords="197,5,312,32"/>
-<area shape="rect" id="node3" href="$my__page__fault_8c.html#a7fd7cba45a0590eeea160b4b21cc80c3" title="root_sim_page_fault" alt="" coords="360,5,499,32"/>
-<area shape="rect" id="node4" href="$my__page__fault_8c.html#a189525902f53d8ef5bd0e96b2cdd1cb8" title="my_do_page_fault" alt="" coords="547,5,675,32"/>
+<area shape="rect" id="node2" href="$cross__state__manager_8c.html#a3b80c9ec104b8748f5d05b51308c4f3a" title="rs_ktblmgr_ioctl" alt="" coords="204,29,327,56"/>
+<area shape="rect" id="node3" href="$my__page__fault_8c.html#a7fd7cba45a0590eeea160b4b21cc80c3" title="root_sim_page_fault" alt="" coords="375,29,527,56"/>
+<area shape="rect" id="node4" href="$my__page__fault_8c.html#a189525902f53d8ef5bd0e96b2cdd1cb8" title="my_do_page_fault" alt="" coords="575,29,713,56"/>
 </map>

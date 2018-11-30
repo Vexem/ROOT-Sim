@@ -1,8 +1,0 @@
-<map id="receive_control_msg" name="receive_control_msg">
-<area shape="rect" id="node2" href="$queues_8h.html#a54eca9bfa893cac072d1b1d3010c2944" title="process_bottom_halves" alt="" coords="208,31,383,57"/>
-<area shape="rect" id="node3" href="$gvt_2gvt_8c.html#a895d5bfff43f3ee72f9cf7097abf609b" title="GVT_phases" alt="" coords="431,5,532,32"/>
-<area shape="rect" id="node5" href="$main_8c.html#ab05afef7d356edc20f6c99c6af0a33a8" title="main_simulation_loop" alt="" coords="745,31,907,57"/>
-<area shape="rect" id="node4" href="$gvt_2gvt_8h.html#a899b50ab45427cf145360ff3a6c29808" title="gvt_operations" alt="" coords="580,5,697,32"/>
-<area shape="rect" id="node6" href="$main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="955,31,1076,57"/>
-<area shape="rect" id="node7" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="988,81,1043,108"/>
-</map>

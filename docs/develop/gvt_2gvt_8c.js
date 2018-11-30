@@ -18,6 +18,7 @@ var gvt_2gvt_8c =
     [ "gvt_init", "gvt_2gvt_8c.html#aa6c9337f3fccf8513b8fad1533f743c4", null ],
     [ "gvt_operations", "gvt_2gvt_8c.html#a899b50ab45427cf145360ff3a6c29808", null ],
     [ "GVT_phases", "gvt_2gvt_8c.html#a895d5bfff43f3ee72f9cf7097abf609b", null ],
+    [ "reduce_local_gvt", "gvt_2gvt_8c.html#a09f7517c5f85f842692721be967ab757", null ],
     [ "start_new_gvt", "gvt_2gvt_8c.html#a5eca5fe72026b6f5e5ec76598bde2475", null ],
     [ "commit_kvt_tkn", "gvt_2gvt_8c.html#ad5ee5a062ed5e26dde8a078370f0f1e0", null ],
     [ "counter_A", "gvt_2gvt_8c.html#ad666577e3fc9510d8f9bcc767cb2f3d3", null ],

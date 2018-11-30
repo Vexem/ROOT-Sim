@@ -1,0 +1,8 @@
+<map id="initialize_memory_map" name="initialize_memory_map">
+<area shape="rect" id="node2" href="$dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="435,56,497,83"/>
+<area shape="rect" id="node4" href="$mm_8h.html#a9ddefb6c0499750d4928a2462d3aa0ae" title="slab_init" alt="" coords="252,5,327,32"/>
+<area shape="rect" id="node6" href="$dymelor_8c.html#a8e070de8750bb4afd1be813809e70eb9" title="malloc_state_init" alt="" coords="224,107,355,133"/>
+<area shape="rect" id="node3" href="$platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="577,56,687,83"/>
+<area shape="rect" id="node5" href="$slab_8c.html#ac0e4a2a4ab26d7f2399eecbb72fc4cff" title="slab_is_valid" alt="" coords="415,5,517,32"/>
+<area shape="rect" id="node7" href="$dymelor_8c.html#ac1e32353ad7bdfbf4b701db28602fcbc" title="malloc_area_init" alt="" coords="403,107,529,133"/>
+</map>

@@ -1,8 +1,0 @@
-<map id="silent_execution" name="silent_execution">
-<area shape="rect" id="node2" href="$control_8c.html#ac428a2905faec2d67f82840f28929ec2" title="reprocess_control_msg" alt="" coords="179,31,349,57"/>
-<area shape="rect" id="node3" href="$scheduler_8c.html#af9c35f642d3f6a8a4b2cdcd4dfb9f708" title="activate_LP" alt="" coords="217,81,311,108"/>
-<area shape="rect" id="node4" href="$ecs_8h.html#af96855eb85637b829d7d3aa20f97ad3c" title="lp_alloc_schedule" alt="" coords="405,5,539,32"/>
-<area shape="rect" id="node5" href="$core_8c.html#aa5d3c29f381884d4bb7cd0983b3c541a" title="rootsim_error" alt="" coords="417,56,527,83"/>
-<area shape="rect" id="node6" href="$core_8h.html#ac2b1b08baf23849d226a2302773d3e40" title="LidToGid" alt="" coords="435,107,509,133"/>
-<area shape="rect" id="node7" href="$ecs_8h.html#a93b282f8af3c72bdbd5d0533a4cc2355" title="lp_alloc_deschedule" alt="" coords="397,157,547,184"/>
-</map>

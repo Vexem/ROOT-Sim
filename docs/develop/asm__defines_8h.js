@@ -19,7 +19,7 @@ var asm__defines_8h =
     [ "offsetof_exec_context_t_rip", "asm__defines_8h.html#a9810f3821f540175834c6017041e47d9", null ],
     [ "offsetof_exec_context_t_rsi", "asm__defines_8h.html#a8436cf168f0cd641b5358e0bd5e59d25", null ],
     [ "offsetof_exec_context_t_rsp", "asm__defines_8h.html#a93ff9a9784c211f8f6015306893d091a", null ],
-    [ "offsetof_LP_State_context", "asm__defines_8h.html#a937cfd6f3abc4d2b71ca97b570df66ef", null ],
+    [ "offsetof_struct", "asm__defines_8h.html#ad39accb4c9da6dde153fb20ea9c68322", null ],
     [ "sizeof_exec_context_t", "asm__defines_8h.html#a14273d1d5717446e2578b30e8c5f7f10", null ],
-    [ "sizeof_LP_State", "asm__defines_8h.html#a5ab5c3577e944df4b1ab45d87ef628af", null ]
+    [ "sizeof_struct", "asm__defines_8h.html#ab3ba89781a69b44bdd9b19705a7102af", null ]
 ];

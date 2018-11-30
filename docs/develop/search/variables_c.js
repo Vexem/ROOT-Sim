@@ -1,17 +1,18 @@
 var searchData=
 [
-  ['m_5fstate',['m_state',['../dymelor_8h.html#ae78caa7749a687854635d40f1665a447',1,'dymelor.h']]],
+  ['m_5fstate',['m_state',['../structmemory__map.html#a36ed936aa6dafce74ceaa9b2bb2b8bfb',1,'memory_map']]],
   ['major',['major',['../cross__state__manager_8c.html#ac8947941479c38403a09c14a60b03f01',1,'cross_state_manager.c']]],
   ['managed_5fpgds',['managed_pgds',['../cross__state__manager_8c.html#a0d6b8ee219d3af18d8ae8c4bb8d479fe',1,'cross_state_manager.c']]],
   ['mapped_5fprocesses',['mapped_processes',['../struct__ioctl__info.html#a256068e2d2569ce12b37e90f24cdd7d9',1,'_ioctl_info::mapped_processes()'],['../cross__state__manager_8c.html#ad6dad04d3c9f7f2323ddc3e147a81c2d',1,'mapped_processes():&#160;cross_state_manager.c']]],
-  ['mark',['mark',['../struct__msg__t.html#a65a20f7802ea4b09d27189655f6afa73',1,'_msg_t::mark()'],['../struct__msg__hdr__t.html#a6bac412cb199ea10309ed0815dd44ddc',1,'_msg_hdr_t::mark()'],['../struct__LP__state.html#ad842d922126718b849a67afe5945caeb',1,'_LP_state::mark()']]],
+  ['mark',['mark',['../struct__msg__t.html#a65a20f7802ea4b09d27189655f6afa73',1,'_msg_t::mark()'],['../struct__msg__hdr__t.html#a6bac412cb199ea10309ed0815dd44ddc',1,'_msg_hdr_t::mark()'],['../structlp__struct.html#a217e7ecf37468b74c6002b08306ef627',1,'lp_struct::mark()']]],
   ['master_5fseed',['master_seed',['../numerical_8c.html#a281f332b0dbf3fb8a4832b16269b324e',1,'numerical.c']]],
   ['max_5fnum_5fareas',['max_num_areas',['../struct__malloc__state.html#a933450c1674d20c249e0db7f1c48de84',1,'_malloc_state']]],
+  ['max_5fresident_5fset',['max_resident_set',['../structstat__t.html#a326fbd57fcc9d5bd8f246a854a8f06d2',1,'stat_t']]],
   ['max_5fsize',['max_size',['../struct__outgoing__t.html#a972bae427d92a937aac6346c27e9516d',1,'_outgoing_t']]],
-  ['mem_5fareas',['mem_areas',['../buddy_8c.html#a95c7c388ebb3ccfb884406f554ad600f',1,'buddy.c']]],
   ['memory_5fusage',['memory_usage',['../structstat__t.html#a6c4bc671a81b1f33b0f83f0227a01bd2',1,'stat_t']]],
   ['message_5fkind',['message_kind',['../struct__msg__t.html#ab433e1c9256ad9e6e7804004b9b8260d',1,'_msg_t']]],
   ['min_5fin_5ftransit',['min_in_transit',['../struct__outgoing__t.html#a4bf364cee906283590c4931055004523',1,'_outgoing_t']]],
+  ['mm',['mm',['../structlp__struct.html#a569bb9b88cef853524a5b1b46aa3e09e',1,'lp_struct']]],
   ['mm_5fstruct_5faddr',['mm_struct_addr',['../cross__state__manager_8c.html#ab503715671d34806c888005b3818d2e4',1,'cross_state_manager.c']]],
   ['mode64',['mode64',['../structdisassembly__state.html#aa91f663da1b9d017f4323591ba2b1318',1,'disassembly_state']]],
   ['modrm',['modrm',['../structdisassembly__state.html#a401dcaf0c69b67864984b24eaca19e44',1,'disassembly_state']]],
@@ -19,7 +20,5 @@ var searchData=
   ['modrm38_5ft',['modrm38_t',['../ld_8h.html#a1b6ad6cd6f2e5b1f647e52c82217cf3e',1,'ld.h']]],
   ['modrm3a_5ft',['modrm3a_t',['../ld_8h.html#ad3a38736c7d18092e2eb7848e5f6195b',1,'ld.h']]],
   ['modrm_5ft',['modrm_t',['../ld_8h.html#aad626c1d600adbce09f5d51c895f3bf7',1,'ld.h']]],
-  ['msg_5fslab',['msg_slab',['../communication_8c.html#aedf03d0de8a7c5d5b56817ab6e316694',1,'communication.c']]],
-  ['msg_5ftreiber',['msg_treiber',['../communication_8c.html#a99356f6ff66a995b8d3f07962b08aff4',1,'communication.c']]],
   ['my_5fgvt_5fround',['my_GVT_round',['../gvt_2gvt_8c.html#ac456e776eac971f10d578185fc6d5a3c',1,'gvt.c']]]
 ];

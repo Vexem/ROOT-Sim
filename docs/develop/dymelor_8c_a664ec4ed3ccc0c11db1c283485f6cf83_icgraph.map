@@ -1,13 +1,10 @@
 <map id="find_next_free" name="find_next_free">
-<area shape="rect" id="node2" href="$dymelor_8h.html#a1f7d977353fa17d93a71e5872780944e" title="do_malloc" alt="" coords="158,233,239,260"/>
-<area shape="rect" id="node3" href="$recoverable_8c.html#a3687f50774c89e7a09833a71adbb7771" title="__wrap_malloc" alt="" coords="288,157,397,184"/>
-<area shape="rect" id="node10" href="$unrecoverable_8c.html#ac3b7265f19dc2d2307cc95861d23e0ec" title="umalloc" alt="" coords="309,309,376,336"/>
-<area shape="rect" id="node4" href="$wrapper_8c.html#a849c010b96eae768d42712e2060efbe1" title="__wrap_strdup" alt="" coords="453,5,560,32"/>
-<area shape="rect" id="node5" href="$wrapper_8c.html#a0159c74a123b68c5434b8747172aa255" title="__wrap_strndup" alt="" coords="449,56,564,83"/>
-<area shape="rect" id="node6" href="$ROOT-Sim_8h.html#adebe424adaebf0abecac23c41891fbee" title="SetupObstacles" alt="" coords="449,107,564,133"/>
-<area shape="rect" id="node7" href="$ROOT-Sim_8h.html#a687b119a53a0db5787416bc460299cd2" title="ComputeMinTour" alt="" coords="445,157,568,184"/>
-<area shape="rect" id="node8" href="$recoverable_8c.html#a5dc7f457bad412e9964501f2273aea0e" title="__wrap_realloc" alt="" coords="452,208,561,235"/>
-<area shape="rect" id="node9" href="$recoverable_8c.html#a818524883cd69709fe0e3499d6748d14" title="__wrap_calloc" alt="" coords="454,259,559,285"/>
-<area shape="rect" id="node11" href="$unrecoverable_8c.html#a5d3ff7555bbe0e389e59ac667830adb4" title="urealloc" alt="" coords="473,309,540,336"/>
-<area shape="rect" id="node12" href="$unrecoverable_8c.html#ab87c1732c7d963efcd08cf86167fe21a" title="ucalloc" alt="" coords="475,360,538,387"/>
+<area shape="rect" id="node2" href="$dymelor_8h.html#a0706c4a4237b3b20358ee252bdfb1a0f" title="do_malloc" alt="" coords="165,132,252,159"/>
+<area shape="rect" id="node3" href="$dymelor_8h.html#a26407e99c6266e774c65131ef12b03b8" title="__wrap_malloc" alt="" coords="300,132,415,159"/>
+<area shape="rect" id="node4" href="$wrapper_8c.html#a849c010b96eae768d42712e2060efbe1" title="__wrap_strdup" alt="" coords="470,5,585,32"/>
+<area shape="rect" id="node5" href="$wrapper_8c.html#a0159c74a123b68c5434b8747172aa255" title="__wrap_strndup" alt="" coords="466,56,589,83"/>
+<area shape="rect" id="node6" href="$ROOT-Sim_8h.html#adebe424adaebf0abecac23c41891fbee" title="SetupObstacles" alt="" coords="466,107,589,133"/>
+<area shape="rect" id="node7" href="$ROOT-Sim_8h.html#a687b119a53a0db5787416bc460299cd2" title="ComputeMinTour" alt="" coords="463,157,592,184"/>
+<area shape="rect" id="node8" href="$dymelor_8h.html#a8b835f617273e3dcb51a0818e4d38090" title="__wrap_realloc" alt="" coords="470,208,585,235"/>
+<area shape="rect" id="node9" href="$dymelor_8h.html#ac413ddb09d9d07ab4988b4ef62e38e73" title="__wrap_calloc" alt="" coords="473,259,582,285"/>
 </map>

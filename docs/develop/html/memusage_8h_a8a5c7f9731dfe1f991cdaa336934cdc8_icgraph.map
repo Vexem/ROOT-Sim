@@ -1,9 +1,0 @@
-<map id="getCurrentRSS" name="getCurrentRSS">
-<area shape="rect" id="node2" href="$statistics_8h.html#a6653e2f6059af402d4ad97ab266f565a" title="statistics_on_gvt" alt="" coords="171,5,300,32"/>
-<area shape="rect" id="node7" href="$statistics_8h.html#a1d37886727e2f2ada6aa171f147abb01" title="statistics_on_gvt_serial" alt="" coords="348,56,519,83"/>
-<area shape="rect" id="node3" href="$gvt_2gvt_8h.html#a899b50ab45427cf145360ff3a6c29808" title="gvt_operations" alt="" coords="375,5,492,32"/>
-<area shape="rect" id="node4" href="$main_8c.html#ab05afef7d356edc20f6c99c6af0a33a8" title="main_simulation_loop" alt="" coords="567,5,728,32"/>
-<area shape="rect" id="node5" href="$main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="776,5,897,32"/>
-<area shape="rect" id="node6" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="809,56,864,83"/>
-<area shape="rect" id="node8" href="$serial_8h.html#ad6ad0d134746a428ef1ece46a3bdcc43" title="serial_simulation" alt="" coords="583,56,712,83"/>
-</map>

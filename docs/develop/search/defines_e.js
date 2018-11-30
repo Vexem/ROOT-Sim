@@ -6,10 +6,6 @@ var searchData=
   ['p_5fis_5fgroup4',['p_is_group4',['../x86_8h.html#a23db14494726a4c4a909702a0cf32b29',1,'x86.h']]],
   ['page_5fsize',['PAGE_SIZE',['../mm_8h.html#a7d467c1d283fdfa1f2081ba1e0d01b6e',1,'mm.h']]],
   ['parse_5fullong_5flimits',['parse_ullong_limits',['../init_8c.html#ae0df3bc8c8914f2c0784e97c902f57c9',1,'init.c']]],
-  ['parseboolean',['parseBoolean',['../ROOT-Sim_8h.html#a41e4069c9104b8d11799d8f2784725c9',1,'ROOT-Sim.h']]],
-  ['parsedouble',['parseDouble',['../ROOT-Sim_8h.html#a16d501bcc6c237ba0ac983b05e47d9fc',1,'ROOT-Sim.h']]],
-  ['parsefloat',['parseFloat',['../ROOT-Sim_8h.html#a5036623d3a04570de7c7ceaaf2aa7ccd',1,'ROOT-Sim.h']]],
-  ['parseint',['parseInt',['../ROOT-Sim_8h.html#a058d2999b4cc1dbd7049181c313ea21f',1,'ROOT-Sim.h']]],
   ['pde',['PDE',['../cross__state__manager_8h.html#a5d949426510c63442eaeb2ac500cfe07',1,'cross_state_manager.h']]],
   ['pdp',['PDP',['../cross__state__manager_8h.html#add7385c8092c6c48854e5ac8c24a198e',1,'cross_state_manager.h']]],
   ['per_5flp_5fpreallocated_5fmemory',['PER_LP_PREALLOCATED_MEMORY',['../mm_8h.html#adfdba5f8542594e580fef9d6933652fe',1,'mm.h']]],
@@ -18,6 +14,6 @@ var searchData=
   ['platform_5fstats',['PLATFORM_STATS',['../core_8h.html#ae0d3c4f77db10944ec87d3ee5861d1c0',1,'core.h']]],
   ['pml4',['PML4',['../cross__state__manager_8h.html#ab9f8341adb70092b051e87ed595bf1ce',1,'cross_state_manager.h']]],
   ['pml4_5fplus_5fone',['PML4_PLUS_ONE',['../cross__state__manager_8h.html#a7a33c7c77d16bc7e58de749a0b4afafc',1,'cross_state_manager.h']]],
-  ['powerof2',['POWEROF2',['../slab_8c.html#a9d095bc1979e862ea41c3222f153715c',1,'POWEROF2():&#160;slab.c'],['../dymelor_8h.html#a9d095bc1979e862ea41c3222f153715c',1,'POWEROF2():&#160;dymelor.h']]],
+  ['powerof2',['POWEROF2',['../dymelor_8h.html#a9d095bc1979e862ea41c3222f153715c',1,'dymelor.h']]],
   ['pte',['PTE',['../cross__state__manager_8h.html#ae6d060917fed7eb27e786f98e7ac34ab',1,'cross_state_manager.h']]]
 ];

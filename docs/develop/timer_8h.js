@@ -1,5 +1,6 @@
 var timer_8h =
 [
+    [ "TIMER_BUFFER_LEN", "timer_8h.html#a17ea48cd564a6d7171d3c6c6068298f0", null ],
     [ "timer_restart", "timer_8h.html#a4e8c981ff064a7818e081b822502a66f", null ],
     [ "timer_start", "timer_8h.html#a2ca4d29f3016abd30acf24487cf9f85a", null ],
     [ "timer_tostring", "timer_8h.html#a58c5258939b6238ab8b2a0888eca03b0", null ],

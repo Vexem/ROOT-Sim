@@ -1,6 +1,0 @@
-<map id="start_new_gvt" name="start_new_gvt">
-<area shape="rect" id="node2" href="$gvt_2gvt_8h.html#a899b50ab45427cf145360ff3a6c29808" title="gvt_operations" alt="" coords="164,5,281,32"/>
-<area shape="rect" id="node3" href="$main_8c.html#ab05afef7d356edc20f6c99c6af0a33a8" title="main_simulation_loop" alt="" coords="329,5,491,32"/>
-<area shape="rect" id="node4" href="$main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="539,5,660,32"/>
-<area shape="rect" id="node5" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="572,56,627,83"/>
-</map>

@@ -1,0 +1,6 @@
+<map id="buddy_alloc" name="buddy_alloc">
+<area shape="rect" id="node2" href="$buddy_8c.html#afc575c99c743d778f7e7b820a0d05f8e" title="next_power_of_2" alt="" coords="151,5,280,32"/>
+<area shape="rect" id="node3" href="$buddy_8c.html#ac31dad8abee32480810f0858d59909f0" title="left_child" alt="" coords="176,56,255,83"/>
+<area shape="rect" id="node4" href="$buddy_8c.html#aa176048819d5744297a1bbd86ee62525" title="right_child" alt="" coords="172,107,259,133"/>
+<area shape="rect" id="node5" href="$buddy_8c.html#a219b899cef5c55cb480ebcad342b2b2b" title="parent" alt="" coords="183,157,247,184"/>
+</map>

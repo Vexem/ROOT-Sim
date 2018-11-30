@@ -12,10 +12,6 @@ var ROOT_Sim_8h =
     [ "INFTY", "ROOT-Sim_8h.html#a84d177cf462436476c9bca8ef9e22c43", null ],
     [ "INIT", "ROOT-Sim_8h.html#ab5889105dcd019008c9448dff61323f6", null ],
     [ "INVALID_DIRECTION", "ROOT-Sim_8h.html#a21571d20217b8a830eaf3001c20c8056", null ],
-    [ "parseBoolean", "ROOT-Sim_8h.html#a41e4069c9104b8d11799d8f2784725c9", null ],
-    [ "parseDouble", "ROOT-Sim_8h.html#a16d501bcc6c237ba0ac983b05e47d9fc", null ],
-    [ "parseFloat", "ROOT-Sim_8h.html#a5036623d3a04570de7c7ceaaf2aa7ccd", null ],
-    [ "parseInt", "ROOT-Sim_8h.html#a058d2999b4cc1dbd7049181c313ea21f", null ],
     [ "TOPOLOGY_BIDRING", "ROOT-Sim_8h.html#aa9296f6d4de073ae601e8c32b9e67587", null ],
     [ "TOPOLOGY_HEXAGON", "ROOT-Sim_8h.html#ad0f5d91cff97c8145c811850a4ff868b", null ],
     [ "TOPOLOGY_MESH", "ROOT-Sim_8h.html#ae8394fef5d844ce9f1081920841a9cc2", null ],
@@ -45,9 +41,9 @@ var ROOT_Sim_8h =
     [ "Random", "ROOT-Sim_8h.html#af6956caec1509dadd719fddaaf692489", null ],
     [ "RandomRange", "ROOT-Sim_8h.html#aa41b8512b10550a2e21feec991f752b4", null ],
     [ "RandomRangeNonUniform", "ROOT-Sim_8h.html#a3fb512e9f25cd00982a446931d463082", null ],
+    [ "SetState", "ROOT-Sim_8h.html#aadf9dfe2d3cfe41ba90ecfd0e210f9fc", null ],
     [ "SetupObstacles", "ROOT-Sim_8h.html#adebe424adaebf0abecac23c41891fbee", null ],
     [ "Zipf", "ROOT-Sim_8h.html#a06c3e08e699f08c990e68c809788f4a4", null ],
     [ "n_prc_tot", "ROOT-Sim_8h.html#a2e17e8f5ce1357e19e56d5535f897851", null ],
-    [ "ScheduleNewEvent", "ROOT-Sim_8h.html#a20d1fee62d772686569bfc86f9494e01", null ],
-    [ "SetState", "ROOT-Sim_8h.html#a0bde9a81074dd5834d8be0264e4457fb", null ]
+    [ "ScheduleNewEvent", "ROOT-Sim_8h.html#afe377b81b0f25bdd6d4cc29eae84e0f4", null ]
 ];

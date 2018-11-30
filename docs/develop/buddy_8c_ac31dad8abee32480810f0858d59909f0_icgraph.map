@@ -1,0 +1,12 @@
+<map id="left_child" name="left_child">
+<area shape="rect" id="node2" href="$buddy_8c.html#a58a7821a912bdac3e3b8c33451824414" title="buddy_alloc" alt="" coords="132,5,229,32"/>
+<area shape="rect" id="node4" href="$buddy_8c.html#ae4a636805a09ff443c450ae96f28c4c1" title="buddy_free" alt="" coords="134,56,227,83"/>
+<area shape="rect" id="node3" href="$dymelor_8h.html#a1e1b739b45c018064a6723267d197457" title="allocate_lp_memory" alt="" coords="277,5,428,32"/>
+<area shape="rect" id="node5" href="$dymelor_8h.html#abbf4f3ec896ad320072f8c550c46dc94" title="free_lp_memory" alt="" coords="289,56,416,83"/>
+<area shape="rect" id="node6" href="$dymelor_8h.html#ab034b03a284ecc619e07a051d95b7dd7" title="clean_buffers_on_gvt" alt="" coords="476,56,633,83"/>
+<area shape="rect" id="node7" href="$gvt_2gvt_8h.html#a62e7abde0dac08e56aa2a57401aed27b" title="adopt_new_gvt" alt="" coords="681,56,800,83"/>
+<area shape="rect" id="node8" href="$gvt_2gvt_8h.html#a899b50ab45427cf145360ff3a6c29808" title="gvt_operations" alt="" coords="848,56,965,83"/>
+<area shape="rect" id="node9" href="$main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="1013,56,1175,83"/>
+<area shape="rect" id="node10" href="$main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="1223,56,1344,83"/>
+<area shape="rect" id="node11" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1256,107,1311,133"/>
+</map>

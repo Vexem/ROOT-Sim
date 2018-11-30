@@ -1,8 +1,7 @@
 var searchData=
 [
   ['thread_5fbarrier_5freset',['thread_barrier_reset',['../thread_8h.html#a06110ec9343614ebb501cae5b4d3bd20',1,'thread.h']]],
-  ['thread_5fstat',['THREAD_STAT',['../statistics_8h.html#a93e031e4f5d26efac82566a3ee2eed94',1,'statistics.h']]],
-  ['thread_5fstat_5fname',['THREAD_STAT_NAME',['../statistics_8h.html#a2bfc62234d90508bd7270621a9130ea5',1,'statistics.h']]],
+  ['timer_5fbuffer_5flen',['TIMER_BUFFER_LEN',['../timer_8h.html#a17ea48cd564a6d7171d3c6c6068298f0',1,'timer.h']]],
   ['timer_5frestart',['timer_restart',['../timer_8h.html#a4e8c981ff064a7818e081b822502a66f',1,'timer.h']]],
   ['timer_5fstart',['timer_start',['../timer_8h.html#a2ca4d29f3016abd30acf24487cf9f85a',1,'timer.h']]],
   ['timer_5ftostring',['timer_tostring',['../timer_8h.html#a58c5258939b6238ab8b2a0888eca03b0',1,'timer.h']]],

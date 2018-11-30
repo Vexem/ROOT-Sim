@@ -1,4 +1,0 @@
-<map id="register_my_page_fault_handler" name="register_my_page_fault_handler">
-<area shape="rect" id="node2" href="$intercept__page__fault_8c.html#a2a68435ae246f9919d8f02c1ef93b1ca" title="my_virt_drv_init" alt="" coords="225,13,348,39"/>
-<area shape="rect" id="node3" href="$intercept__page__fault_8c.html#a47b090f1043c0655431ec883bd811414" title="my_virt_drv_exit" alt="" coords="396,13,523,39"/>
-</map>

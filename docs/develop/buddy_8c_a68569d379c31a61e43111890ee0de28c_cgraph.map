@@ -1,0 +1,8 @@
+<map id="free_lp_memory" name="free_lp_memory">
+<area shape="rect" id="node2" href="$atomic_8h.html#a7a6b9868956dd8e51e5de80e16c76fc4" title="spin_lock" alt="" coords="188,5,268,32"/>
+<area shape="rect" id="node3" href="$buddy_8c.html#ae4a636805a09ff443c450ae96f28c4c1" title="buddy_free" alt="" coords="181,56,275,83"/>
+<area shape="rect" id="node7" href="$atomic_8h.html#a4e8c9d1c6101995f1ecd2141d77e4824" title="spin_unlock" alt="" coords="180,107,276,133"/>
+<area shape="rect" id="node4" href="$buddy_8c.html#a219b899cef5c55cb480ebcad342b2b2b" title="parent" alt="" coords="335,5,399,32"/>
+<area shape="rect" id="node5" href="$buddy_8c.html#ac31dad8abee32480810f0858d59909f0" title="left_child" alt="" coords="328,56,407,83"/>
+<area shape="rect" id="node6" href="$buddy_8c.html#aa176048819d5744297a1bbd86ee62525" title="right_child" alt="" coords="324,107,411,133"/>
+</map>

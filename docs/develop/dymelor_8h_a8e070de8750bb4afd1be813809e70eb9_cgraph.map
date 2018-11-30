@@ -1,0 +1,5 @@
+<map id="malloc_state_init" name="malloc_state_init">
+<area shape="rect" id="node2" href="$dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="216,5,279,32"/>
+<area shape="rect" id="node4" href="$dymelor_8c.html#ac1e32353ad7bdfbf4b701db28602fcbc" title="malloc_area_init" alt="" coords="184,56,311,83"/>
+<area shape="rect" id="node3" href="$platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="359,5,468,32"/>
+</map>

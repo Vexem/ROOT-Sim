@@ -1,7 +1,6 @@
 var searchData=
 [
   ['calqspace',['CALQSPACE',['../calqueue_8h.html#a624aac5de3342bc03b2b27131d10d0a1',1,'calqueue.h']]],
-  ['cas',['CAS',['../treiber_8c.html#aca5ffc6ec0b7490816103c2b9e50d74f',1,'treiber.c']]],
   ['check_5f0f',['CHECK_0F',['../ld_8h.html#a3b52e142e4b300a24c21de320645d694',1,'ld.h']]],
   ['check_5f38',['CHECK_38',['../ld_8h.html#a6acdc31ff17d70e96e4dbe28e4ec637f',1,'ld.h']]],
   ['check_5f3a',['CHECK_3A',['../ld_8h.html#aa3cb985f1c44def2410698449a015049',1,'ld.h']]],

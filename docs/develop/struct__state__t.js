@@ -5,6 +5,7 @@ var struct__state__t =
     [ "log", "struct__state__t.html#a093054b63471c09e09bdf21d86bfc50f", null ],
     [ "lvt", "struct__state__t.html#acef4538032eb5ddb18c2f593323783a6", null ],
     [ "next", "struct__state__t.html#a28554342ce29d02bd19e530aa23c5f70", null ],
+    [ "numerical", "struct__state__t.html#affe55bde32db277a05afb92be85dc8c2", null ],
     [ "prev", "struct__state__t.html#a750c79e1af605aa56ca33e127594939e", null ],
     [ "state", "struct__state__t.html#af28f8016ac94cb06ceab6c81b9b86959", null ]
 ];

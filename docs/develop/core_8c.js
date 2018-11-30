@@ -1,14 +1,16 @@
 var core_8c =
 [
-    [ "__attribute__", "core_8c.html#a0a384497f48902d463bda1d5968225eb", null ],
+    [ "_rootsim_error", "core_8c.html#a07c0d0faa203ed8c0b8b8cf94172d01a", null ],
     [ "base_fini", "core_8c.html#a4263f8cc078e5ee19cc22ec610a7cdf2", null ],
     [ "base_init", "core_8c.html#a7fb819521b1ab5fc7644ad216fe7b465", null ],
     [ "distribute_lps_on_kernels", "core_8c.html#a0c0887000d8e04c515c4a9a5bf2f5995", null ],
     [ "exit_from_simulation_model", "core_8c.html#a9b05d2af2e233e2616633eaa706682ee", null ],
+    [ "find_kernel_by_gid", "core_8c.html#a6793e4c70d69277f24ff0e494ed8ed10", null ],
+    [ "handle_signal", "core_8c.html#a748a7d6959709b662884fd256a382a60", null ],
     [ "initialization_complete", "core_8c.html#a9835611a359d96732cb2531b08212a94", null ],
-    [ "rootsim_error", "core_8c.html#aa5d3c29f381884d4bb7cd0983b3c541a", null ],
     [ "simulation_error", "core_8c.html#a79b77ff88fb4b25fa708aa0c2c04a6a8", null ],
     [ "simulation_shutdown", "core_8c.html#a8f346536ccfbe77b78ed577674beb6cf", null ],
+    [ "user_requested_exit", "core_8c.html#a5ecef0b698dbf7d8a82a2d696348b0fc", null ],
     [ "all_thread_barrier", "core_8c.html#addb8337d6703efd800f38de60a4e6796", null ],
     [ "exit_silently_from_kernel", "core_8c.html#ad409ff2a0aad1a9ad52b75adf0451a45", null ],
     [ "init_complete", "core_8c.html#a7dd42c912a0afd8bb4f008f23078534c", null ],
@@ -18,10 +20,7 @@ var core_8c =
     [ "n_ker", "core_8c.html#ad4d97791fb85ffd348d6af658d7c835a", null ],
     [ "n_prc", "core_8c.html#a526a04b413b324f6249f13f11e98021c", null ],
     [ "n_prc_tot", "core_8c.html#a2e17e8f5ce1357e19e56d5535f897851", null ],
-    [ "OnGVT", "core_8c.html#adfbad68bddb3c0c8cffffc43febea22e", null ],
-    [ "ProcessEvent", "core_8c.html#acd34b81eb0b79f809fa0d4fd36cbb593", null ],
     [ "rootsim_config", "core_8c.html#ae16855ae14bd366969eecad7446d51a6", null ],
     [ "sim_error", "core_8c.html#a2307c8e62088538255ae65a12861b61a", null ],
-    [ "to_gid", "core_8c.html#a513d4a24d82e42951f1a01f35afbd88c", null ],
-    [ "to_lid", "core_8c.html#a414a517e380551f5edb6e5979316ebbb", null ]
+    [ "user_exit_flag", "core_8c.html#a049fe0d97cb6ce9c2d217592ac55cb1d", null ]
 ];

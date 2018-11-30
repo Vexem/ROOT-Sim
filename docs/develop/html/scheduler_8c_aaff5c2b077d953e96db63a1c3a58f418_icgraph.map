@@ -1,6 +1,0 @@
-<map id="initialize_LP" name="initialize_LP">
-<area shape="rect" id="node2" href="$scheduler_8h.html#af405fd79c1cd59fccce27658d6e11941" title="initialize_worker_thread" alt="" coords="148,5,319,32"/>
-<area shape="rect" id="node3" href="$main_8c.html#ab05afef7d356edc20f6c99c6af0a33a8" title="main_simulation_loop" alt="" coords="367,5,528,32"/>
-<area shape="rect" id="node4" href="$main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="576,5,697,32"/>
-<area shape="rect" id="node5" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="609,56,664,83"/>
-</map>

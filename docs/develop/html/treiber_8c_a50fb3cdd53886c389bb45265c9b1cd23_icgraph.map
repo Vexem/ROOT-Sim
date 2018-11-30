@@ -1,5 +1,0 @@
-<map id="treiber_init" name="treiber_init">
-<area shape="rect" id="node2" href="$communication_8h.html#a9d1c122bc3538d94d6fd8328cd6c6a2d" title="Buffer used by MPI for outgoing messages. " alt="" coords="144,5,291,32"/>
-<area shape="rect" id="node3" href="$init_8h.html#a417eb072179d09f441dbae3125049e46" title="SystemInit" alt="" coords="339,5,429,32"/>
-<area shape="rect" id="node4" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="477,5,532,32"/>
-</map>

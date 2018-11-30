@@ -1,9 +1,0 @@
-<map id="dymelor_fini" name="dymelor_fini">
-<area shape="rect" id="node2" href="$dymelor_8h.html#a7432116bb2473418232bf3f2fada2acd" title="recoverable_fini" alt="" coords="160,5,283,32"/>
-<area shape="rect" id="node3" href="$dymelor_8h.html#aceefad0ae70e661a3ac697101862daca" title="unrecoverable_fini" alt="" coords="152,56,291,83"/>
-<area shape="rect" id="node4" href="$buddy_8c.html#a4efde26b534d03e963a4ff4903f8ba88" title="allocator_fini" alt="" coords="170,107,273,133"/>
-<area shape="rect" id="node5" href="$buddy_8c.html#ac4aab19dbf8f5238f5a4f159d64b5ded" title="buddy_destroy" alt="" coords="339,56,455,83"/>
-<area shape="rect" id="node6" href="$dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a" title="rsfree" alt="" coords="503,81,561,108"/>
-<area shape="rect" id="node8" href="$buddy_8c.html#a225b4e1d308e424f33c743fd12d3a7f3" title="free_pages" alt="" coords="350,157,443,184"/>
-<area shape="rect" id="node7" href="$platform_8c.html#ae2af2cd130d16958394ae21e9d13035f" title="__real_free" alt="" coords="609,81,701,108"/>
-</map>

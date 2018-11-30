@@ -16,6 +16,6 @@ var struct__simulation__configuration =
     [ "set_seed", "struct__simulation__configuration.html#ac8610e1fb3e5216e3297d3a2493a5580", null ],
     [ "simulation_time", "struct__simulation__configuration.html#a44b41ab09fa7fd1522c68b4f2618087b", null ],
     [ "snapshot", "struct__simulation__configuration.html#a56cc151db02f0a2828f16ec115aaffef", null ],
-    [ "stats", "struct__simulation__configuration.html#a7394b925c0a8152fb6037a92db125423", null ],
+    [ "stats", "struct__simulation__configuration.html#a496c51eadba0ce5b081c95cbabe582d8", null ],
     [ "verbose", "struct__simulation__configuration.html#af3943b37fe2651c600dbee44f461c424", null ]
 ];

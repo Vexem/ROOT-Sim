@@ -8,7 +8,6 @@ var searchData=
   ['serial_2ec',['serial.c',['../serial_8c.html',1,'']]],
   ['serial_2eh',['serial.h',['../serial_8h.html',1,'']]],
   ['slab_2ec',['slab.c',['../slab_8c.html',1,'']]],
-  ['slab_2eh',['slab.h',['../slab_8h.html',1,'']]],
   ['state_2ec',['state.c',['../state_8c.html',1,'']]],
   ['state_2eh',['state.h',['../state_8h.html',1,'']]],
   ['statistics_2ec',['statistics.c',['../statistics_8c.html',1,'']]],

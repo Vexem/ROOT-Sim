@@ -1,12 +1,12 @@
 <map id="pack_msg" name="pack_msg">
-<area shape="rect" id="node2" href="$communication_8c.html#a4970032a7175576819e2c979536098e1" title="get_msg_from_slab" alt="" coords="136,107,272,133"/>
-<area shape="rect" id="node9" href="$dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="174,208,234,235"/>
-<area shape="rect" id="node3" href="$treiber_8c.html#ad108d3156af43abc437528a2220606d0" title="treiber_detach" alt="" coords="320,5,424,32"/>
-<area shape="rect" id="node4" href="$slab_8c.html#a891cd5abfed9deb98413ab7e7c29ef61" title="slab_free" alt="" coords="335,56,409,83"/>
-<area shape="rect" id="node6" href="$dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a" title="rsfree" alt="" coords="345,157,399,184"/>
-<area shape="rect" id="node8" href="$slab_8c.html#a13199823c54d944aa128966cb35c5aa3" title="slab_alloc" alt="" coords="332,107,412,133"/>
-<area shape="rect" id="node5" href="$slab_8c.html#ac0e4a2a4ab26d7f2399eecbb72fc4cff" title="slab_is_valid" alt="" coords="473,81,570,108"/>
-<area shape="rect" id="node7" href="$platform_8c.html#ae2af2cd130d16958394ae21e9d13035f" title="__real_free" alt="" coords="478,157,565,184"/>
-<area shape="rect" id="node10" href="$platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="321,208,423,235"/>
-<area shape="rect" id="node11" href="$core_8c.html#aa5d3c29f381884d4bb7cd0983b3c541a" title="rootsim_error" alt="" coords="323,259,421,285"/>
+<area shape="rect" id="node2" href="$communication_8c.html#ab957dc2cd186382c50ef8cfde9761909" title="get_msg_from_slab" alt="" coords="140,63,288,89"/>
+<area shape="rect" id="node7" href="$communication_8c.html#ae78d99ec41f43bbe641c00f1cb39d54c" title="which_slab_to_use" alt="" coords="144,120,284,147"/>
+<area shape="rect" id="node10" href="$dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="183,183,245,209"/>
+<area shape="rect" id="node3" href="$mm_8h.html#a13199823c54d944aa128966cb35c5aa3" title="slab_alloc" alt="" coords="363,56,447,83"/>
+<area shape="rect" id="node4" href="$atomic_8h.html#a7a6b9868956dd8e51e5de80e16c76fc4" title="spin_lock" alt="" coords="533,5,613,32"/>
+<area shape="rect" id="node5" href="$slab_8c.html#ac0e4a2a4ab26d7f2399eecbb72fc4cff" title="slab_is_valid" alt="" coords="523,56,624,83"/>
+<area shape="rect" id="node6" href="$atomic_8h.html#a4e8c9d1c6101995f1ecd2141d77e4824" title="spin_unlock" alt="" coords="525,107,621,133"/>
+<area shape="rect" id="node8" href="$core_8c.html#a6793e4c70d69277f24ff0e494ed8ed10" title="find_kernel_by_gid" alt="" coords="336,107,475,133"/>
+<area shape="rect" id="node9" href="$process_8c.html#a2193e0386f7858db77f38146a15d3cd1" title="find_lp_by_gid" alt="" coords="350,157,461,184"/>
+<area shape="rect" id="node11" href="$platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="351,208,460,235"/>
 </map>

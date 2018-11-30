@@ -1,25 +1,20 @@
 var searchData=
 [
-  ['last_5fevent_5ftimestamp',['last_event_timestamp',['../queues_8c.html#aadfd82060203e643b62cc053b4da0ee6',1,'last_event_timestamp(LID_t lid):&#160;queues.c'],['../queues_8h.html#a70bde2130abb722f24f715875fdb7d8b',1,'last_event_timestamp(LID_t):&#160;queues.c']]],
-  ['left_5fchild',['left_child',['../buddy_8c.html#aa8695c30990e4003c7e13ed6727fbf2e',1,'buddy.c']]],
+  ['left_5fchild',['left_child',['../buddy_8c.html#ac31dad8abee32480810f0858d59909f0',1,'buddy.c']]],
   ['length_5fdisasm',['length_disasm',['../ld_8c.html#a4e78d512c407305fc30d67e9b4be785f',1,'length_disasm(void *opcode0, char mode):&#160;ld.c'],['../lend_8h.html#a4e78d512c407305fc30d67e9b4be785f',1,'length_disasm(void *opcode0, char mode):&#160;ld.c']]],
-  ['lidtogid',['LidToGid',['../core_8h.html#ac2b1b08baf23849d226a2302773d3e40',1,'core.h']]],
-  ['list',['list',['../struct__LP__state.html#aa6c9117fed6f7fa9707ccbc82de12388',1,'_LP_state::list(msg_t) queue_in'],['../struct__LP__state.html#a05c1bfbb4825690283fb9240a793abd2',1,'_LP_state::list(msg_hdr_t) queue_out'],['../struct__LP__state.html#a3f9bc68c064f20daaecb6cfdb9139b63',1,'_LP_state::list(state_t) queue_states'],['../struct__LP__state.html#a474f404c6e05c92e1363546aff72e453',1,'_LP_state::list(msg_t) rendezvous_queue']]],
+  ['list',['list',['../structlp__struct.html#a3e955a01492e2a65093e23db3152bac9',1,'lp_struct::list(msg_t) queue_in'],['../structlp__struct.html#a9dc2021ff2cbec029a75a58a39e39c25',1,'lp_struct::list(msg_hdr_t) queue_out'],['../structlp__struct.html#a008f37b76402ed430d665216e0d28e3e',1,'lp_struct::list(state_t) queue_states'],['../structlp__struct.html#a2c57a7df69bd911d21d118bf00024550',1,'lp_struct::list(msg_t) rendezvous_queue']]],
   ['load_5fseed',['load_seed',['../numerical_8c.html#a9adf4681a7f461710a82fe776f288a5b',1,'numerical.c']]],
   ['local_5fmin_5ftimestamp',['local_min_timestamp',['../communication_8h.html#a6ebfcb1c9b4ca73a4ffae29a45685c2b',1,'communication.h']]],
   ['localinit',['localinit',['../calqueue_8c.html#a7cb34614a7eb1a793956d7cca2b418cb',1,'calqueue.c']]],
   ['log_5fdelete',['log_delete',['../checkpoints_8c.html#a727e4cd3fa1d7b332b9f212733eec8d3',1,'log_delete(void *ckpt):&#160;checkpoints.c'],['../dymelor_8h.html#a638015576623fa22a4710def61ad19ab',1,'log_delete(void *):&#160;checkpoints.c']]],
-  ['log_5ffull',['log_full',['../checkpoints_8c.html#a8c0d8e6f20535afac64e182da5dfa4f9',1,'log_full(LID_t the_lid):&#160;checkpoints.c'],['../dymelor_8h.html#a5faa741e6cea9b136b50ce306a8f91eb',1,'log_full(LID_t):&#160;checkpoints.c']]],
-  ['log_5frestore',['log_restore',['../checkpoints_8c.html#a8575ee3e492e8cd36e4de14b09ead323',1,'log_restore(LID_t lid, state_t *state_queue_node):&#160;checkpoints.c'],['../dymelor_8h.html#a834e60d581666fc76d523b7b628c7b1f',1,'log_restore(LID_t, state_t *):&#160;checkpoints.c']]],
-  ['log_5fstate',['log_state',['../checkpoints_8c.html#a609f1bba5b42a22d238662029f56852f',1,'log_state(LID_t lid):&#160;checkpoints.c'],['../dymelor_8h.html#abccfe2fac6b84685e334be559c3dd176',1,'log_state(LID_t):&#160;checkpoints.c']]],
-  ['logstate',['LogState',['../state_8c.html#aef5be3e19c18f7bee46513ce6d620bc9',1,'LogState(LID_t lid):&#160;state.c'],['../state_8h.html#a18a91062c5e324e872a6c772d4607700',1,'LogState(LID_t):&#160;state.c']]],
+  ['log_5ffull',['log_full',['../checkpoints_8c.html#a9be0910d1b3a99682d5d2971b4b79f3b',1,'log_full(struct lp_struct *lp):&#160;checkpoints.c'],['../dymelor_8h.html#a1c7f2848dc6193b55e9edddf10aea99d',1,'log_full(struct lp_struct *):&#160;checkpoints.c']]],
+  ['log_5frestore',['log_restore',['../checkpoints_8c.html#a21384b7f254e3d372111b3dbbf785e73',1,'log_restore(struct lp_struct *lp, state_t *state_queue_node):&#160;checkpoints.c'],['../dymelor_8h.html#aea7bcb3e0ec0c731b510785a3ff23e50',1,'log_restore(struct lp_struct *, state_t *):&#160;checkpoints.c']]],
+  ['log_5fstate',['log_state',['../checkpoints_8c.html#af5802791ee41b774e796caa15315c24c',1,'log_state(struct lp_struct *lp):&#160;checkpoints.c'],['../dymelor_8h.html#afbb9e43630a99b023ad7421afdb6dee9',1,'log_state(struct lp_struct *):&#160;checkpoints.c']]],
+  ['logstate',['LogState',['../state_8c.html#a29fbf84fed206d7f721cd03b74d082cd',1,'LogState(struct lp_struct *lp):&#160;state.c'],['../state_8h.html#affa280b9d6f43896c9db64f0e32b2f3d',1,'LogState(struct lp_struct *):&#160;state.c']]],
   ['lp_5falloc_5fdeschedule',['lp_alloc_deschedule',['../ecs_8h.html#a93b282f8af3c72bdbd5d0533a4cc2355',1,'ecs.h']]],
   ['lp_5falloc_5fschedule',['lp_alloc_schedule',['../ecs_8h.html#af96855eb85637b829d7d3aa20f97ad3c',1,'ecs.h']]],
   ['lp_5falloc_5fthread_5finit',['lp_alloc_thread_init',['../ecs_8h.html#a13bad948057bc0998099c1ef6ddaf46c',1,'ecs.h']]],
   ['lp_5fknapsack',['LP_knapsack',['../binding_8c.html#a7356539bd24b02d48f6ac1d7e37a8eb4',1,'binding.c']]],
-  ['lp_5fmain_5floop',['LP_main_loop',['../scheduler_8c.html#a0c3c08456ef1aaa86ea0b0a3c4251945',1,'scheduler.c']]],
-  ['lps_5fblock_5fbinding',['LPs_block_binding',['../binding_8c.html#ab69384062882e0ac864d499d0e8eec14',1,'binding.c']]],
-  ['lps_5fbound_5fforeach',['LPS_bound_foreach',['../process_8c.html#af353b001d256b2541c44f0dcf87c0655',1,'LPS_bound_foreach(int(*f)(LID_t, GID_t, unsigned int, void *), void *data):&#160;process.c'],['../process_8h.html#af353b001d256b2541c44f0dcf87c0655',1,'LPS_bound_foreach(int(*f)(LID_t, GID_t, unsigned int, void *), void *data):&#160;process.c']]],
-  ['lps_5fbound_5fset',['LPS_bound_set',['../process_8c.html#a949974614cde62232966df647ceb7149',1,'LPS_bound_set(unsigned int entry, LP_State *lp_block):&#160;process.c'],['../process_8h.html#a949974614cde62232966df647ceb7149',1,'LPS_bound_set(unsigned int entry, LP_State *lp_block):&#160;process.c']]],
-  ['lps_5fforeach',['LPS_foreach',['../process_8c.html#aecd9a448d7c131b7898e2da9eac37009',1,'LPS_foreach(int(*f)(LID_t, GID_t, unsigned int, void *), void *data):&#160;process.c'],['../process_8h.html#aecd9a448d7c131b7898e2da9eac37009',1,'LPS_foreach(int(*f)(LID_t, GID_t, unsigned int, void *), void *data):&#160;process.c']]]
+  ['lp_5fmain_5floop',['LP_main_loop',['../scheduler_8c.html#a1b1b085c6b05a9d202a1629dcd71cffe',1,'LP_main_loop(void *args):&#160;scheduler.c'],['../scheduler_8h.html#a1b1b085c6b05a9d202a1629dcd71cffe',1,'LP_main_loop(void *args):&#160;scheduler.c']]],
+  ['lps_5fblock_5fbinding',['LPs_block_binding',['../binding_8c.html#ab69384062882e0ac864d499d0e8eec14',1,'binding.c']]]
 ];

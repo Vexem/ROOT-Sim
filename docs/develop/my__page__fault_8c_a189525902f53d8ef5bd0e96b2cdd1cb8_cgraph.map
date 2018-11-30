@@ -1,13 +1,16 @@
 <map id="my_do_page_fault" name="my_do_page_fault">
-<area shape="rect" id="node2" href="$my__page__fault_8c.html#a7fd7cba45a0590eeea160b4b21cc80c3" title="root_sim_page_fault" alt="" coords="181,183,320,209"/>
-<area shape="rect" id="node3" href="$cross__state__manager_8c.html#a051bc56cf477faf7fa51521deafa3023" title="get_pte_sticky_bit" alt="" coords="392,5,520,32"/>
-<area shape="rect" id="node4" href="$cross__state__manager_8c.html#a4d7ee4a88ceeda294ee709d5dd393bbf" title="set_presence_bit" alt="" coords="395,56,517,83"/>
-<area shape="rect" id="node5" href="$cross__state__manager_8c.html#a481976f08050a4512ae29e217a958ebd" title="get_presence_bit" alt="" coords="395,107,517,133"/>
-<area shape="rect" id="node6" href="$cross__state__manager_8c.html#a142536d889c40d2f2571f505981fc583" title="get_pde_sticky_bit" alt="" coords="391,157,521,184"/>
-<area shape="rect" id="node7" href="$cross__state__manager_8c.html#a8ebbb3cced92d39cfc6673d4bab78b04" title="set_single_pte_sticky_flag" alt="" coords="368,208,544,235"/>
-<area shape="rect" id="node8" href="$cross__state__manager_8c.html#a017162a0e55d4d2c062673ee5fca472b" title="set_single_page_privilege" alt="" coords="371,259,541,285"/>
-<area shape="rect" id="node9" href="$cross__state__manager_8c.html#a7dee6069da4b066458aaba04069bf629" title="rootsim_load_cr3" alt="" coords="603,309,725,336"/>
-<area shape="rect" id="node10" href="$cross__state__manager_8c.html#a3b80c9ec104b8748f5d05b51308c4f3a" title="rs_ktblmgr_ioctl" alt="" coords="399,360,513,387"/>
-<area shape="rect" id="node11" href="$cross__state__manager_8c.html#acaa3fda864e1e69778df5f971fc8d964" title="set_page_privilege" alt="" coords="599,360,729,387"/>
-<area shape="rect" id="node12" href="$cross__state__manager_8c.html#addfa4300939ef737fb0f219e855ea157" title="set_pte_sticky_flags" alt="" coords="593,411,735,437"/>
+<area shape="rect" id="node2" href="$my__page__fault_8c.html#a7fd7cba45a0590eeea160b4b21cc80c3" title="root_sim_page_fault" alt="" coords="192,255,344,281"/>
+<area shape="rect" id="node15" href="$my__page__fault_8c.html#acc1820d876ea6e67e70e2e73c54f1990" title="my_page_fault" alt="" coords="210,305,326,332"/>
+<area shape="rect" id="node3" href="$cross__state__manager_8c.html#a051bc56cf477faf7fa51521deafa3023" title="get_pte_sticky_bit" alt="" coords="617,5,754,32"/>
+<area shape="rect" id="node4" href="$cross__state__manager_8c.html#a4d7ee4a88ceeda294ee709d5dd393bbf" title="set_presence_bit" alt="" coords="620,57,751,84"/>
+<area shape="rect" id="node5" href="$cross__state__manager_8c.html#a481976f08050a4512ae29e217a958ebd" title="get_presence_bit" alt="" coords="619,111,751,137"/>
+<area shape="rect" id="node6" href="$cross__state__manager_8c.html#a142536d889c40d2f2571f505981fc583" title="get_pde_sticky_bit" alt="" coords="615,167,755,193"/>
+<area shape="rect" id="node7" href="$cross__state__manager_8c.html#a8ebbb3cced92d39cfc6673d4bab78b04" title="set_single_pte_sticky_flag" alt="" coords="592,280,779,307"/>
+<area shape="rect" id="node8" href="$cross__state__manager_8c.html#a017162a0e55d4d2c062673ee5fca472b" title="set_single_page_privilege" alt="" coords="593,331,778,357"/>
+<area shape="rect" id="node9" href="$cross__state__manager_8c.html#a7dee6069da4b066458aaba04069bf629" title="rootsim_load_cr3" alt="" coords="836,432,968,459"/>
+<area shape="rect" id="node10" href="$cross__state__manager_8c.html#a3b80c9ec104b8748f5d05b51308c4f3a" title="rs_ktblmgr_ioctl" alt="" coords="624,483,747,509"/>
+<area shape="rect" id="node13" href="$cross__state__manager_8c.html#a94128ddad0031d4587b660ce122d6600" title="EXPORT_SYMBOL" alt="" coords="620,381,751,408"/>
+<area shape="rect" id="node14" href="$cross__state__manager_8c.html#a7fd7cba45a0590eeea160b4b21cc80c3" title="root_sim_page_fault" alt="" coords="392,229,544,256"/>
+<area shape="rect" id="node11" href="$cross__state__manager_8c.html#acaa3fda864e1e69778df5f971fc8d964" title="set_page_privilege" alt="" coords="831,483,973,509"/>
+<area shape="rect" id="node12" href="$cross__state__manager_8c.html#addfa4300939ef737fb0f219e855ea157" title="set_pte_sticky_flags" alt="" coords="827,533,977,560"/>
 </map>

@@ -1,7 +1,0 @@
-<map id="/home/travis/build/HPDCS/ROOT&#45;Sim/src/datatypes/bitmap.h" name="/home/travis/build/HPDCS/ROOT&#45;Sim/src/datatypes/bitmap.h">
-<area shape="rect" id="node4" href="$core_8h.html" title="This header defines all the shared symbols which are needed by different subsystems. " alt="" coords="287,109,381,136"/>
-<area shape="rect" id="node5" href="$ROOT-Sim_8h.html" title="This header defines all the symbols which are needed to develop a Model to be simulated on top of ROO..." alt="" coords="177,184,275,211"/>
-<area shape="rect" id="node14" href="$numerical_8h.html" title="This header is used to define symbols which must be accessible by the simulator but not by the applic..." alt="" coords="393,184,507,211"/>
-<area shape="rect" id="node15" href="$thread_8h.html" title="This module implements Kernel Level Thread supports. " alt="" coords="583,184,691,211"/>
-<area shape="rect" id="node16" href="$atomic_8h.html" title="This module implements atomic and non&#45;blocking operations used within ROOT&#45;Sim to coordinate threads ..." alt="" coords="651,259,761,285"/>
-</map>

@@ -1,9 +1,10 @@
 var searchData=
 [
   ['main',['main',['../lp__mark__inverse_8c.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;lp_mark_inverse.c'],['../main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.c']]],
-  ['main_5fsimulation_5floop',['main_simulation_loop',['../main_8c.html#ab05afef7d356edc20f6c99c6af0a33a8',1,'main.c']]],
-  ['malloc_5farea_5finit',['malloc_area_init',['../dymelor_8c.html#a85112cc6ca87655111a1c696a4bcdbe4',1,'dymelor.c']]],
-  ['malloc_5fstate_5finit',['malloc_state_init',['../dymelor_8c.html#a3a7beb7e973dcc535935cc2fe724d83d',1,'malloc_state_init(bool recoverable, malloc_state *state):&#160;dymelor.c'],['../dymelor_8h.html#a3a7beb7e973dcc535935cc2fe724d83d',1,'malloc_state_init(bool recoverable, malloc_state *state):&#160;dymelor.c']]],
+  ['main_5fsimulation_5floop',['main_simulation_loop',['../main_8c.html#aa729cb27350c33119484501e13df4fec',1,'main.c']]],
+  ['malloc_5farea_5finit',['malloc_area_init',['../dymelor_8c.html#ac1e32353ad7bdfbf4b701db28602fcbc',1,'dymelor.c']]],
+  ['malloc_5fstate_5finit',['malloc_state_init',['../dymelor_8c.html#a8e070de8750bb4afd1be813809e70eb9',1,'malloc_state_init(void):&#160;dymelor.c'],['../dymelor_8h.html#a8e070de8750bb4afd1be813809e70eb9',1,'malloc_state_init(void):&#160;dymelor.c']]],
+  ['malloc_5fstate_5fwipe',['malloc_state_wipe',['../dymelor_8c.html#a664af2fb6c08d37bb7df7f4f7dbb6e56',1,'malloc_state_wipe(malloc_state **state_ptr):&#160;dymelor.c'],['../dymelor_8h.html#a5262113c6c16c75226dc3185fe3f37b0',1,'malloc_state_wipe(malloc_state **):&#160;dymelor.c']]],
   ['mark_5fto_5fgid',['mark_to_gid',['../communication_8c.html#ab442ee81854e910ac0b21e3caf21cc48',1,'communication.c']]],
   ['math_5femulate',['math_emulate',['../traps-dummy_8h.html#aff28e9c71f27a4c5a07b682de678bb2b',1,'traps-dummy.h']]],
   ['math_5ferror',['math_error',['../traps-dummy_8h.html#a909861062b139fb7b7dbb3cbaf1e1e62',1,'traps-dummy.h']]],

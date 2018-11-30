@@ -1,6 +1,0 @@
-<map id="RestoreState" name="RestoreState">
-<area shape="rect" id="node2" href="$checkpoints_8c.html#a8575ee3e492e8cd36e4de14b09ead323" title="log_restore" alt="" coords="153,5,239,32"/>
-<area shape="rect" id="node3" href="$statistics_8c.html#af9d1a1909485a1c005f1f846c2ad2cc3" title="statistics_post_lp_data" alt="" coords="425,5,581,32"/>
-<area shape="rect" id="node5" href="$checkpoints_8c.html#a41641c526e3e22affb04e96e68a1428e" title="restore_full" alt="" coords="289,31,375,57"/>
-<area shape="rect" id="node4" href="$core_8c.html#aa5d3c29f381884d4bb7cd0983b3c541a" title="rootsim_error" alt="" coords="629,5,728,32"/>
-</map>

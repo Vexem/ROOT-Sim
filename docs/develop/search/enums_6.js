@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['stat_5flevels',['stat_levels',['../statistics_8h.html#acd1b5ee4c5f3b614ed6ae7f66066d296',1,'statistics.h']]]
+  ['reg_5fsize',['reg_size',['../x86_8h.html#a4bede11ec9caf1c8404e395073dba954',1,'x86.h']]]
 ];

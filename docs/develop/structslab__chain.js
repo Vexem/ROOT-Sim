@@ -7,6 +7,7 @@ var structslab__chain =
     [ "initial_slotmask", "structslab__chain.html#add833c52c79bee7a41d847c6db9636fc", null ],
     [ "itemcount", "structslab__chain.html#a7e86f2d0eaf797b682e67798ebfad72b", null ],
     [ "itemsize", "structslab__chain.html#a7c061ec80cbf02b86487b1beddbb2d41", null ],
+    [ "lock", "structslab__chain.html#adbc81f288613a95433f6371b3bc2556c", null ],
     [ "pages_per_alloc", "structslab__chain.html#a1e9cff6fbb5ecdfd8dde46fa0313256e", null ],
     [ "partial", "structslab__chain.html#a3cb57bdc0d7655eaa435ed54b8a0db5d", null ],
     [ "slabsize", "structslab__chain.html#a75db576601bd706c2e0b51365742f899", null ]

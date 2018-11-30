@@ -3,12 +3,9 @@ var searchData=
   ['incremental_5fgranularity',['INCREMENTAL_GRANULARITY',['../dymelor_8h.html#acd3b4ee065d60cc64218450975828356',1,'dymelor.h']]],
   ['infty',['INFTY',['../ROOT-Sim_8h.html#a84d177cf462436476c9bca8ef9e22c43',1,'ROOT-Sim.h']]],
   ['init',['INIT',['../ROOT-Sim_8h.html#ab5889105dcd019008c9448dff61323f6',1,'ROOT-Sim.h']]],
-  ['init_5ferror_5faecs',['INIT_ERROR_AECS',['../mm_8h.html#a7ae0a0115a69a502af18e65edd9728a1',1,'mm.h']]],
   ['init_5foutgoing_5fmsg',['INIT_OUTGOING_MSG',['../communication_8h.html#a24b4d86fc2ce94ddf7a41b1097cf6bdb',1,'communication.h']]],
   ['initial_5fchannel_5fsize',['INITIAL_CHANNEL_SIZE',['../msgchannel_8h.html#a1bb943c8ae72db45ef2623b34d366771',1,'msgchannel.h']]],
   ['invalid_5fdirection',['INVALID_DIRECTION',['../ROOT-Sim_8h.html#a21571d20217b8a830eaf3001c20c8056',1,'ROOT-Sim.h']]],
-  ['invalid_5fsobj_5fid_5faecs',['INVALID_SOBJ_ID_AECS',['../mm_8h.html#ac262c15501f6cfa7fc6e67fd40843c62',1,'mm.h']]],
-  ['invalid_5fsobjs_5fcount_5faecs',['INVALID_SOBJS_COUNT_AECS',['../mm_8h.html#a2e78aa0d38b7b76cfc49935ed5f54aff',1,'mm.h']]],
   ['ioctl_5fget_5fpgd',['IOCTL_GET_PGD',['../cross__state__manager_8h.html#a3678c9d65f31105250d25fc64a827a81',1,'cross_state_manager.h']]],
   ['ioctl_5fprotect_5fremote_5flp',['IOCTL_PROTECT_REMOTE_LP',['../cross__state__manager_8h.html#a29ae153d27b0945186e57e8f893982c0',1,'cross_state_manager.h']]],
   ['ioctl_5fschedule_5fon_5fpgd',['IOCTL_SCHEDULE_ON_PGD',['../cross__state__manager_8h.html#a99f4d0ccaea7c5cd7095841c539a0f2c',1,'cross_state_manager.h']]],
@@ -31,7 +28,5 @@ var searchData=
   ['is_5fpowerof2',['IS_POWEROF2',['../dymelor_8h.html#a2d8e2eb93e1d963854fdb3c037b92366',1,'dymelor.h']]],
   ['is_5fprefix',['is_prefix',['../x86_8h.html#aad918d91a7e0780927723607fb60d2ed',1,'x86.h']]],
   ['is_5frex_5fprefix',['is_rex_prefix',['../x86_8h.html#a8e7e47a3b9512220a03d577ac97bf71d',1,'x86.h']]],
-  ['is_5fsse_5fprefix',['is_sse_prefix',['../x86_8h.html#a7291cc849d5c663665f6111d46c645f4',1,'x86.h']]],
-  ['is_5fvalid_5fgid',['is_valid_gid',['../core_8h.html#ad49a6dc20cad4329c5d647a8a0c765b2',1,'core.h']]],
-  ['is_5fvalid_5flid',['is_valid_lid',['../core_8h.html#a9252d014ede8f47c8f8a9e73015512bb',1,'core.h']]]
+  ['is_5fsse_5fprefix',['is_sse_prefix',['../x86_8h.html#a7291cc849d5c663665f6111d46c645f4',1,'x86.h']]]
 ];

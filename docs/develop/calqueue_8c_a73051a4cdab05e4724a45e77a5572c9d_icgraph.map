@@ -1,11 +1,11 @@
 <map id="calqueue_deq" name="calqueue_deq">
-<area shape="rect" id="node2" href="$calqueue_8c.html#a4e8867b10c2140a383aaaff9556f17be" title="new_width" alt="" coords="158,56,242,83"/>
-<area shape="rect" id="node9" href="$calqueue_8h.html#a180e22d3d13d9685adb6326484a1b418" title="calqueue_get" alt="" coords="291,107,389,133"/>
-<area shape="rect" id="node3" href="$calqueue_8c.html#a091fb2fd34edc1674dcf7418485419b5" title="resize" alt="" coords="311,5,369,32"/>
-<area shape="rect" id="node4" href="$calqueue_8h.html#a6ce456642093e0ebcd9563dd723781d8" title="calqueue_put" alt="" coords="448,5,547,32"/>
-<area shape="rect" id="node5" href="$serial_8h.html#a0de71d13e4269fdcd423e611e8d3504e" title="SerialScheduleNewEvent" alt="" coords="605,5,776,32"/>
-<area shape="rect" id="node6" href="$init_8h.html#a417eb072179d09f441dbae3125049e46" title="SystemInit" alt="" coords="949,56,1035,83"/>
-<area shape="rect" id="node8" href="$serial_8h.html#ad2b461e9e9044364a28a61cfadcacdd8" title="serial_init" alt="" coords="824,56,901,83"/>
-<area shape="rect" id="node7" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1083,81,1133,108"/>
-<area shape="rect" id="node10" href="$serial_8h.html#ad6ad0d134746a428ef1ece46a3bdcc43" title="serial_simulation" alt="" coords="438,107,557,133"/>
+<area shape="rect" id="node2" href="$calqueue_8c.html#a4e8867b10c2140a383aaaff9556f17be" title="new_width" alt="" coords="164,56,251,83"/>
+<area shape="rect" id="node9" href="$calqueue_8h.html#a180e22d3d13d9685adb6326484a1b418" title="calqueue_get" alt="" coords="299,107,407,133"/>
+<area shape="rect" id="node3" href="$calqueue_8c.html#a091fb2fd34edc1674dcf7418485419b5" title="resize" alt="" coords="323,5,383,32"/>
+<area shape="rect" id="node4" href="$calqueue_8h.html#a6ce456642093e0ebcd9563dd723781d8" title="calqueue_put" alt="" coords="465,5,573,32"/>
+<area shape="rect" id="node5" href="$serial_8h.html#a0de71d13e4269fdcd423e611e8d3504e" title="SerialScheduleNewEvent" alt="" coords="632,5,812,32"/>
+<area shape="rect" id="node6" href="$init_8h.html#a417eb072179d09f441dbae3125049e46" title="SystemInit" alt="" coords="991,56,1081,83"/>
+<area shape="rect" id="node8" href="$serial_8h.html#ad2b461e9e9044364a28a61cfadcacdd8" title="serial_init" alt="" coords="860,56,943,83"/>
+<area shape="rect" id="node7" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1129,81,1184,108"/>
+<area shape="rect" id="node10" href="$serial_8h.html#aa0dd072d0e792fb9c65220bdddf69a0e" title="serial_simulation" alt="" coords="455,107,584,133"/>
 </map>

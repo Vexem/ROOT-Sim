@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['data',['data',['../struct__treiber.html#a43cbe3fabed111c326ad159a9cd08d8f',1,'_treiber']]],
+  ['data',['data',['../structslab__header.html#a600ebad7644bd6aa2ec16b5029e4db34',1,'slab_header']]],
   ['data1_5ft',['data1_t',['../ld_8h.html#a1b38526f5654adde3e42b056688754d5',1,'ld.h']]],
   ['data2_5ft',['data2_t',['../ld_8h.html#a64aebbd1edc774361c79efccafdb0ea8',1,'ld.h']]],
   ['data66_5ft',['data66_t',['../ld_8h.html#a68d63a36d0ac9811f89e7974051b3a22',1,'ld.h']]],
-  ['default_5fcontext',['default_context',['../struct__LP__state.html#a7eaf8a0872ad033e11d31e0876fb9074',1,'_LP_state']]],
+  ['default_5fcontext',['default_context',['../structlp__struct.html#a81945d7e06f639a893b0a6bb441a6008',1,'lp_struct']]],
   ['default_5fidtr',['default_idtr',['../my__page__fault_8c.html#a0182ed4d27e909cb9a03bd33decb48e9',1,'my_page_fault.c']]],
   ['deterministic_5fseed',['deterministic_seed',['../struct__simulation__configuration.html#aeaa85d1dae0a5ba0d9deb45ad8be2f49',1,'_simulation_configuration']]],
   ['dev_5fcl',['dev_cl',['../cross__state__manager_8c.html#abcb204451bacc73e8d2794f7f1b887ec',1,'cross_state_manager.c']]],

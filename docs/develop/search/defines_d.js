@@ -22,6 +22,6 @@ var searchData=
   ['offsetof_5fexec_5fcontext_5ft_5frip',['offsetof_exec_context_t_rip',['../asm__defines_8h.html#a9810f3821f540175834c6017041e47d9',1,'asm_defines.h']]],
   ['offsetof_5fexec_5fcontext_5ft_5frsi',['offsetof_exec_context_t_rsi',['../asm__defines_8h.html#a8436cf168f0cd641b5358e0bd5e59d25',1,'asm_defines.h']]],
   ['offsetof_5fexec_5fcontext_5ft_5frsp',['offsetof_exec_context_t_rsp',['../asm__defines_8h.html#a93ff9a9784c211f8f6015306893d091a',1,'asm_defines.h']]],
-  ['offsetof_5flp_5fstate_5fcontext',['offsetof_LP_State_context',['../asm__defines_8h.html#a937cfd6f3abc4d2b71ca97b570df66ef',1,'asm_defines.h']]],
+  ['offsetof_5fstruct',['offsetof_struct',['../asm__defines_8h.html#ad39accb4c9da6dde153fb20ea9c68322',1,'asm_defines.h']]],
   ['one_5fused_5fslot',['ONE_USED_SLOT',['../slab_8c.html#a72560ae981bfb319542afc54f14c0190',1,'slab.c']]]
 ];

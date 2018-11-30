@@ -1,11 +1,10 @@
 var process_8c =
 [
+    [ "find_lp_by_gid", "process_8c.html#a2193e0386f7858db77f38146a15d3cd1", null ],
     [ "initialize_binding_blocks", "process_8c.html#acefccda9cabe7555434f95628cd9686f", null ],
-    [ "initialize_control_blocks", "process_8c.html#a2df46ca177ccf4dd0164f6b579f7a22f", null ],
-    [ "LPS_bound_foreach", "process_8c.html#af353b001d256b2541c44f0dcf87c0655", null ],
-    [ "LPS_bound_set", "process_8c.html#a949974614cde62232966df647ceb7149", null ],
-    [ "LPS_foreach", "process_8c.html#aecd9a448d7c131b7898e2da9eac37009", null ],
-    [ "idle_process", "process_8c.html#a7f25add70658974a82309cb72ab862d6", null ],
-    [ "lps_blocks", "process_8c.html#a748a004c720c33d24fa5ff20e267ae71", null ],
-    [ "lps_bound_blocks", "process_8c.html#a0e20ed223c9a0c97cc0dc16571f8a49c", null ]
+    [ "initialize_lps", "process_8c.html#ad58c55ea23fdc3d938b57135b6116feb", null ],
+    [ "__lp_bound_counter", "process_8c.html#aabb0ae43d9d181e84cbb6bc5204818fa", null ],
+    [ "__lp_counter", "process_8c.html#ac551c7ab6a532ed19d0f6e308108b4df", null ],
+    [ "lps_blocks", "process_8c.html#a94aee9d39d49e56374a34eb9c162ed92", null ],
+    [ "lps_bound_blocks", "process_8c.html#a234aca872959459fd600c804f8a15807", null ]
 ];

@@ -1,3 +1,4 @@
 <map id="LP_knapsack" name="LP_knapsack">
-<area shape="rect" id="node2" href="$binding_8c.html#ac24aaee55e50bfc240c058c2a0a7e5f6" title="compare_lp_cost" alt="" coords="155,5,277,32"/>
+<area shape="rect" id="node2" href="$binding_8c.html#ac24aaee55e50bfc240c058c2a0a7e5f6" title="compare_lp_cost" alt="" coords="173,5,303,32"/>
+<area shape="rect" id="node3" href="$statistics_8c.html#a4e22a256d8d0ca80049236602215d758" title="statistics_get_lp_data" alt="" coords="157,56,319,83"/>
 </map>

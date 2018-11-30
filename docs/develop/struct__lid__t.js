@@ -1,4 +1,4 @@
 var struct__lid__t =
 [
-    [ "id", "struct__lid__t.html#a64eadf6534afddace1b1f7ccc35c4e81", null ]
+    [ "to_int", "struct__lid__t.html#a3925021aeb2614c9155c5c8808f34945", null ]
 ];

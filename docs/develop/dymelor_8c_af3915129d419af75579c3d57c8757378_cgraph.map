@@ -1,0 +1,9 @@
+<map id="do_malloc" name="do_malloc">
+<area shape="rect" id="node2" href="$dymelor_8c.html#ae10242575deefaa5500b5426c745f2eb" title="compute_size" alt="" coords="148,5,259,32"/>
+<area shape="rect" id="node3" href="$atomic_8h.html#ae2153aa1dc0d0362246d6e14f60b5550" title="atomic_inc" alt="" coords="158,56,249,83"/>
+<area shape="rect" id="node4" href="$atomic_8h.html#a52336e036d2da5656c6db69b121458ba" title="atomic_dec" alt="" coords="155,107,251,133"/>
+<area shape="rect" id="node5" href="$dymelor_8c.html#ac1e32353ad7bdfbf4b701db28602fcbc" title="malloc_area_init" alt="" coords="140,157,267,184"/>
+<area shape="rect" id="node6" href="$dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="172,208,235,235"/>
+<area shape="rect" id="node8" href="$dymelor_8c.html#a664ec4ed3ccc0c11db1c283485f6cf83" title="find_next_free" alt="" coords="147,259,259,285"/>
+<area shape="rect" id="node7" href="$platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="315,208,424,235"/>
+</map>

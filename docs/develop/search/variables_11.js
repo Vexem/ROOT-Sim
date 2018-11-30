@@ -6,8 +6,6 @@ var searchData=
   ['read_5fmodrm',['read_modrm',['../structdisassembly__state.html#a2a27c9ef27a802749851253a3be9f124',1,'disassembly_state']]],
   ['rebinding_5ftimer',['rebinding_timer',['../binding_8c.html#a3237da9e3dbcb5cda3e54631e07fe1e9',1,'binding.c']]],
   ['receiver',['receiver',['../struct__msg__t.html#a9929e6071b8f22ef3a19c213c81078ed',1,'_msg_t::receiver()'],['../struct__msg__hdr__t.html#a8e33bb09c82781bca6768a01c95edf4f',1,'_msg_hdr_t::receiver()']]],
-  ['recoverable_5fstate',['recoverable_state',['../dymelor_8h.html#a40eb22a5a9640f2ffdbf1af950c5aa61',1,'recoverable_state():&#160;recoverable.c'],['../recoverable_8c.html#a40eb22a5a9640f2ffdbf1af950c5aa61',1,'recoverable_state():&#160;recoverable.c']]],
-  ['recovery_5fcost_5fper_5fbyte',['recovery_cost_per_byte',['../dymelor_8h.html#a46bb5514bb5b48f0a4d1d0de78bbe36f',1,'dymelor.h']]],
   ['recovery_5ftime',['recovery_time',['../structstat__t.html#ac8a8b510af8402a091fec38b7aa0a739',1,'stat_t']]],
   ['refcount',['refcount',['../structslab__header.html#a07904f11be36d533caf77c01491a623e',1,'slab_header']]],
   ['reference_5fcount',['reference_count',['../schedule_8c.html#acfe541c47dd8548d96a592e048633b4c',1,'schedule.c']]],
@@ -21,5 +19,6 @@ var searchData=
   ['root_5fsim_5ffault_5finfo',['root_sim_fault_info',['../cross__state__manager_8c.html#a773e1b330dbfb7b0f1ad9219e79037b3',1,'cross_state_manager.c']]],
   ['root_5fsim_5fprocesses',['root_sim_processes',['../cross__state__manager_8c.html#a81e54fcde5deb772feb0ad4f376e9129',1,'cross_state_manager.c']]],
   ['rootsim_5fconfig',['rootsim_config',['../core_8c.html#ae16855ae14bd366969eecad7446d51a6',1,'rootsim_config():&#160;core.c'],['../init_8h.html#ae16855ae14bd366969eecad7446d51a6',1,'rootsim_config():&#160;core.c']]],
-  ['rootsim_5fpager',['rootsim_pager',['../cross__state__manager_8c.html#a943f1868ff337f72a014593f14abbcc9',1,'cross_state_manager.c']]]
+  ['rootsim_5fpager',['rootsim_pager',['../cross__state__manager_8c.html#adbc655879a1d11d7e725b0d28e751337',1,'cross_state_manager.c']]],
+  ['rows',['rows',['../struct__gvt__buffer.html#a7db6362f9dd612b9498dd362ff17ef11',1,'_gvt_buffer']]]
 ];

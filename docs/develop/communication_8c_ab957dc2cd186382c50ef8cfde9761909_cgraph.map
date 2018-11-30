@@ -1,0 +1,6 @@
+<map id="get_msg_from_slab" name="get_msg_from_slab">
+<area shape="rect" id="node2" href="$mm_8h.html#a13199823c54d944aa128966cb35c5aa3" title="slab_alloc" alt="" coords="201,56,285,83"/>
+<area shape="rect" id="node3" href="$atomic_8h.html#a7a6b9868956dd8e51e5de80e16c76fc4" title="spin_lock" alt="" coords="344,5,424,32"/>
+<area shape="rect" id="node4" href="$slab_8c.html#ac0e4a2a4ab26d7f2399eecbb72fc4cff" title="slab_is_valid" alt="" coords="333,56,435,83"/>
+<area shape="rect" id="node5" href="$atomic_8h.html#a4e8c9d1c6101995f1ecd2141d77e4824" title="spin_unlock" alt="" coords="336,107,432,133"/>
+</map>

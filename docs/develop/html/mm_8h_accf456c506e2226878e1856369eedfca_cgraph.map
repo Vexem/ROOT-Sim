@@ -1,9 +1,0 @@
-<map id="allocator_init" name="allocator_init">
-<area shape="rect" id="node2" href="$dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="321,131,383,158"/>
-<area shape="rect" id="node5" href="$core_8h.html#a9955b1515a2c92396ca0212388334706" title="GidToKernel" alt="" coords="156,30,251,56"/>
-<area shape="rect" id="node6" href="$core_8h.html#ae5f6229b772f341c48f260fcc5c1305a" title="GidToLid" alt="" coords="166,80,241,107"/>
-<area shape="rect" id="node7" href="$mm_8h.html#ad69145071f3a00155c36729cce90ddb5" title="get_segment" alt="" coords="299,182,405,208"/>
-<area shape="rect" id="node8" href="$buddy_8c.html#a1e061ddd725e8ce3096a01144cb2f16a" title="buddy_new" alt="" coords="157,131,250,158"/>
-<area shape="rect" id="node3" href="$platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="453,131,563,158"/>
-<area shape="rect" id="node4" href="$core_8c.html#aa5d3c29f381884d4bb7cd0983b3c541a" title="rootsim_error" alt="" coords="453,182,563,208"/>
-</map>

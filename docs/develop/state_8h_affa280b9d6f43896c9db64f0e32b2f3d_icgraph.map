@@ -1,0 +1,11 @@
+<map id="LogState" name="LogState">
+<area shape="rect" id="node2" href="$scheduler_8h.html#a5766f78dcd3778582d506c3dec34594e" title="receive_control_msg" alt="" coords="133,33,288,60"/>
+<area shape="rect" id="node9" href="$scheduler_8h.html#ac48128e72b303ea22d8ec641a9516b15" title="schedule" alt="" coords="384,84,463,111"/>
+<area shape="rect" id="node3" href="$queues_8h.html#a54eca9bfa893cac072d1b1d3010c2944" title="process_bottom_halves" alt="" coords="336,33,511,60"/>
+<area shape="rect" id="node4" href="$gvt_2gvt_8c.html#a895d5bfff43f3ee72f9cf7097abf609b" title="GVT_phases" alt="" coords="559,33,660,60"/>
+<area shape="rect" id="node6" href="$main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="927,59,1088,85"/>
+<area shape="rect" id="node5" href="$gvt_2gvt_8h.html#a899b50ab45427cf145360ff3a6c29808" title="gvt_operations" alt="" coords="735,33,852,60"/>
+<area shape="rect" id="node7" href="$main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="1136,59,1257,85"/>
+<area shape="rect" id="node8" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1169,109,1224,136"/>
+<area shape="rect" id="node10" href="$scheduler_8h.html#af405fd79c1cd59fccce27658d6e11941" title="initialize_worker_thread" alt="" coords="708,135,879,161"/>
+</map>

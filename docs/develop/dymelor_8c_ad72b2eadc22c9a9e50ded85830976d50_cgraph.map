@@ -1,0 +1,11 @@
+<map id="clean_buffers_on_gvt" name="clean_buffers_on_gvt">
+<area shape="rect" id="node2" href="$buddy_8c.html#a68569d379c31a61e43111890ee0de28c" title="free_lp_memory" alt="" coords="211,69,337,96"/>
+<area shape="rect" id="node9" href="$dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a" title="rsfree" alt="" coords="245,132,303,159"/>
+<area shape="rect" id="node3" href="$atomic_8h.html#a7a6b9868956dd8e51e5de80e16c76fc4" title="spin_lock" alt="" coords="393,5,473,32"/>
+<area shape="rect" id="node4" href="$buddy_8c.html#ae4a636805a09ff443c450ae96f28c4c1" title="buddy_free" alt="" coords="387,56,480,83"/>
+<area shape="rect" id="node8" href="$atomic_8h.html#a4e8c9d1c6101995f1ecd2141d77e4824" title="spin_unlock" alt="" coords="385,107,481,133"/>
+<area shape="rect" id="node5" href="$buddy_8c.html#a219b899cef5c55cb480ebcad342b2b2b" title="parent" alt="" coords="541,5,605,32"/>
+<area shape="rect" id="node6" href="$buddy_8c.html#ac31dad8abee32480810f0858d59909f0" title="left_child" alt="" coords="533,56,612,83"/>
+<area shape="rect" id="node7" href="$buddy_8c.html#aa176048819d5744297a1bbd86ee62525" title="right_child" alt="" coords="529,107,616,133"/>
+<area shape="rect" id="node10" href="$platform_8c.html#ae2af2cd130d16958394ae21e9d13035f" title="__real_free" alt="" coords="387,157,479,184"/>
+</map>

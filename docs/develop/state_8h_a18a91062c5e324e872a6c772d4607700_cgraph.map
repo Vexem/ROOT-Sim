@@ -1,9 +1,0 @@
-<map id="LogState" name="LogState">
-<area shape="rect" id="node2" href="$core_8c.html#aa5d3c29f381884d4bb7cd0983b3c541a" title="rootsim_error" alt="" coords="571,107,669,133"/>
-<area shape="rect" id="node3" href="$dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="411,5,471,32"/>
-<area shape="rect" id="node5" href="$checkpoints_8c.html#a609f1bba5b42a22d238662029f56852f" title="log_state" alt="" coords="128,132,203,159"/>
-<area shape="rect" id="node4" href="$platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="569,5,671,32"/>
-<area shape="rect" id="node6" href="$statistics_8c.html#af9d1a1909485a1c005f1f846c2ad2cc3" title="statistics_post_lp_data" alt="" coords="363,157,519,184"/>
-<area shape="rect" id="node7" href="$checkpoints_8c.html#a8c0d8e6f20535afac64e182da5dfa4f9" title="log_full" alt="" coords="251,107,314,133"/>
-<area shape="rect" id="node8" href="$dymelor_8h.html#ab72247530e122f0e6503db111c18d273" title="get_log_size" alt="" coords="394,107,489,133"/>
-</map>

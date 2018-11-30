@@ -1,6 +1,5 @@
 var struct__msg__t =
 [
-    [ "alloc_tid", "struct__msg__t.html#a3481b5e122560e19a00b6be8a4ca7184", null ],
     [ "event_content", "struct__msg__t.html#aea945023f69437fa26afd33e3b437ffe", null ],
     [ "mark", "struct__msg__t.html#a65a20f7802ea4b09d27189655f6afa73", null ],
     [ "message_kind", "struct__msg__t.html#ab433e1c9256ad9e6e7804004b9b8260d", null ],

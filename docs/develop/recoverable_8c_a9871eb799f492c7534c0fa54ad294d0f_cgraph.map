@@ -1,9 +1,0 @@
-<map id="clean_buffers_on_gvt" name="clean_buffers_on_gvt">
-<area shape="rect" id="node2" href="$buddy_8c.html#a6e384930ff168ef10a50a2a8fe9561f4" title="pool_release_memory" alt="" coords="200,56,349,83"/>
-<area shape="rect" id="node7" href="$dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a" title="rsfree" alt="" coords="247,107,302,133"/>
-<area shape="rect" id="node3" href="$buddy_8c.html#a908ff223d4c32bca662a6312e90bc9b4" title="buddy_free" alt="" coords="398,56,485,83"/>
-<area shape="rect" id="node4" href="$buddy_8c.html#a4e37c16339bbf6e05891b7560074a8da" title="parent" alt="" coords="545,5,604,32"/>
-<area shape="rect" id="node5" href="$buddy_8c.html#aa8695c30990e4003c7e13ed6727fbf2e" title="left_child" alt="" coords="537,56,612,83"/>
-<area shape="rect" id="node6" href="$buddy_8c.html#a9f638a94a98040170ae77d44dee7848e" title="right_child" alt="" coords="534,107,615,133"/>
-<area shape="rect" id="node8" href="$platform_8c.html#ae2af2cd130d16958394ae21e9d13035f" title="__real_free" alt="" coords="398,107,485,133"/>
-</map>

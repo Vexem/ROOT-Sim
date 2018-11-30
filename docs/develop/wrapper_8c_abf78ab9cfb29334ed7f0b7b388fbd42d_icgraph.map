@@ -1,4 +1,4 @@
 <map id="__real_strcpy" name="__real_strcpy">
-<area shape="rect" id="node2" href="$wrapper_8c.html#a4f5f97ebfe8c2843ae98bbf0c93680e6" title="__wrap_strcpy" alt="" coords="155,5,261,32"/>
-<area shape="rect" id="node3" href="$wrapper_8c.html#a849c010b96eae768d42712e2060efbe1" title="__wrap_strdup" alt="" coords="155,56,261,83"/>
+<area shape="rect" id="node2" href="$wrapper_8c.html#a4f5f97ebfe8c2843ae98bbf0c93680e6" title="__wrap_strcpy" alt="" coords="161,5,273,32"/>
+<area shape="rect" id="node3" href="$wrapper_8c.html#a849c010b96eae768d42712e2060efbe1" title="__wrap_strdup" alt="" coords="160,56,275,83"/>
 </map>

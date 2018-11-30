@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['reg_5fsize',['reg_size',['../x86_8h.html#a4bede11ec9caf1c8404e395073dba954',1,'x86.h']]]
+  ['param_5fcodes',['param_codes',['../init_8h.html#af0542cfabfa114e627ec693afe2990d4',1,'init.h']]]
 ];

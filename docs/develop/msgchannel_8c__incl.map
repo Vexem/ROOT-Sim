@@ -1,15 +1,15 @@
 <map id="/home/travis/build/HPDCS/ROOT&#45;Sim/src/datatypes/msgchannel.c" name="/home/travis/build/HPDCS/ROOT&#45;Sim/src/datatypes/msgchannel.c">
-<area shape="rect" id="node5" href="$atomic_8h.html" title="This module implements atomic and non&#45;blocking operations used within ROOT&#45;Sim to coordinate threads ..." alt="" coords="209,408,311,435"/>
-<area shape="rect" id="node8" href="$core_8h.html" title="This header defines all the shared symbols which are needed by different subsystems. " alt="" coords="914,259,1000,285"/>
-<area shape="rect" id="node16" href="$communication_8h.html" title="This is the main header file, containing all data structures and defines used by the communication su..." alt="" coords="771,109,984,136"/>
-<area shape="rect" id="node17" href="$list_8h.html" title="This header defines macros for accessing the general&#45;purpose list implementation used in the simulato..." alt="" coords="61,333,171,360"/>
-<area shape="rect" id="node20" href="$msgchannel_8h.html" title="This module implements an (M, 1) channel to transfer message pointers. " alt="" coords="1009,109,1172,136"/>
-<area shape="rect" id="node21" href="$mm_8h.html" title="mm/mm.h" alt="" coords="439,184,520,211"/>
-<area shape="rect" id="node24" href="$dymelor_8h.html" title="This is the Memory Management Subsystem main header file. " alt="" coords="1197,109,1301,136"/>
-<area shape="rect" id="node9" href="$ROOT-Sim_8h.html" title="This header defines all the symbols which are needed to develop a Model to be simulated on top of ROO..." alt="" coords="1053,333,1152,360"/>
-<area shape="rect" id="node14" href="$numerical_8h.html" title="This header is used to define symbols which must be accessible by the simulator but not by the applic..." alt="" coords="821,333,928,360"/>
-<area shape="rect" id="node15" href="$thread_8h.html" title="This module implements Kernel Level Thread supports. " alt="" coords="447,333,545,360"/>
-<area shape="rect" id="node25" href="$bitmap_8h.html" title="This header implements a minimal bitmap data type. " alt="" coords="1107,184,1240,211"/>
-<area shape="rect" id="node27" href="$state_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="995,184,1083,211"/>
-<area shape="rect" id="node28" href="$timer_8h.html" title="This header defines the timers which the simulator uses to monitor its internal behaviour. " alt="" coords="1361,184,1452,211"/>
+<area shape="rect" id="node5" href="$atomic_8h.html" title="This module implements atomic and non&#45;blocking operations used within ROOT&#45;Sim to coordinate threads ..." alt="" coords="368,483,479,509"/>
+<area shape="rect" id="node8" href="$core_8h.html" title="This header defines all the shared symbols which are needed by different subsystems. " alt="" coords="728,333,823,360"/>
+<area shape="rect" id="node17" href="$communication_8h.html" title="This is the main header file, containing all data structures and defines used by the communication su..." alt="" coords="669,109,905,136"/>
+<area shape="rect" id="node18" href="$list_8h.html" title="This header defines macros for accessing the general&#45;purpose list implementation used in the simulato..." alt="" coords="67,408,187,435"/>
+<area shape="rect" id="node21" href="$msgchannel_8h.html" title="This module implements an (M, 1) channel to transfer message pointers. " alt="" coords="415,109,595,136"/>
+<area shape="rect" id="node22" href="$mm_8h.html" title="mm/mm.h" alt="" coords="930,109,1021,136"/>
+<area shape="rect" id="node9" href="$ROOT-Sim_8h.html" title="This header defines all the symbols which are needed to develop a Model to be simulated on top of ROO..." alt="" coords="854,408,953,435"/>
+<area shape="rect" id="node15" href="$numerical_8h.html" title="This header is used to define symbols which must be accessible by the simulator but not by the applic..." alt="" coords="1078,408,1193,435"/>
+<area shape="rect" id="node16" href="$thread_8h.html" title="This module implements Kernel Level Thread supports. " alt="" coords="415,408,523,435"/>
+<area shape="rect" id="node25" href="$dymelor_8h.html" title="This is the Memory Management Subsystem main header file. " alt="" coords="1042,184,1157,211"/>
+<area shape="rect" id="node26" href="$bitmap_8h.html" title="This header implements a minimal bitmap data type. " alt="" coords="858,259,1005,285"/>
+<area shape="rect" id="node28" href="$state_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="1029,259,1127,285"/>
+<area shape="rect" id="node29" href="$timer_8h.html" title="This header defines the timers which the simulator uses to monitor its internal behaviour. " alt="" coords="1151,259,1250,285"/>
 </map>

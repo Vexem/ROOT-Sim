@@ -11,6 +11,7 @@ var structstat__t =
     [ "gvt_round_time_min", "structstat__t.html#ae47d0131b857ae817ef75780af2a37a6", null ],
     [ "gvt_time", "structstat__t.html#a6da86e9c62f45427f576ee17d1b9329b", null ],
     [ "idle_cycles", "structstat__t.html#a68ac198d002d2fb342ba13a3acf7485a", null ],
+    [ "max_resident_set", "structstat__t.html#a326fbd57fcc9d5bd8f246a854a8f06d2", null ],
     [ "memory_usage", "structstat__t.html#a6c4bc671a81b1f33b0f83f0227a01bd2", null ],
     [ "recovery_time", "structstat__t.html#ac8a8b510af8402a091fec38b7aa0a739", null ],
     [ "reprocessed_events", "structstat__t.html#a33d0bcf5810a6b196ea54e875cf43307", null ],
@@ -19,5 +20,6 @@ var structstat__t =
     [ "tot_ckpts", "structstat__t.html#a4b204c7589762d13c28a1a4d321d1e4e", null ],
     [ "tot_events", "structstat__t.html#a189e971f49c3f169cac3e98ecd59b5e5", null ],
     [ "tot_recoveries", "structstat__t.html#a2e5a6141fad2c2c413dbdfe9e1ae33d1", null ],
-    [ "tot_rollbacks", "structstat__t.html#a72a53913f2a9f1bb5c26be1b3433a66b", null ]
+    [ "tot_rollbacks", "structstat__t.html#a72a53913f2a9f1bb5c26be1b3433a66b", null ],
+    [ "vec", "structstat__t.html#a736937daaa4c61be4974ad3ebe73f28c", null ]
 ];

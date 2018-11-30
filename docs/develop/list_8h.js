@@ -13,6 +13,7 @@ var list_8h =
     [ "list_next", "list_8h.html#a618d45127cdf86fd6909626dcaec7869", null ],
     [ "list_pop", "list_8h.html#a0f6873b487124acda0c34da04fce5db6", null ],
     [ "list_prev", "list_8h.html#aa76dbe6925172df446dbc3fa2d5272b6", null ],
+    [ "list_size", "list_8h.html#af39ba1612dbf2ed0f90e335a2d9a8a04", null ],
     [ "list_sizeof", "list_8h.html#ab3fb8b3578a6b57bf7fbf84824be9055", null ],
     [ "list_tail", "list_8h.html#a6be93f236c58229a6ffff6721cf57ab1", null ],
     [ "list_trunc", "list_8h.html#aebe95d4188619bb0ef2044409c31c0e4", null ],

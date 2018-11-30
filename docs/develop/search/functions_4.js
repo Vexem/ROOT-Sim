@@ -2,10 +2,9 @@ var searchData=
 [
   ['debug',['debug',['../traps-dummy_8h.html#ac7465e1fb2b9c137abbfc4aa266cab12',1,'traps-dummy.h']]],
   ['define_5fmutex',['DEFINE_MUTEX',['../cross__state__manager_8c.html#a44503b769b583487ff18d03ee0b47e05',1,'cross_state_manager.c']]],
-  ['destroy_5flps',['destroy_LPs',['../scheduler_8c.html#a097e3d5ca2fe391f45ddb86f37524bb8',1,'scheduler.c']]],
   ['device_5fattr',['DEVICE_ATTR',['../cross__state__manager_8c.html#a33dcbff5fe264607ef11f2b1d82269d1',1,'cross_state_manager.c']]],
   ['device_5fnot_5favailable',['device_not_available',['../traps-dummy_8h.html#a75e3a176f45c1a7eb56669c64f10ca08',1,'traps-dummy.h']]],
-  ['dirty_5fmem',['dirty_mem',['../dymelor_8h.html#af3e133eb1e589a684794f815e55eafaa',1,'dirty_mem(void *, int):&#160;recoverable.c'],['../recoverable_8c.html#a63e652cb5eb2eb0fd8edb39e59ef7bbe',1,'dirty_mem(void *base, int size):&#160;recoverable.c']]],
+  ['dirty_5fmem',['dirty_mem',['../dymelor_8c.html#a63e652cb5eb2eb0fd8edb39e59ef7bbe',1,'dirty_mem(void *base, int size):&#160;dymelor.c'],['../dymelor_8h.html#af3e133eb1e589a684794f815e55eafaa',1,'dirty_mem(void *, int):&#160;dymelor.c']]],
   ['dirty_5fsize',['dirty_size',['../dymelor_8h.html#a7949b85fe03df856881243990c5bf91d',1,'dymelor.h']]],
   ['discardobstacles',['DiscardObstacles',['../topology_8c.html#a12dc5c84395024f28dc92710ffc4fb91',1,'DiscardObstacles(obstacles_t *obstacles):&#160;topology.c'],['../ROOT-Sim_8h.html#a12dc5c84395024f28dc92710ffc4fb91',1,'DiscardObstacles(obstacles_t *obstacles):&#160;topology.c']]],
   ['distribute_5flps_5fon_5fkernels',['distribute_lps_on_kernels',['../core_8c.html#a0c0887000d8e04c515c4a9a5bf2f5995',1,'distribute_lps_on_kernels(void):&#160;core.c'],['../core_8h.html#a0c0887000d8e04c515c4a9a5bf2f5995',1,'distribute_lps_on_kernels(void):&#160;core.c']]],
@@ -17,12 +16,12 @@ var searchData=
   ['do_5fdebug',['do_debug',['../traps-dummy_8h.html#a67a400a9883b43d290e7a09b312d3a92',1,'traps-dummy.h']]],
   ['do_5fdevice_5fnot_5favailable',['do_device_not_available',['../traps-dummy_8h.html#a3739ec690dd99019f6e0569588eddf26',1,'traps-dummy.h']]],
   ['do_5fdivide_5ferror',['do_divide_error',['../traps-dummy_8h.html#af2f0ce5392dd83124812c0d90b5a2c6e',1,'traps-dummy.h']]],
-  ['do_5ffree',['do_free',['../dymelor_8c.html#a8252a6bb813980afb6f613826fa977d9',1,'do_free(LID_t lid, malloc_state *mem_pool, void *ptr):&#160;dymelor.c'],['../dymelor_8h.html#a6ea6fd8c90133a0e198315ae11cd9423',1,'do_free(LID_t, malloc_state *mem_pool, void *ptr):&#160;dymelor.c']]],
+  ['do_5ffree',['do_free',['../dymelor_8c.html#a8ab9f013ad5d2ac3d460ddf42dae3839',1,'do_free(struct lp_struct *lp, void *ptr):&#160;dymelor.c'],['../dymelor_8h.html#adb41febfa38b30f522a8b2623ce7ecf4',1,'do_free(struct lp_struct *, void *ptr):&#160;dymelor.c']]],
   ['do_5fgeneral_5fprotection',['do_general_protection',['../traps-dummy_8h.html#a459520aad572fd9d207d3705ec4d7c28',1,'traps-dummy.h']]],
   ['do_5fint3',['do_int3',['../traps-dummy_8h.html#a7145aca4714418620c91088da95fcf15',1,'traps-dummy.h']]],
   ['do_5finvalid_5fop',['do_invalid_op',['../traps-dummy_8h.html#a01a9732c8fcd55c431073bef71a7de29',1,'traps-dummy.h']]],
   ['do_5finvalid_5ftss',['do_invalid_TSS',['../traps-dummy_8h.html#a02221c1c330ee8941078b8467251d930',1,'traps-dummy.h']]],
-  ['do_5fmalloc',['do_malloc',['../dymelor_8c.html#a80799008fa38222dc3c1ecf0b7be4a73',1,'do_malloc(LID_t lid, malloc_state *mem_pool, size_t size):&#160;dymelor.c'],['../dymelor_8h.html#a1f7d977353fa17d93a71e5872780944e',1,'do_malloc(LID_t, malloc_state *mem_pool, size_t size):&#160;dymelor.c']]],
+  ['do_5fmalloc',['do_malloc',['../dymelor_8c.html#af3915129d419af75579c3d57c8757378',1,'do_malloc(struct lp_struct *lp, size_t size):&#160;dymelor.c'],['../dymelor_8h.html#a0706c4a4237b3b20358ee252bdfb1a0f',1,'do_malloc(struct lp_struct *, size_t):&#160;dymelor.c']]],
   ['do_5fnmi',['do_nmi',['../traps-dummy_8h.html#ae22c8403accd22673429c10872995f89',1,'traps-dummy.h']]],
   ['do_5foverflow',['do_overflow',['../traps-dummy_8h.html#a79c50d67dab1c13ee5c7e8d62039108f',1,'traps-dummy.h']]],
   ['do_5fpage_5ffault',['do_page_fault',['../traps-dummy_8h.html#a3d3a14d1b185d54730efd7c16963db2e',1,'traps-dummy.h']]],
@@ -31,7 +30,5 @@ var searchData=
   ['do_5fsimd_5fcoprocessor_5ferror',['do_simd_coprocessor_error',['../traps-dummy_8h.html#acd1dd6c890de7cd8eb218c2534a9c8b1',1,'traps-dummy.h']]],
   ['do_5fspurious_5finterrupt_5fbug',['do_spurious_interrupt_bug',['../traps-dummy_8h.html#afc20e75c6d09ee7c4356a25e5c40da1f',1,'traps-dummy.h']]],
   ['do_5fstack_5fsegment',['do_stack_segment',['../traps-dummy_8h.html#a359024a414625184e6df5c5dc5ee946a',1,'traps-dummy.h']]],
-  ['dump_5fmsg_5fcontent',['dump_msg_content',['../communication_8c.html#ac5d2aab0b4d3d676e4a8fd2d3d6e7bf9',1,'dump_msg_content(msg_t *msg):&#160;communication.c'],['../communication_8h.html#ac5d2aab0b4d3d676e4a8fd2d3d6e7bf9',1,'dump_msg_content(msg_t *msg):&#160;communication.c']]],
-  ['dymelor_5ffini',['dymelor_fini',['../dymelor_8c.html#acb2ad979faeabdfb1a4c79cd69514171',1,'dymelor_fini(void):&#160;dymelor.c'],['../dymelor_8h.html#acb2ad979faeabdfb1a4c79cd69514171',1,'dymelor_fini(void):&#160;dymelor.c']]],
-  ['dymelor_5finit',['dymelor_init',['../dymelor_8c.html#a4a2254f9566905d37dd2359b648c23e9',1,'dymelor_init(void):&#160;dymelor.c'],['../dymelor_8h.html#a4a2254f9566905d37dd2359b648c23e9',1,'dymelor_init(void):&#160;dymelor.c']]]
+  ['dump_5fmsg_5fcontent',['dump_msg_content',['../communication_8c.html#ac5d2aab0b4d3d676e4a8fd2d3d6e7bf9',1,'dump_msg_content(msg_t *msg):&#160;communication.c'],['../communication_8h.html#ac5d2aab0b4d3d676e4a8fd2d3d6e7bf9',1,'dump_msg_content(msg_t *msg):&#160;communication.c']]]
 ];
