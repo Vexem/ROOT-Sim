@@ -2,7 +2,6 @@ var atomic_8h =
 [
     [ "atomic_t", "structatomic__t.html", "structatomic__t" ],
     [ "spinlock_t", "structspinlock__t.html", "structspinlock__t" ],
-    [ "__ROOTSIM__ATOMIC_H", "atomic_8h.html#a76b7ceff9f0ce33241acfa3ea19ff8f7", null ],
     [ "atomic_read", "atomic_8h.html#a1414350b98d3d1dc33887f9da5878542", null ],
     [ "atomic_set", "atomic_8h.html#af7cad706a5bba06487b2011794061922", null ],
     [ "LOCK", "atomic_8h.html#a0376b2ead2de10bb7ab6a4d21ec304e9", null ],

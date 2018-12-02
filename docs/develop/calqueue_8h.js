@@ -1,7 +1,6 @@
 var calqueue_8h =
 [
     [ "__calqueue_node", "struct____calqueue__node.html", "struct____calqueue__node" ],
-    [ "__CALQUEUE_H", "calqueue_8h.html#af8cb66682cc349ffbc9597d434c9c87e", null ],
     [ "CALQSPACE", "calqueue_8h.html#a624aac5de3342bc03b2b27131d10d0a1", null ],
     [ "MAXNBUCKETS", "calqueue_8h.html#a8b06db5794247efae0c43dd638ab7c7c", null ],
     [ "calendar_queue", "calqueue_8h.html#af9a9eb1cf1894744ccbae9956bf41e0a", null ],

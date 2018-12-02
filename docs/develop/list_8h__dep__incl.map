@@ -4,7 +4,7 @@
 <area shape="rect" id="node4" href="$state_8c.html" title="The state module is responsible for managing LPs&#39; simulation states. In particular, it allows to take a snapshot, to restore a previous snapshot, and to silently re&#45;execute a portion of simulation events to bring a LP to a partiuclar LVT value for which no simulation state. " alt="" coords="192,421,355,477"/>
 <area shape="rect" id="node5" href="$queues_8c.html" title="This module implements the event/message queues subsystem. " alt="" coords="3368,421,3531,477"/>
 <area shape="rect" id="node6" href="$binding_8c.html" title="Implements load sharing rules for LPs among worker threads. " alt="" coords="5,421,168,477"/>
-<area shape="rect" id="node7" href="$control_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/scheduler/control.c" alt="" coords="4005,421,4168,477"/>
+<area shape="rect" id="node7" href="$control_8c.html" title="Processing Points for Control Messages. " alt="" coords="4005,421,4168,477"/>
 <area shape="rect" id="node8" href="$process_8h.html" title="This header defines a LP control block, keeping information about both simulation state and execution..." alt="" coords="2356,109,2519,165"/>
 <area shape="rect" id="node27" href="$scheduler_8c.html" title="Re&#45;entrant scheduler for LPs on worker threads. " alt="" coords="3179,421,3343,477"/>
 <area shape="rect" id="node9" href="$asm__defines_8c.html" title="This file is not actually compiled into ROOT&#45;Sim. This is used by the build system to generate the as..." alt="" coords="1889,213,2052,269"/>
@@ -18,14 +18,14 @@
 <area shape="rect" id="node17" href="$main_8c.html" title="This module contains the entry point for the simulator, and some core functions. " alt="" coords="565,421,728,477"/>
 <area shape="rect" id="node18" href="$buddy_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/mm/buddy.c" alt="" coords="2263,213,2425,269"/>
 <area shape="rect" id="node19" href="$checkpoints_8c.html" title="This module implements the routines to save and restore checkpoints, both full and incremental..." alt="" coords="2992,421,3155,477"/>
-<area shape="rect" id="node20" href="$segment_8c.html" title="Segment Allocator. " alt="" coords="2449,213,2612,269"/>
+<area shape="rect" id="node20" href="$segment_8c.html" title="Segment Allocator. This is the lowest&#45;level allocator in ROOT&#45;Sim. " alt="" coords="2449,213,2612,269"/>
 <area shape="rect" id="node21" href="$queues_8h.html" title="Event and State queueing Subsystem main header. " alt="" coords="3267,213,3429,269"/>
 <area shape="rect" id="node22" href="$scheduler_8h.html" title="Scheduling Subsystem main header file. Scheduler&#45;specific data structures and defines should be place..." alt="" coords="2337,317,2503,373"/>
 <area shape="rect" id="node26" href="$process_8c.html" title="This header defines type&#45;safe operations for LP control block management. " alt="" coords="2619,421,2781,477"/>
 <area shape="rect" id="node28" href="$stf_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/scheduler/stf.c" alt="" coords="3555,421,3717,477"/>
-<area shape="rect" id="node30" href="$statistics_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/statistics/statistics.c" alt="" coords="2805,421,2968,477"/>
+<area shape="rect" id="node30" href="$statistics_8c.html" title="State Management Subsystem. " alt="" coords="2805,421,2968,477"/>
 <area shape="rect" id="node31" href="$stf_8h.html" title="Smallest Timestamp First scheduler main header. " alt="" coords="2737,213,2900,269"/>
-<area shape="rect" id="node32" href="$statistics_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="1585,213,1748,269"/>
+<area shape="rect" id="node32" href="$statistics_8h.html" title="State Management Subsystem. " alt="" coords="1585,213,1748,269"/>
 <area shape="rect" id="node23" href="$topology_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/lib/topology.c" alt="" coords="2245,421,2408,477"/>
 <area shape="rect" id="node24" href="$wrapper_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/lib&#45;wrapper/wrapper.c" alt="" coords="2432,421,2595,477"/>
 <area shape="rect" id="node25" href="$dymelor_8c.html" title="LP&#39;s memory pre&#45;allocator. This layer stands below DyMeLoR, and is the connection point to the Linux ..." alt="" coords="1685,421,1848,477"/>

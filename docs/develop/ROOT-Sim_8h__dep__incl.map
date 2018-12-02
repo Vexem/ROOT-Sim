@@ -21,31 +21,31 @@
 <area shape="rect" id="node19" href="$queues_8c.html" title="This module implements the event/message queues subsystem. " alt="" coords="1748,837,1911,893"/>
 <area shape="rect" id="node20" href="$queues_8h.html" title="Event and State queueing Subsystem main header. " alt="" coords="1461,629,1624,685"/>
 <area shape="rect" id="node25" href="$binding_8c.html" title="Implements load sharing rules for LPs among worker threads. " alt="" coords="2180,837,2343,893"/>
-<area shape="rect" id="node26" href="$control_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/scheduler/control.c" alt="" coords="585,837,748,893"/>
+<area shape="rect" id="node26" href="$control_8c.html" title="Processing Points for Control Messages. " alt="" coords="585,837,748,893"/>
 <area shape="rect" id="node27" href="$process_8c.html" title="This header defines type&#45;safe operations for LP control block management. " alt="" coords="1993,837,2156,893"/>
 <area shape="rect" id="node28" href="$scheduler_8c.html" title="Re&#45;entrant scheduler for LPs on worker threads. " alt="" coords="2703,837,2867,893"/>
 <area shape="rect" id="node29" href="$stf_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/scheduler/stf.c" alt="" coords="1288,837,1451,893"/>
-<area shape="rect" id="node31" href="$statistics_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/statistics/statistics.c" alt="" coords="3559,837,3721,893"/>
+<area shape="rect" id="node31" href="$statistics_8c.html" title="State Management Subsystem. " alt="" coords="3559,837,3721,893"/>
 <area shape="rect" id="node32" href="$stf_8h.html" title="Smallest Timestamp First scheduler main header. " alt="" coords="2205,629,2368,685"/>
 <area shape="rect" id="node36" href="$communication_8h.html" title="This is the main header file, containing all data structures and defines used by the communication su..." alt="" coords="1157,421,1397,477"/>
 <area shape="rect" id="node37" href="$msgchannel_8c.html" title="This module implements an (M, 1) channel to transfer message pointers. " alt="" coords="1393,525,1575,581"/>
 <area shape="rect" id="node38" href="$bitmap_8h.html" title="This header implements a minimal bitmap data type. " alt="" coords="5115,213,5277,269"/>
 <area shape="rect" id="node39" href="$dymelor_8h.html" title="This is the Memory Management Subsystem main header file. " alt="" coords="3140,317,3303,373"/>
-<area shape="rect" id="node42" href="$mm_8h.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/mm/mm.h" alt="" coords="2716,421,2879,477"/>
-<area shape="rect" id="node43" href="$calqueue_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/datatypes/calqueue.c" alt="" coords="1701,525,1864,581"/>
+<area shape="rect" id="node42" href="$mm_8h.html" title="Memory Manager main header. " alt="" coords="2716,421,2879,477"/>
+<area shape="rect" id="node43" href="$calqueue_8c.html" title="A Calendar Queue Implementation. " alt="" coords="1701,525,1864,581"/>
 <area shape="rect" id="node44" href="$slab_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/mm/slab.c" alt="" coords="1888,525,2051,581"/>
-<area shape="rect" id="node45" href="$platform_8c.html" title="This is the ROOT&#45;Sim implementation of the malloc library (to come...) " alt="" coords="2273,421,2436,477"/>
+<area shape="rect" id="node45" href="$platform_8c.html" title="For security reasons we poison standard malloc calls. These are the wrappers used in ROOT&#45;Sim..." alt="" coords="2273,421,2436,477"/>
 <area shape="rect" id="node46" href="$msgchannel_8h.html" title="This module implements an (M, 1) channel to transfer message pointers. " alt="" coords="1523,421,1707,477"/>
 <area shape="rect" id="node5" href="$process_8h.html" title="This header defines a LP control block, keeping information about both simulation state and execution..." alt="" coords="2581,525,2744,581"/>
 <area shape="rect" id="node6" href="$asm__defines_8c.html" title="This file is not actually compiled into ROOT&#45;Sim. This is used by the build system to generate the as..." alt="" coords="2392,629,2555,685"/>
 <area shape="rect" id="node11" href="$fossil_8c.html" title="In this module all the housekeeping operations related to GVT computation phase are present..." alt="" coords="3932,837,4095,893"/>
-<area shape="rect" id="node17" href="$segment_8c.html" title="Segment Allocator. " alt="" coords="2680,629,2843,685"/>
-<area shape="rect" id="node33" href="$statistics_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="3221,629,3384,685"/>
+<area shape="rect" id="node17" href="$segment_8c.html" title="Segment Allocator. This is the lowest&#45;level allocator in ROOT&#45;Sim. " alt="" coords="2680,629,2843,685"/>
+<area shape="rect" id="node33" href="$statistics_8h.html" title="State Management Subsystem. " alt="" coords="3221,629,3384,685"/>
 <area shape="rect" id="node23" href="$wrapper_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/lib&#45;wrapper/wrapper.c" alt="" coords="2367,837,2529,893"/>
 <area shape="rect" id="node24" href="$dymelor_8c.html" title="LP&#39;s memory pre&#45;allocator. This layer stands below DyMeLoR, and is the connection point to the Linux ..." alt="" coords="2900,837,3063,893"/>
 <area shape="rect" id="node34" href="$init_8h.html" title="This module implements the simulator initialization routines. " alt="" coords="3560,733,3723,789"/>
 <area shape="rect" id="node35" href="$thread_8c.html" title="This module implements a thread barrier. " alt="" coords="3745,837,3908,893"/>
 <area shape="rect" id="node40" href="$memusage_8c.html" title="This module provides system&#45;dependend functions to retrieve the current/peak memory usage..." alt="" coords="3140,421,3303,477"/>
 <area shape="rect" id="node41" href="$x86_8c.html" title="This module implements atomic and non&#45;blocking operations used within ROOT&#45;Sim to coordinate threads ..." alt="" coords="3327,421,3489,477"/>
-<area shape="rect" id="node48" href="$ccgs_8h.html" title="Consistent and Committed Global State (CCGS) is a subsystem that (poeriodically) recomputes a global ..." alt="" coords="4608,733,4771,789"/>
+<area shape="rect" id="node48" href="$ccgs_8h.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/gvt/ccgs.h" alt="" coords="4608,733,4771,789"/>
 </map>

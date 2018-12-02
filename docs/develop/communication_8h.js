@@ -59,6 +59,5 @@ var communication_8h =
     [ "send_outgoing_msgs", "communication_8h.html#ad154a0e0c0815b786ead70143505abd6", null ],
     [ "start_ack_timer", "communication_8h.html#a1e4558c023a128f352946790882d7f97", null ],
     [ "validate_msg", "communication_8h.html#aebec05b86f3467473116d555954b80f4", null ],
-    [ "which_slab_to_use", "communication_8h.html#ae78d99ec41f43bbe641c00f1cb39d54c", null ],
     [ "windows_init", "communication_8h.html#aef94c1e70d496234a143de1dfdb3e34b", null ]
 ];

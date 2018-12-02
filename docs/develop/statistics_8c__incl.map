@@ -4,16 +4,16 @@
 <area shape="rect" id="node17" href="$process_8h.html" title="This header defines a LP control block, keeping information about both simulation state and execution..." alt="" coords="1717,259,1868,285"/>
 <area shape="rect" id="node18" href="$state_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="1171,512,1268,539"/>
 <area shape="rect" id="node23" href="$core_8h.html" title="This header defines all the shared symbols which are needed by different subsystems. " alt="" coords="1276,587,1371,613"/>
-<area shape="rect" id="node26" href="$mm_8h.html" title="mm/mm.h" alt="" coords="1086,348,1177,375"/>
+<area shape="rect" id="node26" href="$mm_8h.html" title="Memory Manager main header. " alt="" coords="1086,348,1177,375"/>
 <area shape="rect" id="node32" href="$timer_8h.html" title="This header defines the timers which the simulator uses to monitor its internal behaviour. " alt="" coords="405,512,503,539"/>
 <area shape="rect" id="node43" href="$scheduler_8h.html" title="Scheduling Subsystem main header file. Scheduler&#45;specific data structures and defines should be place..." alt="" coords="1331,109,1492,136"/>
 <area shape="rect" id="node44" href="$queues_8h.html" title="Event and State queueing Subsystem main header. " alt="" coords="1597,184,1729,211"/>
 <area shape="rect" id="node46" href="$gvt_2gvt_8h.html" title="This header defines all the Global Virtual Time symbols needed by the platform. The current implement..." alt="" coords="875,437,953,464"/>
-<area shape="rect" id="node47" href="$statistics_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="1754,184,1906,211"/>
+<area shape="rect" id="node47" href="$statistics_8h.html" title="State Management Subsystem. " alt="" coords="1754,184,1906,211"/>
 <area shape="rect" id="node48" href="$init_8h.html" title="This module implements the simulator initialization routines. " alt="" coords="1770,109,1855,136"/>
 <area shape="rect" id="node14" href="$atomic_8h.html" title="This module implements atomic and non&#45;blocking operations used within ROOT&#45;Sim to coordinate threads ..." alt="" coords="1611,736,1721,763"/>
 <area shape="rect" id="node25" href="$numerical_8h.html" title="This header is used to define symbols which must be accessible by the simulator but not by the applic..." alt="" coords="1357,661,1471,688"/>
-<area shape="rect" id="node34" href="$ecs_8h.html" title="mm/ecs.h" alt="" coords="1824,348,1911,375"/>
+<area shape="rect" id="node34" href="$ecs_8h.html" title="Event Cross State Synchronization. This module implements the userspace handler of the artificially i..." alt="" coords="1824,348,1911,375"/>
 <area shape="rect" id="node35" href="$list_8h.html" title="This header defines macros for accessing the general&#45;purpose list implementation used in the simulato..." alt="" coords="1495,661,1615,688"/>
 <area shape="rect" id="node38" href="$msgchannel_8h.html" title="This module implements an (M, 1) channel to transfer message pointers. " alt="" coords="1720,512,1900,539"/>
 <area shape="rect" id="node39" href="$ult_8h.html" title="The User&#45;Level Thread module allows the creation/scheduling of a user&#45;level thread in an architecture..." alt="" coords="1666,348,1749,375"/>

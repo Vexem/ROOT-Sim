@@ -1,18 +1,5 @@
 var NAVTREEINDEX7 =
 {
-"traps-dummy_8h_source.html":[2,0,0,0,0,0,1,3],
-"ult_8c.html":[2,0,0,0,9],
-"ult_8c.html#af3d8429cc9ef046d05e2fb0feebf01d7":[2,0,0,0,9,0],
-"ult_8c_source.html":[2,0,0,0,9],
-"ult_8h.html":[2,0,0,0,10],
-"ult_8h.html#af3d8429cc9ef046d05e2fb0feebf01d7":[2,0,0,0,10,0],
-"ult_8h_source.html":[2,0,0,0,10],
-"wnd_8c.html":[2,0,0,1,6],
-"wnd_8c_source.html":[2,0,0,1,6],
-"wnd_8h.html":[2,0,0,1,7],
-"wnd_8h.html#a6f4b51c79e7023401124a437182a2b49":[2,0,0,1,7,0],
-"wnd_8h_source.html":[2,0,0,1,7],
-"wrapper_8c.html":[2,0,0,6,0],
 "wrapper_8c.html#a0159c74a123b68c5434b8747172aa255":[2,0,0,6,0,15],
 "wrapper_8c.html#a19ee8b186310fde5aa90d2c54de5418b":[2,0,0,6,0,6],
 "wrapper_8c.html#a286101e7b3eeb368e1b684c488b00cea":[2,0,0,6,0,8],

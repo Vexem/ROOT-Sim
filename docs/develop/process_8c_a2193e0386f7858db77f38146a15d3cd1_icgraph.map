@@ -1,5 +1,5 @@
 <map id="find_lp_by_gid" name="find_lp_by_gid">
-<area shape="rect" id="node2" href="$communication_8h.html#ae78d99ec41f43bbe641c00f1cb39d54c" title="which_slab_to_use" alt="" coords="171,230,311,257"/>
+<area shape="rect" id="node2" href="$communication_8c.html#ae6b96249d35969d688d0d84209919c8f" title="which_slab_to_use" alt="" coords="171,230,311,257"/>
 <area shape="rect" id="node10" href="$queues_8h.html#a54eca9bfa893cac072d1b1d3010c2944" title="process_bottom_halves" alt="" coords="584,78,759,105"/>
 <area shape="rect" id="node20" href="$scheduler_8h.html#aacd9fe9684de21c933680f355acb5766" title="process_control_msg" alt="" coords="592,332,751,358"/>
 <area shape="rect" id="node21" href="$communication_8h.html#a762b3dacaa82c4590e0572ac08117153" title="msg_hdr_release" alt="" coords="382,180,514,206"/>

@@ -16,7 +16,7 @@
 <area shape="rect" id="node13" href="$atomic_8h.html#ab61334506e238ad3190ce02fc53af0fb" title="atomic_inc_and_test" alt="" coords="658,5,813,32"/>
 <area shape="rect" id="node14" href="$x86_8c.html#a7a6b9868956dd8e51e5de80e16c76fc4" title="spin_lock" alt="" coords="925,5,1005,32"/>
 <area shape="rect" id="node16" href="$communication_8c.html#ab957dc2cd186382c50ef8cfde9761909" title="get_msg_from_slab" alt="" coords="1102,643,1250,669"/>
-<area shape="rect" id="node21" href="$communication_8c.html#ae78d99ec41f43bbe641c00f1cb39d54c" title="which_slab_to_use" alt="" coords="1106,781,1246,808"/>
+<area shape="rect" id="node21" href="$communication_8c.html#ae6b96249d35969d688d0d84209919c8f" title="which_slab_to_use" alt="" coords="1106,781,1246,808"/>
 <area shape="rect" id="node17" href="$mm_8h.html#a13199823c54d944aa128966cb35c5aa3" title="slab_alloc" alt="" coords="1326,643,1410,669"/>
 <area shape="rect" id="node18" href="$atomic_8h.html#a7a6b9868956dd8e51e5de80e16c76fc4" title="spin_lock" alt="" coords="1496,592,1576,619"/>
 <area shape="rect" id="node19" href="$slab_8c.html#ac0e4a2a4ab26d7f2399eecbb72fc4cff" title="slab_is_valid" alt="" coords="1485,643,1587,669"/>

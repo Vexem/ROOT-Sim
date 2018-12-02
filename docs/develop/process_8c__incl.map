@@ -7,10 +7,10 @@
 <area shape="rect" id="node14" href="$numerical_8h.html" title="This header is used to define symbols which must be accessible by the simulator but not by the applic..." alt="" coords="1025,661,1140,688"/>
 <area shape="rect" id="node15" href="$thread_8h.html" title="This module implements Kernel Level Thread supports. " alt="" coords="893,661,1001,688"/>
 <area shape="rect" id="node16" href="$atomic_8h.html" title="This module implements atomic and non&#45;blocking operations used within ROOT&#45;Sim to coordinate threads ..." alt="" coords="1182,736,1293,763"/>
-<area shape="rect" id="node18" href="$statistics_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="1089,184,1241,211"/>
+<area shape="rect" id="node18" href="$statistics_8h.html" title="State Management Subsystem. " alt="" coords="1089,184,1241,211"/>
 <area shape="rect" id="node20" href="$state_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="569,512,666,539"/>
-<area shape="rect" id="node21" href="$mm_8h.html" title="mm/mm.h" alt="" coords="915,348,1005,375"/>
-<area shape="rect" id="node30" href="$ecs_8h.html" title="mm/ecs.h" alt="" coords="1030,348,1117,375"/>
+<area shape="rect" id="node21" href="$mm_8h.html" title="Memory Manager main header. " alt="" coords="915,348,1005,375"/>
+<area shape="rect" id="node30" href="$ecs_8h.html" title="Event Cross State Synchronization. This module implements the userspace handler of the artificially i..." alt="" coords="1030,348,1117,375"/>
 <area shape="rect" id="node31" href="$list_8h.html" title="This header defines macros for accessing the general&#45;purpose list implementation used in the simulato..." alt="" coords="1371,661,1491,688"/>
 <area shape="rect" id="node34" href="$msgchannel_8h.html" title="This module implements an (M, 1) channel to transfer message pointers. " alt="" coords="793,512,973,539"/>
 <area shape="rect" id="node35" href="$ult_8h.html" title="The User&#45;Level Thread module allows the creation/scheduling of a user&#45;level thread in an architecture..." alt="" coords="467,348,549,375"/>

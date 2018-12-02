@@ -23,7 +23,7 @@
 <area shape="rect" id="node17" href="$state_8c.html#a29fbf84fed206d7f721cd03b74d082cd" title="LogState" alt="" coords="654,816,734,843"/>
 <area shape="rect" id="node18" href="$dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="1110,1069,1173,1096"/>
 <area shape="rect" id="node19" href="$checkpoints_8c.html#af5802791ee41b774e796caa15315c24c" title="log_state" alt="" coords="883,715,965,741"/>
-<area shape="rect" id="node22" href="$communication_8c.html#ae78d99ec41f43bbe641c00f1cb39d54c" title="which_slab_to_use" alt="" coords="1071,968,1211,995"/>
+<area shape="rect" id="node22" href="$communication_8c.html#ae6b96249d35969d688d0d84209919c8f" title="which_slab_to_use" alt="" coords="1071,968,1211,995"/>
 <area shape="rect" id="node24" href="$mm_8h.html#a891cd5abfed9deb98413ab7e7c29ef61" title="slab_free" alt="" coords="654,208,734,235"/>
 <area shape="rect" id="node26" href="$dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a" title="rsfree" alt="" coords="895,208,953,235"/>
 <area shape="rect" id="node23" href="$core_8c.html#a6793e4c70d69277f24ff0e494ed8ed10" title="find_kernel_by_gid" alt="" coords="1271,993,1409,1020"/>

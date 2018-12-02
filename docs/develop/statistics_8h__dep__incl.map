@@ -10,7 +10,7 @@
 <area shape="rect" id="node13" href="$state_8c.html" title="The state module is responsible for managing LPs&#39; simulation states. In particular, it allows to take a snapshot, to restore a previous snapshot, and to silently re&#45;execute a portion of simulation events to bring a LP to a partiuclar LVT value for which no simulation state. " alt="" coords="1872,213,2035,269"/>
 <area shape="rect" id="node15" href="$scheduler_8c.html" title="Re&#45;entrant scheduler for LPs on worker threads. " alt="" coords="2059,213,2223,269"/>
 <area shape="rect" id="node16" href="$serial_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/serial/serial.c" alt="" coords="2248,213,2411,269"/>
-<area shape="rect" id="node17" href="$statistics_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/statistics/statistics.c" alt="" coords="2435,213,2597,269"/>
+<area shape="rect" id="node17" href="$statistics_8c.html" title="State Management Subsystem. " alt="" coords="2435,213,2597,269"/>
 <area shape="rect" id="node18" href="$checkpoints_8c.html" title="This module implements the routines to save and restore checkpoints, both full and incremental..." alt="" coords="1659,109,1821,165"/>
 <area shape="rect" id="node19" href="$queues_8c.html" title="This module implements the event/message queues subsystem. " alt="" coords="1845,109,2008,165"/>
 <area shape="rect" id="node20" href="$binding_8c.html" title="Implements load sharing rules for LPs among worker threads. " alt="" coords="2032,109,2195,165"/>

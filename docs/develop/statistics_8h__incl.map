@@ -2,8 +2,8 @@
 <area shape="rect" id="node2" href="$process_8h.html" title="This header defines a LP control block, keeping information about both simulation state and execution..." alt="" coords="387,109,538,136"/>
 <area shape="rect" id="node4" href="$state_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="94,363,191,389"/>
 <area shape="rect" id="node16" href="$numerical_8h.html" title="This header is used to define symbols which must be accessible by the simulator but not by the applic..." alt="" coords="43,512,157,539"/>
-<area shape="rect" id="node19" href="$mm_8h.html" title="mm/mm.h" alt="" coords="721,199,812,225"/>
-<area shape="rect" id="node28" href="$ecs_8h.html" title="mm/ecs.h" alt="" coords="1218,199,1305,225"/>
+<area shape="rect" id="node19" href="$mm_8h.html" title="Memory Manager main header. " alt="" coords="721,199,812,225"/>
+<area shape="rect" id="node28" href="$ecs_8h.html" title="Event Cross State Synchronization. This module implements the userspace handler of the artificially i..." alt="" coords="1218,199,1305,225"/>
 <area shape="rect" id="node29" href="$list_8h.html" title="This header defines macros for accessing the general&#45;purpose list implementation used in the simulato..." alt="" coords="1167,512,1287,539"/>
 <area shape="rect" id="node32" href="$msgchannel_8h.html" title="This module implements an (M, 1) channel to transfer message pointers. " alt="" coords="215,363,395,389"/>
 <area shape="rect" id="node33" href="$ult_8h.html" title="The User&#45;Level Thread module allows the creation/scheduling of a user&#45;level thread in an architecture..." alt="" coords="353,288,436,315"/>

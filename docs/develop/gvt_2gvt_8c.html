@@ -140,11 +140,11 @@ $(document).ready(function(){initNavTree('gvt_2gvt_8c.html','');});
 <area shape="rect" id="node10" href="thread_8h.html" title="This module implements Kernel Level Thread supports. " alt="" coords="1274,661,1382,688"/>
 <area shape="rect" id="node13" href="gvt_2gvt_8h.html" title="This header defines all the Global Virtual Time symbols needed by the platform. The current implement..." alt="" coords="145,437,223,464"/>
 <area shape="rect" id="node15" href="core_8h.html" title="This header defines all the shared symbols which are needed by different subsystems. " alt="" coords="789,587,883,613"/>
-<area shape="rect" id="node19" href="ccgs_8h.html" title="Consistent and Committed Global State (CCGS) is a subsystem that (poeriodically) recomputes a global ..." alt="" coords="221,259,307,285"/>
+<area shape="rect" id="node19" href="ccgs_8h.html" title="gvt/ccgs.h" alt="" coords="221,259,307,285"/>
 <area shape="rect" id="node20" href="init_8h.html" title="This module implements the simulator initialization routines. " alt="" coords="1163,109,1248,136"/>
-<area shape="rect" id="node21" href="statistics_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="1129,184,1281,211"/>
+<area shape="rect" id="node21" href="statistics_8h.html" title="State Management Subsystem. " alt="" coords="1129,184,1281,211"/>
 <area shape="rect" id="node22" href="process_8h.html" title="This header defines a LP control block, keeping information about both simulation state and execution..." alt="" coords="913,259,1063,285"/>
-<area shape="rect" id="node23" href="mm_8h.html" title="mm/mm.h" alt="" coords="403,348,493,375"/>
+<area shape="rect" id="node23" href="mm_8h.html" title="Memory Manager main header. " alt="" coords="403,348,493,375"/>
 <area shape="rect" id="node29" href="timer_8h.html" title="This header defines the timers which the simulator uses to monitor its internal behaviour. " alt="" coords="161,512,260,539"/>
 <area shape="rect" id="node41" href="scheduler_8h.html" title="Scheduling Subsystem main header file. Scheduler&#45;specific data structures and defines should be place..." alt="" coords="778,109,939,136"/>
 <area shape="rect" id="node44" href="mpi_8h.html" title="MPI support module. " alt="" coords="1642,109,1803,136"/>
@@ -152,7 +152,7 @@ $(document).ready(function(){initNavTree('gvt_2gvt_8c.html','');});
 <area shape="rect" id="node11" href="atomic_8h.html" title="This module implements atomic and non&#45;blocking operations used within ROOT&#45;Sim to coordinate threads ..." alt="" coords="1325,736,1435,763"/>
 <area shape="rect" id="node14" href="state_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="358,512,455,539"/>
 <area shape="rect" id="node18" href="numerical_8h.html" title="This header is used to define symbols which must be accessible by the simulator but not by the applic..." alt="" coords="895,661,1009,688"/>
-<area shape="rect" id="node32" href="ecs_8h.html" title="mm/ecs.h" alt="" coords="986,348,1073,375"/>
+<area shape="rect" id="node32" href="ecs_8h.html" title="Event Cross State Synchronization. This module implements the userspace handler of the artificially i..." alt="" coords="986,348,1073,375"/>
 <area shape="rect" id="node33" href="list_8h.html" title="This header defines macros for accessing the general&#45;purpose list implementation used in the simulato..." alt="" coords="1457,661,1577,688"/>
 <area shape="rect" id="node36" href="msgchannel_8h.html" title="This module implements an (M, 1) channel to transfer message pointers. " alt="" coords="1030,512,1210,539"/>
 <area shape="rect" id="node37" href="ult_8h.html" title="The User&#45;Level Thread module allows the creation/scheduling of a user&#45;level thread in an architecture..." alt="" coords="568,348,651,375"/>
@@ -260,7 +260,9 @@ Variables</h2></td></tr>
 <p>You should have received a copy of the GNU General Public License along with ROOT-Sim; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA</p>
 <dl class="section author"><dt>Author</dt><dd>Alessandro Pellegrini </dd>
 <dd>
-Francesco Quaglia </dd></dl>
+Francesco Quaglia </dd>
+<dd>
+Tommaso Tocci </dd></dl>
 
 <p>Definition in file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
 </div><h2 class="groupheader">Enumeration Type Documentation</h2>
@@ -284,7 +286,7 @@ Francesco Quaglia </dd></dl>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00043">43</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
+<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00042">42</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
 
 </div>
 </div>
@@ -310,7 +312,7 @@ Francesco Quaglia </dd></dl>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00056">56</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
+<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00055">55</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
 
 </div>
 </div>
@@ -338,7 +340,7 @@ Francesco Quaglia </dd></dl>
 </div><div class="memdoc">
 <p>This function returns the last computed GVT value at each thread. It can be safely used concurrently to keep track of the evolution of the committed trajectory. It's so far mainly used for termination detection based on passed simulation time. </p>
 
-<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00185">185</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
+<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00173">173</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
 
 <p><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -379,10 +381,9 @@ Francesco Quaglia </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Finalizer of the GVT subsystem</p>
-<dl class="section author"><dt>Author</dt><dd>Alessandro Pellegrini </dd></dl>
+<p>Finalizer of the GVT subsystem. </p>
 
-<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00159">159</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
+<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00150">150</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
 
 <p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -432,10 +433,9 @@ Francesco Quaglia </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Initialization of the GVT subsystem</p>
-<dl class="section author"><dt>Author</dt><dd>Alessandro Pellegrini </dd></dl>
+<p>Initialization of the GVT subsystem. </p>
 
-<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00131">131</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
+<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00126">126</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
 
 <p><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -480,10 +480,9 @@ Francesco Quaglia </dd></dl>
       </table>
 </div><div class="memdoc">
 <p>This is the entry point from the main simulation loop to the GVT subsystem. This function is not executed in case of a serial simulation, and is executed concurrently by different worker threads in case of a parallel one. All the operations here implemented must be re-entrant. Any state variable of the GVT implementation must be declared statically and globally (in case, on a per-thread basis). This function is called at every simulation loop, so at the beginning the code should check whether a GVT computation is occurring, or if a computation must be started.</p>
-<dl class="section author"><dt>Author</dt><dd>Alessandro Pellegrini</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>The newly computed GVT value, or -1.0. Only a Master Thread should return a value different from -1.0, to avoid generating too much information. If every thread will return a value different from -1.0, nothing will be broken, but all the values will be shown associated with the same kernel id (no way to distinguish between different threads here). </dd></dl>
 
-<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00306">306</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
+<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00294">294</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
 
 <p><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -520,7 +519,7 @@ Francesco Quaglia </dd></dl>
 <area shape="rect" id="node19" href="state_8c.html#ae0a3272d4a130bc40478a1ceb7f46e39" title="force_LP_checkpoint" alt="" coords="865,613,1017,640"/>
 <area shape="rect" id="node20" href="state_8c.html#a29fbf84fed206d7f721cd03b74d082cd" title="LogState" alt="" coords="901,816,981,843"/>
 <area shape="rect" id="node21" href="checkpoints_8c.html#af5802791ee41b774e796caa15315c24c" title="log_state" alt="" coords="1117,1171,1198,1197"/>
-<area shape="rect" id="node24" href="communication_8c.html#ae78d99ec41f43bbe641c00f1cb39d54c" title="which_slab_to_use" alt="" coords="1087,563,1227,589"/>
+<area shape="rect" id="node24" href="communication_8c.html#ae6b96249d35969d688d0d84209919c8f" title="which_slab_to_use" alt="" coords="1087,563,1227,589"/>
 <area shape="rect" id="node25" href="mm_8h.html#a891cd5abfed9deb98413ab7e7c29ef61" title="slab_free" alt="" coords="1322,639,1402,665"/>
 <area shape="rect" id="node26" href="dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a" title="rsfree" alt="" coords="1504,740,1563,767"/>
 <area shape="rect" id="node31" href="stf_8c.html#a726ca866bf5abd4a57d94280908b8f14" title="smallest_timestamp\l_first" alt="" coords="638,851,791,893"/>
@@ -575,7 +574,7 @@ Francesco Quaglia </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00213">213</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
+<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00201">201</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
 
 <p><div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -608,7 +607,7 @@ Francesco Quaglia </dd></dl>
 <area shape="rect" id="node17" href="state_8c.html#a29fbf84fed206d7f721cd03b74d082cd" title="LogState" alt="" coords="654,816,734,843"/>
 <area shape="rect" id="node18" href="dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="1110,1069,1173,1096"/>
 <area shape="rect" id="node19" href="checkpoints_8c.html#af5802791ee41b774e796caa15315c24c" title="log_state" alt="" coords="883,715,965,741"/>
-<area shape="rect" id="node22" href="communication_8c.html#ae78d99ec41f43bbe641c00f1cb39d54c" title="which_slab_to_use" alt="" coords="1071,968,1211,995"/>
+<area shape="rect" id="node22" href="communication_8c.html#ae6b96249d35969d688d0d84209919c8f" title="which_slab_to_use" alt="" coords="1071,968,1211,995"/>
 <area shape="rect" id="node24" href="mm_8h.html#a891cd5abfed9deb98413ab7e7c29ef61" title="slab_free" alt="" coords="654,208,734,235"/>
 <area shape="rect" id="node26" href="dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a" title="rsfree" alt="" coords="895,208,953,235"/>
 <area shape="rect" id="node23" href="core_8c.html#a6793e4c70d69277f24ff0e494ed8ed10" title="find_kernel_by_gid" alt="" coords="1271,993,1409,1020"/>
@@ -676,7 +675,7 @@ Francesco Quaglia </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00190">190</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
+<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00178">178</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
 
 <p><div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -710,7 +709,7 @@ Francesco Quaglia </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00275">275</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
+<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00264">264</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
 
 <p><div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -748,7 +747,7 @@ Francesco Quaglia </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00082">82</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
+<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00080">80</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
 
 </div>
 </div>
@@ -772,7 +771,7 @@ Francesco Quaglia </dd></dl>
 
 <p>How many threads have left phase A? </p>
 
-<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00094">94</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
+<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00091">91</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
 
 </div>
 </div>
@@ -796,7 +795,7 @@ Francesco Quaglia </dd></dl>
 
 <p>How many threads have left phase B? </p>
 
-<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00100">100</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
+<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00097">97</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
 
 </div>
 </div>
@@ -818,7 +817,7 @@ Francesco Quaglia </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00087">87</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
+<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00085">85</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
 
 </div>
 </div>
@@ -840,7 +839,7 @@ Francesco Quaglia </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00085">85</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
+<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00083">83</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
 
 </div>
 </div>
@@ -862,7 +861,7 @@ Francesco Quaglia </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00086">86</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
+<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00084">84</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
 
 </div>
 </div>
@@ -886,7 +885,7 @@ Francesco Quaglia </dd></dl>
 
 <p>How many threads have left phase send? </p>
 
-<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00097">97</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
+<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00094">94</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
 
 </div>
 </div>
@@ -910,7 +909,7 @@ Francesco Quaglia </dd></dl>
 
 <p>To be used with CAS to determine who is starting the next GVT reduction phase. </p>
 
-<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00091">91</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
+<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00088">88</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
 
 </div>
 </div>
@@ -924,7 +923,7 @@ Francesco Quaglia </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00069">69</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
+<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00068">68</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
 
 </div>
 </div>
@@ -938,7 +937,7 @@ Francesco Quaglia </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00067">67</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
+<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00066">66</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
 
 </div>
 </div>
@@ -960,7 +959,7 @@ Francesco Quaglia </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00083">83</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
+<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00081">81</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
 
 </div>
 </div>
@@ -982,7 +981,7 @@ Francesco Quaglia </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00081">81</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
+<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00079">79</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
 
 </div>
 </div>
@@ -1004,7 +1003,7 @@ Francesco Quaglia </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00079">79</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
+<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00077">77</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
 
 </div>
 </div>
@@ -1027,7 +1026,7 @@ Francesco Quaglia </dd></dl>
 </div><div class="memdoc">
 <p>Keep track of the last computed gvt value. Its a per-thread variable to avoid synchronization on it, but eventually all threads write here the same exact value. The 'adopted_last_gvt' version is used to maintain the adopted gvt value in a temporary variable. It is then copied to last_gvt during the end phase, to avoid possible critical races when checking the termination upon reaching a certain simulation time value. </p>
 
-<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00110">110</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
+<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00107">107</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
 
 </div>
 </div>
@@ -1051,7 +1050,7 @@ Francesco Quaglia </dd></dl>
 
 <p>The local (per-thread) minimum. It's not TLS, rather an array, to allow reduction by master thread. </p>
 
-<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00122">122</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
+<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00119">119</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
 
 </div>
 </div>
@@ -1073,7 +1072,7 @@ Francesco Quaglia </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00124">124</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
+<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00121">121</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
 
 </div>
 </div>
@@ -1097,7 +1096,7 @@ Francesco Quaglia </dd></dl>
 
 <p>Per-thread GVT round counter. </p>
 
-<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00119">119</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
+<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00116">116</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
 
 </div>
 </div>
@@ -1119,7 +1118,7 @@ Francesco Quaglia </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00113">113</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
+<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00110">110</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
 
 </div>
 </div>
@@ -1143,7 +1142,7 @@ Francesco Quaglia </dd></dl>
 
 <p>What is my phase? All threads start in the initial phase. </p>
 
-<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00116">116</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
+<p>Definition at line <a class="el" href="gvt_2gvt_8c_source.html#l00113">113</a> of file <a class="el" href="gvt_2gvt_8c_source.html">gvt.c</a>.</p>
 
 </div>
 </div>

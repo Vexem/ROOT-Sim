@@ -155,9 +155,9 @@ Macros</h2></td></tr>
 <tr class="separator:aee868073c48626e64a0ab7eb5d45e10a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a84e5110d6ed1cc616eb22a497d684f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x86_8h.html#a2a84e5110d6ed1cc616eb22a497d684f">p_is_group2</a>(p)</td></tr>
 <tr class="separator:a2a84e5110d6ed1cc616eb22a497d684f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d29e175ee2272a9911bc21741795a3b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x86_8h.html#a6d29e175ee2272a9911bc21741795a3b">p_is_group3</a>(p)&#160;&#160;&#160;((p) == 0x66) /* opsize override */</td></tr>
+<tr class="memitem:a6d29e175ee2272a9911bc21741795a3b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x86_8h.html#a6d29e175ee2272a9911bc21741795a3b">p_is_group3</a>(p)&#160;&#160;&#160;((p) == 0x66)	/* opsize override */</td></tr>
 <tr class="separator:a6d29e175ee2272a9911bc21741795a3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23db14494726a4c4a909702a0cf32b29"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x86_8h.html#a23db14494726a4c4a909702a0cf32b29">p_is_group4</a>(p)&#160;&#160;&#160;((p) == 0x67) /* addr size override */</td></tr>
+<tr class="memitem:a23db14494726a4c4a909702a0cf32b29"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x86_8h.html#a23db14494726a4c4a909702a0cf32b29">p_is_group4</a>(p)&#160;&#160;&#160;((p) == 0x67)	/* addr size override */</td></tr>
 <tr class="separator:a23db14494726a4c4a909702a0cf32b29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad918d91a7e0780927723607fb60d2ed"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x86_8h.html#aad918d91a7e0780927723607fb60d2ed">is_prefix</a>(o)</td></tr>
 <tr class="separator:aad918d91a7e0780927723607fb60d2ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -538,11 +538,11 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">((((modrm) &amp; 0xC0) == 0x40) ? 1 \</div><div class="line">                   : ((((addr) == <a class="code" href="x86_8h.html#a89163aa2fe49907238034e3954daacdaacaadd71d361a7b55bae5ab125e2485f3">SIZE_16</a>) \</div><div class="line">                   &amp;&amp; ((((modrm) &amp; 0xC7) == 0x06) \</div><div class="line">                       || (((modrm) &amp; 0xC0) == 0x80))) ? 2 \</div><div class="line">                   : (((((addr) == <a class="code" href="x86_8h.html#a89163aa2fe49907238034e3954daacdaaf8c2bd7889de0704f869521c127f1749">SIZE_32</a>) || (addr) == <a class="code" href="x86_8h.html#a89163aa2fe49907238034e3954daacdaaa211aed09197a479f3e2a24f39295eed">SIZE_64</a>) \</div><div class="line">                      &amp;&amp; ((((modrm) &amp; 0xC7) == 0x05) \</div><div class="line">                      || (((modrm) &amp; 0xC0) == 0x80))) ? 4\</div><div class="line">                     : 0)))</div><div class="ttc" id="x86_8h_html_a89163aa2fe49907238034e3954daacdaaf8c2bd7889de0704f869521c127f1749"><div class="ttname"><a href="x86_8h.html#a89163aa2fe49907238034e3954daacdaaf8c2bd7889de0704f869521c127f1749">SIZE_32</a></div><div class="ttdef"><b>Definition:</b> <a href="x86_8h_source.html#l00317">x86.h:317</a></div></div>
-<div class="ttc" id="x86_8h_html_a89163aa2fe49907238034e3954daacdaacaadd71d361a7b55bae5ab125e2485f3"><div class="ttname"><a href="x86_8h.html#a89163aa2fe49907238034e3954daacdaacaadd71d361a7b55bae5ab125e2485f3">SIZE_16</a></div><div class="ttdef"><b>Definition:</b> <a href="x86_8h_source.html#l00316">x86.h:316</a></div></div>
-<div class="ttc" id="x86_8h_html_a89163aa2fe49907238034e3954daacdaaa211aed09197a479f3e2a24f39295eed"><div class="ttname"><a href="x86_8h.html#a89163aa2fe49907238034e3954daacdaaa211aed09197a479f3e2a24f39295eed">SIZE_64</a></div><div class="ttdef"><b>Definition:</b> <a href="x86_8h_source.html#l00318">x86.h:318</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line">((((modrm) &amp; 0xC0) == 0x40) ? 1 \</div><div class="line">                   : ((((addr) == <a class="code" href="x86_8h.html#a89163aa2fe49907238034e3954daacdaacaadd71d361a7b55bae5ab125e2485f3">SIZE_16</a>) \</div><div class="line">                   &amp;&amp; ((((modrm) &amp; 0xC7) == 0x06) \</div><div class="line">                       || (((modrm) &amp; 0xC0) == 0x80))) ? 2 \</div><div class="line">                   : (((((addr) == <a class="code" href="x86_8h.html#a89163aa2fe49907238034e3954daacdaaf8c2bd7889de0704f869521c127f1749">SIZE_32</a>) || (addr) == <a class="code" href="x86_8h.html#a89163aa2fe49907238034e3954daacdaaa211aed09197a479f3e2a24f39295eed">SIZE_64</a>) \</div><div class="line">                      &amp;&amp; ((((modrm) &amp; 0xC7) == 0x05) \</div><div class="line">                      || (((modrm) &amp; 0xC0) == 0x80))) ? 4\</div><div class="line">                     : 0)))</div><div class="ttc" id="x86_8h_html_a89163aa2fe49907238034e3954daacdaaf8c2bd7889de0704f869521c127f1749"><div class="ttname"><a href="x86_8h.html#a89163aa2fe49907238034e3954daacdaaf8c2bd7889de0704f869521c127f1749">SIZE_32</a></div><div class="ttdef"><b>Definition:</b> <a href="x86_8h_source.html#l00313">x86.h:313</a></div></div>
+<div class="ttc" id="x86_8h_html_a89163aa2fe49907238034e3954daacdaacaadd71d361a7b55bae5ab125e2485f3"><div class="ttname"><a href="x86_8h.html#a89163aa2fe49907238034e3954daacdaacaadd71d361a7b55bae5ab125e2485f3">SIZE_16</a></div><div class="ttdef"><b>Definition:</b> <a href="x86_8h_source.html#l00312">x86.h:312</a></div></div>
+<div class="ttc" id="x86_8h_html_a89163aa2fe49907238034e3954daacdaaa211aed09197a479f3e2a24f39295eed"><div class="ttname"><a href="x86_8h.html#a89163aa2fe49907238034e3954daacdaaa211aed09197a479f3e2a24f39295eed">SIZE_64</a></div><div class="ttdef"><b>Definition:</b> <a href="x86_8h_source.html#l00314">x86.h:314</a></div></div>
 </div><!-- fragment -->
-<p>Definition at line <a class="el" href="x86_8h_source.html#l00106">106</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
+<p>Definition at line <a class="el" href="x86_8h_source.html#l00103">103</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
 
 </div>
 </div>
@@ -559,20 +559,20 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">(((addr) == <a class="code" href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206af51a52fb05f15b11d2fb8a4314cfae1a">ADDR_C</a>)    \</div><div class="line">             || ((addr) == <a class="code" href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206a5c0fafcf16ce0d41c352dd9e72061eab">ADDR_D</a>) \</div><div class="line">             || ((addr) == <a class="code" href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206ab5cdf6b3b350599b6a440495a7b7d245">ADDR_E</a>) \</div><div class="line">             || ((addr) == <a class="code" href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206aab4b645c6647696cd043f218539b4903">ADDR_G</a>) \</div><div class="line">             || ((addr) == <a class="code" href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206a8d081fa9dd7a4ac142db3962a99421ab">ADDR_M</a>) \</div><div class="line">             || ((addr) == <a class="code" href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206ab327737a327e9653bd5638fe3904506f">ADDR_P</a>) \</div><div class="line">             || ((addr) == <a class="code" href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206a121fba6f3f3ce59f10bbd141474c138b">ADDR_Q</a>) \</div><div class="line">             || ((addr) == <a class="code" href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206a701f947ecd240545f7bb1809aeeaa391">ADDR_R</a>) \</div><div class="line">             || ((addr) == <a class="code" href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206aa1c58395aef152d640c47d6169e7cd68">ADDR_S</a>) \</div><div class="line">             || ((addr) == <a class="code" href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206ae50981a5f385ded1e4630f2ad7f932a5">ADDR_T</a>) \</div><div class="line">             || ((addr) == <a class="code" href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206a9c98c268aff8d6646af5a23fb7a33197">ADDR_V</a>) \</div><div class="line">             || ((addr) == <a class="code" href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206a7aac80f34637659a2da9dcc81cb96862">ADDR_W</a>))</div><div class="ttc" id="x86_8h_html_aa26d9fcba67ffc76d11c3638391d4206a7aac80f34637659a2da9dcc81cb96862"><div class="ttname"><a href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206a7aac80f34637659a2da9dcc81cb96862">ADDR_W</a></div><div class="ttdef"><b>Definition:</b> <a href="x86_8h_source.html#l00138">x86.h:138</a></div></div>
-<div class="ttc" id="x86_8h_html_aa26d9fcba67ffc76d11c3638391d4206a701f947ecd240545f7bb1809aeeaa391"><div class="ttname"><a href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206a701f947ecd240545f7bb1809aeeaa391">ADDR_R</a></div><div class="ttdef"><b>Definition:</b> <a href="x86_8h_source.html#l00133">x86.h:133</a></div></div>
-<div class="ttc" id="x86_8h_html_aa26d9fcba67ffc76d11c3638391d4206a8d081fa9dd7a4ac142db3962a99421ab"><div class="ttname"><a href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206a8d081fa9dd7a4ac142db3962a99421ab">ADDR_M</a></div><div class="ttdef"><b>Definition:</b> <a href="x86_8h_source.html#l00128">x86.h:128</a></div></div>
-<div class="ttc" id="x86_8h_html_aa26d9fcba67ffc76d11c3638391d4206aa1c58395aef152d640c47d6169e7cd68"><div class="ttname"><a href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206aa1c58395aef152d640c47d6169e7cd68">ADDR_S</a></div><div class="ttdef"><b>Definition:</b> <a href="x86_8h_source.html#l00134">x86.h:134</a></div></div>
-<div class="ttc" id="x86_8h_html_aa26d9fcba67ffc76d11c3638391d4206ab327737a327e9653bd5638fe3904506f"><div class="ttname"><a href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206ab327737a327e9653bd5638fe3904506f">ADDR_P</a></div><div class="ttdef"><b>Definition:</b> <a href="x86_8h_source.html#l00131">x86.h:131</a></div></div>
-<div class="ttc" id="x86_8h_html_aa26d9fcba67ffc76d11c3638391d4206af51a52fb05f15b11d2fb8a4314cfae1a"><div class="ttname"><a href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206af51a52fb05f15b11d2fb8a4314cfae1a">ADDR_C</a></div><div class="ttdef"><b>Definition:</b> <a href="x86_8h_source.html#l00118">x86.h:118</a></div></div>
-<div class="ttc" id="x86_8h_html_aa26d9fcba67ffc76d11c3638391d4206ab5cdf6b3b350599b6a440495a7b7d245"><div class="ttname"><a href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206ab5cdf6b3b350599b6a440495a7b7d245">ADDR_E</a></div><div class="ttdef"><b>Definition:</b> <a href="x86_8h_source.html#l00120">x86.h:120</a></div></div>
-<div class="ttc" id="x86_8h_html_aa26d9fcba67ffc76d11c3638391d4206a121fba6f3f3ce59f10bbd141474c138b"><div class="ttname"><a href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206a121fba6f3f3ce59f10bbd141474c138b">ADDR_Q</a></div><div class="ttdef"><b>Definition:</b> <a href="x86_8h_source.html#l00132">x86.h:132</a></div></div>
-<div class="ttc" id="x86_8h_html_aa26d9fcba67ffc76d11c3638391d4206aab4b645c6647696cd043f218539b4903"><div class="ttname"><a href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206aab4b645c6647696cd043f218539b4903">ADDR_G</a></div><div class="ttdef"><b>Definition:</b> <a href="x86_8h_source.html#l00125">x86.h:125</a></div></div>
-<div class="ttc" id="x86_8h_html_aa26d9fcba67ffc76d11c3638391d4206a5c0fafcf16ce0d41c352dd9e72061eab"><div class="ttname"><a href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206a5c0fafcf16ce0d41c352dd9e72061eab">ADDR_D</a></div><div class="ttdef"><b>Definition:</b> <a href="x86_8h_source.html#l00119">x86.h:119</a></div></div>
-<div class="ttc" id="x86_8h_html_aa26d9fcba67ffc76d11c3638391d4206a9c98c268aff8d6646af5a23fb7a33197"><div class="ttname"><a href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206a9c98c268aff8d6646af5a23fb7a33197">ADDR_V</a></div><div class="ttdef"><b>Definition:</b> <a href="x86_8h_source.html#l00137">x86.h:137</a></div></div>
-<div class="ttc" id="x86_8h_html_aa26d9fcba67ffc76d11c3638391d4206ae50981a5f385ded1e4630f2ad7f932a5"><div class="ttname"><a href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206ae50981a5f385ded1e4630f2ad7f932a5">ADDR_T</a></div><div class="ttdef"><b>Definition:</b> <a href="x86_8h_source.html#l00135">x86.h:135</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line">(((addr) == <a class="code" href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206af51a52fb05f15b11d2fb8a4314cfae1a">ADDR_C</a>)    \</div><div class="line">             || ((addr) == <a class="code" href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206a5c0fafcf16ce0d41c352dd9e72061eab">ADDR_D</a>) \</div><div class="line">             || ((addr) == <a class="code" href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206ab5cdf6b3b350599b6a440495a7b7d245">ADDR_E</a>) \</div><div class="line">             || ((addr) == <a class="code" href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206aab4b645c6647696cd043f218539b4903">ADDR_G</a>) \</div><div class="line">             || ((addr) == <a class="code" href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206a8d081fa9dd7a4ac142db3962a99421ab">ADDR_M</a>) \</div><div class="line">             || ((addr) == <a class="code" href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206ab327737a327e9653bd5638fe3904506f">ADDR_P</a>) \</div><div class="line">             || ((addr) == <a class="code" href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206a121fba6f3f3ce59f10bbd141474c138b">ADDR_Q</a>) \</div><div class="line">             || ((addr) == <a class="code" href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206a701f947ecd240545f7bb1809aeeaa391">ADDR_R</a>) \</div><div class="line">             || ((addr) == <a class="code" href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206aa1c58395aef152d640c47d6169e7cd68">ADDR_S</a>) \</div><div class="line">             || ((addr) == <a class="code" href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206ae50981a5f385ded1e4630f2ad7f932a5">ADDR_T</a>) \</div><div class="line">             || ((addr) == <a class="code" href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206a9c98c268aff8d6646af5a23fb7a33197">ADDR_V</a>) \</div><div class="line">             || ((addr) == <a class="code" href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206a7aac80f34637659a2da9dcc81cb96862">ADDR_W</a>))</div><div class="ttc" id="x86_8h_html_aa26d9fcba67ffc76d11c3638391d4206a7aac80f34637659a2da9dcc81cb96862"><div class="ttname"><a href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206a7aac80f34637659a2da9dcc81cb96862">ADDR_W</a></div><div class="ttdef"><b>Definition:</b> <a href="x86_8h_source.html#l00135">x86.h:135</a></div></div>
+<div class="ttc" id="x86_8h_html_aa26d9fcba67ffc76d11c3638391d4206a701f947ecd240545f7bb1809aeeaa391"><div class="ttname"><a href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206a701f947ecd240545f7bb1809aeeaa391">ADDR_R</a></div><div class="ttdef"><b>Definition:</b> <a href="x86_8h_source.html#l00130">x86.h:130</a></div></div>
+<div class="ttc" id="x86_8h_html_aa26d9fcba67ffc76d11c3638391d4206a8d081fa9dd7a4ac142db3962a99421ab"><div class="ttname"><a href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206a8d081fa9dd7a4ac142db3962a99421ab">ADDR_M</a></div><div class="ttdef"><b>Definition:</b> <a href="x86_8h_source.html#l00125">x86.h:125</a></div></div>
+<div class="ttc" id="x86_8h_html_aa26d9fcba67ffc76d11c3638391d4206aa1c58395aef152d640c47d6169e7cd68"><div class="ttname"><a href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206aa1c58395aef152d640c47d6169e7cd68">ADDR_S</a></div><div class="ttdef"><b>Definition:</b> <a href="x86_8h_source.html#l00131">x86.h:131</a></div></div>
+<div class="ttc" id="x86_8h_html_aa26d9fcba67ffc76d11c3638391d4206ab327737a327e9653bd5638fe3904506f"><div class="ttname"><a href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206ab327737a327e9653bd5638fe3904506f">ADDR_P</a></div><div class="ttdef"><b>Definition:</b> <a href="x86_8h_source.html#l00128">x86.h:128</a></div></div>
+<div class="ttc" id="x86_8h_html_aa26d9fcba67ffc76d11c3638391d4206af51a52fb05f15b11d2fb8a4314cfae1a"><div class="ttname"><a href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206af51a52fb05f15b11d2fb8a4314cfae1a">ADDR_C</a></div><div class="ttdef"><b>Definition:</b> <a href="x86_8h_source.html#l00115">x86.h:115</a></div></div>
+<div class="ttc" id="x86_8h_html_aa26d9fcba67ffc76d11c3638391d4206ab5cdf6b3b350599b6a440495a7b7d245"><div class="ttname"><a href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206ab5cdf6b3b350599b6a440495a7b7d245">ADDR_E</a></div><div class="ttdef"><b>Definition:</b> <a href="x86_8h_source.html#l00117">x86.h:117</a></div></div>
+<div class="ttc" id="x86_8h_html_aa26d9fcba67ffc76d11c3638391d4206a121fba6f3f3ce59f10bbd141474c138b"><div class="ttname"><a href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206a121fba6f3f3ce59f10bbd141474c138b">ADDR_Q</a></div><div class="ttdef"><b>Definition:</b> <a href="x86_8h_source.html#l00129">x86.h:129</a></div></div>
+<div class="ttc" id="x86_8h_html_aa26d9fcba67ffc76d11c3638391d4206aab4b645c6647696cd043f218539b4903"><div class="ttname"><a href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206aab4b645c6647696cd043f218539b4903">ADDR_G</a></div><div class="ttdef"><b>Definition:</b> <a href="x86_8h_source.html#l00122">x86.h:122</a></div></div>
+<div class="ttc" id="x86_8h_html_aa26d9fcba67ffc76d11c3638391d4206a5c0fafcf16ce0d41c352dd9e72061eab"><div class="ttname"><a href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206a5c0fafcf16ce0d41c352dd9e72061eab">ADDR_D</a></div><div class="ttdef"><b>Definition:</b> <a href="x86_8h_source.html#l00116">x86.h:116</a></div></div>
+<div class="ttc" id="x86_8h_html_aa26d9fcba67ffc76d11c3638391d4206a9c98c268aff8d6646af5a23fb7a33197"><div class="ttname"><a href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206a9c98c268aff8d6646af5a23fb7a33197">ADDR_V</a></div><div class="ttdef"><b>Definition:</b> <a href="x86_8h_source.html#l00134">x86.h:134</a></div></div>
+<div class="ttc" id="x86_8h_html_aa26d9fcba67ffc76d11c3638391d4206ae50981a5f385ded1e4630f2ad7f932a5"><div class="ttname"><a href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206ae50981a5f385ded1e4630f2ad7f932a5">ADDR_T</a></div><div class="ttdef"><b>Definition:</b> <a href="x86_8h_source.html#l00132">x86.h:132</a></div></div>
 </div><!-- fragment -->
-<p>Definition at line <a class="el" href="x86_8h_source.html#l00080">80</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
+<p>Definition at line <a class="el" href="x86_8h_source.html#l00077">77</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
 
 </div>
 </div>
@@ -599,10 +599,10 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">((((modrm) &amp; 0x07) == 0x04) \</div><div class="line">                  &amp;&amp; (((addr) == <a class="code" href="x86_8h.html#a89163aa2fe49907238034e3954daacdaaf8c2bd7889de0704f869521c127f1749">SIZE_32</a>) || (addr) == <a class="code" href="x86_8h.html#a89163aa2fe49907238034e3954daacdaaa211aed09197a479f3e2a24f39295eed">SIZE_64</a>) \</div><div class="line">                  &amp;&amp; (((modrm) &amp; 0xC0) != 0xC0))</div><div class="ttc" id="x86_8h_html_a89163aa2fe49907238034e3954daacdaaf8c2bd7889de0704f869521c127f1749"><div class="ttname"><a href="x86_8h.html#a89163aa2fe49907238034e3954daacdaaf8c2bd7889de0704f869521c127f1749">SIZE_32</a></div><div class="ttdef"><b>Definition:</b> <a href="x86_8h_source.html#l00317">x86.h:317</a></div></div>
-<div class="ttc" id="x86_8h_html_a89163aa2fe49907238034e3954daacdaaa211aed09197a479f3e2a24f39295eed"><div class="ttname"><a href="x86_8h.html#a89163aa2fe49907238034e3954daacdaaa211aed09197a479f3e2a24f39295eed">SIZE_64</a></div><div class="ttdef"><b>Definition:</b> <a href="x86_8h_source.html#l00318">x86.h:318</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line">((((modrm) &amp; 0x07) == 0x04) \</div><div class="line">                  &amp;&amp; (((addr) == <a class="code" href="x86_8h.html#a89163aa2fe49907238034e3954daacdaaf8c2bd7889de0704f869521c127f1749">SIZE_32</a>) || (addr) == <a class="code" href="x86_8h.html#a89163aa2fe49907238034e3954daacdaaa211aed09197a479f3e2a24f39295eed">SIZE_64</a>) \</div><div class="line">                  &amp;&amp; (((modrm) &amp; 0xC0) != 0xC0))</div><div class="ttc" id="x86_8h_html_a89163aa2fe49907238034e3954daacdaaf8c2bd7889de0704f869521c127f1749"><div class="ttname"><a href="x86_8h.html#a89163aa2fe49907238034e3954daacdaaf8c2bd7889de0704f869521c127f1749">SIZE_32</a></div><div class="ttdef"><b>Definition:</b> <a href="x86_8h_source.html#l00313">x86.h:313</a></div></div>
+<div class="ttc" id="x86_8h_html_a89163aa2fe49907238034e3954daacdaaa211aed09197a479f3e2a24f39295eed"><div class="ttname"><a href="x86_8h.html#a89163aa2fe49907238034e3954daacdaaa211aed09197a479f3e2a24f39295eed">SIZE_64</a></div><div class="ttdef"><b>Definition:</b> <a href="x86_8h_source.html#l00314">x86.h:314</a></div></div>
 </div><!-- fragment -->
-<p>Definition at line <a class="el" href="x86_8h_source.html#l00095">95</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
+<p>Definition at line <a class="el" href="x86_8h_source.html#l00092">92</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
 
 </div>
 </div>
@@ -620,7 +620,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="x86_8h_source.html#l00076">76</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
+<p>Definition at line <a class="el" href="x86_8h_source.html#l00074">74</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
 
 </div>
 </div>
@@ -638,7 +638,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="x86_8h_source.html#l00073">73</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
+<p>Definition at line <a class="el" href="x86_8h_source.html#l00071">71</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
 
 </div>
 </div>
@@ -723,7 +723,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">(((p) == 0xf0)     <span class="comment">/* lock */</span> \</div><div class="line">            || ((p) == 0xf2)  <span class="comment">/* repne/repnz */</span> \</div><div class="line">            || ((p) == 0xf3)) <span class="comment">/* rep/repe/repz */</span></div></div><!-- fragment -->
+<b>Value:</b><div class="fragment"><div class="line">(((p) == 0xf0)      <span class="comment">/* lock */</span> \</div><div class="line">            || ((p) == 0xf2)    <span class="comment">/* repne/repnz */</span> \</div><div class="line">            || ((p) == 0xf3))   <span class="comment">/* rep/repe/repz */</span></div></div><!-- fragment -->
 <p>Definition at line <a class="el" href="x86_8h_source.html#l00039">39</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
 
 </div>
@@ -741,7 +741,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">(((p) == 0x2e)     <span class="comment">/* CS override/branch not taken */</span> \</div><div class="line">            || ((p) == 0x36)  <span class="comment">/* SS override */</span> \</div><div class="line">            || ((p) == 0x3e)  <span class="comment">/* DS override/branch taken */</span> \</div><div class="line">            || ((p) == 0x26)  <span class="comment">/* ES override */</span> \</div><div class="line">            || ((p) == 0x64)  <span class="comment">/* FS override */</span> \</div><div class="line">            || ((p) == 0x65)) <span class="comment">/* GS override */</span></div></div><!-- fragment -->
+<b>Value:</b><div class="fragment"><div class="line">(((p) == 0x2e)      <span class="comment">/* CS override/branch not taken */</span> \</div><div class="line">            || ((p) == 0x36)    <span class="comment">/* SS override */</span> \</div><div class="line">            || ((p) == 0x3e)    <span class="comment">/* DS override/branch taken */</span> \</div><div class="line">            || ((p) == 0x26)    <span class="comment">/* ES override */</span> \</div><div class="line">            || ((p) == 0x64)    <span class="comment">/* FS override */</span> \</div><div class="line">            || ((p) == 0x65))   <span class="comment">/* GS override */</span></div></div><!-- fragment -->
 <p>Definition at line <a class="el" href="x86_8h_source.html#l00043">43</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
 
 </div>
@@ -755,7 +755,7 @@ Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">p</td><td>)</td>
-          <td>&#160;&#160;&#160;((p) == 0x66) /* opsize override */</td>
+          <td>&#160;&#160;&#160;((p) == 0x66)	/* opsize override */</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -773,7 +773,7 @@ Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">p</td><td>)</td>
-          <td>&#160;&#160;&#160;((p) == 0x67) /* addr size override */</td>
+          <td>&#160;&#160;&#160;((p) == 0x67)	/* addr size override */</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -796,7 +796,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="x86_8h_source.html#l00067">67</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
+<p>Definition at line <a class="el" href="x86_8h_source.html#l00066">66</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
 
 </div>
 </div>
@@ -814,7 +814,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="x86_8h_source.html#l00065">65</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
+<p>Definition at line <a class="el" href="x86_8h_source.html#l00064">64</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
 
 </div>
 </div>
@@ -832,7 +832,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="x86_8h_source.html#l00064">64</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
+<p>Definition at line <a class="el" href="x86_8h_source.html#l00063">63</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
 
 </div>
 </div>
@@ -850,7 +850,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="x86_8h_source.html#l00066">66</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
+<p>Definition at line <a class="el" href="x86_8h_source.html#l00065">65</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
 
 </div>
 </div>
@@ -865,7 +865,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="x86_8h_source.html#l00365">365</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
+<p>Definition at line <a class="el" href="x86_8h_source.html#l00359">359</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
 
 </div>
 </div>
@@ -879,7 +879,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="x86_8h_source.html#l00365">365</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
+<p>Definition at line <a class="el" href="x86_8h_source.html#l00359">359</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
 
 </div>
 </div>
@@ -1164,7 +1164,7 @@ Functions</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="x86_8h_source.html#l00115">115</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
+<p>Definition at line <a class="el" href="x86_8h_source.html#l00112">112</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
 
 </div>
 </div>
@@ -1188,7 +1188,7 @@ Functions</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="x86_8h_source.html#l00314">314</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
+<p>Definition at line <a class="el" href="x86_8h_source.html#l00310">310</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
 
 </div>
 </div>
@@ -1250,7 +1250,7 @@ Functions</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="x86_8h_source.html#l00287">287</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
+<p>Definition at line <a class="el" href="x86_8h_source.html#l00283">283</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
 
 </div>
 </div>
@@ -1276,7 +1276,7 @@ Functions</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="x86_8h_source.html#l00322">322</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
+<p>Definition at line <a class="el" href="x86_8h_source.html#l00318">318</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
 
 </div>
 </div>

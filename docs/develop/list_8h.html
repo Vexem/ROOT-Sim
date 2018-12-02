@@ -142,7 +142,7 @@ $(document).ready(function(){initNavTree('list_8h.html','');});
 <area shape="rect" id="node4" href="state_8c.html" title="The state module is responsible for managing LPs&#39; simulation states. In particular, it allows to take a snapshot, to restore a previous snapshot, and to silently re&#45;execute a portion of simulation events to bring a LP to a partiuclar LVT value for which no simulation state. " alt="" coords="192,421,355,477"/>
 <area shape="rect" id="node5" href="queues_8c.html" title="This module implements the event/message queues subsystem. " alt="" coords="3368,421,3531,477"/>
 <area shape="rect" id="node6" href="binding_8c.html" title="Implements load sharing rules for LPs among worker threads. " alt="" coords="5,421,168,477"/>
-<area shape="rect" id="node7" href="control_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/scheduler/control.c" alt="" coords="4005,421,4168,477"/>
+<area shape="rect" id="node7" href="control_8c.html" title="Processing Points for Control Messages. " alt="" coords="4005,421,4168,477"/>
 <area shape="rect" id="node8" href="process_8h.html" title="This header defines a LP control block, keeping information about both simulation state and execution..." alt="" coords="2356,109,2519,165"/>
 <area shape="rect" id="node27" href="scheduler_8c.html" title="Re&#45;entrant scheduler for LPs on worker threads. " alt="" coords="3179,421,3343,477"/>
 <area shape="rect" id="node9" href="asm__defines_8c.html" title="This file is not actually compiled into ROOT&#45;Sim. This is used by the build system to generate the as..." alt="" coords="1889,213,2052,269"/>
@@ -156,14 +156,14 @@ $(document).ready(function(){initNavTree('list_8h.html','');});
 <area shape="rect" id="node17" href="main_8c.html" title="This module contains the entry point for the simulator, and some core functions. " alt="" coords="565,421,728,477"/>
 <area shape="rect" id="node18" href="buddy_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/mm/buddy.c" alt="" coords="2263,213,2425,269"/>
 <area shape="rect" id="node19" href="checkpoints_8c.html" title="This module implements the routines to save and restore checkpoints, both full and incremental..." alt="" coords="2992,421,3155,477"/>
-<area shape="rect" id="node20" href="segment_8c.html" title="Segment Allocator. " alt="" coords="2449,213,2612,269"/>
+<area shape="rect" id="node20" href="segment_8c.html" title="Segment Allocator. This is the lowest&#45;level allocator in ROOT&#45;Sim. " alt="" coords="2449,213,2612,269"/>
 <area shape="rect" id="node21" href="queues_8h.html" title="Event and State queueing Subsystem main header. " alt="" coords="3267,213,3429,269"/>
 <area shape="rect" id="node22" href="scheduler_8h.html" title="Scheduling Subsystem main header file. Scheduler&#45;specific data structures and defines should be place..." alt="" coords="2337,317,2503,373"/>
 <area shape="rect" id="node26" href="process_8c.html" title="This header defines type&#45;safe operations for LP control block management. " alt="" coords="2619,421,2781,477"/>
 <area shape="rect" id="node28" href="stf_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/scheduler/stf.c" alt="" coords="3555,421,3717,477"/>
-<area shape="rect" id="node30" href="statistics_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/statistics/statistics.c" alt="" coords="2805,421,2968,477"/>
+<area shape="rect" id="node30" href="statistics_8c.html" title="State Management Subsystem. " alt="" coords="2805,421,2968,477"/>
 <area shape="rect" id="node31" href="stf_8h.html" title="Smallest Timestamp First scheduler main header. " alt="" coords="2737,213,2900,269"/>
-<area shape="rect" id="node32" href="statistics_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="1585,213,1748,269"/>
+<area shape="rect" id="node32" href="statistics_8h.html" title="State Management Subsystem. " alt="" coords="1585,213,1748,269"/>
 <area shape="rect" id="node23" href="topology_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/lib/topology.c" alt="" coords="2245,421,2408,477"/>
 <area shape="rect" id="node24" href="wrapper_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/lib&#45;wrapper/wrapper.c" alt="" coords="2432,421,2595,477"/>
 <area shape="rect" id="node25" href="dymelor_8c.html" title="LP&#39;s memory pre&#45;allocator. This layer stands below DyMeLoR, and is the connection point to the Linux ..." alt="" coords="1685,421,1848,477"/>
@@ -273,7 +273,7 @@ Typedefs</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">({\</div><div class="line">            char *__key_ptr = ((<span class="keywordtype">char</span> *)(data) + __key_position);\</div><div class="line">            double *__key_double_ptr = (<span class="keywordtype">double</span> *)__key_ptr;\</div><div class="line">            *__key_double_ptr;\</div><div class="line">              })</div></div><!-- fragment -->
 <p>This macro retrieves the key of a payload data structure given its offset, and casts the value to double. </p>
 
-<p>Definition at line <a class="el" href="list_8h_source.html#l00100">100</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
+<p>Definition at line <a class="el" href="list_8h_source.html#l00096">96</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
 
 </div>
 </div>
@@ -321,7 +321,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="list_8h_source.html#l00216">216</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
+<p>Definition at line <a class="el" href="list_8h_source.html#l00208">208</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
 
 </div>
 </div>
@@ -346,7 +346,7 @@ Typedefs</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="list_8h_source.html#l00112">112</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
+<p>Definition at line <a class="el" href="list_8h_source.html#l00108">108</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
 
 </div>
 </div>
@@ -371,7 +371,7 @@ Typedefs</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="list_8h_source.html#l00074">74</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
+<p>Definition at line <a class="el" href="list_8h_source.html#l00072">72</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
 
 </div>
 </div>
@@ -407,7 +407,7 @@ Typedefs</h2></td></tr>
 
 <p>Insert a new node in the list. </p>
 
-<p>Definition at line <a class="el" href="list_8h_source.html#l00167">167</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
+<p>Definition at line <a class="el" href="list_8h_source.html#l00161">161</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
 
 </div>
 </div>
@@ -438,7 +438,7 @@ Typedefs</h2></td></tr>
 <div class="ttc" id="structrootsim__list_html"><div class="ttname"><a href="structrootsim__list.html">rootsim_list</a></div><div class="ttdoc">This structure defines a generic list. </div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00038">list.h:38</a></div></div>
 <div class="ttc" id="structrootsim__list_html_a39e1193dd4b00d86fcbfef6ecd3fd1d2"><div class="ttname"><a href="structrootsim__list.html#a39e1193dd4b00d86fcbfef6ecd3fd1d2">rootsim_list::size</a></div><div class="ttdeci">size_t size</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00039">list.h:39</a></div></div>
 </div><!-- fragment -->
-<p>Definition at line <a class="el" href="list_8h_source.html#l00141">141</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
+<p>Definition at line <a class="el" href="list_8h_source.html#l00135">135</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
 
 </div>
 </div>
@@ -469,7 +469,7 @@ Typedefs</h2></td></tr>
 <div class="ttc" id="structrootsim__list_html"><div class="ttname"><a href="structrootsim__list.html">rootsim_list</a></div><div class="ttdoc">This structure defines a generic list. </div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00038">list.h:38</a></div></div>
 <div class="ttc" id="structrootsim__list_html_a39e1193dd4b00d86fcbfef6ecd3fd1d2"><div class="ttname"><a href="structrootsim__list.html#a39e1193dd4b00d86fcbfef6ecd3fd1d2">rootsim_list::size</a></div><div class="ttdeci">size_t size</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00039">list.h:39</a></div></div>
 </div><!-- fragment -->
-<p>Definition at line <a class="el" href="list_8h_source.html#l00115">115</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
+<p>Definition at line <a class="el" href="list_8h_source.html#l00110">110</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
 
 </div>
 </div>
@@ -494,7 +494,7 @@ Typedefs</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="list_8h_source.html#l00089">89</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
+<p>Definition at line <a class="el" href="list_8h_source.html#l00086">86</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
 
 </div>
 </div>
@@ -516,7 +516,7 @@ Typedefs</h2></td></tr>
 <div class="ttc" id="list_8h_html_a0da4b86f76acd6d3f307717f844b61d2"><div class="ttname"><a href="list_8h.html#a0da4b86f76acd6d3f307717f844b61d2">list</a></div><div class="ttdeci">#define list(type)</div><div class="ttdoc">Declare a &quot;typed&quot; list. This is a pointer to type, but the variable will instead reference a struct r...</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00049">list.h:49</a></div></div>
 <div class="ttc" id="structrootsim__list_html"><div class="ttname"><a href="structrootsim__list.html">rootsim_list</a></div><div class="ttdoc">This structure defines a generic list. </div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00038">list.h:38</a></div></div>
 </div><!-- fragment -->
-<p>Definition at line <a class="el" href="list_8h_source.html#l00252">252</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
+<p>Definition at line <a class="el" href="list_8h_source.html#l00241">241</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
 
 </div>
 </div>
@@ -541,7 +541,7 @@ Typedefs</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="list_8h_source.html#l00097">97</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
+<p>Definition at line <a class="el" href="list_8h_source.html#l00093">93</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
 
 </div>
 </div>
@@ -559,7 +559,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="list_8h_source.html#l00311">311</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
+<p>Definition at line <a class="el" href="list_8h_source.html#l00295">295</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
 
 </div>
 </div>
@@ -577,7 +577,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="list_8h_source.html#l00066">66</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
+<p>Definition at line <a class="el" href="list_8h_source.html#l00065">65</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
 
 </div>
 </div>
@@ -602,7 +602,7 @@ Typedefs</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="list_8h_source.html#l00081">81</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
+<p>Definition at line <a class="el" href="list_8h_source.html#l00079">79</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
 
 </div>
 </div>
@@ -645,11 +645,11 @@ Typedefs</h2></td></tr>
 <div class="ttc" id="list_8h_html_a0da4b86f76acd6d3f307717f844b61d2"><div class="ttname"><a href="list_8h.html#a0da4b86f76acd6d3f307717f844b61d2">list</a></div><div class="ttdeci">#define list(type)</div><div class="ttdoc">Declare a &quot;typed&quot; list. This is a pointer to type, but the variable will instead reference a struct r...</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00049">list.h:49</a></div></div>
 <div class="ttc" id="list_8h_html_a9461ad805b46f1975bbe62b43dbadfcf"><div class="ttname"><a href="list_8h.html#a9461ad805b46f1975bbe62b43dbadfcf">my_offsetof</a></div><div class="ttdeci">#define my_offsetof(st, m)</div><div class="ttdoc">This macro is a slightly-different implementation of the standard offsetof macro. ...</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00046">list.h:46</a></div></div>
 <div class="ttc" id="structrootsim__list_html"><div class="ttname"><a href="structrootsim__list.html">rootsim_list</a></div><div class="ttdoc">This structure defines a generic list. </div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00038">list.h:38</a></div></div>
-<div class="ttc" id="list_8h_html_a038ae97b49e1583a702de3823af01132"><div class="ttname"><a href="list_8h.html#a038ae97b49e1583a702de3823af01132">get_key</a></div><div class="ttdeci">#define get_key(data)</div><div class="ttdoc">This macro retrieves the key of a payload data structure given its offset, and casts the value to dou...</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00100">list.h:100</a></div></div>
+<div class="ttc" id="list_8h_html_a038ae97b49e1583a702de3823af01132"><div class="ttname"><a href="list_8h.html#a038ae97b49e1583a702de3823af01132">get_key</a></div><div class="ttdeci">#define get_key(data)</div><div class="ttdoc">This macro retrieves the key of a payload data structure given its offset, and casts the value to dou...</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00096">list.h:96</a></div></div>
 </div><!-- fragment -->
 <p>Truncate a list up to a certain point, starting from the head. </p>
 
-<p>Definition at line <a class="el" href="list_8h_source.html#l00281">281</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
+<p>Definition at line <a class="el" href="list_8h_source.html#l00266">266</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
 
 </div>
 </div>
@@ -696,10 +696,10 @@ Typedefs</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">(type *)({ \</div><div class="line">                void *__lmptr; \</div><div class="line">                __lmptr = (<span class="keywordtype">void</span> *)<a class="code" href="dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b">rsalloc</a>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structrootsim__list.html">rootsim_list</a>)); \</div><div class="line">                bzero(__lmptr, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structrootsim__list.html">rootsim_list</a>));\</div><div class="line">                __lmptr;\</div><div class="line">            })</div><div class="ttc" id="dymelor_8h_html_a9e80751b3934b0cd4411695f6743016b"><div class="ttname"><a href="dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b">rsalloc</a></div><div class="ttdeci">void * rsalloc(size_t)</div><div class="ttdef"><b>Definition:</b> <a href="platform_8c_source.html#l00038">platform.c:38</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line">(type *)({ \</div><div class="line">                void *__lmptr; \</div><div class="line">                __lmptr = (<span class="keywordtype">void</span> *)<a class="code" href="dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b">rsalloc</a>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structrootsim__list.html">rootsim_list</a>)); \</div><div class="line">                bzero(__lmptr, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structrootsim__list.html">rootsim_list</a>));\</div><div class="line">                __lmptr;\</div><div class="line">            })</div><div class="ttc" id="dymelor_8h_html_a9e80751b3934b0cd4411695f6743016b"><div class="ttname"><a href="dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b">rsalloc</a></div><div class="ttdeci">void * rsalloc(size_t)</div><div class="ttdef"><b>Definition:</b> <a href="platform_8c_source.html#l00037">platform.c:37</a></div></div>
 <div class="ttc" id="structrootsim__list_html"><div class="ttname"><a href="structrootsim__list.html">rootsim_list</a></div><div class="ttdoc">This structure defines a generic list. </div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00038">list.h:38</a></div></div>
 </div><!-- fragment --><p>This macro allocates a struct <a class="el" href="structrootsim__list.html" title="This structure defines a generic list. ">rootsim_list</a> object and cast it to the type pointer. It can be used to mimic the C++ syntax of templated lists, like: </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;list(int) = new_list(int);</div></div><!-- fragment --> 
-<p>Definition at line <a class="el" href="list_8h_source.html#l00058">58</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
+<p>Definition at line <a class="el" href="list_8h_source.html#l00057">57</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
 
 </div>
 </div>

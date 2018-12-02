@@ -9,18 +9,18 @@
 <area shape="rect" id="node25" href="$binding_8h.html" title="Implements load sharing rules for LPs among worker threads. " alt="" coords="2043,109,2189,136"/>
 <area shape="rect" id="node26" href="$process_8h.html" title="This header defines a LP control block, keeping information about both simulation state and execution..." alt="" coords="1141,259,1291,285"/>
 <area shape="rect" id="node27" href="$state_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="313,512,410,539"/>
-<area shape="rect" id="node28" href="$mm_8h.html" title="mm/mm.h" alt="" coords="1259,348,1349,375"/>
+<area shape="rect" id="node28" href="$mm_8h.html" title="Memory Manager main header. " alt="" coords="1259,348,1349,375"/>
 <area shape="rect" id="node35" href="$communication_8h.html" title="This is the main header file, containing all data structures and defines used by the communication su..." alt="" coords="578,348,814,375"/>
 <area shape="rect" id="node36" href="$cross__state__manager_8h.html" title="This is the main header for the Linux Kernel Module which implements per&#45;kernel&#45;thread different page..." alt="" coords="1424,333,1589,389"/>
 <area shape="rect" id="node38" href="$scheduler_8h.html" title="Scheduling Subsystem main header file. Scheduler&#45;specific data structures and defines should be place..." alt="" coords="802,109,963,136"/>
 <area shape="rect" id="node40" href="$stf_8h.html" title="Smallest Timestamp First scheduler main header. " alt="" coords="648,184,763,211"/>
 <area shape="rect" id="node41" href="$init_8h.html" title="This module implements the simulator initialization routines. " alt="" coords="1248,109,1333,136"/>
-<area shape="rect" id="node42" href="$statistics_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="1248,184,1400,211"/>
+<area shape="rect" id="node42" href="$statistics_8h.html" title="State Management Subsystem. " alt="" coords="1248,184,1400,211"/>
 <area shape="rect" id="node43" href="$gvt_2gvt_8h.html" title="This header defines all the Global Virtual Time symbols needed by the platform. The current implement..." alt="" coords="94,437,173,464"/>
 <area shape="rect" id="node44" href="$xxhash_8h.html" title="queues/xxhash.h" alt="" coords="2213,109,2344,136"/>
 <area shape="rect" id="node12" href="$ROOT-Sim_8h.html" title="This header defines all the symbols which are needed to develop a Model to be simulated on top of ROO..." alt="" coords="491,661,589,688"/>
 <area shape="rect" id="node19" href="$numerical_8h.html" title="This header is used to define symbols which must be accessible by the simulator but not by the applic..." alt="" coords="765,661,880,688"/>
-<area shape="rect" id="node34" href="$ecs_8h.html" title="mm/ecs.h" alt="" coords="1097,348,1183,375"/>
+<area shape="rect" id="node34" href="$ecs_8h.html" title="Event Cross State Synchronization. This module implements the userspace handler of the artificially i..." alt="" coords="1097,348,1183,375"/>
 <area shape="rect" id="node31" href="$dymelor_8h.html" title="This is the Memory Management Subsystem main header file. " alt="" coords="1133,437,1248,464"/>
 <area shape="rect" id="node32" href="$bitmap_8h.html" title="This header implements a minimal bitmap data type. " alt="" coords="975,512,1121,539"/>
 <area shape="rect" id="node39" href="$queues_8h.html" title="Event and State queueing Subsystem main header. " alt="" coords="939,184,1071,211"/>

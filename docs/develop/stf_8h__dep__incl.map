@@ -16,9 +16,9 @@
 <area shape="rect" id="node16" href="$state_8c.html" title="The state module is responsible for managing LPs&#39; simulation states. In particular, it allows to take a snapshot, to restore a previous snapshot, and to silently re&#45;execute a portion of simulation events to bring a LP to a partiuclar LVT value for which no simulation state. " alt="" coords="2510,213,2673,269"/>
 <area shape="rect" id="node17" href="$queues_8c.html" title="This module implements the event/message queues subsystem. " alt="" coords="2697,213,2859,269"/>
 <area shape="rect" id="node18" href="$binding_8c.html" title="Implements load sharing rules for LPs among worker threads. " alt="" coords="2883,213,3046,269"/>
-<area shape="rect" id="node19" href="$control_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/scheduler/control.c" alt="" coords="3070,213,3233,269"/>
+<area shape="rect" id="node19" href="$control_8c.html" title="Processing Points for Control Messages. " alt="" coords="3070,213,3233,269"/>
 <area shape="rect" id="node20" href="$process_8c.html" title="This header defines type&#45;safe operations for LP control block management. " alt="" coords="3257,213,3419,269"/>
 <area shape="rect" id="node21" href="$stf_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/scheduler/stf.c" alt="" coords="3443,213,3606,269"/>
 <area shape="rect" id="node22" href="$serial_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/serial/serial.c" alt="" coords="3630,213,3793,269"/>
-<area shape="rect" id="node23" href="$statistics_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/statistics/statistics.c" alt="" coords="3817,213,3979,269"/>
+<area shape="rect" id="node23" href="$statistics_8c.html" title="State Management Subsystem. " alt="" coords="3817,213,3979,269"/>
 </map>

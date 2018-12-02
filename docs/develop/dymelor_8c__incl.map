@@ -1,12 +1,12 @@
 <map id="/home/travis/build/HPDCS/ROOT&#45;Sim/src/mm/dymelor.c" name="/home/travis/build/HPDCS/ROOT&#45;Sim/src/mm/dymelor.c">
 <area shape="rect" id="node2" href="$init_8h.html" title="This module implements the simulator initialization routines. " alt="" coords="936,109,1021,136"/>
-<area shape="rect" id="node21" href="$mm_8h.html" title="mm/mm.h" alt="" coords="269,348,360,375"/>
+<area shape="rect" id="node21" href="$mm_8h.html" title="Memory Manager main header. " alt="" coords="269,348,360,375"/>
 <area shape="rect" id="node39" href="$scheduler_8h.html" title="Scheduling Subsystem main header file. Scheduler&#45;specific data structures and defines should be place..." alt="" coords="646,109,807,136"/>
-<area shape="rect" id="node3" href="$statistics_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="1007,184,1159,211"/>
+<area shape="rect" id="node3" href="$statistics_8h.html" title="State Management Subsystem. " alt="" coords="1007,184,1159,211"/>
 <area shape="rect" id="node4" href="$process_8h.html" title="This header defines a LP control block, keeping information about both simulation state and execution..." alt="" coords="850,259,1001,285"/>
 <area shape="rect" id="node6" href="$state_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="1030,512,1127,539"/>
 <area shape="rect" id="node18" href="$numerical_8h.html" title="This header is used to define symbols which must be accessible by the simulator but not by the applic..." alt="" coords="1068,661,1183,688"/>
-<area shape="rect" id="node30" href="$ecs_8h.html" title="mm/ecs.h" alt="" coords="801,348,887,375"/>
+<area shape="rect" id="node30" href="$ecs_8h.html" title="Event Cross State Synchronization. This module implements the userspace handler of the artificially i..." alt="" coords="801,348,887,375"/>
 <area shape="rect" id="node31" href="$list_8h.html" title="This header defines macros for accessing the general&#45;purpose list implementation used in the simulato..." alt="" coords="1261,661,1381,688"/>
 <area shape="rect" id="node34" href="$msgchannel_8h.html" title="This module implements an (M, 1) channel to transfer message pointers. " alt="" coords="826,512,1006,539"/>
 <area shape="rect" id="node35" href="$ult_8h.html" title="The User&#45;Level Thread module allows the creation/scheduling of a user&#45;level thread in an architecture..." alt="" coords="384,348,467,375"/>

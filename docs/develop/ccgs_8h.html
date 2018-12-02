@@ -106,16 +106,12 @@ $(document).ready(function(){initNavTree('ccgs_8h.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">ccgs.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>Consistent and Committed Global State (CCGS) is a subsystem that (poeriodically) recomputes a global state on which the LPs can inspect the simulation trajectory and determine whether the simulation can stop, by relying on the OnGVT() callback.  
-<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="state_8h_source.html">mm/state.h</a>&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for ccgs.h:</div>
@@ -149,11 +145,6 @@ $(document).ready(function(){initNavTree('ccgs_8h.html','');});
 </div>
 <p><a href="ccgs_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:a77445331c93e0decf349559d2a0f33de"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ccgs_8h.html#a77445331c93e0decf349559d2a0f33de">__CCGS_H</a></td></tr>
-<tr class="separator:a77445331c93e0decf349559d2a0f33de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr class="memitem:abc6126af1d45847bc59afa0aa3216b04"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="ccgs_8h.html#abc6126af1d45847bc59afa0aa3216b04a3cf0059ba90bb550100468d3be031ae8">CKTRM_INVALID</a> = 0, 
@@ -171,33 +162,6 @@ Functions</h2></td></tr>
 <tr class="memitem:af8c1dd6d3ab2078085039fec6c7b0d9f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ccgs_8h.html#af8c1dd6d3ab2078085039fec6c7b0d9f">ccgs_compute_snapshot</a> (<a class="el" href="state_8h.html#a18331b6247faf186c17ea75b89b30651">state_t</a> *time_barrier_pointer[], <a class="el" href="ROOT-Sim_8h.html#a8f79ad6880e99acb4edd079069847d9d">simtime_t</a> gvt)</td></tr>
 <tr class="separator:af8c1dd6d3ab2078085039fec6c7b0d9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Consistent and Committed Global State (CCGS) is a subsystem that (poeriodically) recomputes a global state on which the LPs can inspect the simulation trajectory and determine whether the simulation can stop, by relying on the OnGVT() callback. </p>
-<p>Copyright (C) 2008-2018 HPDCS Group <a href="http://www.dis.uniroma1.it/~hpdcs">http://www.dis.uniroma1.it/~hpdcs</a></p>
-<p>This file is part of ROOT-Sim (ROme OpTimistic Simulator).</p>
-<p>ROOT-Sim is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; only version 3 of the License applies.</p>
-<p>ROOT-Sim is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
-<p>You should have received a copy of the GNU General Public License along with ROOT-Sim; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA</p>
-<dl class="section author"><dt>Author</dt><dd>Francesco Quaglia </dd>
-<dd>
-Alessandro Pellegrini </dd></dl>
-
-<p>Definition in file <a class="el" href="ccgs_8h_source.html">ccgs.h</a>.</p>
-</div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a class="anchor" id="a77445331c93e0decf349559d2a0f33de"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define __CCGS_H</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="ccgs_8h_source.html#l00030">30</a> of file <a class="el" href="ccgs_8h_source.html">ccgs.h</a>.</p>
-
-</div>
-</div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a class="anchor" id="abc6126af1d45847bc59afa0aa3216b04"></a>
 <div class="memitem">
@@ -220,7 +184,7 @@ Alessandro Pellegrini </dd></dl>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="ccgs_8h_source.html#l00032">32</a> of file <a class="el" href="ccgs_8h_source.html">ccgs.h</a>.</p>
+<p>Definition at line <a class="el" href="ccgs_8h_source.html#l00034">34</a> of file <a class="el" href="ccgs_8h_source.html">ccgs.h</a>.</p>
 
 </div>
 </div>
@@ -289,9 +253,6 @@ Alessandro Pellegrini </dd></dl>
       </table>
 </div><div class="memdoc">
 <p>This function rebuilds a simulation state aligned to the new GVT for every LP. In this way, each LP is asked (via the OnGVT() callback) to check whether the simulation can terminate. Two different execution modes are available for this function, depending on the CCGS level in rootsim_config: committed and consistent. The committed version passes to the simulation model for validation the first simulation state that is found committed before the GVT commitment horizon. Nevertheless, two states passed to two different LPs can be associated with different timestamps. Running this function in consistent state, realignes the state of all LPs to the same simulation time, namely the GVT. This allows all LPs to agree on a consistent simulation time for termination detection. This induces, of course, an additional overhead, because the runtime environment has to reprocess in silent execution multiple events.</p>
-<dl class="section author"><dt>Author</dt><dd>Francesco Quaglia </dd>
-<dd>
-Alessandro Pellegrini</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">time_barrier_pointer</td><td>An array containing the time barrier states of the LPs as computed by the GVT subsystem </td></tr>
@@ -300,7 +261,7 @@ Alessandro Pellegrini</dd></dl>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="ccgs_8c_source.html#l00105">105</a> of file <a class="el" href="ccgs_8c_source.html">ccgs.c</a>.</p>
+<p>Definition at line <a class="el" href="ccgs_8c_source.html#l00102">102</a> of file <a class="el" href="ccgs_8c_source.html">ccgs.c</a>.</p>
 
 <p><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>

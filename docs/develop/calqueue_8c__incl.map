@@ -1,7 +1,7 @@
 <map id="/home/travis/build/HPDCS/ROOT&#45;Sim/src/datatypes/calqueue.c" name="/home/travis/build/HPDCS/ROOT&#45;Sim/src/datatypes/calqueue.c">
 <area shape="rect" id="node9" href="$core_8h.html" title="This header defines all the shared symbols which are needed by different subsystems. " alt="" coords="709,333,803,360"/>
-<area shape="rect" id="node18" href="$calqueue_8h.html" title="datatypes/calqueue.h" alt="" coords="1341,109,1501,136"/>
-<area shape="rect" id="node19" href="$mm_8h.html" title="mm/mm.h" alt="" coords="692,109,783,136"/>
+<area shape="rect" id="node18" href="$calqueue_8h.html" title="A Calendar Queue Implementation. " alt="" coords="1341,109,1501,136"/>
+<area shape="rect" id="node19" href="$mm_8h.html" title="Memory Manager main header. " alt="" coords="692,109,783,136"/>
 <area shape="rect" id="node10" href="$ROOT-Sim_8h.html" title="This header defines all the symbols which are needed to develop a Model to be simulated on top of ROO..." alt="" coords="645,408,744,435"/>
 <area shape="rect" id="node15" href="$numerical_8h.html" title="This header is used to define symbols which must be accessible by the simulator but not by the applic..." alt="" coords="901,408,1016,435"/>
 <area shape="rect" id="node16" href="$thread_8h.html" title="This module implements Kernel Level Thread supports. " alt="" coords="769,408,877,435"/>

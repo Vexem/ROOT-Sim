@@ -114,6 +114,9 @@ $(document).ready(function(){initNavTree('ecs_8h.html','');});
 <div class="title">ecs.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Event Cross State Synchronization. This module implements the userspace handler of the artificially induced memory faults to implement transparent distributed memory.  
+<a href="#details">More...</a></p>
 <div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> This graph shows which files directly or indirectly include this file:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -122,8 +125,8 @@ $(document).ready(function(){initNavTree('ecs_8h.html','');});
 <div class="center"><img src="ecs_8h__dep__incl.png" border="0" usemap="#_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2mm_2ecs_8hdep" alt=""/></div>
 <map name="_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2mm_2ecs_8hdep" id="_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2mm_2ecs_8hdep">
 <area shape="rect" id="node2" href="init_8c.html" title="This module implements the simulator initialization routines. " alt="" coords="4005,421,4168,477"/>
-<area shape="rect" id="node3" href="segment_8c.html" title="Segment Allocator. " alt="" coords="881,213,1044,269"/>
-<area shape="rect" id="node4" href="control_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/scheduler/control.c" alt="" coords="5,421,168,477"/>
+<area shape="rect" id="node3" href="segment_8c.html" title="Segment Allocator. This is the lowest&#45;level allocator in ROOT&#45;Sim. " alt="" coords="881,213,1044,269"/>
+<area shape="rect" id="node4" href="control_8c.html" title="Processing Points for Control Messages. " alt="" coords="5,421,168,477"/>
 <area shape="rect" id="node5" href="process_8h.html" title="This header defines a LP control block, keeping information about both simulation state and execution..." alt="" coords="2179,109,2341,165"/>
 <area shape="rect" id="node6" href="asm__defines_8c.html" title="This file is not actually compiled into ROOT&#45;Sim. This is used by the build system to generate the as..." alt="" coords="3472,213,3635,269"/>
 <area shape="rect" id="node7" href="ult_8c.html" title="The User&#45;Level Thread module allows the creation/scheduling of a user&#45;level thread in an architecture..." alt="" coords="3760,213,3923,269"/>
@@ -144,9 +147,9 @@ $(document).ready(function(){initNavTree('ecs_8h.html','');});
 <area shape="rect" id="node25" href="process_8c.html" title="This header defines type&#45;safe operations for LP control block management. " alt="" coords="1389,421,1552,477"/>
 <area shape="rect" id="node26" href="scheduler_8c.html" title="Re&#45;entrant scheduler for LPs on worker threads. " alt="" coords="3817,421,3981,477"/>
 <area shape="rect" id="node27" href="stf_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/scheduler/stf.c" alt="" coords="192,421,355,477"/>
-<area shape="rect" id="node29" href="statistics_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/statistics/statistics.c" alt="" coords="3256,421,3419,477"/>
+<area shape="rect" id="node29" href="statistics_8c.html" title="State Management Subsystem. " alt="" coords="3256,421,3419,477"/>
 <area shape="rect" id="node30" href="stf_8h.html" title="Smallest Timestamp First scheduler main header. " alt="" coords="3219,213,3381,269"/>
-<area shape="rect" id="node31" href="statistics_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="2556,213,2719,269"/>
+<area shape="rect" id="node31" href="statistics_8h.html" title="State Management Subsystem. " alt="" coords="2556,213,2719,269"/>
 <area shape="rect" id="node21" href="topology_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/lib/topology.c" alt="" coords="1576,421,1739,477"/>
 <area shape="rect" id="node22" href="wrapper_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/lib&#45;wrapper/wrapper.c" alt="" coords="1763,421,1925,477"/>
 <area shape="rect" id="node23" href="dymelor_8c.html" title="LP&#39;s memory pre&#45;allocator. This layer stands below DyMeLoR, and is the connection point to the Linux ..." alt="" coords="2136,421,2299,477"/>
@@ -194,7 +197,21 @@ Functions</h2></td></tr>
 <tr class="memitem:a013196c115e5c16f8688841e31e5285f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ecs_8h.html#a013196c115e5c16f8688841e31e5285f">unblock_synchronized_objects</a> (<a class="el" href="core_8h.html#ac429e0f45cd37f4422e0d0c6be50f4b9">LID_t</a> lid)</td></tr>
 <tr class="separator:a013196c115e5c16f8688841e31e5285f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Event Cross State Synchronization. This module implements the userspace handler of the artificially induced memory faults to implement transparent distributed memory. </p>
+<p>Copyright (C) 2008-2018 HPDCS Group <a href="http://www.dis.uniroma1.it/~hpdcs">http://www.dis.uniroma1.it/~hpdcs</a></p>
+<p>This file is part of ROOT-Sim (ROme OpTimistic Simulator).</p>
+<p>ROOT-Sim is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; only version 3 of the License applies.</p>
+<p>ROOT-Sim is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+<p>You should have received a copy of the GNU General Public License along with ROOT-Sim; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA</p>
+<dl class="section author"><dt>Author</dt><dd>Alessandro Pellegrini </dd>
+<dd>
+Matteo Principe </dd>
+<dd>
+Francesco Quaglia </dd></dl>
+
+<p>Definition in file <a class="el" href="ecs_8h_source.html">ecs.h</a>.</p>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a class="anchor" id="a3205955a52a4a190f838263621a8e507"></a>
 <div class="memitem">
 <div class="memproto">
@@ -208,7 +225,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ecs_8h_source.html#l00026">26</a> of file <a class="el" href="ecs_8h_source.html">ecs.h</a>.</p>
+<p>Definition at line <a class="el" href="ecs_8h_source.html#l00051">51</a> of file <a class="el" href="ecs_8h_source.html">ecs.h</a>.</p>
 
 </div>
 </div>

@@ -1,5 +1,5 @@
 <map id="find_kernel_by_gid" name="find_kernel_by_gid">
-<area shape="rect" id="node2" href="$communication_8h.html#ae78d99ec41f43bbe641c00f1cb39d54c" title="which_slab_to_use" alt="" coords="192,23,332,50"/>
+<area shape="rect" id="node2" href="$communication_8c.html#ae6b96249d35969d688d0d84209919c8f" title="which_slab_to_use" alt="" coords="192,23,332,50"/>
 <area shape="rect" id="node21" href="$communication_8h.html#ab5250867c0edfc326732c059b0c0c3b5" title="Send" alt="" coords="396,74,451,101"/>
 <area shape="rect" id="node23" href="$process_8h.html#ad58c55ea23fdc3d938b57135b6116feb" title="initialize_lps" alt="" coords="213,226,311,253"/>
 <area shape="rect" id="node3" href="$communication_8h.html#a323ad017762155352c38983e67e8adeb" title="msg_release" alt="" coords="779,11,883,38"/>

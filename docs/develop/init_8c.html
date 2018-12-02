@@ -155,14 +155,14 @@ $(document).ready(function(){initNavTree('init_8c.html','');});
 <area shape="rect" id="node18" href="core_8h.html" title="This header defines all the shared symbols which are needed by different subsystems. " alt="" coords="1155,587,1249,613"/>
 <area shape="rect" id="node21" href="numerical_8h.html" title="This header is used to define symbols which must be accessible by the simulator but not by the applic..." alt="" coords="526,661,641,688"/>
 <area shape="rect" id="node22" href="init_8h.html" title="This module implements the simulator initialization routines. " alt="" coords="819,109,905,136"/>
-<area shape="rect" id="node23" href="statistics_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="617,184,769,211"/>
+<area shape="rect" id="node23" href="statistics_8h.html" title="State Management Subsystem. " alt="" coords="617,184,769,211"/>
 <area shape="rect" id="node24" href="process_8h.html" title="This header defines a LP control block, keeping information about both simulation state and execution..." alt="" coords="844,259,995,285"/>
 <area shape="rect" id="node25" href="state_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="1292,512,1389,539"/>
-<area shape="rect" id="node26" href="mm_8h.html" title="mm/mm.h" alt="" coords="1402,348,1493,375"/>
+<area shape="rect" id="node26" href="mm_8h.html" title="Memory Manager main header. " alt="" coords="1402,348,1493,375"/>
 <area shape="rect" id="node30" href="bitmap_8h.html" title="This header implements a minimal bitmap data type. " alt="" coords="1973,512,2119,539"/>
-<area shape="rect" id="node35" href="ecs_8h.html" title="mm/ecs.h" alt="" coords="1165,348,1252,375"/>
+<area shape="rect" id="node35" href="ecs_8h.html" title="Event Cross State Synchronization. This module implements the userspace handler of the artificially i..." alt="" coords="1165,348,1252,375"/>
 <area shape="rect" id="node43" href="gvt_2gvt_8h.html" title="This header defines all the Global Virtual Time symbols needed by the platform. The current implement..." alt="" coords="1699,437,1777,464"/>
-<area shape="rect" id="node44" href="ccgs_8h.html" title="Consistent and Committed Global State (CCGS) is a subsystem that (poeriodically) recomputes a global ..." alt="" coords="1393,259,1480,285"/>
+<area shape="rect" id="node44" href="ccgs_8h.html" title="gvt/ccgs.h" alt="" coords="1393,259,1480,285"/>
 <area shape="rect" id="node45" href="scheduler_8h.html" title="Scheduling Subsystem main header file. Scheduler&#45;specific data structures and defines should be place..." alt="" coords="1017,109,1179,136"/>
 <area shape="rect" id="node48" href="serial_8h.html" title="serial/serial.h" alt="" coords="1962,259,2069,285"/>
 <area shape="rect" id="node15" href="atomic_8h.html" title="This module implements atomic and non&#45;blocking operations used within ROOT&#45;Sim to coordinate threads ..." alt="" coords="743,736,853,763"/>
@@ -284,7 +284,7 @@ Alessandro Pellegrini </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="init_8c_source.html#l00188">188</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<p>Definition at line <a class="el" href="init_8c_source.html#l00187">187</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
 </div>
 </div>
@@ -311,11 +311,11 @@ Alessandro Pellegrini </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">case</span> label: \</div><div class="line">    ({\</div><div class="line">        unsigned __i = 1; \</div><div class="line">        while(1) { \</div><div class="line">            if(strcmp(arg, <a class="code" href="init_8c.html#a5af1a6ba6e92d6223988600cdf45f479">param_to_text</a>[key - <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afcad41a0c3f88d8500b7dedbfbd88eec174">OPT_FIRST</a>][__i]) == 0) {\</div><div class="line">                var = __i; \</div><div class="line">                break; \</div><div class="line">            }\</div><div class="line">            if(!<a class="code" href="init_8c.html#a5af1a6ba6e92d6223988600cdf45f479">param_to_text</a>[key - <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afcad41a0c3f88d8500b7dedbfbd88eec174">OPT_FIRST</a>][++__i]) <a class="code" href="init_8c.html#a2dbdd3b07cf9d614f3c81df9f25e0715">\</a></div><div class="line"><a class="code" href="init_8c.html#a2dbdd3b07cf9d614f3c81df9f25e0715">				malformed_option_failure</a>(); \</div><div class="line">        } \</div><div class="line">    }); \</div><div class="line">    break</div><div class="ttc" id="init_8c_html_adf856969b3967e4a20be18a3eda24afcad41a0c3f88d8500b7dedbfbd88eec174"><div class="ttname"><a href="init_8c.html#adf856969b3967e4a20be18a3eda24afcad41a0c3f88d8500b7dedbfbd88eec174">OPT_FIRST</a></div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00060">init.c:60</a></div></div>
-<div class="ttc" id="init_8c_html_a5af1a6ba6e92d6223988600cdf45f479"><div class="ttname"><a href="init_8c.html#a5af1a6ba6e92d6223988600cdf45f479">param_to_text</a></div><div class="ttdeci">const char *const param_to_text[][5]</div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00099">init.c:99</a></div></div>
-<div class="ttc" id="init_8c_html_a2dbdd3b07cf9d614f3c81df9f25e0715"><div class="ttname"><a href="init_8c.html#a2dbdd3b07cf9d614f3c81df9f25e0715">malformed_option_failure</a></div><div class="ttdeci">#define malformed_option_failure()</div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00186">init.c:186</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">case</span> label:                                 \</div><div class="line">    ({                                      \</div><div class="line">        unsigned __i = 1;                           \</div><div class="line">        while(1) {                              \</div><div class="line">            if(strcmp(arg, <a class="code" href="init_8c.html#a5af1a6ba6e92d6223988600cdf45f479">param_to_text</a>[key - <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afcad41a0c3f88d8500b7dedbfbd88eec174">OPT_FIRST</a>][__i]) == 0) { \</div><div class="line">                var = __i;                      \</div><div class="line">                break;                          \</div><div class="line">            }                               \</div><div class="line">            if(!<a class="code" href="init_8c.html#a5af1a6ba6e92d6223988600cdf45f479">param_to_text</a>[key - <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afcad41a0c3f88d8500b7dedbfbd88eec174">OPT_FIRST</a>][++__i])          <a class="code" href="init_8c.html#a2dbdd3b07cf9d614f3c81df9f25e0715">\</a></div><div class="line"><a class="code" href="init_8c.html#a2dbdd3b07cf9d614f3c81df9f25e0715">				malformed_option_failure</a>();             \</div><div class="line">        }                                   \</div><div class="line">    });                                     \</div><div class="line">    break</div><div class="ttc" id="init_8c_html_adf856969b3967e4a20be18a3eda24afcad41a0c3f88d8500b7dedbfbd88eec174"><div class="ttname"><a href="init_8c.html#adf856969b3967e4a20be18a3eda24afcad41a0c3f88d8500b7dedbfbd88eec174">OPT_FIRST</a></div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00060">init.c:60</a></div></div>
+<div class="ttc" id="init_8c_html_a5af1a6ba6e92d6223988600cdf45f479"><div class="ttname"><a href="init_8c.html#a5af1a6ba6e92d6223988600cdf45f479">param_to_text</a></div><div class="ttdeci">const char *const param_to_text[][5]</div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00100">init.c:100</a></div></div>
+<div class="ttc" id="init_8c_html_a2dbdd3b07cf9d614f3c81df9f25e0715"><div class="ttname"><a href="init_8c.html#a2dbdd3b07cf9d614f3c81df9f25e0715">malformed_option_failure</a></div><div class="ttdeci">#define malformed_option_failure()</div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00185">init.c:185</a></div></div>
 </div><!-- fragment -->
-<p>Definition at line <a class="el" href="init_8c_source.html#l00192">192</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<p>Definition at line <a class="el" href="init_8c_source.html#l00191">191</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
 </div>
 </div>
@@ -332,7 +332,7 @@ Alessandro Pellegrini </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="init_8c_source.html#l00186">186</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<p>Definition at line <a class="el" href="init_8c_source.html#l00185">185</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
 </div>
 </div>
@@ -359,9 +359,9 @@ Alessandro Pellegrini </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">({\</div><div class="line">        unsigned <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> __value;\</div><div class="line">        char *__endptr;\</div><div class="line">        __value = strtoull(arg, &amp;__endptr, 10);\</div><div class="line">        if(!(*arg != <span class="charliteral">&#39;\0&#39;</span> &amp;&amp; *__endptr == <span class="charliteral">&#39;\0&#39;</span> &amp;&amp; (__value &gt; low || __value == low) &amp;&amp; __value &lt;= high)) {<a class="code" href="init_8c.html#a2dbdd3b07cf9d614f3c81df9f25e0715">\</a></div><div class="line"><a class="code" href="init_8c.html#a2dbdd3b07cf9d614f3c81df9f25e0715">			malformed_option_failure</a>();\</div><div class="line">        }\</div><div class="line">        __value;\</div><div class="line">    })</div><div class="ttc" id="init_8c_html_a2dbdd3b07cf9d614f3c81df9f25e0715"><div class="ttname"><a href="init_8c.html#a2dbdd3b07cf9d614f3c81df9f25e0715">malformed_option_failure</a></div><div class="ttdeci">#define malformed_option_failure()</div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00186">init.c:186</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line">({                                                      \</div><div class="line">        unsigned <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> __value;                                     \</div><div class="line">        char *__endptr;                                             \</div><div class="line">        __value = strtoull(arg, &amp;__endptr, 10);                                 \</div><div class="line">        if(!(*arg != <span class="charliteral">&#39;\0&#39;</span> &amp;&amp; *__endptr == <span class="charliteral">&#39;\0&#39;</span> &amp;&amp; (__value &gt; low || __value == low) &amp;&amp; __value &lt;= high)) {  <a class="code" href="init_8c.html#a2dbdd3b07cf9d614f3c81df9f25e0715">\</a></div><div class="line"><a class="code" href="init_8c.html#a2dbdd3b07cf9d614f3c81df9f25e0715">			malformed_option_failure</a>();                                  \</div><div class="line">        }                                                   \</div><div class="line">        __value;                                                \</div><div class="line">    })</div><div class="ttc" id="init_8c_html_a2dbdd3b07cf9d614f3c81df9f25e0715"><div class="ttname"><a href="init_8c.html#a2dbdd3b07cf9d614f3c81df9f25e0715">malformed_option_failure</a></div><div class="ttdeci">#define malformed_option_failure()</div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00185">init.c:185</a></div></div>
 </div><!-- fragment -->
-<p>Definition at line <a class="el" href="init_8c_source.html#l00209">209</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<p>Definition at line <a class="el" href="init_8c_source.html#l00208">208</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
 </div>
 </div>
@@ -382,7 +382,6 @@ Alessandro Pellegrini </dd></dl>
 <p>this is used as an offset to the enum values, so that argp doesn't assign short options </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="adf856969b3967e4a20be18a3eda24afcae70c4886e417e039d63ccb10a36bea6d"></a>OPT_SCHEDULER&#160;</td><td class="fielddoc">
-<p>make sure these ones are mapped correctly to the external enum param_codes, </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="adf856969b3967e4a20be18a3eda24afca8755d697c1cf8ee9ea9987cf4c2d6302"></a>OPT_CKTRM_MODE&#160;</td><td class="fielddoc">
 </td></tr>
@@ -475,7 +474,7 @@ Alessandro Pellegrini </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="init_8c_source.html#l00220">220</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<p>Definition at line <a class="el" href="init_8c_source.html#l00219">219</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
 <p><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -527,7 +526,7 @@ Alessandro Pellegrini</dd></dl>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="init_8c_source.html#l00416">416</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<p>Definition at line <a class="el" href="init_8c_source.html#l00415">415</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
 <p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -578,7 +577,7 @@ Alessandro Pellegrini</dd></dl>
 <area shape="rect" id="node37" href="queues_8c.html#aee531712d642cd5d4a54e613aa2c70f9" title="generate_mark" alt="" coords="411,1019,531,1045"/>
 <area shape="rect" id="node38" href="communication_8c.html#ae80f5356cc32f9f2373305341e409b3b" title="insert_outgoing_msg" alt="" coords="393,917,549,944"/>
 <area shape="rect" id="node35" href="communication_8c.html#ab957dc2cd186382c50ef8cfde9761909" title="get_msg_from_slab" alt="" coords="627,1069,775,1096"/>
-<area shape="rect" id="node36" href="communication_8c.html#ae78d99ec41f43bbe641c00f1cb39d54c" title="which_slab_to_use" alt="" coords="631,1019,771,1045"/>
+<area shape="rect" id="node36" href="communication_8c.html#ae6b96249d35969d688d0d84209919c8f" title="which_slab_to_use" alt="" coords="631,1019,771,1045"/>
 <area shape="rect" id="node39" href="dymelor_8h.html#a480bc47d84033faa5410d5a3c4470ff7" title="rsrealloc" alt="" coords="663,917,739,944"/>
 <area shape="rect" id="node41" href="thread_8c.html#a21f8972c88ac48460bfd8c5f9cc34761" title="barrier_init" alt="" coords="426,1187,517,1213"/>
 <area shape="rect" id="node42" href="core_8c.html#a748a7d6959709b662884fd256a382a60" title="handle_signal" alt="" coords="417,1069,526,1096"/>
@@ -622,7 +621,7 @@ Alessandro Pellegrini</dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="init_8c_source.html#l00405">405</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<p>Definition at line <a class="el" href="init_8c_source.html#l00404">404</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
 </div>
 </div>
@@ -644,7 +643,7 @@ Alessandro Pellegrini</dd></dl>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div><div class="line">        {0, 0, <span class="stringliteral">&quot;Model specific options&quot;</span>, 0},</div><div class="line">        {0}</div><div class="line">}</div></div><!-- fragment -->
-<p>Definition at line <a class="el" href="init_8c_source.html#l00400">400</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<p>Definition at line <a class="el" href="init_8c_source.html#l00399">399</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
 </div>
 </div>
@@ -666,7 +665,7 @@ Alessandro Pellegrini</dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="init_8c_source.html#l00151">151</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<p>Definition at line <a class="el" href="init_8c_source.html#l00152">152</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
 </div>
 </div>
@@ -680,7 +679,7 @@ Alessandro Pellegrini</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="init_8c_source.html#l00139">139</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<p>Definition at line <a class="el" href="init_8c_source.html#l00140">140</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
 </div>
 </div>
@@ -694,7 +693,7 @@ Alessandro Pellegrini</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="init_8c_source.html#l00138">138</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<p>Definition at line <a class="el" href="init_8c_source.html#l00139">139</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
 </div>
 </div>
@@ -716,7 +715,7 @@ Alessandro Pellegrini</dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="init_8c_source.html#l00149">149</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<p>Definition at line <a class="el" href="init_8c_source.html#l00150">150</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
 </div>
 </div>
@@ -738,7 +737,7 @@ Alessandro Pellegrini</dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="init_8c_source.html#l00146">146</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<p>Definition at line <a class="el" href="init_8c_source.html#l00147">147</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
 </div>
 </div>
@@ -753,7 +752,7 @@ Alessandro Pellegrini</dd></dl>
 </div><div class="memdoc">
 <p>This array contains the stringified version of the parameter values ROOT-Sim accepts. You can index the first level of the array using the enum param_codes while for the second level you have to refer to the enumerations listed in relevant modules headers. </p>
 
-<p>Definition at line <a class="el" href="init_8c_source.html#l00099">99</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<p>Definition at line <a class="el" href="init_8c_source.html#l00100">100</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
 </div>
 </div>

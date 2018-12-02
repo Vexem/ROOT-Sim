@@ -13,7 +13,7 @@ var searchData=
   ['schedule_5fhook_5fpatch_5fpoint_5f2',['schedule_hook_patch_point_2',['../schedule_8c.html#a8dfff04cbf1055da5964885b5fc5a3b0',1,'schedule.c']]],
   ['schedule_5fpatch',['schedule_patch',['../schedule_8c.html#a50a9cbfe93e386963d31c37d9f4c2f7c',1,'schedule.c']]],
   ['schedule_5funpatch',['schedule_unpatch',['../schedule_8c.html#a1610cab39cd81201e935ba91d1c131b1',1,'schedule.c']]],
-  ['schedulenewevent',['ScheduleNewEvent',['../communication_8c.html#adf5ac84a7b37f69c19957c1ba59cfaea',1,'ScheduleNewEvent():&#160;communication.c'],['../ROOT-Sim_8h.html#afe377b81b0f25bdd6d4cc29eae84e0f4',1,'ScheduleNewEvent():&#160;communication.c']]],
+  ['schedulenewevent',['ScheduleNewEvent',['../communication_8c.html#a1bf991ec14bcab7b310ffa40cd651da3',1,'ScheduleNewEvent():&#160;communication.c'],['../ROOT-Sim_8h.html#afe377b81b0f25bdd6d4cc29eae84e0f4',1,'ScheduleNewEvent():&#160;communication.c']]],
   ['scheduler',['scheduler',['../struct__simulation__configuration.html#a93bf11d0968d861da9c838244e7969a0',1,'_simulation_configuration']]],
   ['scheduler_2ec',['scheduler.c',['../scheduler_8c.html',1,'']]],
   ['scheduler_2eh',['scheduler.h',['../scheduler_8h.html',1,'']]],

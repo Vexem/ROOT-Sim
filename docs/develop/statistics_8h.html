@@ -116,7 +116,7 @@ $(document).ready(function(){initNavTree('statistics_8h.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>State Management subsystem's header.  
+<p>State Management Subsystem.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="process_8h_source.html">scheduler/process.h</a>&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -129,8 +129,8 @@ $(document).ready(function(){initNavTree('statistics_8h.html','');});
 <area shape="rect" id="node2" href="process_8h.html" title="This header defines a LP control block, keeping information about both simulation state and execution..." alt="" coords="387,109,538,136"/>
 <area shape="rect" id="node4" href="state_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="94,363,191,389"/>
 <area shape="rect" id="node16" href="numerical_8h.html" title="This header is used to define symbols which must be accessible by the simulator but not by the applic..." alt="" coords="43,512,157,539"/>
-<area shape="rect" id="node19" href="mm_8h.html" title="mm/mm.h" alt="" coords="721,199,812,225"/>
-<area shape="rect" id="node28" href="ecs_8h.html" title="mm/ecs.h" alt="" coords="1218,199,1305,225"/>
+<area shape="rect" id="node19" href="mm_8h.html" title="Memory Manager main header. " alt="" coords="721,199,812,225"/>
+<area shape="rect" id="node28" href="ecs_8h.html" title="Event Cross State Synchronization. This module implements the userspace handler of the artificially i..." alt="" coords="1218,199,1305,225"/>
 <area shape="rect" id="node29" href="list_8h.html" title="This header defines macros for accessing the general&#45;purpose list implementation used in the simulato..." alt="" coords="1167,512,1287,539"/>
 <area shape="rect" id="node32" href="msgchannel_8h.html" title="This module implements an (M, 1) channel to transfer message pointers. " alt="" coords="215,363,395,389"/>
 <area shape="rect" id="node33" href="ult_8h.html" title="The User&#45;Level Thread module allows the creation/scheduling of a user&#45;level thread in an architecture..." alt="" coords="353,288,436,315"/>
@@ -163,7 +163,7 @@ $(document).ready(function(){initNavTree('statistics_8h.html','');});
 <area shape="rect" id="node13" href="state_8c.html" title="The state module is responsible for managing LPs&#39; simulation states. In particular, it allows to take a snapshot, to restore a previous snapshot, and to silently re&#45;execute a portion of simulation events to bring a LP to a partiuclar LVT value for which no simulation state. " alt="" coords="1872,213,2035,269"/>
 <area shape="rect" id="node15" href="scheduler_8c.html" title="Re&#45;entrant scheduler for LPs on worker threads. " alt="" coords="2059,213,2223,269"/>
 <area shape="rect" id="node16" href="serial_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/serial/serial.c" alt="" coords="2248,213,2411,269"/>
-<area shape="rect" id="node17" href="statistics_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/statistics/statistics.c" alt="" coords="2435,213,2597,269"/>
+<area shape="rect" id="node17" href="statistics_8c.html" title="State Management Subsystem. " alt="" coords="2435,213,2597,269"/>
 <area shape="rect" id="node18" href="checkpoints_8c.html" title="This module implements the routines to save and restore checkpoints, both full and incremental..." alt="" coords="1659,109,1821,165"/>
 <area shape="rect" id="node19" href="queues_8c.html" title="This module implements the event/message queues subsystem. " alt="" coords="1845,109,2008,165"/>
 <area shape="rect" id="node20" href="binding_8c.html" title="Implements load sharing rules for LPs among worker threads. " alt="" coords="2032,109,2195,165"/>
@@ -279,13 +279,19 @@ Functions</h2></td></tr>
 <tr class="separator:ab9de5cb958e02e5ef06a67674168386c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>State Management subsystem's header. </p>
+<div class="textblock"><p>State Management Subsystem. </p>
 <p>Copyright (C) 2008-2018 HPDCS Group <a href="http://www.dis.uniroma1.it/~hpdcs">http://www.dis.uniroma1.it/~hpdcs</a></p>
 <p>This file is part of ROOT-Sim (ROme OpTimistic Simulator).</p>
 <p>ROOT-Sim is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; only version 3 of the License applies.</p>
 <p>ROOT-Sim is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
 <p>You should have received a copy of the GNU General Public License along with ROOT-Sim; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA</p>
 <dl class="section author"><dt>Author</dt><dd>Francesco Quaglia </dd>
+<dd>
+Andrea Piccione </dd>
+<dd>
+Alessandro Pellegrini </dd>
+<dd>
+Tommaso Tocci </dd>
 <dd>
 Roberto Vitali </dd></dl>
 
@@ -301,7 +307,7 @@ Roberto Vitali </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="statistics_8h_source.html#l00028">28</a> of file <a class="el" href="statistics_8h_source.html">statistics.h</a>.</p>
+<p>Definition at line <a class="el" href="statistics_8h_source.html#l00031">31</a> of file <a class="el" href="statistics_8h_source.html">statistics.h</a>.</p>
 
 </div>
 </div>
@@ -317,7 +323,7 @@ Roberto Vitali </dd></dl>
 
 <p>This macro specified the default output directory, if nothing is passed as an option. </p>
 
-<p>Definition at line <a class="el" href="statistics_8h_source.html#l00033">33</a> of file <a class="el" href="statistics_8h_source.html">statistics.h</a>.</p>
+<p>Definition at line <a class="el" href="statistics_8h_source.html#l00036">36</a> of file <a class="el" href="statistics_8h_source.html">statistics.h</a>.</p>
 
 </div>
 </div>
@@ -333,7 +339,7 @@ Roberto Vitali </dd></dl>
 
 <p>Longest length of a path. </p>
 
-<p>Definition at line <a class="el" href="statistics_8h_source.html#l00036">36</a> of file <a class="el" href="statistics_8h_source.html">statistics.h</a>.</p>
+<p>Definition at line <a class="el" href="statistics_8h_source.html#l00039">39</a> of file <a class="el" href="statistics_8h_source.html">statistics.h</a>.</p>
 
 </div>
 </div>
@@ -347,7 +353,7 @@ Roberto Vitali </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="statistics_8h_source.html#l00047">47</a> of file <a class="el" href="statistics_8h_source.html">statistics.h</a>.</p>
+<p>Definition at line <a class="el" href="statistics_8h_source.html#l00049">49</a> of file <a class="el" href="statistics_8h_source.html">statistics.h</a>.</p>
 
 </div>
 </div>
@@ -361,7 +367,7 @@ Roberto Vitali </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="statistics_8h_source.html#l00059">59</a> of file <a class="el" href="statistics_8h_source.html">statistics.h</a>.</p>
+<p>Definition at line <a class="el" href="statistics_8h_source.html#l00060">60</a> of file <a class="el" href="statistics_8h_source.html">statistics.h</a>.</p>
 
 </div>
 </div>
@@ -375,7 +381,7 @@ Roberto Vitali </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="statistics_8h_source.html#l00060">60</a> of file <a class="el" href="statistics_8h_source.html">statistics.h</a>.</p>
+<p>Definition at line <a class="el" href="statistics_8h_source.html#l00061">61</a> of file <a class="el" href="statistics_8h_source.html">statistics.h</a>.</p>
 
 </div>
 </div>
@@ -389,7 +395,7 @@ Roberto Vitali </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="statistics_8h_source.html#l00046">46</a> of file <a class="el" href="statistics_8h_source.html">statistics.h</a>.</p>
+<p>Definition at line <a class="el" href="statistics_8h_source.html#l00048">48</a> of file <a class="el" href="statistics_8h_source.html">statistics.h</a>.</p>
 
 </div>
 </div>
@@ -403,7 +409,7 @@ Roberto Vitali </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="statistics_8h_source.html#l00058">58</a> of file <a class="el" href="statistics_8h_source.html">statistics.h</a>.</p>
+<p>Definition at line <a class="el" href="statistics_8h_source.html#l00059">59</a> of file <a class="el" href="statistics_8h_source.html">statistics.h</a>.</p>
 
 </div>
 </div>
@@ -443,7 +449,7 @@ Roberto Vitali </dd></dl>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="statistics_8h_source.html#l00050">50</a> of file <a class="el" href="statistics_8h_source.html">statistics.h</a>.</p>
+<p>Definition at line <a class="el" href="statistics_8h_source.html#l00051">51</a> of file <a class="el" href="statistics_8h_source.html">statistics.h</a>.</p>
 
 </div>
 </div>
@@ -465,7 +471,7 @@ Roberto Vitali </dd></dl>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="statistics_8h_source.html#l00039">39</a> of file <a class="el" href="statistics_8h_source.html">statistics.h</a>.</p>
+<p>Definition at line <a class="el" href="statistics_8h_source.html#l00041">41</a> of file <a class="el" href="statistics_8h_source.html">statistics.h</a>.</p>
 
 </div>
 </div>
@@ -569,7 +575,7 @@ Roberto Vitali </dd></dl>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="statistics_8c_source.html#l00140">140</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
+<p>Definition at line <a class="el" href="statistics_8c_source.html#l00169">169</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
 
 <p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -603,7 +609,7 @@ Roberto Vitali </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="statistics_8c_source.html#l00219">219</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
+<p>Definition at line <a class="el" href="statistics_8c_source.html#l00250">250</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
 
 <p><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -647,7 +653,7 @@ Roberto Vitali </dd></dl>
 <p>This function finalize the Statistics subsystem</p>
 <dl class="section author"><dt>Author</dt><dd>Alessandro Pellegrini </dd></dl>
 
-<p>Definition at line <a class="el" href="statistics_8c_source.html#l00669">669</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
+<p>Definition at line <a class="el" href="statistics_8c_source.html#l00709">709</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
 
 <p><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -707,7 +713,7 @@ Roberto Vitali </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="statistics_8c_source.html#l00780">780</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
+<p>Definition at line <a class="el" href="statistics_8c_source.html#l00822">822</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
 
 <p><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -744,7 +750,7 @@ Roberto Vitali </dd></dl>
 <p>This function initializes the Statistics subsystem</p>
 <dl class="section author"><dt>Author</dt><dd>Alessandro Pellegrini </dd></dl>
 
-<p>Definition at line <a class="el" href="statistics_8c_source.html#l00593">593</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
+<p>Definition at line <a class="el" href="statistics_8c_source.html#l00633">633</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
 
 <p><div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -799,7 +805,7 @@ Roberto Vitali </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="statistics_8c_source.html#l00508">508</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
+<p>Definition at line <a class="el" href="statistics_8c_source.html#l00546">546</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
 
 <p><div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -852,7 +858,7 @@ Roberto Vitali </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="statistics_8c_source.html#l00562">562</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
+<p>Definition at line <a class="el" href="statistics_8c_source.html#l00601">601</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
 
 <p><div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -919,7 +925,7 @@ Roberto Vitali </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="statistics_8c_source.html#l00709">709</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
+<p>Definition at line <a class="el" href="statistics_8c_source.html#l00751">751</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
 
 <p><div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-14-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -988,7 +994,7 @@ Roberto Vitali </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="statistics_8c_source.html#l00692">692</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
+<p>Definition at line <a class="el" href="statistics_8c_source.html#l00733">733</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
 
 <p><div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-15-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -1018,12 +1024,9 @@ Roberto Vitali </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This function manage the simulation time used to in the statistics, and print to the output file the starting simulation header</p>
-<dl class="section author"><dt>Author</dt><dd>Francesco Quaglia </dd>
-<dd>
-Roberto Vitali </dd></dl>
+<p>This function registers when the actual simulation is starting. </p>
 
-<p>Definition at line <a class="el" href="statistics_8c_source.html#l00229">229</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
+<p>Definition at line <a class="el" href="statistics_8c_source.html#l00259">259</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
 
 <p><div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-16-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -1068,7 +1071,7 @@ Alessandro Pellegrini</dd></dl>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="statistics_8c_source.html#l00378">378</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
+<p>Definition at line <a class="el" href="statistics_8c_source.html#l00415">415</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
 
 <p><div id="dynsection-17" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-17-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>

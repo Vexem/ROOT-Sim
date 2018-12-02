@@ -111,6 +111,9 @@ $(document).ready(function(){initNavTree('control_8c.html','');});
 <div class="title">control.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Processing Points for Control Messages.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdbool.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="scheduler_8h_source.html">scheduler/scheduler.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="process_8h_source.html">scheduler/process.h</a>&gt;</code><br />
@@ -130,8 +133,8 @@ $(document).ready(function(){initNavTree('control_8c.html','');});
 <area shape="rect" id="node3" href="scheduler_8h.html" title="Scheduling Subsystem main header file. Scheduler&#45;specific data structures and defines should be place..." alt="" coords="410,109,571,136"/>
 <area shape="rect" id="node11" href="core_8h.html" title="This header defines all the shared symbols which are needed by different subsystems. " alt="" coords="635,587,730,613"/>
 <area shape="rect" id="node19" href="process_8h.html" title="This header defines a LP control block, keeping information about both simulation state and execution..." alt="" coords="609,259,759,285"/>
-<area shape="rect" id="node21" href="mm_8h.html" title="mm/mm.h" alt="" coords="1107,348,1197,375"/>
-<area shape="rect" id="node30" href="ecs_8h.html" title="mm/ecs.h" alt="" coords="1222,348,1309,375"/>
+<area shape="rect" id="node21" href="mm_8h.html" title="Memory Manager main header. " alt="" coords="1107,348,1197,375"/>
+<area shape="rect" id="node30" href="ecs_8h.html" title="Event Cross State Synchronization. This module implements the userspace handler of the artificially i..." alt="" coords="1222,348,1309,375"/>
 <area shape="rect" id="node31" href="list_8h.html" title="This header defines macros for accessing the general&#45;purpose list implementation used in the simulato..." alt="" coords="1557,348,1677,375"/>
 <area shape="rect" id="node36" href="communication_8h.html" title="This is the main header file, containing all data structures and defines used by the communication su..." alt="" coords="797,348,1033,375"/>
 <area shape="rect" id="node40" href="gvt_2gvt_8h.html" title="This header defines all the Global Virtual Time symbols needed by the platform. The current implement..." alt="" coords="43,437,122,464"/>
@@ -167,12 +170,13 @@ Functions</h2></td></tr>
 <tr class="separator:a86517e00b4ef4a02c6d6620a048ae5b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Copyright (C) 2008-2018 HPDCS Group <a href="http://www.dis.uniroma1.it/~hpdcs">http://www.dis.uniroma1.it/~hpdcs</a></p>
+<div class="textblock"><p>Processing Points for Control Messages. </p>
+<p>Copyright (C) 2008-2018 HPDCS Group <a href="http://www.dis.uniroma1.it/~hpdcs">http://www.dis.uniroma1.it/~hpdcs</a></p>
 <p>This file is part of ROOT-Sim (ROme OpTimistic Simulator).</p>
 <p>ROOT-Sim is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; only version 3 of the License applies.</p>
 <p>ROOT-Sim is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
 <p>You should have received a copy of the GNU General Public License along with ROOT-Sim; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA</p>
-<dl class="section author"><dt>Author</dt><dd></dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Alessandro Pellegrini </dd></dl>
 
 <p>Definition in file <a class="el" href="control_8c_source.html">control.c</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
@@ -190,7 +194,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="control_8c_source.html#l00066">66</a> of file <a class="el" href="control_8c_source.html">control.c</a>.</p>
+<p>Definition at line <a class="el" href="control_8c_source.html#l00068">68</a> of file <a class="el" href="control_8c_source.html">control.c</a>.</p>
 
 <p><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -237,7 +241,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="control_8c_source.html#l00205">205</a> of file <a class="el" href="control_8c_source.html">control.c</a>.</p>
+<p>Definition at line <a class="el" href="control_8c_source.html#l00210">210</a> of file <a class="el" href="control_8c_source.html">control.c</a>.</p>
 
 <p><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -252,7 +256,7 @@ Functions</h2></td></tr>
 <area shape="rect" id="node13" href="communication_8c.html#ab5250867c0edfc326732c059b0c0c3b5" title="Send" alt="" coords="228,60,283,87"/>
 <area shape="rect" id="node4" href="platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="557,288,667,315"/>
 <area shape="rect" id="node6" href="communication_8c.html#ab957dc2cd186382c50ef8cfde9761909" title="get_msg_from_slab" alt="" coords="347,238,495,264"/>
-<area shape="rect" id="node11" href="communication_8c.html#ae78d99ec41f43bbe641c00f1cb39d54c" title="which_slab_to_use" alt="" coords="351,187,491,214"/>
+<area shape="rect" id="node11" href="communication_8c.html#ae6b96249d35969d688d0d84209919c8f" title="which_slab_to_use" alt="" coords="351,187,491,214"/>
 <area shape="rect" id="node7" href="mm_8h.html#a13199823c54d944aa128966cb35c5aa3" title="slab_alloc" alt="" coords="570,238,654,264"/>
 <area shape="rect" id="node8" href="atomic_8h.html#a7a6b9868956dd8e51e5de80e16c76fc4" title="spin_lock" alt="" coords="743,187,823,214"/>
 <area shape="rect" id="node9" href="slab_8c.html#ac0e4a2a4ab26d7f2399eecbb72fc4cff" title="slab_is_valid" alt="" coords="732,238,833,264"/>
@@ -302,7 +306,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="control_8c_source.html#l00130">130</a> of file <a class="el" href="control_8c_source.html">control.c</a>.</p>
+<p>Definition at line <a class="el" href="control_8c_source.html#l00134">134</a> of file <a class="el" href="control_8c_source.html">control.c</a>.</p>
 
 <p><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -360,7 +364,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="control_8c_source.html#l00119">119</a> of file <a class="el" href="control_8c_source.html">control.c</a>.</p>
+<p>Definition at line <a class="el" href="control_8c_source.html#l00123">123</a> of file <a class="el" href="control_8c_source.html">control.c</a>.</p>
 
 <p><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -408,7 +412,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="control_8c_source.html#l00043">43</a> of file <a class="el" href="control_8c_source.html">control.c</a>.</p>
+<p>Definition at line <a class="el" href="control_8c_source.html#l00042">42</a> of file <a class="el" href="control_8c_source.html">control.c</a>.</p>
 
 <p><div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -420,7 +424,7 @@ Functions</h2></td></tr>
 <area shape="rect" id="node2" href="communication_8c.html#a56a4865196c169691525e99bae337519" title="pack_msg" alt="" coords="241,183,328,209"/>
 <area shape="rect" id="node13" href="communication_8c.html#ab5250867c0edfc326732c059b0c0c3b5" title="Send" alt="" coords="257,81,312,108"/>
 <area shape="rect" id="node3" href="communication_8c.html#ab957dc2cd186382c50ef8cfde9761909" title="get_msg_from_slab" alt="" coords="376,208,524,235"/>
-<area shape="rect" id="node8" href="communication_8c.html#ae78d99ec41f43bbe641c00f1cb39d54c" title="which_slab_to_use" alt="" coords="380,157,520,184"/>
+<area shape="rect" id="node8" href="communication_8c.html#ae6b96249d35969d688d0d84209919c8f" title="which_slab_to_use" alt="" coords="380,157,520,184"/>
 <area shape="rect" id="node11" href="dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="419,259,481,285"/>
 <area shape="rect" id="node4" href="mm_8h.html#a13199823c54d944aa128966cb35c5aa3" title="slab_alloc" alt="" coords="599,208,683,235"/>
 <area shape="rect" id="node5" href="atomic_8h.html#a7a6b9868956dd8e51e5de80e16c76fc4" title="spin_lock" alt="" coords="772,107,852,133"/>

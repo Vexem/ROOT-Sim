@@ -4,7 +4,7 @@
 <area shape="rect" id="node17" href="$communication_8h.html" title="This is the main header file, containing all data structures and defines used by the communication su..." alt="" coords="669,109,905,136"/>
 <area shape="rect" id="node18" href="$list_8h.html" title="This header defines macros for accessing the general&#45;purpose list implementation used in the simulato..." alt="" coords="67,408,187,435"/>
 <area shape="rect" id="node21" href="$msgchannel_8h.html" title="This module implements an (M, 1) channel to transfer message pointers. " alt="" coords="415,109,595,136"/>
-<area shape="rect" id="node22" href="$mm_8h.html" title="mm/mm.h" alt="" coords="930,109,1021,136"/>
+<area shape="rect" id="node22" href="$mm_8h.html" title="Memory Manager main header. " alt="" coords="930,109,1021,136"/>
 <area shape="rect" id="node9" href="$ROOT-Sim_8h.html" title="This header defines all the symbols which are needed to develop a Model to be simulated on top of ROO..." alt="" coords="854,408,953,435"/>
 <area shape="rect" id="node15" href="$numerical_8h.html" title="This header is used to define symbols which must be accessible by the simulator but not by the applic..." alt="" coords="1078,408,1193,435"/>
 <area shape="rect" id="node16" href="$thread_8h.html" title="This module implements Kernel Level Thread supports. " alt="" coords="415,408,523,435"/>

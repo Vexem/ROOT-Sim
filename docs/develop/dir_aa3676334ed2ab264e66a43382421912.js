@@ -1,6 +1,5 @@
 var dir_aa3676334ed2ab264e66a43382421912 =
 [
-    [ "array.c", "array_8c.html", null ],
     [ "bitmap.h", "bitmap_8h.html", "bitmap_8h" ],
     [ "calqueue.c", "calqueue_8c.html", "calqueue_8c" ],
     [ "calqueue.h", "calqueue_8h.html", "calqueue_8h" ],

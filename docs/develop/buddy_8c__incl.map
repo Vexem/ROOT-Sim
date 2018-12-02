@@ -1,6 +1,6 @@
 <map id="/home/travis/build/HPDCS/ROOT&#45;Sim/src/mm/buddy.c" name="/home/travis/build/HPDCS/ROOT&#45;Sim/src/mm/buddy.c">
 <area shape="rect" id="node7" href="$core_8h.html" title="This header defines all the shared symbols which are needed by different subsystems. " alt="" coords="681,437,776,464"/>
-<area shape="rect" id="node20" href="$mm_8h.html" title="mm/mm.h" alt="" coords="470,199,561,225"/>
+<area shape="rect" id="node20" href="$mm_8h.html" title="Memory Manager main header. " alt="" coords="470,199,561,225"/>
 <area shape="rect" id="node29" href="$process_8h.html" title="This header defines a LP control block, keeping information about both simulation state and execution..." alt="" coords="1049,109,1200,136"/>
 <area shape="rect" id="node8" href="$ROOT-Sim_8h.html" title="This header defines all the symbols which are needed to develop a Model to be simulated on top of ROO..." alt="" coords="729,512,827,539"/>
 <area shape="rect" id="node17" href="$numerical_8h.html" title="This header is used to define symbols which must be accessible by the simulator but not by the applic..." alt="" coords="1086,512,1201,539"/>
@@ -10,7 +10,7 @@
 <area shape="rect" id="node23" href="$bitmap_8h.html" title="This header implements a minimal bitmap data type. " alt="" coords="306,363,453,389"/>
 <area shape="rect" id="node25" href="$state_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="1109,363,1207,389"/>
 <area shape="rect" id="node26" href="$timer_8h.html" title="This header defines the timers which the simulator uses to monitor its internal behaviour. " alt="" coords="477,363,575,389"/>
-<area shape="rect" id="node30" href="$ecs_8h.html" title="mm/ecs.h" alt="" coords="1453,199,1540,225"/>
+<area shape="rect" id="node30" href="$ecs_8h.html" title="Event Cross State Synchronization. This module implements the userspace handler of the artificially i..." alt="" coords="1453,199,1540,225"/>
 <area shape="rect" id="node31" href="$list_8h.html" title="This header defines macros for accessing the general&#45;purpose list implementation used in the simulato..." alt="" coords="1282,512,1402,539"/>
 <area shape="rect" id="node34" href="$msgchannel_8h.html" title="This module implements an (M, 1) channel to transfer message pointers. " alt="" coords="803,363,983,389"/>
 <area shape="rect" id="node35" href="$ult_8h.html" title="The User&#45;Level Thread module allows the creation/scheduling of a user&#45;level thread in an architecture..." alt="" coords="922,288,1005,315"/>

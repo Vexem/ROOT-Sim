@@ -10,8 +10,8 @@
 <area shape="rect" id="node15" href="$thread_8h.html" title="This module implements Kernel Level Thread supports. " alt="" coords="806,587,914,613"/>
 <area shape="rect" id="node16" href="$atomic_8h.html" title="This module implements atomic and non&#45;blocking operations used within ROOT&#45;Sim to coordinate threads ..." alt="" coords="1301,661,1411,688"/>
 <area shape="rect" id="node19" href="$state_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="366,437,463,464"/>
-<area shape="rect" id="node20" href="$mm_8h.html" title="mm/mm.h" alt="" coords="653,273,744,300"/>
-<area shape="rect" id="node29" href="$ecs_8h.html" title="mm/ecs.h" alt="" coords="542,273,629,300"/>
+<area shape="rect" id="node20" href="$mm_8h.html" title="Memory Manager main header. " alt="" coords="653,273,744,300"/>
+<area shape="rect" id="node29" href="$ecs_8h.html" title="Event Cross State Synchronization. This module implements the userspace handler of the artificially i..." alt="" coords="542,273,629,300"/>
 <area shape="rect" id="node30" href="$list_8h.html" title="This header defines macros for accessing the general&#45;purpose list implementation used in the simulato..." alt="" coords="1532,587,1652,613"/>
 <area shape="rect" id="node33" href="$msgchannel_8h.html" title="This module implements an (M, 1) channel to transfer message pointers. " alt="" coords="487,437,667,464"/>
 <area shape="rect" id="node36" href="$cross__state__manager_8h.html" title="This is the main header for the Linux Kernel Module which implements per&#45;kernel&#45;thread different page..." alt="" coords="301,259,467,315"/>

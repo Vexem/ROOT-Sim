@@ -3,7 +3,7 @@
 <area shape="rect" id="node3" href="$queues_8c.html" title="This module implements the event/message queues subsystem. " alt="" coords="269,213,431,269"/>
 <area shape="rect" id="node4" href="$scheduler_8h.html" title="Scheduling Subsystem main header file. Scheduler&#45;specific data structures and defines should be place..." alt="" coords="1950,109,2115,165"/>
 <area shape="rect" id="node21" href="$stf_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/scheduler/stf.c" alt="" coords="3631,213,3794,269"/>
-<area shape="rect" id="node23" href="$statistics_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/statistics/statistics.c" alt="" coords="3818,213,3981,269"/>
+<area shape="rect" id="node23" href="$statistics_8c.html" title="State Management Subsystem. " alt="" coords="3818,213,3981,269"/>
 <area shape="rect" id="node5" href="$core_8c.html" title="This module implements core functionalities for ROOT&#45;Sim and declares core global variables for the s..." alt="" coords="1391,213,1554,269"/>
 <area shape="rect" id="node6" href="$init_8c.html" title="This module implements the simulator initialization routines. " alt="" coords="1578,213,1741,269"/>
 <area shape="rect" id="node7" href="$ccgs_8c.html" title="Consistent and Committed Global State (CCGS) is a subsystem that (poeriodically) recomputes a global ..." alt="" coords="1765,213,1927,269"/>
@@ -17,7 +17,7 @@
 <area shape="rect" id="node15" href="$dymelor_8c.html" title="LP&#39;s memory pre&#45;allocator. This layer stands below DyMeLoR, and is the connection point to the Linux ..." alt="" coords="3258,213,3421,269"/>
 <area shape="rect" id="node16" href="$state_8c.html" title="The state module is responsible for managing LPs&#39; simulation states. In particular, it allows to take a snapshot, to restore a previous snapshot, and to silently re&#45;execute a portion of simulation events to bring a LP to a partiuclar LVT value for which no simulation state. " alt="" coords="3445,213,3607,269"/>
 <area shape="rect" id="node17" href="$binding_8c.html" title="Implements load sharing rules for LPs among worker threads. " alt="" coords="455,213,618,269"/>
-<area shape="rect" id="node18" href="$control_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/scheduler/control.c" alt="" coords="642,213,805,269"/>
+<area shape="rect" id="node18" href="$control_8c.html" title="Processing Points for Control Messages. " alt="" coords="642,213,805,269"/>
 <area shape="rect" id="node19" href="$process_8c.html" title="This header defines type&#45;safe operations for LP control block management. " alt="" coords="829,213,991,269"/>
 <area shape="rect" id="node20" href="$scheduler_8c.html" title="Re&#45;entrant scheduler for LPs on worker threads. " alt="" coords="1016,213,1180,269"/>
 <area shape="rect" id="node22" href="$serial_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/serial/serial.c" alt="" coords="1205,213,1367,269"/>

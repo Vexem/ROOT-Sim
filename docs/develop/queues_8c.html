@@ -143,17 +143,17 @@ $(document).ready(function(){initNavTree('queues_8c.html','');});
 <area shape="rect" id="node13" href="core_8h.html" title="This header defines all the shared symbols which are needed by different subsystems. " alt="" coords="1235,587,1330,613"/>
 <area shape="rect" id="node18" href="thread_8h.html" title="This module implements Kernel Level Thread supports. " alt="" coords="563,661,671,688"/>
 <area shape="rect" id="node19" href="atomic_8h.html" title="This module implements atomic and non&#45;blocking operations used within ROOT&#45;Sim to coordinate threads ..." alt="" coords="219,736,330,763"/>
-<area shape="rect" id="node20" href="mm_8h.html" title="mm/mm.h" alt="" coords="1009,348,1100,375"/>
+<area shape="rect" id="node20" href="mm_8h.html" title="Memory Manager main header. " alt="" coords="1009,348,1100,375"/>
 <area shape="rect" id="node30" href="list_8h.html" title="This header defines macros for accessing the general&#45;purpose list implementation used in the simulato..." alt="" coords="204,348,324,375"/>
 <area shape="rect" id="node32" href="msgchannel_8h.html" title="This module implements an (M, 1) channel to transfer message pointers. " alt="" coords="1855,348,2035,375"/>
 <area shape="rect" id="node34" href="communication_8h.html" title="This is the main header file, containing all data structures and defines used by the communication su..." alt="" coords="2161,348,2397,375"/>
 <area shape="rect" id="node37" href="queues_8h.html" title="Event and State queueing Subsystem main header. " alt="" coords="1195,184,1327,211"/>
 <area shape="rect" id="node38" href="scheduler_8h.html" title="Scheduling Subsystem main header file. Scheduler&#45;specific data structures and defines should be place..." alt="" coords="1301,109,1462,136"/>
 <area shape="rect" id="node40" href="communication_2gvt_8h.html" title="Distributed GVT Support module. " alt="" coords="1739,109,1896,136"/>
-<area shape="rect" id="node41" href="statistics_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="1744,184,1896,211"/>
+<area shape="rect" id="node41" href="statistics_8h.html" title="State Management Subsystem. " alt="" coords="1744,184,1896,211"/>
 <area shape="rect" id="node42" href="gvt_2gvt_8h.html" title="This header defines all the Global Virtual Time symbols needed by the platform. The current implement..." alt="" coords="615,437,694,464"/>
 <area shape="rect" id="node17" href="numerical_8h.html" title="This header is used to define symbols which must be accessible by the simulator but not by the applic..." alt="" coords="1413,661,1528,688"/>
-<area shape="rect" id="node29" href="ecs_8h.html" title="mm/ecs.h" alt="" coords="1554,348,1641,375"/>
+<area shape="rect" id="node29" href="ecs_8h.html" title="Event Cross State Synchronization. This module implements the userspace handler of the artificially i..." alt="" coords="1554,348,1641,375"/>
 <area shape="rect" id="node33" href="ult_8h.html" title="The User&#45;Level Thread module allows the creation/scheduling of a user&#45;level thread in an architecture..." alt="" coords="1396,348,1479,375"/>
 <area shape="rect" id="node35" href="cross__state__manager_8h.html" title="This is the main header for the Linux Kernel Module which implements per&#45;kernel&#45;thread different page..." alt="" coords="1665,333,1831,389"/>
 <area shape="rect" id="node8" href="ROOT-Sim_8h.html" title="This header defines all the symbols which are needed to develop a Model to be simulated on top of ROO..." alt="" coords="840,661,939,688"/>
@@ -219,7 +219,7 @@ Francesco Quaglia</dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The pointer to the event is going to be processed </dd></dl>
 
-<p>Definition at line <a class="el" href="queues_8c_source.html#l00086">86</a> of file <a class="el" href="queues_8c_source.html">queues.c</a>.</p>
+<p>Definition at line <a class="el" href="queues_8c_source.html#l00085">85</a> of file <a class="el" href="queues_8c_source.html">queues.c</a>.</p>
 
 <p><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -264,7 +264,7 @@ Francesco Quaglia</dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A value to be used as a unique mark for the message within the LP </dd></dl>
 
-<p>Definition at line <a class="el" href="queues_8c_source.html#l00266">266</a> of file <a class="el" href="queues_8c_source.html">queues.c</a>.</p>
+<p>Definition at line <a class="el" href="queues_8c_source.html#l00283">283</a> of file <a class="el" href="queues_8c_source.html">queues.c</a>.</p>
 
 <p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -307,7 +307,7 @@ Francesco Quaglia</dd></dl>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="queues_8c_source.html#l00117">117</a> of file <a class="el" href="queues_8c_source.html">queues.c</a>.</p>
+<p>Definition at line <a class="el" href="queues_8c_source.html#l00116">116</a> of file <a class="el" href="queues_8c_source.html">queues.c</a>.</p>
 
 <p><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -379,7 +379,7 @@ Francesco Quaglia</dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The timestamp of the next-to-execute event </dd></dl>
 
-<p>Definition at line <a class="el" href="queues_8c_source.html#l00056">56</a> of file <a class="el" href="queues_8c_source.html">queues.c</a>.</p>
+<p>Definition at line <a class="el" href="queues_8c_source.html#l00055">55</a> of file <a class="el" href="queues_8c_source.html">queues.c</a>.</p>
 
 <p><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -418,7 +418,7 @@ Francesco Quaglia</dd></dl>
 <p>Process bottom halves received by all the LPs hosted by the current KLT</p>
 <dl class="section author"><dt>Author</dt><dd>Alessandro Pellegrini </dd></dl>
 
-<p>Definition at line <a class="el" href="queues_8c_source.html#l00134">134</a> of file <a class="el" href="queues_8c_source.html">queues.c</a>.</p>
+<p>Definition at line <a class="el" href="queues_8c_source.html#l00133">133</a> of file <a class="el" href="queues_8c_source.html">queues.c</a>.</p>
 
 <p><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -451,7 +451,7 @@ Francesco Quaglia</dd></dl>
 <area shape="rect" id="node18" href="platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="1227,613,1336,640"/>
 <area shape="rect" id="node21" href="checkpoints_8c.html#a9be0910d1b3a99682d5d2971b4b79f3b" title="log_full" alt="" coords="896,664,963,691"/>
 <area shape="rect" id="node22" href="dymelor_8c.html#a90e313c8735836c166694aa746cc841e" title="get_log_size" alt="" coords="1053,664,1154,691"/>
-<area shape="rect" id="node24" href="communication_8c.html#ae78d99ec41f43bbe641c00f1cb39d54c" title="which_slab_to_use" alt="" coords="456,360,596,387"/>
+<area shape="rect" id="node24" href="communication_8c.html#ae6b96249d35969d688d0d84209919c8f" title="which_slab_to_use" alt="" coords="456,360,596,387"/>
 <area shape="rect" id="node26" href="mm_8h.html#a891cd5abfed9deb98413ab7e7c29ef61" title="slab_free" alt="" coords="486,259,566,285"/>
 <area shape="rect" id="node28" href="dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a" title="rsfree" alt="" coords="717,309,775,336"/>
 <area shape="rect" id="node25" href="core_8c.html#a6793e4c70d69277f24ff0e494ed8ed10" title="find_kernel_by_gid" alt="" coords="677,360,815,387"/>

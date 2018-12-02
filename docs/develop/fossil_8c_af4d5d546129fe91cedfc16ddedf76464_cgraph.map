@@ -5,7 +5,7 @@
 <area shape="rect" id="node14" href="$communication_8c.html#a762b3dacaa82c4590e0572ac08117153" title="msg_hdr_release" alt="" coords="184,132,316,159"/>
 <area shape="rect" id="node3" href="$dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a" title="rsfree" alt="" coords="601,259,660,285"/>
 <area shape="rect" id="node4" href="$platform_8c.html#ae2af2cd130d16958394ae21e9d13035f" title="__real_free" alt="" coords="748,259,840,285"/>
-<area shape="rect" id="node6" href="$communication_8c.html#ae78d99ec41f43bbe641c00f1cb39d54c" title="which_slab_to_use" alt="" coords="373,56,513,83"/>
+<area shape="rect" id="node6" href="$communication_8c.html#ae6b96249d35969d688d0d84209919c8f" title="which_slab_to_use" alt="" coords="373,56,513,83"/>
 <area shape="rect" id="node9" href="$mm_8h.html#a891cd5abfed9deb98413ab7e7c29ef61" title="slab_free" alt="" coords="403,157,483,184"/>
 <area shape="rect" id="node7" href="$core_8c.html#a6793e4c70d69277f24ff0e494ed8ed10" title="find_kernel_by_gid" alt="" coords="561,56,700,83"/>
 <area shape="rect" id="node8" href="$process_8c.html#a2193e0386f7858db77f38146a15d3cd1" title="find_lp_by_gid" alt="" coords="575,5,686,32"/>

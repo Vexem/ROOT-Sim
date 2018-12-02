@@ -114,6 +114,9 @@ $(document).ready(function(){initNavTree('mm_8h.html','');});
 <div class="title">mm.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Memory Manager main header.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &lt;sys/mman.h&gt;</code><br />
 <code>#include &lt;pthread.h&gt;</code><br />
@@ -149,7 +152,7 @@ $(document).ready(function(){initNavTree('mm_8h.html','');});
 <area shape="rect" id="node3" href="communication_8c.html" title="This module implements all the communication routines, for exchanging messages among different logica..." alt="" coords="3182,421,3421,477"/>
 <area shape="rect" id="node4" href="core_8c.html" title="This module implements core functionalities for ROOT&#45;Sim and declares core global variables for the s..." alt="" coords="192,421,355,477"/>
 <area shape="rect" id="node5" href="init_8c.html" title="This module implements the simulator initialization routines. " alt="" coords="1685,421,1848,477"/>
-<area shape="rect" id="node6" href="calqueue_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/datatypes/calqueue.c" alt="" coords="512,109,675,165"/>
+<area shape="rect" id="node6" href="calqueue_8c.html" title="A Calendar Queue Implementation. " alt="" coords="512,109,675,165"/>
 <area shape="rect" id="node7" href="msgchannel_8c.html" title="This module implements an (M, 1) channel to transfer message pointers. " alt="" coords="699,109,882,165"/>
 <area shape="rect" id="node8" href="ccgs_8c.html" title="Consistent and Committed Global State (CCGS) is a subsystem that (poeriodically) recomputes a global ..." alt="" coords="1312,421,1475,477"/>
 <area shape="rect" id="node9" href="fossil_8c.html" title="In this module all the housekeeping operations related to GVT computation phase are present..." alt="" coords="1872,421,2035,477"/>
@@ -160,16 +163,16 @@ $(document).ready(function(){initNavTree('mm_8h.html','');});
 <area shape="rect" id="node14" href="buddy_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/mm/buddy.c" alt="" coords="1261,213,1424,269"/>
 <area shape="rect" id="node15" href="checkpoints_8c.html" title="This module implements the routines to save and restore checkpoints, both full and incremental..." alt="" coords="2995,421,3157,477"/>
 <area shape="rect" id="node16" href="dymelor_8c.html" title="LP&#39;s memory pre&#45;allocator. This layer stands below DyMeLoR, and is the connection point to the Linux ..." alt="" coords="1499,421,1661,477"/>
-<area shape="rect" id="node17" href="segment_8c.html" title="Segment Allocator. " alt="" coords="1448,213,1611,269"/>
+<area shape="rect" id="node17" href="segment_8c.html" title="Segment Allocator. This is the lowest&#45;level allocator in ROOT&#45;Sim. " alt="" coords="1448,213,1611,269"/>
 <area shape="rect" id="node18" href="slab_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/mm/slab.c" alt="" coords="2133,109,2296,165"/>
 <area shape="rect" id="node19" href="state_8c.html" title="The state module is responsible for managing LPs&#39; simulation states. In particular, it allows to take a snapshot, to restore a previous snapshot, and to silently re&#45;execute a portion of simulation events to bring a LP to a partiuclar LVT value for which no simulation state. " alt="" coords="1125,421,1288,477"/>
 <area shape="rect" id="node20" href="queues_8c.html" title="This module implements the event/message queues subsystem. " alt="" coords="3632,421,3795,477"/>
-<area shape="rect" id="node21" href="control_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/scheduler/control.c" alt="" coords="3819,421,3981,477"/>
+<area shape="rect" id="node21" href="control_8c.html" title="Processing Points for Control Messages. " alt="" coords="3819,421,3981,477"/>
 <area shape="rect" id="node22" href="process_8h.html" title="This header defines a LP control block, keeping information about both simulation state and execution..." alt="" coords="2320,109,2483,165"/>
 <area shape="rect" id="node30" href="scheduler_8c.html" title="Re&#45;entrant scheduler for LPs on worker threads. " alt="" coords="2806,421,2970,477"/>
 <area shape="rect" id="node31" href="stf_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/scheduler/stf.c" alt="" coords="4005,421,4168,477"/>
 <area shape="rect" id="node32" href="serial_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/serial/serial.c" alt="" coords="2059,421,2221,477"/>
-<area shape="rect" id="node33" href="statistics_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/statistics/statistics.c" alt="" coords="3445,421,3608,477"/>
+<area shape="rect" id="node33" href="statistics_8c.html" title="State Management Subsystem. " alt="" coords="3445,421,3608,477"/>
 <area shape="rect" id="node23" href="asm__defines_8c.html" title="This file is not actually compiled into ROOT&#45;Sim. This is used by the build system to generate the as..." alt="" coords="2667,213,2829,269"/>
 <area shape="rect" id="node24" href="ult_8c.html" title="The User&#45;Level Thread module allows the creation/scheduling of a user&#45;level thread in an architecture..." alt="" coords="2853,213,3016,269"/>
 <area shape="rect" id="node25" href="queues_8h.html" title="Event and State queueing Subsystem main header. " alt="" coords="3293,213,3456,269"/>
@@ -177,7 +180,7 @@ $(document).ready(function(){initNavTree('mm_8h.html','');});
 <area shape="rect" id="node28" href="binding_8c.html" title="Implements load sharing rules for LPs among worker threads. " alt="" coords="2619,421,2781,477"/>
 <area shape="rect" id="node29" href="process_8c.html" title="This header defines type&#45;safe operations for LP control block management. " alt="" coords="2245,421,2408,477"/>
 <area shape="rect" id="node34" href="stf_8h.html" title="Smallest Timestamp First scheduler main header. " alt="" coords="2379,213,2541,269"/>
-<area shape="rect" id="node35" href="statistics_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="2040,213,2203,269"/>
+<area shape="rect" id="node35" href="statistics_8h.html" title="State Management Subsystem. " alt="" coords="2040,213,2203,269"/>
 <area shape="rect" id="node27" href="wrapper_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/lib&#45;wrapper/wrapper.c" alt="" coords="2432,421,2595,477"/>
 <area shape="rect" id="node36" href="init_8h.html" title="This module implements the simulator initialization routines. " alt="" coords="1515,317,1677,373"/>
 </map>
@@ -240,12 +243,15 @@ Variables</h2></td></tr>
 <tr class="separator:a73eff87a4602e5570e4fd3155ea5d9dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Copyright (C) 2008-2018 HPDCS Group <a href="http://www.dis.uniroma1.it/~hpdcs">http://www.dis.uniroma1.it/~hpdcs</a></p>
+<div class="textblock"><p>Memory Manager main header. </p>
+<p>Copyright (C) 2008-2018 HPDCS Group <a href="http://www.dis.uniroma1.it/~hpdcs">http://www.dis.uniroma1.it/~hpdcs</a></p>
 <p>This file is part of ROOT-Sim (ROme OpTimistic Simulator).</p>
 <p>ROOT-Sim is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; only version 3 of the License applies.</p>
 <p>ROOT-Sim is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
 <p>You should have received a copy of the GNU General Public License along with ROOT-Sim; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA</p>
-<dl class="section author"><dt>Author</dt><dd>Francesco Quaglia </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Alessandro Pellegrini </dd>
+<dd>
+Francesco Quaglia </dd></dl>
 
 <p>Definition in file <a class="el" href="mm_8h_source.html">mm.h</a>.</p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
@@ -259,7 +265,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="mm_8h_source.html#l00082">82</a> of file <a class="el" href="mm_8h_source.html">mm.h</a>.</p>
+<p>Definition at line <a class="el" href="mm_8h_source.html#l00081">81</a> of file <a class="el" href="mm_8h_source.html">mm.h</a>.</p>
 
 </div>
 </div>
@@ -273,7 +279,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">({ \</div><div class="line">            if(<a class="code" href="core_8h.html#a1c0c89beb84d05c5ba0bc7ce527a3925">unlikely</a>(<a class="code" href="mm_8h.html#a73eff87a4602e5570e4fd3155ea5d9dd">__page_size</a> == 0))<a class="code" href="mm_8h.html#a73eff87a4602e5570e4fd3155ea5d9dd">\</a></div><div class="line"><a class="code" href="mm_8h.html#a73eff87a4602e5570e4fd3155ea5d9dd">				__page_size</a> = getpagesize();<a class="code" href="mm_8h.html#a73eff87a4602e5570e4fd3155ea5d9dd">\</a></div><div class="line"><a class="code" href="mm_8h.html#a73eff87a4602e5570e4fd3155ea5d9dd">			__page_size</a>;\</div><div class="line">          })</div><div class="ttc" id="mm_8h_html_a73eff87a4602e5570e4fd3155ea5d9dd"><div class="ttname"><a href="mm_8h.html#a73eff87a4602e5570e4fd3155ea5d9dd">__page_size</a></div><div class="ttdeci">size_t __page_size</div><div class="ttdef"><b>Definition:</b> <a href="segment_8c_source.html#l00036">segment.c:36</a></div></div>
-<div class="ttc" id="core_8h_html_a1c0c89beb84d05c5ba0bc7ce527a3925"><div class="ttname"><a href="core_8h.html#a1c0c89beb84d05c5ba0bc7ce527a3925">unlikely</a></div><div class="ttdeci">#define unlikely(exp)</div><div class="ttdoc">Optimize the branch as likely not taken. </div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00075">core.h:75</a></div></div>
+<div class="ttc" id="core_8h_html_a1c0c89beb84d05c5ba0bc7ce527a3925"><div class="ttname"><a href="core_8h.html#a1c0c89beb84d05c5ba0bc7ce527a3925">unlikely</a></div><div class="ttdeci">#define unlikely(exp)</div><div class="ttdoc">Optimize the branch as likely not taken. </div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00074">core.h:74</a></div></div>
 </div><!-- fragment -->
 <p>Definition at line <a class="el" href="mm_8h_source.html#l00047">47</a> of file <a class="el" href="mm_8h_source.html">mm.h</a>.</p>
 
@@ -289,7 +295,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="mm_8h_source.html#l00081">81</a> of file <a class="el" href="mm_8h_source.html">mm.h</a>.</p>
+<p>Definition at line <a class="el" href="mm_8h_source.html#l00080">80</a> of file <a class="el" href="mm_8h_source.html">mm.h</a>.</p>
 
 </div>
 </div>
@@ -397,7 +403,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="segment_8c_source.html#l00135">135</a> of file <a class="el" href="segment_8c_source.html">segment.c</a>.</p>
+<p>Definition at line <a class="el" href="segment_8c_source.html#l00146">146</a> of file <a class="el" href="segment_8c_source.html">segment.c</a>.</p>
 
 <p><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -447,7 +453,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="segment_8c_source.html#l00066">66</a> of file <a class="el" href="segment_8c_source.html">segment.c</a>.</p>
+<p>Definition at line <a class="el" href="segment_8c_source.html#l00071">71</a> of file <a class="el" href="segment_8c_source.html">segment.c</a>.</p>
 
 <p><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -478,7 +484,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="segment_8c_source.html#l00126">126</a> of file <a class="el" href="segment_8c_source.html">segment.c</a>.</p>
+<p>Definition at line <a class="el" href="segment_8c_source.html#l00136">136</a> of file <a class="el" href="segment_8c_source.html">segment.c</a>.</p>
 
 <p><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -527,7 +533,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="segment_8c_source.html#l00091">91</a> of file <a class="el" href="segment_8c_source.html">segment.c</a>.</p>
+<p>Definition at line <a class="el" href="segment_8c_source.html#l00100">100</a> of file <a class="el" href="segment_8c_source.html">segment.c</a>.</p>
 
 <p><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -558,7 +564,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="slab_8c_source.html#l00132">132</a> of file <a class="el" href="slab_8c_source.html">slab.c</a>.</p>
+<p>Definition at line <a class="el" href="slab_8c_source.html#l00130">130</a> of file <a class="el" href="slab_8c_source.html">slab.c</a>.</p>
 
 <p><div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -628,7 +634,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="slab_8c_source.html#l00246">246</a> of file <a class="el" href="slab_8c_source.html">slab.c</a>.</p>
+<p>Definition at line <a class="el" href="slab_8c_source.html#l00240">240</a> of file <a class="el" href="slab_8c_source.html">slab.c</a>.</p>
 
 <p><div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>

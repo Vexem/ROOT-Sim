@@ -1,6 +1,5 @@
 var ccgs_8h =
 [
-    [ "__CCGS_H", "ccgs_8h.html#a77445331c93e0decf349559d2a0f33de", null ],
     [ "CKTRM_INVALID", "ccgs_8h.html#abc6126af1d45847bc59afa0aa3216b04a3cf0059ba90bb550100468d3be031ae8", null ],
     [ "CKTRM_NORMAL", "ccgs_8h.html#abc6126af1d45847bc59afa0aa3216b04a9a27c41b1b718d2351f8c58645c2b601", null ],
     [ "CKTRM_INCREMENTAL", "ccgs_8h.html#abc6126af1d45847bc59afa0aa3216b04ad2907699b0d2478657c92e08abef01a0", null ],

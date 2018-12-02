@@ -1,14 +1,14 @@
 <map id="/home/travis/build/HPDCS/ROOT&#45;Sim/src/lib/numerical.c" name="/home/travis/build/HPDCS/ROOT&#45;Sim/src/lib/numerical.c">
 <area shape="rect" id="node8" href="$ROOT-Sim_8h.html" title="This header defines all the symbols which are needed to develop a Model to be simulated on top of ROO..." alt="" coords="535,661,633,688"/>
 <area shape="rect" id="node14" href="$init_8h.html" title="This module implements the simulator initialization routines. " alt="" coords="1063,109,1148,136"/>
-<area shape="rect" id="node15" href="$statistics_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="1168,184,1320,211"/>
+<area shape="rect" id="node15" href="$statistics_8h.html" title="State Management Subsystem. " alt="" coords="1168,184,1320,211"/>
 <area shape="rect" id="node16" href="$process_8h.html" title="This header defines a LP control block, keeping information about both simulation state and execution..." alt="" coords="1161,259,1311,285"/>
-<area shape="rect" id="node24" href="$mm_8h.html" title="mm/mm.h" alt="" coords="780,348,871,375"/>
+<area shape="rect" id="node24" href="$mm_8h.html" title="Memory Manager main header. " alt="" coords="780,348,871,375"/>
 <area shape="rect" id="node39" href="$communication_8h.html" title="This is the main header file, containing all data structures and defines used by the communication su..." alt="" coords="410,348,646,375"/>
 <area shape="rect" id="node42" href="$scheduler_8h.html" title="Scheduling Subsystem main header file. Scheduler&#45;specific data structures and defines should be place..." alt="" coords="686,109,847,136"/>
 <area shape="rect" id="node17" href="$state_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="781,512,878,539"/>
 <area shape="rect" id="node21" href="$numerical_8h.html" title="This header is used to define symbols which must be accessible by the simulator but not by the applic..." alt="" coords="1148,661,1263,688"/>
-<area shape="rect" id="node33" href="$ecs_8h.html" title="mm/ecs.h" alt="" coords="1565,348,1651,375"/>
+<area shape="rect" id="node33" href="$ecs_8h.html" title="Event Cross State Synchronization. This module implements the userspace handler of the artificially i..." alt="" coords="1565,348,1651,375"/>
 <area shape="rect" id="node34" href="$list_8h.html" title="This header defines macros for accessing the general&#45;purpose list implementation used in the simulato..." alt="" coords="1463,661,1583,688"/>
 <area shape="rect" id="node37" href="$msgchannel_8h.html" title="This module implements an (M, 1) channel to transfer message pointers. " alt="" coords="1207,512,1387,539"/>
 <area shape="rect" id="node38" href="$ult_8h.html" title="The User&#45;Level Thread module allows the creation/scheduling of a user&#45;level thread in an architecture..." alt="" coords="1000,348,1083,375"/>

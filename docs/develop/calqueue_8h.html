@@ -114,6 +114,9 @@ $(document).ready(function(){initNavTree('calqueue_8h.html','');});
 <div class="title">calqueue.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>A Calendar Queue Implementation.  
+<a href="#details">More...</a></p>
 <div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> This graph shows which files directly or indirectly include this file:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -121,7 +124,7 @@ $(document).ready(function(){initNavTree('calqueue_8h.html','');});
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="calqueue_8h__dep__incl.png" border="0" usemap="#_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2datatypes_2calqueue_8hdep" alt=""/></div>
 <map name="_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2datatypes_2calqueue_8hdep" id="_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2datatypes_2calqueue_8hdep">
-<area shape="rect" id="node2" href="calqueue_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/datatypes/calqueue.c" alt="" coords="5,109,168,165"/>
+<area shape="rect" id="node2" href="calqueue_8c.html" title="A Calendar Queue Implementation. " alt="" coords="5,109,168,165"/>
 <area shape="rect" id="node3" href="serial_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/serial/serial.c" alt="" coords="192,109,355,165"/>
 </map>
 </div>
@@ -135,8 +138,6 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:af8cb66682cc349ffbc9597d434c9c87e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="calqueue_8h.html#af8cb66682cc349ffbc9597d434c9c87e">__CALQUEUE_H</a></td></tr>
-<tr class="separator:af8cb66682cc349ffbc9597d434c9c87e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a624aac5de3342bc03b2b27131d10d0a1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="calqueue_8h.html#a624aac5de3342bc03b2b27131d10d0a1">CALQSPACE</a>&#160;&#160;&#160;65536</td></tr>
 <tr class="separator:a624aac5de3342bc03b2b27131d10d0a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b06db5794247efae0c43dd638ab7c7c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="calqueue_8h.html#a8b06db5794247efae0c43dd638ab7c7c">MAXNBUCKETS</a>&#160;&#160;&#160;32768</td></tr>
@@ -158,21 +159,17 @@ Functions</h2></td></tr>
 <tr class="memitem:a6ce456642093e0ebcd9563dd723781d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="calqueue_8h.html#a6ce456642093e0ebcd9563dd723781d8">calqueue_put</a> (double, void *)</td></tr>
 <tr class="separator:a6ce456642093e0ebcd9563dd723781d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a class="anchor" id="af8cb66682cc349ffbc9597d434c9c87e"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define __CALQUEUE_H</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A Calendar Queue Implementation. </p>
+<p>Copyright (C) 2008-2018 HPDCS Group <a href="http://www.dis.uniroma1.it/~hpdcs">http://www.dis.uniroma1.it/~hpdcs</a></p>
+<p>This file is part of ROOT-Sim (ROme OpTimistic Simulator).</p>
+<p>ROOT-Sim is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; only version 3 of the License applies.</p>
+<p>ROOT-Sim is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+<p>You should have received a copy of the GNU General Public License along with ROOT-Sim; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA</p>
+<dl class="section author"><dt>Author</dt><dd>R. Brown </dd></dl>
 
-<p>Definition at line <a class="el" href="calqueue_8h_source.html#l00003">3</a> of file <a class="el" href="calqueue_8h_source.html">calqueue.h</a>.</p>
-
-</div>
-</div>
+<p>Definition in file <a class="el" href="calqueue_8h_source.html">calqueue.h</a>.</p>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a class="anchor" id="a624aac5de3342bc03b2b27131d10d0a1"></a>
 <div class="memitem">
 <div class="memproto">
@@ -183,7 +180,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="calqueue_8h_source.html#l00006">6</a> of file <a class="el" href="calqueue_8h_source.html">calqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="calqueue_8h_source.html#l00027">27</a> of file <a class="el" href="calqueue_8h_source.html">calqueue.h</a>.</p>
 
 </div>
 </div>
@@ -197,7 +194,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="calqueue_8h_source.html#l00007">7</a> of file <a class="el" href="calqueue_8h_source.html">calqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="calqueue_8h_source.html#l00028">28</a> of file <a class="el" href="calqueue_8h_source.html">calqueue.h</a>.</p>
 
 </div>
 </div>
@@ -212,7 +209,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="calqueue_8h_source.html#l00015">15</a> of file <a class="el" href="calqueue_8h_source.html">calqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="calqueue_8h_source.html#l00036">36</a> of file <a class="el" href="calqueue_8h_source.html">calqueue.h</a>.</p>
 
 </div>
 </div>
@@ -243,7 +240,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="calqueue_8c_source.html#l00290">290</a> of file <a class="el" href="calqueue_8c_source.html">calqueue.c</a>.</p>
+<p>Definition at line <a class="el" href="calqueue_8c_source.html#l00317">317</a> of file <a class="el" href="calqueue_8c_source.html">calqueue.c</a>.</p>
 
 <p><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -294,7 +291,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="calqueue_8c_source.html#l00243">243</a> of file <a class="el" href="calqueue_8c_source.html">calqueue.c</a>.</p>
+<p>Definition at line <a class="el" href="calqueue_8c_source.html#l00269">269</a> of file <a class="el" href="calqueue_8c_source.html">calqueue.c</a>.</p>
 
 <p><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -348,7 +345,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="calqueue_8c_source.html#l00249">249</a> of file <a class="el" href="calqueue_8c_source.html">calqueue.c</a>.</p>
+<p>Definition at line <a class="el" href="calqueue_8c_source.html#l00275">275</a> of file <a class="el" href="calqueue_8c_source.html">calqueue.c</a>.</p>
 
 <p><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>

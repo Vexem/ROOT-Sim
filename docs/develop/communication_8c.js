@@ -20,6 +20,6 @@ var communication_8c =
     [ "send_antimessages", "communication_8c.html#a4b5cfcdce234d44ebd663be3c23e02d1", null ],
     [ "send_outgoing_msgs", "communication_8c.html#a694613eb88ca26ef684f9bcf1bab1b59", null ],
     [ "validate_msg", "communication_8c.html#aebec05b86f3467473116d555954b80f4", null ],
-    [ "which_slab_to_use", "communication_8c.html#ae78d99ec41f43bbe641c00f1cb39d54c", null ],
-    [ "ScheduleNewEvent", "communication_8c.html#adf5ac84a7b37f69c19957c1ba59cfaea", null ]
+    [ "which_slab_to_use", "communication_8c.html#ae6b96249d35969d688d0d84209919c8f", null ],
+    [ "ScheduleNewEvent", "communication_8c.html#a1bf991ec14bcab7b310ffa40cd651da3", null ]
 ];

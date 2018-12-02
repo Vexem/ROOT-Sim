@@ -1,6 +1,6 @@
 <map id="/home/travis/build/HPDCS/ROOT&#45;Sim/src/mm/slab.c" name="/home/travis/build/HPDCS/ROOT&#45;Sim/src/mm/slab.c">
 <area shape="rect" id="node10" href="$core_8h.html" title="This header defines all the shared symbols which are needed by different subsystems. " alt="" coords="595,333,690,360"/>
-<area shape="rect" id="node21" href="$mm_8h.html" title="mm/mm.h" alt="" coords="541,109,632,136"/>
+<area shape="rect" id="node21" href="$mm_8h.html" title="Memory Manager main header. " alt="" coords="541,109,632,136"/>
 <area shape="rect" id="node11" href="$ROOT-Sim_8h.html" title="This header defines all the symbols which are needed to develop a Model to be simulated on top of ROO..." alt="" coords="768,408,867,435"/>
 <area shape="rect" id="node18" href="$numerical_8h.html" title="This header is used to define symbols which must be accessible by the simulator but not by the applic..." alt="" coords="629,408,744,435"/>
 <area shape="rect" id="node19" href="$thread_8h.html" title="This module implements Kernel Level Thread supports. " alt="" coords="446,408,554,435"/>

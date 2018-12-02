@@ -2,7 +2,7 @@ var searchData=
 [
   ['wait_5fon_5fobject',['wait_on_object',['../structlp__struct.html#a846422b47a38483132a738cc043f8c0c',1,'lp_struct']]],
   ['wait_5fon_5frendezvous',['wait_on_rendezvous',['../structlp__struct.html#a343766e636f744779387afa1dd8d5f87',1,'lp_struct']]],
-  ['which_5fslab_5fto_5fuse',['which_slab_to_use',['../communication_8c.html#ae78d99ec41f43bbe641c00f1cb39d54c',1,'which_slab_to_use(GID_t sender, GID_t receiver):&#160;communication.c'],['../communication_8h.html#ae78d99ec41f43bbe641c00f1cb39d54c',1,'which_slab_to_use(GID_t sender, GID_t receiver):&#160;communication.c']]],
+  ['which_5fslab_5fto_5fuse',['which_slab_to_use',['../communication_8c.html#ae6b96249d35969d688d0d84209919c8f',1,'communication.c']]],
   ['window_5fdimension',['WINDOW_DIMENSION',['../communication_8h.html#a0598e5260f93dc6e93bd8162213d66d4',1,'communication.h']]],
   ['windows_5finit',['windows_init',['../communication_8h.html#aef94c1e70d496234a143de1dfdb3e34b',1,'communication.h']]],
   ['wnd_2ec',['wnd.c',['../wnd_8c.html',1,'']]],

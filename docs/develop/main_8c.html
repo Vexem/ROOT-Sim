@@ -142,10 +142,10 @@ $(document).ready(function(){initNavTree('main_8c.html','');});
 <map name="_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2main_8c" id="_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2main_8c">
 <area shape="rect" id="node7" href="core_8h.html" title="This header defines all the shared symbols which are needed by different subsystems. " alt="" coords="1031,587,1125,613"/>
 <area shape="rect" id="node16" href="thread_8h.html" title="This module implements Kernel Level Thread supports. " alt="" coords="1423,661,1531,688"/>
-<area shape="rect" id="node18" href="statistics_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="1210,184,1362,211"/>
+<area shape="rect" id="node18" href="statistics_8h.html" title="State Management Subsystem. " alt="" coords="1210,184,1362,211"/>
 <area shape="rect" id="node19" href="process_8h.html" title="This header defines a LP control block, keeping information about both simulation state and execution..." alt="" coords="1047,259,1197,285"/>
-<area shape="rect" id="node21" href="mm_8h.html" title="mm/mm.h" alt="" coords="495,348,586,375"/>
-<area shape="rect" id="node39" href="ccgs_8h.html" title="Consistent and Committed Global State (CCGS) is a subsystem that (poeriodically) recomputes a global ..." alt="" coords="1623,259,1709,285"/>
+<area shape="rect" id="node21" href="mm_8h.html" title="Memory Manager main header. " alt="" coords="495,348,586,375"/>
+<area shape="rect" id="node39" href="ccgs_8h.html" title="gvt/ccgs.h" alt="" coords="1623,259,1709,285"/>
 <area shape="rect" id="node40" href="binding_8h.html" title="Implements load sharing rules for LPs among worker threads. " alt="" coords="1433,109,1579,136"/>
 <area shape="rect" id="node41" href="scheduler_8h.html" title="Scheduling Subsystem main header file. Scheduler&#45;specific data structures and defines should be place..." alt="" coords="877,109,1039,136"/>
 <area shape="rect" id="node44" href="gvt_2gvt_8h.html" title="This header defines all the Global Virtual Time symbols needed by the platform. The current implement..." alt="" coords="1687,437,1765,464"/>
@@ -156,7 +156,7 @@ $(document).ready(function(){initNavTree('main_8c.html','');});
 <area shape="rect" id="node15" href="numerical_8h.html" title="This header is used to define symbols which must be accessible by the simulator but not by the applic..." alt="" coords="1567,661,1682,688"/>
 <area shape="rect" id="node17" href="atomic_8h.html" title="This module implements atomic and non&#45;blocking operations used within ROOT&#45;Sim to coordinate threads ..." alt="" coords="1081,736,1192,763"/>
 <area shape="rect" id="node20" href="state_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="1464,512,1561,539"/>
-<area shape="rect" id="node30" href="ecs_8h.html" title="mm/ecs.h" alt="" coords="1079,348,1165,375"/>
+<area shape="rect" id="node30" href="ecs_8h.html" title="Event Cross State Synchronization. This module implements the userspace handler of the artificially i..." alt="" coords="1079,348,1165,375"/>
 <area shape="rect" id="node31" href="list_8h.html" title="This header defines macros for accessing the general&#45;purpose list implementation used in the simulato..." alt="" coords="861,661,981,688"/>
 <area shape="rect" id="node34" href="msgchannel_8h.html" title="This module implements an (M, 1) channel to transfer message pointers. " alt="" coords="1208,512,1388,539"/>
 <area shape="rect" id="node35" href="ult_8h.html" title="The User&#45;Level Thread module allows the creation/scheduling of a user&#45;level thread in an architecture..." alt="" coords="711,348,794,375"/>
@@ -203,7 +203,6 @@ Variables</h2></td></tr>
 Alessandro Pellegrini </dd>
 <dd>
 Roberto Vitali </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>3/16/2011 </dd></dl>
 
 <p>Definition in file <a class="el" href="main_8c_source.html">main.c</a>.</p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
@@ -217,7 +216,7 @@ Roberto Vitali </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="main_8c_source.html#l00053">53</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
+<p>Definition at line <a class="el" href="main_8c_source.html#l00051">51</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
 
 </div>
 </div>
@@ -245,7 +244,7 @@ Roberto Vitali </dd></dl>
 </div><div class="memdoc">
 <p>This function checks the different possibilities for termination detection termination. </p>
 
-<p>Definition at line <a class="el" href="main_8c_source.html#l00070">70</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
+<p>Definition at line <a class="el" href="main_8c_source.html#l00067">67</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
 
 <p><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -346,21 +345,16 @@ Roberto Vitali </dd></dl>
       </table>
 </div><div class="memdoc">
 <p>This function implements the ROOT-Sim's entry point</p>
-<dl class="section author"><dt>Author</dt><dd>Francesco Quaglia </dd>
-<dd>
-Alessandro Pellegrini </dd>
-<dd>
-Roberto Vitali </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">argc</td><td>Number of arguments passed to ROOT-Sim </td></tr>
-    <tr><td class="paramname">argv</td><td>Arguments passed to ROOT-Sim </td></tr>
+    <tr><td class="paramname">argv</td><td>Arguments passed to ROOT-Sim</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Exit code </dd></dl>
 
-<p>Definition at line <a class="el" href="main_8c_source.html#l00196">196</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
+<p>Definition at line <a class="el" href="main_8c_source.html#l00190">190</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
 
 <p><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -448,15 +442,12 @@ Roberto Vitali </dd></dl>
 <p>This function implements the main simulation loop</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">arg</td><td>This argument should be always set to NULL</td></tr>
+    <tr><td class="paramname">arg</td><td>This argument should be always set to NULL </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section author"><dt>Author</dt><dd>Francesco Quaglia </dd>
-<dd>
-Alessandro Pellegrini </dd></dl>
 
-<p>Definition at line <a class="el" href="main_8c_source.html#l00109">109</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
+<p>Definition at line <a class="el" href="main_8c_source.html#l00102">102</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
 
 <p><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -545,7 +536,7 @@ Alessandro Pellegrini </dd></dl>
 </div><div class="memdoc">
 <p>This jump buffer allows rootsim_error, in case of a failure, to jump out of any point in the code to the final part of the loop in which all threads synchronize. This avoids side effects like, e.g., accessing a NULL pointer. </p>
 
-<p>Definition at line <a class="el" href="main_8c_source.html#l00064">64</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
+<p>Definition at line <a class="el" href="main_8c_source.html#l00062">62</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
 
 </div>
 </div>

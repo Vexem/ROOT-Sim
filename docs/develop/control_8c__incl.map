@@ -2,8 +2,8 @@
 <area shape="rect" id="node3" href="$scheduler_8h.html" title="Scheduling Subsystem main header file. Scheduler&#45;specific data structures and defines should be place..." alt="" coords="410,109,571,136"/>
 <area shape="rect" id="node11" href="$core_8h.html" title="This header defines all the shared symbols which are needed by different subsystems. " alt="" coords="635,587,730,613"/>
 <area shape="rect" id="node19" href="$process_8h.html" title="This header defines a LP control block, keeping information about both simulation state and execution..." alt="" coords="609,259,759,285"/>
-<area shape="rect" id="node21" href="$mm_8h.html" title="mm/mm.h" alt="" coords="1107,348,1197,375"/>
-<area shape="rect" id="node30" href="$ecs_8h.html" title="mm/ecs.h" alt="" coords="1222,348,1309,375"/>
+<area shape="rect" id="node21" href="$mm_8h.html" title="Memory Manager main header. " alt="" coords="1107,348,1197,375"/>
+<area shape="rect" id="node30" href="$ecs_8h.html" title="Event Cross State Synchronization. This module implements the userspace handler of the artificially i..." alt="" coords="1222,348,1309,375"/>
 <area shape="rect" id="node31" href="$list_8h.html" title="This header defines macros for accessing the general&#45;purpose list implementation used in the simulato..." alt="" coords="1557,348,1677,375"/>
 <area shape="rect" id="node36" href="$communication_8h.html" title="This is the main header file, containing all data structures and defines used by the communication su..." alt="" coords="797,348,1033,375"/>
 <area shape="rect" id="node40" href="$gvt_2gvt_8h.html" title="This header defines all the Global Virtual Time symbols needed by the platform. The current implement..." alt="" coords="43,437,122,464"/>

@@ -133,16 +133,16 @@ $(document).ready(function(){initNavTree('fossil_8c.html','');});
 <map name="_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2gvt_2fossil_8c" id="_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2gvt_2fossil_8c">
 <area shape="rect" id="node2" href="thread_8h.html" title="This module implements Kernel Level Thread supports. " alt="" coords="1622,661,1730,688"/>
 <area shape="rect" id="node6" href="init_8h.html" title="This module implements the simulator initialization routines. " alt="" coords="886,109,972,136"/>
-<area shape="rect" id="node7" href="statistics_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="813,184,965,211"/>
+<area shape="rect" id="node7" href="statistics_8h.html" title="State Management Subsystem. " alt="" coords="813,184,965,211"/>
 <area shape="rect" id="node8" href="process_8h.html" title="This header defines a LP control block, keeping information about both simulation state and execution..." alt="" coords="606,259,756,285"/>
 <area shape="rect" id="node9" href="state_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="987,512,1084,539"/>
-<area shape="rect" id="node21" href="mm_8h.html" title="mm/mm.h" alt="" coords="1224,348,1314,375"/>
+<area shape="rect" id="node21" href="mm_8h.html" title="Memory Manager main header. " alt="" coords="1224,348,1314,375"/>
 <area shape="rect" id="node39" href="gvt_2gvt_8h.html" title="This header defines all the Global Virtual Time symbols needed by the platform. The current implement..." alt="" coords="523,437,602,464"/>
-<area shape="rect" id="node40" href="ccgs_8h.html" title="Consistent and Committed Global State (CCGS) is a subsystem that (poeriodically) recomputes a global ..." alt="" coords="966,259,1052,285"/>
+<area shape="rect" id="node40" href="ccgs_8h.html" title="gvt/ccgs.h" alt="" coords="966,259,1052,285"/>
 <area shape="rect" id="node41" href="scheduler_8h.html" title="Scheduling Subsystem main header file. Scheduler&#45;specific data structures and defines should be place..." alt="" coords="280,109,442,136"/>
 <area shape="rect" id="node4" href="atomic_8h.html" title="This module implements atomic and non&#45;blocking operations used within ROOT&#45;Sim to coordinate threads ..." alt="" coords="1684,736,1795,763"/>
 <area shape="rect" id="node20" href="numerical_8h.html" title="This header is used to define symbols which must be accessible by the simulator but not by the applic..." alt="" coords="1430,661,1545,688"/>
-<area shape="rect" id="node30" href="ecs_8h.html" title="mm/ecs.h" alt="" coords="624,348,711,375"/>
+<area shape="rect" id="node30" href="ecs_8h.html" title="Event Cross State Synchronization. This module implements the userspace handler of the artificially i..." alt="" coords="624,348,711,375"/>
 <area shape="rect" id="node31" href="list_8h.html" title="This header defines macros for accessing the general&#45;purpose list implementation used in the simulato..." alt="" coords="1805,661,1925,688"/>
 <area shape="rect" id="node34" href="msgchannel_8h.html" title="This module implements an (M, 1) channel to transfer message pointers. " alt="" coords="675,512,855,539"/>
 <area shape="rect" id="node35" href="ult_8h.html" title="The User&#45;Level Thread module allows the creation/scheduling of a user&#45;level thread in an architecture..." alt="" coords="54,348,137,375"/>
@@ -180,7 +180,9 @@ Variables</h2></td></tr>
 <p>ROOT-Sim is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; only version 3 of the License applies.</p>
 <p>ROOT-Sim is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
 <p>You should have received a copy of the GNU General Public License along with ROOT-Sim; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA</p>
-<dl class="section author"><dt>Author</dt><dd>Alessandro Pellegrini </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Alessandro Pellegrini </dd>
+<dd>
+Francesco Quaglia </dd></dl>
 
 <p>Definition in file <a class="el" href="fossil_8c_source.html">fossil.c</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
@@ -198,9 +200,14 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>This function is used by Master and Slave Kernels to determine the time barrier and perform some housekeeping once the new GVT value has been computed.</p>
-<dl class="section author"><dt>Author</dt><dd>Francesco Quaglia </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">new_gvt</td><td>This is a new GVT value which has been computed and can be used to perform fossil collection and to activate CCGS </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Definition at line <a class="el" href="fossil_8c_source.html#l00087">87</a> of file <a class="el" href="fossil_8c_source.html">fossil.c</a>.</p>
+<p>Definition at line <a class="el" href="fossil_8c_source.html#l00088">88</a> of file <a class="el" href="fossil_8c_source.html">fossil.c</a>.</p>
 
 <p><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -226,7 +233,7 @@ Variables</h2></td></tr>
 <area shape="rect" id="node14" href="platform_8c.html#ae2af2cd130d16958394ae21e9d13035f" title="__real_free" alt="" coords="1002,383,1094,409"/>
 <area shape="rect" id="node16" href="communication_8c.html#a323ad017762155352c38983e67e8adeb" title="msg_release" alt="" coords="428,332,532,359"/>
 <area shape="rect" id="node24" href="communication_8c.html#a762b3dacaa82c4590e0572ac08117153" title="msg_hdr_release" alt="" coords="414,231,546,257"/>
-<area shape="rect" id="node17" href="communication_8c.html#ae78d99ec41f43bbe641c00f1cb39d54c" title="which_slab_to_use" alt="" coords="607,281,747,308"/>
+<area shape="rect" id="node17" href="communication_8c.html#ae6b96249d35969d688d0d84209919c8f" title="which_slab_to_use" alt="" coords="607,281,747,308"/>
 <area shape="rect" id="node20" href="mm_8h.html#a891cd5abfed9deb98413ab7e7c29ef61" title="slab_free" alt="" coords="637,484,717,511"/>
 <area shape="rect" id="node18" href="core_8c.html#a6793e4c70d69277f24ff0e494ed8ed10" title="find_kernel_by_gid" alt="" coords="801,281,939,308"/>
 <area shape="rect" id="node19" href="process_8c.html#a2193e0386f7858db77f38146a15d3cd1" title="find_lp_by_gid" alt="" coords="815,231,925,257"/>
@@ -284,16 +291,15 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>Determine which snapshots in the state queue can be free'd because are placed before the current time barrier.</p>
 <p>Queues are cleaned by deleting all the events the timestamp of which is STRICTLY lower than the time barrier. Since state_pointer points to an event in queue_in, the state queue must be cleaned after the input queue.</p>
-<dl class="section author"><dt>Author</dt><dd>Francesco Quaglia</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">lid</td><td>The logical process' local identifier </td></tr>
+    <tr><td class="paramname">lp</td><td>A pointer to the <a class="el" href="structlp__struct.html">lp_struct</a> for which we want to recollect memory </td></tr>
     <tr><td class="paramname">time_barrier</td><td>The current barrier </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="fossil_8c_source.html#l00053">53</a> of file <a class="el" href="fossil_8c_source.html">fossil.c</a>.</p>
+<p>Definition at line <a class="el" href="fossil_8c_source.html#l00049">49</a> of file <a class="el" href="fossil_8c_source.html">fossil.c</a>.</p>
 
 <p><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -308,7 +314,7 @@ Variables</h2></td></tr>
 <area shape="rect" id="node14" href="communication_8c.html#a762b3dacaa82c4590e0572ac08117153" title="msg_hdr_release" alt="" coords="184,132,316,159"/>
 <area shape="rect" id="node3" href="dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a" title="rsfree" alt="" coords="601,259,660,285"/>
 <area shape="rect" id="node4" href="platform_8c.html#ae2af2cd130d16958394ae21e9d13035f" title="__real_free" alt="" coords="748,259,840,285"/>
-<area shape="rect" id="node6" href="communication_8c.html#ae78d99ec41f43bbe641c00f1cb39d54c" title="which_slab_to_use" alt="" coords="373,56,513,83"/>
+<area shape="rect" id="node6" href="communication_8c.html#ae6b96249d35969d688d0d84209919c8f" title="which_slab_to_use" alt="" coords="373,56,513,83"/>
 <area shape="rect" id="node9" href="mm_8h.html#a891cd5abfed9deb98413ab7e7c29ef61" title="slab_free" alt="" coords="403,157,483,184"/>
 <area shape="rect" id="node7" href="core_8c.html#a6793e4c70d69277f24ff0e494ed8ed10" title="find_kernel_by_gid" alt="" coords="561,56,700,83"/>
 <area shape="rect" id="node8" href="process_8c.html#a2193e0386f7858db77f38146a15d3cd1" title="find_lp_by_gid" alt="" coords="575,5,686,32"/>
@@ -358,7 +364,7 @@ Variables</h2></td></tr>
 
 <p>Counter for the invocations of adopt_new_gvt. This is used to determine whether a consistent state must be reconstructed. </p>
 
-<p>Definition at line <a class="el" href="fossil_8c_source.html#l00040">40</a> of file <a class="el" href="fossil_8c_source.html">fossil.c</a>.</p>
+<p>Definition at line <a class="el" href="fossil_8c_source.html#l00038">38</a> of file <a class="el" href="fossil_8c_source.html">fossil.c</a>.</p>
 
 </div>
 </div>

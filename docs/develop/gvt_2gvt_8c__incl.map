@@ -3,11 +3,11 @@
 <area shape="rect" id="node10" href="$thread_8h.html" title="This module implements Kernel Level Thread supports. " alt="" coords="1274,661,1382,688"/>
 <area shape="rect" id="node13" href="$gvt_2gvt_8h.html" title="This header defines all the Global Virtual Time symbols needed by the platform. The current implement..." alt="" coords="145,437,223,464"/>
 <area shape="rect" id="node15" href="$core_8h.html" title="This header defines all the shared symbols which are needed by different subsystems. " alt="" coords="789,587,883,613"/>
-<area shape="rect" id="node19" href="$ccgs_8h.html" title="Consistent and Committed Global State (CCGS) is a subsystem that (poeriodically) recomputes a global ..." alt="" coords="221,259,307,285"/>
+<area shape="rect" id="node19" href="$ccgs_8h.html" title="gvt/ccgs.h" alt="" coords="221,259,307,285"/>
 <area shape="rect" id="node20" href="$init_8h.html" title="This module implements the simulator initialization routines. " alt="" coords="1163,109,1248,136"/>
-<area shape="rect" id="node21" href="$statistics_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="1129,184,1281,211"/>
+<area shape="rect" id="node21" href="$statistics_8h.html" title="State Management Subsystem. " alt="" coords="1129,184,1281,211"/>
 <area shape="rect" id="node22" href="$process_8h.html" title="This header defines a LP control block, keeping information about both simulation state and execution..." alt="" coords="913,259,1063,285"/>
-<area shape="rect" id="node23" href="$mm_8h.html" title="mm/mm.h" alt="" coords="403,348,493,375"/>
+<area shape="rect" id="node23" href="$mm_8h.html" title="Memory Manager main header. " alt="" coords="403,348,493,375"/>
 <area shape="rect" id="node29" href="$timer_8h.html" title="This header defines the timers which the simulator uses to monitor its internal behaviour. " alt="" coords="161,512,260,539"/>
 <area shape="rect" id="node41" href="$scheduler_8h.html" title="Scheduling Subsystem main header file. Scheduler&#45;specific data structures and defines should be place..." alt="" coords="778,109,939,136"/>
 <area shape="rect" id="node44" href="$mpi_8h.html" title="MPI support module. " alt="" coords="1642,109,1803,136"/>
@@ -15,7 +15,7 @@
 <area shape="rect" id="node11" href="$atomic_8h.html" title="This module implements atomic and non&#45;blocking operations used within ROOT&#45;Sim to coordinate threads ..." alt="" coords="1325,736,1435,763"/>
 <area shape="rect" id="node14" href="$state_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="358,512,455,539"/>
 <area shape="rect" id="node18" href="$numerical_8h.html" title="This header is used to define symbols which must be accessible by the simulator but not by the applic..." alt="" coords="895,661,1009,688"/>
-<area shape="rect" id="node32" href="$ecs_8h.html" title="mm/ecs.h" alt="" coords="986,348,1073,375"/>
+<area shape="rect" id="node32" href="$ecs_8h.html" title="Event Cross State Synchronization. This module implements the userspace handler of the artificially i..." alt="" coords="986,348,1073,375"/>
 <area shape="rect" id="node33" href="$list_8h.html" title="This header defines macros for accessing the general&#45;purpose list implementation used in the simulato..." alt="" coords="1457,661,1577,688"/>
 <area shape="rect" id="node36" href="$msgchannel_8h.html" title="This module implements an (M, 1) channel to transfer message pointers. " alt="" coords="1030,512,1210,539"/>
 <area shape="rect" id="node37" href="$ult_8h.html" title="The User&#45;Level Thread module allows the creation/scheduling of a user&#45;level thread in an architecture..." alt="" coords="568,348,651,375"/>

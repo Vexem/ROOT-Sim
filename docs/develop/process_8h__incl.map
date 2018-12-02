@@ -1,8 +1,8 @@
 <map id="/home/travis/build/HPDCS/ROOT&#45;Sim/src/scheduler/process.h" name="/home/travis/build/HPDCS/ROOT&#45;Sim/src/scheduler/process.h">
 <area shape="rect" id="node3" href="$state_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="94,288,191,315"/>
 <area shape="rect" id="node15" href="$numerical_8h.html" title="This header is used to define symbols which must be accessible by the simulator but not by the applic..." alt="" coords="43,437,157,464"/>
-<area shape="rect" id="node18" href="$mm_8h.html" title="mm/mm.h" alt="" coords="721,124,812,151"/>
-<area shape="rect" id="node27" href="$ecs_8h.html" title="mm/ecs.h" alt="" coords="1218,124,1305,151"/>
+<area shape="rect" id="node18" href="$mm_8h.html" title="Memory Manager main header. " alt="" coords="721,124,812,151"/>
+<area shape="rect" id="node27" href="$ecs_8h.html" title="Event Cross State Synchronization. This module implements the userspace handler of the artificially i..." alt="" coords="1218,124,1305,151"/>
 <area shape="rect" id="node28" href="$list_8h.html" title="This header defines macros for accessing the general&#45;purpose list implementation used in the simulato..." alt="" coords="1167,437,1287,464"/>
 <area shape="rect" id="node31" href="$msgchannel_8h.html" title="This module implements an (M, 1) channel to transfer message pointers. " alt="" coords="215,288,395,315"/>
 <area shape="rect" id="node32" href="$ult_8h.html" title="The User&#45;Level Thread module allows the creation/scheduling of a user&#45;level thread in an architecture..." alt="" coords="353,213,436,240"/>

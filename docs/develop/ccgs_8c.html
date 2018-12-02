@@ -136,17 +136,17 @@ $(document).ready(function(){initNavTree('ccgs_8c.html','');});
 <area shape="rect" id="node17" href="init_8h.html" title="This module implements the simulator initialization routines. " alt="" coords="1257,109,1343,136"/>
 <area shape="rect" id="node19" href="process_8h.html" title="This header defines a LP control block, keeping information about both simulation state and execution..." alt="" coords="1051,259,1202,285"/>
 <area shape="rect" id="node20" href="state_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="1317,512,1414,539"/>
-<area shape="rect" id="node21" href="mm_8h.html" title="mm/mm.h" alt="" coords="267,348,357,375"/>
+<area shape="rect" id="node21" href="mm_8h.html" title="Memory Manager main header. " alt="" coords="267,348,357,375"/>
 <area shape="rect" id="node36" href="communication_8h.html" title="This is the main header file, containing all data structures and defines used by the communication su..." alt="" coords="431,348,667,375"/>
 <area shape="rect" id="node39" href="mpi_8h.html" title="MPI support module. " alt="" coords="1707,109,1869,136"/>
-<area shape="rect" id="node40" href="ccgs_8h.html" title="Consistent and Committed Global State (CCGS) is a subsystem that (poeriodically) recomputes a global ..." alt="" coords="1330,259,1417,285"/>
+<area shape="rect" id="node40" href="ccgs_8h.html" title="gvt/ccgs.h" alt="" coords="1330,259,1417,285"/>
 <area shape="rect" id="node41" href="scheduler_8h.html" title="Scheduling Subsystem main header file. Scheduler&#45;specific data structures and defines should be place..." alt="" coords="867,109,1029,136"/>
 <area shape="rect" id="node4" href="ROOT-Sim_8h.html" title="This header defines all the symbols which are needed to develop a Model to be simulated on top of ROO..." alt="" coords="1044,661,1143,688"/>
 <area shape="rect" id="node14" href="numerical_8h.html" title="This header is used to define symbols which must be accessible by the simulator but not by the applic..." alt="" coords="1272,661,1387,688"/>
 <area shape="rect" id="node15" href="thread_8h.html" title="This module implements Kernel Level Thread supports. " alt="" coords="323,661,431,688"/>
 <area shape="rect" id="node16" href="atomic_8h.html" title="This module implements atomic and non&#45;blocking operations used within ROOT&#45;Sim to coordinate threads ..." alt="" coords="310,736,421,763"/>
-<area shape="rect" id="node18" href="statistics_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="1265,184,1417,211"/>
-<area shape="rect" id="node30" href="ecs_8h.html" title="mm/ecs.h" alt="" coords="1001,348,1087,375"/>
+<area shape="rect" id="node18" href="statistics_8h.html" title="State Management Subsystem. " alt="" coords="1265,184,1417,211"/>
+<area shape="rect" id="node30" href="ecs_8h.html" title="Event Cross State Synchronization. This module implements the userspace handler of the artificially i..." alt="" coords="1001,348,1087,375"/>
 <area shape="rect" id="node31" href="list_8h.html" title="This header defines macros for accessing the general&#45;purpose list implementation used in the simulato..." alt="" coords="727,661,847,688"/>
 <area shape="rect" id="node34" href="msgchannel_8h.html" title="This module implements an (M, 1) channel to transfer message pointers. " alt="" coords="894,512,1074,539"/>
 <area shape="rect" id="node35" href="ult_8h.html" title="The User&#45;Level Thread module allows the creation/scheduling of a user&#45;level thread in an architecture..." alt="" coords="792,348,875,375"/>
@@ -190,9 +190,16 @@ Variables</h2></td></tr>
 <p>ROOT-Sim is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; only version 3 of the License applies.</p>
 <p>ROOT-Sim is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
 <p>You should have received a copy of the GNU General Public License along with ROOT-Sim; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA</p>
+<dl class="section date"><dt>Date</dt><dd>2007 </dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Francesco Quaglia </dd>
 <dd>
-Alessandro Pellegrini </dd></dl>
+Paolo Romano </dd>
+<dd>
+Alessandro Pellegrini </dd>
+<dd>
+Diego Cucuzzo </dd>
+<dd>
+Stefano D’Alessio </dd></dl>
 
 <p>Definition in file <a class="el" href="ccgs_8c_source.html">ccgs.c</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
@@ -260,9 +267,6 @@ Alessandro Pellegrini </dd></dl>
       </table>
 </div><div class="memdoc">
 <p>This function rebuilds a simulation state aligned to the new GVT for every LP. In this way, each LP is asked (via the OnGVT() callback) to check whether the simulation can terminate. Two different execution modes are available for this function, depending on the CCGS level in rootsim_config: committed and consistent. The committed version passes to the simulation model for validation the first simulation state that is found committed before the GVT commitment horizon. Nevertheless, two states passed to two different LPs can be associated with different timestamps. Running this function in consistent state, realignes the state of all LPs to the same simulation time, namely the GVT. This allows all LPs to agree on a consistent simulation time for termination detection. This induces, of course, an additional overhead, because the runtime environment has to reprocess in silent execution multiple events.</p>
-<dl class="section author"><dt>Author</dt><dd>Francesco Quaglia </dd>
-<dd>
-Alessandro Pellegrini</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">time_barrier_pointer</td><td>An array containing the time barrier states of the LPs as computed by the GVT subsystem </td></tr>
@@ -271,7 +275,7 @@ Alessandro Pellegrini</dd></dl>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="ccgs_8c_source.html#l00105">105</a> of file <a class="el" href="ccgs_8c_source.html">ccgs.c</a>.</p>
+<p>Definition at line <a class="el" href="ccgs_8c_source.html#l00102">102</a> of file <a class="el" href="ccgs_8c_source.html">ccgs.c</a>.</p>
 
 <p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -327,7 +331,7 @@ Alessandro Pellegrini</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ccgs_8c_source.html#l00184">184</a> of file <a class="el" href="ccgs_8c_source.html">ccgs.c</a>.</p>
+<p>Definition at line <a class="el" href="ccgs_8c_source.html#l00183">183</a> of file <a class="el" href="ccgs_8c_source.html">ccgs.c</a>.</p>
 
 <p><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -463,7 +467,7 @@ Alessandro Pellegrini</dd></dl>
 
 <p>This variable is an aggregate result for the distributed termination detection. </p>
 
-<p>Definition at line <a class="el" href="ccgs_8c_source.html#l00042">42</a> of file <a class="el" href="ccgs_8c_source.html">ccgs.c</a>.</p>
+<p>Definition at line <a class="el" href="ccgs_8c_source.html#l00044">44</a> of file <a class="el" href="ccgs_8c_source.html">ccgs.c</a>.</p>
 
 </div>
 </div>
@@ -487,7 +491,7 @@ Alessandro Pellegrini</dd></dl>
 
 <p>In case termination detection is incremental, this array keeps track of LPs that think the simulation can be halted already. </p>
 
-<p>Definition at line <a class="el" href="ccgs_8c_source.html#l00045">45</a> of file <a class="el" href="ccgs_8c_source.html">ccgs.c</a>.</p>
+<p>Definition at line <a class="el" href="ccgs_8c_source.html#l00047">47</a> of file <a class="el" href="ccgs_8c_source.html">ccgs.c</a>.</p>
 
 </div>
 </div>

@@ -1,7 +1,6 @@
 var state_8h =
 [
     [ "_state_t", "struct__state__t.html", "struct__state__t" ],
-    [ "_STATE_MGNT_H_", "state_8h.html#a1feb60cc12b98608323cd7de5010f5bc", null ],
     [ "state_t", "state_8h.html#a18331b6247faf186c17ea75b89b30651", null ],
     [ "STATE_SAVING_INVALID", "state_8h.html#adc29c2ff13d900c2f185ee95427fb06cae085df2998f3f7d58e233e0b907ecdb3", null ],
     [ "STATE_SAVING_COPY", "state_8h.html#adc29c2ff13d900c2f185ee95427fb06cac3e13420f47754d2b455f9cdc0c9ec9e", null ],

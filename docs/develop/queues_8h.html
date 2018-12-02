@@ -131,8 +131,8 @@ $(document).ready(function(){initNavTree('queues_8h.html','');});
 <area shape="rect" id="node15" href="thread_8h.html" title="This module implements Kernel Level Thread supports. " alt="" coords="382,512,490,539"/>
 <area shape="rect" id="node16" href="atomic_8h.html" title="This module implements atomic and non&#45;blocking operations used within ROOT&#45;Sim to coordinate threads ..." alt="" coords="310,587,421,613"/>
 <area shape="rect" id="node18" href="state_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="902,363,999,389"/>
-<area shape="rect" id="node19" href="mm_8h.html" title="mm/mm.h" alt="" coords="636,199,727,225"/>
-<area shape="rect" id="node28" href="ecs_8h.html" title="mm/ecs.h" alt="" coords="525,199,611,225"/>
+<area shape="rect" id="node19" href="mm_8h.html" title="Memory Manager main header. " alt="" coords="636,199,727,225"/>
+<area shape="rect" id="node28" href="ecs_8h.html" title="Event Cross State Synchronization. This module implements the userspace handler of the artificially i..." alt="" coords="525,199,611,225"/>
 <area shape="rect" id="node29" href="list_8h.html" title="This header defines macros for accessing the general&#45;purpose list implementation used in the simulato..." alt="" coords="1275,512,1395,539"/>
 <area shape="rect" id="node32" href="msgchannel_8h.html" title="This module implements an (M, 1) channel to transfer message pointers. " alt="" coords="251,363,431,389"/>
 <area shape="rect" id="node33" href="ult_8h.html" title="The User&#45;Level Thread module allows the creation/scheduling of a user&#45;level thread in an architecture..." alt="" coords="43,288,125,315"/>
@@ -154,7 +154,7 @@ $(document).ready(function(){initNavTree('queues_8h.html','');});
 <area shape="rect" id="node3" href="queues_8c.html" title="This module implements the event/message queues subsystem. " alt="" coords="269,213,431,269"/>
 <area shape="rect" id="node4" href="scheduler_8h.html" title="Scheduling Subsystem main header file. Scheduler&#45;specific data structures and defines should be place..." alt="" coords="1950,109,2115,165"/>
 <area shape="rect" id="node21" href="stf_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/scheduler/stf.c" alt="" coords="3631,213,3794,269"/>
-<area shape="rect" id="node23" href="statistics_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/statistics/statistics.c" alt="" coords="3818,213,3981,269"/>
+<area shape="rect" id="node23" href="statistics_8c.html" title="State Management Subsystem. " alt="" coords="3818,213,3981,269"/>
 <area shape="rect" id="node5" href="core_8c.html" title="This module implements core functionalities for ROOT&#45;Sim and declares core global variables for the s..." alt="" coords="1391,213,1554,269"/>
 <area shape="rect" id="node6" href="init_8c.html" title="This module implements the simulator initialization routines. " alt="" coords="1578,213,1741,269"/>
 <area shape="rect" id="node7" href="ccgs_8c.html" title="Consistent and Committed Global State (CCGS) is a subsystem that (poeriodically) recomputes a global ..." alt="" coords="1765,213,1927,269"/>
@@ -168,7 +168,7 @@ $(document).ready(function(){initNavTree('queues_8h.html','');});
 <area shape="rect" id="node15" href="dymelor_8c.html" title="LP&#39;s memory pre&#45;allocator. This layer stands below DyMeLoR, and is the connection point to the Linux ..." alt="" coords="3258,213,3421,269"/>
 <area shape="rect" id="node16" href="state_8c.html" title="The state module is responsible for managing LPs&#39; simulation states. In particular, it allows to take a snapshot, to restore a previous snapshot, and to silently re&#45;execute a portion of simulation events to bring a LP to a partiuclar LVT value for which no simulation state. " alt="" coords="3445,213,3607,269"/>
 <area shape="rect" id="node17" href="binding_8c.html" title="Implements load sharing rules for LPs among worker threads. " alt="" coords="455,213,618,269"/>
-<area shape="rect" id="node18" href="control_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/scheduler/control.c" alt="" coords="642,213,805,269"/>
+<area shape="rect" id="node18" href="control_8c.html" title="Processing Points for Control Messages. " alt="" coords="642,213,805,269"/>
 <area shape="rect" id="node19" href="process_8c.html" title="This header defines type&#45;safe operations for LP control block management. " alt="" coords="829,213,991,269"/>
 <area shape="rect" id="node20" href="scheduler_8c.html" title="Re&#45;entrant scheduler for LPs on worker threads. " alt="" coords="1016,213,1180,269"/>
 <area shape="rect" id="node22" href="serial_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/serial/serial.c" alt="" coords="1205,213,1367,269"/>
@@ -273,7 +273,7 @@ Francesco Quaglia</dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The pointer to the event is going to be processed </dd></dl>
 
-<p>Definition at line <a class="el" href="queues_8c_source.html#l00086">86</a> of file <a class="el" href="queues_8c_source.html">queues.c</a>.</p>
+<p>Definition at line <a class="el" href="queues_8c_source.html#l00085">85</a> of file <a class="el" href="queues_8c_source.html">queues.c</a>.</p>
 
 <p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -318,7 +318,7 @@ Francesco Quaglia</dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A value to be used as a unique mark for the message within the LP </dd></dl>
 
-<p>Definition at line <a class="el" href="queues_8c_source.html#l00266">266</a> of file <a class="el" href="queues_8c_source.html">queues.c</a>.</p>
+<p>Definition at line <a class="el" href="queues_8c_source.html#l00283">283</a> of file <a class="el" href="queues_8c_source.html">queues.c</a>.</p>
 
 <p><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -385,7 +385,7 @@ Francesco Quaglia</dd></dl>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="queues_8c_source.html#l00117">117</a> of file <a class="el" href="queues_8c_source.html">queues.c</a>.</p>
+<p>Definition at line <a class="el" href="queues_8c_source.html#l00116">116</a> of file <a class="el" href="queues_8c_source.html">queues.c</a>.</p>
 
 <p><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -457,7 +457,7 @@ Francesco Quaglia</dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The timestamp of the next-to-execute event </dd></dl>
 
-<p>Definition at line <a class="el" href="queues_8c_source.html#l00056">56</a> of file <a class="el" href="queues_8c_source.html">queues.c</a>.</p>
+<p>Definition at line <a class="el" href="queues_8c_source.html#l00055">55</a> of file <a class="el" href="queues_8c_source.html">queues.c</a>.</p>
 
 <p><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -496,7 +496,7 @@ Francesco Quaglia</dd></dl>
 <p>Process bottom halves received by all the LPs hosted by the current KLT</p>
 <dl class="section author"><dt>Author</dt><dd>Alessandro Pellegrini </dd></dl>
 
-<p>Definition at line <a class="el" href="queues_8c_source.html#l00134">134</a> of file <a class="el" href="queues_8c_source.html">queues.c</a>.</p>
+<p>Definition at line <a class="el" href="queues_8c_source.html#l00133">133</a> of file <a class="el" href="queues_8c_source.html">queues.c</a>.</p>
 
 <p><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -529,7 +529,7 @@ Francesco Quaglia</dd></dl>
 <area shape="rect" id="node18" href="platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="1227,613,1336,640"/>
 <area shape="rect" id="node21" href="checkpoints_8c.html#a9be0910d1b3a99682d5d2971b4b79f3b" title="log_full" alt="" coords="896,664,963,691"/>
 <area shape="rect" id="node22" href="dymelor_8c.html#a90e313c8735836c166694aa746cc841e" title="get_log_size" alt="" coords="1053,664,1154,691"/>
-<area shape="rect" id="node24" href="communication_8c.html#ae78d99ec41f43bbe641c00f1cb39d54c" title="which_slab_to_use" alt="" coords="456,360,596,387"/>
+<area shape="rect" id="node24" href="communication_8c.html#ae6b96249d35969d688d0d84209919c8f" title="which_slab_to_use" alt="" coords="456,360,596,387"/>
 <area shape="rect" id="node26" href="mm_8h.html#a891cd5abfed9deb98413ab7e7c29ef61" title="slab_free" alt="" coords="486,259,566,285"/>
 <area shape="rect" id="node28" href="dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a" title="rsfree" alt="" coords="717,309,775,336"/>
 <area shape="rect" id="node25" href="core_8c.html#a6793e4c70d69277f24ff0e494ed8ed10" title="find_kernel_by_gid" alt="" coords="677,360,815,387"/>

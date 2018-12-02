@@ -5,7 +5,7 @@
 <area shape="rect" id="node13" href="$communication_8c.html#ab5250867c0edfc326732c059b0c0c3b5" title="Send" alt="" coords="228,60,283,87"/>
 <area shape="rect" id="node4" href="$platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="557,288,667,315"/>
 <area shape="rect" id="node6" href="$communication_8c.html#ab957dc2cd186382c50ef8cfde9761909" title="get_msg_from_slab" alt="" coords="347,238,495,264"/>
-<area shape="rect" id="node11" href="$communication_8c.html#ae78d99ec41f43bbe641c00f1cb39d54c" title="which_slab_to_use" alt="" coords="351,187,491,214"/>
+<area shape="rect" id="node11" href="$communication_8c.html#ae6b96249d35969d688d0d84209919c8f" title="which_slab_to_use" alt="" coords="351,187,491,214"/>
 <area shape="rect" id="node7" href="$mm_8h.html#a13199823c54d944aa128966cb35c5aa3" title="slab_alloc" alt="" coords="570,238,654,264"/>
 <area shape="rect" id="node8" href="$atomic_8h.html#a7a6b9868956dd8e51e5de80e16c76fc4" title="spin_lock" alt="" coords="743,187,823,214"/>
 <area shape="rect" id="node9" href="$slab_8c.html#ac0e4a2a4ab26d7f2399eecbb72fc4cff" title="slab_is_valid" alt="" coords="732,238,833,264"/>

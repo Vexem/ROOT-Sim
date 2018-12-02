@@ -147,7 +147,7 @@ $(document).ready(function(){initNavTree('communication_8h.html','');});
 <area shape="rect" id="node6" href="numerical_8c.html" title="In this module there are the implementations of Piece&#45;Wise Deterministic numerical distribution imple..." alt="" coords="3631,421,3794,477"/>
 <area shape="rect" id="node7" href="state_8c.html" title="The state module is responsible for managing LPs&#39; simulation states. In particular, it allows to take a snapshot, to restore a previous snapshot, and to silently re&#45;execute a portion of simulation events to bring a LP to a partiuclar LVT value for which no simulation state. " alt="" coords="4005,421,4167,477"/>
 <area shape="rect" id="node8" href="queues_8c.html" title="This module implements the event/message queues subsystem. " alt="" coords="455,421,618,477"/>
-<area shape="rect" id="node9" href="control_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/scheduler/control.c" alt="" coords="642,421,805,477"/>
+<area shape="rect" id="node9" href="control_8c.html" title="Processing Points for Control Messages. " alt="" coords="642,421,805,477"/>
 <area shape="rect" id="node10" href="process_8h.html" title="This header defines a LP control block, keeping information about both simulation state and execution..." alt="" coords="2059,109,2222,165"/>
 <area shape="rect" id="node21" href="scheduler_8h.html" title="Scheduling Subsystem main header file. Scheduler&#45;specific data structures and defines should be place..." alt="" coords="2107,317,2273,373"/>
 <area shape="rect" id="node27" href="scheduler_8c.html" title="Re&#45;entrant scheduler for LPs on worker threads. " alt="" coords="3256,421,3420,477"/>
@@ -159,14 +159,14 @@ $(document).ready(function(){initNavTree('communication_8h.html','');});
 <area shape="rect" id="node16" href="main_8c.html" title="This module contains the entry point for the simulator, and some core functions. " alt="" coords="2322,421,2485,477"/>
 <area shape="rect" id="node17" href="buddy_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/mm/buddy.c" alt="" coords="1633,213,1795,269"/>
 <area shape="rect" id="node18" href="checkpoints_8c.html" title="This module implements the routines to save and restore checkpoints, both full and incremental..." alt="" coords="829,421,991,477"/>
-<area shape="rect" id="node19" href="segment_8c.html" title="Segment Allocator. " alt="" coords="1870,213,2033,269"/>
+<area shape="rect" id="node19" href="segment_8c.html" title="Segment Allocator. This is the lowest&#45;level allocator in ROOT&#45;Sim. " alt="" coords="1870,213,2033,269"/>
 <area shape="rect" id="node20" href="queues_8h.html" title="Event and State queueing Subsystem main header. " alt="" coords="830,213,993,269"/>
 <area shape="rect" id="node25" href="binding_8c.html" title="Implements load sharing rules for LPs among worker threads. " alt="" coords="1015,421,1178,477"/>
 <area shape="rect" id="node26" href="process_8c.html" title="This header defines type&#45;safe operations for LP control block management. " alt="" coords="1762,421,1925,477"/>
 <area shape="rect" id="node28" href="stf_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/scheduler/stf.c" alt="" coords="269,421,431,477"/>
-<area shape="rect" id="node30" href="statistics_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/statistics/statistics.c" alt="" coords="1202,421,1365,477"/>
+<area shape="rect" id="node30" href="statistics_8c.html" title="State Management Subsystem. " alt="" coords="1202,421,1365,477"/>
 <area shape="rect" id="node31" href="stf_8h.html" title="Smallest Timestamp First scheduler main header. " alt="" coords="2661,213,2823,269"/>
-<area shape="rect" id="node32" href="statistics_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="2347,213,2510,269"/>
+<area shape="rect" id="node32" href="statistics_8h.html" title="State Management Subsystem. " alt="" coords="2347,213,2510,269"/>
 <area shape="rect" id="node22" href="topology_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/lib/topology.c" alt="" coords="1575,421,1738,477"/>
 <area shape="rect" id="node23" href="wrapper_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/lib&#45;wrapper/wrapper.c" alt="" coords="1949,421,2111,477"/>
 <area shape="rect" id="node24" href="dymelor_8c.html" title="LP&#39;s memory pre&#45;allocator. This layer stands below DyMeLoR, and is the connection point to the Linux ..." alt="" coords="2135,421,2298,477"/>
@@ -239,7 +239,7 @@ Typedefs</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr class="memitem:aae2939440b2eb406455c0f4a361d92af"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="communication_8h.html#aae2939440b2eb406455c0f4a361d92af">_control_msgs</a> { <br />
-&#160;&#160;<a class="el" href="communication_8h.html#aae2939440b2eb406455c0f4a361d92afae3a54d983325ffd785a263e26a638d38">MIN_VALUE_CONTROL</a> =65537, 
+&#160;&#160;<a class="el" href="communication_8h.html#aae2939440b2eb406455c0f4a361d92afae3a54d983325ffd785a263e26a638d38">MIN_VALUE_CONTROL</a> = 65537, 
 <a class="el" href="communication_8h.html#aae2939440b2eb406455c0f4a361d92afa50168e957cdc644f9b4a00dc1c7d0982">RENDEZVOUS_START</a>, 
 <a class="el" href="communication_8h.html#aae2939440b2eb406455c0f4a361d92afad2f2ea6ad7e33781793f433c42a5314e">RENDEZVOUS_ACK</a>, 
 <a class="el" href="communication_8h.html#aae2939440b2eb406455c0f4a361d92afa48f7be3732190e1cb332fbd9b859207b">RENDEZVOUS_UNBLOCK</a>, 
@@ -293,8 +293,6 @@ Functions</h2></td></tr>
 <tr class="separator:a6ebfcb1c9b4ca73a4ffae29a45685c2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e4558c023a128f352946790882d7f97"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="communication_8h.html#a1e4558c023a128f352946790882d7f97">start_ack_timer</a> (void)</td></tr>
 <tr class="separator:a1e4558c023a128f352946790882d7f97"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae78d99ec41f43bbe641c00f1cb39d54c"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structlp__struct.html">lp_struct</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="communication_8h.html#ae78d99ec41f43bbe641c00f1cb39d54c">which_slab_to_use</a> (<a class="el" href="core_8h.html#a74ea65c5dea49dba0b0c4b3bb8ee47f1">GID_t</a> sender, <a class="el" href="core_8h.html#a74ea65c5dea49dba0b0c4b3bb8ee47f1">GID_t</a> receiver)</td></tr>
-<tr class="separator:ae78d99ec41f43bbe641c00f1cb39d54c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a762b3dacaa82c4590e0572ac08117153"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="communication_8h.html#a762b3dacaa82c4590e0572ac08117153">msg_hdr_release</a> (<a class="el" href="core_8h.html#ab4ec065a56677fd6e8eb5d360aad06e2">msg_hdr_t</a> *msg)</td></tr>
 <tr class="separator:a762b3dacaa82c4590e0572ac08117153"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afff0e221f1375dfb80dd4ca64b01a26e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="core_8h.html#abb831098e1334cd59d2c5e374416680e">msg_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="communication_8h.html#afff0e221f1375dfb80dd4ca64b01a26e">get_msg_from_slab</a> (struct <a class="el" href="structlp__struct.html">lp_struct</a> *)</td></tr>
@@ -351,7 +349,7 @@ Roberto Vitali</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8h_source.html#l00086">86</a> of file <a class="el" href="communication_8h_source.html">communication.h</a>.</p>
+<p>Definition at line <a class="el" href="communication_8h_source.html#l00078">78</a> of file <a class="el" href="communication_8h_source.html">communication.h</a>.</p>
 
 </div>
 </div>
@@ -369,7 +367,7 @@ Roberto Vitali</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8h_source.html#l00063">63</a> of file <a class="el" href="communication_8h_source.html">communication.h</a>.</p>
+<p>Definition at line <a class="el" href="communication_8h_source.html#l00058">58</a> of file <a class="el" href="communication_8h_source.html">communication.h</a>.</p>
 
 </div>
 </div>
@@ -383,7 +381,7 @@ Roberto Vitali</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8h_source.html#l00078">78</a> of file <a class="el" href="communication_8h_source.html">communication.h</a>.</p>
+<p>Definition at line <a class="el" href="communication_8h_source.html#l00071">71</a> of file <a class="el" href="communication_8h_source.html">communication.h</a>.</p>
 
 </div>
 </div>
@@ -397,7 +395,7 @@ Roberto Vitali</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8h_source.html#l00067">67</a> of file <a class="el" href="communication_8h_source.html">communication.h</a>.</p>
+<p>Definition at line <a class="el" href="communication_8h_source.html#l00062">62</a> of file <a class="el" href="communication_8h_source.html">communication.h</a>.</p>
 
 </div>
 </div>
@@ -411,7 +409,7 @@ Roberto Vitali</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8h_source.html#l00083">83</a> of file <a class="el" href="communication_8h_source.html">communication.h</a>.</p>
+<p>Definition at line <a class="el" href="communication_8h_source.html#l00076">76</a> of file <a class="el" href="communication_8h_source.html">communication.h</a>.</p>
 
 </div>
 </div>
@@ -425,7 +423,7 @@ Roberto Vitali</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8h_source.html#l00071">71</a> of file <a class="el" href="communication_8h_source.html">communication.h</a>.</p>
+<p>Definition at line <a class="el" href="communication_8h_source.html#l00066">66</a> of file <a class="el" href="communication_8h_source.html">communication.h</a>.</p>
 
 </div>
 </div>
@@ -439,7 +437,7 @@ Roberto Vitali</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8h_source.html#l00069">69</a> of file <a class="el" href="communication_8h_source.html">communication.h</a>.</p>
+<p>Definition at line <a class="el" href="communication_8h_source.html#l00064">64</a> of file <a class="el" href="communication_8h_source.html">communication.h</a>.</p>
 
 </div>
 </div>
@@ -453,7 +451,7 @@ Roberto Vitali</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8h_source.html#l00072">72</a> of file <a class="el" href="communication_8h_source.html">communication.h</a>.</p>
+<p>Definition at line <a class="el" href="communication_8h_source.html#l00067">67</a> of file <a class="el" href="communication_8h_source.html">communication.h</a>.</p>
 
 </div>
 </div>
@@ -467,7 +465,7 @@ Roberto Vitali</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8h_source.html#l00079">79</a> of file <a class="el" href="communication_8h_source.html">communication.h</a>.</p>
+<p>Definition at line <a class="el" href="communication_8h_source.html#l00072">72</a> of file <a class="el" href="communication_8h_source.html">communication.h</a>.</p>
 
 </div>
 </div>
@@ -481,7 +479,7 @@ Roberto Vitali</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8h_source.html#l00066">66</a> of file <a class="el" href="communication_8h_source.html">communication.h</a>.</p>
+<p>Definition at line <a class="el" href="communication_8h_source.html#l00061">61</a> of file <a class="el" href="communication_8h_source.html">communication.h</a>.</p>
 
 </div>
 </div>
@@ -495,7 +493,7 @@ Roberto Vitali</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8h_source.html#l00080">80</a> of file <a class="el" href="communication_8h_source.html">communication.h</a>.</p>
+<p>Definition at line <a class="el" href="communication_8h_source.html#l00073">73</a> of file <a class="el" href="communication_8h_source.html">communication.h</a>.</p>
 
 </div>
 </div>
@@ -509,7 +507,7 @@ Roberto Vitali</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8h_source.html#l00073">73</a> of file <a class="el" href="communication_8h_source.html">communication.h</a>.</p>
+<p>Definition at line <a class="el" href="communication_8h_source.html#l00068">68</a> of file <a class="el" href="communication_8h_source.html">communication.h</a>.</p>
 
 </div>
 </div>
@@ -523,7 +521,7 @@ Roberto Vitali</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8h_source.html#l00082">82</a> of file <a class="el" href="communication_8h_source.html">communication.h</a>.</p>
+<p>Definition at line <a class="el" href="communication_8h_source.html#l00075">75</a> of file <a class="el" href="communication_8h_source.html">communication.h</a>.</p>
 
 </div>
 </div>
@@ -537,7 +535,7 @@ Roberto Vitali</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8h_source.html#l00081">81</a> of file <a class="el" href="communication_8h_source.html">communication.h</a>.</p>
+<p>Definition at line <a class="el" href="communication_8h_source.html#l00074">74</a> of file <a class="el" href="communication_8h_source.html">communication.h</a>.</p>
 
 </div>
 </div>
@@ -551,7 +549,7 @@ Roberto Vitali</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8h_source.html#l00070">70</a> of file <a class="el" href="communication_8h_source.html">communication.h</a>.</p>
+<p>Definition at line <a class="el" href="communication_8h_source.html#l00065">65</a> of file <a class="el" href="communication_8h_source.html">communication.h</a>.</p>
 
 </div>
 </div>
@@ -565,7 +563,7 @@ Roberto Vitali</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8h_source.html#l00042">42</a> of file <a class="el" href="communication_8h_source.html">communication.h</a>.</p>
+<p>Definition at line <a class="el" href="communication_8h_source.html#l00040">40</a> of file <a class="el" href="communication_8h_source.html">communication.h</a>.</p>
 
 </div>
 </div>
@@ -581,7 +579,7 @@ Roberto Vitali</dd></dl>
 
 <p>Number of slots used by MPI for buffering messages. </p>
 
-<p>Definition at line <a class="el" href="communication_8h_source.html#l00047">47</a> of file <a class="el" href="communication_8h_source.html">communication.h</a>.</p>
+<p>Definition at line <a class="el" href="communication_8h_source.html#l00043">43</a> of file <a class="el" href="communication_8h_source.html">communication.h</a>.</p>
 
 </div>
 </div>
@@ -597,7 +595,7 @@ Roberto Vitali</dd></dl>
 
 <p>Ack window size. </p>
 
-<p>Definition at line <a class="el" href="communication_8h_source.html#l00039">39</a> of file <a class="el" href="communication_8h_source.html">communication.h</a>.</p>
+<p>Definition at line <a class="el" href="communication_8h_source.html#l00038">38</a> of file <a class="el" href="communication_8h_source.html">communication.h</a>.</p>
 
 </div>
 </div>
@@ -613,7 +611,7 @@ Roberto Vitali</dd></dl>
 
 <p>Ack window size. </p>
 
-<p>Definition at line <a class="el" href="communication_8h_source.html#l00037">37</a> of file <a class="el" href="communication_8h_source.html">communication.h</a>.</p>
+<p>Definition at line <a class="el" href="communication_8h_source.html#l00036">36</a> of file <a class="el" href="communication_8h_source.html">communication.h</a>.</p>
 
 </div>
 </div>
@@ -665,7 +663,7 @@ Roberto Vitali</dd></dl>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="communication_8h_source.html#l00051">51</a> of file <a class="el" href="communication_8h_source.html">communication.h</a>.</p>
+<p>Definition at line <a class="el" href="communication_8h_source.html#l00046">46</a> of file <a class="el" href="communication_8h_source.html">communication.h</a>.</p>
 
 </div>
 </div>
@@ -685,7 +683,7 @@ Roberto Vitali</dd></dl>
 </div><div class="memdoc">
 <dl class="section author"><dt>Author</dt><dd>Roberto Vitali </dd></dl>
 
-<p>Definition at line <a class="el" href="communication_8c_source.html#l00224">224</a> of file <a class="el" href="communication_8c_source.html">communication.c</a>.</p>
+<p>Definition at line <a class="el" href="communication_8c_source.html#l00226">226</a> of file <a class="el" href="communication_8c_source.html">communication.c</a>.</p>
 
 </div>
 </div>
@@ -704,7 +702,7 @@ Roberto Vitali</dd></dl>
 </div><div class="memdoc">
 <p>Finalizes the communication subsystem </p>
 
-<p>Definition at line <a class="el" href="communication_8c_source.html#l00069">69</a> of file <a class="el" href="communication_8c_source.html">communication.c</a>.</p>
+<p>Definition at line <a class="el" href="communication_8c_source.html#l00071">71</a> of file <a class="el" href="communication_8c_source.html">communication.c</a>.</p>
 
 <p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -741,7 +739,7 @@ Roberto Vitali</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8c_source.html#l00062">62</a> of file <a class="el" href="communication_8c_source.html">communication.c</a>.</p>
+<p>Definition at line <a class="el" href="communication_8c_source.html#l00064">64</a> of file <a class="el" href="communication_8c_source.html">communication.c</a>.</p>
 
 </div>
 </div>
@@ -792,7 +790,7 @@ Roberto Vitali</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8c_source.html#l00059">59</a> of file <a class="el" href="communication_8c_source.html">communication.c</a>.</p>
+<p>Definition at line <a class="el" href="communication_8c_source.html#l00060">60</a> of file <a class="el" href="communication_8c_source.html">communication.c</a>.</p>
 
 <p><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -825,7 +823,7 @@ Roberto Vitali</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8c_source.html#l00348">348</a> of file <a class="el" href="communication_8c_source.html">communication.c</a>.</p>
+<p>Definition at line <a class="el" href="communication_8c_source.html#l00352">352</a> of file <a class="el" href="communication_8c_source.html">communication.c</a>.</p>
 
 <p><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -860,7 +858,7 @@ Roberto Vitali</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8c_source.html#l00102">102</a> of file <a class="el" href="communication_8c_source.html">communication.c</a>.</p>
+<p>Definition at line <a class="el" href="communication_8c_source.html#l00107">107</a> of file <a class="el" href="communication_8c_source.html">communication.c</a>.</p>
 
 <p><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -920,7 +918,7 @@ Roberto Vitali</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8c_source.html#l00094">94</a> of file <a class="el" href="communication_8c_source.html">communication.c</a>.</p>
+<p>Definition at line <a class="el" href="communication_8c_source.html#l00098">98</a> of file <a class="el" href="communication_8c_source.html">communication.c</a>.</p>
 
 <p><div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -983,7 +981,7 @@ Roberto Vitali</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8c_source.html#l00338">338</a> of file <a class="el" href="communication_8c_source.html">communication.c</a>.</p>
+<p>Definition at line <a class="el" href="communication_8c_source.html#l00341">341</a> of file <a class="el" href="communication_8c_source.html">communication.c</a>.</p>
 
 <p><div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -1022,7 +1020,7 @@ Roberto Vitali</dd></dl>
 </div><div class="memdoc">
 <dl class="section author"><dt>Author</dt><dd>Francesco Quaglia </dd></dl>
 
-<p>Definition at line <a class="el" href="communication_8c_source.html#l00264">264</a> of file <a class="el" href="communication_8c_source.html">communication.c</a>.</p>
+<p>Definition at line <a class="el" href="communication_8c_source.html#l00266">266</a> of file <a class="el" href="communication_8c_source.html">communication.c</a>.</p>
 
 <p><div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -1099,7 +1097,7 @@ Roberto Vitali</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8c_source.html#l00086">86</a> of file <a class="el" href="communication_8c_source.html">communication.c</a>.</p>
+<p>Definition at line <a class="el" href="communication_8c_source.html#l00090">90</a> of file <a class="el" href="communication_8c_source.html">communication.c</a>.</p>
 
 <p><div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -1157,7 +1155,7 @@ Roberto Vitali</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8c_source.html#l00108">108</a> of file <a class="el" href="communication_8c_source.html">communication.c</a>.</p>
+<p>Definition at line <a class="el" href="communication_8c_source.html#l00114">114</a> of file <a class="el" href="communication_8c_source.html">communication.c</a>.</p>
 
 <p><div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-15-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -1166,7 +1164,7 @@ Roberto Vitali</dd></dl>
 <div id="dynsection-15-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="communication_8h_a323ad017762155352c38983e67e8adeb_cgraph.png" border="0" usemap="#communication_8h_a323ad017762155352c38983e67e8adeb_cgraph" alt=""/></div>
 <map name="communication_8h_a323ad017762155352c38983e67e8adeb_cgraph" id="communication_8h_a323ad017762155352c38983e67e8adeb_cgraph">
-<area shape="rect" id="node2" href="communication_8c.html#ae78d99ec41f43bbe641c00f1cb39d54c" title="which_slab_to_use" alt="" coords="157,56,297,83"/>
+<area shape="rect" id="node2" href="communication_8c.html#ae6b96249d35969d688d0d84209919c8f" title="which_slab_to_use" alt="" coords="157,56,297,83"/>
 <area shape="rect" id="node5" href="mm_8h.html#a891cd5abfed9deb98413ab7e7c29ef61" title="slab_free" alt="" coords="187,183,267,209"/>
 <area shape="rect" id="node8" href="dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a" title="rsfree" alt="" coords="385,259,444,285"/>
 <area shape="rect" id="node3" href="core_8c.html#a6793e4c70d69277f24ff0e494ed8ed10" title="find_kernel_by_gid" alt="" coords="345,5,484,32"/>
@@ -1224,7 +1222,7 @@ Roberto Vitali</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8c_source.html#l00326">326</a> of file <a class="el" href="communication_8c_source.html">communication.c</a>.</p>
+<p>Definition at line <a class="el" href="communication_8c_source.html#l00328">328</a> of file <a class="el" href="communication_8c_source.html">communication.c</a>.</p>
 
 <p><div id="dynsection-17" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-17-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -1320,7 +1318,7 @@ Roberto Vitali</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8c_source.html#l00304">304</a> of file <a class="el" href="communication_8c_source.html">communication.c</a>.</p>
+<p>Definition at line <a class="el" href="communication_8c_source.html#l00305">305</a> of file <a class="el" href="communication_8c_source.html">communication.c</a>.</p>
 
 <p><div id="dynsection-19" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-19-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -1330,7 +1328,7 @@ Roberto Vitali</dd></dl>
 <div class="center"><img src="communication_8h_a56a4865196c169691525e99bae337519_cgraph.png" border="0" usemap="#communication_8h_a56a4865196c169691525e99bae337519_cgraph" alt=""/></div>
 <map name="communication_8h_a56a4865196c169691525e99bae337519_cgraph" id="communication_8h_a56a4865196c169691525e99bae337519_cgraph">
 <area shape="rect" id="node2" href="communication_8c.html#ab957dc2cd186382c50ef8cfde9761909" title="get_msg_from_slab" alt="" coords="140,63,288,89"/>
-<area shape="rect" id="node7" href="communication_8c.html#ae78d99ec41f43bbe641c00f1cb39d54c" title="which_slab_to_use" alt="" coords="144,120,284,147"/>
+<area shape="rect" id="node7" href="communication_8c.html#ae6b96249d35969d688d0d84209919c8f" title="which_slab_to_use" alt="" coords="144,120,284,147"/>
 <area shape="rect" id="node10" href="dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="183,183,245,209"/>
 <area shape="rect" id="node3" href="mm_8h.html#a13199823c54d944aa128966cb35c5aa3" title="slab_alloc" alt="" coords="363,56,447,83"/>
 <area shape="rect" id="node4" href="atomic_8h.html#a7a6b9868956dd8e51e5de80e16c76fc4" title="spin_lock" alt="" coords="533,5,613,32"/>
@@ -1422,7 +1420,7 @@ Roberto Vitali</dd></dl>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="communication_8c_source.html#l00131">131</a> of file <a class="el" href="communication_8c_source.html">communication.c</a>.</p>
+<p>Definition at line <a class="el" href="communication_8c_source.html#l00137">137</a> of file <a class="el" href="communication_8c_source.html">communication.c</a>.</p>
 
 <p><div id="dynsection-21" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-21-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -1435,7 +1433,7 @@ Roberto Vitali</dd></dl>
 <area shape="rect" id="node13" href="queues_8c.html#aee531712d642cd5d4a54e613aa2c70f9" title="generate_mark" alt="" coords="261,208,381,235"/>
 <area shape="rect" id="node14" href="communication_8c.html#ae80f5356cc32f9f2373305341e409b3b" title="insert_outgoing_msg" alt="" coords="243,259,399,285"/>
 <area shape="rect" id="node3" href="communication_8c.html#ab957dc2cd186382c50ef8cfde9761909" title="get_msg_from_slab" alt="" coords="447,81,595,108"/>
-<area shape="rect" id="node8" href="communication_8c.html#ae78d99ec41f43bbe641c00f1cb39d54c" title="which_slab_to_use" alt="" coords="451,157,591,184"/>
+<area shape="rect" id="node8" href="communication_8c.html#ae6b96249d35969d688d0d84209919c8f" title="which_slab_to_use" alt="" coords="451,157,591,184"/>
 <area shape="rect" id="node11" href="dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="489,208,552,235"/>
 <area shape="rect" id="node4" href="mm_8h.html#a13199823c54d944aa128966cb35c5aa3" title="slab_alloc" alt="" coords="670,56,754,83"/>
 <area shape="rect" id="node5" href="atomic_8h.html#a7a6b9868956dd8e51e5de80e16c76fc4" title="spin_lock" alt="" coords="840,5,920,32"/>
@@ -1529,7 +1527,7 @@ Roberto Vitali</dd></dl>
 <p>Send a message. if it's scheduled to a local LP, update its queue, otherwise ask MPI to deliver it to the hosting kernel instance.</p>
 <dl class="section author"><dt>Author</dt><dd>francesco quaglia </dd></dl>
 
-<p>Definition at line <a class="el" href="communication_8c_source.html#l00245">245</a> of file <a class="el" href="communication_8c_source.html">communication.c</a>.</p>
+<p>Definition at line <a class="el" href="communication_8c_source.html#l00246">246</a> of file <a class="el" href="communication_8c_source.html">communication.c</a>.</p>
 
 <p><div id="dynsection-23" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-23-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -1610,7 +1608,7 @@ Roberto Vitali</dd></dl>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="communication_8c_source.html#l00191">191</a> of file <a class="el" href="communication_8c_source.html">communication.c</a>.</p>
+<p>Definition at line <a class="el" href="communication_8c_source.html#l00196">196</a> of file <a class="el" href="communication_8c_source.html">communication.c</a>.</p>
 
 <p><div id="dynsection-25" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-25-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -1620,7 +1618,7 @@ Roberto Vitali</dd></dl>
 <div class="center"><img src="communication_8h_aa8047651e174f4d26bef644233b5c8f8_cgraph.png" border="0" usemap="#communication_8h_aa8047651e174f4d26bef644233b5c8f8_cgraph" alt=""/></div>
 <map name="communication_8h_aa8047651e174f4d26bef644233b5c8f8_cgraph" id="communication_8h_aa8047651e174f4d26bef644233b5c8f8_cgraph">
 <area shape="rect" id="node2" href="communication_8c.html#ab957dc2cd186382c50ef8cfde9761909" title="get_msg_from_slab" alt="" coords="204,56,352,83"/>
-<area shape="rect" id="node7" href="communication_8c.html#ae78d99ec41f43bbe641c00f1cb39d54c" title="which_slab_to_use" alt="" coords="208,157,348,184"/>
+<area shape="rect" id="node7" href="communication_8c.html#ae6b96249d35969d688d0d84209919c8f" title="which_slab_to_use" alt="" coords="208,157,348,184"/>
 <area shape="rect" id="node10" href="communication_8c.html#a5bbdfc874efd40b9126ce2202fb19534" title="hdr_to_msg" alt="" coords="229,259,327,285"/>
 <area shape="rect" id="node11" href="communication_8c.html#ab5250867c0edfc326732c059b0c0c3b5" title="Send" alt="" coords="251,208,305,235"/>
 <area shape="rect" id="node18" href="communication_8c.html#a762b3dacaa82c4590e0572ac08117153" title="msg_hdr_release" alt="" coords="405,107,537,133"/>
@@ -1694,7 +1692,7 @@ Roberto Vitali</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8c_source.html#l00282">282</a> of file <a class="el" href="communication_8c_source.html">communication.c</a>.</p>
+<p>Definition at line <a class="el" href="communication_8c_source.html#l00284">284</a> of file <a class="el" href="communication_8c_source.html">communication.c</a>.</p>
 
 <p><div id="dynsection-27" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-27-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -1773,7 +1771,7 @@ Roberto Vitali</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="communication_8c_source.html#l00374">374</a> of file <a class="el" href="communication_8c_source.html">communication.c</a>.</p>
+<p>Definition at line <a class="el" href="communication_8c_source.html#l00380">380</a> of file <a class="el" href="communication_8c_source.html">communication.c</a>.</p>
 
 <p><div id="dynsection-29" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-29-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -1812,76 +1810,6 @@ Roberto Vitali</dd></dl>
 <area shape="rect" id="node9" href="main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="1881,132,2003,159"/>
 <area shape="rect" id="node10" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1915,183,1969,209"/>
 <area shape="rect" id="node19" href="queues_8h.html#a54eca9bfa893cac072d1b1d3010c2944" title="process_bottom_halves" alt="" coords="1081,208,1256,235"/>
-</map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="ae78d99ec41f43bbe641c00f1cb39d54c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">struct <a class="el" href="structlp__struct.html">lp_struct</a>* which_slab_to_use </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="core_8h.html#a74ea65c5dea49dba0b0c4b3bb8ee47f1">GID_t</a>&#160;</td>
-          <td class="paramname"><em>sender</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="core_8h.html#a74ea65c5dea49dba0b0c4b3bb8ee47f1">GID_t</a>&#160;</td>
-          <td class="paramname"><em>receiver</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="communication_8c_source.html#l00076">76</a> of file <a class="el" href="communication_8c_source.html">communication.c</a>.</p>
-
-<p><div id="dynsection-31" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-31-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-31-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-31-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="communication_8h_ae78d99ec41f43bbe641c00f1cb39d54c_cgraph.png" border="0" usemap="#communication_8h_ae78d99ec41f43bbe641c00f1cb39d54c_cgraph" alt=""/></div>
-<map name="communication_8h_ae78d99ec41f43bbe641c00f1cb39d54c_cgraph" id="communication_8h_ae78d99ec41f43bbe641c00f1cb39d54c_cgraph">
-<area shape="rect" id="node2" href="core_8c.html#a6793e4c70d69277f24ff0e494ed8ed10" title="find_kernel_by_gid" alt="" coords="193,5,332,32"/>
-<area shape="rect" id="node3" href="process_8c.html#a2193e0386f7858db77f38146a15d3cd1" title="find_lp_by_gid" alt="" coords="207,56,318,83"/>
-</map>
-</div>
-</p>
-
-<p><div id="dynsection-32" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-32-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-32-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-32-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="communication_8h_ae78d99ec41f43bbe641c00f1cb39d54c_icgraph.png" border="0" usemap="#communication_8h_ae78d99ec41f43bbe641c00f1cb39d54c_icgraph" alt=""/></div>
-<map name="communication_8h_ae78d99ec41f43bbe641c00f1cb39d54c_icgraph" id="communication_8h_ae78d99ec41f43bbe641c00f1cb39d54c_icgraph">
-<area shape="rect" id="node2" href="communication_8h.html#a323ad017762155352c38983e67e8adeb" title="msg_release" alt="" coords="671,5,775,32"/>
-<area shape="rect" id="node11" href="communication_8h.html#aa8047651e174f4d26bef644233b5c8f8" title="send_antimessages" alt="" coords="193,56,344,83"/>
-<area shape="rect" id="node15" href="communication_8h.html#a56a4865196c169691525e99bae337519" title="pack_msg" alt="" coords="225,157,312,184"/>
-<area shape="rect" id="node3" href="fossil_8c.html#af4d5d546129fe91cedfc16ddedf76464" title="fossil_collection" alt="" coords="892,5,1013,32"/>
-<area shape="rect" id="node9" href="queues_8h.html#a54eca9bfa893cac072d1b1d3010c2944" title="process_bottom_halves" alt="" coords="865,56,1040,83"/>
-<area shape="rect" id="node4" href="gvt_2gvt_8h.html#a62e7abde0dac08e56aa2a57401aed27b" title="adopt_new_gvt" alt="" coords="1114,5,1233,32"/>
-<area shape="rect" id="node5" href="gvt_2gvt_8h.html#a899b50ab45427cf145360ff3a6c29808" title="gvt_operations" alt="" coords="1307,56,1424,83"/>
-<area shape="rect" id="node6" href="main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="1472,157,1633,184"/>
-<area shape="rect" id="node7" href="main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="1681,157,1803,184"/>
-<area shape="rect" id="node8" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1715,233,1769,260"/>
-<area shape="rect" id="node10" href="gvt_2gvt_8c.html#a895d5bfff43f3ee72f9cf7097abf609b" title="GVT_phases" alt="" coords="1123,56,1224,83"/>
-<area shape="rect" id="node12" href="state_8h.html#a1fd6b7926db41257e07600226d87fffa" title="rollback" alt="" coords="687,107,758,133"/>
-<area shape="rect" id="node13" href="scheduler_8h.html#ac48128e72b303ea22d8ec641a9516b15" title="schedule" alt="" coords="913,157,992,184"/>
-<area shape="rect" id="node14" href="scheduler_8h.html#af405fd79c1cd59fccce27658d6e11941" title="initialize_worker_thread" alt="" coords="1088,208,1259,235"/>
-<area shape="rect" id="node16" href="communication_8h.html#ae0329023aeab7047bcb7b4708698a008" title="ParallelScheduleNewEvent" alt="" coords="628,259,817,285"/>
-<area shape="rect" id="node18" href="scheduler_8h.html#ac54b610f24de85b6444f61c4c094242c" title="rollback_control_message" alt="" coords="392,107,580,133"/>
-<area shape="rect" id="node19" href="scheduler_8h.html#aacd9fe9684de21c933680f355acb5766" title="process_control_msg" alt="" coords="407,157,565,184"/>
-<area shape="rect" id="node17" href="init_8h.html#a417eb072179d09f441dbae3125049e46" title="SystemInit" alt="" coords="1320,259,1411,285"/>
 </map>
 </div>
 </p>
