@@ -371,15 +371,13 @@ Roberto Vitali </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>November 11, 2013</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">lp</td><td>The id of the LP to be scheduled </td></tr>
-    <tr><td class="paramname">lvt</td><td>The lvt at which the LP is scheduled </td></tr>
+    <tr><td class="paramname">next</td><td>A pointer to the <a class="el" href="structlp__struct.html">lp_struct</a> of the LP which has to be activated </td></tr>
     <tr><td class="paramname">evt</td><td>A pointer to the event to be processed by the LP </td></tr>
-    <tr><td class="paramname">state</td><td>The simulation state to be passed to the LP </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="scheduler_8c_source.html#l00250">250</a> of file <a class="el" href="scheduler_8c_source.html">scheduler.c</a>.</p>
+<p>Definition at line <a class="el" href="scheduler_8c_source.html#l00248">248</a> of file <a class="el" href="scheduler_8c_source.html">scheduler.c</a>.</p>
 
 <p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -859,7 +857,7 @@ Roberto Vitali </dd></dl>
 <p>This function checks wihch LP must be activated (if any), and in turn activates it. This is used only to support forward execution.</p>
 <dl class="section author"><dt>Author</dt><dd>Alessandro Pellegrini </dd></dl>
 
-<p>Definition at line <a class="el" href="scheduler_8c_source.html#l00311">311</a> of file <a class="el" href="scheduler_8c_source.html">scheduler.c</a>.</p>
+<p>Definition at line <a class="el" href="scheduler_8c_source.html#l00309">309</a> of file <a class="el" href="scheduler_8c_source.html">scheduler.c</a>.</p>
 
 <p><div id="dynsection-17" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-17-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>

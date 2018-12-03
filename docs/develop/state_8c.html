@@ -218,20 +218,20 @@ Alessandro Pellegrini </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This function computes the time barrier, namely the first state snapshot which is associated with a simulation time &lt;= that the passed simtime</p>
+<p>This function computes a time barrier, namely the first state snapshot which is associated with a simulation time &lt;= than the simtime value passed as an argument. The time barrier, in the runtime environment, is used to safely install a new computed GVT.</p>
 <dl class="section author"><dt>Author</dt><dd>Francesco Quaglia </dd>
 <dd>
 Alessandro Pellegrini</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">lid</td><td>The light Process Id </td></tr>
+    <tr><td class="paramname">lp</td><td>A pointer to the <a class="el" href="structlp__struct.html">lp_struct</a> of the LP for which we are looking for the current time barrier </td></tr>
     <tr><td class="paramname">simtime</td><td>The simulation time to be associated with a state barrier </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A pointer to the state that represents the time barrier </dd></dl>
 
-<p>Definition at line <a class="el" href="state_8c_source.html#l00254">254</a> of file <a class="el" href="state_8c_source.html">state.c</a>.</p>
+<p>Definition at line <a class="el" href="state_8c_source.html#l00259">259</a> of file <a class="el" href="state_8c_source.html">state.c</a>.</p>
 
 <p><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -268,12 +268,12 @@ Alessandro Pellegrini</dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Alessandro Pellegrini</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">lid</td><td>The Logical Process Id </td></tr>
+    <tr><td class="paramname">lp</td><td>A pointer to the <a class="el" href="structlp__struct.html">lp_struct</a> of the LP for which the checkpoint shold be forced after the next call to <a class="el" href="state_8c.html#a29fbf84fed206d7f721cd03b74d082cd">LogState()</a> </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="state_8c_source.html#l00334">334</a> of file <a class="el" href="state_8c_source.html">state.c</a>.</p>
+<p>Definition at line <a class="el" href="state_8c_source.html#l00341">341</a> of file <a class="el" href="state_8c_source.html">state.c</a>.</p>
 
 <p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -313,12 +313,12 @@ Alessandro Pellegrini</dd></dl>
 <p>This function is used to create a state log to be added to the LP's log chain</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">lid</td><td>The Light Process Identifier </td></tr>
+    <tr><td class="paramname">lp</td><td>A pointer to the <a class="el" href="structlp__struct.html">lp_struct</a> of the LP for which a checkpoint is to be taken. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="state_8c_source.html#l00049">49</a> of file <a class="el" href="state_8c_source.html">state.c</a>.</p>
+<p>Definition at line <a class="el" href="state_8c_source.html#l00050">50</a> of file <a class="el" href="state_8c_source.html">state.c</a>.</p>
 
 <p><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -383,7 +383,7 @@ Alessandro Pellegrini</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="state_8c_source.html#l00116">116</a> of file <a class="el" href="state_8c_source.html">state.c</a>.</p>
+<p>Definition at line <a class="el" href="state_8c_source.html#l00117">117</a> of file <a class="el" href="state_8c_source.html">state.c</a>.</p>
 
 <p><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -439,12 +439,12 @@ Alessandro Pellegrini</dd></dl>
 Alessandro Pellegrini</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">lid</td><td>The Logical Process Id </td></tr>
+    <tr><td class="paramname">lp</td><td>A pointer to the <a class="el" href="structlp__struct.html">lp_struct</a> of the LP to rollback </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="state_8c_source.html#l00196">196</a> of file <a class="el" href="state_8c_source.html">state.c</a>.</p>
+<p>Definition at line <a class="el" href="state_8c_source.html#l00197">197</a> of file <a class="el" href="state_8c_source.html">state.c</a>.</p>
 
 <p><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -536,7 +536,7 @@ Alessandro Pellegrini</dd></dl>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="state_8c_source.html#l00306">306</a> of file <a class="el" href="state_8c_source.html">state.c</a>.</p>
+<p>Definition at line <a class="el" href="state_8c_source.html#l00311">311</a> of file <a class="el" href="state_8c_source.html">state.c</a>.</p>
 
 </div>
 </div>
@@ -569,13 +569,13 @@ Alessandro Pellegrini</dd></dl>
 Alessandro Pellegrini</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">lid</td><td>The Logical Process Id </td></tr>
+    <tr><td class="paramname">lp</td><td>A pointer to the LP's <a class="el" href="structlp__struct.html">lp_struct</a> which should have its checkpoint period changed. </td></tr>
     <tr><td class="paramname">period</td><td>The new checkpoint period </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="state_8c_source.html#l00320">320</a> of file <a class="el" href="state_8c_source.html">state.c</a>.</p>
+<p>Definition at line <a class="el" href="state_8c_source.html#l00326">326</a> of file <a class="el" href="state_8c_source.html">state.c</a>.</p>
 
 <p><div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -615,7 +615,7 @@ Alessandro Pellegrini</dd></dl>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="state_8c_source.html#l00293">293</a> of file <a class="el" href="state_8c_source.html">state.c</a>.</p>
+<p>Definition at line <a class="el" href="state_8c_source.html#l00298">298</a> of file <a class="el" href="state_8c_source.html">state.c</a>.</p>
 
 </div>
 </div>
@@ -654,16 +654,15 @@ Alessandro Pellegrini</dd></dl>
 Alessandro Pellegrini</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">lid</td><td>The id of the Light Process </td></tr>
-    <tr><td class="paramname">state_buffer</td><td>The simulation state to be passed to the LP </td></tr>
+    <tr><td class="paramname">lp</td><td>A pointer to the LP's <a class="el" href="structlp__struct.html">lp_struct</a> for which we want to silently reprocess already-executed events </td></tr>
     <tr><td class="paramname">evt</td><td>A pointer to the event from which start the re-execution </td></tr>
-    <tr><td class="paramname">final_evt</td><td>A pointer to the first event which should not be reprocessed in silent execution</td></tr>
+    <tr><td class="paramname">final_evt</td><td>A pointer to the first event which should <em>not</em> be reprocessed in silent execution</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The number of events re-processed during the silent execution </dd></dl>
 
-<p>Definition at line <a class="el" href="state_8c_source.html#l00149">149</a> of file <a class="el" href="state_8c_source.html">state.c</a>.</p>
+<p>Definition at line <a class="el" href="state_8c_source.html#l00150">150</a> of file <a class="el" href="state_8c_source.html">state.c</a>.</p>
 
 <p><div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>

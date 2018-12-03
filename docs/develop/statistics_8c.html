@@ -187,7 +187,6 @@ Macros</h2></td></tr>
 <tr class="memitem:a4dce8228f502f75dba017fba122e34f9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="statistics_8c.html#a4dce8228f502f75dba017fba122e34f9">GVT_BUFF_ROWS</a>&#160;&#160;&#160;50</td></tr>
 <tr class="separator:a4dce8228f502f75dba017fba122e34f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22dbd30d69ade960a0cf1feadab4601c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="statistics_8c.html#a22dbd30d69ade960a0cf1feadab4601c">safe_asprintf</a>(ret_addr,  format, ...)</td></tr>
-<tr class="memdesc:a22dbd30d69ade960a0cf1feadab4601c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a pseudo asprintf() implementation needed in order to stop GCC 8 from complaining.  <a href="#a22dbd30d69ade960a0cf1feadab4601c">More...</a><br /></td></tr>
 <tr class="separator:a22dbd30d69ade960a0cf1feadab4601c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9eb08c4f3ad005333d49aa2299e5c7c3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="statistics_8c.html#a9eb08c4f3ad005333d49aa2299e5c7c3">HEADER_STR</a>&#160;&#160;&#160;&quot;------------------------------------------------------------&quot;</td></tr>
 <tr class="separator:a9eb08c4f3ad005333d49aa2299e5c7c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -314,12 +313,12 @@ Roberto Vitali </dd></dl>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {<a class="code" href="statistics_8c.html#a22dbd30d69ade960a0cf1feadab4601c">\</a></div><div class="line"><a class="code" href="statistics_8c.html#a22dbd30d69ade960a0cf1feadab4601c">		safe_asprintf</a>(&amp;name_buf, <span class="stringliteral">&quot;%s/&quot;</span> format, <a class="code" href="core_8c.html#ae16855ae14bd366969eecad7446d51a6">rootsim_config</a>.<a class="code" href="struct__simulation__configuration.html#a02550484b21ea34bcb5d210b08de8bd5">output_dir</a>, ##__VA_ARGS__);\</div><div class="line">        if (((destination) = fopen(name_buf, <span class="stringliteral">&quot;w+&quot;</span>)) == NULL)<a class="code" href="core_8h.html#a2cec05379e5678e3d5fe1725ff2d90c6">\</a></div><div class="line"><a class="code" href="core_8h.html#a2cec05379e5678e3d5fe1725ff2d90c6">			rootsim_error</a>(<span class="keyword">true</span>, <span class="stringliteral">&quot;Cannot open %s\n&quot;</span>, name_buf);<a class="code" href="dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a">\</a></div><div class="line"><a class="code" href="dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a">		rsfree</a>(name_buf);\</div><div class="line">    } <span class="keywordflow">while</span>(0)</div><div class="ttc" id="struct__simulation__configuration_html_a02550484b21ea34bcb5d210b08de8bd5"><div class="ttname"><a href="struct__simulation__configuration.html#a02550484b21ea34bcb5d210b08de8bd5">_simulation_configuration::output_dir</a></div><div class="ttdeci">char * output_dir</div><div class="ttdoc">Destination Directory of output files. </div><div class="ttdef"><b>Definition:</b> <a href="init_8h_source.html#l00054">init.h:54</a></div></div>
-<div class="ttc" id="statistics_8c_html_a22dbd30d69ade960a0cf1feadab4601c"><div class="ttname"><a href="statistics_8c.html#a22dbd30d69ade960a0cf1feadab4601c">safe_asprintf</a></div><div class="ttdeci">#define safe_asprintf(ret_addr, format,...)</div><div class="ttdoc">This is a pseudo asprintf() implementation needed in order to stop GCC 8 from complaining. </div><div class="ttdef"><b>Definition:</b> <a href="statistics_8c_source.html#l00107">statistics.c:107</a></div></div>
+<div class="ttc" id="statistics_8c_html_a22dbd30d69ade960a0cf1feadab4601c"><div class="ttname"><a href="statistics_8c.html#a22dbd30d69ade960a0cf1feadab4601c">safe_asprintf</a></div><div class="ttdeci">#define safe_asprintf(ret_addr, format,...)</div><div class="ttdef"><b>Definition:</b> <a href="statistics_8c_source.html#l00111">statistics.c:111</a></div></div>
 <div class="ttc" id="dymelor_8h_html_aa6966af54ab40823b6a31934cfba500a"><div class="ttname"><a href="dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a">rsfree</a></div><div class="ttdeci">void rsfree(void *)</div><div class="ttdef"><b>Definition:</b> <a href="platform_8c_source.html#l00046">platform.c:46</a></div></div>
 <div class="ttc" id="core_8c_html_ae16855ae14bd366969eecad7446d51a6"><div class="ttname"><a href="core_8c.html#ae16855ae14bd366969eecad7446d51a6">rootsim_config</a></div><div class="ttdeci">simulation_configuration rootsim_config</div><div class="ttdoc">This global variable holds the configuration for the current simulation. </div><div class="ttdef"><b>Definition:</b> <a href="core_8c_source.html#l00066">core.c:66</a></div></div>
 <div class="ttc" id="core_8h_html_a2cec05379e5678e3d5fe1725ff2d90c6"><div class="ttname"><a href="core_8h.html#a2cec05379e5678e3d5fe1725ff2d90c6">rootsim_error</a></div><div class="ttdeci">#define rootsim_error(fatal, msg,...)</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00227">core.h:227</a></div></div>
 </div><!-- fragment -->
-<p>Definition at line <a class="el" href="statistics_8c_source.html#l00620">620</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
+<p>Definition at line <a class="el" href="statistics_8c_source.html#l00624">624</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
 
 </div>
 </div>
@@ -347,7 +346,7 @@ Roberto Vitali </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="statistics_8c_source.html#l00296">296</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
+<p>Definition at line <a class="el" href="statistics_8c_source.html#l00300">300</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
 
 </div>
 </div>
@@ -382,19 +381,18 @@ Roberto Vitali </dd></dl>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">({                  \</div><div class="line">        char *__pstr = NULL;                        \</div><div class="line">        int __ret = snprintf(0, 0, format, ##__VA_ARGS__);      \</div><div class="line">        if(__ret &lt; 0)                           <a class="code" href="core_8h.html#a2cec05379e5678e3d5fe1725ff2d90c6">\</a></div><div class="line"><a class="code" href="core_8h.html#a2cec05379e5678e3d5fe1725ff2d90c6">			rootsim_error</a>(<span class="keyword">true</span>, <span class="stringliteral">&quot;Error in snprintf()!&quot;</span>);     \</div><div class="line">        __pstr = <a class="code" href="dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b">rsalloc</a>(__ret + 1);                    \</div><div class="line">        __ret = snprintf(__pstr, __ret + 1, format, ##__VA_ARGS__); \</div><div class="line">        if(__ret &lt; 0)                           <a class="code" href="core_8h.html#a2cec05379e5678e3d5fe1725ff2d90c6">\</a></div><div class="line"><a class="code" href="core_8h.html#a2cec05379e5678e3d5fe1725ff2d90c6">			rootsim_error</a>(<span class="keyword">true</span>, <span class="stringliteral">&quot;Error in snprintf()!&quot;</span>);     \</div><div class="line">        *(ret_addr) = __pstr;                       \</div><div class="line">})</div><div class="ttc" id="dymelor_8h_html_a9e80751b3934b0cd4411695f6743016b"><div class="ttname"><a href="dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b">rsalloc</a></div><div class="ttdeci">void * rsalloc(size_t)</div><div class="ttdef"><b>Definition:</b> <a href="platform_8c_source.html#l00037">platform.c:37</a></div></div>
 <div class="ttc" id="core_8h_html_a2cec05379e5678e3d5fe1725ff2d90c6"><div class="ttname"><a href="core_8h.html#a2cec05379e5678e3d5fe1725ff2d90c6">rootsim_error</a></div><div class="ttdeci">#define rootsim_error(fatal, msg,...)</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00227">core.h:227</a></div></div>
-</div><!-- fragment -->
-<p>This is a pseudo asprintf() implementation needed in order to stop GCC 8 from complaining. </p>
+</div><!-- fragment --><p>This is a pseudo asprintf() implementation needed in order to stop GCC 8 from complaining</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">format</td><td>the format string as in the real asprintf() </td></tr>
-    <tr><td class="paramname">...</td><td>the arguments list as in the real asprintf() </td></tr>
+    <tr><td class="paramname">ret_addr</td><td>A char ** pointer where the function stores the address of a large-enough string to hold the output </td></tr>
+    <tr><td class="paramname">format</td><td>The format string as in the real asprintf() </td></tr>
+    <tr><td class="paramname">...</td><td>The arguments list as in the real asprintf()</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>a mallocated string containing the snprintf()-processed string</dd></dl>
-<p>TODO: transform into a function for safety GCC 8 cares a lot for our security so we have to be sure snprintf() doesn't truncate. </p>
+<dl class="section return"><dt>Returns</dt><dd>a malloc'd string containing the snprintf()-processed string</dd></dl>
 
-<p>Definition at line <a class="el" href="statistics_8c_source.html#l00107">107</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
+<p>Definition at line <a class="el" href="statistics_8c_source.html#l00111">111</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
 
 </div>
 </div>
@@ -421,7 +419,7 @@ Roberto Vitali </dd></dl>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="statistics_8c_source.html#l00169">169</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
+<p>Definition at line <a class="el" href="statistics_8c_source.html#l00173">173</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
 
 <p><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -470,7 +468,7 @@ Roberto Vitali </dd></dl>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="statistics_8c_source.html#l00125">125</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
+<p>Definition at line <a class="el" href="statistics_8c_source.html#l00129">129</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
 
 <p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -517,7 +515,7 @@ Roberto Vitali </dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A pointer to a per-thread buffer keeping the size. </dd></dl>
 
-<p>Definition at line <a class="el" href="statistics_8c_source.html#l00271">271</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
+<p>Definition at line <a class="el" href="statistics_8c_source.html#l00275">275</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
 
 <p><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -586,7 +584,7 @@ Roberto Vitali </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="statistics_8c_source.html#l00318">318</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
+<p>Definition at line <a class="el" href="statistics_8c_source.html#l00322">322</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
 
 <p><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -637,7 +635,7 @@ Roberto Vitali </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="statistics_8c_source.html#l00250">250</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
+<p>Definition at line <a class="el" href="statistics_8c_source.html#l00254">254</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
 
 <p><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -687,7 +685,7 @@ Roberto Vitali </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="statistics_8c_source.html#l00206">206</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
+<p>Definition at line <a class="el" href="statistics_8c_source.html#l00210">210</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
 
 <p><div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -727,7 +725,7 @@ Roberto Vitali </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="statistics_8c_source.html#l00381">381</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
+<p>Definition at line <a class="el" href="statistics_8c_source.html#l00385">385</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
 
 <p><div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -783,7 +781,7 @@ Roberto Vitali </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="statistics_8c_source.html#l00297">297</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
+<p>Definition at line <a class="el" href="statistics_8c_source.html#l00301">301</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
 
 <p><div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -839,7 +837,7 @@ Roberto Vitali </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="statistics_8c_source.html#l00369">369</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
+<p>Definition at line <a class="el" href="statistics_8c_source.html#l00373">373</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
 
 <p><div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -907,7 +905,7 @@ Roberto Vitali </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="statistics_8c_source.html#l00307">307</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
+<p>Definition at line <a class="el" href="statistics_8c_source.html#l00311">311</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
 
 <p><div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -947,7 +945,7 @@ Roberto Vitali </dd></dl>
 <p>This function finalize the Statistics subsystem</p>
 <dl class="section author"><dt>Author</dt><dd>Alessandro Pellegrini </dd></dl>
 
-<p>Definition at line <a class="el" href="statistics_8c_source.html#l00709">709</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
+<p>Definition at line <a class="el" href="statistics_8c_source.html#l00713">713</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
 
 <p><div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -1007,7 +1005,7 @@ Roberto Vitali </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="statistics_8c_source.html#l00822">822</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
+<p>Definition at line <a class="el" href="statistics_8c_source.html#l00826">826</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
 
 <p><div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-15-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -1044,7 +1042,7 @@ Roberto Vitali </dd></dl>
 <p>This function initializes the Statistics subsystem</p>
 <dl class="section author"><dt>Author</dt><dd>Alessandro Pellegrini </dd></dl>
 
-<p>Definition at line <a class="el" href="statistics_8c_source.html#l00633">633</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
+<p>Definition at line <a class="el" href="statistics_8c_source.html#l00637">637</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
 
 <p><div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-16-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -1099,7 +1097,7 @@ Roberto Vitali </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="statistics_8c_source.html#l00546">546</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
+<p>Definition at line <a class="el" href="statistics_8c_source.html#l00550">550</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
 
 <p><div id="dynsection-18" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-18-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -1152,7 +1150,7 @@ Roberto Vitali </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="statistics_8c_source.html#l00601">601</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
+<p>Definition at line <a class="el" href="statistics_8c_source.html#l00605">605</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
 
 <p><div id="dynsection-20" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-20-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -1219,7 +1217,7 @@ Roberto Vitali </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="statistics_8c_source.html#l00751">751</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
+<p>Definition at line <a class="el" href="statistics_8c_source.html#l00755">755</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
 
 <p><div id="dynsection-22" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-22-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -1288,7 +1286,7 @@ Roberto Vitali </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="statistics_8c_source.html#l00733">733</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
+<p>Definition at line <a class="el" href="statistics_8c_source.html#l00737">737</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
 
 <p><div id="dynsection-23" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-23-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -1320,7 +1318,7 @@ Roberto Vitali </dd></dl>
 </div><div class="memdoc">
 <p>This function registers when the actual simulation is starting. </p>
 
-<p>Definition at line <a class="el" href="statistics_8c_source.html#l00259">259</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
+<p>Definition at line <a class="el" href="statistics_8c_source.html#l00263">263</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
 
 <p><div id="dynsection-24" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-24-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -1365,7 +1363,7 @@ Alessandro Pellegrini</dd></dl>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="statistics_8c_source.html#l00415">415</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
+<p>Definition at line <a class="el" href="statistics_8c_source.html#l00419">419</a> of file <a class="el" href="statistics_8c_source.html">statistics.c</a>.</p>
 
 <p><div id="dynsection-25" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-25-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>

@@ -251,7 +251,7 @@ Roberto Vitali</dd></dl>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="checkpoints_8c_source.html#l00366">366</a> of file <a class="el" href="checkpoints_8c_source.html">checkpoints.c</a>.</p>
+<p>Definition at line <a class="el" href="checkpoints_8c_source.html#l00371">371</a> of file <a class="el" href="checkpoints_8c_source.html">checkpoints.c</a>.</p>
 
 <p><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -315,13 +315,13 @@ Alessandro Pellegrini </dd>
 Roberto Vitali</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">the_lid</td><td>The logical process' local identifier </td></tr>
+    <tr><td class="paramname">lp</td><td>A pointer to the <a class="el" href="structlp__struct.html">lp_struct</a> of the LP for which we are taking a full log of the buffers keeping the current simulation state. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A pointer to a malloc()'d memory area which contains the full log of the current simulation state, along with the relative meta-data which can be used to perform a restore operation.</dd></dl>
 
-<p>Definition at line <a class="el" href="checkpoints_8c_source.html#l00072">72</a> of file <a class="el" href="checkpoints_8c_source.html">checkpoints.c</a>.</p>
+<p>Definition at line <a class="el" href="checkpoints_8c_source.html#l00073">73</a> of file <a class="el" href="checkpoints_8c_source.html">checkpoints.c</a>.</p>
 
 <p><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -393,13 +393,13 @@ Roberto Vitali</dd></dl>
 Roberto Vitali</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">lid</td><td>The logical process' local identifier </td></tr>
+    <tr><td class="paramname">lp</td><td>A pointer to the <a class="el" href="structlp__struct.html">lp_struct</a> of the LP for which we are restoring model-specific buffers keeping the simulation state </td></tr>
     <tr><td class="paramname">state_queue_node</td><td>a pointer to a node in the state queue keeping the state which must be restored in the logical process live image </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="checkpoints_8c_source.html#l00350">350</a> of file <a class="el" href="checkpoints_8c_source.html">checkpoints.c</a>.</p>
+<p>Definition at line <a class="el" href="checkpoints_8c_source.html#l00355">355</a> of file <a class="el" href="checkpoints_8c_source.html">checkpoints.c</a>.</p>
 
 <p><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -455,13 +455,13 @@ Roberto Vitali</dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Alessandro Pellegrini</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">lid</td><td>The logical process' local identifier </td></tr>
+    <tr><td class="paramname">lp</td><td>A pointer to the <a class="el" href="structlp__struct.html">lp_struct</a> of the LP for which we want to take a snapshot of the buffers used by the model to keep state variables. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A pointer to a malloc()'d memory area which contains the log of the current simulation state, along with the relative meta-data which can be used to perform a restore operation. </dd></dl>
 
-<p>Definition at line <a class="el" href="checkpoints_8c_source.html#l00190">190</a> of file <a class="el" href="checkpoints_8c_source.html">checkpoints.c</a>.</p>
+<p>Definition at line <a class="el" href="checkpoints_8c_source.html#l00192">192</a> of file <a class="el" href="checkpoints_8c_source.html">checkpoints.c</a>.</p>
 
 <p><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -538,13 +538,13 @@ Roberto Vitali </dd>
 Alessandro Pellegrini</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">the_lid</td><td>The logical process' local identifier </td></tr>
-    <tr><td class="paramname">ckpt</td><td>a pointer to the simulation state which must be restored in the logical process </td></tr>
+    <tr><td class="paramname">lp</td><td>A pointer to the <a class="el" href="structlp__struct.html">lp_struct</a> of the LP for which we are restoring the content of simulation state buffers, taking it from the checkpoint </td></tr>
+    <tr><td class="paramname">ckpt</td><td>A pointer to the checkpoint to take the previous content of the buffers to be restored </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="checkpoints_8c_source.html#l00218">218</a> of file <a class="el" href="checkpoints_8c_source.html">checkpoints.c</a>.</p>
+<p>Definition at line <a class="el" href="checkpoints_8c_source.html#l00222">222</a> of file <a class="el" href="checkpoints_8c_source.html">checkpoints.c</a>.</p>
 
 <p><div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
