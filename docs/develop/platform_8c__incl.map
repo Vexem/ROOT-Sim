@@ -1,11 +1,11 @@
-<map id="/home/travis/build/HPDCS/ROOT&#45;Sim/src/mm/platform.c" name="/home/travis/build/HPDCS/ROOT&#45;Sim/src/mm/platform.c">
-<area shape="rect" id="node4" href="$dymelor_8h.html" title="Dynamic Memory Logger and Restorer (DyMeLoR) " alt="" coords="986,109,1101,136"/>
-<area shape="rect" id="node7" href="$core_8h.html" title="Core ROOT&#45;Sim functionalities. " alt="" coords="763,259,857,285"/>
-<area shape="rect" id="node22" href="$bitmap_8h.html" title="Bitmap data type. " alt="" coords="970,184,1117,211"/>
-<area shape="rect" id="node24" href="$state_8h.html" title="LP state management. " alt="" coords="848,184,945,211"/>
-<area shape="rect" id="node25" href="$timer_8h.html" title="Timers. " alt="" coords="1282,184,1381,211"/>
-<area shape="rect" id="node8" href="$ROOT-Sim_8h.html" title="ROOT&#45;Sim header for model development. " alt="" coords="775,333,874,360"/>
-<area shape="rect" id="node16" href="$numerical_8h.html" title="Numerical Library. " alt="" coords="949,333,1063,360"/>
-<area shape="rect" id="node17" href="$thread_8h.html" title="Generic thread management facilities. " alt="" coords="297,333,405,360"/>
-<area shape="rect" id="node18" href="$atomic_8h.html" title="Atomic operations. " alt="" coords="32,408,143,435"/>
+<map id="src/mm/platform.c" name="src/mm/platform.c">
+<area shape="rect" id="node4" href="$dymelor_8h.html" title="Dynamic Memory Logger and Restorer (DyMeLoR) " alt="" coords="986,80,1101,107"/>
+<area shape="rect" id="node7" href="$core_8h.html" title="Core ROOT&#45;Sim functionalities. " alt="" coords="763,229,857,256"/>
+<area shape="rect" id="node22" href="$bitmap_8h.html" title="Bitmap data type. " alt="" coords="970,155,1117,181"/>
+<area shape="rect" id="node24" href="$state_8h.html" title="LP state management. " alt="" coords="848,155,945,181"/>
+<area shape="rect" id="node25" href="$timer_8h.html" title="Timers. " alt="" coords="1282,155,1381,181"/>
+<area shape="rect" id="node8" href="$ROOT-Sim_8h.html" title="ROOT&#45;Sim header for model development. " alt="" coords="775,304,874,331"/>
+<area shape="rect" id="node16" href="$numerical_8h.html" title="Numerical Library. " alt="" coords="949,304,1063,331"/>
+<area shape="rect" id="node17" href="$thread_8h.html" title="Generic thread management facilities. " alt="" coords="297,304,405,331"/>
+<area shape="rect" id="node18" href="$atomic_8h.html" title="Atomic operations. " alt="" coords="32,379,143,405"/>
 </map>

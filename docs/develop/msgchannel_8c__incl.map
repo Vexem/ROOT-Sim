@@ -1,15 +1,15 @@
-<map id="/home/travis/build/HPDCS/ROOT&#45;Sim/src/datatypes/msgchannel.c" name="/home/travis/build/HPDCS/ROOT&#45;Sim/src/datatypes/msgchannel.c">
-<area shape="rect" id="node5" href="$atomic_8h.html" title="Atomic operations. " alt="" coords="203,483,313,509"/>
-<area shape="rect" id="node8" href="$core_8h.html" title="Core ROOT&#45;Sim functionalities. " alt="" coords="769,333,864,360"/>
-<area shape="rect" id="node20" href="$communication_8h.html" title="Communication Routines. " alt="" coords="439,184,675,211"/>
-<area shape="rect" id="node21" href="$list_8h.html" title="Generic Lists. " alt="" coords="93,408,213,435"/>
-<area shape="rect" id="node24" href="$msgchannel_8h.html" title="A (M, 1) channel for messages. " alt="" coords="339,109,519,136"/>
-<area shape="rect" id="node25" href="$mm_8h.html" title="Memory Manager main header. " alt="" coords="767,109,858,136"/>
-<area shape="rect" id="node9" href="$ROOT-Sim_8h.html" title="ROOT&#45;Sim header for model development. " alt="" coords="966,408,1065,435"/>
-<area shape="rect" id="node15" href="$numerical_8h.html" title="Numerical Library. " alt="" coords="827,408,942,435"/>
-<area shape="rect" id="node16" href="$thread_8h.html" title="Generic thread management facilities. " alt="" coords="593,408,701,435"/>
-<area shape="rect" id="node27" href="$dymelor_8h.html" title="Dynamic Memory Logger and Restorer (DyMeLoR) " alt="" coords="906,184,1021,211"/>
-<area shape="rect" id="node28" href="$bitmap_8h.html" title="Bitmap data type. " alt="" coords="1173,259,1319,285"/>
-<area shape="rect" id="node30" href="$state_8h.html" title="LP state management. " alt="" coords="871,259,968,285"/>
-<area shape="rect" id="node31" href="$timer_8h.html" title="Timers. " alt="" coords="1043,259,1142,285"/>
+<map id="src/datatypes/msgchannel.c" name="src/datatypes/msgchannel.c">
+<area shape="rect" id="node5" href="$atomic_8h.html" title="Atomic operations. " alt="" coords="203,453,313,480"/>
+<area shape="rect" id="node8" href="$core_8h.html" title="Core ROOT&#45;Sim functionalities. " alt="" coords="769,304,864,331"/>
+<area shape="rect" id="node20" href="$communication_8h.html" title="Communication Routines. " alt="" coords="439,155,675,181"/>
+<area shape="rect" id="node21" href="$list_8h.html" title="Generic Lists. " alt="" coords="93,379,213,405"/>
+<area shape="rect" id="node24" href="$msgchannel_8h.html" title="A (M, 1) channel for messages. " alt="" coords="339,80,519,107"/>
+<area shape="rect" id="node25" href="$mm_8h.html" title="Memory Manager main header. " alt="" coords="767,80,858,107"/>
+<area shape="rect" id="node9" href="$ROOT-Sim_8h.html" title="ROOT&#45;Sim header for model development. " alt="" coords="966,379,1065,405"/>
+<area shape="rect" id="node15" href="$numerical_8h.html" title="Numerical Library. " alt="" coords="827,379,942,405"/>
+<area shape="rect" id="node16" href="$thread_8h.html" title="Generic thread management facilities. " alt="" coords="593,379,701,405"/>
+<area shape="rect" id="node27" href="$dymelor_8h.html" title="Dynamic Memory Logger and Restorer (DyMeLoR) " alt="" coords="906,155,1021,181"/>
+<area shape="rect" id="node28" href="$bitmap_8h.html" title="Bitmap data type. " alt="" coords="1173,229,1319,256"/>
+<area shape="rect" id="node30" href="$state_8h.html" title="LP state management. " alt="" coords="871,229,968,256"/>
+<area shape="rect" id="node31" href="$timer_8h.html" title="Timers. " alt="" coords="1043,229,1142,256"/>
 </map>
