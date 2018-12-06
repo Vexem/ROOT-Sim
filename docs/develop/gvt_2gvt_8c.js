@@ -2,7 +2,9 @@ var gvt_2gvt_8c =
 [
     [ "kernel_phases", "gvt_2gvt_8c.html#ad587dc5733f0dfd89b5bf1e1fc006428", [
       [ "kphase_start", "gvt_2gvt_8c.html#ad587dc5733f0dfd89b5bf1e1fc006428a5a57cd9c84923d3cc4ab71ee46cc9c2e", null ],
+      [ "kphase_white_msg_redux", "gvt_2gvt_8c.html#ad587dc5733f0dfd89b5bf1e1fc006428a65f6b6152b4afbe4c3670df81f17efbc", null ],
       [ "kphase_kvt", "gvt_2gvt_8c.html#ad587dc5733f0dfd89b5bf1e1fc006428ad80c346ed2bf806e1f1f785a27df5179", null ],
+      [ "kphase_gvt_redux", "gvt_2gvt_8c.html#ad587dc5733f0dfd89b5bf1e1fc006428a92d86b6c56bf927b335b2dea3ff3e805", null ],
       [ "kphase_fossil", "gvt_2gvt_8c.html#ad587dc5733f0dfd89b5bf1e1fc006428a69488353232ee6940dca39c5f812e227", null ],
       [ "kphase_idle", "gvt_2gvt_8c.html#ad587dc5733f0dfd89b5bf1e1fc006428a1e3fd8e316a68d14b124fe59fd7f3e55", null ]
     ] ],
@@ -20,6 +22,7 @@ var gvt_2gvt_8c =
     [ "GVT_phases", "gvt_2gvt_8c.html#a895d5bfff43f3ee72f9cf7097abf609b", null ],
     [ "reduce_local_gvt", "gvt_2gvt_8c.html#a09f7517c5f85f842692721be967ab757", null ],
     [ "start_new_gvt", "gvt_2gvt_8c.html#a5eca5fe72026b6f5e5ec76598bde2475", null ],
+    [ "commit_gvt_tkn", "gvt_2gvt_8c.html#a58d8af7377ab42673069a2837ea4fdc2", null ],
     [ "commit_kvt_tkn", "gvt_2gvt_8c.html#ad5ee5a062ed5e26dde8a078370f0f1e0", null ],
     [ "counter_A", "gvt_2gvt_8c.html#ad666577e3fc9510d8f9bcc767cb2f3d3", null ],
     [ "counter_B", "gvt_2gvt_8c.html#aeb024145640ec778977b549a27331f1c", null ],
@@ -32,6 +35,7 @@ var gvt_2gvt_8c =
     [ "gvt_timer", "gvt_2gvt_8c.html#a8a20f2660e303bdcae1dfb5c5e4580fe", null ],
     [ "idle_tkn", "gvt_2gvt_8c.html#a40954d28778fe03e89dae5ef52020717", null ],
     [ "init_completed_tkn", "gvt_2gvt_8c.html#ab035342d6d7586889c27bcee1b42e9a1", null ],
+    [ "init_kvt_tkn", "gvt_2gvt_8c.html#a42cdcb7fcbff6e152ddc39cddd11895f", null ],
     [ "kernel_phase", "gvt_2gvt_8c.html#aa051914fd87ed461ff3814597c4d1143", null ],
     [ "last_gvt", "gvt_2gvt_8c.html#a542712f0b45aec7dcac2036fc4f4815f", null ],
     [ "local_min", "gvt_2gvt_8c.html#a124d9ea1c7dacc542bd0fdd85b97d4f5", null ],

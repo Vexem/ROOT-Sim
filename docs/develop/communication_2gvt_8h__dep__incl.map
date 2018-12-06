@@ -1,4 +1,6 @@
 <map id="/home/travis/build/HPDCS/ROOT&#45;Sim/src/communication/gvt.h" name="/home/travis/build/HPDCS/ROOT&#45;Sim/src/communication/gvt.h">
-<area shape="rect" id="node2" href="$gvt_2gvt_8c.html" title="This module implements the GVT reduction. The current implementation is non blocking for observable s..." alt="" coords="5,109,168,165"/>
-<area shape="rect" id="node3" href="$queues_8c.html" title="This module implements the event/message queues subsystem. " alt="" coords="192,109,355,165"/>
+<area shape="rect" id="node2" href="$communication_2gvt_8c.html" title="Distributed GVT Support module. " alt="" coords="5,109,168,165"/>
+<area shape="rect" id="node3" href="$mpi_8c.html" title="MPI Support Module. " alt="" coords="193,109,357,165"/>
+<area shape="rect" id="node4" href="$gvt_2gvt_8c.html" title="Global Virtual Time. " alt="" coords="381,109,544,165"/>
+<area shape="rect" id="node5" href="$queues_8c.html" title="Message queueing subsystem. " alt="" coords="568,109,731,165"/>
 </map>

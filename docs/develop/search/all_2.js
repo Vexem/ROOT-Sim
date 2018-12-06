@@ -28,6 +28,8 @@ var searchData=
   ['base_5fpointer',['base_pointer',['../struct__state__t.html#a6bc598b00fc86d3d6007bdcb389c7261',1,'_state_t']]],
   ['binding_2ec',['binding.c',['../binding_8c.html',1,'']]],
   ['binding_2eh',['binding.h',['../binding_8h.html',1,'']]],
+  ['binding_5facquire_5fphase',['binding_acquire_phase',['../binding_8c.html#a9867b49ef17cba48d9ef05783654dc31',1,'binding.c']]],
+  ['binding_5fphase',['binding_phase',['../binding_8c.html#a10bd99f8198c8cf8eb3fd524651b69ee',1,'binding.c']]],
   ['bitmap_2eh',['bitmap.h',['../bitmap_8h.html',1,'']]],
   ['bitmap_5fcheck',['bitmap_check',['../bitmap_8h.html#acecbc0a2e252c8c8067a3fa99b050fcc',1,'bitmap.h']]],
   ['bitmap_5fcount_5freset',['bitmap_count_reset',['../bitmap_8h.html#a246e30aab9dfc70c933448e591064f89',1,'bitmap.h']]],
@@ -45,7 +47,11 @@ var searchData=
   ['bottom_5fhalves',['bottom_halves',['../structlp__struct.html#ac52145497b157a13bebe61a2efd78d28',1,'lp_struct']]],
   ['bound',['bound',['../structlp__struct.html#aa3b66577f584159ebdf0de01c0831dae',1,'lp_struct']]],
   ['bounds',['bounds',['../traps-dummy_8h.html#a1001ca82947e98f6b1e631965ca20b10',1,'traps-dummy.h']]],
+  ['breg',['breg',['../structinsn__info__x86.html#a96692e04c11cecb711f348cda2efe87f',1,'insn_info_x86']]],
+  ['breg_5fmnem',['breg_mnem',['../structinsn__info__x86.html#abce4fdb2617c8b2e4a255027b7d82b3d',1,'insn_info_x86']]],
   ['brk',['brk',['../structsegment.html#a8fc3bb547f3d9c1943d35fc11dcf6f0d',1,'segment']]],
+  ['broadcast_5fgvt_5finit',['broadcast_gvt_init',['../communication_2gvt_8c.html#ae81bd7f5958dcb41dad5c697a6628569',1,'broadcast_gvt_init(unsigned int round):&#160;gvt.c'],['../communication_2gvt_8h.html#ae81bd7f5958dcb41dad5c697a6628569',1,'broadcast_gvt_init(unsigned int round):&#160;gvt.c']]],
+  ['broadcast_5ftermination',['broadcast_termination',['../mpi_8c.html#aecfbd08110aec0112352a4d920068094',1,'broadcast_termination(void):&#160;mpi.c'],['../mpi_8h.html#aecfbd08110aec0112352a4d920068094',1,'broadcast_termination(void):&#160;mpi.c']]],
   ['buckettop',['buckettop',['../calqueue_8c.html#aee713e4a972f74f675ea1bc1c2bdda59',1,'calqueue.c']]],
   ['buddy',['buddy',['../structbuddy.html',1,'buddy'],['../structmemory__map.html#abb0ee96b8a29d30b065ef915b1788a05',1,'memory_map::buddy()']]],
   ['buddy_2ec',['buddy.c',['../buddy_8c.html',1,'']]],
@@ -57,6 +63,7 @@ var searchData=
   ['buffer',['buffer',['../struct__msg__buff.html#aef877ff78c447ba4361e8c474b22cd1d',1,'_msg_buff::buffer()'],['../struct__ecs__page__request.html#a17254a31382b88cb34968d6e568829dd',1,'_ecs_page_request::buffer()']]],
   ['buffers',['buffers',['../struct__msg__channel.html#a2fc465898a4b937c9091fe8fd18ae819',1,'_msg_channel']]],
   ['busy_5fareas',['busy_areas',['../struct__malloc__state.html#ae3cfff65a952525c43d87d3f6fe3a56a',1,'_malloc_state']]],
+  ['byte',['BYTE',['../xxhash_8c.html#a4ae1dab0fb4b072a66584546209e7d58',1,'xxhash.c']]],
   ['bytecode',['bytecode',['../structinstr.html#accb1d609a312dd26eff89931e703bc21',1,'instr']]],
   ['bytes',['bytes',['../structbackup.html#a0d28b41771a1e39516bfe2cc67d47f1e',1,'backup']]]
 ];

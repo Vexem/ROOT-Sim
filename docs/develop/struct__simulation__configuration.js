@@ -7,6 +7,7 @@ var struct__simulation__configuration =
     [ "ckpt_period", "struct__simulation__configuration.html#af43693114b89878cdcc49974052c30b0", null ],
     [ "core_binding", "struct__simulation__configuration.html#a4d5bac2c31964dfa01a021bd4fa143f3", null ],
     [ "deterministic_seed", "struct__simulation__configuration.html#aeaa85d1dae0a5ba0d9deb45ad8be2f49", null ],
+    [ "disable_preemption", "struct__simulation__configuration.html#af728a2506fc1bd0de647cdef3f587ffd", null ],
     [ "gvt_snapshot_cycles", "struct__simulation__configuration.html#a09d6b2c270e9a3c8884b459e7f994d3e", null ],
     [ "gvt_time_period", "struct__simulation__configuration.html#a365ffd7680fb0751e29ce530df3b80cf", null ],
     [ "lps_distribution", "struct__simulation__configuration.html#a015445b5f1da26cadeaeb4afa477db5e", null ],

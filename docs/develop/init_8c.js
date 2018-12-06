@@ -29,6 +29,7 @@ var init_8c =
       [ "OPT_SEED", "init_8c.html#adf856969b3967e4a20be18a3eda24afcac4ecff0b530ccf4f89a57f1b44c0c2b8", null ],
       [ "OPT_SERIAL", "init_8c.html#adf856969b3967e4a20be18a3eda24afca2320f4860e7e091b7eb1d8f42a88483c", null ],
       [ "OPT_NO_CORE_BINDING", "init_8c.html#adf856969b3967e4a20be18a3eda24afca92e239dba6a3bd748d5ce5ace4d285fb", null ],
+      [ "OPT_PREEMPTION", "init_8c.html#adf856969b3967e4a20be18a3eda24afca695d14f6ff61efdc2de8087555e3fab1", null ],
       [ "OPT_LAST", "init_8c.html#adf856969b3967e4a20be18a3eda24afca9eba72fd5f44a26275c3ec570be88a6a", null ]
     ] ],
     [ "parse_opt", "init_8c.html#a35ee63236273ebb9325c444cacf00159", null ],

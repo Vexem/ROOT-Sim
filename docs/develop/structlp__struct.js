@@ -10,6 +10,8 @@ var structlp__struct =
     [ "context", "structlp__struct.html#a9fe22bc7520960bcc8420379bda6bd75", null ],
     [ "current_base_pointer", "structlp__struct.html#ae211b3dec6bac1358704a4772d50f2e8", null ],
     [ "default_context", "structlp__struct.html#a81945d7e06f639a893b0a6bb441a6008", null ],
+    [ "ECS_index", "structlp__struct.html#ae797365815bb10c560ed313523eb44b2", null ],
+    [ "ECS_synch_table", "structlp__struct.html#a223ed9508798453e0d521456246b5f75", null ],
     [ "from_last_ckpt", "structlp__struct.html#a310bd385217987aaee889cb2de7aad92", null ],
     [ "gid", "structlp__struct.html#a0bb529c8235ddc8b8a02958046560232", null ],
     [ "lid", "structlp__struct.html#a7c9cd95d8767ce903c059099a1878aad", null ],

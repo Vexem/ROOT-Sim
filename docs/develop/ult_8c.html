@@ -23,6 +23,8 @@
   $(document).ready(function() { init_search(); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="flatdoc.css" rel="stylesheet" type="text/css"/>
+<link href="inline-params.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -106,13 +108,14 @@ $(document).ready(function(){initNavTree('ult_8c.html','');});
 
 <div class="header">
   <div class="summary">
+<a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">ult.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>The User-Level Thread module allows the creation/scheduling of a user-level thread in an architecture-dependent way.  
+<p>User-Level Threads.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;stdlib.h&gt;</code><br />
@@ -129,37 +132,47 @@ $(document).ready(function(){initNavTree('ult_8c.html','');});
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="ult_8c__incl.png" border="0" usemap="#_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2arch_2ult_8c" alt=""/></div>
 <map name="_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2arch_2ult_8c" id="_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2arch_2ult_8c">
-<area shape="rect" id="node6" href="ult_8h.html" title="The User&#45;Level Thread module allows the creation/scheduling of a user&#45;level thread in an architecture..." alt="" coords="144,199,227,225"/>
-<area shape="rect" id="node7" href="core_8h.html" title="This header defines all the shared symbols which are needed by different subsystems. " alt="" coords="623,437,718,464"/>
-<area shape="rect" id="node18" href="process_8h.html" title="This header defines a LP control block, keeping information about both simulation state and execution..." alt="" coords="479,109,630,136"/>
-<area shape="rect" id="node23" href="dymelor_8h.html" title="This is the Memory Management Subsystem main header file. " alt="" coords="1172,288,1287,315"/>
-<area shape="rect" id="node8" href="ROOT-Sim_8h.html" title="This header defines all the symbols which are needed to develop a Model to be simulated on top of ROO..." alt="" coords="445,512,544,539"/>
-<area shape="rect" id="node15" href="numerical_8h.html" title="This header is used to define symbols which must be accessible by the simulator but not by the applic..." alt="" coords="256,512,371,539"/>
-<area shape="rect" id="node16" href="thread_8h.html" title="This module implements Kernel Level Thread supports. " alt="" coords="875,512,983,539"/>
-<area shape="rect" id="node17" href="atomic_8h.html" title="This module implements atomic and non&#45;blocking operations used within ROOT&#45;Sim to coordinate threads ..." alt="" coords="874,587,985,613"/>
-<area shape="rect" id="node19" href="state_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="407,363,505,389"/>
-<area shape="rect" id="node20" href="mm_8h.html" title="Memory Manager main header. " alt="" coords="793,199,884,225"/>
-<area shape="rect" id="node29" href="ecs_8h.html" title="Event Cross State Synchronization. This module implements the userspace handler of the artificially i..." alt="" coords="909,199,995,225"/>
-<area shape="rect" id="node30" href="list_8h.html" title="This header defines macros for accessing the general&#45;purpose list implementation used in the simulato..." alt="" coords="1151,512,1271,539"/>
-<area shape="rect" id="node33" href="msgchannel_8h.html" title="This module implements an (M, 1) channel to transfer message pointers. " alt="" coords="581,363,761,389"/>
-<area shape="rect" id="node34" href="communication_8h.html" title="This is the main header file, containing all data structures and defines used by the communication su..." alt="" coords="425,288,661,315"/>
-<area shape="rect" id="node35" href="cross__state__manager_8h.html" title="This is the main header for the Linux Kernel Module which implements per&#45;kernel&#45;thread different page..." alt="" coords="352,184,517,240"/>
-<area shape="rect" id="node24" href="bitmap_8h.html" title="This header implements a minimal bitmap data type. " alt="" coords="1023,363,1169,389"/>
-<area shape="rect" id="node26" href="timer_8h.html" title="This header defines the timers which the simulator uses to monitor its internal behaviour. " alt="" coords="1345,363,1444,389"/>
+<area shape="rect" id="node6" href="ult_8h.html" title="User&#45;Level Threads Headers. " alt="" coords="288,199,371,225"/>
+<area shape="rect" id="node7" href="core_8h.html" title="Core ROOT&#45;Sim functionalities. " alt="" coords="731,437,826,464"/>
+<area shape="rect" id="node23" href="process_8h.html" title="LP control blocks. " alt="" coords="503,109,654,136"/>
+<area shape="rect" id="node27" href="dymelor_8h.html" title="Dynamic Memory Logger and Restorer (DyMeLoR) " alt="" coords="1201,288,1316,315"/>
+<area shape="rect" id="node21" href="jmp_8h.html" title="Architecture&#45;independent ULT header. " alt="" coords="229,288,320,315"/>
+<area shape="rect" id="node8" href="ROOT-Sim_8h.html" title="ROOT&#45;Sim header for model development. " alt="" coords="485,512,584,539"/>
+<area shape="rect" id="node15" href="numerical_8h.html" title="Numerical Library. " alt="" coords="295,512,409,539"/>
+<area shape="rect" id="node16" href="thread_8h.html" title="Generic thread management facilities. " alt="" coords="659,512,767,539"/>
+<area shape="rect" id="node17" href="atomic_8h.html" title="Atomic operations. " alt="" coords="1125,587,1235,613"/>
+<area shape="rect" id="node22" href="x86_2jmp_8h.html" title="x86 ULT support header " alt="" coords="195,363,312,389"/>
+<area shape="rect" id="node24" href="state_8h.html" title="LP state management. " alt="" coords="489,363,586,389"/>
+<area shape="rect" id="node25" href="mm_8h.html" title="Memory Manager main header. " alt="" coords="1027,199,1117,225"/>
+<area shape="rect" id="node33" href="ecs_8h.html" title="Event &amp; Cross State Synchornization. " alt="" coords="787,199,874,225"/>
+<area shape="rect" id="node34" href="list_8h.html" title="Generic Lists. " alt="" coords="1672,512,1792,539"/>
+<area shape="rect" id="node37" href="msgchannel_8h.html" title="A (M, 1) channel for messages. " alt="" coords="614,288,794,315"/>
+<area shape="rect" id="node38" href="communication_8h.html" title="Communication Routines. " alt="" coords="661,363,897,389"/>
+<area shape="rect" id="node39" href="cross__state__manager_8h.html" title="Per&#45;thread page table. " alt="" coords="496,184,661,240"/>
+<area shape="rect" id="node28" href="bitmap_8h.html" title="Bitmap data type. " alt="" coords="1123,363,1269,389"/>
+<area shape="rect" id="node30" href="timer_8h.html" title="Timers. " alt="" coords="1445,363,1544,389"/>
 </map>
 </div>
 </div>
 <p><a href="ult_8c_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a21c80d94da97fa7d1476e8450821a701"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ult_8c.html#a21c80d94da97fa7d1476e8450821a701">get_ult_stack</a> (size_t size)</td></tr>
+<tr class="separator:a21c80d94da97fa7d1476e8450821a701"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:af3d8429cc9ef046d05e2fb0feebf01d7"><td class="memItemLeft" align="right" valign="top">__thread kernel_context_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ult_8c.html#af3d8429cc9ef046d05e2fb0feebf01d7">kernel_context</a></td></tr>
+<tr class="memitem:af3d8429cc9ef046d05e2fb0feebf01d7"><td class="memItemLeft" align="right" valign="top">__thread <a class="el" href="ult_8h.html#af041560b7527757d01ba9157e3258f64">kernel_context_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ult_8c.html#af3d8429cc9ef046d05e2fb0feebf01d7">kernel_context</a></td></tr>
 <tr class="memdesc:af3d8429cc9ef046d05e2fb0feebf01d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the execution context of the simulation kernel.  <a href="#af3d8429cc9ef046d05e2fb0feebf01d7">More...</a><br /></td></tr>
 <tr class="separator:af3d8429cc9ef046d05e2fb0feebf01d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The User-Level Thread module allows the creation/scheduling of a user-level thread in an architecture-dependent way. </p>
-<p>Copyright (C) 2008-2018 HPDCS Group <a href="http://www.dis.uniroma1.it/~hpdcs">http://www.dis.uniroma1.it/~hpdcs</a></p>
+<div class="textblock"><p>User-Level Threads. </p>
+<p>The User-Level Thread module allows the creation/scheduling of multiple co-routines which can yield the CPU to a different one, or that can be preëmpted by some asynchronous event.</p>
+<p>Due to the possibility of external preëmption, ULTs store the whole CPU context in an ad-hoc buffer. This is a significant difference with respect standard facilities such as setjmp/longjmp which only store callee-save registers.</p>
+<p>ULTs are used to implement both runtime-level routines (each worker thread has its own execution context) and model-level routines (each LP has its own execution context).</p>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (C) 2008-2018 HPDCS Group <a href="https://hpdcs.github.io">https://hpdcs.github.io</a></dd></dl>
 <p>This file is part of ROOT-Sim (ROme OpTimistic Simulator).</p>
 <p>ROOT-Sim is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; only version 3 of the License applies.</p>
 <p>ROOT-Sim is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
@@ -167,20 +180,76 @@ Variables</h2></td></tr>
 <dl class="section author"><dt>Author</dt><dd>Alessandro Pellegrini </dd></dl>
 
 <p>Definition in file <a class="el" href="ult_8c_source.html">ult.c</a>.</p>
-</div><h2 class="groupheader">Variable Documentation</h2>
+</div><h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="a21c80d94da97fa7d1476e8450821a701"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* get_ult_stack </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>When this function is called, a zeroed page-aligned stack for the ULT is created and returned. The size of the stack can be specified by using the parameter. It's suggested to give a stack size which is a multiple of the page size. Nevertheless, no check is done by this function.</p>
+<dl class="section author"><dt>Author</dt><dd>Alessandro Pellegrini</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>The size of the requested stack </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the allocated and zeroed page-aligned stack </dd></dl>
+
+<p>Definition at line <a class="el" href="ult_8c_source.html#l00065">65</a> of file <a class="el" href="ult_8c_source.html">ult.c</a>.</p>
+
+<p><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="ult_8c_a21c80d94da97fa7d1476e8450821a701_cgraph.png" border="0" usemap="#ult_8c_a21c80d94da97fa7d1476e8450821a701_cgraph" alt=""/></div>
+<map name="ult_8c_a21c80d94da97fa7d1476e8450821a701_cgraph" id="ult_8c_a21c80d94da97fa7d1476e8450821a701_cgraph">
+<area shape="rect" id="node2" href="dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="188,5,251,32"/>
+<area shape="rect" id="node4" href="x86_2jmp_8h.html#a4929790c2fa580d14f27b319f28b4236" title="context_create" alt="" coords="160,56,279,83"/>
+<area shape="rect" id="node3" href="platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="327,5,436,32"/>
+</map>
+</div>
+</p>
+
+<p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="ult_8c_a21c80d94da97fa7d1476e8450821a701_icgraph.png" border="0" usemap="#ult_8c_a21c80d94da97fa7d1476e8450821a701_icgraph" alt=""/></div>
+<map name="ult_8c_a21c80d94da97fa7d1476e8450821a701_icgraph" id="ult_8c_a21c80d94da97fa7d1476e8450821a701_icgraph">
+<area shape="rect" id="node2" href="process_8h.html#ad58c55ea23fdc3d938b57135b6116feb" title="initialize_lps" alt="" coords="160,5,259,32"/>
+<area shape="rect" id="node3" href="init_8h.html#a417eb072179d09f441dbae3125049e46" title="SystemInit" alt="" coords="307,5,397,32"/>
+<area shape="rect" id="node4" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="445,5,500,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
 <a class="anchor" id="af3d8429cc9ef046d05e2fb0feebf01d7"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">__thread kernel_context_t kernel_context</td>
+          <td class="memname">__thread <a class="el" href="ult_8h.html#af041560b7527757d01ba9157e3258f64">kernel_context_t</a> kernel_context</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>This is the execution context of the simulation kernel. </p>
 
-<p>Definition at line <a class="el" href="ult_8c_source.html#l00037">37</a> of file <a class="el" href="ult_8c_source.html">ult.c</a>.</p>
+<p>Definition at line <a class="el" href="ult_8c_source.html#l00051">51</a> of file <a class="el" href="ult_8c_source.html">ult.c</a>.</p>
 
 </div>
 </div>

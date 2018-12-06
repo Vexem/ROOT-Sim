@@ -23,6 +23,8 @@
   $(document).ready(function() { init_search(); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="flatdoc.css" rel="stylesheet" type="text/css"/>
+<link href="inline-params.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -114,7 +116,7 @@ $(document).ready(function(){initNavTree('list_8h.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>This header defines macros for accessing the general-purpose list implementation used in the simulator.  
+<p>Generic Lists.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stddef.h&gt;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
@@ -127,7 +129,7 @@ $(document).ready(function(){initNavTree('list_8h.html','');});
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="list_8h__incl.png" border="0" usemap="#_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2datatypes_2list_8h" alt=""/></div>
 <map name="_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2datatypes_2list_8h" id="_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2datatypes_2list_8h">
-<area shape="rect" id="node5" href="atomic_8h.html" title="This module implements atomic and non&#45;blocking operations used within ROOT&#45;Sim to coordinate threads ..." alt="" coords="297,109,408,136"/>
+<area shape="rect" id="node5" href="atomic_8h.html" title="Atomic operations. " alt="" coords="297,109,408,136"/>
 </map>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -137,39 +139,46 @@ $(document).ready(function(){initNavTree('list_8h.html','');});
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="list_8h__dep__incl.png" border="0" usemap="#_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2datatypes_2list_8hdep" alt=""/></div>
 <map name="_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2datatypes_2list_8hdep" id="_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2datatypes_2list_8hdep">
-<area shape="rect" id="node2" href="communication_8c.html" title="This module implements all the communication routines, for exchanging messages among different logica..." alt="" coords="3742,421,3981,477"/>
-<area shape="rect" id="node3" href="msgchannel_8c.html" title="This module implements an (M, 1) channel to transfer message pointers. " alt="" coords="3931,109,4114,165"/>
-<area shape="rect" id="node4" href="state_8c.html" title="The state module is responsible for managing LPs&#39; simulation states. In particular, it allows to take a snapshot, to restore a previous snapshot, and to silently re&#45;execute a portion of simulation events to bring a LP to a partiuclar LVT value for which no simulation state. " alt="" coords="192,421,355,477"/>
-<area shape="rect" id="node5" href="queues_8c.html" title="This module implements the event/message queues subsystem. " alt="" coords="3368,421,3531,477"/>
-<area shape="rect" id="node6" href="binding_8c.html" title="Implements load sharing rules for LPs among worker threads. " alt="" coords="5,421,168,477"/>
-<area shape="rect" id="node7" href="control_8c.html" title="Processing Points for Control Messages. " alt="" coords="4005,421,4168,477"/>
-<area shape="rect" id="node8" href="process_8h.html" title="This header defines a LP control block, keeping information about both simulation state and execution..." alt="" coords="2356,109,2519,165"/>
-<area shape="rect" id="node27" href="scheduler_8c.html" title="Re&#45;entrant scheduler for LPs on worker threads. " alt="" coords="3179,421,3343,477"/>
-<area shape="rect" id="node9" href="asm__defines_8c.html" title="This file is not actually compiled into ROOT&#45;Sim. This is used by the build system to generate the as..." alt="" coords="1889,213,2052,269"/>
-<area shape="rect" id="node10" href="ult_8c.html" title="The User&#45;Level Thread module allows the creation/scheduling of a user&#45;level thread in an architecture..." alt="" coords="2076,213,2239,269"/>
-<area shape="rect" id="node11" href="core_8c.html" title="This module implements core functionalities for ROOT&#45;Sim and declares core global variables for the s..." alt="" coords="2059,421,2221,477"/>
-<area shape="rect" id="node12" href="init_8c.html" title="This module implements the simulator initialization routines. " alt="" coords="752,421,915,477"/>
-<area shape="rect" id="node13" href="ccgs_8c.html" title="Consistent and Committed Global State (CCGS) is a subsystem that (poeriodically) recomputes a global ..." alt="" coords="1312,421,1475,477"/>
-<area shape="rect" id="node14" href="fossil_8c.html" title="In this module all the housekeeping operations related to GVT computation phase are present..." alt="" coords="1872,421,2035,477"/>
-<area shape="rect" id="node15" href="gvt_2gvt_8c.html" title="This module implements the GVT reduction. The current implementation is non blocking for observable s..." alt="" coords="939,421,1101,477"/>
-<area shape="rect" id="node16" href="numerical_8c.html" title="In this module there are the implementations of Piece&#45;Wise Deterministic numerical distribution imple..." alt="" coords="379,421,541,477"/>
-<area shape="rect" id="node17" href="main_8c.html" title="This module contains the entry point for the simulator, and some core functions. " alt="" coords="565,421,728,477"/>
-<area shape="rect" id="node18" href="buddy_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/mm/buddy.c" alt="" coords="2263,213,2425,269"/>
-<area shape="rect" id="node19" href="checkpoints_8c.html" title="This module implements the routines to save and restore checkpoints, both full and incremental..." alt="" coords="2992,421,3155,477"/>
-<area shape="rect" id="node20" href="segment_8c.html" title="Segment Allocator. This is the lowest&#45;level allocator in ROOT&#45;Sim. " alt="" coords="2449,213,2612,269"/>
-<area shape="rect" id="node21" href="queues_8h.html" title="Event and State queueing Subsystem main header. " alt="" coords="3267,213,3429,269"/>
-<area shape="rect" id="node22" href="scheduler_8h.html" title="Scheduling Subsystem main header file. Scheduler&#45;specific data structures and defines should be place..." alt="" coords="2337,317,2503,373"/>
-<area shape="rect" id="node26" href="process_8c.html" title="This header defines type&#45;safe operations for LP control block management. " alt="" coords="2619,421,2781,477"/>
-<area shape="rect" id="node28" href="stf_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/scheduler/stf.c" alt="" coords="3555,421,3717,477"/>
-<area shape="rect" id="node30" href="statistics_8c.html" title="State Management Subsystem. " alt="" coords="2805,421,2968,477"/>
-<area shape="rect" id="node31" href="stf_8h.html" title="Smallest Timestamp First scheduler main header. " alt="" coords="2737,213,2900,269"/>
-<area shape="rect" id="node32" href="statistics_8h.html" title="State Management Subsystem. " alt="" coords="1585,213,1748,269"/>
-<area shape="rect" id="node23" href="topology_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/lib/topology.c" alt="" coords="2245,421,2408,477"/>
-<area shape="rect" id="node24" href="wrapper_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/lib&#45;wrapper/wrapper.c" alt="" coords="2432,421,2595,477"/>
-<area shape="rect" id="node25" href="dymelor_8c.html" title="LP&#39;s memory pre&#45;allocator. This layer stands below DyMeLoR, and is the connection point to the Linux ..." alt="" coords="1685,421,1848,477"/>
-<area shape="rect" id="node29" href="serial_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/serial/serial.c" alt="" coords="1499,421,1661,477"/>
-<area shape="rect" id="node33" href="init_8h.html" title="This module implements the simulator initialization routines. " alt="" coords="1449,317,1612,373"/>
-<area shape="rect" id="node34" href="thread_8c.html" title="This module implements a thread barrier. " alt="" coords="1125,421,1288,477"/>
+<area shape="rect" id="node2" href="communication_8c.html" title="Communication Routines. " alt="" coords="2438,421,2677,477"/>
+<area shape="rect" id="node3" href="wnd_8h.html" title="Message delivery support. " alt="" coords="669,213,835,269"/>
+<area shape="rect" id="node13" href="msgchannel_8c.html" title="A (M, 1) channel for messages. " alt="" coords="4535,109,4718,165"/>
+<area shape="rect" id="node14" href="state_8c.html" title="LP state management. " alt="" coords="571,421,733,477"/>
+<area shape="rect" id="node15" href="queues_8c.html" title="Message queueing subsystem. " alt="" coords="4008,421,4171,477"/>
+<area shape="rect" id="node16" href="binding_8c.html" title="Load sharing rules across worker threads. " alt="" coords="5,421,168,477"/>
+<area shape="rect" id="node17" href="control_8c.html" title="Processing points for control messages. " alt="" coords="4944,421,5107,477"/>
+<area shape="rect" id="node18" href="process_8h.html" title="LP control blocks. " alt="" coords="2925,109,3088,165"/>
+<area shape="rect" id="node35" href="scheduler_8c.html" title="The ROOT&#45;Sim scheduler main module. " alt="" coords="4195,421,4359,477"/>
+<area shape="rect" id="node4" href="mpi_8c.html" title="MPI Support Module. " alt="" coords="382,421,546,477"/>
+<area shape="rect" id="node5" href="mpi_8h.html" title="MPI Support Module. " alt="" coords="1215,317,1380,373"/>
+<area shape="rect" id="node7" href="wnd_8c.html" title="Message delivery support. " alt="" coords="192,421,357,477"/>
+<area shape="rect" id="node6" href="communication_2gvt_8c.html" title="Distributed GVT Support module. " alt="" coords="757,421,920,477"/>
+<area shape="rect" id="node8" href="init_8c.html" title="Initialization routines. " alt="" coords="2064,421,2227,477"/>
+<area shape="rect" id="node9" href="ccgs_8c.html" title="Consistent and Committed Global State. " alt="" coords="1317,421,1480,477"/>
+<area shape="rect" id="node10" href="gvt_2gvt_8c.html" title="Global Virtual Time. " alt="" coords="944,421,1107,477"/>
+<area shape="rect" id="node11" href="main_8c.html" title="This module contains the entry point for the simulator, and some core functions. " alt="" coords="1131,421,1293,477"/>
+<area shape="rect" id="node12" href="statistics_8c.html" title="Statistics module. " alt="" coords="1504,421,1667,477"/>
+<area shape="rect" id="node19" href="asm__defines_8c.html" title="Assembly build support module. " alt="" coords="3383,213,3545,269"/>
+<area shape="rect" id="node20" href="ult_8c.html" title="User&#45;Level Threads. " alt="" coords="3569,213,3732,269"/>
+<area shape="rect" id="node21" href="core_8c.html" title="Core ROOT&#45;Sim functionalities. " alt="" coords="2251,421,2413,477"/>
+<area shape="rect" id="node22" href="fossil_8c.html" title="Housekeeping operations. " alt="" coords="2888,421,3051,477"/>
+<area shape="rect" id="node23" href="numerical_8c.html" title="Numerical Library. " alt="" coords="3075,421,3237,477"/>
+<area shape="rect" id="node24" href="buddy_8c.html" title="A Buddy System implementation. " alt="" coords="3756,213,3919,269"/>
+<area shape="rect" id="node25" href="checkpoints_8c.html" title="State saving and restore for model state buffers. " alt="" coords="3821,421,3984,477"/>
+<area shape="rect" id="node26" href="ecs_8c.html" title="Event &amp; Cross State Synchornization. " alt="" coords="4571,421,4733,477"/>
+<area shape="rect" id="node27" href="segment_8c.html" title="Segment allocator. " alt="" coords="3943,213,4105,269"/>
+<area shape="rect" id="node28" href="queues_8h.html" title="Message queueing subsystem. " alt="" coords="2756,213,2919,269"/>
+<area shape="rect" id="node29" href="scheduler_8h.html" title="The ROOT&#45;Sim scheduler main module header. " alt="" coords="2756,317,2921,373"/>
+<area shape="rect" id="node33" href="preempt_8c.html" title="LP preemption management. " alt="" coords="4757,421,4920,477"/>
+<area shape="rect" id="node34" href="process_8c.html" title="Generic LP management functions. " alt="" coords="3635,421,3797,477"/>
+<area shape="rect" id="node36" href="stf_8c.html" title="O(n) scheduling algorithm. " alt="" coords="4384,421,4547,477"/>
+<area shape="rect" id="node38" href="stf_8h.html" title="O(n) scheduling algorithm. " alt="" coords="3044,213,3207,269"/>
+<area shape="rect" id="node39" href="statistics_8h.html" title="Statistics module. " alt="" coords="2105,213,2268,269"/>
+<area shape="rect" id="node30" href="topology_8c.html" title="Topology Library. " alt="" coords="3261,421,3424,477"/>
+<area shape="rect" id="node31" href="wrapper_8c.html" title="stdlib wrapper " alt="" coords="3448,421,3611,477"/>
+<area shape="rect" id="node32" href="dymelor_8c.html" title="Dynamic Memory Logger and Restorer (DyMeLoR) " alt="" coords="2701,421,2864,477"/>
+<area shape="rect" id="node37" href="serial_8c.html" title="Serial scheduler. " alt="" coords="1877,421,2040,477"/>
+<area shape="rect" id="node40" href="init_8h.html" title="Initialization routines. " alt="" coords="1996,317,2159,373"/>
+<area shape="rect" id="node41" href="thread_8c.html" title="Generic thread management facilities. " alt="" coords="1691,421,1853,477"/>
 </map>
 </div>
 </div>
@@ -183,8 +192,6 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a158536626d83c62c07658a72689f3d1a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list_8h.html#a158536626d83c62c07658a72689f3d1a">__LIST_DATATYPE_H</a></td></tr>
-<tr class="separator:a158536626d83c62c07658a72689f3d1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9461ad805b46f1975bbe62b43dbadfcf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list_8h.html#a9461ad805b46f1975bbe62b43dbadfcf">my_offsetof</a>(st,  m)&#160;&#160;&#160;((size_t)( (unsigned char *)&amp;((st)-&gt;m ) - (unsigned char *)(st)))</td></tr>
 <tr class="memdesc:a9461ad805b46f1975bbe62b43dbadfcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">This macro is a slightly-different implementation of the standard offsetof macro.  <a href="#a9461ad805b46f1975bbe62b43dbadfcf">More...</a><br /></td></tr>
 <tr class="separator:a9461ad805b46f1975bbe62b43dbadfcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -232,31 +239,18 @@ Typedefs</h2></td></tr>
 <tr class="separator:a6ddda22ac69e59fec8ae238cdf24c3e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This header defines macros for accessing the general-purpose list implementation used in the simulator. </p>
-<p>Copyright (C) 2008-2018 HPDCS Group <a href="http://www.dis.uniroma1.it/~hpdcs">http://www.dis.uniroma1.it/~hpdcs</a></p>
+<div class="textblock"><p>Generic Lists. </p>
+<p>This header defines macros to access lists of generic objects.</p>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (C) 2008-2018 HPDCS Group <a href="https://hpdcs.github.io">https://hpdcs.github.io</a></dd></dl>
 <p>This file is part of ROOT-Sim (ROme OpTimistic Simulator).</p>
 <p>ROOT-Sim is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; only version 3 of the License applies.</p>
 <p>ROOT-Sim is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
 <p>You should have received a copy of the GNU General Public License along with ROOT-Sim; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA</p>
-<dl class="section author"><dt>Author</dt><dd>Alessandro Pellegrini </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Alessandro Pellegrini</dd></dl>
 <dl class="section date"><dt>Date</dt><dd>November 5, 2013 </dd></dl>
 
 <p>Definition in file <a class="el" href="list_8h_source.html">list.h</a>.</p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a class="anchor" id="a158536626d83c62c07658a72689f3d1a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define __LIST_DATATYPE_H</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="list_8h_source.html#l00029">29</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a038ae97b49e1583a702de3823af01132"></a>
 <div class="memitem">
 <div class="memproto">
@@ -273,7 +267,7 @@ Typedefs</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">({\</div><div class="line">            char *__key_ptr = ((<span class="keywordtype">char</span> *)(data) + __key_position);\</div><div class="line">            double *__key_double_ptr = (<span class="keywordtype">double</span> *)__key_ptr;\</div><div class="line">            *__key_double_ptr;\</div><div class="line">              })</div></div><!-- fragment -->
 <p>This macro retrieves the key of a payload data structure given its offset, and casts the value to double. </p>
 
-<p>Definition at line <a class="el" href="list_8h_source.html#l00096">96</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
+<p>Definition at line <a class="el" href="list_8h_source.html#l00098">98</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
 
 </div>
 </div>
@@ -293,7 +287,7 @@ Typedefs</h2></td></tr>
 
 <p>Declare a "typed" list. This is a pointer to type, but the variable will instead reference a struct rootsim_list! </p>
 
-<p>Definition at line <a class="el" href="list_8h_source.html#l00049">49</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
+<p>Definition at line <a class="el" href="list_8h_source.html#l00051">51</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
 
 </div>
 </div>
@@ -321,7 +315,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="list_8h_source.html#l00208">208</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
+<p>Definition at line <a class="el" href="list_8h_source.html#l00210">210</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
 
 </div>
 </div>
@@ -346,7 +340,7 @@ Typedefs</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="list_8h_source.html#l00108">108</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
+<p>Definition at line <a class="el" href="list_8h_source.html#l00110">110</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
 
 </div>
 </div>
@@ -371,7 +365,7 @@ Typedefs</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="list_8h_source.html#l00072">72</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
+<p>Definition at line <a class="el" href="list_8h_source.html#l00074">74</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
 
 </div>
 </div>
@@ -407,7 +401,7 @@ Typedefs</h2></td></tr>
 
 <p>Insert a new node in the list. </p>
 
-<p>Definition at line <a class="el" href="list_8h_source.html#l00161">161</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
+<p>Definition at line <a class="el" href="list_8h_source.html#l00163">163</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
 
 </div>
 </div>
@@ -434,11 +428,11 @@ Typedefs</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {    \</div><div class="line">        __typeof__(data) __new_n = (data); <span class="comment">/* in-block scope variable */</span>\</div><div class="line">        <span class="keywordtype">size_t</span> __size_before;\</div><div class="line">        <a class="code" href="structrootsim__list.html">rootsim_list</a> *__l;\</div><div class="line">        __new_n-&gt;next = NULL;\</div><div class="line">        __new_n-&gt;prev = NULL;\</div><div class="line">        do {\</div><div class="line">            __l = (<a class="code" href="structrootsim__list.html">rootsim_list</a> *)(li);\</div><div class="line">            assert(__l);\</div><div class="line">            __size_before = __l-&gt;<a class="code" href="structrootsim__list.html#a39e1193dd4b00d86fcbfef6ecd3fd1d2">size</a>;\</div><div class="line">            if(__l-&gt;<a class="code" href="structrootsim__list.html#a39e1193dd4b00d86fcbfef6ecd3fd1d2">size</a> == 0) { <span class="comment">/* is the list empty? */</span>\</div><div class="line">                __l-&gt;head = __new_n;\</div><div class="line">                __l-&gt;tail = __new_n;\</div><div class="line">                break; <span class="comment">/* leave the inner do-while */</span>\</div><div class="line">            }\</div><div class="line">            __new_n-&gt;prev = NULL; <span class="comment">/* Otherwise add at the beginning */</span>\</div><div class="line">            __new_n-&gt;next = __l-&gt;<a class="code" href="structrootsim__list.html#ade6389bebff6c77742a7a8913092e338">head</a>;\</div><div class="line">            ((__typeof(data))__l-&gt;<a class="code" href="structrootsim__list.html#ade6389bebff6c77742a7a8913092e338">head</a>)-&gt;prev = __new_n;\</div><div class="line">            __l-&gt;head = __new_n;\</div><div class="line">        } <span class="keywordflow">while</span>(0);\</div><div class="line">        __l-&gt;size++;\</div><div class="line">        assert(__l-&gt;<a class="code" href="structrootsim__list.html#a39e1193dd4b00d86fcbfef6ecd3fd1d2">size</a> == (__size_before + 1));\</div><div class="line">    } <span class="keywordflow">while</span>(0)</div><div class="ttc" id="structrootsim__list_html_ade6389bebff6c77742a7a8913092e338"><div class="ttname"><a href="structrootsim__list.html#ade6389bebff6c77742a7a8913092e338">rootsim_list::head</a></div><div class="ttdeci">void * head</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00040">list.h:40</a></div></div>
-<div class="ttc" id="structrootsim__list_html"><div class="ttname"><a href="structrootsim__list.html">rootsim_list</a></div><div class="ttdoc">This structure defines a generic list. </div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00038">list.h:38</a></div></div>
-<div class="ttc" id="structrootsim__list_html_a39e1193dd4b00d86fcbfef6ecd3fd1d2"><div class="ttname"><a href="structrootsim__list.html#a39e1193dd4b00d86fcbfef6ecd3fd1d2">rootsim_list::size</a></div><div class="ttdeci">size_t size</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00039">list.h:39</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {    \</div><div class="line">        __typeof__(data) __new_n = (data); <span class="comment">/* in-block scope variable */</span>\</div><div class="line">        <span class="keywordtype">size_t</span> __size_before;\</div><div class="line">        <a class="code" href="structrootsim__list.html">rootsim_list</a> *__l;\</div><div class="line">        __new_n-&gt;next = NULL;\</div><div class="line">        __new_n-&gt;prev = NULL;\</div><div class="line">        do {\</div><div class="line">            __l = (<a class="code" href="structrootsim__list.html">rootsim_list</a> *)(li);\</div><div class="line">            assert(__l);\</div><div class="line">            __size_before = __l-&gt;<a class="code" href="structrootsim__list.html#a39e1193dd4b00d86fcbfef6ecd3fd1d2">size</a>;\</div><div class="line">            if(__l-&gt;<a class="code" href="structrootsim__list.html#a39e1193dd4b00d86fcbfef6ecd3fd1d2">size</a> == 0) { <span class="comment">/* is the list empty? */</span>\</div><div class="line">                __l-&gt;head = __new_n;\</div><div class="line">                __l-&gt;tail = __new_n;\</div><div class="line">                break; <span class="comment">/* leave the inner do-while */</span>\</div><div class="line">            }\</div><div class="line">            __new_n-&gt;prev = NULL; <span class="comment">/* Otherwise add at the beginning */</span>\</div><div class="line">            __new_n-&gt;next = __l-&gt;<a class="code" href="structrootsim__list.html#ade6389bebff6c77742a7a8913092e338">head</a>;\</div><div class="line">            ((__typeof(data))__l-&gt;<a class="code" href="structrootsim__list.html#ade6389bebff6c77742a7a8913092e338">head</a>)-&gt;prev = __new_n;\</div><div class="line">            __l-&gt;head = __new_n;\</div><div class="line">        } <span class="keywordflow">while</span>(0);\</div><div class="line">        __l-&gt;size++;\</div><div class="line">        assert(__l-&gt;<a class="code" href="structrootsim__list.html#a39e1193dd4b00d86fcbfef6ecd3fd1d2">size</a> == (__size_before + 1));\</div><div class="line">    } <span class="keywordflow">while</span>(0)</div><div class="ttc" id="structrootsim__list_html_ade6389bebff6c77742a7a8913092e338"><div class="ttname"><a href="structrootsim__list.html#ade6389bebff6c77742a7a8913092e338">rootsim_list::head</a></div><div class="ttdeci">void * head</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00042">list.h:42</a></div></div>
+<div class="ttc" id="structrootsim__list_html"><div class="ttname"><a href="structrootsim__list.html">rootsim_list</a></div><div class="ttdoc">This structure defines a generic list. </div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00040">list.h:40</a></div></div>
+<div class="ttc" id="structrootsim__list_html_a39e1193dd4b00d86fcbfef6ecd3fd1d2"><div class="ttname"><a href="structrootsim__list.html#a39e1193dd4b00d86fcbfef6ecd3fd1d2">rootsim_list::size</a></div><div class="ttdeci">size_t size</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00041">list.h:41</a></div></div>
 </div><!-- fragment -->
-<p>Definition at line <a class="el" href="list_8h_source.html#l00135">135</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
+<p>Definition at line <a class="el" href="list_8h_source.html#l00137">137</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
 
 </div>
 </div>
@@ -465,11 +459,11 @@ Typedefs</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {    \</div><div class="line">        __typeof__(data) __new_n = (data); <span class="comment">/* in-block scope variable */</span>\</div><div class="line">        <span class="keywordtype">size_t</span> __size_before;\</div><div class="line">        <a class="code" href="structrootsim__list.html">rootsim_list</a> *__l;\</div><div class="line">        __new_n-&gt;next = NULL;\</div><div class="line">        __new_n-&gt;prev = NULL;\</div><div class="line">        do {\</div><div class="line">            __l = (<a class="code" href="structrootsim__list.html">rootsim_list</a> *)(li);\</div><div class="line">            assert(__l);\</div><div class="line">            __size_before = __l-&gt;<a class="code" href="structrootsim__list.html#a39e1193dd4b00d86fcbfef6ecd3fd1d2">size</a>;\</div><div class="line">            if(__l-&gt;<a class="code" href="structrootsim__list.html#a39e1193dd4b00d86fcbfef6ecd3fd1d2">size</a> == 0) { <span class="comment">/* is the list empty? */</span>\</div><div class="line">                __l-&gt;head = __new_n;\</div><div class="line">                __l-&gt;tail = __new_n;\</div><div class="line">                break; <span class="comment">/* leave the inner do-while */</span>\</div><div class="line">            }\</div><div class="line">            __new_n-&gt;next = NULL; <span class="comment">/* Otherwise add at the end */</span>\</div><div class="line">            __new_n-&gt;prev = __l-&gt;<a class="code" href="structrootsim__list.html#a02ca8d3d74031b0eafef56b4f351bf30">tail</a>;\</div><div class="line">            ((__typeof__(data))(__l-&gt;<a class="code" href="structrootsim__list.html#a02ca8d3d74031b0eafef56b4f351bf30">tail</a>))-&gt;next = __new_n;\</div><div class="line">            __l-&gt;tail = __new_n;\</div><div class="line">        } <span class="keywordflow">while</span>(0);\</div><div class="line">        __l-&gt;size++;\</div><div class="line">        assert(__l-&gt;<a class="code" href="structrootsim__list.html#a39e1193dd4b00d86fcbfef6ecd3fd1d2">size</a> == (__size_before + 1));\</div><div class="line">    } <span class="keywordflow">while</span>(0)</div><div class="ttc" id="structrootsim__list_html_a02ca8d3d74031b0eafef56b4f351bf30"><div class="ttname"><a href="structrootsim__list.html#a02ca8d3d74031b0eafef56b4f351bf30">rootsim_list::tail</a></div><div class="ttdeci">void * tail</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00041">list.h:41</a></div></div>
-<div class="ttc" id="structrootsim__list_html"><div class="ttname"><a href="structrootsim__list.html">rootsim_list</a></div><div class="ttdoc">This structure defines a generic list. </div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00038">list.h:38</a></div></div>
-<div class="ttc" id="structrootsim__list_html_a39e1193dd4b00d86fcbfef6ecd3fd1d2"><div class="ttname"><a href="structrootsim__list.html#a39e1193dd4b00d86fcbfef6ecd3fd1d2">rootsim_list::size</a></div><div class="ttdeci">size_t size</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00039">list.h:39</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {    \</div><div class="line">        __typeof__(data) __new_n = (data); <span class="comment">/* in-block scope variable */</span>\</div><div class="line">        <span class="keywordtype">size_t</span> __size_before;\</div><div class="line">        <a class="code" href="structrootsim__list.html">rootsim_list</a> *__l;\</div><div class="line">        __new_n-&gt;next = NULL;\</div><div class="line">        __new_n-&gt;prev = NULL;\</div><div class="line">        do {\</div><div class="line">            __l = (<a class="code" href="structrootsim__list.html">rootsim_list</a> *)(li);\</div><div class="line">            assert(__l);\</div><div class="line">            __size_before = __l-&gt;<a class="code" href="structrootsim__list.html#a39e1193dd4b00d86fcbfef6ecd3fd1d2">size</a>;\</div><div class="line">            if(__l-&gt;<a class="code" href="structrootsim__list.html#a39e1193dd4b00d86fcbfef6ecd3fd1d2">size</a> == 0) { <span class="comment">/* is the list empty? */</span>\</div><div class="line">                __l-&gt;head = __new_n;\</div><div class="line">                __l-&gt;tail = __new_n;\</div><div class="line">                break; <span class="comment">/* leave the inner do-while */</span>\</div><div class="line">            }\</div><div class="line">            __new_n-&gt;next = NULL; <span class="comment">/* Otherwise add at the end */</span>\</div><div class="line">            __new_n-&gt;prev = __l-&gt;<a class="code" href="structrootsim__list.html#a02ca8d3d74031b0eafef56b4f351bf30">tail</a>;\</div><div class="line">            ((__typeof__(data))(__l-&gt;<a class="code" href="structrootsim__list.html#a02ca8d3d74031b0eafef56b4f351bf30">tail</a>))-&gt;next = __new_n;\</div><div class="line">            __l-&gt;tail = __new_n;\</div><div class="line">        } <span class="keywordflow">while</span>(0);\</div><div class="line">        __l-&gt;size++;\</div><div class="line">        assert(__l-&gt;<a class="code" href="structrootsim__list.html#a39e1193dd4b00d86fcbfef6ecd3fd1d2">size</a> == (__size_before + 1));\</div><div class="line">    } <span class="keywordflow">while</span>(0)</div><div class="ttc" id="structrootsim__list_html_a02ca8d3d74031b0eafef56b4f351bf30"><div class="ttname"><a href="structrootsim__list.html#a02ca8d3d74031b0eafef56b4f351bf30">rootsim_list::tail</a></div><div class="ttdeci">void * tail</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00043">list.h:43</a></div></div>
+<div class="ttc" id="structrootsim__list_html"><div class="ttname"><a href="structrootsim__list.html">rootsim_list</a></div><div class="ttdoc">This structure defines a generic list. </div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00040">list.h:40</a></div></div>
+<div class="ttc" id="structrootsim__list_html_a39e1193dd4b00d86fcbfef6ecd3fd1d2"><div class="ttname"><a href="structrootsim__list.html#a39e1193dd4b00d86fcbfef6ecd3fd1d2">rootsim_list::size</a></div><div class="ttdeci">size_t size</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00041">list.h:41</a></div></div>
 </div><!-- fragment -->
-<p>Definition at line <a class="el" href="list_8h_source.html#l00110">110</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
+<p>Definition at line <a class="el" href="list_8h_source.html#l00112">112</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
 
 </div>
 </div>
@@ -494,7 +488,7 @@ Typedefs</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="list_8h_source.html#l00086">86</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
+<p>Definition at line <a class="el" href="list_8h_source.html#l00088">88</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
 
 </div>
 </div>
@@ -512,11 +506,11 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {<a class="code" href="list_8h.html#a6ddda22ac69e59fec8ae238cdf24c3e8">\</a></div><div class="line"><a class="code" href="list_8h.html#a6ddda22ac69e59fec8ae238cdf24c3e8">		rootsim_list</a> *__l;\</div><div class="line">        size_t __size_before;\</div><div class="line">        __typeof__ (<a class="code" href="list_8h.html#a0da4b86f76acd6d3f307717f844b61d2">list</a>) __n;\</div><div class="line">        __typeof__ (<a class="code" href="list_8h.html#a0da4b86f76acd6d3f307717f844b61d2">list</a>) __n_next;\</div><div class="line">        __l = (<a class="code" href="structrootsim__list.html">rootsim_list</a> *)(<a class="code" href="list_8h.html#a0da4b86f76acd6d3f307717f844b61d2">list</a>);\</div><div class="line">        assert(__l);\</div><div class="line">        __size_before = __l-&gt;size;\</div><div class="line">        __n = __l-&gt;head;\</div><div class="line">        if(__n != NULL) {\</div><div class="line">            __l-&gt;<a class="code" href="structrootsim__list.html#ade6389bebff6c77742a7a8913092e338">head</a> = __n-&gt;next;\</div><div class="line">            if(__n-&gt;next != NULL) {\</div><div class="line">                __n-&gt;next-&gt;prev = NULL;\</div><div class="line">            }\</div><div class="line">            __n_next = __n-&gt;next;\</div><div class="line">            __n-&gt;next = (<span class="keywordtype">void</span> *)0xDEFEC8ED;\</div><div class="line">            __n-&gt;prev = (<span class="keywordtype">void</span> *)0xDEFEC8ED;\</div><div class="line">            __n = __n_next;\</div><div class="line">            __l-&gt;size--;\</div><div class="line">            assert(__l-&gt;size == (__size_before - 1));\</div><div class="line">        }\</div><div class="line">    } <span class="keywordflow">while</span>(0)</div><div class="ttc" id="list_8h_html_a6ddda22ac69e59fec8ae238cdf24c3e8"><div class="ttname"><a href="list_8h.html#a6ddda22ac69e59fec8ae238cdf24c3e8">rootsim_list</a></div><div class="ttdeci">struct rootsim_list rootsim_list</div><div class="ttdoc">This structure defines a generic list. </div></div>
-<div class="ttc" id="structrootsim__list_html_ade6389bebff6c77742a7a8913092e338"><div class="ttname"><a href="structrootsim__list.html#ade6389bebff6c77742a7a8913092e338">rootsim_list::head</a></div><div class="ttdeci">void * head</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00040">list.h:40</a></div></div>
-<div class="ttc" id="list_8h_html_a0da4b86f76acd6d3f307717f844b61d2"><div class="ttname"><a href="list_8h.html#a0da4b86f76acd6d3f307717f844b61d2">list</a></div><div class="ttdeci">#define list(type)</div><div class="ttdoc">Declare a &quot;typed&quot; list. This is a pointer to type, but the variable will instead reference a struct r...</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00049">list.h:49</a></div></div>
-<div class="ttc" id="structrootsim__list_html"><div class="ttname"><a href="structrootsim__list.html">rootsim_list</a></div><div class="ttdoc">This structure defines a generic list. </div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00038">list.h:38</a></div></div>
+<div class="ttc" id="structrootsim__list_html_ade6389bebff6c77742a7a8913092e338"><div class="ttname"><a href="structrootsim__list.html#ade6389bebff6c77742a7a8913092e338">rootsim_list::head</a></div><div class="ttdeci">void * head</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00042">list.h:42</a></div></div>
+<div class="ttc" id="list_8h_html_a0da4b86f76acd6d3f307717f844b61d2"><div class="ttname"><a href="list_8h.html#a0da4b86f76acd6d3f307717f844b61d2">list</a></div><div class="ttdeci">#define list(type)</div><div class="ttdoc">Declare a &quot;typed&quot; list. This is a pointer to type, but the variable will instead reference a struct r...</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00051">list.h:51</a></div></div>
+<div class="ttc" id="structrootsim__list_html"><div class="ttname"><a href="structrootsim__list.html">rootsim_list</a></div><div class="ttdoc">This structure defines a generic list. </div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00040">list.h:40</a></div></div>
 </div><!-- fragment -->
-<p>Definition at line <a class="el" href="list_8h_source.html#l00241">241</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
+<p>Definition at line <a class="el" href="list_8h_source.html#l00243">243</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
 
 </div>
 </div>
@@ -541,7 +535,7 @@ Typedefs</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="list_8h_source.html#l00093">93</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
+<p>Definition at line <a class="el" href="list_8h_source.html#l00095">95</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
 
 </div>
 </div>
@@ -559,7 +553,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="list_8h_source.html#l00295">295</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
+<p>Definition at line <a class="el" href="list_8h_source.html#l00297">297</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
 
 </div>
 </div>
@@ -577,7 +571,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="list_8h_source.html#l00065">65</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
+<p>Definition at line <a class="el" href="list_8h_source.html#l00067">67</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
 
 </div>
 </div>
@@ -602,7 +596,7 @@ Typedefs</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="list_8h_source.html#l00079">79</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
+<p>Definition at line <a class="el" href="list_8h_source.html#l00081">81</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
 
 </div>
 </div>
@@ -642,14 +636,14 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">({<a class="code" href="list_8h.html#a6ddda22ac69e59fec8ae238cdf24c3e8">\</a></div><div class="line"><a class="code" href="list_8h.html#a6ddda22ac69e59fec8ae238cdf24c3e8">	rootsim_list</a> *__l = (<a class="code" href="structrootsim__list.html">rootsim_list</a> *)(<a class="code" href="list_8h.html#a0da4b86f76acd6d3f307717f844b61d2">list</a>);\</div><div class="line">    __typeof__(<a class="code" href="list_8h.html#a0da4b86f76acd6d3f307717f844b61d2">list</a>) __n;\</div><div class="line">    __typeof__(<a class="code" href="list_8h.html#a0da4b86f76acd6d3f307717f844b61d2">list</a>) __n_adjacent;\</div><div class="line">    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> __deleted = 0;\</div><div class="line">    <span class="keywordtype">size_t</span> __key_position = <a class="code" href="list_8h.html#a9461ad805b46f1975bbe62b43dbadfcf">my_offsetof</a>((<a class="code" href="list_8h.html#a0da4b86f76acd6d3f307717f844b61d2">list</a>), key_name);\</div><div class="line">    assert(__l);\</div><div class="line">    <span class="keywordtype">size_t</span> __size_before = __l-&gt;size;\</div><div class="line">    <span class="comment">/* Attempting to truncate an empty list? */</span>\</div><div class="line">    if(__l-&gt;size &gt; 0) {\</div><div class="line">        __n = __l-&gt;head;\</div><div class="line">        while(__n != NULL &amp;&amp; <a class="code" href="list_8h.html#a038ae97b49e1583a702de3823af01132">get_key</a>(__n) &lt; (key_value)) {\</div><div class="line">            __deleted++;\</div><div class="line">                    __n_adjacent = __n-&gt;next;\</div><div class="line">                    __n-&gt;next = (<span class="keywordtype">void</span> *)0xBAADF00D;\</div><div class="line">                    __n-&gt;prev = (<span class="keywordtype">void</span> *)0xBAADF00D;\</div><div class="line">            release_fn(__n);\</div><div class="line">            __n = __n_adjacent;\</div><div class="line">        }\</div><div class="line">        __l-&gt;head = __n;\</div><div class="line">        if(__l-&gt;head != NULL)\</div><div class="line">        ((__typeof__(list))__l-&gt;head)-&gt;prev = NULL;\</div><div class="line">    }\</div><div class="line">    __l-&gt;size -= __deleted;\</div><div class="line">    assert(__l-&gt;size == (__size_before - __deleted));\</div><div class="line">    __deleted;\</div><div class="line">    })</div><div class="ttc" id="list_8h_html_a6ddda22ac69e59fec8ae238cdf24c3e8"><div class="ttname"><a href="list_8h.html#a6ddda22ac69e59fec8ae238cdf24c3e8">rootsim_list</a></div><div class="ttdeci">struct rootsim_list rootsim_list</div><div class="ttdoc">This structure defines a generic list. </div></div>
-<div class="ttc" id="list_8h_html_a0da4b86f76acd6d3f307717f844b61d2"><div class="ttname"><a href="list_8h.html#a0da4b86f76acd6d3f307717f844b61d2">list</a></div><div class="ttdeci">#define list(type)</div><div class="ttdoc">Declare a &quot;typed&quot; list. This is a pointer to type, but the variable will instead reference a struct r...</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00049">list.h:49</a></div></div>
-<div class="ttc" id="list_8h_html_a9461ad805b46f1975bbe62b43dbadfcf"><div class="ttname"><a href="list_8h.html#a9461ad805b46f1975bbe62b43dbadfcf">my_offsetof</a></div><div class="ttdeci">#define my_offsetof(st, m)</div><div class="ttdoc">This macro is a slightly-different implementation of the standard offsetof macro. ...</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00046">list.h:46</a></div></div>
-<div class="ttc" id="structrootsim__list_html"><div class="ttname"><a href="structrootsim__list.html">rootsim_list</a></div><div class="ttdoc">This structure defines a generic list. </div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00038">list.h:38</a></div></div>
-<div class="ttc" id="list_8h_html_a038ae97b49e1583a702de3823af01132"><div class="ttname"><a href="list_8h.html#a038ae97b49e1583a702de3823af01132">get_key</a></div><div class="ttdeci">#define get_key(data)</div><div class="ttdoc">This macro retrieves the key of a payload data structure given its offset, and casts the value to dou...</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00096">list.h:96</a></div></div>
+<div class="ttc" id="list_8h_html_a0da4b86f76acd6d3f307717f844b61d2"><div class="ttname"><a href="list_8h.html#a0da4b86f76acd6d3f307717f844b61d2">list</a></div><div class="ttdeci">#define list(type)</div><div class="ttdoc">Declare a &quot;typed&quot; list. This is a pointer to type, but the variable will instead reference a struct r...</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00051">list.h:51</a></div></div>
+<div class="ttc" id="list_8h_html_a9461ad805b46f1975bbe62b43dbadfcf"><div class="ttname"><a href="list_8h.html#a9461ad805b46f1975bbe62b43dbadfcf">my_offsetof</a></div><div class="ttdeci">#define my_offsetof(st, m)</div><div class="ttdoc">This macro is a slightly-different implementation of the standard offsetof macro. ...</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00048">list.h:48</a></div></div>
+<div class="ttc" id="structrootsim__list_html"><div class="ttname"><a href="structrootsim__list.html">rootsim_list</a></div><div class="ttdoc">This structure defines a generic list. </div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00040">list.h:40</a></div></div>
+<div class="ttc" id="list_8h_html_a038ae97b49e1583a702de3823af01132"><div class="ttname"><a href="list_8h.html#a038ae97b49e1583a702de3823af01132">get_key</a></div><div class="ttdeci">#define get_key(data)</div><div class="ttdoc">This macro retrieves the key of a payload data structure given its offset, and casts the value to dou...</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00098">list.h:98</a></div></div>
 </div><!-- fragment -->
 <p>Truncate a list up to a certain point, starting from the head. </p>
 
-<p>Definition at line <a class="el" href="list_8h_source.html#l00266">266</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
+<p>Definition at line <a class="el" href="list_8h_source.html#l00268">268</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
 
 </div>
 </div>
@@ -679,7 +673,7 @@ Typedefs</h2></td></tr>
 
 <p>This macro is a slightly-different implementation of the standard offsetof macro. </p>
 
-<p>Definition at line <a class="el" href="list_8h_source.html#l00046">46</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
+<p>Definition at line <a class="el" href="list_8h_source.html#l00048">48</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
 
 </div>
 </div>
@@ -696,10 +690,10 @@ Typedefs</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">(type *)({ \</div><div class="line">                void *__lmptr; \</div><div class="line">                __lmptr = (<span class="keywordtype">void</span> *)<a class="code" href="dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b">rsalloc</a>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structrootsim__list.html">rootsim_list</a>)); \</div><div class="line">                bzero(__lmptr, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structrootsim__list.html">rootsim_list</a>));\</div><div class="line">                __lmptr;\</div><div class="line">            })</div><div class="ttc" id="dymelor_8h_html_a9e80751b3934b0cd4411695f6743016b"><div class="ttname"><a href="dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b">rsalloc</a></div><div class="ttdeci">void * rsalloc(size_t)</div><div class="ttdef"><b>Definition:</b> <a href="platform_8c_source.html#l00037">platform.c:37</a></div></div>
-<div class="ttc" id="structrootsim__list_html"><div class="ttname"><a href="structrootsim__list.html">rootsim_list</a></div><div class="ttdoc">This structure defines a generic list. </div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00038">list.h:38</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line">(type *)({ \</div><div class="line">                void *__lmptr; \</div><div class="line">                __lmptr = (<span class="keywordtype">void</span> *)<a class="code" href="dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b">rsalloc</a>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structrootsim__list.html">rootsim_list</a>)); \</div><div class="line">                bzero(__lmptr, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structrootsim__list.html">rootsim_list</a>));\</div><div class="line">                __lmptr;\</div><div class="line">            })</div><div class="ttc" id="dymelor_8h_html_a9e80751b3934b0cd4411695f6743016b"><div class="ttname"><a href="dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b">rsalloc</a></div><div class="ttdeci">void * rsalloc(size_t)</div><div class="ttdef"><b>Definition:</b> <a href="platform_8c_source.html#l00041">platform.c:41</a></div></div>
+<div class="ttc" id="structrootsim__list_html"><div class="ttname"><a href="structrootsim__list.html">rootsim_list</a></div><div class="ttdoc">This structure defines a generic list. </div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00040">list.h:40</a></div></div>
 </div><!-- fragment --><p>This macro allocates a struct <a class="el" href="structrootsim__list.html" title="This structure defines a generic list. ">rootsim_list</a> object and cast it to the type pointer. It can be used to mimic the C++ syntax of templated lists, like: </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;list(int) = new_list(int);</div></div><!-- fragment --> 
-<p>Definition at line <a class="el" href="list_8h_source.html#l00057">57</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
+<p>Definition at line <a class="el" href="list_8h_source.html#l00059">59</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
 
 </div>
 </div>

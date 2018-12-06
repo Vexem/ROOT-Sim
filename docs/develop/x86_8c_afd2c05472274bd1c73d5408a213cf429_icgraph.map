@@ -1,0 +1,11 @@
+<map id="spin_trylock" name="spin_trylock">
+<area shape="rect" id="node2" href="$communication_2gvt_8h.html#ad754b4a17c642f9672743a0a246e6467" title="white_msg_redux_completed" alt="" coords="363,5,571,32"/>
+<area shape="rect" id="node7" href="$communication_2gvt_8h.html#a0d0d87c4ff2f7290727fc3d3f9b2034f" title="gvt_redux_completed" alt="" coords="153,56,313,83"/>
+<area shape="rect" id="node8" href="$mpi_8h.html#ad243611fd168b265105bce70c193394d" title="receive_remote_msgs" alt="" coords="151,107,315,133"/>
+<area shape="rect" id="node10" href="$mpi_8h.html#a19d485235dd4145edaa8eabe632a77f6" title="collect_termination" alt="" coords="619,208,763,235"/>
+<area shape="rect" id="node3" href="$gvt_2gvt_8h.html#a899b50ab45427cf145360ff3a6c29808" title="gvt_operations" alt="" coords="632,81,749,108"/>
+<area shape="rect" id="node4" href="$main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="811,157,972,184"/>
+<area shape="rect" id="node5" href="$main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="1020,157,1141,184"/>
+<area shape="rect" id="node6" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1053,208,1108,235"/>
+<area shape="rect" id="node9" href="$gvt_2gvt_8c.html#a895d5bfff43f3ee72f9cf7097abf609b" title="GVT_phases" alt="" coords="416,107,517,133"/>
+</map>

@@ -16,7 +16,7 @@ var NAVTREE =
       [ "Globals", "globals.html", [
         [ "All", "globals.html", "globals_dup" ],
         [ "Functions", "globals_func.html", "globals_func" ],
-        [ "Variables", "globals_vars.html", null ],
+        [ "Variables", "globals_vars.html", "globals_vars" ],
         [ "Typedefs", "globals_type.html", null ],
         [ "Enumerations", "globals_enum.html", null ],
         [ "Enumerator", "globals_eval.html", "globals_eval" ],
@@ -29,13 +29,17 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "ROOT-Sim_8h.html",
-"communication_8h.html#a553b390321e200d444e9d44e9df0fcff",
-"dir_f776d9248ed6307f36eeb3e24286f81b.html",
-"gvt_2gvt_8c.html#a6f409b2294f57a3dadae10ff71c2c0d6ae7f75166d9a5d226ecd678852939283f",
-"my__page__fault_8c.html#abc91886d96c4ea12d3ec92c0c7545e4b",
-"state_8h.html#a811745ec50221fbd3a285e5aff9b3ff2",
-"struct__state__t.html#affe55bde32db277a05afb92be85dc8c2",
-"wrapper_8c.html#a0159c74a123b68c5434b8747172aa255"
+"communication_2gvt_8c.html#aedd8c6fb4f095c541650ecbef4501ebb",
+"cross__state__manager_8c.html#a8ebbb3cced92d39cfc6673d4bab78b04",
+"disassemble_8h.html#a9ad5c88dbebddeac90736a22f9c88edb",
+"disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206af51a52fb05f15b11d2fb8a4314cfae1a",
+"globals_eval.html",
+"lend_8h_source.html",
+"process_8h.html#ace1857ce5bc66b3df5001eca72763f99",
+"statistics_8h.html#a984edd6d519fb791d131797b69e06516ac15f09007aa332d33074061219ecc8dc",
+"structdisassembly__state.html#afd9a2bea03fcaee3170b3eaa8ea5b820",
+"ult_8h.html#af041560b7527757d01ba9157e3258f64",
+"x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206a653280f8276d474814f350ba298b458a"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

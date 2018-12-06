@@ -23,6 +23,8 @@
   $(document).ready(function() { init_search(); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="flatdoc.css" rel="stylesheet" type="text/css"/>
+<link href="inline-params.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -111,6 +113,9 @@ $(document).ready(function(){initNavTree('stf_8c.html','');});
 <div class="title">stf.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>O(n) scheduling algorithm.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="thread_8h_source.html">arch/thread.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="core_8h_source.html">core/core.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="queues_8h_source.html">queues/queues.h</a>&gt;</code><br />
@@ -125,27 +130,29 @@ $(document).ready(function(){initNavTree('stf_8c.html','');});
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="stf_8c__incl.png" border="0" usemap="#_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2scheduler_2stf_8c" alt=""/></div>
 <map name="_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2scheduler_2stf_8c" id="_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2scheduler_2stf_8c">
-<area shape="rect" id="node2" href="thread_8h.html" title="This module implements Kernel Level Thread supports. " alt="" coords="145,661,253,688"/>
-<area shape="rect" id="node6" href="core_8h.html" title="This header defines all the shared symbols which are needed by different subsystems. " alt="" coords="657,587,751,613"/>
-<area shape="rect" id="node17" href="queues_8h.html" title="Event and State queueing Subsystem main header. " alt="" coords="506,184,638,211"/>
-<area shape="rect" id="node18" href="process_8h.html" title="This header defines a LP control block, keeping information about both simulation state and execution..." alt="" coords="981,259,1131,285"/>
-<area shape="rect" id="node20" href="mm_8h.html" title="Memory Manager main header. " alt="" coords="376,348,467,375"/>
-<area shape="rect" id="node38" href="scheduler_8h.html" title="Scheduling Subsystem main header file. Scheduler&#45;specific data structures and defines should be place..." alt="" coords="693,109,854,136"/>
-<area shape="rect" id="node40" href="gvt_2gvt_8h.html" title="This header defines all the Global Virtual Time symbols needed by the platform. The current implement..." alt="" coords="1273,437,1351,464"/>
-<area shape="rect" id="node4" href="atomic_8h.html" title="This module implements atomic and non&#45;blocking operations used within ROOT&#45;Sim to coordinate threads ..." alt="" coords="186,736,297,763"/>
-<area shape="rect" id="node7" href="ROOT-Sim_8h.html" title="This header defines all the symbols which are needed to develop a Model to be simulated on top of ROO..." alt="" coords="896,661,995,688"/>
-<area shape="rect" id="node16" href="numerical_8h.html" title="This header is used to define symbols which must be accessible by the simulator but not by the applic..." alt="" coords="1055,661,1169,688"/>
-<area shape="rect" id="node19" href="state_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="1099,512,1197,539"/>
-<area shape="rect" id="node29" href="ecs_8h.html" title="Event Cross State Synchronization. This module implements the userspace handler of the artificially i..." alt="" coords="871,348,958,375"/>
-<area shape="rect" id="node30" href="list_8h.html" title="This header defines macros for accessing the general&#45;purpose list implementation used in the simulato..." alt="" coords="1477,661,1597,688"/>
-<area shape="rect" id="node33" href="msgchannel_8h.html" title="This module implements an (M, 1) channel to transfer message pointers. " alt="" coords="843,512,1023,539"/>
-<area shape="rect" id="node34" href="ult_8h.html" title="The User&#45;Level Thread module allows the creation/scheduling of a user&#45;level thread in an architecture..." alt="" coords="764,348,847,375"/>
-<area shape="rect" id="node35" href="communication_8h.html" title="This is the main header file, containing all data structures and defines used by the communication su..." alt="" coords="1374,348,1610,375"/>
-<area shape="rect" id="node36" href="cross__state__manager_8h.html" title="This is the main header for the Linux Kernel Module which implements per&#45;kernel&#45;thread different page..." alt="" coords="1033,333,1199,389"/>
-<area shape="rect" id="node23" href="dymelor_8h.html" title="This is the Memory Management Subsystem main header file. " alt="" coords="216,437,331,464"/>
-<area shape="rect" id="node24" href="bitmap_8h.html" title="This header implements a minimal bitmap data type. " alt="" coords="195,512,341,539"/>
-<area shape="rect" id="node26" href="timer_8h.html" title="This header defines the timers which the simulator uses to monitor its internal behaviour. " alt="" coords="365,512,464,539"/>
-<area shape="rect" id="node39" href="stf_8h.html" title="Smallest Timestamp First scheduler main header. " alt="" coords="764,184,879,211"/>
+<area shape="rect" id="node2" href="thread_8h.html" title="Generic thread management facilities. " alt="" coords="193,661,301,688"/>
+<area shape="rect" id="node9" href="core_8h.html" title="Core ROOT&#45;Sim functionalities. " alt="" coords="1096,587,1191,613"/>
+<area shape="rect" id="node20" href="queues_8h.html" title="Message queueing subsystem. " alt="" coords="1028,184,1160,211"/>
+<area shape="rect" id="node21" href="process_8h.html" title="LP control blocks. " alt="" coords="1055,259,1205,285"/>
+<area shape="rect" id="node23" href="mm_8h.html" title="Memory Manager main header. " alt="" coords="563,348,654,375"/>
+<area shape="rect" id="node42" href="scheduler_8h.html" title="The ROOT&#45;Sim scheduler main module header. " alt="" coords="1259,109,1420,136"/>
+<area shape="rect" id="node44" href="gvt_2gvt_8h.html" title="Global Virtual Time. " alt="" coords="1875,437,1953,464"/>
+<area shape="rect" id="node4" href="atomic_8h.html" title="Atomic operations. " alt="" coords="359,736,469,763"/>
+<area shape="rect" id="node10" href="ROOT-Sim_8h.html" title="ROOT&#45;Sim header for model development. " alt="" coords="1306,661,1405,688"/>
+<area shape="rect" id="node19" href="numerical_8h.html" title="Numerical Library. " alt="" coords="911,661,1026,688"/>
+<area shape="rect" id="node22" href="state_8h.html" title="LP state management. " alt="" coords="1417,512,1515,539"/>
+<area shape="rect" id="node31" href="ecs_8h.html" title="Event &amp; Cross State Synchornization. " alt="" coords="953,348,1040,375"/>
+<area shape="rect" id="node32" href="list_8h.html" title="Generic Lists. " alt="" coords="471,661,591,688"/>
+<area shape="rect" id="node35" href="msgchannel_8h.html" title="A (M, 1) channel for messages. " alt="" coords="1057,512,1237,539"/>
+<area shape="rect" id="node36" href="ult_8h.html" title="User&#45;Level Threads Headers. " alt="" coords="1666,348,1749,375"/>
+<area shape="rect" id="node39" href="communication_8h.html" title="Communication Routines. " alt="" coords="1405,348,1641,375"/>
+<area shape="rect" id="node40" href="cross__state__manager_8h.html" title="Per&#45;thread page table. " alt="" coords="1065,333,1230,389"/>
+<area shape="rect" id="node25" href="dymelor_8h.html" title="Dynamic Memory Logger and Restorer (DyMeLoR) " alt="" coords="283,437,398,464"/>
+<area shape="rect" id="node26" href="bitmap_8h.html" title="Bitmap data type. " alt="" coords="427,512,574,539"/>
+<area shape="rect" id="node28" href="timer_8h.html" title="Timers. " alt="" coords="254,512,353,539"/>
+<area shape="rect" id="node37" href="jmp_8h.html" title="Architecture&#45;independent ULT header. " alt="" coords="1651,437,1742,464"/>
+<area shape="rect" id="node38" href="x86_2jmp_8h.html" title="x86 ULT support header " alt="" coords="1631,512,1749,539"/>
+<area shape="rect" id="node43" href="stf_8h.html" title="O(n) scheduling algorithm. " alt="" coords="1235,184,1350,211"/>
 </map>
 </div>
 </div>
@@ -154,9 +161,26 @@ $(document).ready(function(){initNavTree('stf_8c.html','');});
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a726ca866bf5abd4a57d94280908b8f14"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structlp__struct.html">lp_struct</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stf_8c.html#a726ca866bf5abd4a57d94280908b8f14">smallest_timestamp_first</a> (void)</td></tr>
+<tr class="memdesc:a726ca866bf5abd4a57d94280908b8f14"><td class="mdescLeft">&#160;</td><td class="mdescRight">O(n) scheduler.  <a href="#a726ca866bf5abd4a57d94280908b8f14">More...</a><br /></td></tr>
 <tr class="separator:a726ca866bf5abd4a57d94280908b8f14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>O(n) scheduling algorithm. </p>
+<p>This module implements the O(n) scheduler based on the Lowest-Timestamp First policy.</p>
+<p>Each worker thread has its own pool of LPs to check, thanks to the temporary binding which is computed in <a class="el" href="binding_8c.html" title="Load sharing rules across worker threads. ">binding.c</a></p>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (C) 2008-2018 HPDCS Group <a href="https://hpdcs.github.io">https://hpdcs.github.io</a></dd></dl>
+<p>This file is part of ROOT-Sim (ROme OpTimistic Simulator).</p>
+<p>ROOT-Sim is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; only version 3 of the License applies.</p>
+<p>ROOT-Sim is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+<p>You should have received a copy of the GNU General Public License along with ROOT-Sim; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA</p>
+<dl class="section author"><dt>Author</dt><dd>Francesco Quaglia </dd>
+<dd>
+Alessandro Pellegrini </dd>
+<dd>
+Roberto Vitali </dd></dl>
+
+<p>Definition in file <a class="el" href="stf_8c_source.html">stf.c</a>.</p>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="a726ca866bf5abd4a57d94280908b8f14"></a>
 <div class="memitem">
 <div class="memproto">
@@ -170,11 +194,12 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This function implements the smallest timestamp first algorithm. Bound LPs are looped through their foreach iteratora.</p>
-<dl class="section author"><dt>Author</dt><dd>Francesco Quaglia</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>The Id of the Logical Process qith the smallest timestamp </dd></dl>
 
-<p>Definition at line <a class="el" href="stf_8c_source.html#l00017">17</a> of file <a class="el" href="stf_8c_source.html">stf.c</a>.</p>
+<p>O(n) scheduler. </p>
+<p>This function implements the smallest timestamp first algorithm. This function is executed by every worker thread independently. Data separation is ensured by relying on the temporary LP binding.</p>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the <a class="el" href="structlp__struct.html">lp_struct</a> of the LP to be activated. </dd></dl>
+
+<p>Definition at line <a class="el" href="stf_8c_source.html#l00053">53</a> of file <a class="el" href="stf_8c_source.html">stf.c</a>.</p>
 
 <p><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>

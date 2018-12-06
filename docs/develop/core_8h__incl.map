@@ -1,6 +1,6 @@
 <map id="/home/travis/build/HPDCS/ROOT&#45;Sim/src/core/core.h" name="/home/travis/build/HPDCS/ROOT&#45;Sim/src/core/core.h">
-<area shape="rect" id="node2" href="$ROOT-Sim_8h.html" title="This header defines all the symbols which are needed to develop a Model to be simulated on top of ROO..." alt="" coords="287,109,386,136"/>
-<area shape="rect" id="node13" href="$numerical_8h.html" title="This header is used to define symbols which must be accessible by the simulator but not by the applic..." alt="" coords="559,109,674,136"/>
-<area shape="rect" id="node14" href="$thread_8h.html" title="This module implements Kernel Level Thread supports. " alt="" coords="699,109,807,136"/>
-<area shape="rect" id="node15" href="$atomic_8h.html" title="This module implements atomic and non&#45;blocking operations used within ROOT&#45;Sim to coordinate threads ..." alt="" coords="701,184,812,211"/>
+<area shape="rect" id="node2" href="$ROOT-Sim_8h.html" title="ROOT&#45;Sim header for model development. " alt="" coords="325,109,423,136"/>
+<area shape="rect" id="node13" href="$numerical_8h.html" title="Numerical Library. " alt="" coords="578,109,693,136"/>
+<area shape="rect" id="node14" href="$thread_8h.html" title="Generic thread management facilities. " alt="" coords="749,109,857,136"/>
+<area shape="rect" id="node15" href="$atomic_8h.html" title="Atomic operations. " alt="" coords="1003,184,1113,211"/>
 </map>

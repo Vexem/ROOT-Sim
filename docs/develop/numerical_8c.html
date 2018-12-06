@@ -23,6 +23,8 @@
   $(document).ready(function() { init_search(); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="flatdoc.css" rel="stylesheet" type="text/css"/>
+<link href="inline-params.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -114,7 +116,7 @@ $(document).ready(function(){initNavTree('numerical_8c.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>In this module there are the implementations of Piece-Wise Deterministic numerical distribution implementations.  
+<p>Numerical Library.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
@@ -136,28 +138,30 @@ $(document).ready(function(){initNavTree('numerical_8c.html','');});
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="numerical_8c__incl.png" border="0" usemap="#_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2lib_2numerical_8c" alt=""/></div>
 <map name="_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2lib_2numerical_8c" id="_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2lib_2numerical_8c">
-<area shape="rect" id="node8" href="ROOT-Sim_8h.html" title="This header defines all the symbols which are needed to develop a Model to be simulated on top of ROO..." alt="" coords="535,661,633,688"/>
-<area shape="rect" id="node14" href="init_8h.html" title="This module implements the simulator initialization routines. " alt="" coords="1063,109,1148,136"/>
-<area shape="rect" id="node15" href="statistics_8h.html" title="State Management Subsystem. " alt="" coords="1168,184,1320,211"/>
-<area shape="rect" id="node16" href="process_8h.html" title="This header defines a LP control block, keeping information about both simulation state and execution..." alt="" coords="1161,259,1311,285"/>
-<area shape="rect" id="node24" href="mm_8h.html" title="Memory Manager main header. " alt="" coords="780,348,871,375"/>
-<area shape="rect" id="node39" href="communication_8h.html" title="This is the main header file, containing all data structures and defines used by the communication su..." alt="" coords="410,348,646,375"/>
-<area shape="rect" id="node42" href="scheduler_8h.html" title="Scheduling Subsystem main header file. Scheduler&#45;specific data structures and defines should be place..." alt="" coords="686,109,847,136"/>
-<area shape="rect" id="node17" href="state_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="781,512,878,539"/>
-<area shape="rect" id="node21" href="numerical_8h.html" title="This header is used to define symbols which must be accessible by the simulator but not by the applic..." alt="" coords="1148,661,1263,688"/>
-<area shape="rect" id="node33" href="ecs_8h.html" title="Event Cross State Synchronization. This module implements the userspace handler of the artificially i..." alt="" coords="1565,348,1651,375"/>
-<area shape="rect" id="node34" href="list_8h.html" title="This header defines macros for accessing the general&#45;purpose list implementation used in the simulato..." alt="" coords="1463,661,1583,688"/>
-<area shape="rect" id="node37" href="msgchannel_8h.html" title="This module implements an (M, 1) channel to transfer message pointers. " alt="" coords="1207,512,1387,539"/>
-<area shape="rect" id="node38" href="ult_8h.html" title="The User&#45;Level Thread module allows the creation/scheduling of a user&#45;level thread in an architecture..." alt="" coords="1000,348,1083,375"/>
-<area shape="rect" id="node40" href="cross__state__manager_8h.html" title="This is the main header for the Linux Kernel Module which implements per&#45;kernel&#45;thread different page..." alt="" coords="1273,333,1439,389"/>
-<area shape="rect" id="node18" href="core_8h.html" title="This header defines all the shared symbols which are needed by different subsystems. " alt="" coords="782,587,877,613"/>
-<area shape="rect" id="node22" href="thread_8h.html" title="This module implements Kernel Level Thread supports. " alt="" coords="1015,661,1123,688"/>
-<area shape="rect" id="node23" href="atomic_8h.html" title="This module implements atomic and non&#45;blocking operations used within ROOT&#45;Sim to coordinate threads ..." alt="" coords="1222,736,1333,763"/>
-<area shape="rect" id="node27" href="dymelor_8h.html" title="This is the Memory Management Subsystem main header file. " alt="" coords="480,437,595,464"/>
-<area shape="rect" id="node28" href="bitmap_8h.html" title="This header implements a minimal bitmap data type. " alt="" coords="508,512,655,539"/>
-<area shape="rect" id="node30" href="timer_8h.html" title="This header defines the timers which the simulator uses to monitor its internal behaviour. " alt="" coords="385,512,484,539"/>
-<area shape="rect" id="node43" href="queues_8h.html" title="Event and State queueing Subsystem main header. " alt="" coords="961,184,1093,211"/>
-<area shape="rect" id="node44" href="stf_8h.html" title="Smallest Timestamp First scheduler main header. " alt="" coords="821,184,936,211"/>
+<area shape="rect" id="node8" href="ROOT-Sim_8h.html" title="ROOT&#45;Sim header for model development. " alt="" coords="1094,661,1193,688"/>
+<area shape="rect" id="node14" href="init_8h.html" title="Initialization routines. " alt="" coords="1123,109,1209,136"/>
+<area shape="rect" id="node15" href="statistics_8h.html" title="Statistics module. " alt="" coords="1357,184,1509,211"/>
+<area shape="rect" id="node16" href="process_8h.html" title="LP control blocks. " alt="" coords="1196,259,1347,285"/>
+<area shape="rect" id="node26" href="mm_8h.html" title="Memory Manager main header. " alt="" coords="315,348,406,375"/>
+<area shape="rect" id="node42" href="communication_8h.html" title="Communication Routines. " alt="" coords="641,348,877,375"/>
+<area shape="rect" id="node45" href="scheduler_8h.html" title="The ROOT&#45;Sim scheduler main module header. " alt="" coords="893,109,1055,136"/>
+<area shape="rect" id="node17" href="state_8h.html" title="LP state management. " alt="" coords="1245,512,1343,539"/>
+<area shape="rect" id="node21" href="numerical_8h.html" title="Numerical Library. " alt="" coords="1221,661,1335,688"/>
+<area shape="rect" id="node34" href="ecs_8h.html" title="Event &amp; Cross State Synchornization. " alt="" coords="1429,348,1516,375"/>
+<area shape="rect" id="node35" href="list_8h.html" title="Generic Lists. " alt="" coords="1642,661,1762,688"/>
+<area shape="rect" id="node38" href="msgchannel_8h.html" title="A (M, 1) channel for messages. " alt="" coords="1168,437,1348,464"/>
+<area shape="rect" id="node39" href="ult_8h.html" title="User&#45;Level Threads Headers. " alt="" coords="1017,348,1099,375"/>
+<area shape="rect" id="node43" href="cross__state__manager_8h.html" title="Per&#45;thread page table. " alt="" coords="1189,333,1354,389"/>
+<area shape="rect" id="node18" href="core_8h.html" title="Core ROOT&#45;Sim functionalities. " alt="" coords="860,587,955,613"/>
+<area shape="rect" id="node22" href="thread_8h.html" title="Generic thread management facilities. " alt="" coords="499,661,607,688"/>
+<area shape="rect" id="node23" href="atomic_8h.html" title="Atomic operations. " alt="" coords="604,736,715,763"/>
+<area shape="rect" id="node28" href="dymelor_8h.html" title="Dynamic Memory Logger and Restorer (DyMeLoR) " alt="" coords="567,437,682,464"/>
+<area shape="rect" id="node29" href="bitmap_8h.html" title="Bitmap data type. " alt="" coords="405,512,551,539"/>
+<area shape="rect" id="node31" href="timer_8h.html" title="Timers. " alt="" coords="575,512,674,539"/>
+<area shape="rect" id="node40" href="jmp_8h.html" title="Architecture&#45;independent ULT header. " alt="" coords="1053,437,1143,464"/>
+<area shape="rect" id="node41" href="x86_2jmp_8h.html" title="x86 ULT support header " alt="" coords="1053,512,1170,539"/>
+<area shape="rect" id="node46" href="queues_8h.html" title="Message queueing subsystem. " alt="" coords="960,184,1092,211"/>
+<area shape="rect" id="node47" href="stf_8h.html" title="O(n) scheduling algorithm. " alt="" coords="1117,184,1231,211"/>
 </map>
 </div>
 </div>
@@ -205,14 +209,15 @@ Variables</h2></td></tr>
 <tr class="separator:a281f332b0dbf3fb8a4832b16269b324e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>In this module there are the implementations of Piece-Wise Deterministic numerical distribution implementations. </p>
-<p>Copyright (C) 2008-2018 HPDCS Group <a href="http://www.dis.uniroma1.it/~hpdcs">http://www.dis.uniroma1.it/~hpdcs</a></p>
+<div class="textblock"><p>Numerical Library. </p>
+<p>Piece-Wise Deterministic Random Number Generators.</p>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (C) 2008-2018 HPDCS Group <a href="https://hpdcs.github.io">https://hpdcs.github.io</a></dd></dl>
 <p>This file is part of ROOT-Sim (ROme OpTimistic Simulator).</p>
 <p>ROOT-Sim is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; only version 3 of the License applies.</p>
 <p>ROOT-Sim is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
 <p>You should have received a copy of the GNU General Public License along with ROOT-Sim; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA</p>
-<dl class="section author"><dt>Author</dt><dd>Alessandro Pellegrini </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>3/16/2011 </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Alessandro Pellegrini</dd></dl>
+<dl class="section date"><dt>Date</dt><dd>March 16, 2011 </dd></dl>
 
 <p>Definition in file <a class="el" href="numerical_8c_source.html">numerical.c</a>.</p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
@@ -240,7 +245,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="numerical_8c_source.html#l00407">407</a> of file <a class="el" href="numerical_8c_source.html">numerical.c</a>.</p>
+<p>Definition at line <a class="el" href="numerical_8c_source.html#l00411">411</a> of file <a class="el" href="numerical_8c_source.html">numerical.c</a>.</p>
 
 </div>
 </div>
@@ -254,7 +259,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="numerical_8c_source.html#l00406">406</a> of file <a class="el" href="numerical_8c_source.html">numerical.c</a>.</p>
+<p>Definition at line <a class="el" href="numerical_8c_source.html#l00410">410</a> of file <a class="el" href="numerical_8c_source.html">numerical.c</a>.</p>
 
 </div>
 </div>
@@ -281,7 +286,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="numerical_8c_source.html#l00050">50</a> of file <a class="el" href="numerical_8c_source.html">numerical.c</a>.</p>
+<p>Definition at line <a class="el" href="numerical_8c_source.html#l00054">54</a> of file <a class="el" href="numerical_8c_source.html">numerical.c</a>.</p>
 
 <p><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -327,7 +332,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A random number </dd></dl>
 
-<p>Definition at line <a class="el" href="numerical_8c_source.html#l00119">119</a> of file <a class="el" href="numerical_8c_source.html">numerical.c</a>.</p>
+<p>Definition at line <a class="el" href="numerical_8c_source.html#l00123">123</a> of file <a class="el" href="numerical_8c_source.html">numerical.c</a>.</p>
 
 <p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -366,7 +371,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A random number </dd></dl>
 
-<p>Definition at line <a class="el" href="numerical_8c_source.html#l00178">178</a> of file <a class="el" href="numerical_8c_source.html">numerical.c</a>.</p>
+<p>Definition at line <a class="el" href="numerical_8c_source.html#l00182">182</a> of file <a class="el" href="numerical_8c_source.html">numerical.c</a>.</p>
 
 <p><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -420,7 +425,7 @@ Variables</h2></td></tr>
 <p>A configuration file is used to store the last master seed, amongst different invocations of the simulator. Using the first value stored in the file, a random number is generated, which is used as a row-offset in the file istelf, where a specified seed will be found. The first line is the replaced with the subsequent seed generated by the Random function.</p>
 <dl class="section return"><dt>Returns</dt><dd>The master seed </dd></dl>
 
-<p>Definition at line <a class="el" href="numerical_8c_source.html#l00326">326</a> of file <a class="el" href="numerical_8c_source.html">numerical.c</a>.</p>
+<p>Definition at line <a class="el" href="numerical_8c_source.html#l00330">330</a> of file <a class="el" href="numerical_8c_source.html">numerical.c</a>.</p>
 
 <p><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -466,7 +471,7 @@ Variables</h2></td></tr>
 <p>This function returns a number according to a Normal Distribution with mean 0</p>
 <dl class="section return"><dt>Returns</dt><dd>A random number </dd></dl>
 
-<p>Definition at line <a class="el" href="numerical_8c_source.html#l00140">140</a> of file <a class="el" href="numerical_8c_source.html">numerical.c</a>.</p>
+<p>Definition at line <a class="el" href="numerical_8c_source.html#l00144">144</a> of file <a class="el" href="numerical_8c_source.html">numerical.c</a>.</p>
 
 <p><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -497,7 +502,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="numerical_8c_source.html#l00426">426</a> of file <a class="el" href="numerical_8c_source.html">numerical.c</a>.</p>
+<p>Definition at line <a class="el" href="numerical_8c_source.html#l00430">430</a> of file <a class="el" href="numerical_8c_source.html">numerical.c</a>.</p>
 
 </div>
 </div>
@@ -515,7 +520,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="numerical_8c_source.html#l00408">408</a> of file <a class="el" href="numerical_8c_source.html">numerical.c</a>.</p>
+<p>Definition at line <a class="el" href="numerical_8c_source.html#l00412">412</a> of file <a class="el" href="numerical_8c_source.html">numerical.c</a>.</p>
 
 <p><div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -562,7 +567,7 @@ Variables</h2></td></tr>
 <p>This function returns the waiting time to the next event in a Poisson process of unit mean.</p>
 <dl class="section return"><dt>Returns</dt><dd>A random number </dd></dl>
 
-<p>Definition at line <a class="el" href="numerical_8c_source.html#l00222">222</a> of file <a class="el" href="numerical_8c_source.html">numerical.c</a>.</p>
+<p>Definition at line <a class="el" href="numerical_8c_source.html#l00226">226</a> of file <a class="el" href="numerical_8c_source.html">numerical.c</a>.</p>
 
 <p><div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -596,7 +601,7 @@ Variables</h2></td></tr>
 <p>This function returns a number in between (0,1), according to a Uniform Distribution. It is based on Multiply with Carry by George Marsaglia</p>
 <dl class="section return"><dt>Returns</dt><dd>A random number, in between (0,1) </dd></dl>
 
-<p>Definition at line <a class="el" href="numerical_8c_source.html#l00077">77</a> of file <a class="el" href="numerical_8c_source.html">numerical.c</a>.</p>
+<p>Definition at line <a class="el" href="numerical_8c_source.html#l00081">81</a> of file <a class="el" href="numerical_8c_source.html">numerical.c</a>.</p>
 
 <p><div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -652,7 +657,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="numerical_8c_source.html#l00088">88</a> of file <a class="el" href="numerical_8c_source.html">numerical.c</a>.</p>
+<p>Definition at line <a class="el" href="numerical_8c_source.html#l00092">92</a> of file <a class="el" href="numerical_8c_source.html">numerical.c</a>.</p>
 
 <p><div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -710,7 +715,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="numerical_8c_source.html#l00099">99</a> of file <a class="el" href="numerical_8c_source.html">numerical.c</a>.</p>
+<p>Definition at line <a class="el" href="numerical_8c_source.html#l00103">103</a> of file <a class="el" href="numerical_8c_source.html">numerical.c</a>.</p>
 
 <p><div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-15-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -757,7 +762,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A sanitized seed </dd></dl>
 
-<p>Definition at line <a class="el" href="numerical_8c_source.html#l00262">262</a> of file <a class="el" href="numerical_8c_source.html">numerical.c</a>.</p>
+<p>Definition at line <a class="el" href="numerical_8c_source.html#l00266">266</a> of file <a class="el" href="numerical_8c_source.html">numerical.c</a>.</p>
 
 <p><div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-16-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -808,7 +813,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A random number </dd></dl>
 
-<p>Definition at line <a class="el" href="numerical_8c_source.html#l00236">236</a> of file <a class="el" href="numerical_8c_source.html">numerical.c</a>.</p>
+<p>Definition at line <a class="el" href="numerical_8c_source.html#l00240">240</a> of file <a class="el" href="numerical_8c_source.html">numerical.c</a>.</p>
 
 <p><div id="dynsection-17" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-17-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -845,7 +850,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>Master seed to initialize local seeds of all LPs. This is taken from the configuration file in ~/.rootsim if available, or from /dev/urand the first time a ROOT-Sim model is run. </p>
 
-<p>Definition at line <a class="el" href="numerical_8c_source.html#l00048">48</a> of file <a class="el" href="numerical_8c_source.html">numerical.c</a>.</p>
+<p>Definition at line <a class="el" href="numerical_8c_source.html#l00052">52</a> of file <a class="el" href="numerical_8c_source.html">numerical.c</a>.</p>
 
 </div>
 </div>

@@ -23,6 +23,8 @@
   $(document).ready(function() { init_search(); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="flatdoc.css" rel="stylesheet" type="text/css"/>
+<link href="inline-params.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -174,11 +176,14 @@ Data Fields</h2></td></tr>
 <tr class="memitem:a4d5bac2c31964dfa01a021bd4fa143f3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__simulation__configuration.html#a4d5bac2c31964dfa01a021bd4fa143f3">core_binding</a></td></tr>
 <tr class="memdesc:a4d5bac2c31964dfa01a021bd4fa143f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bind threads to specific core (reduce context switches and cache misses)  <a href="#a4d5bac2c31964dfa01a021bd4fa143f3">More...</a><br /></td></tr>
 <tr class="separator:a4d5bac2c31964dfa01a021bd4fa143f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af728a2506fc1bd0de647cdef3f587ffd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__simulation__configuration.html#af728a2506fc1bd0de647cdef3f587ffd">disable_preemption</a></td></tr>
+<tr class="memdesc:af728a2506fc1bd0de647cdef3f587ffd"><td class="mdescLeft">&#160;</td><td class="mdescRight">If compiled for preemptive Time Warp, it can be disabled at runtime.  <a href="#af728a2506fc1bd0de647cdef3f587ffd">More...</a><br /></td></tr>
+<tr class="separator:af728a2506fc1bd0de647cdef3f587ffd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Configuration of the execution of the simulator. </p>
 
-<p>Definition at line <a class="el" href="init_8h_source.html#l00053">53</a> of file <a class="el" href="init_8h_source.html">init.h</a>.</p>
+<p>Definition at line <a class="el" href="init_8h_source.html#l00057">57</a> of file <a class="el" href="init_8h_source.html">init.h</a>.</p>
 </div><h2 class="groupheader">Field Documentation</h2>
 <a class="anchor" id="a5def373076dc799cfd32c5c24f95294a"></a>
 <div class="memitem">
@@ -192,7 +197,7 @@ Data Fields</h2></td></tr>
 
 <p>GVT protocol blocking or not. </p>
 
-<p>Definition at line <a class="el" href="init_8h_source.html#l00065">65</a> of file <a class="el" href="init_8h_source.html">init.h</a>.</p>
+<p>Definition at line <a class="el" href="init_8h_source.html#l00069">69</a> of file <a class="el" href="init_8h_source.html">init.h</a>.</p>
 
 </div>
 </div>
@@ -208,7 +213,7 @@ Data Fields</h2></td></tr>
 
 <p>Check termination strategy: standard or incremental. </p>
 
-<p>Definition at line <a class="el" href="init_8h_source.html#l00064">64</a> of file <a class="el" href="init_8h_source.html">init.h</a>.</p>
+<p>Definition at line <a class="el" href="init_8h_source.html#l00068">68</a> of file <a class="el" href="init_8h_source.html">init.h</a>.</p>
 
 </div>
 </div>
@@ -224,7 +229,7 @@ Data Fields</h2></td></tr>
 
 <p>Type of checkpointing scheme (e.g., PSS, CSS, ...) </p>
 
-<p>Definition at line <a class="el" href="init_8h_source.html#l00061">61</a> of file <a class="el" href="init_8h_source.html">init.h</a>.</p>
+<p>Definition at line <a class="el" href="init_8h_source.html#l00065">65</a> of file <a class="el" href="init_8h_source.html">init.h</a>.</p>
 
 </div>
 </div>
@@ -240,7 +245,7 @@ Data Fields</h2></td></tr>
 
 <p>Type of checkpointing mode (Synchronous, Semi-Asyncronous, ...) </p>
 
-<p>Definition at line <a class="el" href="init_8h_source.html#l00060">60</a> of file <a class="el" href="init_8h_source.html">init.h</a>.</p>
+<p>Definition at line <a class="el" href="init_8h_source.html#l00064">64</a> of file <a class="el" href="init_8h_source.html">init.h</a>.</p>
 
 </div>
 </div>
@@ -256,7 +261,7 @@ Data Fields</h2></td></tr>
 
 <p>Number of events to execute before taking a snapshot in PSS (ignored otherwise) </p>
 
-<p>Definition at line <a class="el" href="init_8h_source.html#l00062">62</a> of file <a class="el" href="init_8h_source.html">init.h</a>.</p>
+<p>Definition at line <a class="el" href="init_8h_source.html#l00066">66</a> of file <a class="el" href="init_8h_source.html">init.h</a>.</p>
 
 </div>
 </div>
@@ -272,7 +277,7 @@ Data Fields</h2></td></tr>
 
 <p>Bind threads to specific core (reduce context switches and cache misses) </p>
 
-<p>Definition at line <a class="el" href="init_8h_source.html#l00071">71</a> of file <a class="el" href="init_8h_source.html">init.h</a>.</p>
+<p>Definition at line <a class="el" href="init_8h_source.html#l00075">75</a> of file <a class="el" href="init_8h_source.html">init.h</a>.</p>
 
 </div>
 </div>
@@ -288,7 +293,23 @@ Data Fields</h2></td></tr>
 
 <p>Does not change the seed value config file that will be read during the next runs. </p>
 
-<p>Definition at line <a class="el" href="init_8h_source.html#l00066">66</a> of file <a class="el" href="init_8h_source.html">init.h</a>.</p>
+<p>Definition at line <a class="el" href="init_8h_source.html#l00070">70</a> of file <a class="el" href="init_8h_source.html">init.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af728a2506fc1bd0de647cdef3f587ffd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool _simulation_configuration::disable_preemption</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>If compiled for preemptive Time Warp, it can be disabled at runtime. </p>
+
+<p>Definition at line <a class="el" href="init_8h_source.html#l00078">78</a> of file <a class="el" href="init_8h_source.html">init.h</a>.</p>
 
 </div>
 </div>
@@ -304,7 +325,7 @@ Data Fields</h2></td></tr>
 
 <p>GVT operations to be executed before rebuilding the state. </p>
 
-<p>Definition at line <a class="el" href="init_8h_source.html#l00057">57</a> of file <a class="el" href="init_8h_source.html">init.h</a>.</p>
+<p>Definition at line <a class="el" href="init_8h_source.html#l00061">61</a> of file <a class="el" href="init_8h_source.html">init.h</a>.</p>
 
 </div>
 </div>
@@ -320,7 +341,7 @@ Data Fields</h2></td></tr>
 
 <p>Wall-Clock time to wait before executiong GVT operations. </p>
 
-<p>Definition at line <a class="el" href="init_8h_source.html#l00056">56</a> of file <a class="el" href="init_8h_source.html">init.h</a>.</p>
+<p>Definition at line <a class="el" href="init_8h_source.html#l00060">60</a> of file <a class="el" href="init_8h_source.html">init.h</a>.</p>
 
 </div>
 </div>
@@ -336,7 +357,7 @@ Data Fields</h2></td></tr>
 
 <p>Policy for the LP to Kernel mapping. </p>
 
-<p>Definition at line <a class="el" href="init_8h_source.html#l00059">59</a> of file <a class="el" href="init_8h_source.html">init.h</a>.</p>
+<p>Definition at line <a class="el" href="init_8h_source.html#l00063">63</a> of file <a class="el" href="init_8h_source.html">init.h</a>.</p>
 
 </div>
 </div>
@@ -352,7 +373,7 @@ Data Fields</h2></td></tr>
 
 <p>Destination Directory of output files. </p>
 
-<p>Definition at line <a class="el" href="init_8h_source.html#l00054">54</a> of file <a class="el" href="init_8h_source.html">init.h</a>.</p>
+<p>Definition at line <a class="el" href="init_8h_source.html#l00058">58</a> of file <a class="el" href="init_8h_source.html">init.h</a>.</p>
 
 </div>
 </div>
@@ -368,7 +389,7 @@ Data Fields</h2></td></tr>
 
 <p>Which scheduler to be used. </p>
 
-<p>Definition at line <a class="el" href="init_8h_source.html#l00055">55</a> of file <a class="el" href="init_8h_source.html">init.h</a>.</p>
+<p>Definition at line <a class="el" href="init_8h_source.html#l00059">59</a> of file <a class="el" href="init_8h_source.html">init.h</a>.</p>
 
 </div>
 </div>
@@ -384,7 +405,7 @@ Data Fields</h2></td></tr>
 
 <p>If the simulation must be run serially. </p>
 
-<p>Definition at line <a class="el" href="init_8h_source.html#l00069">69</a> of file <a class="el" href="init_8h_source.html">init.h</a>.</p>
+<p>Definition at line <a class="el" href="init_8h_source.html#l00073">73</a> of file <a class="el" href="init_8h_source.html">init.h</a>.</p>
 
 </div>
 </div>
@@ -400,7 +421,7 @@ Data Fields</h2></td></tr>
 
 <p>The master seed to be used in this run. </p>
 
-<p>Definition at line <a class="el" href="init_8h_source.html#l00070">70</a> of file <a class="el" href="init_8h_source.html">init.h</a>.</p>
+<p>Definition at line <a class="el" href="init_8h_source.html#l00074">74</a> of file <a class="el" href="init_8h_source.html">init.h</a>.</p>
 
 </div>
 </div>
@@ -416,7 +437,7 @@ Data Fields</h2></td></tr>
 
 <p>Wall-clock-time based termination predicate. </p>
 
-<p>Definition at line <a class="el" href="init_8h_source.html#l00058">58</a> of file <a class="el" href="init_8h_source.html">init.h</a>.</p>
+<p>Definition at line <a class="el" href="init_8h_source.html#l00062">62</a> of file <a class="el" href="init_8h_source.html">init.h</a>.</p>
 
 </div>
 </div>
@@ -432,7 +453,7 @@ Data Fields</h2></td></tr>
 
 <p>Type of snapshot (e.g., full, incremental, autonomic, ...) </p>
 
-<p>Definition at line <a class="el" href="init_8h_source.html#l00063">63</a> of file <a class="el" href="init_8h_source.html">init.h</a>.</p>
+<p>Definition at line <a class="el" href="init_8h_source.html#l00067">67</a> of file <a class="el" href="init_8h_source.html">init.h</a>.</p>
 
 </div>
 </div>
@@ -448,7 +469,7 @@ Data Fields</h2></td></tr>
 
 <p>Produce performance statistic file (default STATS_ALL) </p>
 
-<p>Definition at line <a class="el" href="init_8h_source.html#l00068">68</a> of file <a class="el" href="init_8h_source.html">init.h</a>.</p>
+<p>Definition at line <a class="el" href="init_8h_source.html#l00072">72</a> of file <a class="el" href="init_8h_source.html">init.h</a>.</p>
 
 </div>
 </div>
@@ -464,7 +485,7 @@ Data Fields</h2></td></tr>
 
 <p>Kernel verbose. </p>
 
-<p>Definition at line <a class="el" href="init_8h_source.html#l00067">67</a> of file <a class="el" href="init_8h_source.html">init.h</a>.</p>
+<p>Definition at line <a class="el" href="init_8h_source.html#l00071">71</a> of file <a class="el" href="init_8h_source.html">init.h</a>.</p>
 
 </div>
 </div>

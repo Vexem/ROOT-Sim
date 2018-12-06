@@ -1,6 +1,5 @@
 var bitmap_8h =
 [
-    [ "__BITMAP_DATATYPE_H_", "bitmap_8h.html#a312e33d12bd472230f2c569bbcbcc13e", null ],
     [ "B_BITS_PER_BLOCK", "bitmap_8h.html#aea183752bacfa9af485222911f6fbbc4", null ],
     [ "B_BLOCK_SIZE", "bitmap_8h.html#a33e8cad8156f85a7880270285e5ec052", null ],
     [ "B_BLOCK_TYPE", "bitmap_8h.html#a99f81be970d9f017c21d97f8d43ffeed", null ],

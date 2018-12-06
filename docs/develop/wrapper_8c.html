@@ -23,6 +23,8 @@
   $(document).ready(function() { init_search(); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="flatdoc.css" rel="stylesheet" type="text/css"/>
+<link href="inline-params.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -111,6 +113,9 @@ $(document).ready(function(){initNavTree('wrapper_8c.html','');});
 <div class="title">wrapper.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>stdlib wrapper  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="timer_8h_source.html">core/timer.h</a>&gt;</code><br />
@@ -123,26 +128,28 @@ $(document).ready(function(){initNavTree('wrapper_8c.html','');});
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="wrapper_8c__incl.png" border="0" usemap="#_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2lib-wrapper_2wrapper_8c" alt=""/></div>
 <map name="_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2lib-wrapper_2wrapper_8c" id="_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2lib-wrapper_2wrapper_8c">
-<area shape="rect" id="node4" href="timer_8h.html" title="This header defines the timers which the simulator uses to monitor its internal behaviour. " alt="" coords="1448,512,1547,539"/>
-<area shape="rect" id="node7" href="scheduler_8h.html" title="Scheduling Subsystem main header file. Scheduler&#45;specific data structures and defines should be place..." alt="" coords="793,109,954,136"/>
-<area shape="rect" id="node27" href="dymelor_8h.html" title="This is the Memory Management Subsystem main header file. " alt="" coords="997,437,1112,464"/>
-<area shape="rect" id="node8" href="ROOT-Sim_8h.html" title="This header defines all the symbols which are needed to develop a Model to be simulated on top of ROO..." alt="" coords="348,661,447,688"/>
-<area shape="rect" id="node14" href="core_8h.html" title="This header defines all the shared symbols which are needed by different subsystems. " alt="" coords="518,587,613,613"/>
-<area shape="rect" id="node21" href="queues_8h.html" title="Event and State queueing Subsystem main header. " alt="" coords="94,184,226,211"/>
-<area shape="rect" id="node22" href="process_8h.html" title="This header defines a LP control block, keeping information about both simulation state and execution..." alt="" coords="865,259,1015,285"/>
-<area shape="rect" id="node35" href="ult_8h.html" title="The User&#45;Level Thread module allows the creation/scheduling of a user&#45;level thread in an architecture..." alt="" coords="144,348,227,375"/>
-<area shape="rect" id="node36" href="communication_8h.html" title="This is the main header file, containing all data structures and defines used by the communication su..." alt="" coords="1127,348,1363,375"/>
-<area shape="rect" id="node39" href="stf_8h.html" title="Smallest Timestamp First scheduler main header. " alt="" coords="864,184,979,211"/>
-<area shape="rect" id="node18" href="numerical_8h.html" title="This header is used to define symbols which must be accessible by the simulator but not by the applic..." alt="" coords="1055,661,1169,688"/>
-<area shape="rect" id="node19" href="thread_8h.html" title="This module implements Kernel Level Thread supports. " alt="" coords="778,661,886,688"/>
-<area shape="rect" id="node20" href="atomic_8h.html" title="This module implements atomic and non&#45;blocking operations used within ROOT&#45;Sim to coordinate threads ..." alt="" coords="869,736,979,763"/>
-<area shape="rect" id="node23" href="state_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="654,512,751,539"/>
-<area shape="rect" id="node24" href="mm_8h.html" title="Memory Manager main header. " alt="" coords="675,348,765,375"/>
-<area shape="rect" id="node30" href="ecs_8h.html" title="Event Cross State Synchronization. This module implements the userspace handler of the artificially i..." alt="" coords="915,348,1002,375"/>
-<area shape="rect" id="node31" href="list_8h.html" title="This header defines macros for accessing the general&#45;purpose list implementation used in the simulato..." alt="" coords="1391,661,1511,688"/>
-<area shape="rect" id="node34" href="msgchannel_8h.html" title="This module implements an (M, 1) channel to transfer message pointers. " alt="" coords="246,512,426,539"/>
-<area shape="rect" id="node37" href="cross__state__manager_8h.html" title="This is the main header for the Linux Kernel Module which implements per&#45;kernel&#45;thread different page..." alt="" coords="301,333,467,389"/>
-<area shape="rect" id="node28" href="bitmap_8h.html" title="This header implements a minimal bitmap data type. " alt="" coords="827,512,973,539"/>
+<area shape="rect" id="node4" href="timer_8h.html" title="Timers. " alt="" coords="1497,512,1596,539"/>
+<area shape="rect" id="node7" href="scheduler_8h.html" title="The ROOT&#45;Sim scheduler main module header. " alt="" coords="853,109,1014,136"/>
+<area shape="rect" id="node29" href="dymelor_8h.html" title="Dynamic Memory Logger and Restorer (DyMeLoR) " alt="" coords="1303,437,1417,464"/>
+<area shape="rect" id="node8" href="ROOT-Sim_8h.html" title="ROOT&#45;Sim header for model development. " alt="" coords="553,661,652,688"/>
+<area shape="rect" id="node14" href="core_8h.html" title="Core ROOT&#45;Sim functionalities. " alt="" coords="783,587,878,613"/>
+<area shape="rect" id="node24" href="queues_8h.html" title="Message queueing subsystem. " alt="" coords="942,184,1074,211"/>
+<area shape="rect" id="node25" href="process_8h.html" title="LP control blocks. " alt="" coords="642,259,793,285"/>
+<area shape="rect" id="node37" href="ult_8h.html" title="User&#45;Level Threads Headers. " alt="" coords="195,348,277,375"/>
+<area shape="rect" id="node40" href="communication_8h.html" title="Communication Routines. " alt="" coords="754,348,990,375"/>
+<area shape="rect" id="node43" href="stf_8h.html" title="O(n) scheduling algorithm. " alt="" coords="803,184,917,211"/>
+<area shape="rect" id="node18" href="numerical_8h.html" title="Numerical Library. " alt="" coords="413,661,528,688"/>
+<area shape="rect" id="node19" href="thread_8h.html" title="Generic thread management facilities. " alt="" coords="1039,661,1147,688"/>
+<area shape="rect" id="node20" href="atomic_8h.html" title="Atomic operations. " alt="" coords="1203,736,1314,763"/>
+<area shape="rect" id="node26" href="state_8h.html" title="LP state management. " alt="" coords="422,512,519,539"/>
+<area shape="rect" id="node27" href="mm_8h.html" title="Memory Manager main header. " alt="" coords="1115,348,1205,375"/>
+<area shape="rect" id="node32" href="ecs_8h.html" title="Event &amp; Cross State Synchornization. " alt="" coords="593,348,679,375"/>
+<area shape="rect" id="node33" href="list_8h.html" title="Generic Lists. " alt="" coords="1367,661,1487,688"/>
+<area shape="rect" id="node36" href="msgchannel_8h.html" title="A (M, 1) channel for messages. " alt="" coords="562,437,742,464"/>
+<area shape="rect" id="node41" href="cross__state__manager_8h.html" title="Per&#45;thread page table. " alt="" coords="403,333,568,389"/>
+<area shape="rect" id="node30" href="bitmap_8h.html" title="Bitmap data type. " alt="" coords="1123,512,1269,539"/>
+<area shape="rect" id="node38" href="jmp_8h.html" title="Architecture&#45;independent ULT header. " alt="" coords="144,437,235,464"/>
+<area shape="rect" id="node39" href="x86_2jmp_8h.html" title="x86 ULT support header " alt="" coords="144,512,261,539"/>
 </map>
 </div>
 </div>
@@ -183,7 +190,18 @@ Functions</h2></td></tr>
 <tr class="memitem:a0159c74a123b68c5434b8747172aa255"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wrapper_8c.html#a0159c74a123b68c5434b8747172aa255">__wrap_strndup</a> (const char *s, size_t n)</td></tr>
 <tr class="separator:a0159c74a123b68c5434b8747172aa255"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>stdlib wrapper </p>
+<p>Wrappers of standard library functions which produce side effects on the memory map of the process.</p>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (C) 2008-2018 HPDCS Group <a href="https://hpdcs.github.io">https://hpdcs.github.io</a></dd></dl>
+<p>This file is part of ROOT-Sim (ROme OpTimistic Simulator).</p>
+<p>ROOT-Sim is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; only version 3 of the License applies.</p>
+<p>ROOT-Sim is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+<p>You should have received a copy of the GNU General Public License along with ROOT-Sim; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA</p>
+<dl class="section author"><dt>Author</dt><dd>Alessandro Pellegrini </dd></dl>
+
+<p>Definition in file <a class="el" href="wrapper_8c_source.html">wrapper.c</a>.</p>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="aa61054827a57eeea57a7860226830072"></a>
 <div class="memitem">
 <div class="memproto">
@@ -512,7 +530,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="wrapper_8c_source.html#l00041">41</a> of file <a class="el" href="wrapper_8c_source.html">wrapper.c</a>.</p>
+<p>Definition at line <a class="el" href="wrapper_8c_source.html#l00070">70</a> of file <a class="el" href="wrapper_8c_source.html">wrapper.c</a>.</p>
 
 <p><div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -559,7 +577,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="wrapper_8c_source.html#l00047">47</a> of file <a class="el" href="wrapper_8c_source.html">wrapper.c</a>.</p>
+<p>Definition at line <a class="el" href="wrapper_8c_source.html#l00076">76</a> of file <a class="el" href="wrapper_8c_source.html">wrapper.c</a>.</p>
 
 <p><div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -606,7 +624,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="wrapper_8c_source.html#l00053">53</a> of file <a class="el" href="wrapper_8c_source.html">wrapper.c</a>.</p>
+<p>Definition at line <a class="el" href="wrapper_8c_source.html#l00082">82</a> of file <a class="el" href="wrapper_8c_source.html">wrapper.c</a>.</p>
 
 <p><div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -647,7 +665,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="wrapper_8c_source.html#l00029">29</a> of file <a class="el" href="wrapper_8c_source.html">wrapper.c</a>.</p>
+<p>Definition at line <a class="el" href="wrapper_8c_source.html#l00058">58</a> of file <a class="el" href="wrapper_8c_source.html">wrapper.c</a>.</p>
 
 <p><div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -688,7 +706,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="wrapper_8c_source.html#l00017">17</a> of file <a class="el" href="wrapper_8c_source.html">wrapper.c</a>.</p>
+<p>Definition at line <a class="el" href="wrapper_8c_source.html#l00046">46</a> of file <a class="el" href="wrapper_8c_source.html">wrapper.c</a>.</p>
 
 <p><div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -719,7 +737,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="wrapper_8c_source.html#l00059">59</a> of file <a class="el" href="wrapper_8c_source.html">wrapper.c</a>.</p>
+<p>Definition at line <a class="el" href="wrapper_8c_source.html#l00088">88</a> of file <a class="el" href="wrapper_8c_source.html">wrapper.c</a>.</p>
 
 <p><div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -775,7 +793,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="wrapper_8c_source.html#l00035">35</a> of file <a class="el" href="wrapper_8c_source.html">wrapper.c</a>.</p>
+<p>Definition at line <a class="el" href="wrapper_8c_source.html#l00064">64</a> of file <a class="el" href="wrapper_8c_source.html">wrapper.c</a>.</p>
 
 <p><div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-14-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -822,7 +840,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="wrapper_8c_source.html#l00023">23</a> of file <a class="el" href="wrapper_8c_source.html">wrapper.c</a>.</p>
+<p>Definition at line <a class="el" href="wrapper_8c_source.html#l00052">52</a> of file <a class="el" href="wrapper_8c_source.html">wrapper.c</a>.</p>
 
 <p><div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-15-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -863,7 +881,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="wrapper_8c_source.html#l00067">67</a> of file <a class="el" href="wrapper_8c_source.html">wrapper.c</a>.</p>
+<p>Definition at line <a class="el" href="wrapper_8c_source.html#l00096">96</a> of file <a class="el" href="wrapper_8c_source.html">wrapper.c</a>.</p>
 
 <p><div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-16-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>

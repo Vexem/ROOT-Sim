@@ -12,5 +12,6 @@ var globals_eval =
     [ "r", "globals_eval_r.html", null ],
     [ "s", "globals_eval_s.html", null ],
     [ "t", "globals_eval_t.html", null ],
-    [ "v", "globals_eval_v.html", null ]
+    [ "v", "globals_eval_v.html", null ],
+    [ "x", "globals_eval_x.html", null ]
 ];

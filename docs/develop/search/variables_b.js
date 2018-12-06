@@ -1,25 +1,7 @@
 var searchData=
 [
-  ['last_5faccess',['last_access',['../struct__malloc__area.html#a069f99ef8645333f53eb70516f73aa30',1,'_malloc_area']]],
-  ['last_5fevent',['last_event',['../struct__state__t.html#aefd2acf6e99528fcf2438e9679873b59',1,'_state_t']]],
-  ['last_5fgvt',['last_gvt',['../gvt_2gvt_8c.html#a542712f0b45aec7dcac2036fc4f4815f',1,'gvt.c']]],
-  ['lastbucket',['lastbucket',['../calqueue_8c.html#a7217d490a5b805aa1ad66cb8f5409b1f',1,'calqueue.c']]],
-  ['lastprio',['lastprio',['../calqueue_8c.html#a8f52e8acc668c4d94d5c548929a365a9',1,'calqueue.c']]],
-  ['len',['len',['../structbackup.html#ae9c7b104cfc0e86f6a5cdc89bb6b2485',1,'backup']]],
-  ['lid',['lid',['../structlp__struct.html#a7c9cd95d8767ce903c059099a1878aad',1,'lp_struct']]],
-  ['list',['list',['../struct__astar__t.html#a75e9d2f69c9a56a0a558a4d7c271060d',1,'_astar_t']]],
-  ['local_5fmin',['local_min',['../gvt_2gvt_8c.html#a124d9ea1c7dacc542bd0fdd85b97d4f5',1,'gvt.c']]],
-  ['local_5fmin_5fbarrier',['local_min_barrier',['../gvt_2gvt_8c.html#acf8540454750652f2ea8e7459d867648',1,'gvt.c']]],
-  ['local_5ftid',['local_tid',['../thread_8c.html#afdb3c939f8808eacc8b06ac18e06e6c4',1,'local_tid():&#160;thread.c'],['../thread_8h.html#afdb3c939f8808eacc8b06ac18e06e6c4',1,'local_tid():&#160;thread.c']]],
-  ['lock',['lock',['../structspinlock__t.html#a5ae085550532a212e982000315bb4b73',1,'spinlock_t::lock()'],['../structbuddy.html#a457ab3494a23d33a9af2f8a79e01f591',1,'buddy::lock()'],['../structslab__chain.html#adbc81f288613a95433f6371b3bc2556c',1,'slab_chain::lock()'],['../structlp__struct.html#a7bd95bc9dc68b6e2f7a80d6e186c0b3d',1,'lp_struct::lock()']]],
-  ['log',['log',['../struct__state__t.html#a093054b63471c09e09bdf21d86bfc50f',1,'_state_t']]],
-  ['longest',['longest',['../structbuddy.html#a81cf7bad649beeca58524c5aa7977b33',1,'buddy']]],
-  ['lp_5fcost',['lp_cost',['../binding_8c.html#a3369af9193e1547ffec0469c1c9ec378',1,'binding.c']]],
-  ['lp_5fstats',['lp_stats',['../statistics_8c.html#ad4d51475fcd1de1b4a848f4738b5f5ab',1,'statistics.c']]],
-  ['lp_5fstats_5fgvt',['lp_stats_gvt',['../statistics_8c.html#aef342416f3bf2235d3c79d1f66007499',1,'statistics.c']]],
-  ['lps_5fblocks',['lps_blocks',['../process_8c.html#a94aee9d39d49e56374a34eb9c162ed92',1,'lps_blocks():&#160;process.c'],['../process_8h.html#a94aee9d39d49e56374a34eb9c162ed92',1,'lps_blocks():&#160;process.c']]],
-  ['lps_5fbound_5fblocks',['lps_bound_blocks',['../process_8c.html#a234aca872959459fd600c804f8a15807',1,'lps_bound_blocks():&#160;process.c'],['../process_8h.html#a234aca872959459fd600c804f8a15807',1,'lps_bound_blocks():&#160;process.c']]],
-  ['lps_5fdistribution',['lps_distribution',['../struct__simulation__configuration.html#a015445b5f1da26cadeaeb4afa477db5e',1,'_simulation_configuration']]],
-  ['lps_5ftermination',['lps_termination',['../ccgs_8c.html#a45e3d88b7b65a39fe6e9d0fc14f0f558',1,'ccgs.c']]],
-  ['lvt',['lvt',['../struct__state__t.html#acef4538032eb5ddb18c2f593323783a6',1,'_state_t']]]
+  ['kernel',['kernel',['../core_8c.html#a703e442595e23c103c1aa83e285a36f3',1,'kernel():&#160;core.c'],['../core_8h.html#a5b72e8eae05c10259f81fe6250ec813f',1,'kernel():&#160;core.c']]],
+  ['kernel_5fcontext',['kernel_context',['../ult_8c.html#af3d8429cc9ef046d05e2fb0feebf01d7',1,'kernel_context():&#160;ult.c'],['../ult_8h.html#af3d8429cc9ef046d05e2fb0feebf01d7',1,'kernel_context():&#160;ult.c']]],
+  ['kernel_5fphase',['kernel_phase',['../gvt_2gvt_8c.html#aa051914fd87ed461ff3814597c4d1143',1,'gvt.c']]],
+  ['kid',['kid',['../core_8c.html#aa226b86ae30d1baf7f916ce6f24e0a9d',1,'kid():&#160;core.c'],['../core_8h.html#aa226b86ae30d1baf7f916ce6f24e0a9d',1,'kid():&#160;core.c']]]
 ];

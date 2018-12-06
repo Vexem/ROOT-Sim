@@ -1,0 +1,9 @@
+<map id="inter_kernel_comm_init" name="inter_kernel_comm_init">
+<area shape="rect" id="node2" href="$wnd_8c.html#a620f72de0294d3c638894de54d14ea27" title="outgoing_window_init" alt="" coords="224,5,380,32"/>
+<area shape="rect" id="node5" href="$communication_2gvt_8c.html#ae0cb1aa4dae8060ac662c0534849ecf3" title="gvt_comm_init" alt="" coords="244,56,360,83"/>
+<area shape="rect" id="node6" href="$mpi_8c.html#a6e129776fd0d7fc31a255a396ce28c39" title="dist_termination_init" alt="" coords="226,107,378,133"/>
+<area shape="rect" id="node7" href="$mpi_8c.html#a013115e2b9fb4af92de3a6b212fc8065" title="stats_reduction_init" alt="" coords="229,157,375,184"/>
+<area shape="rect" id="node3" href="$dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="469,56,532,83"/>
+<area shape="rect" id="node4" href="$platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="621,56,731,83"/>
+<area shape="rect" id="node8" href="$mpi_8c.html#ace2c9a712d7d5f8e73dda54c9de3e358" title="reduce_stat_vector" alt="" coords="428,157,573,184"/>
+</map>

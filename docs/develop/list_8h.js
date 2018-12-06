@@ -1,7 +1,6 @@
 var list_8h =
 [
     [ "rootsim_list", "structrootsim__list.html", "structrootsim__list" ],
-    [ "__LIST_DATATYPE_H", "list_8h.html#a158536626d83c62c07658a72689f3d1a", null ],
     [ "get_key", "list_8h.html#a038ae97b49e1583a702de3823af01132", null ],
     [ "list", "list_8h.html#a0da4b86f76acd6d3f307717f844b61d2", null ],
     [ "list_delete_by_content", "list_8h.html#aef6064281d8fd6b298b9df0613151b24", null ],

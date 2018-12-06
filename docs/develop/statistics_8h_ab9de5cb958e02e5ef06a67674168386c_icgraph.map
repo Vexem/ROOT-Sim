@@ -1,8 +1,8 @@
 <map id="statistics_get_lp_data" name="statistics_get_lp_data">
-<area shape="rect" id="node2" href="$binding_8c.html#a7356539bd24b02d48f6ac1d7e37a8eb4" title="LP_knapsack" alt="" coords="215,5,319,32"/>
-<area shape="rect" id="node3" href="$binding_8h.html#ae26b2a8055156e8648f8ad806f5fa5b0" title="rebind_LPs" alt="" coords="367,5,457,32"/>
-<area shape="rect" id="node4" href="$main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="724,5,885,32"/>
-<area shape="rect" id="node7" href="$scheduler_8h.html#af405fd79c1cd59fccce27658d6e11941" title="initialize_worker_thread" alt="" coords="505,31,676,57"/>
-<area shape="rect" id="node5" href="$main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="933,5,1055,32"/>
-<area shape="rect" id="node6" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="967,56,1021,83"/>
+<area shape="rect" id="node2" href="$binding_8c.html#ae692b28f95453355b4f37a3c65f8d934" title="post_local_reduction" alt="" coords="215,5,368,32"/>
+<area shape="rect" id="node3" href="$binding_8h.html#ae26b2a8055156e8648f8ad806f5fa5b0" title="rebind_LPs" alt="" coords="416,5,507,32"/>
+<area shape="rect" id="node4" href="$main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="773,5,935,32"/>
+<area shape="rect" id="node7" href="$scheduler_8h.html#af405fd79c1cd59fccce27658d6e11941" title="initialize_worker_thread" alt="" coords="555,31,725,57"/>
+<area shape="rect" id="node5" href="$main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="983,5,1104,32"/>
+<area shape="rect" id="node6" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1016,56,1071,83"/>
 </map>

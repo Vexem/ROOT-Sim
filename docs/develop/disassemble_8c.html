@@ -23,6 +23,8 @@
   $(document).ready(function() { init_search(); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="flatdoc.css" rel="stylesheet" type="text/css"/>
+<link href="inline-params.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -105,32 +107,2698 @@ $(document).ready(function(){initNavTree('disassemble_8c.html','');});
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">disassemble.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Module to disassemble x86 machine instructions.  
+<p>x86 ISA disassembler  
 <a href="#details">More...</a></p>
-
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="disassemble_8h_source.html">arch/x86/disassemble.h</a>&gt;</code><br />
+</div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for disassemble.c:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c__incl.png" border="0" usemap="#_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2arch_2x86_2disassemble_8c" alt=""/></div>
+<map name="_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2arch_2x86_2disassemble_8c" id="_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2arch_2x86_2disassemble_8c">
+<area shape="rect" id="node7" href="disassemble_8h.html" title="x86 ISA disassembler header " alt="" coords="333,109,506,136"/>
+</map>
+</div>
+</div>
 <p><a href="disassemble_8c_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a88dca6aca5a9d1582104c62cdbf2c6cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#a88dca6aca5a9d1582104c62cdbf2c6cc">esc_0f_opcode</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state)</td></tr>
+<tr class="separator:a88dca6aca5a9d1582104c62cdbf2c6cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e1f586ccd2cbc69c218d15cb5cc5486"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#a0e1f586ccd2cbc69c218d15cb5cc5486">d8_opcode</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state)</td></tr>
+<tr class="separator:a0e1f586ccd2cbc69c218d15cb5cc5486"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adee8777f524cc2889378deda9eaccc49"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#adee8777f524cc2889378deda9eaccc49">d9_opcode</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state)</td></tr>
+<tr class="separator:adee8777f524cc2889378deda9eaccc49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2514b9b28c71bbecd64bd0f3827021a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#ae2514b9b28c71bbecd64bd0f3827021a">da_opcode</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state)</td></tr>
+<tr class="separator:ae2514b9b28c71bbecd64bd0f3827021a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4aeb7375218fe52553cdd94e8752a8c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#a4aeb7375218fe52553cdd94e8752a8c6">db_opcode</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state)</td></tr>
+<tr class="separator:a4aeb7375218fe52553cdd94e8752a8c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab039900e0258977a4a6271def21cdded"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#ab039900e0258977a4a6271def21cdded">dc_opcode</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state)</td></tr>
+<tr class="separator:ab039900e0258977a4a6271def21cdded"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a964b216be51b44276ab0de35e00ca0ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#a964b216be51b44276ab0de35e00ca0ea">dd_opcode</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state)</td></tr>
+<tr class="separator:a964b216be51b44276ab0de35e00ca0ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e0b9edc56f94d6e04616c799fefcda8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#a8e0b9edc56f94d6e04616c799fefcda8">de_opcode</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state)</td></tr>
+<tr class="separator:a8e0b9edc56f94d6e04616c799fefcda8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae60c63508d8f86b63290f85a00e20eff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#ae60c63508d8f86b63290f85a00e20eff">df_opcode</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state)</td></tr>
+<tr class="separator:ae60c63508d8f86b63290f85a00e20eff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e1fdeb89c16f2049eea46dd65408f81"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#a7e1fdeb89c16f2049eea46dd65408f81">immed_grp_1</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state)</td></tr>
+<tr class="separator:a7e1fdeb89c16f2049eea46dd65408f81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b52bb14e44394cc563b91970ea02cd7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#a8b52bb14e44394cc563b91970ea02cd7">shift_grp_2</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state)</td></tr>
+<tr class="separator:a8b52bb14e44394cc563b91970ea02cd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3831c9d8c38404c0ab8ae1794e2004f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#af3831c9d8c38404c0ab8ae1794e2004f">unary_grp_3</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state)</td></tr>
+<tr class="separator:af3831c9d8c38404c0ab8ae1794e2004f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0198508b227d46edd68fc69160c302f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#aa0198508b227d46edd68fc69160c302f">grp_4</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state)</td></tr>
+<tr class="separator:aa0198508b227d46edd68fc69160c302f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28b8e82eec8ca817a557e48f0f9715af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#a28b8e82eec8ca817a557e48f0f9715af">grp_5</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state)</td></tr>
+<tr class="separator:a28b8e82eec8ca817a557e48f0f9715af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a195f1fe6f4a0b8b9d394c02b048ab3ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#a195f1fe6f4a0b8b9d394c02b048ab3ca">grp_6</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state)</td></tr>
+<tr class="separator:a195f1fe6f4a0b8b9d394c02b048ab3ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e4781d90c401814394600bb91471e53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#a4e4781d90c401814394600bb91471e53">grp_7</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state)</td></tr>
+<tr class="separator:a4e4781d90c401814394600bb91471e53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe3e75f9413828f5e46dd7c6a0e6957f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#afe3e75f9413828f5e46dd7c6a0e6957f">grp_8</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state)</td></tr>
+<tr class="separator:afe3e75f9413828f5e46dd7c6a0e6957f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ff97a8bb1138c6f6b7cacd3867fd093"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#a6ff97a8bb1138c6f6b7cacd3867fd093">grp_9</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state)</td></tr>
+<tr class="separator:a6ff97a8bb1138c6f6b7cacd3867fd093"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ad744f5df64389674d056c419cb8ebe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#a2ad744f5df64389674d056c419cb8ebe">grp_10</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state)</td></tr>
+<tr class="separator:a2ad744f5df64389674d056c419cb8ebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4e913a8e3b56db3c6b9742b9c25889d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#aa4e913a8e3b56db3c6b9742b9c25889d">grp_11</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state)</td></tr>
+<tr class="separator:aa4e913a8e3b56db3c6b9742b9c25889d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7fa2abbadbb9fa686eaad017fd208f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#ac7fa2abbadbb9fa686eaad017fd208f9">grp_12</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state)</td></tr>
+<tr class="separator:ac7fa2abbadbb9fa686eaad017fd208f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac397e85b38b3b835ed2cc503b70f004"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#aac397e85b38b3b835ed2cc503b70f004">grp_13</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state)</td></tr>
+<tr class="separator:aac397e85b38b3b835ed2cc503b70f004"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab98909afad086b8b58207c713f0b8e7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#ab98909afad086b8b58207c713f0b8e7e">grp_14</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state)</td></tr>
+<tr class="separator:ab98909afad086b8b58207c713f0b8e7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad71a54756a17e5499a4e3b3303e6d3dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#ad71a54756a17e5499a4e3b3303e6d3dd">grp_15</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state)</td></tr>
+<tr class="separator:ad71a54756a17e5499a4e3b3303e6d3dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f525a171f54408109d3ee2916a63c76"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#a7f525a171f54408109d3ee2916a63c76">grp_16</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state)</td></tr>
+<tr class="separator:a7f525a171f54408109d3ee2916a63c76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a219b934609145db4617d865342f1398b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#a219b934609145db4617d865342f1398b">esc_0f10_17</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state)</td></tr>
+<tr class="separator:a219b934609145db4617d865342f1398b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2188ddf64274c97a95fd791924512100"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#a2188ddf64274c97a95fd791924512100">esc_0f28_2f</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state)</td></tr>
+<tr class="separator:a2188ddf64274c97a95fd791924512100"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12f6ebea88f2371d86393ba0532b2348"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#a12f6ebea88f2371d86393ba0532b2348">esc_0f50_70</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state)</td></tr>
+<tr class="separator:a12f6ebea88f2371d86393ba0532b2348"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6bac727eaab81e703d8e431f909f2a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#ac6bac727eaab81e703d8e431f909f2a1">esc_0f74_76</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state)</td></tr>
+<tr class="separator:ac6bac727eaab81e703d8e431f909f2a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b296c34ebafd87ce5c43de50edc295b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#a7b296c34ebafd87ce5c43de50edc295b">esc_0f7e_7f</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state)</td></tr>
+<tr class="separator:a7b296c34ebafd87ce5c43de50edc295b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a074752bce6aaf9c80c124fba38c54213"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#a074752bce6aaf9c80c124fba38c54213">esc_0fc2</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state)</td></tr>
+<tr class="separator:a074752bce6aaf9c80c124fba38c54213"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace1a0a77fb8c703a2195234ff97c9ed1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#ace1a0a77fb8c703a2195234ff97c9ed1">esc_0fc4_c6</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state)</td></tr>
+<tr class="separator:ace1a0a77fb8c703a2195234ff97c9ed1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad073ac9d1ced37db8166d9bcdbfa15ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#ad073ac9d1ced37db8166d9bcdbfa15ca">esc_0fd1_ef</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state)</td></tr>
+<tr class="separator:ad073ac9d1ced37db8166d9bcdbfa15ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae208d3458a4642f82c4213311b2d533d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#ae208d3458a4642f82c4213311b2d533d">esc_0ff1_fe</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state)</td></tr>
+<tr class="separator:ae208d3458a4642f82c4213311b2d533d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb9ccfcc110399b92ba8686f9ea19689"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#aeb9ccfcc110399b92ba8686f9ea19689">read_modrm</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state)</td></tr>
+<tr class="separator:aeb9ccfcc110399b92ba8686f9ea19689"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e43ff8ad5ca6db47c94d876ed0e9111"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#a5e43ff8ad5ca6db47c94d876ed0e9111">sse_prefix_to_index</a> (unsigned char sse_prefix)</td></tr>
+<tr class="separator:a5e43ff8ad5ca6db47c94d876ed0e9111"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad04659b6a93404c93c1744c46de19c7a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#ad04659b6a93404c93c1744c46de19c7a">sse_esc</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state, <a class="el" href="disassemble_8h.html#ab76307e66bdbe9be5d7959b60d0e4a9d">insn</a> table[][4], unsigned char base)</td></tr>
+<tr class="separator:ad04659b6a93404c93c1744c46de19c7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a946676ab1c45994e015e56e05b7e08bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#a946676ab1c45994e015e56e05b7e08bd">select_operand_size</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state, enum <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a> op)</td></tr>
+<tr class="separator:a946676ab1c45994e015e56e05b7e08bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93cdaa588f7940d60e17319be885d37d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#a93cdaa588f7940d60e17319be885d37d">format_addr_m</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state, enum <a class="el" href="disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206">addr_method</a> addr, enum <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a> op)</td></tr>
+<tr class="separator:a93cdaa588f7940d60e17319be885d37d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a856bf388af95fbf22a1814c6c72e0228"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#a856bf388af95fbf22a1814c6c72e0228">format_addr_a</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state, enum <a class="el" href="disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206">addr_method</a> addr, enum <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a> op)</td></tr>
+<tr class="separator:a856bf388af95fbf22a1814c6c72e0228"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf434ff67032069ef17563fa01f0112b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#abf434ff67032069ef17563fa01f0112b">format_addr_c</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state, enum <a class="el" href="disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206">addr_method</a> addr, enum <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a> op)</td></tr>
+<tr class="separator:abf434ff67032069ef17563fa01f0112b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9ac1896ce575e8c3ba69320f160a01b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#ac9ac1896ce575e8c3ba69320f160a01b">format_addr_d</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state, enum <a class="el" href="disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206">addr_method</a> addr, enum <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a> op)</td></tr>
+<tr class="separator:ac9ac1896ce575e8c3ba69320f160a01b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74e315b189ad737422731c11c3e57a73"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#a74e315b189ad737422731c11c3e57a73">format_addr_e</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state, enum <a class="el" href="disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206">addr_method</a> addr, enum <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a> op)</td></tr>
+<tr class="separator:a74e315b189ad737422731c11c3e57a73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bd5befab59e2fdcb4e14f2ff8486452"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#a6bd5befab59e2fdcb4e14f2ff8486452">format_addr_g</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state, enum <a class="el" href="disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206">addr_method</a> addr, enum <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a> op)</td></tr>
+<tr class="separator:a6bd5befab59e2fdcb4e14f2ff8486452"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0f8d86c84fec05811145c25de450c5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#ae0f8d86c84fec05811145c25de450c5a">format_addr_i</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state, enum <a class="el" href="disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206">addr_method</a> addr, enum <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a> op)</td></tr>
+<tr class="separator:ae0f8d86c84fec05811145c25de450c5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b8368ccfb2aa3b2817068b36618fc27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#a2b8368ccfb2aa3b2817068b36618fc27">format_addr_j</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state, enum <a class="el" href="disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206">addr_method</a> addr, enum <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a> op)</td></tr>
+<tr class="separator:a2b8368ccfb2aa3b2817068b36618fc27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1356395f3ebf0690023c5cc3a01bb717"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#a1356395f3ebf0690023c5cc3a01bb717">format_addr_o</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state, enum <a class="el" href="disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206">addr_method</a> addr, enum <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a> op)</td></tr>
+<tr class="separator:a1356395f3ebf0690023c5cc3a01bb717"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9688150204272be8319e314d60a8097"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#ad9688150204272be8319e314d60a8097">format_addr_p</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state, enum <a class="el" href="disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206">addr_method</a> addr, enum <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a> op)</td></tr>
+<tr class="separator:ad9688150204272be8319e314d60a8097"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae15e4f1062e7840dc699bf2606481e83"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#ae15e4f1062e7840dc699bf2606481e83">format_addr_n</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state, enum <a class="el" href="disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206">addr_method</a> addr, enum <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a> op)</td></tr>
+<tr class="separator:ae15e4f1062e7840dc699bf2606481e83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e0044e016833feb544c5c755b1363cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#a6e0044e016833feb544c5c755b1363cd">format_addr_q</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state, enum <a class="el" href="disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206">addr_method</a> addr, enum <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a> op)</td></tr>
+<tr class="separator:a6e0044e016833feb544c5c755b1363cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdbd7e59f3d073e9e38dda0e66cc95e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#acdbd7e59f3d073e9e38dda0e66cc95e4">format_addr_r</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state, enum <a class="el" href="disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206">addr_method</a> addr, enum <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a> op)</td></tr>
+<tr class="separator:acdbd7e59f3d073e9e38dda0e66cc95e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c54a21b3cdd072d761bef42f5706bf0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#a8c54a21b3cdd072d761bef42f5706bf0">format_addr_s</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state, enum <a class="el" href="disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206">addr_method</a> addr, enum <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a> op)</td></tr>
+<tr class="separator:a8c54a21b3cdd072d761bef42f5706bf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacb59e06e02e82bfafe0be03a13f7f19"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#aacb59e06e02e82bfafe0be03a13f7f19">format_addr_t</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state, enum <a class="el" href="disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206">addr_method</a> addr, enum <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a> op)</td></tr>
+<tr class="separator:aacb59e06e02e82bfafe0be03a13f7f19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d7b0fb20770c02a0656715216bcb3b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#a7d7b0fb20770c02a0656715216bcb3b9">format_addr_v</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state, enum <a class="el" href="disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206">addr_method</a> addr, enum <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a> op)</td></tr>
+<tr class="separator:a7d7b0fb20770c02a0656715216bcb3b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e44f3352fbef06da1a6afe047c7855b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#a3e44f3352fbef06da1a6afe047c7855b">format_addr_u</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state, enum <a class="el" href="disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206">addr_method</a> addr, enum <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a> op)</td></tr>
+<tr class="separator:a3e44f3352fbef06da1a6afe047c7855b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a052c1eb235fb10eb41e286bf3f61c2b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#a052c1eb235fb10eb41e286bf3f61c2b4">format_addr_w</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state, enum <a class="el" href="disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206">addr_method</a> addr, enum <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a> op)</td></tr>
+<tr class="separator:a052c1eb235fb10eb41e286bf3f61c2b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3d54851534e236f39840574a1aab885"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#ad3d54851534e236f39840574a1aab885">format_addr_x</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state, enum <a class="el" href="disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206">addr_method</a> addr, enum <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a> op)</td></tr>
+<tr class="separator:ad3d54851534e236f39840574a1aab885"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5e98a71d66f3ae0b91216ade9132ce1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#ab5e98a71d66f3ae0b91216ade9132ce1">format_addr_y</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state, enum <a class="el" href="disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206">addr_method</a> addr, enum <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a> op)</td></tr>
+<tr class="separator:ab5e98a71d66f3ae0b91216ade9132ce1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7592854d94e0f19b3a5855b1f01dac3a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#a7592854d94e0f19b3a5855b1f01dac3a">format_addr_op</a> (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *state, enum <a class="el" href="disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206">addr_method</a> addr, enum <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a> op)</td></tr>
+<tr class="separator:a7592854d94e0f19b3a5855b1f01dac3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c3a838f0fdd7b2e11c8c010854b840a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#a6c3a838f0fdd7b2e11c8c010854b840a">x86_disassemble_instruction</a> (unsigned char *text, unsigned long *pos, <a class="el" href="structinsn__info__x86.html">insn_info_x86</a> *instrument, char flags)</td></tr>
+<tr class="separator:a6c3a838f0fdd7b2e11c8c010854b840a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a7e47813eb264a5ef08341698142ce0d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="disassemble_8h.html#ab76307e66bdbe9be5d7959b60d0e4a9d">insn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#a7e47813eb264a5ef08341698142ce0d1">one_byte_opcode_table</a> []</td></tr>
+<tr class="separator:a7e47813eb264a5ef08341698142ce0d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae31a22f37302cd12f3fcf307be3ac4fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="disassemble_8h.html#ab76307e66bdbe9be5d7959b60d0e4a9d">insn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disassemble_8c.html#ae31a22f37302cd12f3fcf307be3ac4fe">esc_0f_opcode_table</a> []</td></tr>
+<tr class="separator:ae31a22f37302cd12f3fcf307be3ac4fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Module to disassemble x86 machine instructions. </p>
-<p>Copyright (C) 2008-2018 HPDCS Group <a href="http://www.dis.uniroma1.it/~hpdcs">http://www.dis.uniroma1.it/~hpdcs</a></p>
+<div class="textblock"><p>x86 ISA disassembler </p>
+<p>This is an x86 ISA disassembler. The disassembly (which is table-based) extracts every possible information from an instruction, given a pointer to it.</p>
+<p>This is a complete disassembler until SSE2 instructions. Newer instructions support is far from complete. Although it has been extensively tested (it has correctly disassembled the Linux kernel and Photoshop), it is extremely possible that some bugs are hidden somewhere.</p>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (C) 2008-2018 HPDCS Group <a href="https://hpdcs.github.io">https://hpdcs.github.io</a></dd></dl>
 <p>This file is part of ROOT-Sim (ROme OpTimistic Simulator).</p>
 <p>ROOT-Sim is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; only version 3 of the License applies.</p>
 <p>ROOT-Sim is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
 <p>You should have received a copy of the GNU General Public License along with ROOT-Sim; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA</p>
 <dl class="section author"><dt>Author</dt><dd>Alessandro Pellegrini </dd>
 <dd>
+Davide Cingolani </dd>
+<dd>
 Simone Economo </dd>
 <dd>
 Fernando Visca </dd>
 <dd>
-Alice Porfirio </dd></dl>
+Alice Porfirio</dd></dl>
+<dl class="section date"><dt>Date</dt><dd>September 19, 2008 </dd></dl>
 
 <p>Definition in file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="a0e1f586ccd2cbc69c218d15cb5cc5486"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void d8_opcode </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l01193">1193</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_a0e1f586ccd2cbc69c218d15cb5cc5486_cgraph.png" border="0" usemap="#disassemble_8c_a0e1f586ccd2cbc69c218d15cb5cc5486_cgraph" alt=""/></div>
+<map name="disassemble_8c_a0e1f586ccd2cbc69c218d15cb5cc5486_cgraph" id="disassemble_8c_a0e1f586ccd2cbc69c218d15cb5cc5486_cgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#aeb9ccfcc110399b92ba8686f9ea19689" title="read_modrm" alt="" coords="145,5,251,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="adee8777f524cc2889378deda9eaccc49"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void d9_opcode </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l01301">1301</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_adee8777f524cc2889378deda9eaccc49_cgraph.png" border="0" usemap="#disassemble_8c_adee8777f524cc2889378deda9eaccc49_cgraph" alt=""/></div>
+<map name="disassemble_8c_adee8777f524cc2889378deda9eaccc49_cgraph" id="disassemble_8c_adee8777f524cc2889378deda9eaccc49_cgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#aeb9ccfcc110399b92ba8686f9ea19689" title="read_modrm" alt="" coords="145,5,251,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ae2514b9b28c71bbecd64bd0f3827021a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void da_opcode </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l01502">1502</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_ae2514b9b28c71bbecd64bd0f3827021a_cgraph.png" border="0" usemap="#disassemble_8c_ae2514b9b28c71bbecd64bd0f3827021a_cgraph" alt=""/></div>
+<map name="disassemble_8c_ae2514b9b28c71bbecd64bd0f3827021a_cgraph" id="disassemble_8c_ae2514b9b28c71bbecd64bd0f3827021a_cgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#aeb9ccfcc110399b92ba8686f9ea19689" title="read_modrm" alt="" coords="145,5,251,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a4aeb7375218fe52553cdd94e8752a8c6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void db_opcode </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l01587">1587</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_a4aeb7375218fe52553cdd94e8752a8c6_cgraph.png" border="0" usemap="#disassemble_8c_a4aeb7375218fe52553cdd94e8752a8c6_cgraph" alt=""/></div>
+<map name="disassemble_8c_a4aeb7375218fe52553cdd94e8752a8c6_cgraph" id="disassemble_8c_a4aeb7375218fe52553cdd94e8752a8c6_cgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#aeb9ccfcc110399b92ba8686f9ea19689" title="read_modrm" alt="" coords="145,5,251,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ab039900e0258977a4a6271def21cdded"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dc_opcode </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l01674">1674</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_ab039900e0258977a4a6271def21cdded_cgraph.png" border="0" usemap="#disassemble_8c_ab039900e0258977a4a6271def21cdded_cgraph" alt=""/></div>
+<map name="disassemble_8c_ab039900e0258977a4a6271def21cdded_cgraph" id="disassemble_8c_ab039900e0258977a4a6271def21cdded_cgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#aeb9ccfcc110399b92ba8686f9ea19689" title="read_modrm" alt="" coords="144,5,249,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a964b216be51b44276ab0de35e00ca0ea"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dd_opcode </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l01740">1740</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_a964b216be51b44276ab0de35e00ca0ea_cgraph.png" border="0" usemap="#disassemble_8c_a964b216be51b44276ab0de35e00ca0ea_cgraph" alt=""/></div>
+<map name="disassemble_8c_a964b216be51b44276ab0de35e00ca0ea_cgraph" id="disassemble_8c_a964b216be51b44276ab0de35e00ca0ea_cgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#aeb9ccfcc110399b92ba8686f9ea19689" title="read_modrm" alt="" coords="145,5,251,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a8e0b9edc56f94d6e04616c799fefcda8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de_opcode </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l01832">1832</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_a8e0b9edc56f94d6e04616c799fefcda8_cgraph.png" border="0" usemap="#disassemble_8c_a8e0b9edc56f94d6e04616c799fefcda8_cgraph" alt=""/></div>
+<map name="disassemble_8c_a8e0b9edc56f94d6e04616c799fefcda8_cgraph" id="disassemble_8c_a8e0b9edc56f94d6e04616c799fefcda8_cgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#aeb9ccfcc110399b92ba8686f9ea19689" title="read_modrm" alt="" coords="145,5,251,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ae60c63508d8f86b63290f85a00e20eff"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void df_opcode </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l01911">1911</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_ae60c63508d8f86b63290f85a00e20eff_cgraph.png" border="0" usemap="#disassemble_8c_ae60c63508d8f86b63290f85a00e20eff_cgraph" alt=""/></div>
+<map name="disassemble_8c_ae60c63508d8f86b63290f85a00e20eff_cgraph" id="disassemble_8c_ae60c63508d8f86b63290f85a00e20eff_cgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#aeb9ccfcc110399b92ba8686f9ea19689" title="read_modrm" alt="" coords="141,5,247,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a219b934609145db4617d865342f1398b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void esc_0f10_17 </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l02044">2044</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_a219b934609145db4617d865342f1398b_cgraph.png" border="0" usemap="#disassemble_8c_a219b934609145db4617d865342f1398b_cgraph" alt=""/></div>
+<map name="disassemble_8c_a219b934609145db4617d865342f1398b_cgraph" id="disassemble_8c_a219b934609145db4617d865342f1398b_cgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#aeb9ccfcc110399b92ba8686f9ea19689" title="read_modrm" alt="" coords="156,5,261,32"/>
+<area shape="rect" id="node3" href="disassemble_8c.html#ad04659b6a93404c93c1744c46de19c7a" title="sse_esc" alt="" coords="172,56,245,83"/>
+<area shape="rect" id="node4" href="disassemble_8c.html#a5e43ff8ad5ca6db47c94d876ed0e9111" title="sse_prefix_to_index" alt="" coords="309,56,456,83"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a2188ddf64274c97a95fd791924512100"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void esc_0f28_2f </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l02184">2184</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-10-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_a2188ddf64274c97a95fd791924512100_cgraph.png" border="0" usemap="#disassemble_8c_a2188ddf64274c97a95fd791924512100_cgraph" alt=""/></div>
+<map name="disassemble_8c_a2188ddf64274c97a95fd791924512100_cgraph" id="disassemble_8c_a2188ddf64274c97a95fd791924512100_cgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#ad04659b6a93404c93c1744c46de19c7a" title="sse_esc" alt="" coords="152,5,225,32"/>
+<area shape="rect" id="node3" href="disassemble_8c.html#a5e43ff8ad5ca6db47c94d876ed0e9111" title="sse_prefix_to_index" alt="" coords="273,5,420,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a12f6ebea88f2371d86393ba0532b2348"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void esc_0f50_70 </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l02280">2280</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-11-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_a12f6ebea88f2371d86393ba0532b2348_cgraph.png" border="0" usemap="#disassemble_8c_a12f6ebea88f2371d86393ba0532b2348_cgraph" alt=""/></div>
+<map name="disassemble_8c_a12f6ebea88f2371d86393ba0532b2348_cgraph" id="disassemble_8c_a12f6ebea88f2371d86393ba0532b2348_cgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#ad04659b6a93404c93c1744c46de19c7a" title="sse_esc" alt="" coords="156,5,229,32"/>
+<area shape="rect" id="node3" href="disassemble_8c.html#a5e43ff8ad5ca6db47c94d876ed0e9111" title="sse_prefix_to_index" alt="" coords="277,5,424,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ac6bac727eaab81e703d8e431f909f2a1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void esc_0f74_76 </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l02658">2658</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-12-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_ac6bac727eaab81e703d8e431f909f2a1_cgraph.png" border="0" usemap="#disassemble_8c_ac6bac727eaab81e703d8e431f909f2a1_cgraph" alt=""/></div>
+<map name="disassemble_8c_ac6bac727eaab81e703d8e431f909f2a1_cgraph" id="disassemble_8c_ac6bac727eaab81e703d8e431f909f2a1_cgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#ad04659b6a93404c93c1744c46de19c7a" title="sse_esc" alt="" coords="156,5,229,32"/>
+<area shape="rect" id="node3" href="disassemble_8c.html#a5e43ff8ad5ca6db47c94d876ed0e9111" title="sse_prefix_to_index" alt="" coords="277,5,424,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a7b296c34ebafd87ce5c43de50edc295b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void esc_0f7e_7f </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l02699">2699</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-13-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-13-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_a7b296c34ebafd87ce5c43de50edc295b_cgraph.png" border="0" usemap="#disassemble_8c_a7b296c34ebafd87ce5c43de50edc295b_cgraph" alt=""/></div>
+<map name="disassemble_8c_a7b296c34ebafd87ce5c43de50edc295b_cgraph" id="disassemble_8c_a7b296c34ebafd87ce5c43de50edc295b_cgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#ad04659b6a93404c93c1744c46de19c7a" title="sse_esc" alt="" coords="152,5,225,32"/>
+<area shape="rect" id="node3" href="disassemble_8c.html#a5e43ff8ad5ca6db47c94d876ed0e9111" title="sse_prefix_to_index" alt="" coords="273,5,420,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a88dca6aca5a9d1582104c62cdbf2c6cc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void esc_0f_opcode </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l01139">1139</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a074752bce6aaf9c80c124fba38c54213"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void esc_0fc2 </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l02729">2729</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-14-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-14-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-14-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_a074752bce6aaf9c80c124fba38c54213_cgraph.png" border="0" usemap="#disassemble_8c_a074752bce6aaf9c80c124fba38c54213_cgraph" alt=""/></div>
+<map name="disassemble_8c_a074752bce6aaf9c80c124fba38c54213_cgraph" id="disassemble_8c_a074752bce6aaf9c80c124fba38c54213_cgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#ad04659b6a93404c93c1744c46de19c7a" title="sse_esc" alt="" coords="132,5,205,32"/>
+<area shape="rect" id="node3" href="disassemble_8c.html#a5e43ff8ad5ca6db47c94d876ed0e9111" title="sse_prefix_to_index" alt="" coords="253,5,400,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ace1a0a77fb8c703a2195234ff97c9ed1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void esc_0fc4_c6 </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l02748">2748</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-15-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-15-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-15-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_ace1a0a77fb8c703a2195234ff97c9ed1_cgraph.png" border="0" usemap="#disassemble_8c_ace1a0a77fb8c703a2195234ff97c9ed1_cgraph" alt=""/></div>
+<map name="disassemble_8c_ace1a0a77fb8c703a2195234ff97c9ed1_cgraph" id="disassemble_8c_ace1a0a77fb8c703a2195234ff97c9ed1_cgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#ad04659b6a93404c93c1744c46de19c7a" title="sse_esc" alt="" coords="153,5,227,32"/>
+<area shape="rect" id="node3" href="disassemble_8c.html#a5e43ff8ad5ca6db47c94d876ed0e9111" title="sse_prefix_to_index" alt="" coords="275,5,421,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ad073ac9d1ced37db8166d9bcdbfa15ca"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void esc_0fd1_ef </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l02789">2789</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-16-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-16-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-16-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_ad073ac9d1ced37db8166d9bcdbfa15ca_cgraph.png" border="0" usemap="#disassemble_8c_ad073ac9d1ced37db8166d9bcdbfa15ca_cgraph" alt=""/></div>
+<map name="disassemble_8c_ad073ac9d1ced37db8166d9bcdbfa15ca_cgraph" id="disassemble_8c_ad073ac9d1ced37db8166d9bcdbfa15ca_cgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#ad04659b6a93404c93c1744c46de19c7a" title="sse_esc" alt="" coords="152,5,225,32"/>
+<area shape="rect" id="node3" href="disassemble_8c.html#a5e43ff8ad5ca6db47c94d876ed0e9111" title="sse_prefix_to_index" alt="" coords="273,5,420,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ae208d3458a4642f82c4213311b2d533d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void esc_0ff1_fe </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l03138">3138</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-17" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-17-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-17-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-17-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_ae208d3458a4642f82c4213311b2d533d_cgraph.png" border="0" usemap="#disassemble_8c_ae208d3458a4642f82c4213311b2d533d_cgraph" alt=""/></div>
+<map name="disassemble_8c_ae208d3458a4642f82c4213311b2d533d_cgraph" id="disassemble_8c_ae208d3458a4642f82c4213311b2d533d_cgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#ad04659b6a93404c93c1744c46de19c7a" title="sse_esc" alt="" coords="148,5,221,32"/>
+<area shape="rect" id="node3" href="disassemble_8c.html#a5e43ff8ad5ca6db47c94d876ed0e9111" title="sse_prefix_to_index" alt="" coords="269,5,416,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a856bf388af95fbf22a1814c6c72e0228"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void format_addr_a </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206">addr_method</a>&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a>&#160;</td>
+          <td class="paramname"><em>op</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l04066">4066</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-18" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-18-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-18-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-18-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_a856bf388af95fbf22a1814c6c72e0228_icgraph.png" border="0" usemap="#disassemble_8c_a856bf388af95fbf22a1814c6c72e0228_icgraph" alt=""/></div>
+<map name="disassemble_8c_a856bf388af95fbf22a1814c6c72e0228_icgraph" id="disassemble_8c_a856bf388af95fbf22a1814c6c72e0228_icgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#a93cdaa588f7940d60e17319be885d37d" title="format_addr_m" alt="" coords="169,157,291,184"/>
+<area shape="rect" id="node5" href="disassemble_8c.html#a7592854d94e0f19b3a5855b1f01dac3a" title="format_addr_op" alt="" coords="703,157,827,184"/>
+<area shape="rect" id="node3" href="disassemble_8c.html#a946676ab1c45994e015e56e05b7e08bd" title="select_operand_size" alt="" coords="339,56,491,83"/>
+<area shape="rect" id="node11" href="disassemble_8c.html#a74e315b189ad737422731c11c3e57a73" title="format_addr_e" alt="" coords="539,157,655,184"/>
+<area shape="rect" id="node12" href="disassemble_8c.html#a6e0044e016833feb544c5c755b1363cd" title="format_addr_q" alt="" coords="357,208,473,235"/>
+<area shape="rect" id="node13" href="disassemble_8c.html#a052c1eb235fb10eb41e286bf3f61c2b4" title="format_addr_w" alt="" coords="356,259,473,285"/>
+<area shape="rect" id="node4" href="disassemble_8c.html#a1356395f3ebf0690023c5cc3a01bb717" title="format_addr_o" alt="" coords="539,5,655,32"/>
+<area shape="rect" id="node10" href="disassemble_8c.html#ab5e98a71d66f3ae0b91216ade9132ce1" title="format_addr_y" alt="" coords="539,56,654,83"/>
+<area shape="rect" id="node6" href="x86_8h.html#a6c3a838f0fdd7b2e11c8c010854b840a" title="x86_disassemble_instruction" alt="" coords="875,157,1081,184"/>
+<area shape="rect" id="node7" href="ecs_8c.html#a672ea2cce8f7ae1214e0a41f46884933" title="ecs_secondary" alt="" coords="1129,157,1247,184"/>
+<area shape="rect" id="node8" href="ecs_8c.html#adbe06ee703b26dcc8d82e505075f942d" title="ECS" alt="" coords="1295,157,1343,184"/>
+<area shape="rect" id="node9" href="ecs_8c.html#ade56ef97d7d3ae799d60f8616f2062cb" title="ecs_initiate" alt="" coords="1391,157,1485,184"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="abf434ff67032069ef17563fa01f0112b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void format_addr_c </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206">addr_method</a>&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a>&#160;</td>
+          <td class="paramname"><em>op</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l04108">4108</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-19" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-19-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-19-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-19-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_abf434ff67032069ef17563fa01f0112b_icgraph.png" border="0" usemap="#disassemble_8c_abf434ff67032069ef17563fa01f0112b_icgraph" alt=""/></div>
+<map name="disassemble_8c_abf434ff67032069ef17563fa01f0112b_icgraph" id="disassemble_8c_abf434ff67032069ef17563fa01f0112b_icgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#a7592854d94e0f19b3a5855b1f01dac3a" title="format_addr_op" alt="" coords="168,5,292,32"/>
+<area shape="rect" id="node3" href="x86_8h.html#a6c3a838f0fdd7b2e11c8c010854b840a" title="x86_disassemble_instruction" alt="" coords="340,5,547,32"/>
+<area shape="rect" id="node4" href="ecs_8c.html#a672ea2cce8f7ae1214e0a41f46884933" title="ecs_secondary" alt="" coords="595,5,712,32"/>
+<area shape="rect" id="node5" href="ecs_8c.html#adbe06ee703b26dcc8d82e505075f942d" title="ECS" alt="" coords="760,5,808,32"/>
+<area shape="rect" id="node6" href="ecs_8c.html#ade56ef97d7d3ae799d60f8616f2062cb" title="ecs_initiate" alt="" coords="856,5,951,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ac9ac1896ce575e8c3ba69320f160a01b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void format_addr_d </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206">addr_method</a>&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a>&#160;</td>
+          <td class="paramname"><em>op</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l04138">4138</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-20" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-20-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-20-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-20-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_ac9ac1896ce575e8c3ba69320f160a01b_icgraph.png" border="0" usemap="#disassemble_8c_ac9ac1896ce575e8c3ba69320f160a01b_icgraph" alt=""/></div>
+<map name="disassemble_8c_ac9ac1896ce575e8c3ba69320f160a01b_icgraph" id="disassemble_8c_ac9ac1896ce575e8c3ba69320f160a01b_icgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#a7592854d94e0f19b3a5855b1f01dac3a" title="format_addr_op" alt="" coords="169,5,293,32"/>
+<area shape="rect" id="node3" href="x86_8h.html#a6c3a838f0fdd7b2e11c8c010854b840a" title="x86_disassemble_instruction" alt="" coords="341,5,548,32"/>
+<area shape="rect" id="node4" href="ecs_8c.html#a672ea2cce8f7ae1214e0a41f46884933" title="ecs_secondary" alt="" coords="596,5,713,32"/>
+<area shape="rect" id="node5" href="ecs_8c.html#adbe06ee703b26dcc8d82e505075f942d" title="ECS" alt="" coords="761,5,809,32"/>
+<area shape="rect" id="node6" href="ecs_8c.html#ade56ef97d7d3ae799d60f8616f2062cb" title="ecs_initiate" alt="" coords="857,5,952,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a74e315b189ad737422731c11c3e57a73"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void format_addr_e </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206">addr_method</a>&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a>&#160;</td>
+          <td class="paramname"><em>op</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l04180">4180</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-21" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-21-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-21-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-21-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_a74e315b189ad737422731c11c3e57a73_cgraph.png" border="0" usemap="#disassemble_8c_a74e315b189ad737422731c11c3e57a73_cgraph" alt=""/></div>
+<map name="disassemble_8c_a74e315b189ad737422731c11c3e57a73_cgraph" id="disassemble_8c_a74e315b189ad737422731c11c3e57a73_cgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#a93cdaa588f7940d60e17319be885d37d" title="format_addr_m" alt="" coords="169,5,291,32"/>
+<area shape="rect" id="node3" href="disassemble_8c.html#a946676ab1c45994e015e56e05b7e08bd" title="select_operand_size" alt="" coords="339,5,491,32"/>
+<area shape="rect" id="node4" href="disassemble_8c.html#a856bf388af95fbf22a1814c6c72e0228" title="format_addr_a" alt="" coords="357,56,473,83"/>
+</map>
+</div>
+</p>
+
+<p><div id="dynsection-22" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-22-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-22-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-22-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_a74e315b189ad737422731c11c3e57a73_icgraph.png" border="0" usemap="#disassemble_8c_a74e315b189ad737422731c11c3e57a73_icgraph" alt=""/></div>
+<map name="disassemble_8c_a74e315b189ad737422731c11c3e57a73_icgraph" id="disassemble_8c_a74e315b189ad737422731c11c3e57a73_icgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#a7592854d94e0f19b3a5855b1f01dac3a" title="format_addr_op" alt="" coords="169,5,293,32"/>
+<area shape="rect" id="node3" href="x86_8h.html#a6c3a838f0fdd7b2e11c8c010854b840a" title="x86_disassemble_instruction" alt="" coords="341,5,548,32"/>
+<area shape="rect" id="node4" href="ecs_8c.html#a672ea2cce8f7ae1214e0a41f46884933" title="ecs_secondary" alt="" coords="596,5,713,32"/>
+<area shape="rect" id="node5" href="ecs_8c.html#adbe06ee703b26dcc8d82e505075f942d" title="ECS" alt="" coords="761,5,809,32"/>
+<area shape="rect" id="node6" href="ecs_8c.html#ade56ef97d7d3ae799d60f8616f2062cb" title="ecs_initiate" alt="" coords="857,5,952,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a6bd5befab59e2fdcb4e14f2ff8486452"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void format_addr_g </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206">addr_method</a>&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a>&#160;</td>
+          <td class="paramname"><em>op</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l04284">4284</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-23" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-23-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-23-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-23-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_a6bd5befab59e2fdcb4e14f2ff8486452_icgraph.png" border="0" usemap="#disassemble_8c_a6bd5befab59e2fdcb4e14f2ff8486452_icgraph" alt=""/></div>
+<map name="disassemble_8c_a6bd5befab59e2fdcb4e14f2ff8486452_icgraph" id="disassemble_8c_a6bd5befab59e2fdcb4e14f2ff8486452_icgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#a7592854d94e0f19b3a5855b1f01dac3a" title="format_addr_op" alt="" coords="169,5,293,32"/>
+<area shape="rect" id="node3" href="x86_8h.html#a6c3a838f0fdd7b2e11c8c010854b840a" title="x86_disassemble_instruction" alt="" coords="341,5,548,32"/>
+<area shape="rect" id="node4" href="ecs_8c.html#a672ea2cce8f7ae1214e0a41f46884933" title="ecs_secondary" alt="" coords="596,5,713,32"/>
+<area shape="rect" id="node5" href="ecs_8c.html#adbe06ee703b26dcc8d82e505075f942d" title="ECS" alt="" coords="761,5,809,32"/>
+<area shape="rect" id="node6" href="ecs_8c.html#ade56ef97d7d3ae799d60f8616f2062cb" title="ecs_initiate" alt="" coords="857,5,952,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ae0f8d86c84fec05811145c25de450c5a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void format_addr_i </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206">addr_method</a>&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a>&#160;</td>
+          <td class="paramname"><em>op</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l04361">4361</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-24" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-24-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-24-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-24-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_ae0f8d86c84fec05811145c25de450c5a_icgraph.png" border="0" usemap="#disassemble_8c_ae0f8d86c84fec05811145c25de450c5a_icgraph" alt=""/></div>
+<map name="disassemble_8c_ae0f8d86c84fec05811145c25de450c5a_icgraph" id="disassemble_8c_ae0f8d86c84fec05811145c25de450c5a_icgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#a7592854d94e0f19b3a5855b1f01dac3a" title="format_addr_op" alt="" coords="164,5,288,32"/>
+<area shape="rect" id="node3" href="x86_8h.html#a6c3a838f0fdd7b2e11c8c010854b840a" title="x86_disassemble_instruction" alt="" coords="336,5,543,32"/>
+<area shape="rect" id="node4" href="ecs_8c.html#a672ea2cce8f7ae1214e0a41f46884933" title="ecs_secondary" alt="" coords="591,5,708,32"/>
+<area shape="rect" id="node5" href="ecs_8c.html#adbe06ee703b26dcc8d82e505075f942d" title="ECS" alt="" coords="756,5,804,32"/>
+<area shape="rect" id="node6" href="ecs_8c.html#ade56ef97d7d3ae799d60f8616f2062cb" title="ecs_initiate" alt="" coords="852,5,947,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a2b8368ccfb2aa3b2817068b36618fc27"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void format_addr_j </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206">addr_method</a>&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a>&#160;</td>
+          <td class="paramname"><em>op</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l04441">4441</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-25" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-25-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-25-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-25-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_a2b8368ccfb2aa3b2817068b36618fc27_icgraph.png" border="0" usemap="#disassemble_8c_a2b8368ccfb2aa3b2817068b36618fc27_icgraph" alt=""/></div>
+<map name="disassemble_8c_a2b8368ccfb2aa3b2817068b36618fc27_icgraph" id="disassemble_8c_a2b8368ccfb2aa3b2817068b36618fc27_icgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#a7592854d94e0f19b3a5855b1f01dac3a" title="format_addr_op" alt="" coords="164,5,288,32"/>
+<area shape="rect" id="node3" href="x86_8h.html#a6c3a838f0fdd7b2e11c8c010854b840a" title="x86_disassemble_instruction" alt="" coords="336,5,543,32"/>
+<area shape="rect" id="node4" href="ecs_8c.html#a672ea2cce8f7ae1214e0a41f46884933" title="ecs_secondary" alt="" coords="591,5,708,32"/>
+<area shape="rect" id="node5" href="ecs_8c.html#adbe06ee703b26dcc8d82e505075f942d" title="ECS" alt="" coords="756,5,804,32"/>
+<area shape="rect" id="node6" href="ecs_8c.html#ade56ef97d7d3ae799d60f8616f2062cb" title="ecs_initiate" alt="" coords="852,5,947,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a93cdaa588f7940d60e17319be885d37d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void format_addr_m </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206">addr_method</a>&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a>&#160;</td>
+          <td class="paramname"><em>op</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l04517">4517</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-26" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-26-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-26-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-26-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_a93cdaa588f7940d60e17319be885d37d_cgraph.png" border="0" usemap="#disassemble_8c_a93cdaa588f7940d60e17319be885d37d_cgraph" alt=""/></div>
+<map name="disassemble_8c_a93cdaa588f7940d60e17319be885d37d_cgraph" id="disassemble_8c_a93cdaa588f7940d60e17319be885d37d_cgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#a946676ab1c45994e015e56e05b7e08bd" title="select_operand_size" alt="" coords="175,5,327,32"/>
+<area shape="rect" id="node3" href="disassemble_8c.html#a856bf388af95fbf22a1814c6c72e0228" title="format_addr_a" alt="" coords="193,56,309,83"/>
+</map>
+</div>
+</p>
+
+<p><div id="dynsection-27" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-27-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-27-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-27-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_a93cdaa588f7940d60e17319be885d37d_icgraph.png" border="0" usemap="#disassemble_8c_a93cdaa588f7940d60e17319be885d37d_icgraph" alt=""/></div>
+<map name="disassemble_8c_a93cdaa588f7940d60e17319be885d37d_icgraph" id="disassemble_8c_a93cdaa588f7940d60e17319be885d37d_icgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#a946676ab1c45994e015e56e05b7e08bd" title="select_operand_size" alt="" coords="175,56,327,83"/>
+<area shape="rect" id="node4" href="disassemble_8c.html#a7592854d94e0f19b3a5855b1f01dac3a" title="format_addr_op" alt="" coords="539,132,663,159"/>
+<area shape="rect" id="node10" href="disassemble_8c.html#a74e315b189ad737422731c11c3e57a73" title="format_addr_e" alt="" coords="375,157,491,184"/>
+<area shape="rect" id="node11" href="disassemble_8c.html#a6e0044e016833feb544c5c755b1363cd" title="format_addr_q" alt="" coords="193,208,309,235"/>
+<area shape="rect" id="node12" href="disassemble_8c.html#a052c1eb235fb10eb41e286bf3f61c2b4" title="format_addr_w" alt="" coords="192,259,309,285"/>
+<area shape="rect" id="node3" href="disassemble_8c.html#a1356395f3ebf0690023c5cc3a01bb717" title="format_addr_o" alt="" coords="375,5,491,32"/>
+<area shape="rect" id="node9" href="disassemble_8c.html#ab5e98a71d66f3ae0b91216ade9132ce1" title="format_addr_y" alt="" coords="375,56,490,83"/>
+<area shape="rect" id="node5" href="x86_8h.html#a6c3a838f0fdd7b2e11c8c010854b840a" title="x86_disassemble_instruction" alt="" coords="711,132,917,159"/>
+<area shape="rect" id="node6" href="ecs_8c.html#a672ea2cce8f7ae1214e0a41f46884933" title="ecs_secondary" alt="" coords="965,132,1083,159"/>
+<area shape="rect" id="node7" href="ecs_8c.html#adbe06ee703b26dcc8d82e505075f942d" title="ECS" alt="" coords="1131,132,1179,159"/>
+<area shape="rect" id="node8" href="ecs_8c.html#ade56ef97d7d3ae799d60f8616f2062cb" title="ecs_initiate" alt="" coords="1227,132,1321,159"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ae15e4f1062e7840dc699bf2606481e83"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void format_addr_n </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206">addr_method</a>&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a>&#160;</td>
+          <td class="paramname"><em>op</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l04854">4854</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-28" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-28-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-28-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-28-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_ae15e4f1062e7840dc699bf2606481e83_icgraph.png" border="0" usemap="#disassemble_8c_ae15e4f1062e7840dc699bf2606481e83_icgraph" alt=""/></div>
+<map name="disassemble_8c_ae15e4f1062e7840dc699bf2606481e83_icgraph" id="disassemble_8c_ae15e4f1062e7840dc699bf2606481e83_icgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#a7592854d94e0f19b3a5855b1f01dac3a" title="format_addr_op" alt="" coords="169,5,293,32"/>
+<area shape="rect" id="node3" href="x86_8h.html#a6c3a838f0fdd7b2e11c8c010854b840a" title="x86_disassemble_instruction" alt="" coords="341,5,548,32"/>
+<area shape="rect" id="node4" href="ecs_8c.html#a672ea2cce8f7ae1214e0a41f46884933" title="ecs_secondary" alt="" coords="596,5,713,32"/>
+<area shape="rect" id="node5" href="ecs_8c.html#adbe06ee703b26dcc8d82e505075f942d" title="ECS" alt="" coords="761,5,809,32"/>
+<area shape="rect" id="node6" href="ecs_8c.html#ade56ef97d7d3ae799d60f8616f2062cb" title="ecs_initiate" alt="" coords="857,5,952,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a1356395f3ebf0690023c5cc3a01bb717"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void format_addr_o </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206">addr_method</a>&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a>&#160;</td>
+          <td class="paramname"><em>op</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l04772">4772</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-29" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-29-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-29-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-29-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_a1356395f3ebf0690023c5cc3a01bb717_cgraph.png" border="0" usemap="#disassemble_8c_a1356395f3ebf0690023c5cc3a01bb717_cgraph" alt=""/></div>
+<map name="disassemble_8c_a1356395f3ebf0690023c5cc3a01bb717_cgraph" id="disassemble_8c_a1356395f3ebf0690023c5cc3a01bb717_cgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#a946676ab1c45994e015e56e05b7e08bd" title="select_operand_size" alt="" coords="169,5,321,32"/>
+<area shape="rect" id="node3" href="disassemble_8c.html#a93cdaa588f7940d60e17319be885d37d" title="format_addr_m" alt="" coords="369,5,491,32"/>
+<area shape="rect" id="node4" href="disassemble_8c.html#a856bf388af95fbf22a1814c6c72e0228" title="format_addr_a" alt="" coords="539,5,655,32"/>
+</map>
+</div>
+</p>
+
+<p><div id="dynsection-30" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-30-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-30-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-30-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_a1356395f3ebf0690023c5cc3a01bb717_icgraph.png" border="0" usemap="#disassemble_8c_a1356395f3ebf0690023c5cc3a01bb717_icgraph" alt=""/></div>
+<map name="disassemble_8c_a1356395f3ebf0690023c5cc3a01bb717_icgraph" id="disassemble_8c_a1356395f3ebf0690023c5cc3a01bb717_icgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#a7592854d94e0f19b3a5855b1f01dac3a" title="format_addr_op" alt="" coords="169,5,293,32"/>
+<area shape="rect" id="node3" href="x86_8h.html#a6c3a838f0fdd7b2e11c8c010854b840a" title="x86_disassemble_instruction" alt="" coords="341,5,548,32"/>
+<area shape="rect" id="node4" href="ecs_8c.html#a672ea2cce8f7ae1214e0a41f46884933" title="ecs_secondary" alt="" coords="596,5,713,32"/>
+<area shape="rect" id="node5" href="ecs_8c.html#adbe06ee703b26dcc8d82e505075f942d" title="ECS" alt="" coords="761,5,809,32"/>
+<area shape="rect" id="node6" href="ecs_8c.html#ade56ef97d7d3ae799d60f8616f2062cb" title="ecs_initiate" alt="" coords="857,5,952,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a7592854d94e0f19b3a5855b1f01dac3a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void format_addr_op </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206">addr_method</a>&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a>&#160;</td>
+          <td class="paramname"><em>op</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l05020">5020</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-31" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-31-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-31-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-31-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_a7592854d94e0f19b3a5855b1f01dac3a_cgraph.png" border="0" usemap="#disassemble_8c_a7592854d94e0f19b3a5855b1f01dac3a_cgraph" alt=""/></div>
+<map name="disassemble_8c_a7592854d94e0f19b3a5855b1f01dac3a_cgraph" id="disassemble_8c_a7592854d94e0f19b3a5855b1f01dac3a_cgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#ae15e4f1062e7840dc699bf2606481e83" title="format_addr_n" alt="" coords="178,5,294,32"/>
+<area shape="rect" id="node3" href="disassemble_8c.html#a3e44f3352fbef06da1a6afe047c7855b" title="format_addr_u" alt="" coords="178,56,294,83"/>
+<area shape="rect" id="node4" href="disassemble_8c.html#a856bf388af95fbf22a1814c6c72e0228" title="format_addr_a" alt="" coords="530,475,646,501"/>
+<area shape="rect" id="node5" href="disassemble_8c.html#abf434ff67032069ef17563fa01f0112b" title="format_addr_c" alt="" coords="179,157,293,184"/>
+<area shape="rect" id="node6" href="disassemble_8c.html#ac9ac1896ce575e8c3ba69320f160a01b" title="format_addr_d" alt="" coords="178,208,294,235"/>
+<area shape="rect" id="node7" href="disassemble_8c.html#a74e315b189ad737422731c11c3e57a73" title="format_addr_e" alt="" coords="178,613,294,640"/>
+<area shape="rect" id="node8" href="disassemble_8c.html#a93cdaa588f7940d60e17319be885d37d" title="format_addr_m" alt="" coords="343,512,464,539"/>
+<area shape="rect" id="node10" href="disassemble_8c.html#a6bd5befab59e2fdcb4e14f2ff8486452" title="format_addr_g" alt="" coords="178,360,294,387"/>
+<area shape="rect" id="node11" href="disassemble_8c.html#ae0f8d86c84fec05811145c25de450c5a" title="format_addr_i" alt="" coords="181,411,291,437"/>
+<area shape="rect" id="node12" href="disassemble_8c.html#a2b8368ccfb2aa3b2817068b36618fc27" title="format_addr_j" alt="" coords="181,461,291,488"/>
+<area shape="rect" id="node13" href="disassemble_8c.html#a1356395f3ebf0690023c5cc3a01bb717" title="format_addr_o" alt="" coords="345,657,461,684"/>
+<area shape="rect" id="node14" href="disassemble_8c.html#ad9688150204272be8319e314d60a8097" title="format_addr_p" alt="" coords="178,563,294,589"/>
+<area shape="rect" id="node15" href="disassemble_8c.html#a6e0044e016833feb544c5c755b1363cd" title="format_addr_q" alt="" coords="178,309,294,336"/>
+<area shape="rect" id="node16" href="disassemble_8c.html#acdbd7e59f3d073e9e38dda0e66cc95e4" title="format_addr_r" alt="" coords="179,664,293,691"/>
+<area shape="rect" id="node17" href="disassemble_8c.html#a8c54a21b3cdd072d761bef42f5706bf0" title="format_addr_s" alt="" coords="179,715,293,741"/>
+<area shape="rect" id="node18" href="disassemble_8c.html#a7d7b0fb20770c02a0656715216bcb3b9" title="format_addr_v" alt="" coords="179,765,293,792"/>
+<area shape="rect" id="node19" href="disassemble_8c.html#a052c1eb235fb10eb41e286bf3f61c2b4" title="format_addr_w" alt="" coords="177,512,295,539"/>
+<area shape="rect" id="node20" href="disassemble_8c.html#ad3d54851534e236f39840574a1aab885" title="format_addr_x" alt="" coords="179,867,293,893"/>
+<area shape="rect" id="node21" href="disassemble_8c.html#ab5e98a71d66f3ae0b91216ade9132ce1" title="format_addr_y" alt="" coords="346,860,461,887"/>
+<area shape="rect" id="node9" href="disassemble_8c.html#a946676ab1c45994e015e56e05b7e08bd" title="select_operand_size" alt="" coords="512,601,664,628"/>
+</map>
+</div>
+</p>
+
+<p><div id="dynsection-32" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-32-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-32-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-32-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_a7592854d94e0f19b3a5855b1f01dac3a_icgraph.png" border="0" usemap="#disassemble_8c_a7592854d94e0f19b3a5855b1f01dac3a_icgraph" alt=""/></div>
+<map name="disassemble_8c_a7592854d94e0f19b3a5855b1f01dac3a_icgraph" id="disassemble_8c_a7592854d94e0f19b3a5855b1f01dac3a_icgraph">
+<area shape="rect" id="node2" href="x86_8h.html#a6c3a838f0fdd7b2e11c8c010854b840a" title="x86_disassemble_instruction" alt="" coords="177,5,384,32"/>
+<area shape="rect" id="node3" href="ecs_8c.html#a672ea2cce8f7ae1214e0a41f46884933" title="ecs_secondary" alt="" coords="432,5,549,32"/>
+<area shape="rect" id="node4" href="ecs_8c.html#adbe06ee703b26dcc8d82e505075f942d" title="ECS" alt="" coords="597,5,645,32"/>
+<area shape="rect" id="node5" href="ecs_8c.html#ade56ef97d7d3ae799d60f8616f2062cb" title="ecs_initiate" alt="" coords="693,5,788,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ad9688150204272be8319e314d60a8097"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void format_addr_p </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206">addr_method</a>&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a>&#160;</td>
+          <td class="paramname"><em>op</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l04842">4842</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-33" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-33-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-33-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-33-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_ad9688150204272be8319e314d60a8097_icgraph.png" border="0" usemap="#disassemble_8c_ad9688150204272be8319e314d60a8097_icgraph" alt=""/></div>
+<map name="disassemble_8c_ad9688150204272be8319e314d60a8097_icgraph" id="disassemble_8c_ad9688150204272be8319e314d60a8097_icgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#a7592854d94e0f19b3a5855b1f01dac3a" title="format_addr_op" alt="" coords="169,5,293,32"/>
+<area shape="rect" id="node3" href="x86_8h.html#a6c3a838f0fdd7b2e11c8c010854b840a" title="x86_disassemble_instruction" alt="" coords="341,5,548,32"/>
+<area shape="rect" id="node4" href="ecs_8c.html#a672ea2cce8f7ae1214e0a41f46884933" title="ecs_secondary" alt="" coords="596,5,713,32"/>
+<area shape="rect" id="node5" href="ecs_8c.html#adbe06ee703b26dcc8d82e505075f942d" title="ECS" alt="" coords="761,5,809,32"/>
+<area shape="rect" id="node6" href="ecs_8c.html#ade56ef97d7d3ae799d60f8616f2062cb" title="ecs_initiate" alt="" coords="857,5,952,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a6e0044e016833feb544c5c755b1363cd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void format_addr_q </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206">addr_method</a>&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a>&#160;</td>
+          <td class="paramname"><em>op</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l04866">4866</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-34" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-34-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-34-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-34-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_a6e0044e016833feb544c5c755b1363cd_cgraph.png" border="0" usemap="#disassemble_8c_a6e0044e016833feb544c5c755b1363cd_cgraph" alt=""/></div>
+<map name="disassemble_8c_a6e0044e016833feb544c5c755b1363cd_cgraph" id="disassemble_8c_a6e0044e016833feb544c5c755b1363cd_cgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#a93cdaa588f7940d60e17319be885d37d" title="format_addr_m" alt="" coords="169,5,291,32"/>
+<area shape="rect" id="node3" href="disassemble_8c.html#a946676ab1c45994e015e56e05b7e08bd" title="select_operand_size" alt="" coords="339,5,491,32"/>
+<area shape="rect" id="node4" href="disassemble_8c.html#a856bf388af95fbf22a1814c6c72e0228" title="format_addr_a" alt="" coords="357,56,473,83"/>
+</map>
+</div>
+</p>
+
+<p><div id="dynsection-35" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-35-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-35-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-35-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_a6e0044e016833feb544c5c755b1363cd_icgraph.png" border="0" usemap="#disassemble_8c_a6e0044e016833feb544c5c755b1363cd_icgraph" alt=""/></div>
+<map name="disassemble_8c_a6e0044e016833feb544c5c755b1363cd_icgraph" id="disassemble_8c_a6e0044e016833feb544c5c755b1363cd_icgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#a7592854d94e0f19b3a5855b1f01dac3a" title="format_addr_op" alt="" coords="169,5,293,32"/>
+<area shape="rect" id="node3" href="x86_8h.html#a6c3a838f0fdd7b2e11c8c010854b840a" title="x86_disassemble_instruction" alt="" coords="341,5,548,32"/>
+<area shape="rect" id="node4" href="ecs_8c.html#a672ea2cce8f7ae1214e0a41f46884933" title="ecs_secondary" alt="" coords="596,5,713,32"/>
+<area shape="rect" id="node5" href="ecs_8c.html#adbe06ee703b26dcc8d82e505075f942d" title="ECS" alt="" coords="761,5,809,32"/>
+<area shape="rect" id="node6" href="ecs_8c.html#ade56ef97d7d3ae799d60f8616f2062cb" title="ecs_initiate" alt="" coords="857,5,952,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="acdbd7e59f3d073e9e38dda0e66cc95e4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void format_addr_r </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206">addr_method</a>&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a>&#160;</td>
+          <td class="paramname"><em>op</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l04884">4884</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-36" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-36-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-36-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-36-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_acdbd7e59f3d073e9e38dda0e66cc95e4_icgraph.png" border="0" usemap="#disassemble_8c_acdbd7e59f3d073e9e38dda0e66cc95e4_icgraph" alt=""/></div>
+<map name="disassemble_8c_acdbd7e59f3d073e9e38dda0e66cc95e4_icgraph" id="disassemble_8c_acdbd7e59f3d073e9e38dda0e66cc95e4_icgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#a7592854d94e0f19b3a5855b1f01dac3a" title="format_addr_op" alt="" coords="167,5,291,32"/>
+<area shape="rect" id="node3" href="x86_8h.html#a6c3a838f0fdd7b2e11c8c010854b840a" title="x86_disassemble_instruction" alt="" coords="339,5,545,32"/>
+<area shape="rect" id="node4" href="ecs_8c.html#a672ea2cce8f7ae1214e0a41f46884933" title="ecs_secondary" alt="" coords="593,5,711,32"/>
+<area shape="rect" id="node5" href="ecs_8c.html#adbe06ee703b26dcc8d82e505075f942d" title="ECS" alt="" coords="759,5,807,32"/>
+<area shape="rect" id="node6" href="ecs_8c.html#ade56ef97d7d3ae799d60f8616f2062cb" title="ecs_initiate" alt="" coords="855,5,949,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a8c54a21b3cdd072d761bef42f5706bf0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void format_addr_s </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206">addr_method</a>&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a>&#160;</td>
+          <td class="paramname"><em>op</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l04905">4905</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-37" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-37-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-37-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-37-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_a8c54a21b3cdd072d761bef42f5706bf0_icgraph.png" border="0" usemap="#disassemble_8c_a8c54a21b3cdd072d761bef42f5706bf0_icgraph" alt=""/></div>
+<map name="disassemble_8c_a8c54a21b3cdd072d761bef42f5706bf0_icgraph" id="disassemble_8c_a8c54a21b3cdd072d761bef42f5706bf0_icgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#a7592854d94e0f19b3a5855b1f01dac3a" title="format_addr_op" alt="" coords="168,5,292,32"/>
+<area shape="rect" id="node3" href="x86_8h.html#a6c3a838f0fdd7b2e11c8c010854b840a" title="x86_disassemble_instruction" alt="" coords="340,5,547,32"/>
+<area shape="rect" id="node4" href="ecs_8c.html#a672ea2cce8f7ae1214e0a41f46884933" title="ecs_secondary" alt="" coords="595,5,712,32"/>
+<area shape="rect" id="node5" href="ecs_8c.html#adbe06ee703b26dcc8d82e505075f942d" title="ECS" alt="" coords="760,5,808,32"/>
+<area shape="rect" id="node6" href="ecs_8c.html#ade56ef97d7d3ae799d60f8616f2062cb" title="ecs_initiate" alt="" coords="856,5,951,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aacb59e06e02e82bfafe0be03a13f7f19"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void format_addr_t </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206">addr_method</a>&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a>&#160;</td>
+          <td class="paramname"><em>op</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l04927">4927</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3e44f3352fbef06da1a6afe047c7855b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void format_addr_u </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206">addr_method</a>&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a>&#160;</td>
+          <td class="paramname"><em>op</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l04953">4953</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-38" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-38-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-38-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-38-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_a3e44f3352fbef06da1a6afe047c7855b_icgraph.png" border="0" usemap="#disassemble_8c_a3e44f3352fbef06da1a6afe047c7855b_icgraph" alt=""/></div>
+<map name="disassemble_8c_a3e44f3352fbef06da1a6afe047c7855b_icgraph" id="disassemble_8c_a3e44f3352fbef06da1a6afe047c7855b_icgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#a7592854d94e0f19b3a5855b1f01dac3a" title="format_addr_op" alt="" coords="169,5,293,32"/>
+<area shape="rect" id="node3" href="x86_8h.html#a6c3a838f0fdd7b2e11c8c010854b840a" title="x86_disassemble_instruction" alt="" coords="341,5,548,32"/>
+<area shape="rect" id="node4" href="ecs_8c.html#a672ea2cce8f7ae1214e0a41f46884933" title="ecs_secondary" alt="" coords="596,5,713,32"/>
+<area shape="rect" id="node5" href="ecs_8c.html#adbe06ee703b26dcc8d82e505075f942d" title="ECS" alt="" coords="761,5,809,32"/>
+<area shape="rect" id="node6" href="ecs_8c.html#ade56ef97d7d3ae799d60f8616f2062cb" title="ecs_initiate" alt="" coords="857,5,952,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a7d7b0fb20770c02a0656715216bcb3b9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void format_addr_v </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206">addr_method</a>&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a>&#160;</td>
+          <td class="paramname"><em>op</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l04939">4939</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-39" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-39-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-39-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-39-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_a7d7b0fb20770c02a0656715216bcb3b9_icgraph.png" border="0" usemap="#disassemble_8c_a7d7b0fb20770c02a0656715216bcb3b9_icgraph" alt=""/></div>
+<map name="disassemble_8c_a7d7b0fb20770c02a0656715216bcb3b9_icgraph" id="disassemble_8c_a7d7b0fb20770c02a0656715216bcb3b9_icgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#a7592854d94e0f19b3a5855b1f01dac3a" title="format_addr_op" alt="" coords="168,5,292,32"/>
+<area shape="rect" id="node3" href="x86_8h.html#a6c3a838f0fdd7b2e11c8c010854b840a" title="x86_disassemble_instruction" alt="" coords="340,5,547,32"/>
+<area shape="rect" id="node4" href="ecs_8c.html#a672ea2cce8f7ae1214e0a41f46884933" title="ecs_secondary" alt="" coords="595,5,712,32"/>
+<area shape="rect" id="node5" href="ecs_8c.html#adbe06ee703b26dcc8d82e505075f942d" title="ECS" alt="" coords="760,5,808,32"/>
+<area shape="rect" id="node6" href="ecs_8c.html#ade56ef97d7d3ae799d60f8616f2062cb" title="ecs_initiate" alt="" coords="856,5,951,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a052c1eb235fb10eb41e286bf3f61c2b4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void format_addr_w </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206">addr_method</a>&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a>&#160;</td>
+          <td class="paramname"><em>op</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l04966">4966</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-40" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-40-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-40-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-40-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_a052c1eb235fb10eb41e286bf3f61c2b4_cgraph.png" border="0" usemap="#disassemble_8c_a052c1eb235fb10eb41e286bf3f61c2b4_cgraph" alt=""/></div>
+<map name="disassemble_8c_a052c1eb235fb10eb41e286bf3f61c2b4_cgraph" id="disassemble_8c_a052c1eb235fb10eb41e286bf3f61c2b4_cgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#a93cdaa588f7940d60e17319be885d37d" title="format_addr_m" alt="" coords="171,5,292,32"/>
+<area shape="rect" id="node3" href="disassemble_8c.html#a946676ab1c45994e015e56e05b7e08bd" title="select_operand_size" alt="" coords="340,5,492,32"/>
+<area shape="rect" id="node4" href="disassemble_8c.html#a856bf388af95fbf22a1814c6c72e0228" title="format_addr_a" alt="" coords="358,56,474,83"/>
+</map>
+</div>
+</p>
+
+<p><div id="dynsection-41" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-41-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-41-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-41-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_a052c1eb235fb10eb41e286bf3f61c2b4_icgraph.png" border="0" usemap="#disassemble_8c_a052c1eb235fb10eb41e286bf3f61c2b4_icgraph" alt=""/></div>
+<map name="disassemble_8c_a052c1eb235fb10eb41e286bf3f61c2b4_icgraph" id="disassemble_8c_a052c1eb235fb10eb41e286bf3f61c2b4_icgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#a7592854d94e0f19b3a5855b1f01dac3a" title="format_addr_op" alt="" coords="171,5,295,32"/>
+<area shape="rect" id="node3" href="x86_8h.html#a6c3a838f0fdd7b2e11c8c010854b840a" title="x86_disassemble_instruction" alt="" coords="343,5,549,32"/>
+<area shape="rect" id="node4" href="ecs_8c.html#a672ea2cce8f7ae1214e0a41f46884933" title="ecs_secondary" alt="" coords="597,5,715,32"/>
+<area shape="rect" id="node5" href="ecs_8c.html#adbe06ee703b26dcc8d82e505075f942d" title="ECS" alt="" coords="763,5,811,32"/>
+<area shape="rect" id="node6" href="ecs_8c.html#ade56ef97d7d3ae799d60f8616f2062cb" title="ecs_initiate" alt="" coords="859,5,953,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ad3d54851534e236f39840574a1aab885"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void format_addr_x </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206">addr_method</a>&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a>&#160;</td>
+          <td class="paramname"><em>op</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l04988">4988</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-42" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-42-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-42-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-42-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_ad3d54851534e236f39840574a1aab885_icgraph.png" border="0" usemap="#disassemble_8c_ad3d54851534e236f39840574a1aab885_icgraph" alt=""/></div>
+<map name="disassemble_8c_ad3d54851534e236f39840574a1aab885_icgraph" id="disassemble_8c_ad3d54851534e236f39840574a1aab885_icgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#a7592854d94e0f19b3a5855b1f01dac3a" title="format_addr_op" alt="" coords="168,5,292,32"/>
+<area shape="rect" id="node3" href="x86_8h.html#a6c3a838f0fdd7b2e11c8c010854b840a" title="x86_disassemble_instruction" alt="" coords="340,5,547,32"/>
+<area shape="rect" id="node4" href="ecs_8c.html#a672ea2cce8f7ae1214e0a41f46884933" title="ecs_secondary" alt="" coords="595,5,712,32"/>
+<area shape="rect" id="node5" href="ecs_8c.html#adbe06ee703b26dcc8d82e505075f942d" title="ECS" alt="" coords="760,5,808,32"/>
+<area shape="rect" id="node6" href="ecs_8c.html#ade56ef97d7d3ae799d60f8616f2062cb" title="ecs_initiate" alt="" coords="856,5,951,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ab5e98a71d66f3ae0b91216ade9132ce1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void format_addr_y </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206">addr_method</a>&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a>&#160;</td>
+          <td class="paramname"><em>op</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l05003">5003</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-43" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-43-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-43-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-43-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_ab5e98a71d66f3ae0b91216ade9132ce1_cgraph.png" border="0" usemap="#disassemble_8c_ab5e98a71d66f3ae0b91216ade9132ce1_cgraph" alt=""/></div>
+<map name="disassemble_8c_ab5e98a71d66f3ae0b91216ade9132ce1_cgraph" id="disassemble_8c_ab5e98a71d66f3ae0b91216ade9132ce1_cgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#a946676ab1c45994e015e56e05b7e08bd" title="select_operand_size" alt="" coords="168,5,320,32"/>
+<area shape="rect" id="node3" href="disassemble_8c.html#a93cdaa588f7940d60e17319be885d37d" title="format_addr_m" alt="" coords="368,5,489,32"/>
+<area shape="rect" id="node4" href="disassemble_8c.html#a856bf388af95fbf22a1814c6c72e0228" title="format_addr_a" alt="" coords="537,5,653,32"/>
+</map>
+</div>
+</p>
+
+<p><div id="dynsection-44" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-44-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-44-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-44-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_ab5e98a71d66f3ae0b91216ade9132ce1_icgraph.png" border="0" usemap="#disassemble_8c_ab5e98a71d66f3ae0b91216ade9132ce1_icgraph" alt=""/></div>
+<map name="disassemble_8c_ab5e98a71d66f3ae0b91216ade9132ce1_icgraph" id="disassemble_8c_ab5e98a71d66f3ae0b91216ade9132ce1_icgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#a7592854d94e0f19b3a5855b1f01dac3a" title="format_addr_op" alt="" coords="168,5,292,32"/>
+<area shape="rect" id="node3" href="x86_8h.html#a6c3a838f0fdd7b2e11c8c010854b840a" title="x86_disassemble_instruction" alt="" coords="340,5,547,32"/>
+<area shape="rect" id="node4" href="ecs_8c.html#a672ea2cce8f7ae1214e0a41f46884933" title="ecs_secondary" alt="" coords="595,5,712,32"/>
+<area shape="rect" id="node5" href="ecs_8c.html#adbe06ee703b26dcc8d82e505075f942d" title="ECS" alt="" coords="760,5,808,32"/>
+<area shape="rect" id="node6" href="ecs_8c.html#ade56ef97d7d3ae799d60f8616f2062cb" title="ecs_initiate" alt="" coords="856,5,951,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a2ad744f5df64389674d056c419cb8ebe"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void grp_10 </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l03667">3667</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa4e913a8e3b56db3c6b9742b9c25889d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void grp_11 </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l03675">3675</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-45" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-45-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-45-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-45-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_aa4e913a8e3b56db3c6b9742b9c25889d_cgraph.png" border="0" usemap="#disassemble_8c_aa4e913a8e3b56db3c6b9742b9c25889d_cgraph" alt=""/></div>
+<map name="disassemble_8c_aa4e913a8e3b56db3c6b9742b9c25889d_cgraph" id="disassemble_8c_aa4e913a8e3b56db3c6b9742b9c25889d_cgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#aeb9ccfcc110399b92ba8686f9ea19689" title="read_modrm" alt="" coords="120,5,225,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ac7fa2abbadbb9fa686eaad017fd208f9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void grp_12 </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l03702">3702</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-46" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-46-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-46-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-46-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_ac7fa2abbadbb9fa686eaad017fd208f9_cgraph.png" border="0" usemap="#disassemble_8c_ac7fa2abbadbb9fa686eaad017fd208f9_cgraph" alt=""/></div>
+<map name="disassemble_8c_ac7fa2abbadbb9fa686eaad017fd208f9_cgraph" id="disassemble_8c_ac7fa2abbadbb9fa686eaad017fd208f9_cgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#aeb9ccfcc110399b92ba8686f9ea19689" title="read_modrm" alt="" coords="120,5,225,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aac397e85b38b3b835ed2cc503b70f004"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void grp_13 </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l03750">3750</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-47" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-47-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-47-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-47-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_aac397e85b38b3b835ed2cc503b70f004_cgraph.png" border="0" usemap="#disassemble_8c_aac397e85b38b3b835ed2cc503b70f004_cgraph" alt=""/></div>
+<map name="disassemble_8c_aac397e85b38b3b835ed2cc503b70f004_cgraph" id="disassemble_8c_aac397e85b38b3b835ed2cc503b70f004_cgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#aeb9ccfcc110399b92ba8686f9ea19689" title="read_modrm" alt="" coords="120,5,225,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ab98909afad086b8b58207c713f0b8e7e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void grp_14 </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l03798">3798</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-48" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-48-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-48-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-48-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_ab98909afad086b8b58207c713f0b8e7e_cgraph.png" border="0" usemap="#disassemble_8c_ab98909afad086b8b58207c713f0b8e7e_cgraph" alt=""/></div>
+<map name="disassemble_8c_ab98909afad086b8b58207c713f0b8e7e_cgraph" id="disassemble_8c_ab98909afad086b8b58207c713f0b8e7e_cgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#aeb9ccfcc110399b92ba8686f9ea19689" title="read_modrm" alt="" coords="120,5,225,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ad71a54756a17e5499a4e3b3303e6d3dd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void grp_15 </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l03843">3843</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-49" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-49-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-49-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-49-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_ad71a54756a17e5499a4e3b3303e6d3dd_cgraph.png" border="0" usemap="#disassemble_8c_ad71a54756a17e5499a4e3b3303e6d3dd_cgraph" alt=""/></div>
+<map name="disassemble_8c_ad71a54756a17e5499a4e3b3303e6d3dd_cgraph" id="disassemble_8c_ad71a54756a17e5499a4e3b3303e6d3dd_cgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#aeb9ccfcc110399b92ba8686f9ea19689" title="read_modrm" alt="" coords="120,5,225,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a7f525a171f54408109d3ee2916a63c76"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void grp_16 </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l03903">3903</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-50" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-50-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-50-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-50-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_a7f525a171f54408109d3ee2916a63c76_cgraph.png" border="0" usemap="#disassemble_8c_a7f525a171f54408109d3ee2916a63c76_cgraph" alt=""/></div>
+<map name="disassemble_8c_a7f525a171f54408109d3ee2916a63c76_cgraph" id="disassemble_8c_a7f525a171f54408109d3ee2916a63c76_cgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#aeb9ccfcc110399b92ba8686f9ea19689" title="read_modrm" alt="" coords="120,5,225,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aa0198508b227d46edd68fc69160c302f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void grp_4 </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l03396">3396</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-51" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-51-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-51-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-51-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_aa0198508b227d46edd68fc69160c302f_cgraph.png" border="0" usemap="#disassemble_8c_aa0198508b227d46edd68fc69160c302f_cgraph" alt=""/></div>
+<map name="disassemble_8c_aa0198508b227d46edd68fc69160c302f_cgraph" id="disassemble_8c_aa0198508b227d46edd68fc69160c302f_cgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#aeb9ccfcc110399b92ba8686f9ea19689" title="read_modrm" alt="" coords="112,5,217,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a28b8e82eec8ca817a557e48f0f9715af"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void grp_5 </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l03425">3425</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-52" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-52-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-52-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-52-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_a28b8e82eec8ca817a557e48f0f9715af_cgraph.png" border="0" usemap="#disassemble_8c_a28b8e82eec8ca817a557e48f0f9715af_cgraph" alt=""/></div>
+<map name="disassemble_8c_a28b8e82eec8ca817a557e48f0f9715af_cgraph" id="disassemble_8c_a28b8e82eec8ca817a557e48f0f9715af_cgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#aeb9ccfcc110399b92ba8686f9ea19689" title="read_modrm" alt="" coords="112,5,217,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a195f1fe6f4a0b8b9d394c02b048ab3ca"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void grp_6 </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l03465">3465</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-53" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-53-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-53-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-53-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_a195f1fe6f4a0b8b9d394c02b048ab3ca_cgraph.png" border="0" usemap="#disassemble_8c_a195f1fe6f4a0b8b9d394c02b048ab3ca_cgraph" alt=""/></div>
+<map name="disassemble_8c_a195f1fe6f4a0b8b9d394c02b048ab3ca_cgraph" id="disassemble_8c_a195f1fe6f4a0b8b9d394c02b048ab3ca_cgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#aeb9ccfcc110399b92ba8686f9ea19689" title="read_modrm" alt="" coords="112,5,217,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a4e4781d90c401814394600bb91471e53"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void grp_7 </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l03508">3508</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-54" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-54-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-54-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-54-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_a4e4781d90c401814394600bb91471e53_cgraph.png" border="0" usemap="#disassemble_8c_a4e4781d90c401814394600bb91471e53_cgraph" alt=""/></div>
+<map name="disassemble_8c_a4e4781d90c401814394600bb91471e53_cgraph" id="disassemble_8c_a4e4781d90c401814394600bb91471e53_cgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#aeb9ccfcc110399b92ba8686f9ea19689" title="read_modrm" alt="" coords="112,5,217,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="afe3e75f9413828f5e46dd7c6a0e6957f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void grp_8 </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l03618">3618</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-55" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-55-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-55-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-55-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_afe3e75f9413828f5e46dd7c6a0e6957f_cgraph.png" border="0" usemap="#disassemble_8c_afe3e75f9413828f5e46dd7c6a0e6957f_cgraph" alt=""/></div>
+<map name="disassemble_8c_afe3e75f9413828f5e46dd7c6a0e6957f_cgraph" id="disassemble_8c_afe3e75f9413828f5e46dd7c6a0e6957f_cgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#aeb9ccfcc110399b92ba8686f9ea19689" title="read_modrm" alt="" coords="112,5,217,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a6ff97a8bb1138c6f6b7cacd3867fd093"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void grp_9 </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l03645">3645</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-56" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-56-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-56-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-56-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_a6ff97a8bb1138c6f6b7cacd3867fd093_cgraph.png" border="0" usemap="#disassemble_8c_a6ff97a8bb1138c6f6b7cacd3867fd093_cgraph" alt=""/></div>
+<map name="disassemble_8c_a6ff97a8bb1138c6f6b7cacd3867fd093_cgraph" id="disassemble_8c_a6ff97a8bb1138c6f6b7cacd3867fd093_cgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#aeb9ccfcc110399b92ba8686f9ea19689" title="read_modrm" alt="" coords="112,5,217,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a7e1fdeb89c16f2049eea46dd65408f81"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void immed_grp_1 </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l03306">3306</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-57" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-57-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-57-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-57-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_a7e1fdeb89c16f2049eea46dd65408f81_cgraph.png" border="0" usemap="#disassemble_8c_a7e1fdeb89c16f2049eea46dd65408f81_cgraph" alt=""/></div>
+<map name="disassemble_8c_a7e1fdeb89c16f2049eea46dd65408f81_cgraph" id="disassemble_8c_a7e1fdeb89c16f2049eea46dd65408f81_cgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#aeb9ccfcc110399b92ba8686f9ea19689" title="read_modrm" alt="" coords="164,5,269,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aeb9ccfcc110399b92ba8686f9ea19689"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void read_modrm </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l01182">1182</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-58" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-58-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-58-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-58-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_aeb9ccfcc110399b92ba8686f9ea19689_icgraph.png" border="0" usemap="#disassemble_8c_aeb9ccfcc110399b92ba8686f9ea19689_icgraph" alt=""/></div>
+<map name="disassemble_8c_aeb9ccfcc110399b92ba8686f9ea19689_icgraph" id="disassemble_8c_aeb9ccfcc110399b92ba8686f9ea19689_icgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#a0e1f586ccd2cbc69c218d15cb5cc5486" title="d8_opcode" alt="" coords="168,5,260,32"/>
+<area shape="rect" id="node3" href="disassemble_8c.html#adee8777f524cc2889378deda9eaccc49" title="d9_opcode" alt="" coords="168,56,260,83"/>
+<area shape="rect" id="node4" href="disassemble_8c.html#ae2514b9b28c71bbecd64bd0f3827021a" title="da_opcode" alt="" coords="168,107,260,133"/>
+<area shape="rect" id="node5" href="disassemble_8c.html#a4aeb7375218fe52553cdd94e8752a8c6" title="db_opcode" alt="" coords="168,157,260,184"/>
+<area shape="rect" id="node6" href="disassemble_8c.html#ab039900e0258977a4a6271def21cdded" title="dc_opcode" alt="" coords="169,208,259,235"/>
+<area shape="rect" id="node7" href="disassemble_8c.html#a964b216be51b44276ab0de35e00ca0ea" title="dd_opcode" alt="" coords="168,259,260,285"/>
+<area shape="rect" id="node8" href="disassemble_8c.html#a8e0b9edc56f94d6e04616c799fefcda8" title="de_opcode" alt="" coords="168,309,260,336"/>
+<area shape="rect" id="node9" href="disassemble_8c.html#ae60c63508d8f86b63290f85a00e20eff" title="df_opcode" alt="" coords="170,360,258,387"/>
+<area shape="rect" id="node10" href="disassemble_8c.html#a219b934609145db4617d865342f1398b" title="esc_0f10_17" alt="" coords="163,411,265,437"/>
+<area shape="rect" id="node11" href="disassemble_8c.html#a7e1fdeb89c16f2049eea46dd65408f81" title="immed_grp_1" alt="" coords="159,461,269,488"/>
+<area shape="rect" id="node12" href="disassemble_8c.html#a8b52bb14e44394cc563b91970ea02cd7" title="shift_grp_2" alt="" coords="168,512,260,539"/>
+<area shape="rect" id="node13" href="disassemble_8c.html#af3831c9d8c38404c0ab8ae1794e2004f" title="unary_grp_3" alt="" coords="163,563,265,589"/>
+<area shape="rect" id="node14" href="disassemble_8c.html#aa0198508b227d46edd68fc69160c302f" title="grp_4" alt="" coords="185,613,243,640"/>
+<area shape="rect" id="node15" href="disassemble_8c.html#a28b8e82eec8ca817a557e48f0f9715af" title="grp_5" alt="" coords="185,664,243,691"/>
+<area shape="rect" id="node16" href="disassemble_8c.html#a195f1fe6f4a0b8b9d394c02b048ab3ca" title="grp_6" alt="" coords="185,715,243,741"/>
+<area shape="rect" id="node17" href="disassemble_8c.html#a4e4781d90c401814394600bb91471e53" title="grp_7" alt="" coords="185,765,243,792"/>
+<area shape="rect" id="node18" href="disassemble_8c.html#afe3e75f9413828f5e46dd7c6a0e6957f" title="grp_8" alt="" coords="185,816,243,843"/>
+<area shape="rect" id="node19" href="disassemble_8c.html#a6ff97a8bb1138c6f6b7cacd3867fd093" title="grp_9" alt="" coords="185,867,243,893"/>
+<area shape="rect" id="node20" href="disassemble_8c.html#aa4e913a8e3b56db3c6b9742b9c25889d" title="grp_11" alt="" coords="181,917,247,944"/>
+<area shape="rect" id="node21" href="disassemble_8c.html#ac7fa2abbadbb9fa686eaad017fd208f9" title="grp_12" alt="" coords="181,968,247,995"/>
+<area shape="rect" id="node22" href="disassemble_8c.html#aac397e85b38b3b835ed2cc503b70f004" title="grp_13" alt="" coords="181,1019,247,1045"/>
+<area shape="rect" id="node23" href="disassemble_8c.html#ab98909afad086b8b58207c713f0b8e7e" title="grp_14" alt="" coords="181,1069,247,1096"/>
+<area shape="rect" id="node24" href="disassemble_8c.html#ad71a54756a17e5499a4e3b3303e6d3dd" title="grp_15" alt="" coords="181,1120,247,1147"/>
+<area shape="rect" id="node25" href="disassemble_8c.html#a7f525a171f54408109d3ee2916a63c76" title="grp_16" alt="" coords="181,1171,247,1197"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a946676ab1c45994e015e56e05b7e08bd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void select_operand_size </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a>&#160;</td>
+          <td class="paramname"><em>op</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l03935">3935</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-59" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-59-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-59-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-59-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_a946676ab1c45994e015e56e05b7e08bd_cgraph.png" border="0" usemap="#disassemble_8c_a946676ab1c45994e015e56e05b7e08bd_cgraph" alt=""/></div>
+<map name="disassemble_8c_a946676ab1c45994e015e56e05b7e08bd_cgraph" id="disassemble_8c_a946676ab1c45994e015e56e05b7e08bd_cgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#a93cdaa588f7940d60e17319be885d37d" title="format_addr_m" alt="" coords="205,5,327,32"/>
+<area shape="rect" id="node3" href="disassemble_8c.html#a856bf388af95fbf22a1814c6c72e0228" title="format_addr_a" alt="" coords="375,5,491,32"/>
+</map>
+</div>
+</p>
+
+<p><div id="dynsection-60" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-60-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-60-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-60-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_a946676ab1c45994e015e56e05b7e08bd_icgraph.png" border="0" usemap="#disassemble_8c_a946676ab1c45994e015e56e05b7e08bd_icgraph" alt=""/></div>
+<map name="disassemble_8c_a946676ab1c45994e015e56e05b7e08bd_icgraph" id="disassemble_8c_a946676ab1c45994e015e56e05b7e08bd_icgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#a93cdaa588f7940d60e17319be885d37d" title="format_addr_m" alt="" coords="205,113,327,140"/>
+<area shape="rect" id="node11" href="disassemble_8c.html#a1356395f3ebf0690023c5cc3a01bb717" title="format_addr_o" alt="" coords="208,171,324,197"/>
+<area shape="rect" id="node12" href="disassemble_8c.html#ab5e98a71d66f3ae0b91216ade9132ce1" title="format_addr_y" alt="" coords="209,233,323,260"/>
+<area shape="rect" id="node3" href="disassemble_8c.html#a74e315b189ad737422731c11c3e57a73" title="format_addr_e" alt="" coords="375,5,491,32"/>
+<area shape="rect" id="node4" href="disassemble_8c.html#a7592854d94e0f19b3a5855b1f01dac3a" title="format_addr_op" alt="" coords="540,132,664,159"/>
+<area shape="rect" id="node9" href="disassemble_8c.html#a6e0044e016833feb544c5c755b1363cd" title="format_addr_q" alt="" coords="375,107,491,133"/>
+<area shape="rect" id="node10" href="disassemble_8c.html#a052c1eb235fb10eb41e286bf3f61c2b4" title="format_addr_w" alt="" coords="375,157,492,184"/>
+<area shape="rect" id="node5" href="x86_8h.html#a6c3a838f0fdd7b2e11c8c010854b840a" title="x86_disassemble_instruction" alt="" coords="712,132,919,159"/>
+<area shape="rect" id="node6" href="ecs_8c.html#a672ea2cce8f7ae1214e0a41f46884933" title="ecs_secondary" alt="" coords="967,132,1084,159"/>
+<area shape="rect" id="node7" href="ecs_8c.html#adbe06ee703b26dcc8d82e505075f942d" title="ECS" alt="" coords="1132,132,1180,159"/>
+<area shape="rect" id="node8" href="ecs_8c.html#ade56ef97d7d3ae799d60f8616f2062cb" title="ecs_initiate" alt="" coords="1228,132,1323,159"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a8b52bb14e44394cc563b91970ea02cd7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void shift_grp_2 </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l03339">3339</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-61" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-61-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-61-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-61-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_a8b52bb14e44394cc563b91970ea02cd7_cgraph.png" border="0" usemap="#disassemble_8c_a8b52bb14e44394cc563b91970ea02cd7_cgraph" alt=""/></div>
+<map name="disassemble_8c_a8b52bb14e44394cc563b91970ea02cd7_cgraph" id="disassemble_8c_a8b52bb14e44394cc563b91970ea02cd7_cgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#aeb9ccfcc110399b92ba8686f9ea19689" title="read_modrm" alt="" coords="145,5,251,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ad04659b6a93404c93c1744c46de19c7a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sse_esc </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="disassemble_8h.html#ab76307e66bdbe9be5d7959b60d0e4a9d">insn</a>&#160;</td>
+          <td class="paramname"><em>table</em>[][4], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>base</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l02023">2023</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-62" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-62-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-62-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-62-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_ad04659b6a93404c93c1744c46de19c7a_cgraph.png" border="0" usemap="#disassemble_8c_ad04659b6a93404c93c1744c46de19c7a_cgraph" alt=""/></div>
+<map name="disassemble_8c_ad04659b6a93404c93c1744c46de19c7a_cgraph" id="disassemble_8c_ad04659b6a93404c93c1744c46de19c7a_cgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#a5e43ff8ad5ca6db47c94d876ed0e9111" title="sse_prefix_to_index" alt="" coords="127,5,273,32"/>
+</map>
+</div>
+</p>
+
+<p><div id="dynsection-63" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-63-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-63-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-63-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_ad04659b6a93404c93c1744c46de19c7a_icgraph.png" border="0" usemap="#disassemble_8c_ad04659b6a93404c93c1744c46de19c7a_icgraph" alt=""/></div>
+<map name="disassemble_8c_ad04659b6a93404c93c1744c46de19c7a_icgraph" id="disassemble_8c_ad04659b6a93404c93c1744c46de19c7a_icgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#a219b934609145db4617d865342f1398b" title="esc_0f10_17" alt="" coords="127,5,229,32"/>
+<area shape="rect" id="node3" href="disassemble_8c.html#a2188ddf64274c97a95fd791924512100" title="esc_0f28_2f" alt="" coords="129,56,227,83"/>
+<area shape="rect" id="node4" href="disassemble_8c.html#a12f6ebea88f2371d86393ba0532b2348" title="esc_0f50_70" alt="" coords="127,107,229,133"/>
+<area shape="rect" id="node5" href="disassemble_8c.html#ac6bac727eaab81e703d8e431f909f2a1" title="esc_0f74_76" alt="" coords="127,157,229,184"/>
+<area shape="rect" id="node6" href="disassemble_8c.html#a7b296c34ebafd87ce5c43de50edc295b" title="esc_0f7e_7f" alt="" coords="129,208,227,235"/>
+<area shape="rect" id="node7" href="disassemble_8c.html#a074752bce6aaf9c80c124fba38c54213" title="esc_0fc2" alt="" coords="139,259,217,285"/>
+<area shape="rect" id="node8" href="disassemble_8c.html#ace1a0a77fb8c703a2195234ff97c9ed1" title="esc_0fc4_c6" alt="" coords="128,309,228,336"/>
+<area shape="rect" id="node9" href="disassemble_8c.html#ad073ac9d1ced37db8166d9bcdbfa15ca" title="esc_0fd1_ef" alt="" coords="129,360,227,387"/>
+<area shape="rect" id="node10" href="disassemble_8c.html#ae208d3458a4642f82c4213311b2d533d" title="esc_0ff1_fe" alt="" coords="131,411,225,437"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a5e43ff8ad5ca6db47c94d876ed0e9111"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int sse_prefix_to_index </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>sse_prefix</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l01993">1993</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-64" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-64-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-64-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-64-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_a5e43ff8ad5ca6db47c94d876ed0e9111_icgraph.png" border="0" usemap="#disassemble_8c_a5e43ff8ad5ca6db47c94d876ed0e9111_icgraph" alt=""/></div>
+<map name="disassemble_8c_a5e43ff8ad5ca6db47c94d876ed0e9111_icgraph" id="disassemble_8c_a5e43ff8ad5ca6db47c94d876ed0e9111_icgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#ad04659b6a93404c93c1744c46de19c7a" title="sse_esc" alt="" coords="200,208,273,235"/>
+<area shape="rect" id="node3" href="disassemble_8c.html#a219b934609145db4617d865342f1398b" title="esc_0f10_17" alt="" coords="321,5,424,32"/>
+<area shape="rect" id="node4" href="disassemble_8c.html#a2188ddf64274c97a95fd791924512100" title="esc_0f28_2f" alt="" coords="323,56,422,83"/>
+<area shape="rect" id="node5" href="disassemble_8c.html#a12f6ebea88f2371d86393ba0532b2348" title="esc_0f50_70" alt="" coords="321,107,424,133"/>
+<area shape="rect" id="node6" href="disassemble_8c.html#ac6bac727eaab81e703d8e431f909f2a1" title="esc_0f74_76" alt="" coords="321,157,424,184"/>
+<area shape="rect" id="node7" href="disassemble_8c.html#a7b296c34ebafd87ce5c43de50edc295b" title="esc_0f7e_7f" alt="" coords="323,208,422,235"/>
+<area shape="rect" id="node8" href="disassemble_8c.html#a074752bce6aaf9c80c124fba38c54213" title="esc_0fc2" alt="" coords="333,259,412,285"/>
+<area shape="rect" id="node9" href="disassemble_8c.html#ace1a0a77fb8c703a2195234ff97c9ed1" title="esc_0fc4_c6" alt="" coords="323,309,423,336"/>
+<area shape="rect" id="node10" href="disassemble_8c.html#ad073ac9d1ced37db8166d9bcdbfa15ca" title="esc_0fd1_ef" alt="" coords="323,360,422,387"/>
+<area shape="rect" id="node11" href="disassemble_8c.html#ae208d3458a4642f82c4213311b2d533d" title="esc_0ff1_fe" alt="" coords="325,411,420,437"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="af3831c9d8c38404c0ab8ae1794e2004f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void unary_grp_3 </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l03360">3360</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-65" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-65-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-65-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-65-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_af3831c9d8c38404c0ab8ae1794e2004f_cgraph.png" border="0" usemap="#disassemble_8c_af3831c9d8c38404c0ab8ae1794e2004f_cgraph" alt=""/></div>
+<map name="disassemble_8c_af3831c9d8c38404c0ab8ae1794e2004f_cgraph" id="disassemble_8c_af3831c9d8c38404c0ab8ae1794e2004f_cgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#aeb9ccfcc110399b92ba8686f9ea19689" title="read_modrm" alt="" coords="155,5,260,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a6c3a838f0fdd7b2e11c8c010854b840a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void x86_disassemble_instruction </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned long *&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structinsn__info__x86.html">insn_info_x86</a> *&#160;</td>
+          <td class="paramname"><em>instrument</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l05131">5131</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+<p><div id="dynsection-66" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-66-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-66-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-66-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_a6c3a838f0fdd7b2e11c8c010854b840a_cgraph.png" border="0" usemap="#disassemble_8c_a6c3a838f0fdd7b2e11c8c010854b840a_cgraph" alt=""/></div>
+<map name="disassemble_8c_a6c3a838f0fdd7b2e11c8c010854b840a_cgraph" id="disassemble_8c_a6c3a838f0fdd7b2e11c8c010854b840a_cgraph">
+<area shape="rect" id="node2" href="disassemble_8c.html#a7592854d94e0f19b3a5855b1f01dac3a" title="format_addr_op" alt="" coords="260,461,384,488"/>
+<area shape="rect" id="node3" href="disassemble_8c.html#ae15e4f1062e7840dc699bf2606481e83" title="format_addr_n" alt="" coords="433,5,549,32"/>
+<area shape="rect" id="node4" href="disassemble_8c.html#a3e44f3352fbef06da1a6afe047c7855b" title="format_addr_u" alt="" coords="433,56,549,83"/>
+<area shape="rect" id="node5" href="disassemble_8c.html#a856bf388af95fbf22a1814c6c72e0228" title="format_addr_a" alt="" coords="785,475,901,501"/>
+<area shape="rect" id="node6" href="disassemble_8c.html#abf434ff67032069ef17563fa01f0112b" title="format_addr_c" alt="" coords="433,157,548,184"/>
+<area shape="rect" id="node7" href="disassemble_8c.html#ac9ac1896ce575e8c3ba69320f160a01b" title="format_addr_d" alt="" coords="433,208,549,235"/>
+<area shape="rect" id="node8" href="disassemble_8c.html#a74e315b189ad737422731c11c3e57a73" title="format_addr_e" alt="" coords="433,613,549,640"/>
+<area shape="rect" id="node9" href="disassemble_8c.html#a93cdaa588f7940d60e17319be885d37d" title="format_addr_m" alt="" coords="597,512,719,539"/>
+<area shape="rect" id="node11" href="disassemble_8c.html#a6bd5befab59e2fdcb4e14f2ff8486452" title="format_addr_g" alt="" coords="433,360,549,387"/>
+<area shape="rect" id="node12" href="disassemble_8c.html#ae0f8d86c84fec05811145c25de450c5a" title="format_addr_i" alt="" coords="435,411,546,437"/>
+<area shape="rect" id="node13" href="disassemble_8c.html#a2b8368ccfb2aa3b2817068b36618fc27" title="format_addr_j" alt="" coords="435,461,546,488"/>
+<area shape="rect" id="node14" href="disassemble_8c.html#a1356395f3ebf0690023c5cc3a01bb717" title="format_addr_o" alt="" coords="600,657,716,684"/>
+<area shape="rect" id="node15" href="disassemble_8c.html#ad9688150204272be8319e314d60a8097" title="format_addr_p" alt="" coords="433,563,549,589"/>
+<area shape="rect" id="node16" href="disassemble_8c.html#a6e0044e016833feb544c5c755b1363cd" title="format_addr_q" alt="" coords="433,309,549,336"/>
+<area shape="rect" id="node17" href="disassemble_8c.html#acdbd7e59f3d073e9e38dda0e66cc95e4" title="format_addr_r" alt="" coords="434,664,547,691"/>
+<area shape="rect" id="node18" href="disassemble_8c.html#a8c54a21b3cdd072d761bef42f5706bf0" title="format_addr_s" alt="" coords="433,715,548,741"/>
+<area shape="rect" id="node19" href="disassemble_8c.html#a7d7b0fb20770c02a0656715216bcb3b9" title="format_addr_v" alt="" coords="433,765,548,792"/>
+<area shape="rect" id="node20" href="disassemble_8c.html#a052c1eb235fb10eb41e286bf3f61c2b4" title="format_addr_w" alt="" coords="432,512,549,539"/>
+<area shape="rect" id="node21" href="disassemble_8c.html#ad3d54851534e236f39840574a1aab885" title="format_addr_x" alt="" coords="433,867,548,893"/>
+<area shape="rect" id="node22" href="disassemble_8c.html#ab5e98a71d66f3ae0b91216ade9132ce1" title="format_addr_y" alt="" coords="601,860,715,887"/>
+<area shape="rect" id="node10" href="disassemble_8c.html#a946676ab1c45994e015e56e05b7e08bd" title="select_operand_size" alt="" coords="767,601,919,628"/>
+</map>
+</div>
+</p>
+
+<p><div id="dynsection-67" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-67-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-67-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-67-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="disassemble_8c_a6c3a838f0fdd7b2e11c8c010854b840a_icgraph.png" border="0" usemap="#disassemble_8c_a6c3a838f0fdd7b2e11c8c010854b840a_icgraph" alt=""/></div>
+<map name="disassemble_8c_a6c3a838f0fdd7b2e11c8c010854b840a_icgraph" id="disassemble_8c_a6c3a838f0fdd7b2e11c8c010854b840a_icgraph">
+<area shape="rect" id="node2" href="ecs_8c.html#a672ea2cce8f7ae1214e0a41f46884933" title="ecs_secondary" alt="" coords="260,5,377,32"/>
+<area shape="rect" id="node3" href="ecs_8c.html#adbe06ee703b26dcc8d82e505075f942d" title="ECS" alt="" coords="425,5,473,32"/>
+<area shape="rect" id="node4" href="ecs_8c.html#ade56ef97d7d3ae799d60f8616f2062cb" title="ecs_initiate" alt="" coords="521,5,616,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a class="anchor" id="ae31a22f37302cd12f3fcf307be3ac4fe"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="disassemble_8h.html#ab76307e66bdbe9be5d7959b60d0e4a9d">insn</a> esc_0f_opcode_table[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l00616">616</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7e47813eb264a5ef08341698142ce0d1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="disassemble_8h.html#ab76307e66bdbe9be5d7959b60d0e4a9d">insn</a> one_byte_opcode_table[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="disassemble_8c_source.html#l00098">98</a> of file <a class="el" href="disassemble_8c_source.html">disassemble.c</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

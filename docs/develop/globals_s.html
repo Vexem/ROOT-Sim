@@ -23,6 +23,8 @@
   $(document).ready(function() { init_search(); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="flatdoc.css" rel="stylesheet" type="text/css"/>
+<link href="inline-params.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -98,6 +100,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="globals_g.html#index_g"><span>g</span></a></li>
       <li><a href="globals_h.html#index_h"><span>h</span></a></li>
       <li><a href="globals_i.html#index_i"><span>i</span></a></li>
+      <li><a href="globals_j.html#index_j"><span>j</span></a></li>
       <li><a href="globals_k.html#index_k"><span>k</span></a></li>
       <li><a href="globals_l.html#index_l"><span>l</span></a></li>
       <li><a href="globals_m.html#index_m"><span>m</span></a></li>
@@ -148,6 +151,9 @@ $(document).ready(function(){initNavTree('globals_s.html','');});
 <div class="textblock">Here is a list of all functions, variables, defines, enums, and typedefs with links to the files they belong to:</div>
 
 <h3><a class="anchor" id="index_s"></a>- s -</h3><ul>
+<li>S32
+: <a class="el" href="xxhash_8c.html#a57a2244776e01ad620c556de58eb7880">xxhash.c</a>
+</li>
 <li>safe_asprintf
 : <a class="el" href="statistics_8c.html#a22dbd30d69ade960a0cf1feadab4601c">statistics.c</a>
 </li>
@@ -155,8 +161,8 @@ $(document).ready(function(){initNavTree('globals_s.html','');});
 : <a class="el" href="numerical_8c.html#a72bc4f303e6586d86eb83f6d41753e86">numerical.c</a>
 </li>
 <li>schedule()
-: <a class="el" href="scheduler_8h.html#ac48128e72b303ea22d8ec641a9516b15">scheduler.h</a>
-, <a class="el" href="scheduler_8c.html#ac48128e72b303ea22d8ec641a9516b15">scheduler.c</a>
+: <a class="el" href="scheduler_8c.html#ac48128e72b303ea22d8ec641a9516b15">scheduler.c</a>
+, <a class="el" href="scheduler_8h.html#ac48128e72b303ea22d8ec641a9516b15">scheduler.h</a>
 </li>
 <li>schedule_hook()
 : <a class="el" href="schedule_8c.html#a2ab15fa11bde064e9f885c4d046556ec">schedule.c</a>
@@ -187,8 +193,8 @@ $(document).ready(function(){initNavTree('globals_s.html','');});
 , <a class="el" href="ROOT-Sim_8h.html#afe377b81b0f25bdd6d4cc29eae84e0f4">ROOT-Sim.h</a>
 </li>
 <li>scheduler_fini()
-: <a class="el" href="scheduler_8h.html#a8ed8d4a13d66c1d3a221fb82e72f8e0e">scheduler.h</a>
-, <a class="el" href="scheduler_8c.html#a8ed8d4a13d66c1d3a221fb82e72f8e0e">scheduler.c</a>
+: <a class="el" href="scheduler_8c.html#a8ed8d4a13d66c1d3a221fb82e72f8e0e">scheduler.c</a>
+, <a class="el" href="scheduler_8h.html#a8ed8d4a13d66c1d3a221fb82e72f8e0e">scheduler.h</a>
 </li>
 <li>scheduler_init()
 : <a class="el" href="scheduler_8c.html#ab258cc2856e5f6bb125907cc23358fbd">scheduler.c</a>
@@ -210,6 +216,9 @@ $(document).ready(function(){initNavTree('globals_s.html','');});
 <li>segment_not_present()
 : <a class="el" href="traps-dummy_8h.html#a66ff1fbd090e0058858ee699e035c078">traps-dummy.h</a>
 </li>
+<li>select_operand_size()
+: <a class="el" href="disassemble_8c.html#a946676ab1c45994e015e56e05b7e08bd">disassemble.c</a>
+</li>
 <li>Send()
 : <a class="el" href="communication_8c.html#ab5250867c0edfc326732c059b0c0c3b5">communication.c</a>
 , <a class="el" href="communication_8h.html#ab5250867c0edfc326732c059b0c0c3b5">communication.h</a>
@@ -224,6 +233,10 @@ $(document).ready(function(){initNavTree('globals_s.html','');});
 <li>send_outgoing_msgs()
 : <a class="el" href="communication_8c.html#a694613eb88ca26ef684f9bcf1bab1b59">communication.c</a>
 , <a class="el" href="communication_8h.html#ad154a0e0c0815b786ead70143505abd6">communication.h</a>
+</li>
+<li>send_remote_msg()
+: <a class="el" href="mpi_8c.html#a41390aa810e506d633d2cf01bc5973bb">mpi.c</a>
+, <a class="el" href="mpi_8h.html#a41390aa810e506d633d2cf01bc5973bb">mpi.h</a>
 </li>
 <li>serial_completed_simulation
 : <a class="el" href="serial_8c.html#aae096cd9aa77aba4e1c2cfddf70273f8">serial.c</a>
@@ -245,6 +258,9 @@ $(document).ready(function(){initNavTree('globals_s.html','');});
 </li>
 <li>SerialSetState()
 : <a class="el" href="serial_8h.html#ae6bf33cd6365ab9d2890230eac1b3bd2">serial.h</a>
+</li>
+<li>set_affinity()
+: <a class="el" href="thread_8h.html#a170621cccd6340430706508452359dd5">thread.h</a>
 </li>
 <li>SET_AREA_LOCK_BIT
 : <a class="el" href="dymelor_8h.html#a706e12898a677460dda8cf45149502ae">dymelor.h</a>
@@ -269,6 +285,9 @@ $(document).ready(function(){initNavTree('globals_s.html','');});
 <li>set_gid
 : <a class="el" href="core_8h.html#ada10d1b9b513d8a990e88b4c655ffe7d">core.h</a>
 </li>
+<li>set_jmp
+: <a class="el" href="x86_2jmp_8h.html#a27b53df10e215ef74cf2825bd336b363">jmp.h</a>
+</li>
 <li>set_lid
 : <a class="el" href="core_8h.html#a3554b1d923000ad1dc8864d4e891b6bc">core.h</a>
 </li>
@@ -291,15 +310,19 @@ $(document).ready(function(){initNavTree('globals_s.html','');});
 : <a class="el" href="cross__state__manager_8c.html#a8ebbb3cced92d39cfc6673d4bab78b04">cross_state_manager.c</a>
 </li>
 <li>SetState()
-: <a class="el" href="state_8c.html#aadf9dfe2d3cfe41ba90ecfd0e210f9fc">state.c</a>
-, <a class="el" href="ROOT-Sim_8h.html#aadf9dfe2d3cfe41ba90ecfd0e210f9fc">ROOT-Sim.h</a>
+: <a class="el" href="ROOT-Sim_8h.html#aadf9dfe2d3cfe41ba90ecfd0e210f9fc">ROOT-Sim.h</a>
+, <a class="el" href="state_8c.html#aadf9dfe2d3cfe41ba90ecfd0e210f9fc">state.c</a>
 </li>
 <li>setup_ecs_on_segment()
-: <a class="el" href="ecs_8h.html#a85240bd0589eb4591e69afdb7f95af29">ecs.h</a>
+: <a class="el" href="ecs_8c.html#a48748a063367b630336d1911fe4ed36a">ecs.c</a>
+, <a class="el" href="ecs_8h.html#a85240bd0589eb4591e69afdb7f95af29">ecs.h</a>
 </li>
 <li>SetupObstacles()
 : <a class="el" href="topology_8c.html#adebe424adaebf0abecac23c41891fbee">topology.c</a>
 , <a class="el" href="ROOT-Sim_8h.html#adebe424adaebf0abecac23c41891fbee">ROOT-Sim.h</a>
+</li>
+<li>shift_grp_2()
+: <a class="el" href="disassemble_8c.html#a8b52bb14e44394cc563b91970ea02cd7">disassemble.c</a>
 </li>
 <li>SIBLING_PGD
 : <a class="el" href="cross__state__manager_8h.html#a94280c5a409e0c721eaa9d99b4c6a43d">cross_state_manager.h</a>
@@ -333,16 +356,20 @@ $(document).ready(function(){initNavTree('globals_s.html','');});
 : <a class="el" href="statistics_8c.html#a2bb6e82a21ec241a0f3282d066c3aa3b">statistics.c</a>
 </li>
 <li>SIZE_16
-: <a class="el" href="x86_8h.html#a89163aa2fe49907238034e3954daacdaacaadd71d361a7b55bae5ab125e2485f3">x86.h</a>
+: <a class="el" href="disassemble_8h.html#a89163aa2fe49907238034e3954daacdaacaadd71d361a7b55bae5ab125e2485f3">disassemble.h</a>
+, <a class="el" href="x86_8h.html#a89163aa2fe49907238034e3954daacdaacaadd71d361a7b55bae5ab125e2485f3">x86.h</a>
 </li>
 <li>SIZE_32
-: <a class="el" href="x86_8h.html#a89163aa2fe49907238034e3954daacdaaf8c2bd7889de0704f869521c127f1749">x86.h</a>
+: <a class="el" href="disassemble_8h.html#a89163aa2fe49907238034e3954daacdaaf8c2bd7889de0704f869521c127f1749">disassemble.h</a>
+, <a class="el" href="x86_8h.html#a89163aa2fe49907238034e3954daacdaaf8c2bd7889de0704f869521c127f1749">x86.h</a>
 </li>
 <li>SIZE_64
-: <a class="el" href="x86_8h.html#a89163aa2fe49907238034e3954daacdaaa211aed09197a479f3e2a24f39295eed">x86.h</a>
+: <a class="el" href="disassemble_8h.html#a89163aa2fe49907238034e3954daacdaaa211aed09197a479f3e2a24f39295eed">disassemble.h</a>
+, <a class="el" href="x86_8h.html#a89163aa2fe49907238034e3954daacdaaa211aed09197a479f3e2a24f39295eed">x86.h</a>
 </li>
 <li>SIZE_8
-: <a class="el" href="x86_8h.html#a89163aa2fe49907238034e3954daacdaa9639e22aeeea626bf1cfbdc8a464ee15">x86.h</a>
+: <a class="el" href="disassemble_8h.html#a89163aa2fe49907238034e3954daacdaa9639e22aeeea626bf1cfbdc8a464ee15">disassemble.h</a>
+, <a class="el" href="x86_8h.html#a89163aa2fe49907238034e3954daacdaa9639e22aeeea626bf1cfbdc8a464ee15">x86.h</a>
 </li>
 <li>SIZEOF
 : <a class="el" href="asm__defines_8c.html#afcea8712a6e2efeb7a39d4971289fab8">asm_defines.c</a>
@@ -419,6 +446,12 @@ $(document).ready(function(){initNavTree('globals_s.html','');});
 </li>
 <li>spurious_interrupt_bug()
 : <a class="el" href="traps-dummy_8h.html#a14a85da356ef4c6e055b59dbc0581bf8">traps-dummy.h</a>
+</li>
+<li>sse_esc()
+: <a class="el" href="disassemble_8c.html#ad04659b6a93404c93c1744c46de19c7a">disassemble.c</a>
+</li>
+<li>sse_prefix_to_index()
+: <a class="el" href="disassemble_8c.html#a5e43ff8ad5ca6db47c94d876ed0e9111">disassemble.c</a>
 </li>
 <li>stack_index
 : <a class="el" href="cross__state__manager_8c.html#a85d5a509b9a6f42382b673554d1ac99e">cross_state_manager.c</a>
@@ -532,36 +565,36 @@ $(document).ready(function(){initNavTree('globals_s.html','');});
 : <a class="el" href="state_8h.html#a18331b6247faf186c17ea75b89b30651">state.h</a>
 </li>
 <li>statistics_fini()
-: <a class="el" href="statistics_8h.html#aaa24b8c29fb4c68de95998bd43421bbb">statistics.h</a>
-, <a class="el" href="statistics_8c.html#aaa24b8c29fb4c68de95998bd43421bbb">statistics.c</a>
+: <a class="el" href="statistics_8c.html#aaa24b8c29fb4c68de95998bd43421bbb">statistics.c</a>
+, <a class="el" href="statistics_8h.html#aaa24b8c29fb4c68de95998bd43421bbb">statistics.h</a>
 </li>
 <li>statistics_get_lp_data()
-: <a class="el" href="statistics_8c.html#a4e22a256d8d0ca80049236602215d758">statistics.c</a>
-, <a class="el" href="statistics_8h.html#ab9de5cb958e02e5ef06a67674168386c">statistics.h</a>
+: <a class="el" href="statistics_8h.html#ab9de5cb958e02e5ef06a67674168386c">statistics.h</a>
+, <a class="el" href="statistics_8c.html#a4e22a256d8d0ca80049236602215d758">statistics.c</a>
 </li>
 <li>statistics_init()
-: <a class="el" href="statistics_8c.html#a4a201b8310d7d1c38ee31035202c8ee8">statistics.c</a>
-, <a class="el" href="statistics_8h.html#a4a201b8310d7d1c38ee31035202c8ee8">statistics.h</a>
+: <a class="el" href="statistics_8h.html#a4a201b8310d7d1c38ee31035202c8ee8">statistics.h</a>
+, <a class="el" href="statistics_8c.html#a4a201b8310d7d1c38ee31035202c8ee8">statistics.c</a>
 </li>
 <li>statistics_on_gvt()
-: <a class="el" href="statistics_8c.html#a6653e2f6059af402d4ad97ab266f565a">statistics.c</a>
-, <a class="el" href="statistics_8h.html#a6653e2f6059af402d4ad97ab266f565a">statistics.h</a>
+: <a class="el" href="statistics_8h.html#a6653e2f6059af402d4ad97ab266f565a">statistics.h</a>
+, <a class="el" href="statistics_8c.html#a6653e2f6059af402d4ad97ab266f565a">statistics.c</a>
 </li>
 <li>statistics_on_gvt_serial()
-: <a class="el" href="statistics_8c.html#a1d37886727e2f2ada6aa171f147abb01">statistics.c</a>
-, <a class="el" href="statistics_8h.html#a1d37886727e2f2ada6aa171f147abb01">statistics.h</a>
+: <a class="el" href="statistics_8h.html#a1d37886727e2f2ada6aa171f147abb01">statistics.h</a>
+, <a class="el" href="statistics_8c.html#a1d37886727e2f2ada6aa171f147abb01">statistics.c</a>
 </li>
 <li>statistics_post_data()
 : <a class="el" href="statistics_8c.html#adb44a0a2dd40360e160ab4f5091ff324">statistics.c</a>
 , <a class="el" href="statistics_8h.html#a287c75bebfbeff07b16cb31c1f0a74bd">statistics.h</a>
 </li>
 <li>statistics_post_data_serial()
-: <a class="el" href="statistics_8c.html#a097c5f0443d5eee18f283ff46a80cadf">statistics.c</a>
-, <a class="el" href="statistics_8h.html#a097c5f0443d5eee18f283ff46a80cadf">statistics.h</a>
+: <a class="el" href="statistics_8h.html#a097c5f0443d5eee18f283ff46a80cadf">statistics.h</a>
+, <a class="el" href="statistics_8c.html#a097c5f0443d5eee18f283ff46a80cadf">statistics.c</a>
 </li>
 <li>statistics_start()
-: <a class="el" href="statistics_8h.html#a04ef3d7c3fb3ee25b9eb20922f859626">statistics.h</a>
-, <a class="el" href="statistics_8c.html#a04ef3d7c3fb3ee25b9eb20922f859626">statistics.c</a>
+: <a class="el" href="statistics_8c.html#a04ef3d7c3fb3ee25b9eb20922f859626">statistics.c</a>
+, <a class="el" href="statistics_8h.html#a04ef3d7c3fb3ee25b9eb20922f859626">statistics.h</a>
 </li>
 <li>statistics_stop()
 : <a class="el" href="statistics_8h.html#aeff52bbf045362270639b2baed20762b">statistics.h</a>
@@ -582,8 +615,18 @@ $(document).ready(function(){initNavTree('globals_s.html','');});
 <li>STATS_LP
 : <a class="el" href="statistics_8h.html#a4a3f28cd26d7921e291c7e2c5cad038da68f3e7d33bfe553c7e478a0ea6342f5a">statistics.h</a>
 </li>
+<li>stats_mpi_t
+: <a class="el" href="mpi_8c.html#ae7111c0c6a661d8177c9a669942ebc9c">mpi.c</a>
+</li>
 <li>STATS_PERF
 : <a class="el" href="statistics_8h.html#a4a3f28cd26d7921e291c7e2c5cad038da16c21172377263a55872a1d83e8fa12b">statistics.h</a>
+</li>
+<li>stats_reduction_init()
+: <a class="el" href="mpi_8c.html#a013115e2b9fb4af92de3a6b212fc8065">mpi.c</a>
+</li>
+<li>store_outgoing_msg()
+: <a class="el" href="wnd_8h.html#a16850c4710b9b54fc67b88547b3b87ee">wnd.h</a>
+, <a class="el" href="wnd_8c.html#a16850c4710b9b54fc67b88547b3b87ee">wnd.c</a>
 </li>
 <li>switch_channel_buffers()
 : <a class="el" href="msgchannel_8c.html#a305b8b2ed9f8d7acf84282acad3c88b7">msgchannel.c</a>
@@ -606,12 +649,16 @@ $(document).ready(function(){initNavTree('globals_s.html','');});
 <li>synchronize_all_slaves()
 : <a class="el" href="schedule_8c.html#ad20533ebbbfbc187cf8e00ffefefd78c">schedule.c</a>
 </li>
+<li>syncronize_all()
+: <a class="el" href="mpi_8c.html#a4d5b6bd7866b813152f5ead12012dc46">mpi.c</a>
+, <a class="el" href="mpi_8h.html#a4d5b6bd7866b813152f5ead12012dc46">mpi.h</a>
+</li>
 <li>system_wide_stats
 : <a class="el" href="statistics_8c.html#a8681d53b530520ab780776c8bfaf29b3">statistics.c</a>
 </li>
 <li>SystemInit()
-: <a class="el" href="init_8c.html#a417eb072179d09f441dbae3125049e46">init.c</a>
-, <a class="el" href="init_8h.html#a417eb072179d09f441dbae3125049e46">init.h</a>
+: <a class="el" href="init_8h.html#a417eb072179d09f441dbae3125049e46">init.h</a>
+, <a class="el" href="init_8c.html#a417eb072179d09f441dbae3125049e46">init.c</a>
 </li>
 </ul>
 </div><!-- contents -->

@@ -28,6 +28,7 @@ var searchData=
   ['min_5fnum_5fchunks',['MIN_NUM_CHUNKS',['../dymelor_8h.html#ae8d0bbc015a86346f4177f4c152b8c0f',1,'dymelor.h']]],
   ['mode_5fx32',['MODE_X32',['../lend_8h.html#a8dbea175a2171fbc77954cbaee03fae9',1,'lend.h']]],
   ['mode_5fx64',['MODE_X64',['../lend_8h.html#ae6484fbe34c25fe1646ba647e0dd7eb7',1,'lend.h']]],
+  ['mpi_5ftype_5fstat_5flen',['MPI_TYPE_STAT_LEN',['../mpi_8c.html#a05ff90b74de36380367a1d30b07ac5a5',1,'mpi.c']]],
   ['msg_5fcompute_5fgvt',['MSG_COMPUTE_GVT',['../communication_8h.html#a9827875d352452f5de77751700a57559',1,'communication.h']]],
   ['msg_5fevent',['MSG_EVENT',['../communication_8h.html#a35522ae63951eed709cd2055ae388149',1,'communication.h']]],
   ['msg_5ffini',['MSG_FINI',['../communication_8h.html#af8c1ea56bb0d83cbc8267b3a70121774',1,'communication.h']]],

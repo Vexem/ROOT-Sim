@@ -23,6 +23,8 @@
   $(document).ready(function() { init_search(); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="flatdoc.css" rel="stylesheet" type="text/css"/>
+<link href="inline-params.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -113,7 +115,7 @@ $(document).ready(function(){initNavTree('asm__defines_8c.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>This file is not actually compiled into ROOT-Sim. This is used by the build system to generate the <a class="el" href="asm__defines_8h.html">asm_defines.h</a> file in which several sizes and offsets of structs are dynamically generated. In this way, the assembly code which we generate does not have to carry hard-coded constants and subtle nasty bugs are less likely to appear.  
+<p>Assembly build support module.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="process_8h_source.html">scheduler/process.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="x86_2jmp_8h_source.html">arch/x86/jmp.h</a>&gt;</code><br />
@@ -124,24 +126,25 @@ $(document).ready(function(){initNavTree('asm__defines_8c.html','');});
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="asm__defines_8c__incl.png" border="0" usemap="#_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2arch_2asm__defines_8c" alt=""/></div>
 <map name="_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2arch_2asm__defines_8c" id="_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2arch_2asm__defines_8c">
-<area shape="rect" id="node2" href="process_8h.html" title="This header defines a LP control block, keeping information about both simulation state and execution..." alt="" coords="387,109,538,136"/>
-<area shape="rect" id="node37" href="x86_2jmp_8h.html" title="setjmp / longjmp variant which saves all registers " alt="" coords="563,109,680,136"/>
-<area shape="rect" id="node4" href="state_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="94,363,191,389"/>
-<area shape="rect" id="node16" href="numerical_8h.html" title="This header is used to define symbols which must be accessible by the simulator but not by the applic..." alt="" coords="43,512,157,539"/>
-<area shape="rect" id="node19" href="mm_8h.html" title="Memory Manager main header. " alt="" coords="721,199,812,225"/>
-<area shape="rect" id="node28" href="ecs_8h.html" title="Event Cross State Synchronization. This module implements the userspace handler of the artificially i..." alt="" coords="1218,199,1305,225"/>
-<area shape="rect" id="node29" href="list_8h.html" title="This header defines macros for accessing the general&#45;purpose list implementation used in the simulato..." alt="" coords="1167,512,1287,539"/>
-<area shape="rect" id="node32" href="msgchannel_8h.html" title="This module implements an (M, 1) channel to transfer message pointers. " alt="" coords="215,363,395,389"/>
-<area shape="rect" id="node33" href="ult_8h.html" title="The User&#45;Level Thread module allows the creation/scheduling of a user&#45;level thread in an architecture..." alt="" coords="353,288,436,315"/>
-<area shape="rect" id="node34" href="communication_8h.html" title="This is the main header file, containing all data structures and defines used by the communication su..." alt="" coords="422,199,658,225"/>
-<area shape="rect" id="node35" href="cross__state__manager_8h.html" title="This is the main header for the Linux Kernel Module which implements per&#45;kernel&#45;thread different page..." alt="" coords="1329,184,1495,240"/>
-<area shape="rect" id="node5" href="ROOT-Sim_8h.html" title="This header defines all the symbols which are needed to develop a Model to be simulated on top of ROO..." alt="" coords="232,512,331,539"/>
-<area shape="rect" id="node12" href="core_8h.html" title="This header defines all the shared symbols which are needed by different subsystems. " alt="" coords="425,437,519,464"/>
-<area shape="rect" id="node17" href="thread_8h.html" title="This module implements Kernel Level Thread supports. " alt="" coords="406,512,514,539"/>
-<area shape="rect" id="node18" href="atomic_8h.html" title="This module implements atomic and non&#45;blocking operations used within ROOT&#45;Sim to coordinate threads ..." alt="" coords="947,587,1058,613"/>
-<area shape="rect" id="node22" href="dymelor_8h.html" title="This is the Memory Management Subsystem main header file. " alt="" coords="615,288,729,315"/>
-<area shape="rect" id="node23" href="bitmap_8h.html" title="This header implements a minimal bitmap data type. " alt="" coords="623,363,769,389"/>
-<area shape="rect" id="node25" href="timer_8h.html" title="This header defines the timers which the simulator uses to monitor its internal behaviour. " alt="" coords="844,363,943,389"/>
+<area shape="rect" id="node2" href="process_8h.html" title="LP control blocks. " alt="" coords="1162,109,1312,136"/>
+<area shape="rect" id="node37" href="x86_2jmp_8h.html" title="x86 ULT support header " alt="" coords="1688,363,1805,389"/>
+<area shape="rect" id="node4" href="state_8h.html" title="LP state management. " alt="" coords="938,363,1035,389"/>
+<area shape="rect" id="node16" href="numerical_8h.html" title="Numerical Library. " alt="" coords="1258,512,1373,539"/>
+<area shape="rect" id="node22" href="mm_8h.html" title="Memory Manager main header. " alt="" coords="1028,199,1118,225"/>
+<area shape="rect" id="node30" href="ecs_8h.html" title="Event &amp; Cross State Synchornization. " alt="" coords="1354,199,1440,225"/>
+<area shape="rect" id="node31" href="list_8h.html" title="Generic Lists. " alt="" coords="1448,512,1568,539"/>
+<area shape="rect" id="node34" href="msgchannel_8h.html" title="A (M, 1) channel for messages. " alt="" coords="628,288,808,315"/>
+<area shape="rect" id="node35" href="ult_8h.html" title="User&#45;Level Threads Headers. " alt="" coords="1196,199,1278,225"/>
+<area shape="rect" id="node38" href="communication_8h.html" title="Communication Routines. " alt="" coords="474,363,710,389"/>
+<area shape="rect" id="node39" href="cross__state__manager_8h.html" title="Per&#45;thread page table. " alt="" coords="1600,184,1765,240"/>
+<area shape="rect" id="node5" href="ROOT-Sim_8h.html" title="ROOT&#45;Sim header for model development. " alt="" coords="662,512,761,539"/>
+<area shape="rect" id="node12" href="core_8h.html" title="Core ROOT&#45;Sim functionalities. " alt="" coords="548,437,643,464"/>
+<area shape="rect" id="node17" href="thread_8h.html" title="Generic thread management facilities. " alt="" coords="1126,512,1234,539"/>
+<area shape="rect" id="node18" href="atomic_8h.html" title="Atomic operations. " alt="" coords="938,587,1048,613"/>
+<area shape="rect" id="node24" href="dymelor_8h.html" title="Dynamic Memory Logger and Restorer (DyMeLoR) " alt="" coords="380,288,494,315"/>
+<area shape="rect" id="node25" href="bitmap_8h.html" title="Bitmap data type. " alt="" coords="253,363,400,389"/>
+<area shape="rect" id="node27" href="timer_8h.html" title="Timers. " alt="" coords="117,363,216,389"/>
+<area shape="rect" id="node36" href="jmp_8h.html" title="Architecture&#45;independent ULT header. " alt="" coords="1578,288,1669,315"/>
 </map>
 </div>
 </div>
@@ -162,8 +165,10 @@ Functions</h2></td></tr>
 <tr class="separator:a5e70c5a0f6b50b949dd82e048d2993a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This file is not actually compiled into ROOT-Sim. This is used by the build system to generate the <a class="el" href="asm__defines_8h.html">asm_defines.h</a> file in which several sizes and offsets of structs are dynamically generated. In this way, the assembly code which we generate does not have to carry hard-coded constants and subtle nasty bugs are less likely to appear. </p>
-<p>Copyright (C) 2008-2018 HPDCS Group <a href="http://www.dis.uniroma1.it/~hpdcs">http://www.dis.uniroma1.it/~hpdcs</a></p>
+<div class="textblock"><p>Assembly build support module. </p>
+<p>This file is not actually compiled into ROOT-Sim. This is used by the system to generate the <a class="el" href="asm__defines_8h.html">asm_defines.h</a> file in which several sizes offsets of structs are dynamically generated. In this way, the assembly which we generate does not have to carry hard-coded constants and nasty bugs are less likely to appear.</p>
+<p>This file is not compiled in the runtime environment, but it is processed in order to generate the <code><a class="el" href="asm__defines_8h.html">asm_defines.h</a></code> one which is included by all assembly files.</p>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (C) 2008-2018 HPDCS Group <a href="https://hpdcs.github.io">https://hpdcs.github.io</a></dd></dl>
 <p>This file is part of ROOT-Sim (ROme OpTimistic Simulator).</p>
 <p>ROOT-Sim is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; only version 3 of the License applies.</p>
 <p>ROOT-Sim is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
@@ -195,8 +200,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>This macro emits some non-standard assembly code, which cannot be actually assembled, but allows to retrieve the lines we are interested in in all the garbage which is generated when compiling this file with -S. This is done by prepending to the line the string "-&gt;" as a marker for the lines of interest. We then emit a constant, which corresponds to the value of interest to be retrieved using <a class="el" href="asm__defines_8c.html#a06fd590700d3bb729116e93acb353ce3">OFFSETOF()</a> of <a class="el" href="asm__defines_8c.html#afcea8712a6e2efeb7a39d4971289fab8">SIZEOF()</a>. </p>
 
-<p>Definition at line <a class="el" href="asm__defines_8c_source.html#l00029">29</a> of file <a class="el" href="asm__defines_8c_source.html">asm_defines.c</a>.</p>
+<p>Definition at line <a class="el" href="asm__defines_8c_source.html#l00048">48</a> of file <a class="el" href="asm__defines_8c_source.html">asm_defines.c</a>.</p>
 
 </div>
 </div>
@@ -223,8 +229,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>This macro relies no the <a class="el" href="asm__defines_8c.html#a8e8c53c369e4f662476096cfbbf6754b">DEFINE()</a> macro to generate a line in which the offset of a member of a structure from the beginning of that structure is dynamically computed at compile time. </p>
 
-<p>Definition at line <a class="el" href="asm__defines_8c_source.html#l00030">30</a> of file <a class="el" href="asm__defines_8c_source.html">asm_defines.c</a>.</p>
+<p>Definition at line <a class="el" href="asm__defines_8c_source.html#l00055">55</a> of file <a class="el" href="asm__defines_8c_source.html">asm_defines.c</a>.</p>
 
 </div>
 </div>
@@ -241,8 +248,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>This macro relies no the <a class="el" href="asm__defines_8c.html#a8e8c53c369e4f662476096cfbbf6754b">DEFINE()</a> macro to generate a line in which the size of a structure is dynamically computed at compile time. </p>
 
-<p>Definition at line <a class="el" href="asm__defines_8c_source.html#l00031">31</a> of file <a class="el" href="asm__defines_8c_source.html">asm_defines.c</a>.</p>
+<p>Definition at line <a class="el" href="asm__defines_8c_source.html#l00061">61</a> of file <a class="el" href="asm__defines_8c_source.html">asm_defines.c</a>.</p>
 
 </div>
 </div>
@@ -260,8 +268,10 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>This is a function which is not actually compiled in the core, and thus never ever executed. We declare in this function a set of statements which are later assembled and post-processed using awk in the makefile to expose to the assembly modules some constants which can only be computed by the C compiler. By doing this, if we change C struct definitions, we do not break assembly code.</p>
+<dl class="section warning"><dt>Warning</dt><dd>Do not call this function. This is not compiled in the library </dd></dl>
 
-<p>Definition at line <a class="el" href="asm__defines_8c_source.html#l00036">36</a> of file <a class="el" href="asm__defines_8c_source.html">asm_defines.c</a>.</p>
+<p>Definition at line <a class="el" href="asm__defines_8c_source.html#l00074">74</a> of file <a class="el" href="asm__defines_8c_source.html">asm_defines.c</a>.</p>
 
 </div>
 </div>

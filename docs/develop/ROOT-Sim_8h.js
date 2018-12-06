@@ -1,6 +1,5 @@
 var ROOT_Sim_8h =
 [
-    [ "__ROOT_Sim_H", "ROOT-Sim_8h.html#aaffd14e4df5045fd296bbe625f0ddea2", null ],
     [ "DIRECTION_E", "ROOT-Sim_8h.html#a60320934526effb2a380abc59aba514d", null ],
     [ "DIRECTION_N", "ROOT-Sim_8h.html#a0e06c6a7080115a503eb29b431e3e4ff", null ],
     [ "DIRECTION_NE", "ROOT-Sim_8h.html#a654d8f528bda875eac4beb42b9951aca", null ],

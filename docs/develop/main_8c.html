@@ -23,6 +23,8 @@
   $(document).ready(function() { init_search(); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="flatdoc.css" rel="stylesheet" type="text/css"/>
+<link href="inline-params.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -130,6 +132,7 @@ $(document).ready(function(){initNavTree('main_8c.html','');});
 <code>#include &lt;<a class="el" href="process_8h_source.html">scheduler/process.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="gvt_2gvt_8h_source.html">gvt/gvt.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="mm_8h_source.html">mm/mm.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="ecs_8h_source.html">mm/ecs.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="serial_8h_source.html">serial/serial.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="mpi_8h_source.html">communication/mpi.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="init_8h_source.html">core/init.h</a>&gt;</code><br />
@@ -140,33 +143,36 @@ $(document).ready(function(){initNavTree('main_8c.html','');});
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="main_8c__incl.png" border="0" usemap="#_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2main_8c" alt=""/></div>
 <map name="_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2main_8c" id="_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2main_8c">
-<area shape="rect" id="node7" href="core_8h.html" title="This header defines all the shared symbols which are needed by different subsystems. " alt="" coords="1031,587,1125,613"/>
-<area shape="rect" id="node16" href="thread_8h.html" title="This module implements Kernel Level Thread supports. " alt="" coords="1423,661,1531,688"/>
-<area shape="rect" id="node18" href="statistics_8h.html" title="State Management Subsystem. " alt="" coords="1210,184,1362,211"/>
-<area shape="rect" id="node19" href="process_8h.html" title="This header defines a LP control block, keeping information about both simulation state and execution..." alt="" coords="1047,259,1197,285"/>
-<area shape="rect" id="node21" href="mm_8h.html" title="Memory Manager main header. " alt="" coords="495,348,586,375"/>
-<area shape="rect" id="node39" href="ccgs_8h.html" title="gvt/ccgs.h" alt="" coords="1623,259,1709,285"/>
-<area shape="rect" id="node40" href="binding_8h.html" title="Implements load sharing rules for LPs among worker threads. " alt="" coords="1433,109,1579,136"/>
-<area shape="rect" id="node41" href="scheduler_8h.html" title="Scheduling Subsystem main header file. Scheduler&#45;specific data structures and defines should be place..." alt="" coords="877,109,1039,136"/>
-<area shape="rect" id="node44" href="gvt_2gvt_8h.html" title="This header defines all the Global Virtual Time symbols needed by the platform. The current implement..." alt="" coords="1687,437,1765,464"/>
-<area shape="rect" id="node45" href="serial_8h.html" title="serial/serial.h" alt="" coords="1791,259,1898,285"/>
-<area shape="rect" id="node46" href="mpi_8h.html" title="MPI support module. " alt="" coords="1756,109,1917,136"/>
-<area shape="rect" id="node47" href="init_8h.html" title="This module implements the simulator initialization routines. " alt="" coords="1163,109,1249,136"/>
-<area shape="rect" id="node8" href="ROOT-Sim_8h.html" title="This header defines all the symbols which are needed to develop a Model to be simulated on top of ROO..." alt="" coords="1293,661,1391,688"/>
-<area shape="rect" id="node15" href="numerical_8h.html" title="This header is used to define symbols which must be accessible by the simulator but not by the applic..." alt="" coords="1567,661,1682,688"/>
-<area shape="rect" id="node17" href="atomic_8h.html" title="This module implements atomic and non&#45;blocking operations used within ROOT&#45;Sim to coordinate threads ..." alt="" coords="1081,736,1192,763"/>
-<area shape="rect" id="node20" href="state_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="1464,512,1561,539"/>
-<area shape="rect" id="node30" href="ecs_8h.html" title="Event Cross State Synchronization. This module implements the userspace handler of the artificially i..." alt="" coords="1079,348,1165,375"/>
-<area shape="rect" id="node31" href="list_8h.html" title="This header defines macros for accessing the general&#45;purpose list implementation used in the simulato..." alt="" coords="861,661,981,688"/>
-<area shape="rect" id="node34" href="msgchannel_8h.html" title="This module implements an (M, 1) channel to transfer message pointers. " alt="" coords="1208,512,1388,539"/>
-<area shape="rect" id="node35" href="ult_8h.html" title="The User&#45;Level Thread module allows the creation/scheduling of a user&#45;level thread in an architecture..." alt="" coords="711,348,794,375"/>
-<area shape="rect" id="node36" href="communication_8h.html" title="This is the main header file, containing all data structures and defines used by the communication su..." alt="" coords="819,348,1055,375"/>
-<area shape="rect" id="node37" href="cross__state__manager_8h.html" title="This is the main header for the Linux Kernel Module which implements per&#45;kernel&#45;thread different page..." alt="" coords="1190,333,1355,389"/>
-<area shape="rect" id="node24" href="dymelor_8h.html" title="This is the Memory Management Subsystem main header file. " alt="" coords="479,437,594,464"/>
-<area shape="rect" id="node25" href="bitmap_8h.html" title="This header implements a minimal bitmap data type. " alt="" coords="631,512,778,539"/>
-<area shape="rect" id="node27" href="timer_8h.html" title="This header defines the timers which the simulator uses to monitor its internal behaviour. " alt="" coords="458,512,557,539"/>
-<area shape="rect" id="node42" href="queues_8h.html" title="Event and State queueing Subsystem main header. " alt="" coords="712,184,844,211"/>
-<area shape="rect" id="node43" href="stf_8h.html" title="Smallest Timestamp First scheduler main header. " alt="" coords="1021,184,1135,211"/>
+<area shape="rect" id="node7" href="core_8h.html" title="Core ROOT&#45;Sim functionalities. " alt="" coords="1337,587,1431,613"/>
+<area shape="rect" id="node16" href="thread_8h.html" title="Generic thread management facilities. " alt="" coords="445,661,553,688"/>
+<area shape="rect" id="node20" href="statistics_8h.html" title="Statistics module. " alt="" coords="927,184,1079,211"/>
+<area shape="rect" id="node21" href="process_8h.html" title="LP control blocks. " alt="" coords="1458,259,1609,285"/>
+<area shape="rect" id="node23" href="mm_8h.html" title="Memory Manager main header. " alt="" coords="645,348,736,375"/>
+<area shape="rect" id="node30" href="ecs_8h.html" title="Event &amp; Cross State Synchornization. " alt="" coords="2019,348,2106,375"/>
+<area shape="rect" id="node41" href="ccgs_8h.html" title="Consistent and Committed Global State. " alt="" coords="509,259,595,285"/>
+<area shape="rect" id="node42" href="binding_8h.html" title="Load sharing rules across worker threads. " alt="" coords="2384,109,2531,136"/>
+<area shape="rect" id="node43" href="scheduler_8h.html" title="The ROOT&#45;Sim scheduler main module header. " alt="" coords="1235,109,1397,136"/>
+<area shape="rect" id="node46" href="gvt_2gvt_8h.html" title="Global Virtual Time. " alt="" coords="297,437,375,464"/>
+<area shape="rect" id="node47" href="serial_8h.html" title="Serial scheduler. " alt="" coords="433,184,540,211"/>
+<area shape="rect" id="node48" href="mpi_8h.html" title="MPI Support Module. " alt="" coords="741,109,902,136"/>
+<area shape="rect" id="node50" href="init_8h.html" title="Initialization routines. " alt="" coords="952,109,1037,136"/>
+<area shape="rect" id="node8" href="ROOT-Sim_8h.html" title="ROOT&#45;Sim header for model development. " alt="" coords="621,661,720,688"/>
+<area shape="rect" id="node15" href="numerical_8h.html" title="Numerical Library. " alt="" coords="1341,661,1456,688"/>
+<area shape="rect" id="node17" href="atomic_8h.html" title="Atomic operations. " alt="" coords="778,736,889,763"/>
+<area shape="rect" id="node22" href="state_8h.html" title="LP state management. " alt="" coords="449,512,546,539"/>
+<area shape="rect" id="node31" href="list_8h.html" title="Generic Lists. " alt="" coords="1016,348,1136,375"/>
+<area shape="rect" id="node34" href="msgchannel_8h.html" title="A (M, 1) channel for messages. " alt="" coords="1473,512,1653,539"/>
+<area shape="rect" id="node35" href="ult_8h.html" title="User&#45;Level Threads Headers. " alt="" coords="1912,348,1995,375"/>
+<area shape="rect" id="node38" href="communication_8h.html" title="Communication Routines. " alt="" coords="1210,348,1446,375"/>
+<area shape="rect" id="node39" href="cross__state__manager_8h.html" title="Per&#45;thread page table. " alt="" coords="1621,333,1787,389"/>
+<area shape="rect" id="node25" href="dymelor_8h.html" title="Dynamic Memory Logger and Restorer (DyMeLoR) " alt="" coords="779,437,893,464"/>
+<area shape="rect" id="node26" href="bitmap_8h.html" title="Bitmap data type. " alt="" coords="795,512,941,539"/>
+<area shape="rect" id="node28" href="timer_8h.html" title="Timers. " alt="" coords="571,512,669,539"/>
+<area shape="rect" id="node36" href="jmp_8h.html" title="Architecture&#45;independent ULT header. " alt="" coords="1924,437,2015,464"/>
+<area shape="rect" id="node37" href="x86_2jmp_8h.html" title="x86 ULT support header " alt="" coords="1917,512,2035,539"/>
+<area shape="rect" id="node44" href="queues_8h.html" title="Message queueing subsystem. " alt="" coords="1473,184,1605,211"/>
+<area shape="rect" id="node45" href="stf_8h.html" title="O(n) scheduling algorithm. " alt="" coords="1629,184,1744,211"/>
+<area shape="rect" id="node49" href="wnd_8h.html" title="Message delivery support. " alt="" coords="728,259,891,285"/>
 </map>
 </div>
 </div>
@@ -190,6 +196,12 @@ Functions</h2></td></tr>
 Variables</h2></td></tr>
 <tr class="memitem:a7fb092f15e8652147dc8095d26793fd0"><td class="memItemLeft" align="right" valign="top">jmp_buf&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a7fb092f15e8652147dc8095d26793fd0">exit_jmp</a></td></tr>
 <tr class="separator:a7fb092f15e8652147dc8095d26793fd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5969ff4d10b8db6822d56b5ca6a7abcb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structatomic__t.html">atomic_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a5969ff4d10b8db6822d56b5ca6a7abcb">preempt_count</a></td></tr>
+<tr class="separator:a5969ff4d10b8db6822d56b5ca6a7abcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d1a2af660cb926eda5476e5444a6108"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structatomic__t.html">atomic_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a9d1a2af660cb926eda5476e5444a6108">overtick_platform</a></td></tr>
+<tr class="separator:a9d1a2af660cb926eda5476e5444a6108"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aceebdebda85d0349eafe9d5162cde4ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structatomic__t.html">atomic_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#aceebdebda85d0349eafe9d5162cde4ab">would_preempt</a></td></tr>
+<tr class="separator:aceebdebda85d0349eafe9d5162cde4ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This module contains the entry point for the simulator, and some core functions. </p>
@@ -253,55 +265,55 @@ Roberto Vitali </dd></dl>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="main_8c_af2ac8c142556588d87e6c069a4ca9894_cgraph.png" border="0" usemap="#main_8c_af2ac8c142556588d87e6c069a4ca9894_cgraph" alt=""/></div>
 <map name="main_8c_af2ac8c142556588d87e6c069a4ca9894_cgraph" id="main_8c_af2ac8c142556588d87e6c069a4ca9894_cgraph">
-<area shape="rect" id="node2" href="ccgs_8c.html#a3126158ffe568559a03e656f723667a1" title="ccgs_can_halt_simulation" alt="" coords="175,63,360,90"/>
-<area shape="rect" id="node3" href="gvt_2gvt_8c.html#a234e866bb1e37fa25dec9bb40134234d" title="get_last_gvt" alt="" coords="1091,114,1191,141"/>
-<area shape="rect" id="node4" href="core_8c.html#a79b77ff88fb4b25fa708aa0c2c04a6a8" title="simulation_error" alt="" coords="417,291,543,318"/>
-<area shape="rect" id="node5" href="core_8c.html#a5ecef0b698dbf7d8a82a2d696348b0fc" title="user_requested_exit" alt="" coords="191,342,343,369"/>
-<area shape="rect" id="node6" href="main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="187,595,348,622"/>
-<area shape="rect" id="node7" href="ecs_8h.html#a13bad948057bc0998099c1ef6ddaf46c" title="lp_alloc_thread_init" alt="" coords="408,570,552,597"/>
-<area shape="rect" id="node8" href="scheduler_8c.html#af405fd79c1cd59fccce27658d6e11941" title="initialize_worker_thread" alt="" coords="606,1014,777,1041"/>
-<area shape="rect" id="node10" href="binding_8c.html#ae26b2a8055156e8648f8ad806f5fa5b0" title="rebind_LPs" alt="" coords="873,874,963,901"/>
-<area shape="rect" id="node16" href="thread_8c.html#a9f5993fbefc809165c4b74bb8da463d0" title="thread_barrier" alt="" coords="1084,621,1197,647"/>
-<area shape="rect" id="node20" href="scheduler_8c.html#ac48128e72b303ea22d8ec641a9516b15" title="schedule" alt="" coords="879,1014,957,1041"/>
-<area shape="rect" id="node32" href="statistics_8c.html#a04ef3d7c3fb3ee25b9eb20922f859626" title="statistics_start" alt="" coords="422,925,538,951"/>
-<area shape="rect" id="node33" href="queues_8c.html#a54eca9bfa893cac072d1b1d3010c2944" title="process_bottom_halves" alt="" coords="831,317,1005,343"/>
-<area shape="rect" id="node39" href="gvt_2gvt_8c.html#a899b50ab45427cf145360ff3a6c29808" title="gvt_operations" alt="" coords="421,342,539,369"/>
-<area shape="rect" id="node46" href="core_8c.html#a8f346536ccfbe77b78ed577674beb6cf" title="simulation_shutdown" alt="" coords="613,621,769,647"/>
-<area shape="rect" id="node9" href="communication_8c.html#aba4063679ded48b45167fecb88abaa32" title="communication_init\l_thread" alt="" coords="845,1116,991,1157"/>
-<area shape="rect" id="node18" href="communication_8c.html#a56a4865196c169691525e99bae337519" title="pack_msg" alt="" coords="1310,1362,1397,1389"/>
-<area shape="rect" id="node19" href="queues_8c.html#aee531712d642cd5d4a54e613aa2c70f9" title="generate_mark" alt="" coords="858,1065,978,1091"/>
-<area shape="rect" id="node11" href="process_8c.html#acefccda9cabe7555434f95628cd9686f" title="initialize_binding\l_blocks" alt="" coords="1290,788,1417,829"/>
-<area shape="rect" id="node12" href="dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="1479,1135,1541,1162"/>
-<area shape="rect" id="node13" href="binding_8c.html#ab69384062882e0ac864d499d0e8eec14" title="LPs_block_binding" alt="" coords="1072,671,1209,698"/>
-<area shape="rect" id="node14" href="binding_8c.html#a7356539bd24b02d48f6ac1d7e37a8eb4" title="LP_knapsack" alt="" coords="1089,722,1193,749"/>
-<area shape="rect" id="node15" href="atomic_8h.html#a52336e036d2da5656c6db69b121458ba" title="atomic_dec" alt="" coords="1305,165,1401,191"/>
-<area shape="rect" id="node17" href="atomic_8h.html#ab61334506e238ad3190ce02fc53af0fb" title="atomic_inc_and_test" alt="" coords="1276,621,1431,647"/>
-<area shape="rect" id="node21" href="stf_8c.html#a726ca866bf5abd4a57d94280908b8f14" title="smallest_timestamp\l_first" alt="" coords="1064,1296,1217,1337"/>
-<area shape="rect" id="node22" href="statistics_8c.html#adb44a0a2dd40360e160ab4f5091ff324" title="statistics_post_data" alt="" coords="1278,693,1429,719"/>
-<area shape="rect" id="node23" href="state_8c.html#aef9ea0a6819ef7dffb471f1ff13190c2" title="rollback" alt="" coords="1105,823,1176,850"/>
-<area shape="rect" id="node24" href="communication_8c.html#a694613eb88ca26ef684f9bcf1bab1b59" title="send_outgoing_msgs" alt="" coords="1061,1026,1220,1053"/>
-<area shape="rect" id="node25" href="queues_8c.html#a49dd051443fe976047f5dcbc6247fa95" title="advance_to_next_event" alt="" coords="1053,1077,1228,1103"/>
-<area shape="rect" id="node26" href="control_8c.html#a86517e00b4ef4a02c6d6620a048ae5b5" title="process_control_msg" alt="" coords="1061,1362,1220,1389"/>
-<area shape="rect" id="node28" href="scheduler_8c.html#abc4b7b27d2597ef760c4305da6cf476b" title="activate_LP" alt="" coords="1093,1127,1188,1154"/>
-<area shape="rect" id="node29" href="ecs_8h.html#a013196c115e5c16f8688841e31e5285f" title="unblock_synchronized\l_objects" alt="" coords="1059,1179,1222,1220"/>
-<area shape="rect" id="node30" href="state_8c.html#ae0a3272d4a130bc40478a1ceb7f46e39" title="force_LP_checkpoint" alt="" coords="1277,901,1429,927"/>
-<area shape="rect" id="node31" href="state_8c.html#a29fbf84fed206d7f721cd03b74d082cd" title="LogState" alt="" coords="1313,1135,1393,1162"/>
-<area shape="rect" id="node27" href="process_8c.html#a2193e0386f7858db77f38146a15d3cd1" title="find_lp_by_gid" alt="" coords="1298,469,1409,495"/>
-<area shape="rect" id="node34" href="msgchannel_8c.html#afefce0fcb089577bd044cdb2f22612d5" title="get_msg" alt="" coords="1101,165,1180,191"/>
-<area shape="rect" id="node35" href="control_8c.html#a3b5b80bbe410ac635fcbda716b3f9f45" title="receive_control_msg" alt="" coords="1063,570,1218,597"/>
-<area shape="rect" id="node36" href="communication_8c.html#a323ad017762155352c38983e67e8adeb" title="msg_release" alt="" coords="1089,215,1193,242"/>
-<area shape="rect" id="node37" href="communication_8c.html#ac5d2aab0b4d3d676e4a8fd2d3d6e7bf9" title="dump_msg_content" alt="" coords="1065,266,1216,293"/>
-<area shape="rect" id="node38" href="control_8c.html#adeb3ffb0d386021321573ee9d201a042" title="anti_control_message" alt="" coords="1059,367,1222,394"/>
-<area shape="rect" id="node40" href="gvt_2gvt_8c.html#a5eca5fe72026b6f5e5ec76598bde2475" title="start_new_gvt" alt="" coords="636,165,747,191"/>
-<area shape="rect" id="node41" href="atomic_8h.html#a710db68e3b3e156fe414d7745c54ccd9" title="iCAS" alt="" coords="665,215,717,242"/>
-<area shape="rect" id="node42" href="ccgs_8c.html#aa61b97aebd6137abacc89ece948b1380" title="ccgs_reduce_termination" alt="" coords="600,266,783,293"/>
-<area shape="rect" id="node43" href="gvt_2gvt_8c.html#a895d5bfff43f3ee72f9cf7097abf609b" title="GVT_phases" alt="" coords="641,317,742,343"/>
-<area shape="rect" id="node44" href="fossil_8c.html#a2386806cf345e4b59a7ea9bee1a54f52" title="adopt_new_gvt" alt="" coords="632,367,751,394"/>
-<area shape="rect" id="node45" href="statistics_8c.html#a6653e2f6059af402d4ad97ab266f565a" title="statistics_on_gvt" alt="" coords="627,418,756,445"/>
-<area shape="rect" id="node47" href="statistics_8c.html#aeff52bbf045362270639b2baed20762b" title="statistics_stop" alt="" coords="861,671,975,698"/>
-<area shape="rect" id="node48" href="statistics_8c.html#aaa24b8c29fb4c68de95998bd43421bbb" title="statistics_fini" alt="" coords="866,722,970,749"/>
-<area shape="rect" id="node49" href="scheduler_8c.html#a8ed8d4a13d66c1d3a221fb82e72f8e0e" title="scheduler_fini" alt="" coords="863,519,973,546"/>
-<area shape="rect" id="node50" href="gvt_2gvt_8c.html#a10977cb9180000f423f184cca0b6338d" title="gvt_fini" alt="" coords="885,570,951,597"/>
+<area shape="rect" id="node2" href="ccgs_8c.html#a3126158ffe568559a03e656f723667a1" title="ccgs_can_halt_simulation" alt="" coords="175,545,360,571"/>
+<area shape="rect" id="node4" href="gvt_2gvt_8c.html#a234e866bb1e37fa25dec9bb40134234d" title="get_last_gvt" alt="" coords="890,886,990,913"/>
+<area shape="rect" id="node5" href="core_8c.html#a79b77ff88fb4b25fa708aa0c2c04a6a8" title="simulation_error" alt="" coords="433,531,559,558"/>
+<area shape="rect" id="node6" href="core_8c.html#a5ecef0b698dbf7d8a82a2d696348b0fc" title="user_requested_exit" alt="" coords="191,886,343,913"/>
+<area shape="rect" id="node7" href="main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="187,937,348,963"/>
+<area shape="rect" id="node3" href="mpi_8c.html#a1eee6c486d9315786303fa10db834e15" title="all_kernels_terminated" alt="" coords="413,481,579,507"/>
+<area shape="rect" id="node8" href="ecs_8c.html#a13bad948057bc0998099c1ef6ddaf46c" title="lp_alloc_thread_init" alt="" coords="424,785,568,811"/>
+<area shape="rect" id="node11" href="scheduler_8c.html#af405fd79c1cd59fccce27658d6e11941" title="initialize_worker_thread" alt="" coords="411,1097,581,1123"/>
+<area shape="rect" id="node13" href="binding_8c.html#ae26b2a8055156e8648f8ad806f5fa5b0" title="rebind_LPs" alt="" coords="674,1257,765,1283"/>
+<area shape="rect" id="node22" href="thread_8c.html#a9f5993fbefc809165c4b74bb8da463d0" title="thread_barrier" alt="" coords="883,987,997,1014"/>
+<area shape="rect" id="node26" href="scheduler_8c.html#ac48128e72b303ea22d8ec641a9516b15" title="schedule" alt="" coords="680,1467,759,1494"/>
+<area shape="rect" id="node31" href="mpi_8c.html#a4d5b6bd7866b813152f5ead12012dc46" title="syncronize_all" alt="" coords="441,937,551,963"/>
+<area shape="rect" id="node32" href="statistics_8c.html#a04ef3d7c3fb3ee25b9eb20922f859626" title="statistics_start" alt="" coords="438,1198,554,1225"/>
+<area shape="rect" id="node33" href="mpi_8c.html#ad243611fd168b265105bce70c193394d" title="receive_remote_msgs" alt="" coords="637,253,801,279"/>
+<area shape="rect" id="node39" href="wnd_8c.html#a157ee75a6300b4d0ae3c99afe8c3ae6a" title="prune_outgoing_queues" alt="" coords="408,582,584,609"/>
+<area shape="rect" id="node42" href="queues_8c.html#a54eca9bfa893cac072d1b1d3010c2944" title="process_bottom_halves" alt="" coords="632,667,807,694"/>
+<area shape="rect" id="node48" href="gvt_2gvt_8c.html#a899b50ab45427cf145360ff3a6c29808" title="gvt_operations" alt="" coords="881,1409,999,1435"/>
+<area shape="rect" id="node49" href="mpi_8c.html#a19d485235dd4145edaa8eabe632a77f6" title="collect_termination" alt="" coords="647,126,791,153"/>
+<area shape="rect" id="node50" href="core_8c.html#a8f346536ccfbe77b78ed577674beb6cf" title="simulation_shutdown" alt="" coords="418,987,574,1014"/>
+<area shape="rect" id="node9" href="mm_8h.html#a02d6ca4621e0cbbd0e84524a1f6a18dc" title="get_base_pointer" alt="" coords="653,718,786,745"/>
+<area shape="rect" id="node10" href="ecs_8c.html#a246a06363a029182400a72adddf4df62" title="rootsim_cross_state\l_dependency_handler" alt="" coords="638,769,801,811"/>
+<area shape="rect" id="node12" href="communication_8c.html#aba4063679ded48b45167fecb88abaa32" title="communication_init\l_thread" alt="" coords="646,1089,793,1131"/>
+<area shape="rect" id="node23" href="communication_8c.html#a56a4865196c169691525e99bae337519" title="pack_msg" alt="" coords="676,481,763,507"/>
+<area shape="rect" id="node25" href="queues_8c.html#aee531712d642cd5d4a54e613aa2c70f9" title="generate_mark" alt="" coords="659,1155,779,1182"/>
+<area shape="rect" id="node30" href="preempt_8c.html#ad6eb628536a4101250b7118f1edf9017" title="enable_preemption" alt="" coords="646,1038,793,1065"/>
+<area shape="rect" id="node14" href="process_8c.html#acefccda9cabe7555434f95628cd9686f" title="initialize_binding\l_blocks" alt="" coords="877,1089,1003,1131"/>
+<area shape="rect" id="node15" href="dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="1117,835,1180,862"/>
+<area shape="rect" id="node16" href="binding_8c.html#ab69384062882e0ac864d499d0e8eec14" title="LPs_block_binding" alt="" coords="871,1257,1009,1283"/>
+<area shape="rect" id="node17" href="binding_8c.html#a7356539bd24b02d48f6ac1d7e37a8eb4" title="LP_knapsack" alt="" coords="888,1307,992,1334"/>
+<area shape="rect" id="node18" href="binding_8c.html#ae692b28f95453355b4f37a3c65f8d934" title="post_local_reduction" alt="" coords="863,1358,1017,1385"/>
+<area shape="rect" id="node19" href="atomic_8h.html#a52336e036d2da5656c6db69b121458ba" title="atomic_dec" alt="" coords="1101,1071,1197,1098"/>
+<area shape="rect" id="node20" href="binding_8c.html#a0d2a56817137b834fb61e5047199cb70" title="install_binding" alt="" coords="884,1206,996,1233"/>
+<area shape="rect" id="node21" href="preempt_8c.html#abca549e4ddfb28ffd31e0014c632e774" title="reset_min_in_transit" alt="" coords="864,937,1016,963"/>
+<area shape="rect" id="node24" href="communication_8c.html#ab957dc2cd186382c50ef8cfde9761909" title="get_msg_from_slab" alt="" coords="866,430,1014,457"/>
+<area shape="rect" id="node27" href="stf_8c.html#a726ca866bf5abd4a57d94280908b8f14" title="O(n) scheduler. " alt="" coords="863,1460,1017,1501"/>
+<area shape="rect" id="node28" href="statistics_8c.html#adb44a0a2dd40360e160ab4f5091ff324" title="statistics_post_data" alt="" coords="1073,1467,1224,1494"/>
+<area shape="rect" id="node29" href="state_8c.html#aef9ea0a6819ef7dffb471f1ff13190c2" title="rollback" alt="" coords="905,1577,975,1603"/>
+<area shape="rect" id="node34" href="atomic_8h.html#afd2c05472274bd1c73d5408a213cf429" title="spin_trylock" alt="" coords="891,75,989,102"/>
+<area shape="rect" id="node35" href="process_8c.html#a2193e0386f7858db77f38146a15d3cd1" title="find_lp_by_gid" alt="" coords="1093,582,1204,609"/>
+<area shape="rect" id="node36" href="communication_8c.html#aebec05b86f3467473116d555954b80f4" title="validate_msg" alt="" coords="1095,227,1202,254"/>
+<area shape="rect" id="node37" href="queues_8c.html#a9ff164dd6a938afa7e892f4028c2a033" title="insert_bottom_half" alt="" coords="869,227,1011,254"/>
+<area shape="rect" id="node38" href="atomic_8h.html#a4e8c9d1c6101995f1ecd2141d77e4824" title="spin_unlock" alt="" coords="1101,75,1197,102"/>
+<area shape="rect" id="node40" href="wnd_8c.html#a930e160f86a257b5143e2d59205d8002" title="prune_outgoing_queue" alt="" coords="635,75,804,102"/>
+<area shape="rect" id="node41" href="communication_8c.html#a323ad017762155352c38983e67e8adeb" title="msg_release" alt="" coords="888,379,992,406"/>
+<area shape="rect" id="node43" href="msgchannel_8c.html#afefce0fcb089577bd044cdb2f22612d5" title="get_msg" alt="" coords="901,531,979,558"/>
+<area shape="rect" id="node44" href="control_8c.html#a3b5b80bbe410ac635fcbda716b3f9f45" title="receive_control_msg" alt="" coords="863,582,1017,609"/>
+<area shape="rect" id="node45" href="communication_8c.html#ac5d2aab0b4d3d676e4a8fd2d3d6e7bf9" title="dump_msg_content" alt="" coords="865,734,1015,761"/>
+<area shape="rect" id="node46" href="communication_2gvt_8c.html#a5f8f575e93930869ac20641c7305e850" title="register_incoming_msg" alt="" coords="855,785,1025,811"/>
+<area shape="rect" id="node47" href="control_8c.html#adeb3ffb0d386021321573ee9d201a042" title="anti_control_message" alt="" coords="859,633,1021,659"/>
 </map>
 </div>
 </p>
@@ -363,55 +375,55 @@ Roberto Vitali </dd></dl>
 <div id="dynsection-3-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="main_8c_a3c04138a5bfe5d72780bb7e82a18e627_cgraph.png" border="0" usemap="#main_8c_a3c04138a5bfe5d72780bb7e82a18e627_cgraph" alt=""/></div>
 <map name="main_8c_a3c04138a5bfe5d72780bb7e82a18e627_cgraph" id="main_8c_a3c04138a5bfe5d72780bb7e82a18e627_cgraph">
-<area shape="rect" id="node2" href="init_8c.html#a417eb072179d09f441dbae3125049e46" title="SystemInit" alt="" coords="143,433,234,459"/>
-<area shape="rect" id="node32" href="serial_8c.html#aa0dd072d0e792fb9c65220bdddf69a0e" title="serial_simulation" alt="" coords="347,1471,477,1498"/>
-<area shape="rect" id="node40" href="core_8c.html#a79b77ff88fb4b25fa708aa0c2c04a6a8" title="simulation_error" alt="" coords="581,1117,708,1143"/>
-<area shape="rect" id="node41" href="thread_8c.html#a7248efe5c9432ead45b781036c5d7394" title="create_threads" alt="" coords="129,813,248,839"/>
-<area shape="rect" id="node43" href="main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="108,1117,269,1143"/>
-<area shape="rect" id="node3" href="dymelor_8h.html#a794968edf9912ed798254397f38d8d7f" title="ecs_init" alt="" coords="377,205,447,231"/>
-<area shape="rect" id="node4" href="serial_8c.html#a92ef4fbf76dd3f1327f1190c0f8ff4c6" title="SerialScheduleNewEvent" alt="" coords="555,53,735,79"/>
-<area shape="rect" id="node7" href="process_8c.html#ad58c55ea23fdc3d938b57135b6116feb" title="initialize_lps" alt="" coords="595,407,694,434"/>
-<area shape="rect" id="node16" href="numerical_8c.html#a9ac166054881e10f90ef353737b30c50" title="numerical_init" alt="" coords="357,458,467,485"/>
-<area shape="rect" id="node20" href="statistics_8c.html#a4a201b8310d7d1c38ee31035202c8ee8" title="statistics_init" alt="" coords="592,711,697,738"/>
-<area shape="rect" id="node22" href="serial_8c.html#ad2b461e9e9044364a28a61cfadcacdd8" title="serial_init" alt="" coords="371,306,453,333"/>
-<area shape="rect" id="node24" href="communication_8c.html#af373ee848636c1ddcfb8c856e924f5dd" title="ParallelScheduleNewEvent" alt="" coords="317,509,507,535"/>
-<area shape="rect" id="node26" href="core_8c.html#a7fb819521b1ab5fc7644ad216fe7b465" title="base_init" alt="" coords="373,559,451,586"/>
-<area shape="rect" id="node27" href="mm_8h.html#af1aa0c7cf4139b859f60b66d6bbd769f" title="segment_init" alt="" coords="359,610,465,637"/>
-<area shape="rect" id="node28" href="scheduler_8c.html#ab258cc2856e5f6bb125907cc23358fbd" title="scheduler_init" alt="" coords="357,661,467,687"/>
-<area shape="rect" id="node29" href="communication_8c.html#a9d1c122bc3538d94d6fd8328cd6c6a2d" title="communication_init" alt="" coords="339,103,485,130"/>
-<area shape="rect" id="node30" href="gvt_2gvt_8c.html#aa6c9337f3fccf8513b8fad1533f743c4" title="gvt_init" alt="" coords="840,154,908,181"/>
-<area shape="rect" id="node31" href="core_8c.html#a9835611a359d96732cb2531b08212a94" title="initialization_complete" alt="" coords="330,154,494,181"/>
-<area shape="rect" id="node5" href="dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="1013,483,1076,510"/>
-<area shape="rect" id="node6" href="calqueue_8c.html#abb2b24c674d45ee24727e52597008041" title="calqueue_put" alt="" coords="820,53,928,79"/>
-<area shape="rect" id="node8" href="core_8c.html#a0c0887000d8e04c515c4a9a5bf2f5995" title="distribute_lps_on_kernels" alt="" coords="783,458,965,485"/>
-<area shape="rect" id="node9" href="core_8c.html#a6793e4c70d69277f24ff0e494ed8ed10" title="find_kernel_by_gid" alt="" coords="805,205,943,231"/>
-<area shape="rect" id="node10" href="mm_8h.html#a55b0b8e4a65be959f5adb5343f36ff94" title="initialize_memory_map" alt="" coords="789,509,959,535"/>
-<area shape="rect" id="node11" href="msgchannel_8c.html#a9da640576408c47378535edae6e4fec4" title="init_channel" alt="" coords="825,559,923,586"/>
-<area shape="rect" id="node12" href="core_8h.html#a445f9514b02741f0b338441e1a67ebea" title="OnGVT_light" alt="" coords="824,255,924,282"/>
-<area shape="rect" id="node13" href="core_8h.html#aec2db346833125fb930007190cd1a172" title="ProcessEvent_light" alt="" coords="803,762,945,789"/>
-<area shape="rect" id="node14" href="state_8c.html#a4c21217327a62c03f9a3934b5898797a" title="set_checkpoint_period" alt="" coords="791,306,957,333"/>
-<area shape="rect" id="node15" href="scheduler_8c.html#a1b1b085c6b05a9d202a1629dcd71cffe" title="LP_main_loop" alt="" coords="819,357,929,383"/>
-<area shape="rect" id="node17" href="numerical_8c.html#a9adf4681a7f461710a82fe776f288a5b" title="load_seed" alt="" coords="601,534,688,561"/>
-<area shape="rect" id="node19" href="numerical_8c.html#a72bc4f303e6586d86eb83f6d41753e86" title="sanitize_seed" alt="" coords="590,458,699,485"/>
-<area shape="rect" id="node18" href="statistics_8c.html#ac7254a0e4869450a54de7d4a07d96cb2" title="_mkdir" alt="" coords="841,661,907,687"/>
-<area shape="rect" id="node21" href="dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a" title="rsfree" alt="" coords="845,1471,903,1498"/>
-<area shape="rect" id="node23" href="calqueue_8c.html#adcfbe235cb9e2ef41cc8b565beb8fd6a" title="calqueue_init" alt="" coords="591,306,698,333"/>
-<area shape="rect" id="node25" href="communication_8c.html#a56a4865196c169691525e99bae337519" title="pack_msg" alt="" coords="601,610,688,637"/>
-<area shape="rect" id="node33" href="statistics_8c.html#a04ef3d7c3fb3ee25b9eb20922f859626" title="statistics_start" alt="" coords="587,1319,703,1346"/>
-<area shape="rect" id="node34" href="calqueue_8c.html#a180e22d3d13d9685adb6326484a1b418" title="calqueue_get" alt="" coords="591,1639,699,1666"/>
-<area shape="rect" id="node35" href="process_8c.html#a2193e0386f7858db77f38146a15d3cd1" title="find_lp_by_gid" alt="" coords="589,1269,700,1295"/>
-<area shape="rect" id="node36" href="statistics_8c.html#a097c5f0443d5eee18f283ff46a80cadf" title="statistics_post_data\l_serial" alt="" coords="569,1573,720,1615"/>
-<area shape="rect" id="node37" href="statistics_8c.html#a1d37886727e2f2ada6aa171f147abb01" title="statistics_on_gvt_serial" alt="" coords="559,1522,730,1549"/>
-<area shape="rect" id="node38" href="core_8c.html#a8f346536ccfbe77b78ed577674beb6cf" title="simulation_shutdown" alt="" coords="567,1370,723,1397"/>
-<area shape="rect" id="node39" href="thread_8c.html#a9f5993fbefc809165c4b74bb8da463d0" title="thread_barrier" alt="" coords="817,1066,931,1093"/>
-<area shape="rect" id="node42" href="thread_8c.html#a9a978a7c6a81cdde2633f5ef7e01b7f4" title="__helper_create_thread" alt="" coords="325,813,499,839"/>
-<area shape="rect" id="node44" href="ecs_8h.html#a13bad948057bc0998099c1ef6ddaf46c" title="lp_alloc_thread_init" alt="" coords="340,1066,484,1093"/>
-<area shape="rect" id="node45" href="scheduler_8c.html#af405fd79c1cd59fccce27658d6e11941" title="initialize_worker_thread" alt="" coords="327,914,497,941"/>
-<area shape="rect" id="node46" href="binding_8c.html#ae26b2a8055156e8648f8ad806f5fa5b0" title="rebind_LPs" alt="" coords="599,863,690,890"/>
-<area shape="rect" id="node47" href="scheduler_8c.html#ac48128e72b303ea22d8ec641a9516b15" title="schedule" alt="" coords="605,965,684,991"/>
-<area shape="rect" id="node48" href="main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="351,1117,473,1143"/>
-<area shape="rect" id="node49" href="queues_8c.html#a54eca9bfa893cac072d1b1d3010c2944" title="process_bottom_halves" alt="" coords="325,1269,499,1295"/>
-<area shape="rect" id="node50" href="gvt_2gvt_8c.html#a899b50ab45427cf145360ff3a6c29808" title="gvt_operations" alt="" coords="353,1167,471,1194"/>
+<area shape="rect" id="node2" href="init_8c.html#a417eb072179d09f441dbae3125049e46" title="SystemInit" alt="" coords="143,519,234,546"/>
+<area shape="rect" id="node26" href="thread_8h.html#a170621cccd6340430706508452359dd5" title="set_affinity" alt="" coords="599,63,690,90"/>
+<area shape="rect" id="node27" href="serial_8c.html#aa0dd072d0e792fb9c65220bdddf69a0e" title="serial_simulation" alt="" coords="124,1081,253,1107"/>
+<area shape="rect" id="node36" href="core_8c.html#a79b77ff88fb4b25fa708aa0c2c04a6a8" title="simulation_error" alt="" coords="581,1979,708,2006"/>
+<area shape="rect" id="node37" href="thread_8c.html#a7248efe5c9432ead45b781036c5d7394" title="create_threads" alt="" coords="129,89,248,115"/>
+<area shape="rect" id="node39" href="main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="108,1625,269,1651"/>
+<area shape="rect" id="node3" href="mpi_8c.html#aa28df986cba93d0b18e22584f3d7a68e" title="mpi_init" alt="" coords="376,190,448,217"/>
+<area shape="rect" id="node4" href="dymelor_8h.html#a794968edf9912ed798254397f38d8d7f" title="ecs_init" alt="" coords="377,241,447,267"/>
+<area shape="rect" id="node5" href="serial_8c.html#a92ef4fbf76dd3f1327f1190c0f8ff4c6" title="SerialScheduleNewEvent" alt="" coords="555,469,735,495"/>
+<area shape="rect" id="node8" href="process_8c.html#ad58c55ea23fdc3d938b57135b6116feb" title="initialize_lps" alt="" coords="595,849,694,875"/>
+<area shape="rect" id="node14" href="numerical_8c.html#a9ac166054881e10f90ef353737b30c50" title="numerical_init" alt="" coords="357,291,467,318"/>
+<area shape="rect" id="node15" href="statistics_8c.html#a4a201b8310d7d1c38ee31035202c8ee8" title="statistics_init" alt="" coords="359,646,465,673"/>
+<area shape="rect" id="node17" href="serial_8c.html#ad2b461e9e9044364a28a61cfadcacdd8" title="serial_init" alt="" coords="371,545,453,571"/>
+<area shape="rect" id="node18" href="communication_8c.html#af373ee848636c1ddcfb8c856e924f5dd" title="ParallelScheduleNewEvent" alt="" coords="317,342,507,369"/>
+<area shape="rect" id="node19" href="core_8c.html#a7fb819521b1ab5fc7644ad216fe7b465" title="base_init" alt="" coords="373,393,451,419"/>
+<area shape="rect" id="node20" href="mm_8h.html#af1aa0c7cf4139b859f60b66d6bbd769f" title="segment_init" alt="" coords="359,443,465,470"/>
+<area shape="rect" id="node21" href="ecs_8c.html#a87cf3267c85a748dc7a0c9ab5d3f696d" title="remote_memory_init" alt="" coords="567,747,723,774"/>
+<area shape="rect" id="node22" href="scheduler_8c.html#ab258cc2856e5f6bb125907cc23358fbd" title="scheduler_init" alt="" coords="357,494,467,521"/>
+<area shape="rect" id="node23" href="communication_8c.html#a9d1c122bc3538d94d6fd8328cd6c6a2d" title="communication_init" alt="" coords="339,697,485,723"/>
+<area shape="rect" id="node24" href="gvt_2gvt_8c.html#aa6c9337f3fccf8513b8fad1533f743c4" title="gvt_init" alt="" coords="840,595,908,622"/>
+<area shape="rect" id="node25" href="core_8c.html#a9835611a359d96732cb2531b08212a94" title="initialization_complete" alt="" coords="330,747,494,774"/>
+<area shape="rect" id="node6" href="dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="1013,697,1076,723"/>
+<area shape="rect" id="node7" href="calqueue_8c.html#abb2b24c674d45ee24727e52597008041" title="calqueue_put" alt="" coords="820,443,928,470"/>
+<area shape="rect" id="node9" href="core_8c.html#a0c0887000d8e04c515c4a9a5bf2f5995" title="distribute_lps_on_kernels" alt="" coords="783,798,965,825"/>
+<area shape="rect" id="node10" href="core_8c.html#a6793e4c70d69277f24ff0e494ed8ed10" title="find_kernel_by_gid" alt="" coords="805,697,943,723"/>
+<area shape="rect" id="node11" href="mm_8h.html#a55b0b8e4a65be959f5adb5343f36ff94" title="initialize_memory_map" alt="" coords="789,849,959,875"/>
+<area shape="rect" id="node12" href="msgchannel_8c.html#a9da640576408c47378535edae6e4fec4" title="init_channel" alt="" coords="825,899,923,926"/>
+<area shape="rect" id="node13" href="core_8h.html#aec2db346833125fb930007190cd1a172" title="ProcessEvent_light" alt="" coords="803,1059,945,1086"/>
+<area shape="rect" id="node16" href="dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a" title="rsfree" alt="" coords="615,925,674,951"/>
+<area shape="rect" id="node28" href="statistics_8c.html#a04ef3d7c3fb3ee25b9eb20922f859626" title="statistics_start" alt="" coords="354,1321,470,1347"/>
+<area shape="rect" id="node29" href="calqueue_8c.html#a180e22d3d13d9685adb6326484a1b418" title="calqueue_get" alt="" coords="358,950,466,977"/>
+<area shape="rect" id="node30" href="process_8c.html#a2193e0386f7858db77f38146a15d3cd1" title="find_lp_by_gid" alt="" coords="589,1371,700,1398"/>
+<area shape="rect" id="node31" href="xxhash_8c.html#aa84e31069652b6e0dc85fa26aef022fe" title="XXH64" alt="" coords="380,1051,444,1078"/>
+<area shape="rect" id="node32" href="statistics_8c.html#a097c5f0443d5eee18f283ff46a80cadf" title="statistics_post_data\l_serial" alt="" coords="337,1103,487,1144"/>
+<area shape="rect" id="node33" href="statistics_8c.html#a1d37886727e2f2ada6aa171f147abb01" title="statistics_on_gvt_serial" alt="" coords="327,899,497,926"/>
+<area shape="rect" id="node34" href="core_8c.html#a8f346536ccfbe77b78ed577674beb6cf" title="simulation_shutdown" alt="" coords="334,1219,490,1246"/>
+<area shape="rect" id="node35" href="thread_8c.html#a9f5993fbefc809165c4b74bb8da463d0" title="thread_barrier" alt="" coords="817,1574,931,1601"/>
+<area shape="rect" id="node38" href="thread_8c.html#a9a978a7c6a81cdde2633f5ef7e01b7f4" title="__helper_create_thread" alt="" coords="325,89,499,115"/>
+<area shape="rect" id="node40" href="ecs_8c.html#a13bad948057bc0998099c1ef6ddaf46c" title="lp_alloc_thread_init" alt="" coords="340,1675,484,1702"/>
+<area shape="rect" id="node41" href="scheduler_8c.html#af405fd79c1cd59fccce27658d6e11941" title="initialize_worker_thread" alt="" coords="327,1574,497,1601"/>
+<area shape="rect" id="node42" href="binding_8c.html#ae26b2a8055156e8648f8ad806f5fa5b0" title="rebind_LPs" alt="" coords="599,1498,690,1525"/>
+<area shape="rect" id="node43" href="scheduler_8c.html#ac48128e72b303ea22d8ec641a9516b15" title="schedule" alt="" coords="605,1675,684,1702"/>
+<area shape="rect" id="node44" href="mpi_8c.html#a4d5b6bd7866b813152f5ead12012dc46" title="syncronize_all" alt="" coords="589,1827,700,1854"/>
+<area shape="rect" id="node45" href="main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="351,1929,473,1955"/>
+<area shape="rect" id="node46" href="mpi_8c.html#ad243611fd168b265105bce70c193394d" title="receive_remote_msgs" alt="" coords="330,1422,494,1449"/>
+<area shape="rect" id="node47" href="wnd_8c.html#a157ee75a6300b4d0ae3c99afe8c3ae6a" title="prune_outgoing_queues" alt="" coords="324,1878,500,1905"/>
+<area shape="rect" id="node48" href="queues_8c.html#a54eca9bfa893cac072d1b1d3010c2944" title="process_bottom_halves" alt="" coords="325,1371,499,1398"/>
+<area shape="rect" id="node49" href="gvt_2gvt_8c.html#a899b50ab45427cf145360ff3a6c29808" title="gvt_operations" alt="" coords="353,1523,471,1550"/>
+<area shape="rect" id="node50" href="mpi_8c.html#a19d485235dd4145edaa8eabe632a77f6" title="collect_termination" alt="" coords="340,1625,484,1651"/>
 </map>
 </div>
 </p>
@@ -456,55 +468,55 @@ Roberto Vitali </dd></dl>
 <div id="dynsection-4-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="main_8c_aa729cb27350c33119484501e13df4fec_cgraph.png" border="0" usemap="#main_8c_aa729cb27350c33119484501e13df4fec_cgraph" alt=""/></div>
 <map name="main_8c_aa729cb27350c33119484501e13df4fec_cgraph" id="main_8c_aa729cb27350c33119484501e13df4fec_cgraph">
-<area shape="rect" id="node2" href="ecs_8h.html#a13bad948057bc0998099c1ef6ddaf46c" title="lp_alloc_thread_init" alt="" coords="215,187,359,213"/>
-<area shape="rect" id="node3" href="scheduler_8c.html#af405fd79c1cd59fccce27658d6e11941" title="initialize_worker_thread" alt="" coords="414,288,585,315"/>
-<area shape="rect" id="node5" href="binding_8c.html#ae26b2a8055156e8648f8ad806f5fa5b0" title="rebind_LPs" alt="" coords="682,95,773,121"/>
-<area shape="rect" id="node11" href="thread_8c.html#a9f5993fbefc809165c4b74bb8da463d0" title="thread_barrier" alt="" coords="893,364,1007,391"/>
-<area shape="rect" id="node15" href="scheduler_8c.html#ac48128e72b303ea22d8ec641a9516b15" title="schedule" alt="" coords="688,769,767,796"/>
-<area shape="rect" id="node27" href="statistics_8c.html#a04ef3d7c3fb3ee25b9eb20922f859626" title="statistics_start" alt="" coords="229,516,345,543"/>
-<area shape="rect" id="node28" href="main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="226,465,347,492"/>
-<area shape="rect" id="node31" href="core_8c.html#a79b77ff88fb4b25fa708aa0c2c04a6a8" title="simulation_error" alt="" coords="436,617,563,644"/>
-<area shape="rect" id="node33" href="queues_8c.html#a54eca9bfa893cac072d1b1d3010c2944" title="process_bottom_halves" alt="" coords="640,1180,815,1207"/>
-<area shape="rect" id="node39" href="gvt_2gvt_8c.html#a899b50ab45427cf145360ff3a6c29808" title="gvt_operations" alt="" coords="228,871,345,897"/>
-<area shape="rect" id="node46" href="core_8c.html#a8f346536ccfbe77b78ed577674beb6cf" title="simulation_shutdown" alt="" coords="421,516,577,543"/>
-<area shape="rect" id="node4" href="communication_8c.html#aba4063679ded48b45167fecb88abaa32" title="communication_init\l_thread" alt="" coords="654,197,801,238"/>
-<area shape="rect" id="node13" href="communication_8c.html#a56a4865196c169691525e99bae337519" title="pack_msg" alt="" coords="1119,288,1206,315"/>
-<area shape="rect" id="node14" href="queues_8c.html#aee531712d642cd5d4a54e613aa2c70f9" title="generate_mark" alt="" coords="667,145,787,172"/>
-<area shape="rect" id="node6" href="process_8c.html#acefccda9cabe7555434f95628cd9686f" title="initialize_binding\l_blocks" alt="" coords="1099,95,1226,137"/>
-<area shape="rect" id="node7" href="dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="1288,288,1351,315"/>
-<area shape="rect" id="node8" href="binding_8c.html#ab69384062882e0ac864d499d0e8eec14" title="LPs_block_binding" alt="" coords="881,5,1019,32"/>
-<area shape="rect" id="node9" href="binding_8c.html#a7356539bd24b02d48f6ac1d7e37a8eb4" title="LP_knapsack" alt="" coords="898,56,1002,83"/>
-<area shape="rect" id="node10" href="atomic_8h.html#a52336e036d2da5656c6db69b121458ba" title="atomic_dec" alt="" coords="1115,415,1211,441"/>
-<area shape="rect" id="node12" href="atomic_8h.html#ab61334506e238ad3190ce02fc53af0fb" title="atomic_inc_and_test" alt="" coords="1085,364,1240,391"/>
-<area shape="rect" id="node16" href="stf_8c.html#a726ca866bf5abd4a57d94280908b8f14" title="smallest_timestamp\l_first" alt="" coords="873,785,1027,826"/>
-<area shape="rect" id="node17" href="statistics_8c.html#adb44a0a2dd40360e160ab4f5091ff324" title="statistics_post_data" alt="" coords="1087,1307,1238,1333"/>
-<area shape="rect" id="node18" href="state_8c.html#aef9ea0a6819ef7dffb471f1ff13190c2" title="rollback" alt="" coords="915,1155,985,1181"/>
-<area shape="rect" id="node19" href="communication_8c.html#a694613eb88ca26ef684f9bcf1bab1b59" title="send_outgoing_msgs" alt="" coords="871,567,1029,593"/>
-<area shape="rect" id="node20" href="queues_8c.html#a49dd051443fe976047f5dcbc6247fa95" title="advance_to_next_event" alt="" coords="863,617,1037,644"/>
-<area shape="rect" id="node21" href="control_8c.html#a86517e00b4ef4a02c6d6620a048ae5b5" title="process_control_msg" alt="" coords="871,516,1029,543"/>
-<area shape="rect" id="node23" href="scheduler_8c.html#abc4b7b27d2597ef760c4305da6cf476b" title="activate_LP" alt="" coords="903,668,997,695"/>
-<area shape="rect" id="node24" href="ecs_8h.html#a013196c115e5c16f8688841e31e5285f" title="unblock_synchronized\l_objects" alt="" coords="869,719,1031,761"/>
-<area shape="rect" id="node25" href="state_8c.html#ae0a3272d4a130bc40478a1ceb7f46e39" title="force_LP_checkpoint" alt="" coords="1087,851,1239,877"/>
-<area shape="rect" id="node26" href="state_8c.html#a29fbf84fed206d7f721cd03b74d082cd" title="LogState" alt="" coords="1123,901,1203,928"/>
-<area shape="rect" id="node22" href="process_8c.html#a2193e0386f7858db77f38146a15d3cd1" title="find_lp_by_gid" alt="" coords="1107,1079,1218,1105"/>
-<area shape="rect" id="node29" href="ccgs_8c.html#a3126158ffe568559a03e656f723667a1" title="ccgs_can_halt_simulation" alt="" coords="407,415,592,441"/>
-<area shape="rect" id="node30" href="gvt_2gvt_8c.html#a234e866bb1e37fa25dec9bb40134234d" title="get_last_gvt" alt="" coords="900,952,1000,979"/>
-<area shape="rect" id="node32" href="core_8c.html#a5ecef0b698dbf7d8a82a2d696348b0fc" title="user_requested_exit" alt="" coords="423,465,575,492"/>
-<area shape="rect" id="node34" href="msgchannel_8c.html#afefce0fcb089577bd044cdb2f22612d5" title="get_msg" alt="" coords="911,1003,989,1029"/>
-<area shape="rect" id="node35" href="control_8c.html#a3b5b80bbe410ac635fcbda716b3f9f45" title="receive_control_msg" alt="" coords="873,1053,1027,1080"/>
-<area shape="rect" id="node36" href="communication_8c.html#a323ad017762155352c38983e67e8adeb" title="msg_release" alt="" coords="898,1307,1002,1333"/>
-<area shape="rect" id="node37" href="communication_8c.html#ac5d2aab0b4d3d676e4a8fd2d3d6e7bf9" title="dump_msg_content" alt="" coords="875,1357,1025,1384"/>
-<area shape="rect" id="node38" href="control_8c.html#adeb3ffb0d386021321573ee9d201a042" title="anti_control_message" alt="" coords="869,1104,1031,1131"/>
-<area shape="rect" id="node40" href="gvt_2gvt_8c.html#a5eca5fe72026b6f5e5ec76598bde2475" title="start_new_gvt" alt="" coords="444,921,555,948"/>
-<area shape="rect" id="node41" href="atomic_8h.html#a710db68e3b3e156fe414d7745c54ccd9" title="iCAS" alt="" coords="473,972,525,999"/>
-<area shape="rect" id="node42" href="ccgs_8c.html#aa61b97aebd6137abacc89ece948b1380" title="ccgs_reduce_termination" alt="" coords="408,1023,591,1049"/>
-<area shape="rect" id="node43" href="gvt_2gvt_8c.html#a895d5bfff43f3ee72f9cf7097abf609b" title="GVT_phases" alt="" coords="449,769,550,796"/>
-<area shape="rect" id="node44" href="fossil_8c.html#a2386806cf345e4b59a7ea9bee1a54f52" title="adopt_new_gvt" alt="" coords="440,820,559,847"/>
-<area shape="rect" id="node45" href="statistics_8c.html#a6653e2f6059af402d4ad97ab266f565a" title="statistics_on_gvt" alt="" coords="435,871,564,897"/>
-<area shape="rect" id="node47" href="statistics_8c.html#aeff52bbf045362270639b2baed20762b" title="statistics_stop" alt="" coords="670,415,785,441"/>
-<area shape="rect" id="node48" href="statistics_8c.html#aaa24b8c29fb4c68de95998bd43421bbb" title="statistics_fini" alt="" coords="675,617,779,644"/>
-<area shape="rect" id="node49" href="scheduler_8c.html#a8ed8d4a13d66c1d3a221fb82e72f8e0e" title="scheduler_fini" alt="" coords="673,516,782,543"/>
-<area shape="rect" id="node50" href="gvt_2gvt_8c.html#a10977cb9180000f423f184cca0b6338d" title="gvt_fini" alt="" coords="694,567,761,593"/>
+<area shape="rect" id="node2" href="ecs_8c.html#a13bad948057bc0998099c1ef6ddaf46c" title="lp_alloc_thread_init" alt="" coords="231,224,375,251"/>
+<area shape="rect" id="node5" href="scheduler_8c.html#af405fd79c1cd59fccce27658d6e11941" title="initialize_worker_thread" alt="" coords="217,608,388,635"/>
+<area shape="rect" id="node7" href="binding_8c.html#ae26b2a8055156e8648f8ad806f5fa5b0" title="rebind_LPs" alt="" coords="486,275,577,301"/>
+<area shape="rect" id="node16" href="thread_8c.html#a9f5993fbefc809165c4b74bb8da463d0" title="thread_barrier" alt="" coords="701,376,814,403"/>
+<area shape="rect" id="node20" href="scheduler_8c.html#ac48128e72b303ea22d8ec641a9516b15" title="schedule" alt="" coords="492,747,571,773"/>
+<area shape="rect" id="node26" href="mpi_8c.html#a4d5b6bd7866b813152f5ead12012dc46" title="syncronize_all" alt="" coords="247,507,358,533"/>
+<area shape="rect" id="node27" href="statistics_8c.html#a04ef3d7c3fb3ee25b9eb20922f859626" title="statistics_start" alt="" coords="245,747,361,773"/>
+<area shape="rect" id="node28" href="main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="242,1051,363,1077"/>
+<area shape="rect" id="node31" href="core_8c.html#a79b77ff88fb4b25fa708aa0c2c04a6a8" title="simulation_error" alt="" coords="468,1203,595,1229"/>
+<area shape="rect" id="node33" href="mpi_8c.html#ad243611fd168b265105bce70c193394d" title="receive_remote_msgs" alt="" coords="449,949,613,976"/>
+<area shape="rect" id="node39" href="wnd_8c.html#a157ee75a6300b4d0ae3c99afe8c3ae6a" title="prune_outgoing_queues" alt="" coords="215,1000,391,1027"/>
+<area shape="rect" id="node42" href="queues_8c.html#a54eca9bfa893cac072d1b1d3010c2944" title="process_bottom_halves" alt="" coords="444,1405,619,1432"/>
+<area shape="rect" id="node48" href="gvt_2gvt_8c.html#a899b50ab45427cf145360ff3a6c29808" title="gvt_operations" alt="" coords="699,848,816,875"/>
+<area shape="rect" id="node49" href="mpi_8c.html#a19d485235dd4145edaa8eabe632a77f6" title="collect_termination" alt="" coords="459,899,603,925"/>
+<area shape="rect" id="node50" href="core_8c.html#a8f346536ccfbe77b78ed577674beb6cf" title="simulation_shutdown" alt="" coords="225,325,381,352"/>
+<area shape="rect" id="node3" href="mm_8h.html#a02d6ca4621e0cbbd0e84524a1f6a18dc" title="get_base_pointer" alt="" coords="465,224,598,251"/>
+<area shape="rect" id="node4" href="ecs_8c.html#a246a06363a029182400a72adddf4df62" title="rootsim_cross_state\l_dependency_handler" alt="" coords="450,158,613,199"/>
+<area shape="rect" id="node6" href="communication_8c.html#aba4063679ded48b45167fecb88abaa32" title="communication_init\l_thread" alt="" coords="458,630,605,671"/>
+<area shape="rect" id="node17" href="communication_8c.html#a56a4865196c169691525e99bae337519" title="pack_msg" alt="" coords="488,528,575,555"/>
+<area shape="rect" id="node19" href="queues_8c.html#aee531712d642cd5d4a54e613aa2c70f9" title="generate_mark" alt="" coords="471,696,591,723"/>
+<area shape="rect" id="node25" href="preempt_8c.html#ad6eb628536a4101250b7118f1edf9017" title="enable_preemption" alt="" coords="458,579,605,605"/>
+<area shape="rect" id="node8" href="process_8c.html#acefccda9cabe7555434f95628cd9686f" title="initialize_binding\l_blocks" alt="" coords="694,158,821,199"/>
+<area shape="rect" id="node9" href="dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="935,296,997,323"/>
+<area shape="rect" id="node10" href="binding_8c.html#ab69384062882e0ac864d499d0e8eec14" title="LPs_block_binding" alt="" coords="689,107,826,133"/>
+<area shape="rect" id="node11" href="binding_8c.html#a7356539bd24b02d48f6ac1d7e37a8eb4" title="LP_knapsack" alt="" coords="705,224,809,251"/>
+<area shape="rect" id="node12" href="binding_8c.html#ae692b28f95453355b4f37a3c65f8d934" title="post_local_reduction" alt="" coords="681,275,834,301"/>
+<area shape="rect" id="node13" href="atomic_8h.html#a52336e036d2da5656c6db69b121458ba" title="atomic_dec" alt="" coords="918,507,1014,533"/>
+<area shape="rect" id="node14" href="binding_8c.html#a0d2a56817137b834fb61e5047199cb70" title="install_binding" alt="" coords="701,5,813,32"/>
+<area shape="rect" id="node15" href="preempt_8c.html#abca549e4ddfb28ffd31e0014c632e774" title="reset_min_in_transit" alt="" coords="681,579,833,605"/>
+<area shape="rect" id="node18" href="communication_8c.html#ab957dc2cd186382c50ef8cfde9761909" title="get_msg_from_slab" alt="" coords="683,528,831,555"/>
+<area shape="rect" id="node21" href="stf_8c.html#a726ca866bf5abd4a57d94280908b8f14" title="O(n) scheduler. " alt="" coords="681,630,834,671"/>
+<area shape="rect" id="node22" href="statistics_8c.html#adb44a0a2dd40360e160ab4f5091ff324" title="statistics_post_data" alt="" coords="891,823,1041,849"/>
+<area shape="rect" id="node23" href="state_8c.html#aef9ea0a6819ef7dffb471f1ff13190c2" title="rollback" alt="" coords="722,797,793,824"/>
+<area shape="rect" id="node24" href="communication_8c.html#a694613eb88ca26ef684f9bcf1bab1b59" title="send_outgoing_msgs" alt="" coords="678,477,837,504"/>
+<area shape="rect" id="node29" href="ccgs_8c.html#a3126158ffe568559a03e656f723667a1" title="ccgs_can_halt_simulation" alt="" coords="439,1051,624,1077"/>
+<area shape="rect" id="node30" href="gvt_2gvt_8c.html#a234e866bb1e37fa25dec9bb40134234d" title="get_last_gvt" alt="" coords="707,1405,807,1432"/>
+<area shape="rect" id="node32" href="core_8c.html#a5ecef0b698dbf7d8a82a2d696348b0fc" title="user_requested_exit" alt="" coords="455,1101,607,1128"/>
+<area shape="rect" id="node34" href="atomic_8h.html#afd2c05472274bd1c73d5408a213cf429" title="spin_trylock" alt="" coords="709,949,806,976"/>
+<area shape="rect" id="node35" href="process_8c.html#a2193e0386f7858db77f38146a15d3cd1" title="find_lp_by_gid" alt="" coords="911,1456,1021,1483"/>
+<area shape="rect" id="node36" href="communication_8c.html#aebec05b86f3467473116d555954b80f4" title="validate_msg" alt="" coords="913,1203,1019,1229"/>
+<area shape="rect" id="node37" href="queues_8c.html#a9ff164dd6a938afa7e892f4028c2a033" title="insert_bottom_half" alt="" coords="686,1253,829,1280"/>
+<area shape="rect" id="node38" href="atomic_8h.html#a4e8c9d1c6101995f1ecd2141d77e4824" title="spin_unlock" alt="" coords="918,1025,1014,1052"/>
+<area shape="rect" id="node40" href="wnd_8c.html#a930e160f86a257b5143e2d59205d8002" title="prune_outgoing_queue" alt="" coords="447,1000,616,1027"/>
+<area shape="rect" id="node41" href="communication_8c.html#a323ad017762155352c38983e67e8adeb" title="msg_release" alt="" coords="705,1355,809,1381"/>
+<area shape="rect" id="node43" href="msgchannel_8c.html#afefce0fcb089577bd044cdb2f22612d5" title="get_msg" alt="" coords="718,1152,797,1179"/>
+<area shape="rect" id="node44" href="control_8c.html#a3b5b80bbe410ac635fcbda716b3f9f45" title="receive_control_msg" alt="" coords="680,1456,835,1483"/>
+<area shape="rect" id="node45" href="communication_8c.html#ac5d2aab0b4d3d676e4a8fd2d3d6e7bf9" title="dump_msg_content" alt="" coords="682,1507,833,1533"/>
+<area shape="rect" id="node46" href="communication_2gvt_8c.html#a5f8f575e93930869ac20641c7305e850" title="register_incoming_msg" alt="" coords="672,1608,843,1635"/>
+<area shape="rect" id="node47" href="control_8c.html#adeb3ffb0d386021321573ee9d201a042" title="anti_control_message" alt="" coords="676,1659,839,1685"/>
 </map>
 </div>
 </p>
@@ -537,6 +549,48 @@ Roberto Vitali </dd></dl>
 <p>This jump buffer allows rootsim_error, in case of a failure, to jump out of any point in the code to the final part of the loop in which all threads synchronize. This avoids side effects like, e.g., accessing a NULL pointer. </p>
 
 <p>Definition at line <a class="el" href="main_8c_source.html#l00062">62</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9d1a2af660cb926eda5476e5444a6108"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structatomic__t.html">atomic_t</a> overtick_platform</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="preempt_8c_source.html#l00047">47</a> of file <a class="el" href="preempt_8c_source.html">preempt.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5969ff4d10b8db6822d56b5ca6a7abcb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structatomic__t.html">atomic_t</a> preempt_count</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="preempt_8c_source.html#l00046">46</a> of file <a class="el" href="preempt_8c_source.html">preempt.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aceebdebda85d0349eafe9d5162cde4ab"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structatomic__t.html">atomic_t</a> would_preempt</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="preempt_8c_source.html#l00048">48</a> of file <a class="el" href="preempt_8c_source.html">preempt.c</a>.</p>
 
 </div>
 </div>

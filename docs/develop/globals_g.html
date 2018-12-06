@@ -23,6 +23,8 @@
   $(document).ready(function() { init_search(); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="flatdoc.css" rel="stylesheet" type="text/css"/>
+<link href="inline-params.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -98,6 +100,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li class="current"><a href="globals_g.html#index_g"><span>g</span></a></li>
       <li><a href="globals_h.html#index_h"><span>h</span></a></li>
       <li><a href="globals_i.html#index_i"><span>i</span></a></li>
+      <li><a href="globals_j.html#index_j"><span>j</span></a></li>
       <li><a href="globals_k.html#index_k"><span>k</span></a></li>
       <li><a href="globals_l.html#index_l"><span>l</span></a></li>
       <li><a href="globals_m.html#index_m"><span>m</span></a></li>
@@ -152,6 +155,9 @@ $(document).ready(function(){initNavTree('globals_g.html','');});
 : <a class="el" href="numerical_8c.html#aefff13532a92ec05e7b38a724d7cdb0e">numerical.c</a>
 , <a class="el" href="ROOT-Sim_8h.html#aefff13532a92ec05e7b38a724d7cdb0e">ROOT-Sim.h</a>
 </li>
+<li>GCC_VERSION
+: <a class="el" href="xxhash_8c.html#adbba0f726fc66d7100916c683b7568ae">xxhash.c</a>
+</li>
 <li>general_protection()
 : <a class="el" href="traps-dummy_8h.html#a372a89757025239baaf322c2f9d6f26a">traps-dummy.h</a>
 </li>
@@ -177,6 +183,9 @@ $(document).ready(function(){initNavTree('globals_g.html','');});
 </li>
 <li>GET_CACHE_LINE_NUMBER
 : <a class="el" href="dymelor_8h.html#a697c04e0699a9718b18fca941ada8cca">dymelor.h</a>
+</li>
+<li>get_cores
+: <a class="el" href="thread_8h.html#a91e8c6cd119e04ef80418cc6b9999089">thread.h</a>
 </li>
 <li>get_granularity()
 : <a class="el" href="dymelor_8h.html#aa3c88f8e21bdbcfd68f76bf9096594e1">dymelor.h</a>
@@ -235,6 +244,10 @@ $(document).ready(function(){initNavTree('globals_g.html','');});
 <li>get_top_pointer
 : <a class="el" href="dymelor_8h.html#aa75aaa50c07bf60465dc17ab3c6f98cd">dymelor.h</a>
 </li>
+<li>get_ult_stack()
+: <a class="el" href="ult_8c.html#a21c80d94da97fa7d1476e8450821a701">ult.c</a>
+, <a class="el" href="ult_8h.html#a21c80d94da97fa7d1476e8450821a701">ult.h</a>
+</li>
 <li>getCurrentRSS()
 : <a class="el" href="memusage_8c.html#a8a5c7f9731dfe1f991cdaa336934cdc8">memusage.c</a>
 , <a class="el" href="memusage_8h.html#a8a5c7f9731dfe1f991cdaa336934cdc8">memusage.h</a>
@@ -255,8 +268,8 @@ $(document).ready(function(){initNavTree('globals_g.html','');});
 : <a class="el" href="ROOT-Sim_8h.html#a426003c400c8086ef84f45db05a6f5f2">ROOT-Sim.h</a>
 </li>
 <li>getPeakRSS()
-: <a class="el" href="memusage_8h.html#a1b63b75d05bcc786d0f45106704b78fe">memusage.h</a>
-, <a class="el" href="memusage_8c.html#a1b63b75d05bcc786d0f45106704b78fe">memusage.c</a>
+: <a class="el" href="memusage_8c.html#a1b63b75d05bcc786d0f45106704b78fe">memusage.c</a>
+, <a class="el" href="memusage_8h.html#a1b63b75d05bcc786d0f45106704b78fe">memusage.h</a>
 </li>
 <li>GetReceiver()
 : <a class="el" href="topology_8c.html#a7ef1731105f39b4c97a5cc7ff3473401">topology.c</a>
@@ -265,26 +278,103 @@ $(document).ready(function(){initNavTree('globals_g.html','');});
 <li>GID_t
 : <a class="el" href="core_8h.html#a74ea65c5dea49dba0b0c4b3bb8ee47f1">core.h</a>
 </li>
+<li>global_stats
+: <a class="el" href="statistics_8c.html#a157b98456279d00186e47b5a02e98430">statistics.c</a>
+</li>
+<li>grp_10()
+: <a class="el" href="disassemble_8c.html#a2ad744f5df64389674d056c419cb8ebe">disassemble.c</a>
+</li>
+<li>grp_11()
+: <a class="el" href="disassemble_8c.html#aa4e913a8e3b56db3c6b9742b9c25889d">disassemble.c</a>
+</li>
+<li>grp_12()
+: <a class="el" href="disassemble_8c.html#ac7fa2abbadbb9fa686eaad017fd208f9">disassemble.c</a>
+</li>
+<li>grp_13()
+: <a class="el" href="disassemble_8c.html#aac397e85b38b3b835ed2cc503b70f004">disassemble.c</a>
+</li>
+<li>grp_14()
+: <a class="el" href="disassemble_8c.html#ab98909afad086b8b58207c713f0b8e7e">disassemble.c</a>
+</li>
+<li>grp_15()
+: <a class="el" href="disassemble_8c.html#ad71a54756a17e5499a4e3b3303e6d3dd">disassemble.c</a>
+</li>
+<li>grp_16()
+: <a class="el" href="disassemble_8c.html#a7f525a171f54408109d3ee2916a63c76">disassemble.c</a>
+</li>
+<li>grp_4()
+: <a class="el" href="disassemble_8c.html#aa0198508b227d46edd68fc69160c302f">disassemble.c</a>
+</li>
+<li>grp_5()
+: <a class="el" href="disassemble_8c.html#a28b8e82eec8ca817a557e48f0f9715af">disassemble.c</a>
+</li>
+<li>grp_6()
+: <a class="el" href="disassemble_8c.html#a195f1fe6f4a0b8b9d394c02b048ab3ca">disassemble.c</a>
+</li>
+<li>grp_7()
+: <a class="el" href="disassemble_8c.html#a4e4781d90c401814394600bb91471e53">disassemble.c</a>
+</li>
+<li>grp_8()
+: <a class="el" href="disassemble_8c.html#afe3e75f9413828f5e46dd7c6a0e6957f">disassemble.c</a>
+</li>
+<li>grp_9()
+: <a class="el" href="disassemble_8c.html#a6ff97a8bb1138c6f6b7cacd3867fd093">disassemble.c</a>
+</li>
 <li>gvt_buf
 : <a class="el" href="statistics_8c.html#a49ce85f5efb74b1e42a3cf0d3b49afe2">statistics.c</a>
 </li>
 <li>GVT_BUFF_ROWS
 : <a class="el" href="statistics_8c.html#a4dce8228f502f75dba017fba122e34f9">statistics.c</a>
 </li>
+<li>gvt_comm_finalize()
+: <a class="el" href="communication_2gvt_8c.html#ac35f5f227c553fffd0911c995c865e17">gvt.c</a>
+, <a class="el" href="communication_2gvt_8h.html#ac35f5f227c553fffd0911c995c865e17">gvt.h</a>
+</li>
+<li>gvt_comm_init()
+: <a class="el" href="communication_2gvt_8h.html#ae0cb1aa4dae8060ac662c0534849ecf3">gvt.h</a>
+, <a class="el" href="communication_2gvt_8c.html#ae0cb1aa4dae8060ac662c0534849ecf3">gvt.c</a>
+</li>
 <li>gvt_fini()
-: <a class="el" href="gvt_2gvt_8h.html#a10977cb9180000f423f184cca0b6338d">gvt.h</a>
-, <a class="el" href="gvt_2gvt_8c.html#a10977cb9180000f423f184cca0b6338d">gvt.c</a>
+: <a class="el" href="gvt_2gvt_8c.html#a10977cb9180000f423f184cca0b6338d">gvt.c</a>
+, <a class="el" href="gvt_2gvt_8h.html#a10977cb9180000f423f184cca0b6338d">gvt.h</a>
 </li>
 <li>gvt_init()
-: <a class="el" href="gvt_2gvt_8h.html#aa6c9337f3fccf8513b8fad1533f743c4">gvt.h</a>
-, <a class="el" href="gvt_2gvt_8c.html#aa6c9337f3fccf8513b8fad1533f743c4">gvt.c</a>
+: <a class="el" href="gvt_2gvt_8c.html#aa6c9337f3fccf8513b8fad1533f743c4">gvt.c</a>
+, <a class="el" href="gvt_2gvt_8h.html#aa6c9337f3fccf8513b8fad1533f743c4">gvt.h</a>
+</li>
+<li>gvt_init_clear()
+: <a class="el" href="communication_2gvt_8h.html#a97741fc617b443cee108c44a26cd513b">gvt.h</a>
+, <a class="el" href="communication_2gvt_8c.html#a97741fc617b443cee108c44a26cd513b">gvt.c</a>
+</li>
+<li>gvt_init_pending()
+: <a class="el" href="communication_2gvt_8c.html#abb460bc63d1b830804752ce6bdd4e30a">gvt.c</a>
+, <a class="el" href="communication_2gvt_8h.html#abb460bc63d1b830804752ce6bdd4e30a">gvt.h</a>
+</li>
+<li>gvt_init_reqs
+: <a class="el" href="communication_2gvt_8c.html#a864a11544473877b76dc067332d9a8d3">gvt.c</a>
+</li>
+<li>gvt_init_round
+: <a class="el" href="communication_2gvt_8c.html#a1557dfd2b30b86362256afd511b4a1d9">gvt.c</a>
 </li>
 <li>gvt_operations()
-: <a class="el" href="gvt_2gvt_8h.html#a899b50ab45427cf145360ff3a6c29808">gvt.h</a>
-, <a class="el" href="gvt_2gvt_8c.html#a899b50ab45427cf145360ff3a6c29808">gvt.c</a>
+: <a class="el" href="gvt_2gvt_8c.html#a899b50ab45427cf145360ff3a6c29808">gvt.c</a>
+, <a class="el" href="gvt_2gvt_8h.html#a899b50ab45427cf145360ff3a6c29808">gvt.h</a>
 </li>
 <li>GVT_phases()
 : <a class="el" href="gvt_2gvt_8c.html#a895d5bfff43f3ee72f9cf7097abf609b">gvt.c</a>
+</li>
+<li>gvt_reduction_comm
+: <a class="el" href="communication_2gvt_8c.html#a346cf02255cc35cfb4eda9bfd867d24c">gvt.c</a>
+</li>
+<li>gvt_reduction_lock
+: <a class="el" href="communication_2gvt_8c.html#acc87f748b0df40fd022d65970728be8b">gvt.c</a>
+</li>
+<li>gvt_reduction_req
+: <a class="el" href="communication_2gvt_8c.html#a9e0615aa251769730f88b91b68349e4d">gvt.c</a>
+</li>
+<li>gvt_redux_completed()
+: <a class="el" href="communication_2gvt_8h.html#a0d0d87c4ff2f7290727fc3d3f9b2034f">gvt.h</a>
+, <a class="el" href="communication_2gvt_8c.html#a0d0d87c4ff2f7290727fc3d3f9b2034f">gvt.c</a>
 </li>
 <li>gvt_round_timer
 : <a class="el" href="gvt_2gvt_8c.html#a690e35321eb61ad065ddff08dbad8541">gvt.c</a>

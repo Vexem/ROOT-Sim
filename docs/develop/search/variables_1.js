@@ -1,12 +1,12 @@
 var searchData=
 [
-  ['addr',['addr',['../struct__ioctl__info.html#a1fb9786edbe35ea4fccfff6a4fc3df72',1,'_ioctl_info::addr()'],['../structdisassembly__state.html#ab41f37ac790c4dfefcd9af55507052f3',1,'disassembly_state::addr()']]],
+  ['addr',['addr',['../structinsn__info__x86.html#a8cd4363b7ab1b2480bfa6d25f7aac48c',1,'insn_info_x86::addr()'],['../structdisassembly__state.html#a5b25fb1a8812a3adac3c4b2832d899fc',1,'disassembly_state::addr()'],['../struct__ioctl__info.html#a1fb9786edbe35ea4fccfff6a4fc3df72',1,'_ioctl_info::addr()']]],
   ['addr_5fadjust_5fexception_5fframe',['addr_adjust_exception_frame',['../my__page__fault_8c.html#a151793d56dd8370377ac3d1c7c6cbe2d',1,'my_page_fault.c']]],
   ['addr_5fdft_5fdo_5fpage_5ffault',['addr_dft_do_page_fault',['../my__page__fault_8c.html#a8213a43f50528db7aedf43f189061f9d',1,'my_page_fault.c']]],
   ['addr_5fdft_5fpage_5ffault',['addr_dft_page_fault',['../my__page__fault_8c.html#ad2838ae5ae36eb3b69ea337fb1187b80',1,'my_page_fault.c']]],
   ['addr_5ferror_5fentry',['addr_error_entry',['../my__page__fault_8c.html#a743de061cc8a6a2f6894803daf70d999',1,'my_page_fault.c']]],
   ['addr_5ferror_5fexit',['addr_error_exit',['../my__page__fault_8c.html#a6b5f362e7a046a99d08a6b864edbe908',1,'my_page_fault.c']]],
-  ['addr_5fmethod',['addr_method',['../struct__insn.html#a87c98591bf84e20fe215e77ff5a6f741',1,'_insn']]],
+  ['addr_5fmethod',['addr_method',['../struct__insn.html#a983fb0cb1b682752b43d3bbb942bab8b',1,'_insn']]],
   ['addr_5fpv_5firq_5fops',['addr_pv_irq_ops',['../my__page__fault_8c.html#af7f31fbe546148b31035717be3070cd4',1,'my_page_fault.c']]],
   ['addr_5fsize',['addr_size',['../structdisassembly__state.html#a898ed21585acf738dfefd97922e31bf4',1,'disassembly_state']]],
   ['alignment_5fmask',['alignment_mask',['../structslab__chain.html#a93237407c6c5878d4580406a13dbd7fa',1,'slab_chain']]],

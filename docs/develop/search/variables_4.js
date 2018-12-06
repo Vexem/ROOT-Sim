@@ -6,6 +6,7 @@ var searchData=
   ['data66_5ft',['data66_t',['../ld_8h.html#a68d63a36d0ac9811f89e7974051b3a22',1,'ld.h']]],
   ['default_5fcontext',['default_context',['../structlp__struct.html#a81945d7e06f639a893b0a6bb441a6008',1,'lp_struct']]],
   ['default_5fidtr',['default_idtr',['../my__page__fault_8c.html#a0182ed4d27e909cb9a03bd33decb48e9',1,'my_page_fault.c']]],
+  ['dest_5fis_5freg',['dest_is_reg',['../structinsn__info__x86.html#a1198f6841b5993f7c062b45128b1e5e8',1,'insn_info_x86']]],
   ['deterministic_5fseed',['deterministic_seed',['../struct__simulation__configuration.html#aeaa85d1dae0a5ba0d9deb45ad8be2f49',1,'_simulation_configuration']]],
   ['dev_5fcl',['dev_cl',['../cross__state__manager_8c.html#abcb204451bacc73e8d2794f7f1b887ec',1,'cross_state_manager.c']]],
   ['device',['device',['../cross__state__manager_8c.html#af17a219190f6c7bf936cc4ad7ac01370',1,'cross_state_manager.c']]],
@@ -13,8 +14,10 @@ var searchData=
   ['dirty_5fbitmap',['dirty_bitmap',['../struct__malloc__area.html#a7dc43b9d90080d31a9919dd8a11e997f',1,'_malloc_area']]],
   ['dirty_5fbitmap_5fsize',['dirty_bitmap_size',['../struct__malloc__state.html#a2510f35b03c48f1148d184903c037a23',1,'_malloc_state']]],
   ['dirty_5fchunks',['dirty_chunks',['../struct__malloc__area.html#a12a41bba540cd4cd8d779aaf3ce26dd2',1,'_malloc_area']]],
-  ['disp_5foffset',['disp_offset',['../structdisassembly__state.html#ac180f7315b9eae423605ba9255542a92',1,'disassembly_state']]],
-  ['disp_5fsize',['disp_size',['../structdisassembly__state.html#aaf228496f61e158b62b745176deb0fc4',1,'disassembly_state']]],
+  ['disable_5fpreemption',['disable_preemption',['../struct__simulation__configuration.html#af728a2506fc1bd0de647cdef3f587ffd',1,'_simulation_configuration']]],
+  ['disp',['disp',['../structinsn__info__x86.html#a1822b927fa7c886d31996755d43f8f38',1,'insn_info_x86']]],
+  ['disp_5foffset',['disp_offset',['../structinsn__info__x86.html#aaf7667c6d75a32f731a9d815a9daaf15',1,'insn_info_x86::disp_offset()'],['../structdisassembly__state.html#ac180f7315b9eae423605ba9255542a92',1,'disassembly_state::disp_offset()']]],
+  ['disp_5fsize',['disp_size',['../structinsn__info__x86.html#abb3d6104bb0fdcb4937ce6556ad51afa',1,'insn_info_x86::disp_size()'],['../structdisassembly__state.html#aaf228496f61e158b62b745176deb0fc4',1,'disassembly_state::disp_size()']]],
   ['doc',['doc',['../init_8c.html#af6164deb8a824f8cb2b9147cfc3174f5',1,'init.c']]],
   ['ds',['ds',['../struct__ioctl__info.html#a9bc3fac127898f03c47ca626fe0939c1',1,'_ioctl_info']]]
 ];

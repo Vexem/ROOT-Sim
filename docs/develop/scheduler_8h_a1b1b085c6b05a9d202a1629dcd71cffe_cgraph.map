@@ -1,3 +1,5 @@
 <map id="LP_main_loop" name="LP_main_loop">
-<area shape="rect" id="node2" href="$statistics_8c.html#adb44a0a2dd40360e160ab4f5091ff324" title="statistics_post_data" alt="" coords="164,5,315,32"/>
+<area shape="rect" id="node2" href="$xxhash_8c.html#aa84e31069652b6e0dc85fa26aef022fe" title="XXH64" alt="" coords="207,5,271,32"/>
+<area shape="rect" id="node4" href="$statistics_8c.html#adb44a0a2dd40360e160ab4f5091ff324" title="statistics_post_data" alt="" coords="164,56,315,83"/>
+<area shape="rect" id="node3" href="$xxhash_8c.html#a89b67661ff66229c8c502eee5d0e83f0" title="XXH64_endian_align" alt="" coords="363,5,513,32"/>
 </map>

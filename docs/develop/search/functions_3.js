@@ -14,6 +14,7 @@ var searchData=
   ['check_5frendevouz_5frequest',['check_rendevouz_request',['../scheduler_8c.html#a49bc15418f486b6b364a1066cf4bf6ad',1,'scheduler.c']]],
   ['clean_5fbuffers_5fon_5fgvt',['clean_buffers_on_gvt',['../dymelor_8c.html#ad72b2eadc22c9a9e50ded85830976d50',1,'clean_buffers_on_gvt(struct lp_struct *lp, simtime_t time_barrier):&#160;dymelor.c'],['../dymelor_8h.html#ab034b03a284ecc619e07a051d95b7dd7',1,'clean_buffers_on_gvt(struct lp_struct *, simtime_t):&#160;dymelor.c']]],
   ['clean_5fqueue_5fstates',['clean_queue_states',['../state_8h.html#ae80da37bb8f3c1027bc4bd5c9ed48670',1,'state.h']]],
+  ['collect_5ftermination',['collect_termination',['../mpi_8c.html#a19d485235dd4145edaa8eabe632a77f6',1,'collect_termination(void):&#160;mpi.c'],['../mpi_8h.html#a19d485235dd4145edaa8eabe632a77f6',1,'collect_termination(void):&#160;mpi.c']]],
   ['comm_5ffinalize',['comm_finalize',['../communication_8c.html#acae24b1f48d2fe459c280cf33e61cc6e',1,'comm_finalize(void):&#160;communication.c'],['../communication_8h.html#acae24b1f48d2fe459c280cf33e61cc6e',1,'comm_finalize(void):&#160;communication.c']]],
   ['communication_5ffini',['communication_fini',['../communication_8c.html#a6bd2f352e0326608e9a2bef2efbde184',1,'communication_fini(void):&#160;communication.c'],['../communication_8h.html#a6bd2f352e0326608e9a2bef2efbde184',1,'communication_fini(void):&#160;communication.c']]],
   ['communication_5ffini_5fthread',['communication_fini_thread',['../communication_8c.html#a968b638456f1c0c8a527a859ec62d4c6',1,'communication_fini_thread(void):&#160;communication.c'],['../communication_8h.html#a968b638456f1c0c8a527a859ec62d4c6',1,'communication_fini_thread(void):&#160;communication.c']]],
@@ -23,6 +24,7 @@ var searchData=
   ['compare_5flp_5fcost',['compare_lp_cost',['../binding_8c.html#ac24aaee55e50bfc240c058c2a0a7e5f6',1,'binding.c']]],
   ['compute_5fsize',['compute_size',['../dymelor_8c.html#ae10242575deefaa5500b5426c745f2eb',1,'dymelor.c']]],
   ['computemintour',['ComputeMinTour',['../topology_8c.html#a687b119a53a0db5787416bc460299cd2',1,'ComputeMinTour(unsigned int **list, obstacles_t *obstacles, int topology, unsigned int source, unsigned int dest):&#160;topology.c'],['../ROOT-Sim_8h.html#a687b119a53a0db5787416bc460299cd2',1,'ComputeMinTour(unsigned int **list, obstacles_t *obstacles, int topology, unsigned int source, unsigned int dest):&#160;topology.c']]],
+  ['context_5fcreate',['context_create',['../x86_2jmp_8h.html#a4929790c2fa580d14f27b319f28b4236',1,'jmp.h']]],
   ['coprocessor_5ferror',['coprocessor_error',['../traps-dummy_8h.html#a695e9058a953832e885bece61327c286',1,'traps-dummy.h']]],
   ['coprocessor_5fsegment_5foverrun',['coprocessor_segment_overrun',['../traps-dummy_8h.html#a6ca77b7a0c44c2d69f6f682b775df97b',1,'traps-dummy.h']]],
   ['create_5fthreads',['create_threads',['../thread_8c.html#a7248efe5c9432ead45b781036c5d7394',1,'create_threads(unsigned short int n, void *(*start_routine)(void *), void *arg):&#160;thread.c'],['../thread_8h.html#a7248efe5c9432ead45b781036c5d7394',1,'create_threads(unsigned short int n, void *(*start_routine)(void *), void *arg):&#160;thread.c']]]

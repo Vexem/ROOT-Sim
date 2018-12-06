@@ -23,6 +23,8 @@
   $(document).ready(function() { init_search(); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="flatdoc.css" rel="stylesheet" type="text/css"/>
+<link href="inline-params.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -98,6 +100,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="globals_g.html#index_g"><span>g</span></a></li>
       <li><a href="globals_h.html#index_h"><span>h</span></a></li>
       <li><a href="globals_i.html#index_i"><span>i</span></a></li>
+      <li><a href="globals_j.html#index_j"><span>j</span></a></li>
       <li><a href="globals_k.html#index_k"><span>k</span></a></li>
       <li><a href="globals_l.html#index_l"><span>l</span></a></li>
       <li><a href="globals_m.html#index_m"><span>m</span></a></li>
@@ -221,6 +224,12 @@ $(document).ready(function(){initNavTree('globals_o.html','');});
 <li>offsetof_struct
 : <a class="el" href="asm__defines_8h.html#ad39accb4c9da6dde153fb20ea9c68322">asm_defines.h</a>
 </li>
+<li>one
+: <a class="el" href="xxhash_8c.html#a91c24f18b9bb6f72c0843ea3ab2bbede">xxhash.c</a>
+</li>
+<li>one_byte_opcode_table
+: <a class="el" href="disassemble_8c.html#a7e47813eb264a5ef08341698142ce0d1">disassemble.c</a>
+</li>
 <li>ONE_USED_SLOT
 : <a class="el" href="slab_8c.html#a72560ae981bfb319542afc54f14c0190">slab.c</a>
 </li>
@@ -232,81 +241,106 @@ $(document).ready(function(){initNavTree('globals_o.html','');});
 </li>
 <li>OP_0
 : <a class="el" href="x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4accd484dad2223fffdbdc2637c4f1e40e">x86.h</a>
+, <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4accd484dad2223fffdbdc2637c4f1e40e">disassemble.h</a>
 </li>
 <li>OP_A
-: <a class="el" href="x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a5f374fbc9f4641fa1fce942ea73a6ff1">x86.h</a>
+: <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a5f374fbc9f4641fa1fce942ea73a6ff1">disassemble.h</a>
+, <a class="el" href="x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a5f374fbc9f4641fa1fce942ea73a6ff1">x86.h</a>
 </li>
 <li>OP_B
-: <a class="el" href="x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a4abe2e38362dfc6e0493d9ca1cb129d3">x86.h</a>
+: <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a4abe2e38362dfc6e0493d9ca1cb129d3">disassemble.h</a>
+, <a class="el" href="x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a4abe2e38362dfc6e0493d9ca1cb129d3">x86.h</a>
 </li>
 <li>OP_C
-: <a class="el" href="x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a04aca378a8d566b5dd40c3a59f4ee50e">x86.h</a>
+: <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a04aca378a8d566b5dd40c3a59f4ee50e">disassemble.h</a>
+, <a class="el" href="x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a04aca378a8d566b5dd40c3a59f4ee50e">x86.h</a>
 </li>
 <li>OP_D
-: <a class="el" href="x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4ac77d2f804b6a1687a242aa2f86b330bf">x86.h</a>
+: <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4ac77d2f804b6a1687a242aa2f86b330bf">disassemble.h</a>
+, <a class="el" href="x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4ac77d2f804b6a1687a242aa2f86b330bf">x86.h</a>
 </li>
 <li>OP_DQ
-: <a class="el" href="x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a57444a3185ef61f380c301eced594950">x86.h</a>
+: <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a57444a3185ef61f380c301eced594950">disassemble.h</a>
+, <a class="el" href="x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a57444a3185ef61f380c301eced594950">x86.h</a>
 </li>
 <li>OP_E
-: <a class="el" href="x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a4d386616237a2c50641fbf70854997c8">x86.h</a>
+: <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a4d386616237a2c50641fbf70854997c8">disassemble.h</a>
+, <a class="el" href="x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a4d386616237a2c50641fbf70854997c8">x86.h</a>
 </li>
 <li>OP_FS
-: <a class="el" href="x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4af38d9ff328480735e9f25998ed6e32a0">x86.h</a>
+: <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4af38d9ff328480735e9f25998ed6e32a0">disassemble.h</a>
+, <a class="el" href="x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4af38d9ff328480735e9f25998ed6e32a0">x86.h</a>
 </li>
 <li>OP_FSR
-: <a class="el" href="x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4af15e74f19540071a0f6c9a0656c707b0">x86.h</a>
+: <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4af15e74f19540071a0f6c9a0656c707b0">disassemble.h</a>
+, <a class="el" href="x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4af15e74f19540071a0f6c9a0656c707b0">x86.h</a>
 </li>
 <li>OP_M512byte
-: <a class="el" href="x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a1118004c54477861de36cf8244e641b2">x86.h</a>
+: <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a1118004c54477861de36cf8244e641b2">disassemble.h</a>
+, <a class="el" href="x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a1118004c54477861de36cf8244e641b2">x86.h</a>
 </li>
 <li>OP_M80
-: <a class="el" href="x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a9a652f512241f68c5217cd7903b8c765">x86.h</a>
+: <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a9a652f512241f68c5217cd7903b8c765">disassemble.h</a>
+, <a class="el" href="x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a9a652f512241f68c5217cd7903b8c765">x86.h</a>
 </li>
 <li>OP_P
-: <a class="el" href="x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a5e531887e9bca3b96f26ae1eda412e83">x86.h</a>
+: <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a5e531887e9bca3b96f26ae1eda412e83">disassemble.h</a>
+, <a class="el" href="x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a5e531887e9bca3b96f26ae1eda412e83">x86.h</a>
 </li>
 <li>OP_PD
-: <a class="el" href="x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4aa73e0326cf537dbb2ef3b1435860d97a">x86.h</a>
+: <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4aa73e0326cf537dbb2ef3b1435860d97a">disassemble.h</a>
+, <a class="el" href="x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4aa73e0326cf537dbb2ef3b1435860d97a">x86.h</a>
 </li>
 <li>OP_PI
-: <a class="el" href="x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a0ffe2f837160e028aadb7ab6323d2de7">x86.h</a>
+: <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a0ffe2f837160e028aadb7ab6323d2de7">disassemble.h</a>
+, <a class="el" href="x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a0ffe2f837160e028aadb7ab6323d2de7">x86.h</a>
 </li>
 <li>OP_PS
-: <a class="el" href="x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a7f70163ff98ffa9938b0fe4a87ad0514">x86.h</a>
+: <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a7f70163ff98ffa9938b0fe4a87ad0514">disassemble.h</a>
+, <a class="el" href="x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a7f70163ff98ffa9938b0fe4a87ad0514">x86.h</a>
 </li>
 <li>OP_Q
-: <a class="el" href="x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a24508ad62db66019be80e83793dca19f">x86.h</a>
+: <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a24508ad62db66019be80e83793dca19f">disassemble.h</a>
+, <a class="el" href="x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a24508ad62db66019be80e83793dca19f">x86.h</a>
 </li>
 <li>OP_S
 : <a class="el" href="x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4ad59d7d2c04d432966e5ee19e2a34ffee">x86.h</a>
+, <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4ad59d7d2c04d432966e5ee19e2a34ffee">disassemble.h</a>
 </li>
 <li>OP_SD
-: <a class="el" href="x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a0fc94be78c032d5e297ba27522289cb6">x86.h</a>
+: <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a0fc94be78c032d5e297ba27522289cb6">disassemble.h</a>
+, <a class="el" href="x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a0fc94be78c032d5e297ba27522289cb6">x86.h</a>
 </li>
 <li>OP_SI
-: <a class="el" href="x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a8598af577e6bbf59add7014054c6b6fb">x86.h</a>
+: <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a8598af577e6bbf59add7014054c6b6fb">disassemble.h</a>
+, <a class="el" href="x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a8598af577e6bbf59add7014054c6b6fb">x86.h</a>
 </li>
 <li>op_size
-: <a class="el" href="x86_8h.html#a89163aa2fe49907238034e3954daacda">x86.h</a>
+: <a class="el" href="disassemble_8h.html#a89163aa2fe49907238034e3954daacda">disassemble.h</a>
+, <a class="el" href="x86_8h.html#a89163aa2fe49907238034e3954daacda">x86.h</a>
 </li>
 <li>OP_SS
 : <a class="el" href="x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a2d4cd421e4c3bbf88fceedc71184f26b">x86.h</a>
+, <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a2d4cd421e4c3bbf88fceedc71184f26b">disassemble.h</a>
 </li>
 <li>OP_V
-: <a class="el" href="x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a517d1110e92a079ce0634faf3cdb641b">x86.h</a>
+: <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a517d1110e92a079ce0634faf3cdb641b">disassemble.h</a>
+, <a class="el" href="x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a517d1110e92a079ce0634faf3cdb641b">x86.h</a>
 </li>
 <li>OP_W
 : <a class="el" href="x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a837eb4e36144264d8ba44845b0b5e475">x86.h</a>
+, <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a837eb4e36144264d8ba44845b0b5e475">disassemble.h</a>
 </li>
 <li>OP_Y
-: <a class="el" href="x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a63d8efdac354871a7a921852be047102">x86.h</a>
+: <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a63d8efdac354871a7a921852be047102">disassemble.h</a>
+, <a class="el" href="x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a63d8efdac354871a7a921852be047102">x86.h</a>
 </li>
 <li>open_index
 : <a class="el" href="cross__state__manager_8c.html#aea5cba268a9753bce7e92f5a74b49633">cross_state_manager.c</a>
 </li>
 <li>operand_type
-: <a class="el" href="x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">x86.h</a>
+: <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">disassemble.h</a>
+, <a class="el" href="x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">x86.h</a>
 </li>
 <li>OPT_A
 : <a class="el" href="init_8c.html#adf856969b3967e4a20be18a3eda24afca14a2fa5a67a463ed8c549cf9c5ee2026">init.c</a>
@@ -359,6 +393,9 @@ $(document).ready(function(){initNavTree('globals_o.html','');});
 <li>OPT_P
 : <a class="el" href="init_8c.html#adf856969b3967e4a20be18a3eda24afcaa4f8a021c037aaa93652b44d73790495">init.c</a>
 </li>
+<li>OPT_PREEMPTION
+: <a class="el" href="init_8c.html#adf856969b3967e4a20be18a3eda24afca695d14f6ff61efdc2de8087555e3fab1">init.c</a>
+</li>
 <li>OPT_SCHEDULER
 : <a class="el" href="init_8c.html#adf856969b3967e4a20be18a3eda24afcae70c4886e417e039d63ccb10a36bea6d">init.c</a>
 </li>
@@ -395,11 +432,36 @@ $(document).ready(function(){initNavTree('globals_o.html','');});
 <li>os_tid
 : <a class="el" href="thread_8c.html#aaa70997ae180af9748d3ec1e883c1c62">thread.c</a>
 </li>
+<li>outgoing_msg
+: <a class="el" href="wnd_8h.html#acb6cc590cdae412c2119946ad1dba557">wnd.h</a>
+</li>
+<li>outgoing_queue
+: <a class="el" href="wnd_8h.html#a6ae38b40060f9a2d976f3e0934ca9cb9">wnd.h</a>
+</li>
+<li>outgoing_queues
+: <a class="el" href="wnd_8c.html#ad515a3848144b1daad9f78b6b1b731d9">wnd.c</a>
+</li>
+<li>outgoing_queues_size()
+: <a class="el" href="wnd_8h.html#a2113099ae40d7154e128b2d32cd152d3">wnd.h</a>
+, <a class="el" href="wnd_8c.html#a2113099ae40d7154e128b2d32cd152d3">wnd.c</a>
+</li>
 <li>outgoing_t
 : <a class="el" href="communication_8h.html#a783078e33c0d29cd4efb4ffd085646d0">communication.h</a>
 </li>
+<li>outgoing_window_finalize()
+: <a class="el" href="wnd_8h.html#acbe46c456aa03b014ca2134604700789">wnd.h</a>
+, <a class="el" href="wnd_8c.html#acbe46c456aa03b014ca2134604700789">wnd.c</a>
+</li>
+<li>outgoing_window_init()
+: <a class="el" href="wnd_8c.html#a620f72de0294d3c638894de54d14ea27">wnd.c</a>
+, <a class="el" href="wnd_8h.html#a620f72de0294d3c638894de54d14ea27">wnd.h</a>
+</li>
 <li>overflow()
 : <a class="el" href="traps-dummy_8h.html#ab123c01fe16aef215b1b312179efce34">traps-dummy.h</a>
+</li>
+<li>overtick_platform
+: <a class="el" href="preempt_8c.html#a9d1a2af660cb926eda5476e5444a6108">preempt.c</a>
+, <a class="el" href="main_8c.html#a9d1a2af660cb926eda5476e5444a6108">main.c</a>
 </li>
 </ul>
 </div><!-- contents -->

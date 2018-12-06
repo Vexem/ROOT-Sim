@@ -1,21 +1,26 @@
 <map id="/home/travis/build/HPDCS/ROOT&#45;Sim/src/statistics/statistics.h" name="/home/travis/build/HPDCS/ROOT&#45;Sim/src/statistics/statistics.h">
-<area shape="rect" id="node2" href="$communication_8c.html" title="This module implements all the communication routines, for exchanging messages among different logica..." alt="" coords="702,109,941,165"/>
-<area shape="rect" id="node3" href="$core_8c.html" title="This module implements core functionalities for ROOT&#45;Sim and declares core global variables for the s..." alt="" coords="5,213,168,269"/>
-<area shape="rect" id="node4" href="$init_8c.html" title="This module implements the simulator initialization routines. " alt="" coords="192,213,355,269"/>
-<area shape="rect" id="node5" href="$init_8h.html" title="This module implements the simulator initialization routines. " alt="" coords="1219,109,1381,165"/>
-<area shape="rect" id="node8" href="$fossil_8c.html" title="In this module all the housekeeping operations related to GVT computation phase are present..." alt="" coords="379,213,541,269"/>
-<area shape="rect" id="node9" href="$gvt_2gvt_8c.html" title="This module implements the GVT reduction. The current implementation is non blocking for observable s..." alt="" coords="565,213,728,269"/>
-<area shape="rect" id="node10" href="$numerical_8c.html" title="In this module there are the implementations of Piece&#45;Wise Deterministic numerical distribution imple..." alt="" coords="752,213,915,269"/>
-<area shape="rect" id="node11" href="$main_8c.html" title="This module contains the entry point for the simulator, and some core functions. " alt="" coords="1685,213,1848,269"/>
-<area shape="rect" id="node13" href="$state_8c.html" title="The state module is responsible for managing LPs&#39; simulation states. In particular, it allows to take a snapshot, to restore a previous snapshot, and to silently re&#45;execute a portion of simulation events to bring a LP to a partiuclar LVT value for which no simulation state. " alt="" coords="1872,213,2035,269"/>
-<area shape="rect" id="node15" href="$scheduler_8c.html" title="Re&#45;entrant scheduler for LPs on worker threads. " alt="" coords="2059,213,2223,269"/>
-<area shape="rect" id="node16" href="$serial_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/serial/serial.c" alt="" coords="2248,213,2411,269"/>
-<area shape="rect" id="node17" href="$statistics_8c.html" title="State Management Subsystem. " alt="" coords="2435,213,2597,269"/>
-<area shape="rect" id="node18" href="$checkpoints_8c.html" title="This module implements the routines to save and restore checkpoints, both full and incremental..." alt="" coords="1659,109,1821,165"/>
-<area shape="rect" id="node19" href="$queues_8c.html" title="This module implements the event/message queues subsystem. " alt="" coords="1845,109,2008,165"/>
-<area shape="rect" id="node20" href="$binding_8c.html" title="Implements load sharing rules for LPs among worker threads. " alt="" coords="2032,109,2195,165"/>
-<area shape="rect" id="node6" href="$thread_8c.html" title="This module implements a thread barrier. " alt="" coords="1312,213,1475,269"/>
-<area shape="rect" id="node7" href="$ccgs_8c.html" title="Consistent and Committed Global State (CCGS) is a subsystem that (poeriodically) recomputes a global ..." alt="" coords="1499,213,1661,269"/>
-<area shape="rect" id="node12" href="$dymelor_8c.html" title="LP&#39;s memory pre&#45;allocator. This layer stands below DyMeLoR, and is the connection point to the Linux ..." alt="" coords="939,213,1101,269"/>
-<area shape="rect" id="node14" href="$process_8c.html" title="This header defines type&#45;safe operations for LP control block management. " alt="" coords="1125,213,1288,269"/>
+<area shape="rect" id="node2" href="$communication_8c.html" title="Communication Routines. " alt="" coords="31,213,270,269"/>
+<area shape="rect" id="node3" href="$mpi_8c.html" title="MPI Support Module. " alt="" coords="226,317,390,373"/>
+<area shape="rect" id="node4" href="$mpi_8h.html" title="MPI Support Module. " alt="" coords="680,109,845,165"/>
+<area shape="rect" id="node8" href="$init_8c.html" title="Initialization routines. " alt="" coords="961,213,1124,269"/>
+<area shape="rect" id="node10" href="$gvt_2gvt_8c.html" title="Global Virtual Time. " alt="" coords="1148,213,1310,269"/>
+<area shape="rect" id="node11" href="$main_8c.html" title="This module contains the entry point for the simulator, and some core functions. " alt="" coords="1334,213,1497,269"/>
+<area shape="rect" id="node12" href="$statistics_8c.html" title="Statistics module. " alt="" coords="1521,213,1684,269"/>
+<area shape="rect" id="node13" href="$core_8c.html" title="Core ROOT&#45;Sim functionalities. " alt="" coords="1708,213,1870,269"/>
+<area shape="rect" id="node14" href="$init_8h.html" title="Initialization routines. " alt="" coords="1826,109,1989,165"/>
+<area shape="rect" id="node16" href="$fossil_8c.html" title="Housekeeping operations. " alt="" coords="2454,213,2617,269"/>
+<area shape="rect" id="node17" href="$numerical_8c.html" title="Numerical Library. " alt="" coords="2641,213,2804,269"/>
+<area shape="rect" id="node19" href="$state_8c.html" title="LP state management. " alt="" coords="2828,213,2990,269"/>
+<area shape="rect" id="node21" href="$scheduler_8c.html" title="The ROOT&#45;Sim scheduler main module. " alt="" coords="3015,213,3179,269"/>
+<area shape="rect" id="node22" href="$serial_8c.html" title="Serial scheduler. " alt="" coords="3204,213,3366,269"/>
+<area shape="rect" id="node23" href="$checkpoints_8c.html" title="State saving and restore for model state buffers. " alt="" coords="2266,109,2429,165"/>
+<area shape="rect" id="node24" href="$queues_8c.html" title="Message queueing subsystem. " alt="" coords="2453,109,2616,165"/>
+<area shape="rect" id="node25" href="$binding_8c.html" title="Load sharing rules across worker threads. " alt="" coords="2640,109,2802,165"/>
+<area shape="rect" id="node5" href="$communication_2gvt_8c.html" title="Distributed GVT Support module. " alt="" coords="588,213,750,269"/>
+<area shape="rect" id="node6" href="$wnd_8c.html" title="Message delivery support. " alt="" coords="441,317,606,373"/>
+<area shape="rect" id="node7" href="$wnd_8h.html" title="Message delivery support. " alt="" coords="346,213,512,269"/>
+<area shape="rect" id="node9" href="$ccgs_8c.html" title="Consistent and Committed Global State. " alt="" coords="774,213,937,269"/>
+<area shape="rect" id="node15" href="$thread_8c.html" title="Generic thread management facilities. " alt="" coords="1894,213,2057,269"/>
+<area shape="rect" id="node18" href="$dymelor_8c.html" title="Dynamic Memory Logger and Restorer (DyMeLoR) " alt="" coords="2081,213,2244,269"/>
+<area shape="rect" id="node20" href="$process_8c.html" title="Generic LP management functions. " alt="" coords="2268,213,2430,269"/>
 </map>

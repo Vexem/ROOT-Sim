@@ -25,6 +25,7 @@ var statistics_8c =
     [ "statistics_post_data_serial", "statistics_8c.html#a097c5f0443d5eee18f283ff46a80cadf", null ],
     [ "statistics_start", "statistics_8c.html#a04ef3d7c3fb3ee25b9eb20922f859626", null ],
     [ "statistics_stop", "statistics_8c.html#aeff52bbf045362270639b2baed20762b", null ],
+    [ "global_stats", "statistics_8c.html#a157b98456279d00186e47b5a02e98430", null ],
     [ "gvt_buf", "statistics_8c.html#a49ce85f5efb74b1e42a3cf0d3b49afe2", null ],
     [ "lp_stats", "statistics_8c.html#ad4d51475fcd1de1b4a848f4738b5f5ab", null ],
     [ "lp_stats_gvt", "statistics_8c.html#aef342416f3bf2235d3c79d1f66007499", null ],

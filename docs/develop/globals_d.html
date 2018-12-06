@@ -23,6 +23,8 @@
   $(document).ready(function() { init_search(); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="flatdoc.css" rel="stylesheet" type="text/css"/>
+<link href="inline-params.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -98,6 +100,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="globals_g.html#index_g"><span>g</span></a></li>
       <li><a href="globals_h.html#index_h"><span>h</span></a></li>
       <li><a href="globals_i.html#index_i"><span>i</span></a></li>
+      <li><a href="globals_j.html#index_j"><span>j</span></a></li>
       <li><a href="globals_k.html#index_k"><span>k</span></a></li>
       <li><a href="globals_l.html#index_l"><span>l</span></a></li>
       <li><a href="globals_m.html#index_m"><span>m</span></a></li>
@@ -149,10 +152,18 @@ $(document).ready(function(){initNavTree('globals_d.html','');});
 
 <h3><a class="anchor" id="index_d"></a>- d -</h3><ul>
 <li>D32
-: <a class="el" href="x86_8h.html#a4ced9e56a662190958d61860362ca6dd">x86.h</a>
+: <a class="el" href="disassemble_8h.html#a4ced9e56a662190958d61860362ca6dd">disassemble.h</a>
+, <a class="el" href="x86_8h.html#a4ced9e56a662190958d61860362ca6dd">x86.h</a>
 </li>
 <li>D64
 : <a class="el" href="x86_8h.html#a081e2ff4c439bd019928eb0ec678bbce">x86.h</a>
+, <a class="el" href="disassemble_8h.html#a081e2ff4c439bd019928eb0ec678bbce">disassemble.h</a>
+</li>
+<li>d8_opcode()
+: <a class="el" href="disassemble_8c.html#a0e1f586ccd2cbc69c218d15cb5cc5486">disassemble.c</a>
+</li>
+<li>d9_opcode()
+: <a class="el" href="disassemble_8c.html#adee8777f524cc2889378deda9eaccc49">disassemble.c</a>
 </li>
 <li>D_DIFFER
 : <a class="el" href="core_8h.html#af40a2533da3b05514b3a88030e7dc354">core.h</a>
@@ -166,6 +177,9 @@ $(document).ready(function(){initNavTree('globals_d.html','');});
 <li>D_EQUAL_ZERO
 : <a class="el" href="core_8h.html#a0c18f96e7066bef955878fea3319e831">core.h</a>
 </li>
+<li>da_opcode()
+: <a class="el" href="disassemble_8c.html#ae2514b9b28c71bbecd64bd0f3827021a">disassemble.c</a>
+</li>
 <li>data1_t
 : <a class="el" href="ld_8h.html#a1b38526f5654adde3e42b056688754d5">ld.h</a>
 </li>
@@ -175,11 +189,29 @@ $(document).ready(function(){initNavTree('globals_d.html','');});
 <li>data66_t
 : <a class="el" href="ld_8h.html#a68d63a36d0ac9811f89e7974051b3a22">ld.h</a>
 </li>
-<li>DEBUG
-: <a class="el" href="schedule_8c.html#ad72dbcf6d0153db1b8d8a58001feed83">schedule.c</a>
+<li>DATA_32
+: <a class="el" href="disassemble_8h.html#a10c5a379cdc06e8ace023d89206bae8d">disassemble.h</a>
+</li>
+<li>DATA_64
+: <a class="el" href="disassemble_8h.html#a0d948d600ff95e279a4abc390bc08424">disassemble.h</a>
+</li>
+<li>db_opcode()
+: <a class="el" href="disassemble_8c.html#a4aeb7375218fe52553cdd94e8752a8c6">disassemble.c</a>
+</li>
+<li>dc_opcode()
+: <a class="el" href="disassemble_8c.html#ab039900e0258977a4a6271def21cdded">disassemble.c</a>
+</li>
+<li>dd_opcode()
+: <a class="el" href="disassemble_8c.html#a964b216be51b44276ab0de35e00ca0ea">disassemble.c</a>
+</li>
+<li>de_opcode()
+: <a class="el" href="disassemble_8c.html#a8e0b9edc56f94d6e04616c799fefcda8">disassemble.c</a>
 </li>
 <li>debug()
 : <a class="el" href="traps-dummy_8h.html#ac7465e1fb2b9c137abbfc4aa266cab12">traps-dummy.h</a>
+</li>
+<li>DEBUG
+: <a class="el" href="schedule_8c.html#ad72dbcf6d0153db1b8d8a58001feed83">schedule.c</a>
 </li>
 <li>DEBUG_SCHEDULE_HOOK
 : <a class="el" href="schedule_8c.html#ab24183b1d54ea102e7bf9f64f45ff8c8">schedule.c</a>
@@ -210,6 +242,9 @@ $(document).ready(function(){initNavTree('globals_d.html','');});
 </li>
 <li>device_not_available()
 : <a class="el" href="traps-dummy_8h.html#a75e3a176f45c1a7eb56669c64f10ca08">traps-dummy.h</a>
+</li>
+<li>df_opcode()
+: <a class="el" href="disassemble_8c.html#ae60c63508d8f86b63290f85a00e20eff">disassemble.c</a>
 </li>
 <li>DIRECTION_E
 : <a class="el" href="ROOT-Sim_8h.html#a60320934526effb2a380abc59aba514d">ROOT-Sim.h</a>
@@ -242,12 +277,23 @@ $(document).ready(function(){initNavTree('globals_d.html','');});
 <li>dirty_size()
 : <a class="el" href="dymelor_8h.html#a7949b85fe03df856881243990c5bf91d">dymelor.h</a>
 </li>
+<li>disable_preemption()
+: <a class="el" href="preempt_8c.html#a72b707faabaeb53be380d902fd30bfc6">preempt.c</a>
+, <a class="el" href="scheduler_8h.html#a72b707faabaeb53be380d902fd30bfc6">scheduler.h</a>
+</li>
 <li>DiscardObstacles()
 : <a class="el" href="topology_8c.html#a12dc5c84395024f28dc92710ffc4fb91">topology.c</a>
 , <a class="el" href="ROOT-Sim_8h.html#a12dc5c84395024f28dc92710ffc4fb91">ROOT-Sim.h</a>
 </li>
 <li>disp_size
-: <a class="el" href="x86_8h.html#a8bb17ce884b7d2ebf2ef91488951f1a6">x86.h</a>
+: <a class="el" href="disassemble_8h.html#a8bb17ce884b7d2ebf2ef91488951f1a6">disassemble.h</a>
+, <a class="el" href="x86_8h.html#a8bb17ce884b7d2ebf2ef91488951f1a6">x86.h</a>
+</li>
+<li>dist_termination_finalize()
+: <a class="el" href="mpi_8c.html#a3ac4bf6fda6cd92f529134aac34edabf">mpi.c</a>
+</li>
+<li>dist_termination_init()
+: <a class="el" href="mpi_8c.html#a6e129776fd0d7fc31a255a396ce28c39">mpi.c</a>
 </li>
 <li>distribute_lps_on_kernels()
 : <a class="el" href="core_8c.html#a0c0887000d8e04c515c4a9a5bf2f5995">core.c</a>

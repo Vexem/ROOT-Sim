@@ -1,7 +1,6 @@
 var statistics_8h =
 [
     [ "stat_t", "structstat__t.html", "structstat__t" ],
-    [ "_STATISTICS_H", "statistics_8h.html#a96ab1ff6c9fe04238513e1698942d67a", null ],
     [ "DEFAULT_OUTPUT_DIR", "statistics_8h.html#a9e4c716d77a7090dd989c5f9390fa2fb", null ],
     [ "MAX_PATHLEN", "statistics_8h.html#ad4ccae1a260e432678f25068ca40ee5c", null ],
     [ "STAT_FILE_NAME_GLOBAL", "statistics_8h.html#ab2c3777236dc0f934ec57aae57ad9de3", null ],

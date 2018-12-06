@@ -23,6 +23,8 @@
   $(document).ready(function() { init_search(); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="flatdoc.css" rel="stylesheet" type="text/css"/>
+<link href="inline-params.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -115,7 +117,7 @@ $(document).ready(function(){initNavTree('process_8h.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>This header defines a LP control block, keeping information about both simulation state and execution state as a user thread.  
+<p>LP control blocks.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdbool.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="state_8h_source.html">mm/state.h</a>&gt;</code><br />
@@ -134,22 +136,24 @@ $(document).ready(function(){initNavTree('process_8h.html','');});
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="process_8h__incl.png" border="0" usemap="#_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2scheduler_2process_8h" alt=""/></div>
 <map name="_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2scheduler_2process_8h" id="_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2scheduler_2process_8h">
-<area shape="rect" id="node3" href="state_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="94,288,191,315"/>
-<area shape="rect" id="node15" href="numerical_8h.html" title="This header is used to define symbols which must be accessible by the simulator but not by the applic..." alt="" coords="43,437,157,464"/>
-<area shape="rect" id="node18" href="mm_8h.html" title="Memory Manager main header. " alt="" coords="721,124,812,151"/>
-<area shape="rect" id="node27" href="ecs_8h.html" title="Event Cross State Synchronization. This module implements the userspace handler of the artificially i..." alt="" coords="1218,124,1305,151"/>
-<area shape="rect" id="node28" href="list_8h.html" title="This header defines macros for accessing the general&#45;purpose list implementation used in the simulato..." alt="" coords="1167,437,1287,464"/>
-<area shape="rect" id="node31" href="msgchannel_8h.html" title="This module implements an (M, 1) channel to transfer message pointers. " alt="" coords="215,288,395,315"/>
-<area shape="rect" id="node32" href="ult_8h.html" title="The User&#45;Level Thread module allows the creation/scheduling of a user&#45;level thread in an architecture..." alt="" coords="353,213,436,240"/>
-<area shape="rect" id="node33" href="communication_8h.html" title="This is the main header file, containing all data structures and defines used by the communication su..." alt="" coords="422,124,658,151"/>
-<area shape="rect" id="node34" href="cross__state__manager_8h.html" title="This is the main header for the Linux Kernel Module which implements per&#45;kernel&#45;thread different page..." alt="" coords="1329,109,1495,165"/>
-<area shape="rect" id="node4" href="ROOT-Sim_8h.html" title="This header defines all the symbols which are needed to develop a Model to be simulated on top of ROO..." alt="" coords="232,437,331,464"/>
-<area shape="rect" id="node11" href="core_8h.html" title="This header defines all the shared symbols which are needed by different subsystems. " alt="" coords="425,363,519,389"/>
-<area shape="rect" id="node16" href="thread_8h.html" title="This module implements Kernel Level Thread supports. " alt="" coords="406,437,514,464"/>
-<area shape="rect" id="node17" href="atomic_8h.html" title="This module implements atomic and non&#45;blocking operations used within ROOT&#45;Sim to coordinate threads ..." alt="" coords="947,512,1058,539"/>
-<area shape="rect" id="node21" href="dymelor_8h.html" title="This is the Memory Management Subsystem main header file. " alt="" coords="615,213,729,240"/>
-<area shape="rect" id="node22" href="bitmap_8h.html" title="This header implements a minimal bitmap data type. " alt="" coords="623,288,769,315"/>
-<area shape="rect" id="node24" href="timer_8h.html" title="This header defines the timers which the simulator uses to monitor its internal behaviour. " alt="" coords="844,288,943,315"/>
+<area shape="rect" id="node3" href="state_8h.html" title="LP state management. " alt="" coords="145,288,242,315"/>
+<area shape="rect" id="node15" href="numerical_8h.html" title="Numerical Library. " alt="" coords="125,437,240,464"/>
+<area shape="rect" id="node21" href="mm_8h.html" title="Memory Manager main header. " alt="" coords="621,124,712,151"/>
+<area shape="rect" id="node29" href="ecs_8h.html" title="Event &amp; Cross State Synchornization. " alt="" coords="1417,124,1503,151"/>
+<area shape="rect" id="node30" href="list_8h.html" title="Generic Lists. " alt="" coords="1236,437,1356,464"/>
+<area shape="rect" id="node33" href="msgchannel_8h.html" title="A (M, 1) channel for messages. " alt="" coords="371,213,551,240"/>
+<area shape="rect" id="node34" href="ult_8h.html" title="User&#45;Level Threads Headers. " alt="" coords="736,124,819,151"/>
+<area shape="rect" id="node37" href="communication_8h.html" title="Communication Routines. " alt="" coords="266,288,502,315"/>
+<area shape="rect" id="node38" href="cross__state__manager_8h.html" title="Per&#45;thread page table. " alt="" coords="1528,109,1693,165"/>
+<area shape="rect" id="node4" href="ROOT-Sim_8h.html" title="ROOT&#45;Sim header for model development. " alt="" coords="305,437,404,464"/>
+<area shape="rect" id="node11" href="core_8h.html" title="Core ROOT&#45;Sim functionalities. " alt="" coords="495,363,590,389"/>
+<area shape="rect" id="node16" href="thread_8h.html" title="Generic thread management facilities. " alt="" coords="738,437,846,464"/>
+<area shape="rect" id="node17" href="atomic_8h.html" title="Atomic operations. " alt="" coords="1125,512,1235,539"/>
+<area shape="rect" id="node23" href="dymelor_8h.html" title="Dynamic Memory Logger and Restorer (DyMeLoR) " alt="" coords="945,213,1060,240"/>
+<area shape="rect" id="node24" href="bitmap_8h.html" title="Bitmap data type. " alt="" coords="728,288,875,315"/>
+<area shape="rect" id="node26" href="timer_8h.html" title="Timers. " alt="" coords="949,288,1048,315"/>
+<area shape="rect" id="node35" href="jmp_8h.html" title="Architecture&#45;independent ULT header. " alt="" coords="1231,213,1321,240"/>
+<area shape="rect" id="node36" href="x86_2jmp_8h.html" title="x86 ULT support header " alt="" coords="1224,288,1341,315"/>
 </map>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -159,37 +163,44 @@ $(document).ready(function(){initNavTree('process_8h.html','');});
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="process_8h__dep__incl.png" border="0" usemap="#_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2scheduler_2process_8hdep" alt=""/></div>
 <map name="_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2scheduler_2process_8hdep" id="_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2scheduler_2process_8hdep">
-<area shape="rect" id="node2" href="asm__defines_8c.html" title="This file is not actually compiled into ROOT&#45;Sim. This is used by the build system to generate the as..." alt="" coords="577,109,740,165"/>
-<area shape="rect" id="node3" href="ult_8c.html" title="The User&#45;Level Thread module allows the creation/scheduling of a user&#45;level thread in an architecture..." alt="" coords="764,109,927,165"/>
-<area shape="rect" id="node4" href="communication_8c.html" title="This module implements all the communication routines, for exchanging messages among different logica..." alt="" coords="193,317,431,373"/>
-<area shape="rect" id="node5" href="core_8c.html" title="This module implements core functionalities for ROOT&#45;Sim and declares core global variables for the s..." alt="" coords="3256,317,3419,373"/>
-<area shape="rect" id="node6" href="init_8c.html" title="This module implements the simulator initialization routines. " alt="" coords="3443,317,3605,373"/>
-<area shape="rect" id="node7" href="ccgs_8c.html" title="Consistent and Committed Global State (CCGS) is a subsystem that (poeriodically) recomputes a global ..." alt="" coords="1389,317,1552,373"/>
-<area shape="rect" id="node8" href="fossil_8c.html" title="In this module all the housekeeping operations related to GVT computation phase are present..." alt="" coords="1949,317,2112,373"/>
-<area shape="rect" id="node9" href="gvt_2gvt_8c.html" title="This module implements the GVT reduction. The current implementation is non blocking for observable s..." alt="" coords="2136,317,2299,373"/>
-<area shape="rect" id="node10" href="numerical_8c.html" title="In this module there are the implementations of Piece&#45;Wise Deterministic numerical distribution imple..." alt="" coords="2323,317,2485,373"/>
-<area shape="rect" id="node11" href="main_8c.html" title="This module contains the entry point for the simulator, and some core functions. " alt="" coords="3629,317,3792,373"/>
-<area shape="rect" id="node12" href="buddy_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/mm/buddy.c" alt="" coords="1660,109,1823,165"/>
-<area shape="rect" id="node13" href="checkpoints_8c.html" title="This module implements the routines to save and restore checkpoints, both full and incremental..." alt="" coords="829,317,992,373"/>
-<area shape="rect" id="node14" href="segment_8c.html" title="Segment Allocator. This is the lowest&#45;level allocator in ROOT&#45;Sim. " alt="" coords="1897,109,2060,165"/>
-<area shape="rect" id="node15" href="state_8c.html" title="The state module is responsible for managing LPs&#39; simulation states. In particular, it allows to take a snapshot, to restore a previous snapshot, and to silently re&#45;execute a portion of simulation events to bring a LP to a partiuclar LVT value for which no simulation state. " alt="" coords="3816,317,3979,373"/>
-<area shape="rect" id="node16" href="queues_8c.html" title="This module implements the event/message queues subsystem. " alt="" coords="456,317,619,373"/>
-<area shape="rect" id="node17" href="queues_8h.html" title="Event and State queueing Subsystem main header. " alt="" coords="1068,109,1231,165"/>
-<area shape="rect" id="node18" href="scheduler_8h.html" title="Scheduling Subsystem main header file. Scheduler&#45;specific data structures and defines should be place..." alt="" coords="1948,213,2113,269"/>
-<area shape="rect" id="node22" href="binding_8c.html" title="Implements load sharing rules for LPs among worker threads. " alt="" coords="1016,317,1179,373"/>
-<area shape="rect" id="node23" href="control_8c.html" title="Processing Points for Control Messages. " alt="" coords="643,317,805,373"/>
-<area shape="rect" id="node24" href="process_8c.html" title="This header defines type&#45;safe operations for LP control block management. " alt="" coords="1576,317,1739,373"/>
-<area shape="rect" id="node25" href="scheduler_8c.html" title="Re&#45;entrant scheduler for LPs on worker threads. " alt="" coords="4003,317,4167,373"/>
-<area shape="rect" id="node26" href="stf_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/scheduler/stf.c" alt="" coords="5,317,168,373"/>
-<area shape="rect" id="node28" href="statistics_8c.html" title="State Management Subsystem. " alt="" coords="3069,317,3232,373"/>
-<area shape="rect" id="node29" href="stf_8h.html" title="Smallest Timestamp First scheduler main header. " alt="" coords="3345,109,3508,165"/>
-<area shape="rect" id="node30" href="statistics_8h.html" title="State Management Subsystem. " alt="" coords="2416,109,2579,165"/>
-<area shape="rect" id="node19" href="topology_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/lib/topology.c" alt="" coords="1203,317,1365,373"/>
-<area shape="rect" id="node20" href="wrapper_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/lib&#45;wrapper/wrapper.c" alt="" coords="1763,317,1925,373"/>
-<area shape="rect" id="node21" href="dymelor_8c.html" title="LP&#39;s memory pre&#45;allocator. This layer stands below DyMeLoR, and is the connection point to the Linux ..." alt="" coords="2509,317,2672,373"/>
-<area shape="rect" id="node27" href="serial_8c.html" title="/home/travis/build\l/HPDCS/ROOT&#45;Sim/src\l/serial/serial.c" alt="" coords="2696,317,2859,373"/>
-<area shape="rect" id="node31" href="init_8h.html" title="This module implements the simulator initialization routines. " alt="" coords="2551,213,2713,269"/>
-<area shape="rect" id="node32" href="thread_8c.html" title="This module implements a thread barrier. " alt="" coords="2883,317,3045,373"/>
+<area shape="rect" id="node2" href="asm__defines_8c.html" title="Assembly build support module. " alt="" coords="125,109,288,165"/>
+<area shape="rect" id="node3" href="ult_8c.html" title="User&#45;Level Threads. " alt="" coords="312,109,475,165"/>
+<area shape="rect" id="node4" href="communication_8c.html" title="Communication Routines. " alt="" coords="990,317,1229,373"/>
+<area shape="rect" id="node5" href="core_8c.html" title="Core ROOT&#45;Sim functionalities. " alt="" coords="2560,317,2723,373"/>
+<area shape="rect" id="node6" href="init_8c.html" title="Initialization routines. " alt="" coords="4429,317,4592,373"/>
+<area shape="rect" id="node7" href="ccgs_8c.html" title="Consistent and Committed Global State. " alt="" coords="3869,317,4032,373"/>
+<area shape="rect" id="node8" href="fossil_8c.html" title="Housekeeping operations. " alt="" coords="2747,317,2909,373"/>
+<area shape="rect" id="node9" href="gvt_2gvt_8c.html" title="Global Virtual Time. " alt="" coords="4056,317,4219,373"/>
+<area shape="rect" id="node10" href="numerical_8c.html" title="Numerical Library. " alt="" coords="2187,317,2349,373"/>
+<area shape="rect" id="node11" href="main_8c.html" title="This module contains the entry point for the simulator, and some core functions. " alt="" coords="4243,317,4405,373"/>
+<area shape="rect" id="node12" href="buddy_8c.html" title="A Buddy System implementation. " alt="" coords="1532,109,1695,165"/>
+<area shape="rect" id="node13" href="checkpoints_8c.html" title="State saving and restore for model state buffers. " alt="" coords="1253,317,1416,373"/>
+<area shape="rect" id="node14" href="ecs_8c.html" title="Event &amp; Cross State Synchornization. " alt="" coords="192,317,355,373"/>
+<area shape="rect" id="node15" href="segment_8c.html" title="Segment allocator. " alt="" coords="1820,109,1983,165"/>
+<area shape="rect" id="node16" href="state_8c.html" title="LP state management. " alt="" coords="2373,317,2536,373"/>
+<area shape="rect" id="node17" href="queues_8c.html" title="Message queueing subsystem. " alt="" coords="803,317,965,373"/>
+<area shape="rect" id="node18" href="queues_8h.html" title="Message queueing subsystem. " alt="" coords="1028,109,1191,165"/>
+<area shape="rect" id="node20" href="scheduler_8h.html" title="The ROOT&#45;Sim scheduler main module header. " alt="" coords="2083,213,2248,269"/>
+<area shape="rect" id="node24" href="binding_8c.html" title="Load sharing rules across worker threads. " alt="" coords="1440,317,1603,373"/>
+<area shape="rect" id="node25" href="control_8c.html" title="Processing points for control messages. " alt="" coords="379,317,541,373"/>
+<area shape="rect" id="node26" href="preempt_8c.html" title="LP preemption management. " alt="" coords="565,317,728,373"/>
+<area shape="rect" id="node27" href="process_8c.html" title="Generic LP management functions. " alt="" coords="1627,317,1789,373"/>
+<area shape="rect" id="node28" href="scheduler_8c.html" title="The ROOT&#45;Sim scheduler main module. " alt="" coords="3494,317,3658,373"/>
+<area shape="rect" id="node29" href="stf_8c.html" title="O(n) scheduling algorithm. " alt="" coords="5,317,168,373"/>
+<area shape="rect" id="node31" href="statistics_8c.html" title="Statistics module. " alt="" coords="3683,317,3845,373"/>
+<area shape="rect" id="node32" href="stf_8h.html" title="O(n) scheduling algorithm. " alt="" coords="2108,109,2271,165"/>
+<area shape="rect" id="node33" href="statistics_8h.html" title="Statistics module. " alt="" coords="2836,109,2999,165"/>
+<area shape="rect" id="node19" href="mpi_8c.html" title="MPI Support Module. " alt="" coords="4649,421,4813,477"/>
+<area shape="rect" id="node21" href="topology_8c.html" title="Topology Library. " alt="" coords="1813,317,1976,373"/>
+<area shape="rect" id="node22" href="wrapper_8c.html" title="stdlib wrapper " alt="" coords="2000,317,2163,373"/>
+<area shape="rect" id="node23" href="dymelor_8c.html" title="Dynamic Memory Logger and Restorer (DyMeLoR) " alt="" coords="2933,317,3096,373"/>
+<area shape="rect" id="node30" href="serial_8c.html" title="Serial scheduler. " alt="" coords="3120,317,3283,373"/>
+<area shape="rect" id="node34" href="mpi_8h.html" title="MPI Support Module. " alt="" coords="4252,213,4417,269"/>
+<area shape="rect" id="node38" href="init_8h.html" title="Initialization routines. " alt="" coords="3120,213,3283,269"/>
+<area shape="rect" id="node35" href="communication_2gvt_8c.html" title="Distributed GVT Support module. " alt="" coords="4667,317,4829,373"/>
+<area shape="rect" id="node36" href="wnd_8c.html" title="Message delivery support. " alt="" coords="4940,421,5105,477"/>
+<area shape="rect" id="node37" href="wnd_8h.html" title="Message delivery support. " alt="" coords="4854,317,5021,373"/>
+<area shape="rect" id="node39" href="thread_8c.html" title="Generic thread management facilities. " alt="" coords="3307,317,3469,373"/>
 </map>
 </div>
 </div>
@@ -259,8 +270,9 @@ Variables</h2></td></tr>
 <tr class="separator:aabb0ae43d9d181e84cbb6bc5204818fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This header defines a LP control block, keeping information about both simulation state and execution state as a user thread. </p>
-<p>Copyright (C) 2008-2018 HPDCS Group <a href="http://www.dis.uniroma1.it/~hpdcs">http://www.dis.uniroma1.it/~hpdcs</a></p>
+<div class="textblock"><p>LP control blocks. </p>
+<p>This header defines a LP control block, keeping information about both simulation state and execution state as a user thread.</p>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (C) 2008-2018 HPDCS Group <a href="https://hpdcs.github.io">https://hpdcs.github.io</a></dd></dl>
 <p>This file is part of ROOT-Sim (ROme OpTimistic Simulator).</p>
 <p>ROOT-Sim is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; only version 3 of the License applies.</p>
 <p>ROOT-Sim is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
@@ -282,7 +294,7 @@ Roberto Vitali</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="process_8h_source.html#l00056">56</a> of file <a class="el" href="process_8h_source.html">process.h</a>.</p>
+<p>Definition at line <a class="el" href="process_8h_source.html#l00060">60</a> of file <a class="el" href="process_8h_source.html">process.h</a>.</p>
 
 </div>
 </div>
@@ -299,12 +311,12 @@ Roberto Vitali</dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="process_8h.html#aabb0ae43d9d181e84cbb6bc5204818fa">__lp_bound_counter</a> = 0;\</div><div class="line">                for(<span class="keyword">struct</span> <a class="code" href="structlp__struct.html">lp_struct</a> *(lp) = <a class="code" href="process_8h.html#a234aca872959459fd600c804f8a15807">lps_bound_blocks</a>[<a class="code" href="process_8h.html#aabb0ae43d9d181e84cbb6bc5204818fa">__lp_bound_counter</a>]; <a class="code" href="process_8h.html#aabb0ae43d9d181e84cbb6bc5204818fa">__lp_bound_counter</a> &lt; <a class="code" href="scheduler_8c.html#a9b995a5cf4be5b0d1d548409c4e251a9">n_prc_per_thread</a>; (lp) = <a class="code" href="process_8h.html#a234aca872959459fd600c804f8a15807">lps_bound_blocks</a>[++<a class="code" href="process_8h.html#aabb0ae43d9d181e84cbb6bc5204818fa">__lp_bound_counter</a>])</div><div class="ttc" id="structlp__struct_html"><div class="ttname"><a href="structlp__struct.html">lp_struct</a></div><div class="ttdef"><b>Definition:</b> <a href="process_8h_source.html#l00059">process.h:59</a></div></div>
-<div class="ttc" id="process_8h_html_aabb0ae43d9d181e84cbb6bc5204818fa"><div class="ttname"><a href="process_8h.html#aabb0ae43d9d181e84cbb6bc5204818fa">__lp_bound_counter</a></div><div class="ttdeci">__thread unsigned int __lp_bound_counter</div><div class="ttdef"><b>Definition:</b> <a href="process_8c_source.html#l00036">process.c:36</a></div></div>
-<div class="ttc" id="process_8h_html_a234aca872959459fd600c804f8a15807"><div class="ttname"><a href="process_8h.html#a234aca872959459fd600c804f8a15807">lps_bound_blocks</a></div><div class="ttdeci">__thread struct lp_struct ** lps_bound_blocks</div><div class="ttdef"><b>Definition:</b> <a href="process_8c_source.html#l00044">process.c:44</a></div></div>
-<div class="ttc" id="scheduler_8c_html_a9b995a5cf4be5b0d1d548409c4e251a9"><div class="ttname"><a href="scheduler_8c.html#a9b995a5cf4be5b0d1d548409c4e251a9">n_prc_per_thread</a></div><div class="ttdeci">__thread unsigned int n_prc_per_thread</div><div class="ttdoc">This is used to keep track of how many LPs were bound to the current KLT. </div><div class="ttdef"><b>Definition:</b> <a href="scheduler_8c_source.html#l00061">scheduler.c:61</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="process_8h.html#aabb0ae43d9d181e84cbb6bc5204818fa">__lp_bound_counter</a> = 0;\</div><div class="line">                for(<span class="keyword">struct</span> <a class="code" href="structlp__struct.html">lp_struct</a> *(lp) = <a class="code" href="process_8h.html#a234aca872959459fd600c804f8a15807">lps_bound_blocks</a>[<a class="code" href="process_8h.html#aabb0ae43d9d181e84cbb6bc5204818fa">__lp_bound_counter</a>]; <a class="code" href="process_8h.html#aabb0ae43d9d181e84cbb6bc5204818fa">__lp_bound_counter</a> &lt; <a class="code" href="scheduler_8c.html#a9b995a5cf4be5b0d1d548409c4e251a9">n_prc_per_thread</a>; (lp) = <a class="code" href="process_8h.html#a234aca872959459fd600c804f8a15807">lps_bound_blocks</a>[++<a class="code" href="process_8h.html#aabb0ae43d9d181e84cbb6bc5204818fa">__lp_bound_counter</a>])</div><div class="ttc" id="structlp__struct_html"><div class="ttname"><a href="structlp__struct.html">lp_struct</a></div><div class="ttdef"><b>Definition:</b> <a href="process_8h_source.html#l00063">process.h:63</a></div></div>
+<div class="ttc" id="process_8h_html_aabb0ae43d9d181e84cbb6bc5204818fa"><div class="ttname"><a href="process_8h.html#aabb0ae43d9d181e84cbb6bc5204818fa">__lp_bound_counter</a></div><div class="ttdeci">__thread unsigned int __lp_bound_counter</div><div class="ttdef"><b>Definition:</b> <a href="process_8c_source.html#l00041">process.c:41</a></div></div>
+<div class="ttc" id="process_8h_html_a234aca872959459fd600c804f8a15807"><div class="ttname"><a href="process_8h.html#a234aca872959459fd600c804f8a15807">lps_bound_blocks</a></div><div class="ttdeci">__thread struct lp_struct ** lps_bound_blocks</div><div class="ttdef"><b>Definition:</b> <a href="process_8c_source.html#l00049">process.c:49</a></div></div>
+<div class="ttc" id="scheduler_8c_html_a9b995a5cf4be5b0d1d548409c4e251a9"><div class="ttname"><a href="scheduler_8c.html#a9b995a5cf4be5b0d1d548409c4e251a9">n_prc_per_thread</a></div><div class="ttdeci">__thread unsigned int n_prc_per_thread</div><div class="ttdoc">This is used to keep track of how many LPs were bound to the current KLT. </div><div class="ttdef"><b>Definition:</b> <a href="scheduler_8c_source.html#l00069">scheduler.c:69</a></div></div>
 </div><!-- fragment -->
-<p>Definition at line <a class="el" href="process_8h_source.html#l00168">168</a> of file <a class="el" href="process_8h_source.html">process.h</a>.</p>
+<p>Definition at line <a class="el" href="process_8h_source.html#l00172">172</a> of file <a class="el" href="process_8h_source.html">process.h</a>.</p>
 
 </div>
 </div>
@@ -321,12 +333,12 @@ Roberto Vitali</dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="process_8h.html#ac551c7ab6a532ed19d0f6e308108b4df">__lp_counter</a> = 0;\</div><div class="line">                for(<span class="keyword">struct</span> <a class="code" href="structlp__struct.html">lp_struct</a> *(lp) = <a class="code" href="process_8h.html#a94aee9d39d49e56374a34eb9c162ed92">lps_blocks</a>[<a class="code" href="process_8h.html#ac551c7ab6a532ed19d0f6e308108b4df">__lp_counter</a>]; <a class="code" href="process_8h.html#ac551c7ab6a532ed19d0f6e308108b4df">__lp_counter</a> &lt; <a class="code" href="core_8c.html#a526a04b413b324f6249f13f11e98021c">n_prc</a>; (lp) = <a class="code" href="process_8h.html#a94aee9d39d49e56374a34eb9c162ed92">lps_blocks</a>[++<a class="code" href="process_8h.html#ac551c7ab6a532ed19d0f6e308108b4df">__lp_counter</a>])</div><div class="ttc" id="structlp__struct_html"><div class="ttname"><a href="structlp__struct.html">lp_struct</a></div><div class="ttdef"><b>Definition:</b> <a href="process_8h_source.html#l00059">process.h:59</a></div></div>
-<div class="ttc" id="process_8h_html_ac551c7ab6a532ed19d0f6e308108b4df"><div class="ttname"><a href="process_8h.html#ac551c7ab6a532ed19d0f6e308108b4df">__lp_counter</a></div><div class="ttdeci">__thread unsigned int __lp_counter</div><div class="ttdef"><b>Definition:</b> <a href="process_8c_source.html#l00035">process.c:35</a></div></div>
-<div class="ttc" id="core_8c_html_a526a04b413b324f6249f13f11e98021c"><div class="ttname"><a href="core_8c.html#a526a04b413b324f6249f13f11e98021c">n_prc</a></div><div class="ttdeci">unsigned int n_prc</div><div class="ttdoc">Number of logical processes hosted by the current kernel instance. </div><div class="ttdef"><b>Definition:</b> <a href="core_8c_source.html#l00063">core.c:63</a></div></div>
-<div class="ttc" id="process_8h_html_a94aee9d39d49e56374a34eb9c162ed92"><div class="ttname"><a href="process_8h.html#a94aee9d39d49e56374a34eb9c162ed92">lps_blocks</a></div><div class="ttdeci">struct lp_struct ** lps_blocks</div><div class="ttdoc">Maintain LPs&amp;#39; simulation and execution states. </div><div class="ttdef"><b>Definition:</b> <a href="process_8c_source.html#l00039">process.c:39</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="process_8h.html#ac551c7ab6a532ed19d0f6e308108b4df">__lp_counter</a> = 0;\</div><div class="line">                for(<span class="keyword">struct</span> <a class="code" href="structlp__struct.html">lp_struct</a> *(lp) = <a class="code" href="process_8h.html#a94aee9d39d49e56374a34eb9c162ed92">lps_blocks</a>[<a class="code" href="process_8h.html#ac551c7ab6a532ed19d0f6e308108b4df">__lp_counter</a>]; <a class="code" href="process_8h.html#ac551c7ab6a532ed19d0f6e308108b4df">__lp_counter</a> &lt; <a class="code" href="core_8c.html#a526a04b413b324f6249f13f11e98021c">n_prc</a>; (lp) = <a class="code" href="process_8h.html#a94aee9d39d49e56374a34eb9c162ed92">lps_blocks</a>[++<a class="code" href="process_8h.html#ac551c7ab6a532ed19d0f6e308108b4df">__lp_counter</a>])</div><div class="ttc" id="structlp__struct_html"><div class="ttname"><a href="structlp__struct.html">lp_struct</a></div><div class="ttdef"><b>Definition:</b> <a href="process_8h_source.html#l00063">process.h:63</a></div></div>
+<div class="ttc" id="process_8h_html_ac551c7ab6a532ed19d0f6e308108b4df"><div class="ttname"><a href="process_8h.html#ac551c7ab6a532ed19d0f6e308108b4df">__lp_counter</a></div><div class="ttdeci">__thread unsigned int __lp_counter</div><div class="ttdef"><b>Definition:</b> <a href="process_8c_source.html#l00040">process.c:40</a></div></div>
+<div class="ttc" id="core_8c_html_a526a04b413b324f6249f13f11e98021c"><div class="ttname"><a href="core_8c.html#a526a04b413b324f6249f13f11e98021c">n_prc</a></div><div class="ttdeci">unsigned int n_prc</div><div class="ttdoc">Number of logical processes hosted by the current kernel instance. </div><div class="ttdef"><b>Definition:</b> <a href="core_8c_source.html#l00067">core.c:67</a></div></div>
+<div class="ttc" id="process_8h_html_a94aee9d39d49e56374a34eb9c162ed92"><div class="ttname"><a href="process_8h.html#a94aee9d39d49e56374a34eb9c162ed92">lps_blocks</a></div><div class="ttdeci">struct lp_struct ** lps_blocks</div><div class="ttdoc">Maintain LPs&amp;#39; simulation and execution states. </div><div class="ttdef"><b>Definition:</b> <a href="process_8c_source.html#l00044">process.c:44</a></div></div>
 </div><!-- fragment -->
-<p>Definition at line <a class="el" href="process_8h_source.html#l00165">165</a> of file <a class="el" href="process_8h_source.html">process.h</a>.</p>
+<p>Definition at line <a class="el" href="process_8h_source.html#l00169">169</a> of file <a class="el" href="process_8h_source.html">process.h</a>.</p>
 
 </div>
 </div>
@@ -344,7 +356,7 @@ Roberto Vitali</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="process_8h_source.html#l00057">57</a> of file <a class="el" href="process_8h_source.html">process.h</a>.</p>
+<p>Definition at line <a class="el" href="process_8h_source.html#l00061">61</a> of file <a class="el" href="process_8h_source.html">process.h</a>.</p>
 
 </div>
 </div>
@@ -358,7 +370,7 @@ Roberto Vitali</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="process_8h_source.html#l00043">43</a> of file <a class="el" href="process_8h_source.html">process.h</a>.</p>
+<p>Definition at line <a class="el" href="process_8h_source.html#l00047">47</a> of file <a class="el" href="process_8h_source.html">process.h</a>.</p>
 
 </div>
 </div>
@@ -372,7 +384,7 @@ Roberto Vitali</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="process_8h_source.html#l00045">45</a> of file <a class="el" href="process_8h_source.html">process.h</a>.</p>
+<p>Definition at line <a class="el" href="process_8h_source.html#l00049">49</a> of file <a class="el" href="process_8h_source.html">process.h</a>.</p>
 
 </div>
 </div>
@@ -386,7 +398,7 @@ Roberto Vitali</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="process_8h_source.html#l00051">51</a> of file <a class="el" href="process_8h_source.html">process.h</a>.</p>
+<p>Definition at line <a class="el" href="process_8h_source.html#l00055">55</a> of file <a class="el" href="process_8h_source.html">process.h</a>.</p>
 
 </div>
 </div>
@@ -400,7 +412,7 @@ Roberto Vitali</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="process_8h_source.html#l00048">48</a> of file <a class="el" href="process_8h_source.html">process.h</a>.</p>
+<p>Definition at line <a class="el" href="process_8h_source.html#l00052">52</a> of file <a class="el" href="process_8h_source.html">process.h</a>.</p>
 
 </div>
 </div>
@@ -414,7 +426,7 @@ Roberto Vitali</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="process_8h_source.html#l00046">46</a> of file <a class="el" href="process_8h_source.html">process.h</a>.</p>
+<p>Definition at line <a class="el" href="process_8h_source.html#l00050">50</a> of file <a class="el" href="process_8h_source.html">process.h</a>.</p>
 
 </div>
 </div>
@@ -428,7 +440,7 @@ Roberto Vitali</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="process_8h_source.html#l00047">47</a> of file <a class="el" href="process_8h_source.html">process.h</a>.</p>
+<p>Definition at line <a class="el" href="process_8h_source.html#l00051">51</a> of file <a class="el" href="process_8h_source.html">process.h</a>.</p>
 
 </div>
 </div>
@@ -442,7 +454,7 @@ Roberto Vitali</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="process_8h_source.html#l00049">49</a> of file <a class="el" href="process_8h_source.html">process.h</a>.</p>
+<p>Definition at line <a class="el" href="process_8h_source.html#l00053">53</a> of file <a class="el" href="process_8h_source.html">process.h</a>.</p>
 
 </div>
 </div>
@@ -456,7 +468,7 @@ Roberto Vitali</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="process_8h_source.html#l00050">50</a> of file <a class="el" href="process_8h_source.html">process.h</a>.</p>
+<p>Definition at line <a class="el" href="process_8h_source.html#l00054">54</a> of file <a class="el" href="process_8h_source.html">process.h</a>.</p>
 
 </div>
 </div>
@@ -470,7 +482,7 @@ Roberto Vitali</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="process_8h_source.html#l00054">54</a> of file <a class="el" href="process_8h_source.html">process.h</a>.</p>
+<p>Definition at line <a class="el" href="process_8h_source.html#l00058">58</a> of file <a class="el" href="process_8h_source.html">process.h</a>.</p>
 
 </div>
 </div>
@@ -484,7 +496,7 @@ Roberto Vitali</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="process_8h_source.html#l00052">52</a> of file <a class="el" href="process_8h_source.html">process.h</a>.</p>
+<p>Definition at line <a class="el" href="process_8h_source.html#l00056">56</a> of file <a class="el" href="process_8h_source.html">process.h</a>.</p>
 
 </div>
 </div>
@@ -498,7 +510,7 @@ Roberto Vitali</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="process_8h_source.html#l00053">53</a> of file <a class="el" href="process_8h_source.html">process.h</a>.</p>
+<p>Definition at line <a class="el" href="process_8h_source.html#l00057">57</a> of file <a class="el" href="process_8h_source.html">process.h</a>.</p>
 
 </div>
 </div>
@@ -526,7 +538,7 @@ Roberto Vitali</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="process_8h_source.html#l00171">171</a> of file <a class="el" href="process_8h_source.html">process.h</a>.</p>
+<p>Definition at line <a class="el" href="process_8h_source.html#l00175">175</a> of file <a class="el" href="process_8h_source.html">process.h</a>.</p>
 
 </div>
 </div>
@@ -545,7 +557,7 @@ Roberto Vitali</dd></dl>
 </div><div class="memdoc">
 <p>This macro retrieves the LVT for the current LP. There is a small interval window where the value returned is the one of the next event to be processed. In particular, this happens in the scheduling function, when the bound is advanced to the next event to be processed, just before its actual execution. </p>
 
-<p>Definition at line <a class="el" href="process_8h_source.html#l00159">159</a> of file <a class="el" href="process_8h_source.html">process.h</a>.</p>
+<p>Definition at line <a class="el" href="process_8h_source.html#l00163">163</a> of file <a class="el" href="process_8h_source.html">process.h</a>.</p>
 
 </div>
 </div>
@@ -564,7 +576,7 @@ Roberto Vitali</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="process_8c_source.html#l00155">155</a> of file <a class="el" href="process_8c_source.html">process.c</a>.</p>
+<p>Definition at line <a class="el" href="process_8c_source.html#l00160">160</a> of file <a class="el" href="process_8c_source.html">process.c</a>.</p>
 
 <p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -573,32 +585,41 @@ Roberto Vitali</dd></dl>
 <div id="dynsection-2-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="process_8h_a0c2eead1b32a25de97bb5979574318af_icgraph.png" border="0" usemap="#process_8h_a0c2eead1b32a25de97bb5979574318af_icgraph" alt=""/></div>
 <map name="process_8h_a0c2eead1b32a25de97bb5979574318af_icgraph" id="process_8h_a0c2eead1b32a25de97bb5979574318af_icgraph">
-<area shape="rect" id="node2" href="communication_8c.html#ae6b96249d35969d688d0d84209919c8f" title="which_slab_to_use" alt="" coords="171,230,311,257"/>
-<area shape="rect" id="node10" href="queues_8h.html#a54eca9bfa893cac072d1b1d3010c2944" title="process_bottom_halves" alt="" coords="584,78,759,105"/>
-<area shape="rect" id="node20" href="scheduler_8h.html#aacd9fe9684de21c933680f355acb5766" title="process_control_msg" alt="" coords="592,332,751,358"/>
-<area shape="rect" id="node21" href="communication_8h.html#a762b3dacaa82c4590e0572ac08117153" title="msg_hdr_release" alt="" coords="382,180,514,206"/>
-<area shape="rect" id="node22" href="queues_8h.html#a9ff164dd6a938afa7e892f4028c2a033" title="insert_bottom_half" alt="" coords="170,281,313,308"/>
-<area shape="rect" id="node25" href="scheduler_8h.html#adeb3ffb0d386021321573ee9d201a042" title="anti_control_message" alt="" coords="367,28,529,54"/>
-<area shape="rect" id="node26" href="scheduler_8h.html#a5766f78dcd3778582d506c3dec34594e" title="receive_control_msg" alt="" coords="164,116,319,142"/>
-<area shape="rect" id="node27" href="serial_8h.html#aa0dd072d0e792fb9c65220bdddf69a0e" title="serial_simulation" alt="" coords="1617,484,1747,510"/>
-<area shape="rect" id="node3" href="communication_8h.html#a323ad017762155352c38983e67e8adeb" title="msg_release" alt="" coords="396,129,500,156"/>
-<area shape="rect" id="node12" href="communication_8h.html#aa8047651e174f4d26bef644233b5c8f8" title="send_antimessages" alt="" coords="596,180,747,206"/>
-<area shape="rect" id="node16" href="communication_8h.html#a56a4865196c169691525e99bae337519" title="pack_msg" alt="" coords="405,332,491,358"/>
-<area shape="rect" id="node4" href="fossil_8c.html#af4d5d546129fe91cedfc16ddedf76464" title="fossil_collection" alt="" coords="611,129,732,156"/>
-<area shape="rect" id="node5" href="gvt_2gvt_8h.html#a62e7abde0dac08e56aa2a57401aed27b" title="adopt_new_gvt" alt="" coords="1051,180,1169,206"/>
-<area shape="rect" id="node6" href="gvt_2gvt_8h.html#a899b50ab45427cf145360ff3a6c29808" title="gvt_operations" alt="" coords="1436,230,1553,257"/>
-<area shape="rect" id="node7" href="main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="1601,281,1763,308"/>
-<area shape="rect" id="node8" href="main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="1811,281,1932,308"/>
-<area shape="rect" id="node9" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1844,433,1899,460"/>
-<area shape="rect" id="node11" href="gvt_2gvt_8c.html#a895d5bfff43f3ee72f9cf7097abf609b" title="GVT_phases" alt="" coords="1252,230,1353,257"/>
-<area shape="rect" id="node13" href="state_8h.html#a1fd6b7926db41257e07600226d87fffa" title="rollback" alt="" coords="873,281,943,308"/>
-<area shape="rect" id="node14" href="scheduler_8h.html#ac48128e72b303ea22d8ec641a9516b15" title="schedule" alt="" coords="1071,281,1149,308"/>
-<area shape="rect" id="node15" href="scheduler_8h.html#af405fd79c1cd59fccce27658d6e11941" title="initialize_worker_thread" alt="" coords="1217,332,1388,358"/>
-<area shape="rect" id="node17" href="communication_8h.html#ae0329023aeab7047bcb7b4708698a008" title="ParallelScheduleNewEvent" alt="" coords="813,433,1003,460"/>
-<area shape="rect" id="node19" href="scheduler_8h.html#ac54b610f24de85b6444f61c4c094242c" title="rollback_control_message" alt="" coords="577,281,765,308"/>
-<area shape="rect" id="node18" href="init_8h.html#a417eb072179d09f441dbae3125049e46" title="SystemInit" alt="" coords="1449,433,1540,460"/>
-<area shape="rect" id="node23" href="communication_8h.html#ab5250867c0edfc326732c059b0c0c3b5" title="Send" alt="" coords="421,281,475,308"/>
-<area shape="rect" id="node24" href="communication_8h.html#ad154a0e0c0815b786ead70143505abd6" title="send_outgoing_msgs" alt="" coords="829,230,987,257"/>
+<area shape="rect" id="node2" href="communication_8c.html#ae6b96249d35969d688d0d84209919c8f" title="which_slab_to_use" alt="" coords="175,347,315,374"/>
+<area shape="rect" id="node13" href="queues_8h.html#a54eca9bfa893cac072d1b1d3010c2944" title="process_bottom_halves" alt="" coords="1029,144,1204,171"/>
+<area shape="rect" id="node26" href="scheduler_8h.html#a5766f78dcd3778582d506c3dec34594e" title="receive_control_msg" alt="" coords="825,144,979,171"/>
+<area shape="rect" id="node29" href="scheduler_8h.html#aacd9fe9684de21c933680f355acb5766" title="process_control_msg" alt="" coords="601,768,760,795"/>
+<area shape="rect" id="node30" href="communication_8h.html#a762b3dacaa82c4590e0572ac08117153" title="msg_hdr_release" alt="" coords="391,296,523,323"/>
+<area shape="rect" id="node31" href="mpi_8h.html#ad243611fd168b265105bce70c193394d" title="receive_remote_msgs" alt="" coords="375,195,539,222"/>
+<area shape="rect" id="node32" href="queues_8h.html#a9ff164dd6a938afa7e892f4028c2a033" title="insert_bottom_half" alt="" coords="174,296,317,323"/>
+<area shape="rect" id="node35" href="scheduler_8h.html#adeb3ffb0d386021321573ee9d201a042" title="anti_control_message" alt="" coords="164,94,327,120"/>
+<area shape="rect" id="node36" href="serial_8h.html#aa0dd072d0e792fb9c65220bdddf69a0e" title="serial_simulation" alt="" coords="1729,920,1859,947"/>
+<area shape="rect" id="node3" href="communication_8h.html#a323ad017762155352c38983e67e8adeb" title="msg_release" alt="" coords="850,246,954,272"/>
+<area shape="rect" id="node15" href="communication_8h.html#aa8047651e174f4d26bef644233b5c8f8" title="send_antimessages" alt="" coords="605,347,756,374"/>
+<area shape="rect" id="node19" href="communication_8h.html#a56a4865196c169691525e99bae337519" title="pack_msg" alt="" coords="413,651,500,678"/>
+<area shape="rect" id="node4" href="wnd_8h.html#a930e160f86a257b5143e2d59205d8002" title="prune_outgoing_queue" alt="" coords="1032,246,1201,272"/>
+<area shape="rect" id="node10" href="fossil_8c.html#af4d5d546129fe91cedfc16ddedf76464" title="fossil_collection" alt="" coords="1056,296,1177,323"/>
+<area shape="rect" id="node5" href="wnd_8h.html#a157ee75a6300b4d0ae3c99afe8c3ae6a" title="prune_outgoing_queues" alt="" coords="1252,220,1428,247"/>
+<area shape="rect" id="node6" href="wnd_8h.html#acbe46c456aa03b014ca2134604700789" title="outgoing_window_finalize" alt="" coords="1480,271,1661,298"/>
+<area shape="rect" id="node7" href="main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="1713,322,1875,348"/>
+<area shape="rect" id="node8" href="main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="1923,322,2044,348"/>
+<area shape="rect" id="node9" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1956,870,2011,896"/>
+<area shape="rect" id="node11" href="gvt_2gvt_8h.html#a62e7abde0dac08e56aa2a57401aed27b" title="adopt_new_gvt" alt="" coords="1281,322,1399,348"/>
+<area shape="rect" id="node12" href="gvt_2gvt_8h.html#a899b50ab45427cf145360ff3a6c29808" title="gvt_operations" alt="" coords="1512,322,1629,348"/>
+<area shape="rect" id="node14" href="gvt_2gvt_8c.html#a895d5bfff43f3ee72f9cf7097abf609b" title="GVT_phases" alt="" coords="1289,271,1391,298"/>
+<area shape="rect" id="node16" href="state_8h.html#a1fd6b7926db41257e07600226d87fffa" title="rollback" alt="" coords="867,524,937,551"/>
+<area shape="rect" id="node17" href="scheduler_8h.html#ac48128e72b303ea22d8ec641a9516b15" title="schedule" alt="" coords="1077,552,1156,579"/>
+<area shape="rect" id="node18" href="scheduler_8h.html#af405fd79c1cd59fccce27658d6e11941" title="initialize_worker_thread" alt="" coords="1255,552,1425,579"/>
+<area shape="rect" id="node20" href="communication_8h.html#ae0329023aeab7047bcb7b4708698a008" title="ParallelScheduleNewEvent" alt="" coords="1476,870,1665,896"/>
+<area shape="rect" id="node22" href="ecs_8c.html#a672ea2cce8f7ae1214e0a41f46884933" title="ecs_secondary" alt="" coords="622,550,739,576"/>
+<area shape="rect" id="node24" href="ecs_8c.html#ade56ef97d7d3ae799d60f8616f2062cb" title="ecs_initiate" alt="" coords="1069,474,1164,500"/>
+<area shape="rect" id="node25" href="ecs_8h.html#a414633c637a80868d1dea7b3acf152f3" title="ecs_send_pages" alt="" coords="617,448,745,475"/>
+<area shape="rect" id="node27" href="ecs_8c.html#a4b58dd1c4132af99fbd29c8a6247ca1b" title="unblock_synchronized\l_objects" alt="" coords="599,702,762,744"/>
+<area shape="rect" id="node28" href="scheduler_8h.html#ac54b610f24de85b6444f61c4c094242c" title="rollback_control_message" alt="" coords="587,600,775,627"/>
+<area shape="rect" id="node21" href="init_8h.html#a417eb072179d09f441dbae3125049e46" title="SystemInit" alt="" coords="1749,870,1839,896"/>
+<area shape="rect" id="node23" href="ecs_8c.html#adbe06ee703b26dcc8d82e505075f942d" title="ECS" alt="" coords="878,474,926,500"/>
+<area shape="rect" id="node33" href="communication_8h.html#ab5250867c0edfc326732c059b0c0c3b5" title="Send" alt="" coords="429,499,484,526"/>
+<area shape="rect" id="node34" href="communication_8h.html#ad154a0e0c0815b786ead70143505abd6" title="send_outgoing_msgs" alt="" coords="823,575,981,602"/>
 </map>
 </div>
 </p>
@@ -619,7 +640,7 @@ Roberto Vitali</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="process_8c_source.html#l00046">46</a> of file <a class="el" href="process_8c_source.html">process.c</a>.</p>
+<p>Definition at line <a class="el" href="process_8c_source.html#l00051">51</a> of file <a class="el" href="process_8c_source.html">process.c</a>.</p>
 
 <p><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -666,7 +687,7 @@ Roberto Vitali</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="process_8c_source.html#l00053">53</a> of file <a class="el" href="process_8c_source.html">process.c</a>.</p>
+<p>Definition at line <a class="el" href="process_8c_source.html#l00058">58</a> of file <a class="el" href="process_8c_source.html">process.c</a>.</p>
 
 <p><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -675,21 +696,25 @@ Roberto Vitali</dd></dl>
 <div id="dynsection-5-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="process_8h_ad58c55ea23fdc3d938b57135b6116feb_cgraph.png" border="0" usemap="#process_8h_ad58c55ea23fdc3d938b57135b6116feb_cgraph" alt=""/></div>
 <map name="process_8h_ad58c55ea23fdc3d938b57135b6116feb_cgraph" id="process_8h_ad58c55ea23fdc3d938b57135b6116feb_cgraph">
-<area shape="rect" id="node2" href="core_8c.html#a0c0887000d8e04c515c4a9a5bf2f5995" title="distribute_lps_on_kernels" alt="" coords="371,259,553,285"/>
-<area shape="rect" id="node3" href="dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="633,132,696,159"/>
-<area shape="rect" id="node5" href="core_8c.html#a6793e4c70d69277f24ff0e494ed8ed10" title="find_kernel_by_gid" alt="" coords="168,309,307,336"/>
-<area shape="rect" id="node6" href="mm_8h.html#a55b0b8e4a65be959f5adb5343f36ff94" title="initialize_memory_map" alt="" coords="152,81,323,108"/>
-<area shape="rect" id="node11" href="msgchannel_8c.html#a9da640576408c47378535edae6e4fec4" title="init_channel" alt="" coords="413,157,511,184"/>
-<area shape="rect" id="node12" href="core_8h.html#a445f9514b02741f0b338441e1a67ebea" title="OnGVT_light" alt="" coords="187,360,287,387"/>
-<area shape="rect" id="node13" href="core_8h.html#aec2db346833125fb930007190cd1a172" title="ProcessEvent_light" alt="" coords="166,411,309,437"/>
-<area shape="rect" id="node14" href="state_8c.html#a4c21217327a62c03f9a3934b5898797a" title="set_checkpoint_period" alt="" coords="155,461,320,488"/>
-<area shape="rect" id="node15" href="scheduler_8c.html#a1b1b085c6b05a9d202a1629dcd71cffe" title="LP_main_loop" alt="" coords="182,512,293,539"/>
-<area shape="rect" id="node4" href="platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="776,132,885,159"/>
-<area shape="rect" id="node7" href="mm_8h.html#a9ddefb6c0499750d4928a2462d3aa0ae" title="slab_init" alt="" coords="425,5,499,32"/>
-<area shape="rect" id="node9" href="dymelor_8c.html#a8e070de8750bb4afd1be813809e70eb9" title="malloc_state_init" alt="" coords="397,56,527,83"/>
-<area shape="rect" id="node8" href="slab_8c.html#ac0e4a2a4ab26d7f2399eecbb72fc4cff" title="slab_is_valid" alt="" coords="614,5,715,32"/>
-<area shape="rect" id="node10" href="dymelor_8c.html#ac1e32353ad7bdfbf4b701db28602fcbc" title="malloc_area_init" alt="" coords="601,56,728,83"/>
-<area shape="rect" id="node16" href="statistics_8c.html#adb44a0a2dd40360e160ab4f5091ff324" title="statistics_post_data" alt="" coords="387,512,537,539"/>
+<area shape="rect" id="node2" href="core_8c.html#a0c0887000d8e04c515c4a9a5bf2f5995" title="distribute_lps_on_kernels" alt="" coords="371,468,553,495"/>
+<area shape="rect" id="node3" href="dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="645,157,708,184"/>
+<area shape="rect" id="node5" href="core_8c.html#a6793e4c70d69277f24ff0e494ed8ed10" title="find_kernel_by_gid" alt="" coords="168,195,307,221"/>
+<area shape="rect" id="node6" href="mm_8h.html#a55b0b8e4a65be959f5adb5343f36ff94" title="initialize_memory_map" alt="" coords="152,75,323,101"/>
+<area shape="rect" id="node11" href="msgchannel_8c.html#a9da640576408c47378535edae6e4fec4" title="init_channel" alt="" coords="413,233,511,260"/>
+<area shape="rect" id="node12" href="core_8h.html#a445f9514b02741f0b338441e1a67ebea" title="OnGVT_light" alt="" coords="187,347,287,373"/>
+<area shape="rect" id="node13" href="core_8h.html#aec2db346833125fb930007190cd1a172" title="ProcessEvent_light" alt="" coords="166,397,309,424"/>
+<area shape="rect" id="node14" href="ult_8c.html#a21c80d94da97fa7d1476e8450821a701" title="get_ult_stack" alt="" coords="184,296,291,323"/>
+<area shape="rect" id="node15" href="x86_2jmp_8h.html#a4929790c2fa580d14f27b319f28b4236" title="context_create" alt="" coords="403,367,521,393"/>
+<area shape="rect" id="node16" href="state_8c.html#a4c21217327a62c03f9a3934b5898797a" title="set_checkpoint_period" alt="" coords="155,549,320,576"/>
+<area shape="rect" id="node17" href="scheduler_8c.html#a1b1b085c6b05a9d202a1629dcd71cffe" title="LP_main_loop" alt="" coords="182,600,293,627"/>
+<area shape="rect" id="node4" href="platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="800,157,909,184"/>
+<area shape="rect" id="node7" href="mm_8h.html#a9ddefb6c0499750d4928a2462d3aa0ae" title="slab_init" alt="" coords="425,56,499,83"/>
+<area shape="rect" id="node9" href="dymelor_8c.html#a8e070de8750bb4afd1be813809e70eb9" title="malloc_state_init" alt="" coords="397,5,527,32"/>
+<area shape="rect" id="node8" href="slab_8c.html#ac0e4a2a4ab26d7f2399eecbb72fc4cff" title="slab_is_valid" alt="" coords="626,56,727,83"/>
+<area shape="rect" id="node10" href="dymelor_8c.html#ac1e32353ad7bdfbf4b701db28602fcbc" title="malloc_area_init" alt="" coords="613,5,740,32"/>
+<area shape="rect" id="node18" href="xxhash_8c.html#aa84e31069652b6e0dc85fa26aef022fe" title="XXH64" alt="" coords="430,575,494,601"/>
+<area shape="rect" id="node20" href="statistics_8c.html#adb44a0a2dd40360e160ab4f5091ff324" title="statistics_post_data" alt="" coords="387,625,537,652"/>
+<area shape="rect" id="node19" href="xxhash_8c.html#a89b67661ff66229c8c502eee5d0e83f0" title="XXH64_endian_align" alt="" coords="601,575,752,601"/>
 </map>
 </div>
 </p>
@@ -720,7 +745,7 @@ Roberto Vitali</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="process_8c_source.html#l00036">36</a> of file <a class="el" href="process_8c_source.html">process.c</a>.</p>
+<p>Definition at line <a class="el" href="process_8c_source.html#l00041">41</a> of file <a class="el" href="process_8c_source.html">process.c</a>.</p>
 
 </div>
 </div>
@@ -734,7 +759,7 @@ Roberto Vitali</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="process_8c_source.html#l00035">35</a> of file <a class="el" href="process_8c_source.html">process.c</a>.</p>
+<p>Definition at line <a class="el" href="process_8c_source.html#l00040">40</a> of file <a class="el" href="process_8c_source.html">process.c</a>.</p>
 
 </div>
 </div>
@@ -750,7 +775,7 @@ Roberto Vitali</dd></dl>
 
 <p>Maintain LPs' simulation and execution states. </p>
 
-<p>Definition at line <a class="el" href="process_8c_source.html#l00039">39</a> of file <a class="el" href="process_8c_source.html">process.c</a>.</p>
+<p>Definition at line <a class="el" href="process_8c_source.html#l00044">44</a> of file <a class="el" href="process_8c_source.html">process.c</a>.</p>
 
 </div>
 </div>
@@ -765,7 +790,7 @@ Roberto Vitali</dd></dl>
 </div><div class="memdoc">
 <p>Each KLT has a binding towards some LPs. This is the structure used to keep track of LPs currently being handled </p>
 
-<p>Definition at line <a class="el" href="process_8c_source.html#l00044">44</a> of file <a class="el" href="process_8c_source.html">process.c</a>.</p>
+<p>Definition at line <a class="el" href="process_8c_source.html#l00049">49</a> of file <a class="el" href="process_8c_source.html">process.c</a>.</p>
 
 </div>
 </div>

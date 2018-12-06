@@ -1,6 +1,5 @@
 var queues_8h =
 [
-    [ "_QUEUES_H", "queues_8h.html#a50e5a819856ef758d5d149b198358abb", null ],
     [ "last_event_timestamp", "queues_8h.html#aadc3aad21fdad06618e43ff569ecf7bc", null ],
     [ "advance_to_next_event", "queues_8h.html#ad8c2d992e7ba65f4d03bd1afee649452", null ],
     [ "generate_mark", "queues_8h.html#a2d3a1026d74c5100ab93f216dc4535cc", null ],

@@ -23,6 +23,8 @@
   $(document).ready(function() { init_search(); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="flatdoc.css" rel="stylesheet" type="text/css"/>
+<link href="inline-params.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -115,7 +117,7 @@ $(document).ready(function(){initNavTree('init_8c.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>This module implements the simulator initialization routines.  
+<p>Initialization routines.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;unistd.h&gt;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
@@ -142,6 +144,7 @@ $(document).ready(function(){initNavTree('init_8c.html','');});
 <code>#include &lt;<a class="el" href="statistics_8h_source.html">statistics/statistics.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="numerical_8h_source.html">lib/numerical.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="serial_8h_source.html">serial/serial.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="mpi_8h_source.html">communication/mpi.h</a>&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for init.c:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -149,31 +152,34 @@ $(document).ready(function(){initNavTree('init_8c.html','');});
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="init_8c__incl.png" border="0" usemap="#_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2core_2init_8c" alt=""/></div>
 <map name="_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2core_2init_8c" id="_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2core_2init_8c">
-<area shape="rect" id="node11" href="ROOT-Sim_8h.html" title="This header defines all the symbols which are needed to develop a Model to be simulated on top of ROO..." alt="" coords="1683,661,1782,688"/>
-<area shape="rect" id="node14" href="thread_8h.html" title="This module implements Kernel Level Thread supports. " alt="" coords="665,661,773,688"/>
-<area shape="rect" id="node17" href="communication_8h.html" title="This is the main header file, containing all data structures and defines used by the communication su..." alt="" coords="305,348,541,375"/>
-<area shape="rect" id="node18" href="core_8h.html" title="This header defines all the shared symbols which are needed by different subsystems. " alt="" coords="1155,587,1249,613"/>
-<area shape="rect" id="node21" href="numerical_8h.html" title="This header is used to define symbols which must be accessible by the simulator but not by the applic..." alt="" coords="526,661,641,688"/>
-<area shape="rect" id="node22" href="init_8h.html" title="This module implements the simulator initialization routines. " alt="" coords="819,109,905,136"/>
-<area shape="rect" id="node23" href="statistics_8h.html" title="State Management Subsystem. " alt="" coords="617,184,769,211"/>
-<area shape="rect" id="node24" href="process_8h.html" title="This header defines a LP control block, keeping information about both simulation state and execution..." alt="" coords="844,259,995,285"/>
-<area shape="rect" id="node25" href="state_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="1292,512,1389,539"/>
-<area shape="rect" id="node26" href="mm_8h.html" title="Memory Manager main header. " alt="" coords="1402,348,1493,375"/>
-<area shape="rect" id="node30" href="bitmap_8h.html" title="This header implements a minimal bitmap data type. " alt="" coords="1973,512,2119,539"/>
-<area shape="rect" id="node35" href="ecs_8h.html" title="Event Cross State Synchronization. This module implements the userspace handler of the artificially i..." alt="" coords="1165,348,1252,375"/>
-<area shape="rect" id="node43" href="gvt_2gvt_8h.html" title="This header defines all the Global Virtual Time symbols needed by the platform. The current implement..." alt="" coords="1699,437,1777,464"/>
-<area shape="rect" id="node44" href="ccgs_8h.html" title="gvt/ccgs.h" alt="" coords="1393,259,1480,285"/>
-<area shape="rect" id="node45" href="scheduler_8h.html" title="Scheduling Subsystem main header file. Scheduler&#45;specific data structures and defines should be place..." alt="" coords="1017,109,1179,136"/>
-<area shape="rect" id="node48" href="serial_8h.html" title="serial/serial.h" alt="" coords="1962,259,2069,285"/>
-<area shape="rect" id="node15" href="atomic_8h.html" title="This module implements atomic and non&#45;blocking operations used within ROOT&#45;Sim to coordinate threads ..." alt="" coords="743,736,853,763"/>
-<area shape="rect" id="node36" href="list_8h.html" title="This header defines macros for accessing the general&#45;purpose list implementation used in the simulato..." alt="" coords="849,661,969,688"/>
-<area shape="rect" id="node39" href="msgchannel_8h.html" title="This module implements an (M, 1) channel to transfer message pointers. " alt="" coords="849,512,1029,539"/>
-<area shape="rect" id="node40" href="ult_8h.html" title="The User&#45;Level Thread module allows the creation/scheduling of a user&#45;level thread in an architecture..." alt="" coords="1007,348,1090,375"/>
-<area shape="rect" id="node41" href="cross__state__manager_8h.html" title="This is the main header for the Linux Kernel Module which implements per&#45;kernel&#45;thread different page..." alt="" coords="717,333,882,389"/>
-<area shape="rect" id="node29" href="dymelor_8h.html" title="This is the Memory Management Subsystem main header file. " alt="" coords="1802,437,1917,464"/>
-<area shape="rect" id="node32" href="timer_8h.html" title="This header defines the timers which the simulator uses to monitor its internal behaviour. " alt="" coords="1597,512,1695,539"/>
-<area shape="rect" id="node46" href="queues_8h.html" title="Event and State queueing Subsystem main header. " alt="" coords="1084,184,1216,211"/>
-<area shape="rect" id="node47" href="stf_8h.html" title="Smallest Timestamp First scheduler main header. " alt="" coords="843,184,958,211"/>
+<area shape="rect" id="node11" href="ROOT-Sim_8h.html" title="ROOT&#45;Sim header for model development. " alt="" coords="2015,661,2114,688"/>
+<area shape="rect" id="node14" href="thread_8h.html" title="Generic thread management facilities. " alt="" coords="333,661,441,688"/>
+<area shape="rect" id="node19" href="communication_8h.html" title="Communication Routines. " alt="" coords="1424,348,1660,375"/>
+<area shape="rect" id="node20" href="core_8h.html" title="Core ROOT&#45;Sim functionalities. " alt="" coords="1427,587,1521,613"/>
+<area shape="rect" id="node23" href="numerical_8h.html" title="Numerical Library. " alt="" coords="1014,661,1129,688"/>
+<area shape="rect" id="node24" href="init_8h.html" title="Initialization routines. " alt="" coords="1299,109,1385,136"/>
+<area shape="rect" id="node25" href="statistics_8h.html" title="Statistics module. " alt="" coords="1103,184,1255,211"/>
+<area shape="rect" id="node26" href="process_8h.html" title="LP control blocks. " alt="" coords="1271,259,1421,285"/>
+<area shape="rect" id="node27" href="state_8h.html" title="LP state management. " alt="" coords="2016,512,2113,539"/>
+<area shape="rect" id="node28" href="mm_8h.html" title="Memory Manager main header. " alt="" coords="453,348,543,375"/>
+<area shape="rect" id="node31" href="bitmap_8h.html" title="Bitmap data type. " alt="" coords="1743,512,1890,539"/>
+<area shape="rect" id="node34" href="ecs_8h.html" title="Event &amp; Cross State Synchornization. " alt="" coords="1892,348,1979,375"/>
+<area shape="rect" id="node43" href="gvt_2gvt_8h.html" title="Global Virtual Time. " alt="" coords="2255,437,2333,464"/>
+<area shape="rect" id="node44" href="ccgs_8h.html" title="Consistent and Committed Global State. " alt="" coords="2044,259,2131,285"/>
+<area shape="rect" id="node45" href="scheduler_8h.html" title="The ROOT&#45;Sim scheduler main module header. " alt="" coords="1660,109,1821,136"/>
+<area shape="rect" id="node48" href="serial_8h.html" title="Serial scheduler. " alt="" coords="2329,587,2435,613"/>
+<area shape="rect" id="node49" href="mpi_8h.html" title="MPI Support Module. " alt="" coords="708,109,869,136"/>
+<area shape="rect" id="node15" href="atomic_8h.html" title="Atomic operations. " alt="" coords="155,736,265,763"/>
+<area shape="rect" id="node35" href="list_8h.html" title="Generic Lists. " alt="" coords="726,348,846,375"/>
+<area shape="rect" id="node38" href="msgchannel_8h.html" title="A (M, 1) channel for messages. " alt="" coords="1319,512,1499,539"/>
+<area shape="rect" id="node39" href="ult_8h.html" title="User&#45;Level Threads Headers. " alt="" coords="1734,348,1817,375"/>
+<area shape="rect" id="node41" href="cross__state__manager_8h.html" title="Per&#45;thread page table. " alt="" coords="1185,333,1350,389"/>
+<area shape="rect" id="node30" href="dymelor_8h.html" title="Dynamic Memory Logger and Restorer (DyMeLoR) " alt="" coords="719,437,834,464"/>
+<area shape="rect" id="node33" href="timer_8h.html" title="Timers. " alt="" coords="871,512,970,539"/>
+<area shape="rect" id="node40" href="jmp_8h.html" title="Architecture&#45;independent ULT header. " alt="" coords="1730,437,1821,464"/>
+<area shape="rect" id="node46" href="queues_8h.html" title="Message queueing subsystem. " alt="" coords="1280,184,1412,211"/>
+<area shape="rect" id="node47" href="stf_8h.html" title="O(n) scheduling algorithm. " alt="" coords="1639,184,1754,211"/>
+<area shape="rect" id="node50" href="wnd_8h.html" title="Message delivery support. " alt="" coords="694,259,857,285"/>
 </map>
 </div>
 </div>
@@ -223,7 +229,8 @@ Enumerations</h2></td></tr>
 <a class="el" href="init_8c.html#adf856969b3967e4a20be18a3eda24afca2320f4860e7e091b7eb1d8f42a88483c">OPT_SERIAL</a>, 
 <a class="el" href="init_8c.html#adf856969b3967e4a20be18a3eda24afca92e239dba6a3bd748d5ce5ace4d285fb">OPT_NO_CORE_BINDING</a>, 
 <br />
-&#160;&#160;<a class="el" href="init_8c.html#adf856969b3967e4a20be18a3eda24afca9eba72fd5f44a26275c3ec570be88a6a">OPT_LAST</a>
+&#160;&#160;<a class="el" href="init_8c.html#adf856969b3967e4a20be18a3eda24afca695d14f6ff61efdc2de8087555e3fab1">OPT_PREEMPTION</a>, 
+<a class="el" href="init_8c.html#adf856969b3967e4a20be18a3eda24afca9eba72fd5f44a26275c3ec570be88a6a">OPT_LAST</a>
 <br />
  }<tr class="memdesc:adf856969b3967e4a20be18a3eda24afc"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the list of mnemonics for arguments.  <a href="init_8c.html#adf856969b3967e4a20be18a3eda24afc">More...</a><br /></td></tr>
 </td></tr>
@@ -256,17 +263,20 @@ Variables</h2></td></tr>
 <tr class="separator:ab70c96531b1b652d70c221cfaf3207f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This module implements the simulator initialization routines. </p>
-<p>Copyright (C) 2008-2018 HPDCS Group <a href="http://www.dis.uniroma1.it/~hpdcs">http://www.dis.uniroma1.it/~hpdcs</a></p>
+<div class="textblock"><p>Initialization routines. </p>
+<p>This module implements the simulator initialization routines</p>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (C) 2008-2018 HPDCS Group <a href="https://hpdcs.github.io">https://hpdcs.github.io</a></dd></dl>
 <p>This file is part of ROOT-Sim (ROme OpTimistic Simulator).</p>
 <p>ROOT-Sim is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; only version 3 of the License applies.</p>
 <p>ROOT-Sim is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
 <p>You should have received a copy of the GNU General Public License along with ROOT-Sim; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA</p>
 <dl class="section author"><dt>Author</dt><dd>Francesco Quaglia </dd>
 <dd>
-Roberto Vitali </dd>
+Andrea Piccione </dd>
 <dd>
-Alessandro Pellegrini </dd></dl>
+Alessandro Pellegrini </dd>
+<dd>
+Roberto Vitali </dd></dl>
 
 <p>Definition in file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
@@ -284,7 +294,7 @@ Alessandro Pellegrini </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="init_8c_source.html#l00179">179</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<p>Definition at line <a class="el" href="init_8c_source.html#l00184">184</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
 </div>
 </div>
@@ -311,11 +321,11 @@ Alessandro Pellegrini </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">case</span> label:                                 \</div><div class="line">    ({                                      \</div><div class="line">        unsigned __i = 1;                           \</div><div class="line">        while(1) {                              \</div><div class="line">            if(strcmp(arg, <a class="code" href="init_8c.html#a5af1a6ba6e92d6223988600cdf45f479">param_to_text</a>[key - <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afcad41a0c3f88d8500b7dedbfbd88eec174">OPT_FIRST</a>][__i]) == 0) { \</div><div class="line">                var = __i;                      \</div><div class="line">                break;                          \</div><div class="line">            }                               \</div><div class="line">            if(!<a class="code" href="init_8c.html#a5af1a6ba6e92d6223988600cdf45f479">param_to_text</a>[key - <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afcad41a0c3f88d8500b7dedbfbd88eec174">OPT_FIRST</a>][++__i])          <a class="code" href="init_8c.html#a2dbdd3b07cf9d614f3c81df9f25e0715">\</a></div><div class="line"><a class="code" href="init_8c.html#a2dbdd3b07cf9d614f3c81df9f25e0715">				malformed_option_failure</a>();             \</div><div class="line">        }                                   \</div><div class="line">    });                                     \</div><div class="line">    break</div><div class="ttc" id="init_8c_html_adf856969b3967e4a20be18a3eda24afcad41a0c3f88d8500b7dedbfbd88eec174"><div class="ttname"><a href="init_8c.html#adf856969b3967e4a20be18a3eda24afcad41a0c3f88d8500b7dedbfbd88eec174">OPT_FIRST</a></div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00060">init.c:60</a></div></div>
-<div class="ttc" id="init_8c_html_a5af1a6ba6e92d6223988600cdf45f479"><div class="ttname"><a href="init_8c.html#a5af1a6ba6e92d6223988600cdf45f479">param_to_text</a></div><div class="ttdeci">const char *const param_to_text[][5]</div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00095">init.c:95</a></div></div>
-<div class="ttc" id="init_8c_html_a2dbdd3b07cf9d614f3c81df9f25e0715"><div class="ttname"><a href="init_8c.html#a2dbdd3b07cf9d614f3c81df9f25e0715">malformed_option_failure</a></div><div class="ttdeci">#define malformed_option_failure()</div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00177">init.c:177</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">case</span> label:                                 \</div><div class="line">    ({                                      \</div><div class="line">        unsigned __i = 1;                           \</div><div class="line">        while(1) {                              \</div><div class="line">            if(strcmp(arg, <a class="code" href="init_8c.html#a5af1a6ba6e92d6223988600cdf45f479">param_to_text</a>[key - <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afcad41a0c3f88d8500b7dedbfbd88eec174">OPT_FIRST</a>][__i]) == 0) { \</div><div class="line">                var = __i;                      \</div><div class="line">                break;                          \</div><div class="line">            }                               \</div><div class="line">            if(!<a class="code" href="init_8c.html#a5af1a6ba6e92d6223988600cdf45f479">param_to_text</a>[key - <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afcad41a0c3f88d8500b7dedbfbd88eec174">OPT_FIRST</a>][++__i])          <a class="code" href="init_8c.html#a2dbdd3b07cf9d614f3c81df9f25e0715">\</a></div><div class="line"><a class="code" href="init_8c.html#a2dbdd3b07cf9d614f3c81df9f25e0715">				malformed_option_failure</a>();             \</div><div class="line">        }                                   \</div><div class="line">    });                                     \</div><div class="line">    break</div><div class="ttc" id="init_8c_html_adf856969b3967e4a20be18a3eda24afcad41a0c3f88d8500b7dedbfbd88eec174"><div class="ttname"><a href="init_8c.html#adf856969b3967e4a20be18a3eda24afcad41a0c3f88d8500b7dedbfbd88eec174">OPT_FIRST</a></div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00065">init.c:65</a></div></div>
+<div class="ttc" id="init_8c_html_a5af1a6ba6e92d6223988600cdf45f479"><div class="ttname"><a href="init_8c.html#a5af1a6ba6e92d6223988600cdf45f479">param_to_text</a></div><div class="ttdeci">const char *const param_to_text[][5]</div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00100">init.c:100</a></div></div>
+<div class="ttc" id="init_8c_html_a2dbdd3b07cf9d614f3c81df9f25e0715"><div class="ttname"><a href="init_8c.html#a2dbdd3b07cf9d614f3c81df9f25e0715">malformed_option_failure</a></div><div class="ttdeci">#define malformed_option_failure()</div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00182">init.c:182</a></div></div>
 </div><!-- fragment -->
-<p>Definition at line <a class="el" href="init_8c_source.html#l00183">183</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<p>Definition at line <a class="el" href="init_8c_source.html#l00188">188</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
 </div>
 </div>
@@ -332,7 +342,7 @@ Alessandro Pellegrini </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="init_8c_source.html#l00177">177</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<p>Definition at line <a class="el" href="init_8c_source.html#l00182">182</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
 </div>
 </div>
@@ -359,9 +369,9 @@ Alessandro Pellegrini </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">({                                                      \</div><div class="line">        unsigned <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> __value;                                     \</div><div class="line">        char *__endptr;                                             \</div><div class="line">        __value = strtoull(arg, &amp;__endptr, 10);                                 \</div><div class="line">        if(!(*arg != <span class="charliteral">&#39;\0&#39;</span> &amp;&amp; *__endptr == <span class="charliteral">&#39;\0&#39;</span> &amp;&amp; (__value &gt; low || __value == low) &amp;&amp; __value &lt;= high)) {  <a class="code" href="init_8c.html#a2dbdd3b07cf9d614f3c81df9f25e0715">\</a></div><div class="line"><a class="code" href="init_8c.html#a2dbdd3b07cf9d614f3c81df9f25e0715">			malformed_option_failure</a>();                                  \</div><div class="line">        }                                                   \</div><div class="line">        __value;                                                \</div><div class="line">    })</div><div class="ttc" id="init_8c_html_a2dbdd3b07cf9d614f3c81df9f25e0715"><div class="ttname"><a href="init_8c.html#a2dbdd3b07cf9d614f3c81df9f25e0715">malformed_option_failure</a></div><div class="ttdeci">#define malformed_option_failure()</div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00177">init.c:177</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line">({                                                      \</div><div class="line">        unsigned <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> __value;                                     \</div><div class="line">        char *__endptr;                                             \</div><div class="line">        __value = strtoull(arg, &amp;__endptr, 10);                                 \</div><div class="line">        if(!(*arg != <span class="charliteral">&#39;\0&#39;</span> &amp;&amp; *__endptr == <span class="charliteral">&#39;\0&#39;</span> &amp;&amp; (__value &gt; low || __value == low) &amp;&amp; __value &lt;= high)) {  <a class="code" href="init_8c.html#a2dbdd3b07cf9d614f3c81df9f25e0715">\</a></div><div class="line"><a class="code" href="init_8c.html#a2dbdd3b07cf9d614f3c81df9f25e0715">			malformed_option_failure</a>();                                  \</div><div class="line">        }                                                   \</div><div class="line">        __value;                                                \</div><div class="line">    })</div><div class="ttc" id="init_8c_html_a2dbdd3b07cf9d614f3c81df9f25e0715"><div class="ttname"><a href="init_8c.html#a2dbdd3b07cf9d614f3c81df9f25e0715">malformed_option_failure</a></div><div class="ttdeci">#define malformed_option_failure()</div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00182">init.c:182</a></div></div>
 </div><!-- fragment -->
-<p>Definition at line <a class="el" href="init_8c_source.html#l00200">200</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<p>Definition at line <a class="el" href="init_8c_source.html#l00205">205</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
 </div>
 </div>
@@ -427,11 +437,13 @@ Alessandro Pellegrini </dd></dl>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="adf856969b3967e4a20be18a3eda24afca92e239dba6a3bd748d5ce5ace4d285fb"></a>OPT_NO_CORE_BINDING&#160;</td><td class="fielddoc">
 </td></tr>
+<tr><td class="fieldname"><a class="anchor" id="adf856969b3967e4a20be18a3eda24afca695d14f6ff61efdc2de8087555e3fab1"></a>OPT_PREEMPTION&#160;</td><td class="fielddoc">
+</td></tr>
 <tr><td class="fieldname"><a class="anchor" id="adf856969b3967e4a20be18a3eda24afca9eba72fd5f44a26275c3ec570be88a6a"></a>OPT_LAST&#160;</td><td class="fielddoc">
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="init_8c_source.html#l00059">59</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<p>Definition at line <a class="el" href="init_8c_source.html#l00064">64</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
 </div>
 </div>
@@ -474,7 +486,7 @@ Alessandro Pellegrini </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="init_8c_source.html#l00211">211</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<p>Definition at line <a class="el" href="init_8c_source.html#l00216">216</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
 <p><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -526,7 +538,7 @@ Alessandro Pellegrini</dd></dl>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="init_8c_source.html#l00396">396</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<p>Definition at line <a class="el" href="init_8c_source.html#l00401">401</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
 <p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -535,55 +547,55 @@ Alessandro Pellegrini</dd></dl>
 <div id="dynsection-2-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="init_8c_a417eb072179d09f441dbae3125049e46_cgraph.png" border="0" usemap="#init_8c_a417eb072179d09f441dbae3125049e46_cgraph" alt=""/></div>
 <map name="init_8c_a417eb072179d09f441dbae3125049e46_cgraph" id="init_8c_a417eb072179d09f441dbae3125049e46_cgraph">
-<area shape="rect" id="node2" href="dymelor_8h.html#a794968edf9912ed798254397f38d8d7f" title="ecs_init" alt="" coords="203,107,274,133"/>
-<area shape="rect" id="node3" href="serial_8c.html#a92ef4fbf76dd3f1327f1190c0f8ff4c6" title="SerialScheduleNewEvent" alt="" coords="381,157,561,184"/>
-<area shape="rect" id="node12" href="process_8c.html#ad58c55ea23fdc3d938b57135b6116feb" title="initialize_lps" alt="" coords="189,664,288,691"/>
-<area shape="rect" id="node26" href="numerical_8c.html#a9ac166054881e10f90ef353737b30c50" title="numerical_init" alt="" coords="183,259,294,285"/>
-<area shape="rect" id="node30" href="statistics_8c.html#a4a201b8310d7d1c38ee31035202c8ee8" title="statistics_init" alt="" coords="419,309,524,336"/>
-<area shape="rect" id="node31" href="serial_8c.html#ad2b461e9e9044364a28a61cfadcacdd8" title="serial_init" alt="" coords="197,157,280,184"/>
-<area shape="rect" id="node33" href="communication_8c.html#af373ee848636c1ddcfb8c856e924f5dd" title="ParallelScheduleNewEvent" alt="" coords="144,816,333,843"/>
-<area shape="rect" id="node40" href="core_8c.html#a7fb819521b1ab5fc7644ad216fe7b465" title="base_init" alt="" coords="199,867,278,893"/>
-<area shape="rect" id="node45" href="mm_8h.html#af1aa0c7cf4139b859f60b66d6bbd769f" title="segment_init" alt="" coords="186,917,291,944"/>
-<area shape="rect" id="node46" href="scheduler_8c.html#ab258cc2856e5f6bb125907cc23358fbd" title="scheduler_init" alt="" coords="183,968,294,995"/>
-<area shape="rect" id="node47" href="communication_8c.html#a9d1c122bc3538d94d6fd8328cd6c6a2d" title="communication_init" alt="" coords="165,1019,312,1045"/>
-<area shape="rect" id="node48" href="gvt_2gvt_8c.html#aa6c9337f3fccf8513b8fad1533f743c4" title="gvt_init" alt="" coords="437,411,505,437"/>
-<area shape="rect" id="node50" href="core_8c.html#a9835611a359d96732cb2531b08212a94" title="initialization_complete" alt="" coords="157,1069,321,1096"/>
-<area shape="rect" id="node4" href="dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="878,461,941,488"/>
-<area shape="rect" id="node6" href="calqueue_8c.html#abb2b24c674d45ee24727e52597008041" title="calqueue_put" alt="" coords="647,56,755,83"/>
-<area shape="rect" id="node5" href="platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="1027,461,1136,488"/>
-<area shape="rect" id="node7" href="calqueue_8c.html#a091fb2fd34edc1674dcf7418485419b5" title="resize" alt="" coords="879,56,939,83"/>
-<area shape="rect" id="node8" href="calqueue_8c.html#a4e8867b10c2140a383aaaff9556f17be" title="new_width" alt="" coords="1038,107,1125,133"/>
-<area shape="rect" id="node9" href="dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a" title="rsfree" alt="" coords="1184,107,1243,133"/>
-<area shape="rect" id="node11" href="calqueue_8c.html#a7cb34614a7eb1a793956d7cca2b418cb" title="localinit" alt="" coords="1046,5,1117,32"/>
-<area shape="rect" id="node10" href="platform_8c.html#ae2af2cd130d16958394ae21e9d13035f" title="__real_free" alt="" coords="1291,107,1383,133"/>
-<area shape="rect" id="node13" href="core_8c.html#a0c0887000d8e04c515c4a9a5bf2f5995" title="distribute_lps_on_kernels" alt="" coords="609,512,792,539"/>
-<area shape="rect" id="node14" href="core_8c.html#a6793e4c70d69277f24ff0e494ed8ed10" title="find_kernel_by_gid" alt="" coords="840,943,979,969"/>
-<area shape="rect" id="node15" href="mm_8h.html#a55b0b8e4a65be959f5adb5343f36ff94" title="initialize_memory_map" alt="" coords="386,664,557,691"/>
-<area shape="rect" id="node20" href="msgchannel_8c.html#a9da640576408c47378535edae6e4fec4" title="init_channel" alt="" coords="651,613,750,640"/>
-<area shape="rect" id="node21" href="core_8h.html#a445f9514b02741f0b338441e1a67ebea" title="OnGVT_light" alt="" coords="421,715,521,741"/>
-<area shape="rect" id="node22" href="core_8h.html#aec2db346833125fb930007190cd1a172" title="ProcessEvent_light" alt="" coords="400,765,543,792"/>
-<area shape="rect" id="node23" href="state_8c.html#a4c21217327a62c03f9a3934b5898797a" title="set_checkpoint_period" alt="" coords="389,816,554,843"/>
-<area shape="rect" id="node24" href="scheduler_8c.html#a1b1b085c6b05a9d202a1629dcd71cffe" title="LP_main_loop" alt="" coords="416,563,527,589"/>
-<area shape="rect" id="node16" href="mm_8h.html#a9ddefb6c0499750d4928a2462d3aa0ae" title="slab_init" alt="" coords="663,715,738,741"/>
-<area shape="rect" id="node18" href="dymelor_8c.html#a8e070de8750bb4afd1be813809e70eb9" title="malloc_state_init" alt="" coords="635,765,766,792"/>
-<area shape="rect" id="node17" href="slab_8c.html#ac0e4a2a4ab26d7f2399eecbb72fc4cff" title="slab_is_valid" alt="" coords="859,715,960,741"/>
-<area shape="rect" id="node19" href="dymelor_8c.html#ac1e32353ad7bdfbf4b701db28602fcbc" title="malloc_area_init" alt="" coords="846,765,973,792"/>
-<area shape="rect" id="node25" href="statistics_8c.html#adb44a0a2dd40360e160ab4f5091ff324" title="statistics_post_data" alt="" coords="625,563,776,589"/>
-<area shape="rect" id="node27" href="numerical_8c.html#a9adf4681a7f461710a82fe776f288a5b" title="load_seed" alt="" coords="428,208,515,235"/>
-<area shape="rect" id="node29" href="numerical_8c.html#a72bc4f303e6586d86eb83f6d41753e86" title="sanitize_seed" alt="" coords="417,259,526,285"/>
-<area shape="rect" id="node28" href="statistics_8c.html#ac7254a0e4869450a54de7d4a07d96cb2" title="_mkdir" alt="" coords="668,208,733,235"/>
-<area shape="rect" id="node32" href="calqueue_8c.html#adcfbe235cb9e2ef41cc8b565beb8fd6a" title="calqueue_init" alt="" coords="856,5,963,32"/>
-<area shape="rect" id="node34" href="communication_8c.html#a56a4865196c169691525e99bae337519" title="pack_msg" alt="" coords="428,968,515,995"/>
-<area shape="rect" id="node37" href="queues_8c.html#aee531712d642cd5d4a54e613aa2c70f9" title="generate_mark" alt="" coords="411,1019,531,1045"/>
-<area shape="rect" id="node38" href="communication_8c.html#ae80f5356cc32f9f2373305341e409b3b" title="insert_outgoing_msg" alt="" coords="393,917,549,944"/>
-<area shape="rect" id="node35" href="communication_8c.html#ab957dc2cd186382c50ef8cfde9761909" title="get_msg_from_slab" alt="" coords="627,1069,775,1096"/>
-<area shape="rect" id="node36" href="communication_8c.html#ae6b96249d35969d688d0d84209919c8f" title="which_slab_to_use" alt="" coords="631,1019,771,1045"/>
-<area shape="rect" id="node39" href="dymelor_8h.html#a480bc47d84033faa5410d5a3c4470ff7" title="rsrealloc" alt="" coords="663,917,739,944"/>
-<area shape="rect" id="node41" href="thread_8c.html#a21f8972c88ac48460bfd8c5f9cc34761" title="barrier_init" alt="" coords="426,1187,517,1213"/>
-<area shape="rect" id="node42" href="core_8c.html#a748a7d6959709b662884fd256a382a60" title="handle_signal" alt="" coords="417,1069,526,1096"/>
-<area shape="rect" id="node43" href="core_8c.html#a9b05d2af2e233e2616633eaa706682ee" title="exit_from_simulation\l_model" alt="" coords="394,1121,549,1162"/>
-<area shape="rect" id="node44" href="core_8c.html#a8f346536ccfbe77b78ed577674beb6cf" title="simulation_shutdown" alt="" coords="623,1128,779,1155"/>
-<area shape="rect" id="node49" href="ccgs_8c.html#a3706f8033294cf3cf0777945a51db235" title="ccgs_init" alt="" coords="662,411,739,437"/>
+<area shape="rect" id="node2" href="mpi_8c.html#aa28df986cba93d0b18e22584f3d7a68e" title="mpi_init" alt="" coords="203,219,275,246"/>
+<area shape="rect" id="node3" href="dymelor_8h.html#a794968edf9912ed798254397f38d8d7f" title="ecs_init" alt="" coords="203,270,274,296"/>
+<area shape="rect" id="node4" href="serial_8c.html#a92ef4fbf76dd3f1327f1190c0f8ff4c6" title="SerialScheduleNewEvent" alt="" coords="381,827,561,854"/>
+<area shape="rect" id="node11" href="process_8c.html#ad58c55ea23fdc3d938b57135b6116feb" title="initialize_lps" alt="" coords="189,472,288,499"/>
+<area shape="rect" id="node26" href="numerical_8c.html#a9ac166054881e10f90ef353737b30c50" title="numerical_init" alt="" coords="183,1215,294,1242"/>
+<area shape="rect" id="node30" href="statistics_8c.html#a4a201b8310d7d1c38ee31035202c8ee8" title="statistics_init" alt="" coords="419,1030,524,1056"/>
+<area shape="rect" id="node31" href="serial_8c.html#ad2b461e9e9044364a28a61cfadcacdd8" title="serial_init" alt="" coords="197,776,280,803"/>
+<area shape="rect" id="node33" href="communication_8c.html#af373ee848636c1ddcfb8c856e924f5dd" title="ParallelScheduleNewEvent" alt="" coords="144,878,333,904"/>
+<area shape="rect" id="node37" href="core_8c.html#a7fb819521b1ab5fc7644ad216fe7b465" title="base_init" alt="" coords="199,1106,278,1132"/>
+<area shape="rect" id="node41" href="mm_8h.html#af1aa0c7cf4139b859f60b66d6bbd769f" title="segment_init" alt="" coords="186,928,291,955"/>
+<area shape="rect" id="node42" href="ecs_8c.html#a87cf3267c85a748dc7a0c9ab5d3f696d" title="remote_memory_init" alt="" coords="161,422,317,448"/>
+<area shape="rect" id="node44" href="scheduler_8c.html#ab258cc2856e5f6bb125907cc23358fbd" title="scheduler_init" alt="" coords="183,371,294,398"/>
+<area shape="rect" id="node46" href="communication_8c.html#a9d1c122bc3538d94d6fd8328cd6c6a2d" title="communication_init" alt="" coords="165,1266,312,1292"/>
+<area shape="rect" id="node48" href="gvt_2gvt_8c.html#aa6c9337f3fccf8513b8fad1533f743c4" title="gvt_init" alt="" coords="437,16,505,43"/>
+<area shape="rect" id="node50" href="core_8c.html#a9835611a359d96732cb2531b08212a94" title="initialization_complete" alt="" coords="157,1316,321,1343"/>
+<area shape="rect" id="node5" href="dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="840,599,903,626"/>
+<area shape="rect" id="node7" href="calqueue_8c.html#abb2b24c674d45ee24727e52597008041" title="calqueue_put" alt="" coords="647,979,755,1006"/>
+<area shape="rect" id="node6" href="platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="951,599,1060,626"/>
+<area shape="rect" id="node8" href="calqueue_8c.html#a091fb2fd34edc1674dcf7418485419b5" title="resize" alt="" coords="841,979,901,1006"/>
+<area shape="rect" id="node9" href="dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a" title="rsfree" alt="" coords="976,1004,1035,1031"/>
+<area shape="rect" id="node10" href="platform_8c.html#ae2af2cd130d16958394ae21e9d13035f" title="__real_free" alt="" coords="1108,1004,1200,1031"/>
+<area shape="rect" id="node12" href="core_8c.html#a0c0887000d8e04c515c4a9a5bf2f5995" title="distribute_lps_on_kernels" alt="" coords="609,574,792,600"/>
+<area shape="rect" id="node13" href="core_8c.html#a6793e4c70d69277f24ff0e494ed8ed10" title="find_kernel_by_gid" alt="" coords="402,168,541,195"/>
+<area shape="rect" id="node14" href="mm_8h.html#a55b0b8e4a65be959f5adb5343f36ff94" title="initialize_memory_map" alt="" coords="386,675,557,702"/>
+<area shape="rect" id="node17" href="msgchannel_8c.html#a9da640576408c47378535edae6e4fec4" title="init_channel" alt="" coords="651,472,750,499"/>
+<area shape="rect" id="node18" href="core_8h.html#a445f9514b02741f0b338441e1a67ebea" title="OnGVT_light" alt="" coords="421,270,521,296"/>
+<area shape="rect" id="node19" href="core_8h.html#aec2db346833125fb930007190cd1a172" title="ProcessEvent_light" alt="" coords="400,320,543,347"/>
+<area shape="rect" id="node20" href="ult_8c.html#a21c80d94da97fa7d1476e8450821a701" title="get_ult_stack" alt="" coords="418,371,525,398"/>
+<area shape="rect" id="node21" href="x86_2jmp_8h.html#a4929790c2fa580d14f27b319f28b4236" title="context_create" alt="" coords="641,244,760,271"/>
+<area shape="rect" id="node22" href="state_8c.html#a4c21217327a62c03f9a3934b5898797a" title="set_checkpoint_period" alt="" coords="389,472,554,499"/>
+<area shape="rect" id="node23" href="scheduler_8c.html#a1b1b085c6b05a9d202a1629dcd71cffe" title="LP_main_loop" alt="" coords="416,422,527,448"/>
+<area shape="rect" id="node15" href="mm_8h.html#a9ddefb6c0499750d4928a2462d3aa0ae" title="slab_init" alt="" coords="663,624,738,651"/>
+<area shape="rect" id="node16" href="dymelor_8c.html#a8e070de8750bb4afd1be813809e70eb9" title="malloc_state_init" alt="" coords="635,675,766,702"/>
+<area shape="rect" id="node24" href="xxhash_8c.html#aa84e31069652b6e0dc85fa26aef022fe" title="XXH64" alt="" coords="669,371,733,398"/>
+<area shape="rect" id="node25" href="statistics_8c.html#adb44a0a2dd40360e160ab4f5091ff324" title="statistics_post_data" alt="" coords="625,422,776,448"/>
+<area shape="rect" id="node27" href="numerical_8c.html#a9adf4681a7f461710a82fe776f288a5b" title="load_seed" alt="" coords="428,1248,515,1275"/>
+<area shape="rect" id="node29" href="numerical_8c.html#a72bc4f303e6586d86eb83f6d41753e86" title="sanitize_seed" alt="" coords="417,1299,526,1326"/>
+<area shape="rect" id="node28" href="statistics_8c.html#ac7254a0e4869450a54de7d4a07d96cb2" title="_mkdir" alt="" coords="668,1164,733,1191"/>
+<area shape="rect" id="node32" href="calqueue_8c.html#adcfbe235cb9e2ef41cc8b565beb8fd6a" title="calqueue_init" alt="" coords="418,776,525,803"/>
+<area shape="rect" id="node34" href="communication_8c.html#a56a4865196c169691525e99bae337519" title="pack_msg" alt="" coords="657,878,744,904"/>
+<area shape="rect" id="node35" href="queues_8c.html#aee531712d642cd5d4a54e613aa2c70f9" title="generate_mark" alt="" coords="411,979,531,1006"/>
+<area shape="rect" id="node36" href="communication_8c.html#ae80f5356cc32f9f2373305341e409b3b" title="insert_outgoing_msg" alt="" coords="393,928,549,955"/>
+<area shape="rect" id="node38" href="thread_8c.html#a21f8972c88ac48460bfd8c5f9cc34761" title="barrier_init" alt="" coords="426,1080,517,1107"/>
+<area shape="rect" id="node39" href="core_8c.html#a748a7d6959709b662884fd256a382a60" title="handle_signal" alt="" coords="417,1131,526,1158"/>
+<area shape="rect" id="node40" href="core_8c.html#a9b05d2af2e233e2616633eaa706682ee" title="exit_from_simulation\l_model" alt="" coords="394,1182,549,1224"/>
+<area shape="rect" id="node43" href="mm_8h.html#a75389d54c9cdeefffef8dff11324cfae" title="get_segment" alt="" coords="647,182,754,208"/>
+<area shape="rect" id="node45" href="preempt_8c.html#a0687cad59e950868aa60f204ef051e15" title="preempt_init" alt="" coords="649,124,752,151"/>
+<area shape="rect" id="node47" href="mpi_8c.html#aae0b9d97e0c3d31df6e27e2455e66a13" title="inter_kernel_comm_init" alt="" coords="386,1350,557,1376"/>
+<area shape="rect" id="node49" href="ccgs_8c.html#a3706f8033294cf3cf0777945a51db235" title="ccgs_init" alt="" coords="662,71,739,98"/>
 </map>
 </div>
 </p>
@@ -621,7 +633,7 @@ Alessandro Pellegrini</dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="init_8c_source.html#l00385">385</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<p>Definition at line <a class="el" href="init_8c_source.html#l00390">390</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
 </div>
 </div>
@@ -643,7 +655,7 @@ Alessandro Pellegrini</dd></dl>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div><div class="line">        {0, 0, <span class="stringliteral">&quot;Model specific options&quot;</span>, 0},</div><div class="line">        {0}</div><div class="line">}</div></div><!-- fragment -->
-<p>Definition at line <a class="el" href="init_8c_source.html#l00380">380</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<p>Definition at line <a class="el" href="init_8c_source.html#l00385">385</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
 </div>
 </div>
@@ -664,29 +676,30 @@ Alessandro Pellegrini</dd></dl>
   </tr>
 </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div><div class="line">    {<span class="stringliteral">&quot;np&quot;</span>,          <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afcaa64a3d0f662d0a8ff9f2d64f407b0507">OPT_NP</a>,         <span class="stringliteral">&quot;VALUE&quot;</span>,    0,      <span class="stringliteral">&quot;Number of total cores being used by the simulation&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;nprc&quot;</span>,        <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afca10a4dda07b28c34991e938b87721056b">OPT_NPRC</a>,       <span class="stringliteral">&quot;VALUE&quot;</span>,    0,      <span class="stringliteral">&quot;Total number of Logical Processes being lunched at simulation startup&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;output-dir&quot;</span>,      <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afcac6147f223acbd01dc4d9cbb95eb57d81">OPT_OUTPUT_DIR</a>,     <span class="stringliteral">&quot;PATH&quot;</span>,     0,      <span class="stringliteral">&quot;Path to a folder where execution statistics are stored. If not present, it is created&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;scheduler&quot;</span>,       <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afcae70c4886e417e039d63ccb10a36bea6d">OPT_SCHEDULER</a>,      <span class="stringliteral">&quot;TYPE&quot;</span>,     0,      <span class="stringliteral">&quot;LP Scheduling algorithm. Supported values are: stf&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;npwd&quot;</span>,        <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afca786c5cae1446f352b448ff85cf6b8b22">OPT_NPWD</a>,       0,      0,      <span class="stringliteral">&quot;Non Piece-Wise-Deterministic simulation model. See manpage for accurate description&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;p&quot;</span>,           <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afcaa4f8a021c037aaa93652b44d73790495">OPT_P</a>,          <span class="stringliteral">&quot;VALUE&quot;</span>,    0,      <span class="stringliteral">&quot;Checkpointing interval&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;full&quot;</span>,        <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afcacc090c53bafb82e9856b33cc304c1231">OPT_FULL</a>,       0,      0,      <span class="stringliteral">&quot;Take only full logs&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;inc&quot;</span>,         <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afca40f66d6d1c0020ae4e1aee56dc9b8577">OPT_INC</a>,        0,      0,      <span class="stringliteral">&quot;Take only incremental logs (still to be released)&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;A&quot;</span>,           <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afca14a2fa5a67a463ed8c549cf9c5ee2026">OPT_A</a>,          0,      0,      <span class="stringliteral">&quot;Autonomic subsystem: set checkpointing interval and log mode automatically at runtime (still to be released)&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;gvt&quot;</span>,         <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afcafce5887da9f5f2c53fa12a23f87d1b90">OPT_GVT</a>,        <span class="stringliteral">&quot;VALUE&quot;</span>,    0,      <span class="stringliteral">&quot;Time between two GVT reductions (in milliseconds)&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;cktrm-mode&quot;</span>,      <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afca8755d697c1cf8ee9ea9987cf4c2d6302">OPT_CKTRM_MODE</a>,     <span class="stringliteral">&quot;TYPE&quot;</span>,     0,      <span class="stringliteral">&quot;Termination Detection mode. Supported values: normal, incremental&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;blocking-gvt&quot;</span>,    <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afca06d8b067b8c8cab6eb52a31c22539703">OPT_BLOCKING_GVT</a>,   0,      0,      <span class="stringliteral">&quot;Blocking GVT. All distributed nodes block until a consensus is agreed&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;gvt-snapshot-cycles&quot;</span>, <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afcadd909e75655f520a7f41db1ed5526611">OPT_GVT_SNAPSHOT_CYCLES</a>, <span class="stringliteral">&quot;VALUE&quot;</span>,   0,      <span class="stringliteral">&quot;Termination detection is invoked after this number of GVT reductions&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;simulation-time&quot;</span>, <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afca6204c9354fbc677de85a6f923368168e">OPT_SIMULATION_TIME</a>,    <span class="stringliteral">&quot;VALUE&quot;</span>,    0,      <span class="stringliteral">&quot;Halt the simulation when all LPs reach this logical time. 0 means infinite&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;lps-distribution&quot;</span>,    <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afca81760d8de76342442331dfa3e12cccee">OPT_LPS_DISTRIBUTION</a>,   <span class="stringliteral">&quot;TYPE&quot;</span>,     0,      <span class="stringliteral">&quot;LPs distributions over simulation kernels policies. Supported values: block, circular&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;deterministic-seed&quot;</span>,  <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afcabc7837dc9493501756f1753bcf48b1ce">OPT_DETERMINISTIC_SEED</a>, 0,      0,      <span class="stringliteral">&quot;Do not change the initial random seed for LPs. Enforces different deterministic simulation runs&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;verbose&quot;</span>,     <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afca5549087f71cc2a3eb3a050bdb2e39502">OPT_VERBOSE</a>,        <span class="stringliteral">&quot;TYPE&quot;</span>,     0,      <span class="stringliteral">&quot;Verbose execution&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;stats&quot;</span>,       <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afcae414cf2401caf6c49ed97a85b5034f34">OPT_STATS</a>,      <span class="stringliteral">&quot;TYPE&quot;</span>,     0,      <span class="stringliteral">&quot;Level of detail in the output statistics&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;seed&quot;</span>,        <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afcac4ecff0b530ccf4f89a57f1b44c0c2b8">OPT_SEED</a>,       <span class="stringliteral">&quot;VALUE&quot;</span>,    0,      <span class="stringliteral">&quot;Manually specify the initial random seed&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;serial&quot;</span>,      <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afca2320f4860e7e091b7eb1d8f42a88483c">OPT_SERIAL</a>,     0,      0,      <span class="stringliteral">&quot;Run a serial simulation (using Calendar Queues)&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;sequential&quot;</span>,      <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afca2320f4860e7e091b7eb1d8f42a88483c">OPT_SERIAL</a>,     0,      OPTION_ALIAS,   NULL, 0},</div><div class="line">    {<span class="stringliteral">&quot;no-core-binding&quot;</span>, <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afca92e239dba6a3bd748d5ce5ace4d285fb">OPT_NO_CORE_BINDING</a>,    0,      0,      <span class="stringliteral">&quot;Disable the binding of threads to specific physical processing cores&quot;</span>, 0},</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">    {0}</div><div class="line">}</div><div class="ttc" id="init_8c_html_adf856969b3967e4a20be18a3eda24afca92e239dba6a3bd748d5ce5ace4d285fb"><div class="ttname"><a href="init_8c.html#adf856969b3967e4a20be18a3eda24afca92e239dba6a3bd748d5ce5ace4d285fb">OPT_NO_CORE_BINDING</a></div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00086">init.c:86</a></div></div>
-<div class="ttc" id="init_8c_html_adf856969b3967e4a20be18a3eda24afcac4ecff0b530ccf4f89a57f1b44c0c2b8"><div class="ttname"><a href="init_8c.html#adf856969b3967e4a20be18a3eda24afcac4ecff0b530ccf4f89a57f1b44c0c2b8">OPT_SEED</a></div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00084">init.c:84</a></div></div>
-<div class="ttc" id="init_8c_html_adf856969b3967e4a20be18a3eda24afca2320f4860e7e091b7eb1d8f42a88483c"><div class="ttname"><a href="init_8c.html#adf856969b3967e4a20be18a3eda24afca2320f4860e7e091b7eb1d8f42a88483c">OPT_SERIAL</a></div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00085">init.c:85</a></div></div>
-<div class="ttc" id="init_8c_html_adf856969b3967e4a20be18a3eda24afca81760d8de76342442331dfa3e12cccee"><div class="ttname"><a href="init_8c.html#adf856969b3967e4a20be18a3eda24afca81760d8de76342442331dfa3e12cccee">OPT_LPS_DISTRIBUTION</a></div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00065">init.c:65</a></div></div>
-<div class="ttc" id="init_8c_html_adf856969b3967e4a20be18a3eda24afcaa4f8a021c037aaa93652b44d73790495"><div class="ttname"><a href="init_8c.html#adf856969b3967e4a20be18a3eda24afcaa4f8a021c037aaa93652b44d73790495">OPT_P</a></div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00075">init.c:75</a></div></div>
-<div class="ttc" id="init_8c_html_adf856969b3967e4a20be18a3eda24afcac6147f223acbd01dc4d9cbb95eb57d81"><div class="ttname"><a href="init_8c.html#adf856969b3967e4a20be18a3eda24afcac6147f223acbd01dc4d9cbb95eb57d81">OPT_OUTPUT_DIR</a></div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00073">init.c:73</a></div></div>
-<div class="ttc" id="init_8c_html_adf856969b3967e4a20be18a3eda24afca14a2fa5a67a463ed8c549cf9c5ee2026"><div class="ttname"><a href="init_8c.html#adf856969b3967e4a20be18a3eda24afca14a2fa5a67a463ed8c549cf9c5ee2026">OPT_A</a></div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00078">init.c:78</a></div></div>
-<div class="ttc" id="init_8c_html_adf856969b3967e4a20be18a3eda24afcacc090c53bafb82e9856b33cc304c1231"><div class="ttname"><a href="init_8c.html#adf856969b3967e4a20be18a3eda24afcacc090c53bafb82e9856b33cc304c1231">OPT_FULL</a></div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00076">init.c:76</a></div></div>
-<div class="ttc" id="init_8c_html_adf856969b3967e4a20be18a3eda24afcaa64a3d0f662d0a8ff9f2d64f407b0507"><div class="ttname"><a href="init_8c.html#adf856969b3967e4a20be18a3eda24afcaa64a3d0f662d0a8ff9f2d64f407b0507">OPT_NP</a></div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00071">init.c:71</a></div></div>
-<div class="ttc" id="init_8c_html_adf856969b3967e4a20be18a3eda24afca8755d697c1cf8ee9ea9987cf4c2d6302"><div class="ttname"><a href="init_8c.html#adf856969b3967e4a20be18a3eda24afca8755d697c1cf8ee9ea9987cf4c2d6302">OPT_CKTRM_MODE</a></div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00064">init.c:64</a></div></div>
-<div class="ttc" id="init_8c_html_adf856969b3967e4a20be18a3eda24afcae70c4886e417e039d63ccb10a36bea6d"><div class="ttname"><a href="init_8c.html#adf856969b3967e4a20be18a3eda24afcae70c4886e417e039d63ccb10a36bea6d">OPT_SCHEDULER</a></div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00063">init.c:63</a></div></div>
-<div class="ttc" id="init_8c_html_adf856969b3967e4a20be18a3eda24afca5549087f71cc2a3eb3a050bdb2e39502"><div class="ttname"><a href="init_8c.html#adf856969b3967e4a20be18a3eda24afca5549087f71cc2a3eb3a050bdb2e39502">OPT_VERBOSE</a></div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00066">init.c:66</a></div></div>
-<div class="ttc" id="init_8c_html_adf856969b3967e4a20be18a3eda24afcabc7837dc9493501756f1753bcf48b1ce"><div class="ttname"><a href="init_8c.html#adf856969b3967e4a20be18a3eda24afcabc7837dc9493501756f1753bcf48b1ce">OPT_DETERMINISTIC_SEED</a></div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00083">init.c:83</a></div></div>
-<div class="ttc" id="init_8c_html_adf856969b3967e4a20be18a3eda24afca786c5cae1446f352b448ff85cf6b8b22"><div class="ttname"><a href="init_8c.html#adf856969b3967e4a20be18a3eda24afca786c5cae1446f352b448ff85cf6b8b22">OPT_NPWD</a></div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00074">init.c:74</a></div></div>
-<div class="ttc" id="init_8c_html_adf856969b3967e4a20be18a3eda24afcadd909e75655f520a7f41db1ed5526611"><div class="ttname"><a href="init_8c.html#adf856969b3967e4a20be18a3eda24afcadd909e75655f520a7f41db1ed5526611">OPT_GVT_SNAPSHOT_CYCLES</a></div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00081">init.c:81</a></div></div>
-<div class="ttc" id="init_8c_html_adf856969b3967e4a20be18a3eda24afca10a4dda07b28c34991e938b87721056b"><div class="ttname"><a href="init_8c.html#adf856969b3967e4a20be18a3eda24afca10a4dda07b28c34991e938b87721056b">OPT_NPRC</a></div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00072">init.c:72</a></div></div>
-<div class="ttc" id="init_8c_html_adf856969b3967e4a20be18a3eda24afcafce5887da9f5f2c53fa12a23f87d1b90"><div class="ttname"><a href="init_8c.html#adf856969b3967e4a20be18a3eda24afcafce5887da9f5f2c53fa12a23f87d1b90">OPT_GVT</a></div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00079">init.c:79</a></div></div>
-<div class="ttc" id="init_8c_html_adf856969b3967e4a20be18a3eda24afca06d8b067b8c8cab6eb52a31c22539703"><div class="ttname"><a href="init_8c.html#adf856969b3967e4a20be18a3eda24afca06d8b067b8c8cab6eb52a31c22539703">OPT_BLOCKING_GVT</a></div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00080">init.c:80</a></div></div>
-<div class="ttc" id="init_8c_html_adf856969b3967e4a20be18a3eda24afca40f66d6d1c0020ae4e1aee56dc9b8577"><div class="ttname"><a href="init_8c.html#adf856969b3967e4a20be18a3eda24afca40f66d6d1c0020ae4e1aee56dc9b8577">OPT_INC</a></div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00077">init.c:77</a></div></div>
-<div class="ttc" id="init_8c_html_adf856969b3967e4a20be18a3eda24afcae414cf2401caf6c49ed97a85b5034f34"><div class="ttname"><a href="init_8c.html#adf856969b3967e4a20be18a3eda24afcae414cf2401caf6c49ed97a85b5034f34">OPT_STATS</a></div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00067">init.c:67</a></div></div>
-<div class="ttc" id="init_8c_html_adf856969b3967e4a20be18a3eda24afca6204c9354fbc677de85a6f923368168e"><div class="ttname"><a href="init_8c.html#adf856969b3967e4a20be18a3eda24afca6204c9354fbc677de85a6f923368168e">OPT_SIMULATION_TIME</a></div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00082">init.c:82</a></div></div>
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div><div class="line">    {<span class="stringliteral">&quot;np&quot;</span>,          <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afcaa64a3d0f662d0a8ff9f2d64f407b0507">OPT_NP</a>,         <span class="stringliteral">&quot;VALUE&quot;</span>,    0,      <span class="stringliteral">&quot;Number of total cores being used by the simulation&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;nprc&quot;</span>,        <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afca10a4dda07b28c34991e938b87721056b">OPT_NPRC</a>,       <span class="stringliteral">&quot;VALUE&quot;</span>,    0,      <span class="stringliteral">&quot;Total number of Logical Processes being lunched at simulation startup&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;output-dir&quot;</span>,      <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afcac6147f223acbd01dc4d9cbb95eb57d81">OPT_OUTPUT_DIR</a>,     <span class="stringliteral">&quot;PATH&quot;</span>,     0,      <span class="stringliteral">&quot;Path to a folder where execution statistics are stored. If not present, it is created&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;scheduler&quot;</span>,       <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afcae70c4886e417e039d63ccb10a36bea6d">OPT_SCHEDULER</a>,      <span class="stringliteral">&quot;TYPE&quot;</span>,     0,      <span class="stringliteral">&quot;LP Scheduling algorithm. Supported values are: stf&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;npwd&quot;</span>,        <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afca786c5cae1446f352b448ff85cf6b8b22">OPT_NPWD</a>,       0,      0,      <span class="stringliteral">&quot;Non Piece-Wise-Deterministic simulation model. See manpage for accurate description&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;p&quot;</span>,           <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afcaa4f8a021c037aaa93652b44d73790495">OPT_P</a>,          <span class="stringliteral">&quot;VALUE&quot;</span>,    0,      <span class="stringliteral">&quot;Checkpointing interval&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;full&quot;</span>,        <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afcacc090c53bafb82e9856b33cc304c1231">OPT_FULL</a>,       0,      0,      <span class="stringliteral">&quot;Take only full logs&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;inc&quot;</span>,         <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afca40f66d6d1c0020ae4e1aee56dc9b8577">OPT_INC</a>,        0,      0,      <span class="stringliteral">&quot;Take only incremental logs (still to be released)&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;A&quot;</span>,           <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afca14a2fa5a67a463ed8c549cf9c5ee2026">OPT_A</a>,          0,      0,      <span class="stringliteral">&quot;Autonomic subsystem: set checkpointing interval and log mode automatically at runtime (still to be released)&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;gvt&quot;</span>,         <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afcafce5887da9f5f2c53fa12a23f87d1b90">OPT_GVT</a>,        <span class="stringliteral">&quot;VALUE&quot;</span>,    0,      <span class="stringliteral">&quot;Time between two GVT reductions (in milliseconds)&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;cktrm-mode&quot;</span>,      <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afca8755d697c1cf8ee9ea9987cf4c2d6302">OPT_CKTRM_MODE</a>,     <span class="stringliteral">&quot;TYPE&quot;</span>,     0,      <span class="stringliteral">&quot;Termination Detection mode. Supported values: normal, incremental&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;blocking-gvt&quot;</span>,    <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afca06d8b067b8c8cab6eb52a31c22539703">OPT_BLOCKING_GVT</a>,   0,      0,      <span class="stringliteral">&quot;Blocking GVT. All distributed nodes block until a consensus is agreed&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;gvt-snapshot-cycles&quot;</span>, <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afcadd909e75655f520a7f41db1ed5526611">OPT_GVT_SNAPSHOT_CYCLES</a>, <span class="stringliteral">&quot;VALUE&quot;</span>,   0,      <span class="stringliteral">&quot;Termination detection is invoked after this number of GVT reductions&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;simulation-time&quot;</span>, <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afca6204c9354fbc677de85a6f923368168e">OPT_SIMULATION_TIME</a>,    <span class="stringliteral">&quot;VALUE&quot;</span>,    0,      <span class="stringliteral">&quot;Halt the simulation when all LPs reach this logical time. 0 means infinite&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;lps-distribution&quot;</span>,    <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afca81760d8de76342442331dfa3e12cccee">OPT_LPS_DISTRIBUTION</a>,   <span class="stringliteral">&quot;TYPE&quot;</span>,     0,      <span class="stringliteral">&quot;LPs distributions over simulation kernels policies. Supported values: block, circular&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;deterministic-seed&quot;</span>,  <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afcabc7837dc9493501756f1753bcf48b1ce">OPT_DETERMINISTIC_SEED</a>, 0,      0,      <span class="stringliteral">&quot;Do not change the initial random seed for LPs. Enforces different deterministic simulation runs&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;verbose&quot;</span>,     <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afca5549087f71cc2a3eb3a050bdb2e39502">OPT_VERBOSE</a>,        <span class="stringliteral">&quot;TYPE&quot;</span>,     0,      <span class="stringliteral">&quot;Verbose execution&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;stats&quot;</span>,       <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afcae414cf2401caf6c49ed97a85b5034f34">OPT_STATS</a>,      <span class="stringliteral">&quot;TYPE&quot;</span>,     0,      <span class="stringliteral">&quot;Level of detail in the output statistics&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;seed&quot;</span>,        <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afcac4ecff0b530ccf4f89a57f1b44c0c2b8">OPT_SEED</a>,       <span class="stringliteral">&quot;VALUE&quot;</span>,    0,      <span class="stringliteral">&quot;Manually specify the initial random seed&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;serial&quot;</span>,      <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afca2320f4860e7e091b7eb1d8f42a88483c">OPT_SERIAL</a>,     0,      0,      <span class="stringliteral">&quot;Run a serial simulation (using Calendar Queues)&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;sequential&quot;</span>,      <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afca2320f4860e7e091b7eb1d8f42a88483c">OPT_SERIAL</a>,     0,      OPTION_ALIAS,   NULL, 0},</div><div class="line">    {<span class="stringliteral">&quot;no-core-binding&quot;</span>, <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afca92e239dba6a3bd748d5ce5ace4d285fb">OPT_NO_CORE_BINDING</a>,    0,      0,      <span class="stringliteral">&quot;Disable the binding of threads to specific physical processing cores&quot;</span>, 0},</div><div class="line"></div><div class="line"></div><div class="line">    {<span class="stringliteral">&quot;no-preemption&quot;</span>,   <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afca695d14f6ff61efdc2de8087555e3fab1">OPT_PREEMPTION</a>,     0,      0,      <span class="stringliteral">&quot;Disable Preemptive Time Warp&quot;</span>, 0},</div><div class="line"></div><div class="line">    {0}</div><div class="line">}</div><div class="ttc" id="init_8c_html_adf856969b3967e4a20be18a3eda24afca92e239dba6a3bd748d5ce5ace4d285fb"><div class="ttname"><a href="init_8c.html#adf856969b3967e4a20be18a3eda24afca92e239dba6a3bd748d5ce5ace4d285fb">OPT_NO_CORE_BINDING</a></div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00091">init.c:91</a></div></div>
+<div class="ttc" id="init_8c_html_adf856969b3967e4a20be18a3eda24afcac4ecff0b530ccf4f89a57f1b44c0c2b8"><div class="ttname"><a href="init_8c.html#adf856969b3967e4a20be18a3eda24afcac4ecff0b530ccf4f89a57f1b44c0c2b8">OPT_SEED</a></div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00089">init.c:89</a></div></div>
+<div class="ttc" id="init_8c_html_adf856969b3967e4a20be18a3eda24afca2320f4860e7e091b7eb1d8f42a88483c"><div class="ttname"><a href="init_8c.html#adf856969b3967e4a20be18a3eda24afca2320f4860e7e091b7eb1d8f42a88483c">OPT_SERIAL</a></div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00090">init.c:90</a></div></div>
+<div class="ttc" id="init_8c_html_adf856969b3967e4a20be18a3eda24afca81760d8de76342442331dfa3e12cccee"><div class="ttname"><a href="init_8c.html#adf856969b3967e4a20be18a3eda24afca81760d8de76342442331dfa3e12cccee">OPT_LPS_DISTRIBUTION</a></div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00070">init.c:70</a></div></div>
+<div class="ttc" id="init_8c_html_adf856969b3967e4a20be18a3eda24afcaa4f8a021c037aaa93652b44d73790495"><div class="ttname"><a href="init_8c.html#adf856969b3967e4a20be18a3eda24afcaa4f8a021c037aaa93652b44d73790495">OPT_P</a></div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00080">init.c:80</a></div></div>
+<div class="ttc" id="init_8c_html_adf856969b3967e4a20be18a3eda24afcac6147f223acbd01dc4d9cbb95eb57d81"><div class="ttname"><a href="init_8c.html#adf856969b3967e4a20be18a3eda24afcac6147f223acbd01dc4d9cbb95eb57d81">OPT_OUTPUT_DIR</a></div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00078">init.c:78</a></div></div>
+<div class="ttc" id="init_8c_html_adf856969b3967e4a20be18a3eda24afca14a2fa5a67a463ed8c549cf9c5ee2026"><div class="ttname"><a href="init_8c.html#adf856969b3967e4a20be18a3eda24afca14a2fa5a67a463ed8c549cf9c5ee2026">OPT_A</a></div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00083">init.c:83</a></div></div>
+<div class="ttc" id="init_8c_html_adf856969b3967e4a20be18a3eda24afcacc090c53bafb82e9856b33cc304c1231"><div class="ttname"><a href="init_8c.html#adf856969b3967e4a20be18a3eda24afcacc090c53bafb82e9856b33cc304c1231">OPT_FULL</a></div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00081">init.c:81</a></div></div>
+<div class="ttc" id="init_8c_html_adf856969b3967e4a20be18a3eda24afcaa64a3d0f662d0a8ff9f2d64f407b0507"><div class="ttname"><a href="init_8c.html#adf856969b3967e4a20be18a3eda24afcaa64a3d0f662d0a8ff9f2d64f407b0507">OPT_NP</a></div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00076">init.c:76</a></div></div>
+<div class="ttc" id="init_8c_html_adf856969b3967e4a20be18a3eda24afca695d14f6ff61efdc2de8087555e3fab1"><div class="ttname"><a href="init_8c.html#adf856969b3967e4a20be18a3eda24afca695d14f6ff61efdc2de8087555e3fab1">OPT_PREEMPTION</a></div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00094">init.c:94</a></div></div>
+<div class="ttc" id="init_8c_html_adf856969b3967e4a20be18a3eda24afca8755d697c1cf8ee9ea9987cf4c2d6302"><div class="ttname"><a href="init_8c.html#adf856969b3967e4a20be18a3eda24afca8755d697c1cf8ee9ea9987cf4c2d6302">OPT_CKTRM_MODE</a></div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00069">init.c:69</a></div></div>
+<div class="ttc" id="init_8c_html_adf856969b3967e4a20be18a3eda24afcae70c4886e417e039d63ccb10a36bea6d"><div class="ttname"><a href="init_8c.html#adf856969b3967e4a20be18a3eda24afcae70c4886e417e039d63ccb10a36bea6d">OPT_SCHEDULER</a></div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00068">init.c:68</a></div></div>
+<div class="ttc" id="init_8c_html_adf856969b3967e4a20be18a3eda24afca5549087f71cc2a3eb3a050bdb2e39502"><div class="ttname"><a href="init_8c.html#adf856969b3967e4a20be18a3eda24afca5549087f71cc2a3eb3a050bdb2e39502">OPT_VERBOSE</a></div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00071">init.c:71</a></div></div>
+<div class="ttc" id="init_8c_html_adf856969b3967e4a20be18a3eda24afcabc7837dc9493501756f1753bcf48b1ce"><div class="ttname"><a href="init_8c.html#adf856969b3967e4a20be18a3eda24afcabc7837dc9493501756f1753bcf48b1ce">OPT_DETERMINISTIC_SEED</a></div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00088">init.c:88</a></div></div>
+<div class="ttc" id="init_8c_html_adf856969b3967e4a20be18a3eda24afca786c5cae1446f352b448ff85cf6b8b22"><div class="ttname"><a href="init_8c.html#adf856969b3967e4a20be18a3eda24afca786c5cae1446f352b448ff85cf6b8b22">OPT_NPWD</a></div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00079">init.c:79</a></div></div>
+<div class="ttc" id="init_8c_html_adf856969b3967e4a20be18a3eda24afcadd909e75655f520a7f41db1ed5526611"><div class="ttname"><a href="init_8c.html#adf856969b3967e4a20be18a3eda24afcadd909e75655f520a7f41db1ed5526611">OPT_GVT_SNAPSHOT_CYCLES</a></div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00086">init.c:86</a></div></div>
+<div class="ttc" id="init_8c_html_adf856969b3967e4a20be18a3eda24afca10a4dda07b28c34991e938b87721056b"><div class="ttname"><a href="init_8c.html#adf856969b3967e4a20be18a3eda24afca10a4dda07b28c34991e938b87721056b">OPT_NPRC</a></div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00077">init.c:77</a></div></div>
+<div class="ttc" id="init_8c_html_adf856969b3967e4a20be18a3eda24afcafce5887da9f5f2c53fa12a23f87d1b90"><div class="ttname"><a href="init_8c.html#adf856969b3967e4a20be18a3eda24afcafce5887da9f5f2c53fa12a23f87d1b90">OPT_GVT</a></div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00084">init.c:84</a></div></div>
+<div class="ttc" id="init_8c_html_adf856969b3967e4a20be18a3eda24afca06d8b067b8c8cab6eb52a31c22539703"><div class="ttname"><a href="init_8c.html#adf856969b3967e4a20be18a3eda24afca06d8b067b8c8cab6eb52a31c22539703">OPT_BLOCKING_GVT</a></div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00085">init.c:85</a></div></div>
+<div class="ttc" id="init_8c_html_adf856969b3967e4a20be18a3eda24afca40f66d6d1c0020ae4e1aee56dc9b8577"><div class="ttname"><a href="init_8c.html#adf856969b3967e4a20be18a3eda24afca40f66d6d1c0020ae4e1aee56dc9b8577">OPT_INC</a></div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00082">init.c:82</a></div></div>
+<div class="ttc" id="init_8c_html_adf856969b3967e4a20be18a3eda24afcae414cf2401caf6c49ed97a85b5034f34"><div class="ttname"><a href="init_8c.html#adf856969b3967e4a20be18a3eda24afcae414cf2401caf6c49ed97a85b5034f34">OPT_STATS</a></div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00072">init.c:72</a></div></div>
+<div class="ttc" id="init_8c_html_adf856969b3967e4a20be18a3eda24afca6204c9354fbc677de85a6f923368168e"><div class="ttname"><a href="init_8c.html#adf856969b3967e4a20be18a3eda24afca6204c9354fbc677de85a6f923368168e">OPT_SIMULATION_TIME</a></div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00087">init.c:87</a></div></div>
 </div><!-- fragment -->
-<p>Definition at line <a class="el" href="init_8c_source.html#l00147">147</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<p>Definition at line <a class="el" href="init_8c_source.html#l00152">152</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
 </div>
 </div>
@@ -700,7 +713,7 @@ Alessandro Pellegrini</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="init_8c_source.html#l00135">135</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<p>Definition at line <a class="el" href="init_8c_source.html#l00140">140</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
 </div>
 </div>
@@ -714,7 +727,7 @@ Alessandro Pellegrini</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="init_8c_source.html#l00134">134</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<p>Definition at line <a class="el" href="init_8c_source.html#l00139">139</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
 </div>
 </div>
@@ -736,7 +749,7 @@ Alessandro Pellegrini</dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="init_8c_source.html#l00145">145</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<p>Definition at line <a class="el" href="init_8c_source.html#l00150">150</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
 </div>
 </div>
@@ -758,7 +771,7 @@ Alessandro Pellegrini</dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="init_8c_source.html#l00142">142</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<p>Definition at line <a class="el" href="init_8c_source.html#l00147">147</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
 </div>
 </div>
@@ -773,7 +786,7 @@ Alessandro Pellegrini</dd></dl>
 </div><div class="memdoc">
 <p>This array contains the stringified version of the parameter values ROOT-Sim accepts. You can index the first level of the array using the enum param_codes while for the second level you have to refer to the enumerations listed in relevant modules headers. </p>
 
-<p>Definition at line <a class="el" href="init_8c_source.html#l00095">95</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<p>Definition at line <a class="el" href="init_8c_source.html#l00100">100</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
 </div>
 </div>

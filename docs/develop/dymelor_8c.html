@@ -23,6 +23,8 @@
   $(document).ready(function() { init_search(); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="flatdoc.css" rel="stylesheet" type="text/css"/>
+<link href="inline-params.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -112,7 +114,7 @@ $(document).ready(function(){initNavTree('dymelor_8c.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>LP's memory pre-allocator. This layer stands below DyMeLoR, and is the connection point to the Linux Kernel Module for Memory Management, when activated.  
+<p>Dynamic Memory Logger and Restorer (DyMeLoR)  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="init_8h_source.html">core/init.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="mm_8h_source.html">mm/mm.h</a>&gt;</code><br />
@@ -124,28 +126,30 @@ $(document).ready(function(){initNavTree('dymelor_8c.html','');});
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="dymelor_8c__incl.png" border="0" usemap="#_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2mm_2dymelor_8c" alt=""/></div>
 <map name="_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2mm_2dymelor_8c" id="_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2mm_2dymelor_8c">
-<area shape="rect" id="node2" href="init_8h.html" title="This module implements the simulator initialization routines. " alt="" coords="936,109,1021,136"/>
-<area shape="rect" id="node21" href="mm_8h.html" title="Memory Manager main header. " alt="" coords="269,348,360,375"/>
-<area shape="rect" id="node39" href="scheduler_8h.html" title="Scheduling Subsystem main header file. Scheduler&#45;specific data structures and defines should be place..." alt="" coords="646,109,807,136"/>
-<area shape="rect" id="node3" href="statistics_8h.html" title="State Management Subsystem. " alt="" coords="1007,184,1159,211"/>
-<area shape="rect" id="node4" href="process_8h.html" title="This header defines a LP control block, keeping information about both simulation state and execution..." alt="" coords="850,259,1001,285"/>
-<area shape="rect" id="node6" href="state_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="1030,512,1127,539"/>
-<area shape="rect" id="node18" href="numerical_8h.html" title="This header is used to define symbols which must be accessible by the simulator but not by the applic..." alt="" coords="1068,661,1183,688"/>
-<area shape="rect" id="node30" href="ecs_8h.html" title="Event Cross State Synchronization. This module implements the userspace handler of the artificially i..." alt="" coords="801,348,887,375"/>
-<area shape="rect" id="node31" href="list_8h.html" title="This header defines macros for accessing the general&#45;purpose list implementation used in the simulato..." alt="" coords="1261,661,1381,688"/>
-<area shape="rect" id="node34" href="msgchannel_8h.html" title="This module implements an (M, 1) channel to transfer message pointers. " alt="" coords="826,512,1006,539"/>
-<area shape="rect" id="node35" href="ult_8h.html" title="The User&#45;Level Thread module allows the creation/scheduling of a user&#45;level thread in an architecture..." alt="" coords="384,348,467,375"/>
-<area shape="rect" id="node36" href="communication_8h.html" title="This is the main header file, containing all data structures and defines used by the communication su..." alt="" coords="541,348,777,375"/>
-<area shape="rect" id="node37" href="cross__state__manager_8h.html" title="This is the main header for the Linux Kernel Module which implements per&#45;kernel&#45;thread different page..." alt="" coords="963,333,1128,389"/>
-<area shape="rect" id="node7" href="ROOT-Sim_8h.html" title="This header defines all the symbols which are needed to develop a Model to be simulated on top of ROO..." alt="" coords="761,661,860,688"/>
-<area shape="rect" id="node14" href="core_8h.html" title="This header defines all the shared symbols which are needed by different subsystems. " alt="" coords="589,587,683,613"/>
-<area shape="rect" id="node19" href="thread_8h.html" title="This module implements Kernel Level Thread supports. " alt="" coords="935,661,1043,688"/>
-<area shape="rect" id="node20" href="atomic_8h.html" title="This module implements atomic and non&#45;blocking operations used within ROOT&#45;Sim to coordinate threads ..." alt="" coords="1074,736,1185,763"/>
-<area shape="rect" id="node24" href="dymelor_8h.html" title="This is the Memory Management Subsystem main header file. " alt="" coords="199,437,313,464"/>
-<area shape="rect" id="node25" href="bitmap_8h.html" title="This header implements a minimal bitmap data type. " alt="" coords="183,512,329,539"/>
-<area shape="rect" id="node27" href="timer_8h.html" title="This header defines the timers which the simulator uses to monitor its internal behaviour. " alt="" coords="60,512,159,539"/>
-<area shape="rect" id="node40" href="queues_8h.html" title="Event and State queueing Subsystem main header. " alt="" coords="661,184,793,211"/>
-<area shape="rect" id="node41" href="stf_8h.html" title="Smallest Timestamp First scheduler main header. " alt="" coords="868,184,983,211"/>
+<area shape="rect" id="node2" href="init_8h.html" title="Initialization routines. " alt="" coords="1354,109,1439,136"/>
+<area shape="rect" id="node24" href="mm_8h.html" title="Memory Manager main header. " alt="" coords="341,348,431,375"/>
+<area shape="rect" id="node43" href="scheduler_8h.html" title="The ROOT&#45;Sim scheduler main module header. " alt="" coords="901,109,1063,136"/>
+<area shape="rect" id="node3" href="statistics_8h.html" title="Statistics module. " alt="" coords="1587,184,1739,211"/>
+<area shape="rect" id="node4" href="process_8h.html" title="LP control blocks. " alt="" coords="1053,259,1204,285"/>
+<area shape="rect" id="node6" href="state_8h.html" title="LP state management. " alt="" coords="1140,512,1237,539"/>
+<area shape="rect" id="node18" href="numerical_8h.html" title="Numerical Library. " alt="" coords="1131,661,1246,688"/>
+<area shape="rect" id="node32" href="ecs_8h.html" title="Event &amp; Cross State Synchornization. " alt="" coords="1084,348,1171,375"/>
+<area shape="rect" id="node33" href="list_8h.html" title="Generic Lists. " alt="" coords="1487,661,1607,688"/>
+<area shape="rect" id="node36" href="msgchannel_8h.html" title="A (M, 1) channel for messages. " alt="" coords="1012,437,1192,464"/>
+<area shape="rect" id="node37" href="ult_8h.html" title="User&#45;Level Threads Headers. " alt="" coords="870,348,953,375"/>
+<area shape="rect" id="node40" href="communication_8h.html" title="Communication Routines. " alt="" coords="505,348,741,375"/>
+<area shape="rect" id="node41" href="cross__state__manager_8h.html" title="Per&#45;thread page table. " alt="" coords="1195,333,1361,389"/>
+<area shape="rect" id="node7" href="ROOT-Sim_8h.html" title="ROOT&#45;Sim header for model development. " alt="" coords="837,661,935,688"/>
+<area shape="rect" id="node14" href="core_8h.html" title="Core ROOT&#45;Sim functionalities. " alt="" coords="660,587,755,613"/>
+<area shape="rect" id="node19" href="thread_8h.html" title="Generic thread management facilities. " alt="" coords="448,661,556,688"/>
+<area shape="rect" id="node20" href="atomic_8h.html" title="Atomic operations. " alt="" coords="631,736,741,763"/>
+<area shape="rect" id="node26" href="dymelor_8h.html" title="Dynamic Memory Logger and Restorer (DyMeLoR) " alt="" coords="329,437,443,464"/>
+<area shape="rect" id="node27" href="bitmap_8h.html" title="Bitmap data type. " alt="" coords="371,512,518,539"/>
+<area shape="rect" id="node29" href="timer_8h.html" title="Timers. " alt="" coords="198,512,297,539"/>
+<area shape="rect" id="node38" href="jmp_8h.html" title="Architecture&#45;independent ULT header. " alt="" coords="897,437,987,464"/>
+<area shape="rect" id="node39" href="x86_2jmp_8h.html" title="x86 ULT support header " alt="" coords="947,512,1065,539"/>
+<area shape="rect" id="node44" href="queues_8h.html" title="Message queueing subsystem. " alt="" coords="916,184,1048,211"/>
+<area shape="rect" id="node45" href="stf_8h.html" title="O(n) scheduling algorithm. " alt="" coords="1073,184,1187,211"/>
 </map>
 </div>
 </div>
@@ -183,13 +187,21 @@ Functions</h2></td></tr>
 <tr class="separator:ad72b2eadc22c9a9e50ded85830976d50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>LP's memory pre-allocator. This layer stands below DyMeLoR, and is the connection point to the Linux Kernel Module for Memory Management, when activated. </p>
-<p>Copyright (C) 2008-2018 HPDCS Group <a href="http://www.dis.uniroma1.it/~hpdcs">http://www.dis.uniroma1.it/~hpdcs</a></p>
+<div class="textblock"><p>Dynamic Memory Logger and Restorer (DyMeLoR) </p>
+<p>LP's memory manager.</p>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (C) 2008-2018 HPDCS Group <a href="https://hpdcs.github.io">https://hpdcs.github.io</a></dd></dl>
 <p>This file is part of ROOT-Sim (ROme OpTimistic Simulator).</p>
 <p>ROOT-Sim is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; only version 3 of the License applies.</p>
 <p>ROOT-Sim is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
 <p>You should have received a copy of the GNU General Public License along with ROOT-Sim; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA</p>
-<dl class="section author"><dt>Author</dt><dd>Alessandro Pellegrini </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Roberto Toccaceli </dd>
+<dd>
+Alessandro Pellegrini </dd>
+<dd>
+Roberto Vitali </dd>
+<dd>
+Francesco Quaglia</dd></dl>
+<dl class="section date"><dt>Date</dt><dd>April 02, 2008 </dd></dl>
 
 <p>Definition in file <a class="el" href="dymelor_8c_source.html">dymelor.c</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
@@ -227,7 +239,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A pointer to the newly allocated buffer </dd></dl>
 
-<p>Definition at line <a class="el" href="dymelor_8c_source.html#l00670">670</a> of file <a class="el" href="dymelor_8c_source.html">dymelor.c</a>.</p>
+<p>Definition at line <a class="el" href="dymelor_8c_source.html#l00677">677</a> of file <a class="el" href="dymelor_8c_source.html">dymelor.c</a>.</p>
 
 <p><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -278,7 +290,7 @@ Francesco Quaglia</dd></dl>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="dymelor_8c_source.html#l00595">595</a> of file <a class="el" href="dymelor_8c_source.html">dymelor.c</a>.</p>
+<p>Definition at line <a class="el" href="dymelor_8c_source.html#l00602">602</a> of file <a class="el" href="dymelor_8c_source.html">dymelor.c</a>.</p>
 
 <p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -336,7 +348,7 @@ Francesco Quaglia</dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A pointer to the allocated memory </dd></dl>
 
-<p>Definition at line <a class="el" href="dymelor_8c_source.html#l00559">559</a> of file <a class="el" href="dymelor_8c_source.html">dymelor.c</a>.</p>
+<p>Definition at line <a class="el" href="dymelor_8c_source.html#l00566">566</a> of file <a class="el" href="dymelor_8c_source.html">dymelor.c</a>.</p>
 
 <p><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -410,7 +422,7 @@ Francesco Quaglia</dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A pointer to the newly allocated buffer </dd></dl>
 
-<p>Definition at line <a class="el" href="dymelor_8c_source.html#l00621">621</a> of file <a class="el" href="dymelor_8c_source.html">dymelor.c</a>.</p>
+<p>Definition at line <a class="el" href="dymelor_8c_source.html#l00628">628</a> of file <a class="el" href="dymelor_8c_source.html">dymelor.c</a>.</p>
 
 <p><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -464,7 +476,7 @@ Francesco Quaglia</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="dymelor_8c_source.html#l00690">690</a> of file <a class="el" href="dymelor_8c_source.html">dymelor.c</a>.</p>
+<p>Definition at line <a class="el" href="dymelor_8c_source.html#l00697">697</a> of file <a class="el" href="dymelor_8c_source.html">dymelor.c</a>.</p>
 
 <p><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -530,7 +542,7 @@ Roberto Vitali</dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The new size </dd></dl>
 
-<p>Definition at line <a class="el" href="dymelor_8c_source.html#l00129">129</a> of file <a class="el" href="dymelor_8c_source.html">dymelor.c</a>.</p>
+<p>Definition at line <a class="el" href="dymelor_8c_source.html#l00136">136</a> of file <a class="el" href="dymelor_8c_source.html">dymelor.c</a>.</p>
 
 <p><div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -588,7 +600,7 @@ Roberto Vitali</dd></dl>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="dymelor_8c_source.html#l00446">446</a> of file <a class="el" href="dymelor_8c_source.html">dymelor.c</a>.</p>
+<p>Definition at line <a class="el" href="dymelor_8c_source.html#l00453">453</a> of file <a class="el" href="dymelor_8c_source.html">dymelor.c</a>.</p>
 
 <p><div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -636,7 +648,7 @@ Roberto Vitali</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="dymelor_8c_source.html#l00345">345</a> of file <a class="el" href="dymelor_8c_source.html">dymelor.c</a>.</p>
+<p>Definition at line <a class="el" href="dymelor_8c_source.html#l00352">352</a> of file <a class="el" href="dymelor_8c_source.html">dymelor.c</a>.</p>
 
 <p><div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -693,7 +705,7 @@ Roberto Vitali</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="dymelor_8c_source.html#l00165">165</a> of file <a class="el" href="dymelor_8c_source.html">dymelor.c</a>.</p>
+<p>Definition at line <a class="el" href="dymelor_8c_source.html#l00172">172</a> of file <a class="el" href="dymelor_8c_source.html">dymelor.c</a>.</p>
 
 <p><div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -765,7 +777,7 @@ Francesco Quaglia</dd></dl>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="dymelor_8c_source.html#l00152">152</a> of file <a class="el" href="dymelor_8c_source.html">dymelor.c</a>.</p>
+<p>Definition at line <a class="el" href="dymelor_8c_source.html#l00159">159</a> of file <a class="el" href="dymelor_8c_source.html">dymelor.c</a>.</p>
 
 <p><div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-15-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -813,7 +825,7 @@ Roberto Vitali</dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The whole size of the state (metadata included) </dd></dl>
 
-<p>Definition at line <a class="el" href="dymelor_8c_source.html#l00527">527</a> of file <a class="el" href="dymelor_8c_source.html">dymelor.c</a>.</p>
+<p>Definition at line <a class="el" href="dymelor_8c_source.html#l00534">534</a> of file <a class="el" href="dymelor_8c_source.html">dymelor.c</a>.</p>
 
 <p><div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-16-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -894,7 +906,7 @@ Alessandro Pellegrini</dd></dl>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="dymelor_8c_source.html#l00042">42</a> of file <a class="el" href="dymelor_8c_source.html">dymelor.c</a>.</p>
+<p>Definition at line <a class="el" href="dymelor_8c_source.html#l00049">49</a> of file <a class="el" href="dymelor_8c_source.html">dymelor.c</a>.</p>
 
 <p><div id="dynsection-17" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-17-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -937,7 +949,7 @@ Alessandro Pellegrini</dd></dl>
 </div><div class="memdoc">
 <p>This function inizializes a malloc_state. </p>
 
-<p>Definition at line <a class="el" href="dymelor_8c_source.html#l00070">70</a> of file <a class="el" href="dymelor_8c_source.html">dymelor.c</a>.</p>
+<p>Definition at line <a class="el" href="dymelor_8c_source.html#l00077">77</a> of file <a class="el" href="dymelor_8c_source.html">dymelor.c</a>.</p>
 
 <p><div id="dynsection-18" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-18-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -984,7 +996,7 @@ Alessandro Pellegrini</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="dymelor_8c_source.html#l00107">107</a> of file <a class="el" href="dymelor_8c_source.html">dymelor.c</a>.</p>
+<p>Definition at line <a class="el" href="dymelor_8c_source.html#l00114">114</a> of file <a class="el" href="dymelor_8c_source.html">dymelor.c</a>.</p>
 
 <p><div id="dynsection-20" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-20-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>

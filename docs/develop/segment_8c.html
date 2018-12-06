@@ -23,6 +23,8 @@
   $(document).ready(function() { init_search(); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="flatdoc.css" rel="stylesheet" type="text/css"/>
+<link href="inline-params.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -113,7 +115,7 @@ $(document).ready(function(){initNavTree('segment_8c.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>Segment Allocator. This is the lowest-level allocator in ROOT-Sim.  
+<p>Segment allocator.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;sys/time.h&gt;</code><br />
 <code>#include &lt;sys/resource.h&gt;</code><br />
@@ -130,23 +132,25 @@ $(document).ready(function(){initNavTree('segment_8c.html','');});
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="segment_8c__incl.png" border="0" usemap="#_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2mm_2segment_8c" alt=""/></div>
 <map name="_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2mm_2segment_8c" id="_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2mm_2segment_8c">
-<area shape="rect" id="node6" href="mm_8h.html" title="Memory Manager main header. " alt="" coords="468,199,559,225"/>
-<area shape="rect" id="node30" href="ecs_8h.html" title="Event Cross State Synchronization. This module implements the userspace handler of the artificially i..." alt="" coords="1294,199,1381,225"/>
-<area shape="rect" id="node31" href="cross__state__manager_8h.html" title="This is the main header for the Linux Kernel Module which implements per&#45;kernel&#45;thread different page..." alt="" coords="1405,184,1571,240"/>
-<area shape="rect" id="node33" href="process_8h.html" title="This header defines a LP control block, keeping information about both simulation state and execution..." alt="" coords="1005,109,1155,136"/>
-<area shape="rect" id="node10" href="core_8h.html" title="This header defines all the shared symbols which are needed by different subsystems. " alt="" coords="866,437,961,464"/>
-<area shape="rect" id="node23" href="atomic_8h.html" title="This module implements atomic and non&#45;blocking operations used within ROOT&#45;Sim to coordinate threads ..." alt="" coords="299,587,410,613"/>
-<area shape="rect" id="node24" href="dymelor_8h.html" title="This is the Memory Management Subsystem main header file. " alt="" coords="504,288,619,315"/>
-<area shape="rect" id="node11" href="ROOT-Sim_8h.html" title="This header defines all the symbols which are needed to develop a Model to be simulated on top of ROO..." alt="" coords="1025,512,1124,539"/>
-<area shape="rect" id="node21" href="numerical_8h.html" title="This header is used to define symbols which must be accessible by the simulator but not by the applic..." alt="" coords="1199,512,1313,539"/>
-<area shape="rect" id="node22" href="thread_8h.html" title="This module implements Kernel Level Thread supports. " alt="" coords="586,512,694,539"/>
-<area shape="rect" id="node25" href="bitmap_8h.html" title="This header implements a minimal bitmap data type. " alt="" coords="555,363,701,389"/>
-<area shape="rect" id="node27" href="state_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="1185,363,1282,389"/>
-<area shape="rect" id="node28" href="timer_8h.html" title="This header defines the timers which the simulator uses to monitor its internal behaviour. " alt="" coords="168,363,267,389"/>
-<area shape="rect" id="node34" href="list_8h.html" title="This header defines macros for accessing the general&#45;purpose list implementation used in the simulato..." alt="" coords="147,512,267,539"/>
-<area shape="rect" id="node37" href="msgchannel_8h.html" title="This module implements an (M, 1) channel to transfer message pointers. " alt="" coords="929,363,1109,389"/>
-<area shape="rect" id="node38" href="ult_8h.html" title="The User&#45;Level Thread module allows the creation/scheduling of a user&#45;level thread in an architecture..." alt="" coords="1085,288,1168,315"/>
-<area shape="rect" id="node39" href="communication_8h.html" title="This is the main header file, containing all data structures and defines used by the communication su..." alt="" coords="775,199,1011,225"/>
+<area shape="rect" id="node6" href="mm_8h.html" title="Memory Manager main header. " alt="" coords="353,199,443,225"/>
+<area shape="rect" id="node32" href="ecs_8h.html" title="Event &amp; Cross State Synchornization. " alt="" coords="471,199,557,225"/>
+<area shape="rect" id="node33" href="cross__state__manager_8h.html" title="Per&#45;thread page table. " alt="" coords="582,184,747,240"/>
+<area shape="rect" id="node35" href="process_8h.html" title="LP control blocks. " alt="" coords="837,109,988,136"/>
+<area shape="rect" id="node10" href="core_8h.html" title="Core ROOT&#45;Sim functionalities. " alt="" coords="696,437,791,464"/>
+<area shape="rect" id="node23" href="atomic_8h.html" title="Atomic operations. " alt="" coords="533,587,644,613"/>
+<area shape="rect" id="node26" href="dymelor_8h.html" title="Dynamic Memory Logger and Restorer (DyMeLoR) " alt="" coords="338,288,453,315"/>
+<area shape="rect" id="node11" href="ROOT-Sim_8h.html" title="ROOT&#45;Sim header for model development. " alt="" coords="881,512,979,539"/>
+<area shape="rect" id="node21" href="numerical_8h.html" title="Numerical Library. " alt="" coords="1003,512,1118,539"/>
+<area shape="rect" id="node22" href="thread_8h.html" title="Generic thread management facilities. " alt="" coords="275,512,383,539"/>
+<area shape="rect" id="node27" href="bitmap_8h.html" title="Bitmap data type. " alt="" coords="381,363,527,389"/>
+<area shape="rect" id="node29" href="state_8h.html" title="LP state management. " alt="" coords="1013,363,1111,389"/>
+<area shape="rect" id="node30" href="timer_8h.html" title="Timers. " alt="" coords="157,363,255,389"/>
+<area shape="rect" id="node36" href="list_8h.html" title="Generic Lists. " alt="" coords="1406,512,1526,539"/>
+<area shape="rect" id="node39" href="msgchannel_8h.html" title="A (M, 1) channel for messages. " alt="" coords="823,288,1003,315"/>
+<area shape="rect" id="node40" href="ult_8h.html" title="User&#45;Level Threads Headers. " alt="" coords="1078,199,1161,225"/>
+<area shape="rect" id="node43" href="communication_8h.html" title="Communication Routines. " alt="" coords="652,363,888,389"/>
+<area shape="rect" id="node41" href="jmp_8h.html" title="Architecture&#45;independent ULT header. " alt="" coords="1165,288,1255,315"/>
+<area shape="rect" id="node42" href="x86_2jmp_8h.html" title="x86 ULT support header " alt="" coords="1186,363,1303,389"/>
 </map>
 </div>
 </div>
@@ -177,8 +181,9 @@ Variables</h2></td></tr>
 <tr class="separator:a57d511418f83a1a575cc1ea1dbc27509"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Segment Allocator. This is the lowest-level allocator in ROOT-Sim. </p>
-<p>Copyright (C) 2008-2018 HPDCS Group <a href="http://www.dis.uniroma1.it/~hpdcs">http://www.dis.uniroma1.it/~hpdcs</a></p>
+<div class="textblock"><p>Segment allocator. </p>
+<p>Segment Allocator. This is the lowest-level allocator in ROOT-Sim.</p>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (C) 2008-2018 HPDCS Group <a href="https://hpdcs.github.io">https://hpdcs.github.io</a></dd></dl>
 <p>This file is part of ROOT-Sim (ROme OpTimistic Simulator).</p>
 <p>ROOT-Sim is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; only version 3 of the License applies.</p>
 <p>ROOT-Sim is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
@@ -203,7 +208,7 @@ Francesco Quaglia </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="segment_8c_source.html#l00146">146</a> of file <a class="el" href="segment_8c_source.html">segment.c</a>.</p>
+<p>Definition at line <a class="el" href="segment_8c_source.html#l00150">150</a> of file <a class="el" href="segment_8c_source.html">segment.c</a>.</p>
 
 <p><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -235,7 +240,7 @@ Francesco Quaglia </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="segment_8c_source.html#l00065">65</a> of file <a class="el" href="segment_8c_source.html">segment.c</a>.</p>
+<p>Definition at line <a class="el" href="segment_8c_source.html#l00069">69</a> of file <a class="el" href="segment_8c_source.html">segment.c</a>.</p>
 
 </div>
 </div>
@@ -253,7 +258,27 @@ Francesco Quaglia </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="segment_8c_source.html#l00041">41</a> of file <a class="el" href="segment_8c_source.html">segment.c</a>.</p>
+<p>Definition at line <a class="el" href="segment_8c_source.html#l00045">45</a> of file <a class="el" href="segment_8c_source.html">segment.c</a>.</p>
+
+<p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="segment_8c_a02d6ca4621e0cbbd0e84524a1f6a18dc_icgraph.png" border="0" usemap="#segment_8c_a02d6ca4621e0cbbd0e84524a1f6a18dc_icgraph" alt=""/></div>
+<map name="segment_8c_a02d6ca4621e0cbbd0e84524a1f6a18dc_icgraph" id="segment_8c_a02d6ca4621e0cbbd0e84524a1f6a18dc_icgraph">
+<area shape="rect" id="node2" href="ecs_8h.html#a13bad948057bc0998099c1ef6ddaf46c" title="lp_alloc_thread_init" alt="" coords="415,5,559,32"/>
+<area shape="rect" id="node6" href="ecs_8h.html#a85240bd0589eb4591e69afdb7f95af29" title="setup_ecs_on_segment" alt="" coords="187,56,361,83"/>
+<area shape="rect" id="node3" href="main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="1149,56,1311,83"/>
+<area shape="rect" id="node4" href="main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="1359,56,1480,83"/>
+<area shape="rect" id="node5" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1392,107,1447,133"/>
+<area shape="rect" id="node7" href="scheduler_8h.html#a5766f78dcd3778582d506c3dec34594e" title="receive_control_msg" alt="" coords="409,56,564,83"/>
+<area shape="rect" id="node8" href="queues_8h.html#a54eca9bfa893cac072d1b1d3010c2944" title="process_bottom_halves" alt="" coords="612,56,787,83"/>
+<area shape="rect" id="node9" href="gvt_2gvt_8c.html#a895d5bfff43f3ee72f9cf7097abf609b" title="GVT_phases" alt="" coords="835,107,936,133"/>
+<area shape="rect" id="node10" href="gvt_2gvt_8h.html#a899b50ab45427cf145360ff3a6c29808" title="gvt_operations" alt="" coords="984,107,1101,133"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>
@@ -271,17 +296,31 @@ Francesco Quaglia </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="segment_8c_source.html#l00071">71</a> of file <a class="el" href="segment_8c_source.html">segment.c</a>.</p>
+<p>Definition at line <a class="el" href="segment_8c_source.html#l00075">75</a> of file <a class="el" href="segment_8c_source.html">segment.c</a>.</p>
 
-<p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="segment_8c_ac55535ec45aab23d2a49f371241d5014_cgraph.png" border="0" usemap="#segment_8c_ac55535ec45aab23d2a49f371241d5014_cgraph" alt=""/></div>
 <map name="segment_8c_ac55535ec45aab23d2a49f371241d5014_cgraph" id="segment_8c_ac55535ec45aab23d2a49f371241d5014_cgraph">
 <area shape="rect" id="node2" href="dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="160,5,223,32"/>
 <area shape="rect" id="node3" href="platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="271,5,380,32"/>
+</map>
+</div>
+</p>
+
+<p><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="segment_8c_ac55535ec45aab23d2a49f371241d5014_icgraph.png" border="0" usemap="#segment_8c_ac55535ec45aab23d2a49f371241d5014_icgraph" alt=""/></div>
+<map name="segment_8c_ac55535ec45aab23d2a49f371241d5014_icgraph" id="segment_8c_ac55535ec45aab23d2a49f371241d5014_icgraph">
+<area shape="rect" id="node2" href="ecs_8c.html#a87cf3267c85a748dc7a0c9ab5d3f696d" title="remote_memory_init" alt="" coords="160,5,316,32"/>
+<area shape="rect" id="node3" href="init_8h.html#a417eb072179d09f441dbae3125049e46" title="SystemInit" alt="" coords="364,5,455,32"/>
+<area shape="rect" id="node4" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="503,5,557,32"/>
 </map>
 </div>
 </p>
@@ -312,7 +351,7 @@ Francesco Quaglia </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="segment_8c_source.html#l00047">47</a> of file <a class="el" href="segment_8c_source.html">segment.c</a>.</p>
+<p>Definition at line <a class="el" href="segment_8c_source.html#l00051">51</a> of file <a class="el" href="segment_8c_source.html">segment.c</a>.</p>
 
 </div>
 </div>
@@ -330,13 +369,13 @@ Francesco Quaglia </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="segment_8c_source.html#l00136">136</a> of file <a class="el" href="segment_8c_source.html">segment.c</a>.</p>
+<p>Definition at line <a class="el" href="segment_8c_source.html#l00140">140</a> of file <a class="el" href="segment_8c_source.html">segment.c</a>.</p>
 
-<p><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="segment_8c_a55b0b8e4a65be959f5adb5343f36ff94_cgraph.png" border="0" usemap="#segment_8c_a55b0b8e4a65be959f5adb5343f36ff94_cgraph" alt=""/></div>
 <map name="segment_8c_a55b0b8e4a65be959f5adb5343f36ff94_cgraph" id="segment_8c_a55b0b8e4a65be959f5adb5343f36ff94_cgraph">
 <area shape="rect" id="node2" href="dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="435,56,497,83"/>
@@ -349,11 +388,11 @@ Francesco Quaglia </dd></dl>
 </div>
 </p>
 
-<p><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="segment_8c_a55b0b8e4a65be959f5adb5343f36ff94_icgraph.png" border="0" usemap="#segment_8c_a55b0b8e4a65be959f5adb5343f36ff94_icgraph" alt=""/></div>
 <map name="segment_8c_a55b0b8e4a65be959f5adb5343f36ff94_icgraph" id="segment_8c_a55b0b8e4a65be959f5adb5343f36ff94_icgraph">
 <area shape="rect" id="node2" href="process_8h.html#ad58c55ea23fdc3d938b57135b6116feb" title="initialize_lps" alt="" coords="224,5,323,32"/>
@@ -379,13 +418,13 @@ Francesco Quaglia </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="segment_8c_source.html#l00100">100</a> of file <a class="el" href="segment_8c_source.html">segment.c</a>.</p>
+<p>Definition at line <a class="el" href="segment_8c_source.html#l00104">104</a> of file <a class="el" href="segment_8c_source.html">segment.c</a>.</p>
 
-<p><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="segment_8c_af1aa0c7cf4139b859f60b66d6bbd769f_icgraph.png" border="0" usemap="#segment_8c_af1aa0c7cf4139b859f60b66d6bbd769f_icgraph" alt=""/></div>
 <map name="segment_8c_af1aa0c7cf4139b859f60b66d6bbd769f_icgraph" id="segment_8c_af1aa0c7cf4139b859f60b66d6bbd769f_icgraph">
 <area shape="rect" id="node2" href="init_8h.html#a417eb072179d09f441dbae3125049e46" title="SystemInit" alt="" coords="159,5,249,32"/>
@@ -407,7 +446,7 @@ Francesco Quaglia </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="segment_8c_source.html#l00036">36</a> of file <a class="el" href="segment_8c_source.html">segment.c</a>.</p>
+<p>Definition at line <a class="el" href="segment_8c_source.html#l00040">40</a> of file <a class="el" href="segment_8c_source.html">segment.c</a>.</p>
 
 </div>
 </div>
@@ -429,7 +468,7 @@ Francesco Quaglia </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="segment_8c_source.html#l00039">39</a> of file <a class="el" href="segment_8c_source.html">segment.c</a>.</p>
+<p>Definition at line <a class="el" href="segment_8c_source.html#l00043">43</a> of file <a class="el" href="segment_8c_source.html">segment.c</a>.</p>
 
 </div>
 </div>

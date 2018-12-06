@@ -23,6 +23,8 @@
   $(document).ready(function() { init_search(); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="flatdoc.css" rel="stylesheet" type="text/css"/>
+<link href="inline-params.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -98,6 +100,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="globals_g.html#index_g"><span>g</span></a></li>
       <li><a href="globals_h.html#index_h"><span>h</span></a></li>
       <li><a href="globals_i.html#index_i"><span>i</span></a></li>
+      <li><a href="globals_j.html#index_j"><span>j</span></a></li>
       <li><a href="globals_k.html#index_k"><span>k</span></a></li>
       <li class="current"><a href="globals_l.html#index_l"><span>l</span></a></li>
       <li><a href="globals_m.html#index_m"><span>m</span></a></li>
@@ -153,6 +156,10 @@ $(document).ready(function(){initNavTree('globals_l.html','');});
 </li>
 <li>last_gvt
 : <a class="el" href="gvt_2gvt_8c.html#a542712f0b45aec7dcac2036fc4f4815f">gvt.c</a>
+</li>
+<li>last_reduced_gvt()
+: <a class="el" href="communication_2gvt_8h.html#a022fe9fa84d6e6614c9572d23adfcc9b">gvt.h</a>
+, <a class="el" href="communication_2gvt_8c.html#a022fe9fa84d6e6614c9572d23adfcc9b">gvt.c</a>
 </li>
 <li>lastbucket
 : <a class="el" href="calqueue_8c.html#a7217d490a5b805aa1ad66cb8f5409b1f">calqueue.c</a>
@@ -221,6 +228,12 @@ $(document).ready(function(){initNavTree('globals_l.html','');});
 <li>load_seed()
 : <a class="el" href="numerical_8c.html#a9adf4681a7f461710a82fe776f288a5b">numerical.c</a>
 </li>
+<li>local_binding_acquire_phase
+: <a class="el" href="binding_8c.html#a7dea35f8540b0280eb8635bf6e18c53b">binding.c</a>
+</li>
+<li>local_binding_phase
+: <a class="el" href="binding_8c.html#a8075c14225350c6a3b3208517130731b">binding.c</a>
+</li>
 <li>local_min
 : <a class="el" href="gvt_2gvt_8c.html#a124d9ea1c7dacc542bd0fdd85b97d4f5">gvt.c</a>
 </li>
@@ -234,11 +247,17 @@ $(document).ready(function(){initNavTree('globals_l.html','');});
 : <a class="el" href="thread_8c.html#afdb3c939f8808eacc8b06ac18e06e6c4">thread.c</a>
 , <a class="el" href="thread_8h.html#afdb3c939f8808eacc8b06ac18e06e6c4">thread.h</a>
 </li>
+<li>local_vt_buff
+: <a class="el" href="communication_2gvt_8c.html#a70d5111ea49c9276982ae66d84ef4940">gvt.c</a>
+</li>
 <li>localinit()
 : <a class="el" href="calqueue_8c.html#a7cb34614a7eb1a793956d7cca2b418cb">calqueue.c</a>
 </li>
 <li>LOCK
 : <a class="el" href="atomic_8h.html#a0376b2ead2de10bb7ab6a4d21ec304e9">atomic.h</a>
+</li>
+<li>lock_mpi
+: <a class="el" href="mpi_8h.html#a6432fad2842d3aeb3a8dbdc3bdbd069f">mpi.h</a>
 </li>
 <li>log_delete()
 : <a class="el" href="checkpoints_8c.html#a727e4cd3fa1d7b332b9f212733eec8d3">checkpoints.c</a>
@@ -260,14 +279,26 @@ $(document).ready(function(){initNavTree('globals_l.html','');});
 : <a class="el" href="state_8c.html#a29fbf84fed206d7f721cd03b74d082cd">state.c</a>
 , <a class="el" href="state_8h.html#affa280b9d6f43896c9db64f0e32b2f3d">state.h</a>
 </li>
+<li>long_jmp
+: <a class="el" href="x86_2jmp_8h.html#a932eb25d1cb178ce109c7d35b781878f">jmp.h</a>
+</li>
 <li>lp_alloc_deschedule()
-: <a class="el" href="ecs_8h.html#a93b282f8af3c72bdbd5d0533a4cc2355">ecs.h</a>
+: <a class="el" href="ecs_8c.html#a93b282f8af3c72bdbd5d0533a4cc2355">ecs.c</a>
+, <a class="el" href="ecs_8h.html#a93b282f8af3c72bdbd5d0533a4cc2355">ecs.h</a>
 </li>
 <li>lp_alloc_schedule()
-: <a class="el" href="ecs_8h.html#af96855eb85637b829d7d3aa20f97ad3c">ecs.h</a>
+: <a class="el" href="ecs_8c.html#af96855eb85637b829d7d3aa20f97ad3c">ecs.c</a>
+, <a class="el" href="ecs_8h.html#af96855eb85637b829d7d3aa20f97ad3c">ecs.h</a>
+</li>
+<li>lp_alloc_thread_fini()
+: <a class="el" href="ecs_8c.html#a4582ea0af9bdb551552226296569effa">ecs.c</a>
 </li>
 <li>lp_alloc_thread_init()
-: <a class="el" href="ecs_8h.html#a13bad948057bc0998099c1ef6ddaf46c">ecs.h</a>
+: <a class="el" href="ecs_8c.html#a13bad948057bc0998099c1ef6ddaf46c">ecs.c</a>
+, <a class="el" href="ecs_8h.html#a13bad948057bc0998099c1ef6ddaf46c">ecs.h</a>
+</li>
+<li>LP_context_t
+: <a class="el" href="ult_8h.html#a8be83784e5f09e3eec93d340ea1c6af2">ult.h</a>
 </li>
 <li>lp_cost
 : <a class="el" href="binding_8c.html#a3369af9193e1547ffec0469c1c9ec378">binding.c</a>
@@ -285,8 +316,11 @@ $(document).ready(function(){initNavTree('globals_l.html','');});
 : <a class="el" href="binding_8c.html#a7356539bd24b02d48f6ac1d7e37a8eb4">binding.c</a>
 </li>
 <li>LP_main_loop()
-: <a class="el" href="scheduler_8c.html#a1b1b085c6b05a9d202a1629dcd71cffe">scheduler.c</a>
-, <a class="el" href="scheduler_8h.html#a1b1b085c6b05a9d202a1629dcd71cffe">scheduler.h</a>
+: <a class="el" href="scheduler_8h.html#a1b1b085c6b05a9d202a1629dcd71cffe">scheduler.h</a>
+, <a class="el" href="scheduler_8c.html#a1b1b085c6b05a9d202a1629dcd71cffe">scheduler.c</a>
+</li>
+<li>lp_memory_ioctl_info
+: <a class="el" href="ecs_8c.html#a16a835abb90f21eb8c5bbb79a6b33717">ecs.c</a>
 </li>
 <li>LP_PREALLOCATION_INITIAL_ADDRESS
 : <a class="el" href="dymelor_8h.html#acedb816c002a9b5b27d493de1b451cc8">dymelor.h</a>
@@ -334,8 +368,8 @@ $(document).ready(function(){initNavTree('globals_l.html','');});
 : <a class="el" href="binding_8c.html#ab69384062882e0ac864d499d0e8eec14">binding.c</a>
 </li>
 <li>lps_blocks
-: <a class="el" href="process_8c.html#a94aee9d39d49e56374a34eb9c162ed92">process.c</a>
-, <a class="el" href="process_8h.html#a94aee9d39d49e56374a34eb9c162ed92">process.h</a>
+: <a class="el" href="process_8h.html#a94aee9d39d49e56374a34eb9c162ed92">process.h</a>
+, <a class="el" href="process_8c.html#a94aee9d39d49e56374a34eb9c162ed92">process.c</a>
 </li>
 <li>lps_bound_blocks
 : <a class="el" href="process_8h.html#a234aca872959459fd600c804f8a15807">process.h</a>

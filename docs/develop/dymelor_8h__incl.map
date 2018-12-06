@@ -1,10 +1,10 @@
 <map id="/home/travis/build/HPDCS/ROOT&#45;Sim/src/mm/dymelor.h" name="/home/travis/build/HPDCS/ROOT&#45;Sim/src/mm/dymelor.h">
-<area shape="rect" id="node4" href="$core_8h.html" title="This header defines all the shared symbols which are needed by different subsystems. " alt="" coords="394,184,489,211"/>
-<area shape="rect" id="node17" href="$bitmap_8h.html" title="This header implements a minimal bitmap data type. " alt="" coords="480,109,627,136"/>
-<area shape="rect" id="node19" href="$state_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="306,109,404,136"/>
-<area shape="rect" id="node20" href="$timer_8h.html" title="This header defines the timers which the simulator uses to monitor its internal behaviour. " alt="" coords="914,109,1012,136"/>
-<area shape="rect" id="node5" href="$ROOT-Sim_8h.html" title="This header defines all the symbols which are needed to develop a Model to be simulated on top of ROO..." alt="" coords="306,259,404,285"/>
-<area shape="rect" id="node14" href="$numerical_8h.html" title="This header is used to define symbols which must be accessible by the simulator but not by the applic..." alt="" coords="167,259,282,285"/>
-<area shape="rect" id="node15" href="$thread_8h.html" title="This module implements Kernel Level Thread supports. " alt="" coords="530,259,638,285"/>
-<area shape="rect" id="node16" href="$atomic_8h.html" title="This module implements atomic and non&#45;blocking operations used within ROOT&#45;Sim to coordinate threads ..." alt="" coords="577,333,688,360"/>
+<area shape="rect" id="node4" href="$core_8h.html" title="Core ROOT&#45;Sim functionalities. " alt="" coords="428,184,523,211"/>
+<area shape="rect" id="node20" href="$bitmap_8h.html" title="Bitmap data type. " alt="" coords="558,109,705,136"/>
+<area shape="rect" id="node22" href="$state_8h.html" title="LP state management. " alt="" coords="328,109,425,136"/>
+<area shape="rect" id="node23" href="$timer_8h.html" title="Timers. " alt="" coords="837,109,935,136"/>
+<area shape="rect" id="node5" href="$ROOT-Sim_8h.html" title="ROOT&#45;Sim header for model development. " alt="" coords="175,259,274,285"/>
+<area shape="rect" id="node14" href="$numerical_8h.html" title="Numerical Library. " alt="" coords="298,259,413,285"/>
+<area shape="rect" id="node15" href="$thread_8h.html" title="Generic thread management facilities. " alt="" coords="781,259,889,285"/>
+<area shape="rect" id="node16" href="$atomic_8h.html" title="Atomic operations. " alt="" coords="701,333,812,360"/>
 </map>

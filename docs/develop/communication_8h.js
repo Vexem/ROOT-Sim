@@ -1,7 +1,6 @@
 var communication_8h =
 [
     [ "_outgoing_t", "struct__outgoing__t.html", "struct__outgoing__t" ],
-    [ "_COMMUNICATION_H_", "communication_8h.html#aa1558c5e9ee2da57f9c777af62cfa736", null ],
     [ "INIT_OUTGOING_MSG", "communication_8h.html#a24b4d86fc2ce94ddf7a41b1097cf6bdb", null ],
     [ "is_control_msg", "communication_8h.html#af684826e2bff53050734cd0006fbe7dd", null ],
     [ "MSG_COMPUTE_GVT", "communication_8h.html#a9827875d352452f5de77751700a57559", null ],

@@ -1,3 +1,6 @@
 <map id="__helper_create_thread" name="__helper_create_thread">
-<area shape="rect" id="node2" href="$atomic_8h.html#a710db68e3b3e156fe414d7745c54ccd9" title="iCAS" alt="" coords="227,5,279,32"/>
+<area shape="rect" id="node2" href="$atomic_8h.html#a710db68e3b3e156fe414d7745c54ccd9" title="iCAS" alt="" coords="246,5,298,32"/>
+<area shape="rect" id="node3" href="$thread_8h.html#a170621cccd6340430706508452359dd5" title="set_affinity" alt="" coords="227,56,317,83"/>
+<area shape="rect" id="node4" href="$dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a" title="rsfree" alt="" coords="243,107,301,133"/>
+<area shape="rect" id="node5" href="$platform_8c.html#ae2af2cd130d16958394ae21e9d13035f" title="__real_free" alt="" coords="365,107,457,133"/>
 </map>

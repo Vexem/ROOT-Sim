@@ -1,19 +1,21 @@
 <map id="/home/travis/build/HPDCS/ROOT&#45;Sim/src/mm/segment.c" name="/home/travis/build/HPDCS/ROOT&#45;Sim/src/mm/segment.c">
-<area shape="rect" id="node6" href="$mm_8h.html" title="Memory Manager main header. " alt="" coords="468,199,559,225"/>
-<area shape="rect" id="node30" href="$ecs_8h.html" title="Event Cross State Synchronization. This module implements the userspace handler of the artificially i..." alt="" coords="1294,199,1381,225"/>
-<area shape="rect" id="node31" href="$cross__state__manager_8h.html" title="This is the main header for the Linux Kernel Module which implements per&#45;kernel&#45;thread different page..." alt="" coords="1405,184,1571,240"/>
-<area shape="rect" id="node33" href="$process_8h.html" title="This header defines a LP control block, keeping information about both simulation state and execution..." alt="" coords="1005,109,1155,136"/>
-<area shape="rect" id="node10" href="$core_8h.html" title="This header defines all the shared symbols which are needed by different subsystems. " alt="" coords="866,437,961,464"/>
-<area shape="rect" id="node23" href="$atomic_8h.html" title="This module implements atomic and non&#45;blocking operations used within ROOT&#45;Sim to coordinate threads ..." alt="" coords="299,587,410,613"/>
-<area shape="rect" id="node24" href="$dymelor_8h.html" title="This is the Memory Management Subsystem main header file. " alt="" coords="504,288,619,315"/>
-<area shape="rect" id="node11" href="$ROOT-Sim_8h.html" title="This header defines all the symbols which are needed to develop a Model to be simulated on top of ROO..." alt="" coords="1025,512,1124,539"/>
-<area shape="rect" id="node21" href="$numerical_8h.html" title="This header is used to define symbols which must be accessible by the simulator but not by the applic..." alt="" coords="1199,512,1313,539"/>
-<area shape="rect" id="node22" href="$thread_8h.html" title="This module implements Kernel Level Thread supports. " alt="" coords="586,512,694,539"/>
-<area shape="rect" id="node25" href="$bitmap_8h.html" title="This header implements a minimal bitmap data type. " alt="" coords="555,363,701,389"/>
-<area shape="rect" id="node27" href="$state_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="1185,363,1282,389"/>
-<area shape="rect" id="node28" href="$timer_8h.html" title="This header defines the timers which the simulator uses to monitor its internal behaviour. " alt="" coords="168,363,267,389"/>
-<area shape="rect" id="node34" href="$list_8h.html" title="This header defines macros for accessing the general&#45;purpose list implementation used in the simulato..." alt="" coords="147,512,267,539"/>
-<area shape="rect" id="node37" href="$msgchannel_8h.html" title="This module implements an (M, 1) channel to transfer message pointers. " alt="" coords="929,363,1109,389"/>
-<area shape="rect" id="node38" href="$ult_8h.html" title="The User&#45;Level Thread module allows the creation/scheduling of a user&#45;level thread in an architecture..." alt="" coords="1085,288,1168,315"/>
-<area shape="rect" id="node39" href="$communication_8h.html" title="This is the main header file, containing all data structures and defines used by the communication su..." alt="" coords="775,199,1011,225"/>
+<area shape="rect" id="node6" href="$mm_8h.html" title="Memory Manager main header. " alt="" coords="353,199,443,225"/>
+<area shape="rect" id="node32" href="$ecs_8h.html" title="Event &amp; Cross State Synchornization. " alt="" coords="471,199,557,225"/>
+<area shape="rect" id="node33" href="$cross__state__manager_8h.html" title="Per&#45;thread page table. " alt="" coords="582,184,747,240"/>
+<area shape="rect" id="node35" href="$process_8h.html" title="LP control blocks. " alt="" coords="837,109,988,136"/>
+<area shape="rect" id="node10" href="$core_8h.html" title="Core ROOT&#45;Sim functionalities. " alt="" coords="696,437,791,464"/>
+<area shape="rect" id="node23" href="$atomic_8h.html" title="Atomic operations. " alt="" coords="533,587,644,613"/>
+<area shape="rect" id="node26" href="$dymelor_8h.html" title="Dynamic Memory Logger and Restorer (DyMeLoR) " alt="" coords="338,288,453,315"/>
+<area shape="rect" id="node11" href="$ROOT-Sim_8h.html" title="ROOT&#45;Sim header for model development. " alt="" coords="881,512,979,539"/>
+<area shape="rect" id="node21" href="$numerical_8h.html" title="Numerical Library. " alt="" coords="1003,512,1118,539"/>
+<area shape="rect" id="node22" href="$thread_8h.html" title="Generic thread management facilities. " alt="" coords="275,512,383,539"/>
+<area shape="rect" id="node27" href="$bitmap_8h.html" title="Bitmap data type. " alt="" coords="381,363,527,389"/>
+<area shape="rect" id="node29" href="$state_8h.html" title="LP state management. " alt="" coords="1013,363,1111,389"/>
+<area shape="rect" id="node30" href="$timer_8h.html" title="Timers. " alt="" coords="157,363,255,389"/>
+<area shape="rect" id="node36" href="$list_8h.html" title="Generic Lists. " alt="" coords="1406,512,1526,539"/>
+<area shape="rect" id="node39" href="$msgchannel_8h.html" title="A (M, 1) channel for messages. " alt="" coords="823,288,1003,315"/>
+<area shape="rect" id="node40" href="$ult_8h.html" title="User&#45;Level Threads Headers. " alt="" coords="1078,199,1161,225"/>
+<area shape="rect" id="node43" href="$communication_8h.html" title="Communication Routines. " alt="" coords="652,363,888,389"/>
+<area shape="rect" id="node41" href="$jmp_8h.html" title="Architecture&#45;independent ULT header. " alt="" coords="1165,288,1255,315"/>
+<area shape="rect" id="node42" href="$x86_2jmp_8h.html" title="x86 ULT support header " alt="" coords="1186,363,1303,389"/>
 </map>

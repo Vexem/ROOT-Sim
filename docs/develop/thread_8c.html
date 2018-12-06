@@ -23,6 +23,8 @@
   $(document).ready(function() { init_search(); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="flatdoc.css" rel="stylesheet" type="text/css"/>
+<link href="inline-params.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -113,7 +115,7 @@ $(document).ready(function(){initNavTree('thread_8c.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>This module implements a thread barrier.  
+<p>Generic thread management facilities.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdbool.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="thread_8h_source.html">arch/thread.h</a>&gt;</code><br />
@@ -126,25 +128,27 @@ $(document).ready(function(){initNavTree('thread_8c.html','');});
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="thread_8c__incl.png" border="0" usemap="#_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2arch_2thread_8c" alt=""/></div>
 <map name="_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2arch_2thread_8c" id="_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2arch_2thread_8c">
-<area shape="rect" id="node3" href="thread_8h.html" title="This module implements Kernel Level Thread supports. " alt="" coords="381,661,489,688"/>
-<area shape="rect" id="node6" href="init_8h.html" title="This module implements the simulator initialization routines. " alt="" coords="191,109,276,136"/>
-<area shape="rect" id="node21" href="mm_8h.html" title="Memory Manager main header. " alt="" coords="1013,348,1104,375"/>
-<area shape="rect" id="node4" href="atomic_8h.html" title="This module implements atomic and non&#45;blocking operations used within ROOT&#45;Sim to coordinate threads ..." alt="" coords="393,736,503,763"/>
-<area shape="rect" id="node7" href="statistics_8h.html" title="State Management Subsystem. " alt="" coords="313,184,465,211"/>
-<area shape="rect" id="node8" href="process_8h.html" title="This header defines a LP control block, keeping information about both simulation state and execution..." alt="" coords="373,259,523,285"/>
-<area shape="rect" id="node9" href="state_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="565,512,662,539"/>
-<area shape="rect" id="node20" href="numerical_8h.html" title="This header is used to define symbols which must be accessible by the simulator but not by the applic..." alt="" coords="241,661,356,688"/>
-<area shape="rect" id="node30" href="ecs_8h.html" title="Event Cross State Synchronization. This module implements the userspace handler of the artificially i..." alt="" coords="486,348,573,375"/>
-<area shape="rect" id="node31" href="list_8h.html" title="This header defines macros for accessing the general&#45;purpose list implementation used in the simulato..." alt="" coords="97,661,217,688"/>
-<area shape="rect" id="node34" href="msgchannel_8h.html" title="This module implements an (M, 1) channel to transfer message pointers. " alt="" coords="789,512,969,539"/>
-<area shape="rect" id="node35" href="ult_8h.html" title="The User&#45;Level Thread module allows the creation/scheduling of a user&#45;level thread in an architecture..." alt="" coords="839,437,921,464"/>
-<area shape="rect" id="node36" href="communication_8h.html" title="This is the main header file, containing all data structures and defines used by the communication su..." alt="" coords="597,348,833,375"/>
-<area shape="rect" id="node37" href="cross__state__manager_8h.html" title="This is the main header for the Linux Kernel Module which implements per&#45;kernel&#45;thread different page..." alt="" coords="245,333,411,389"/>
-<area shape="rect" id="node10" href="ROOT-Sim_8h.html" title="This header defines all the symbols which are needed to develop a Model to be simulated on top of ROO..." alt="" coords="767,661,865,688"/>
-<area shape="rect" id="node17" href="core_8h.html" title="This header defines all the shared symbols which are needed by different subsystems. " alt="" coords="959,587,1054,613"/>
-<area shape="rect" id="node24" href="dymelor_8h.html" title="This is the Memory Management Subsystem main header file. " alt="" coords="1231,437,1345,464"/>
-<area shape="rect" id="node25" href="bitmap_8h.html" title="This header implements a minimal bitmap data type. " alt="" coords="1145,512,1292,539"/>
-<area shape="rect" id="node27" href="timer_8h.html" title="This header defines the timers which the simulator uses to monitor its internal behaviour. " alt="" coords="1367,512,1465,539"/>
+<area shape="rect" id="node3" href="thread_8h.html" title="Generic thread management facilities. " alt="" coords="249,661,357,688"/>
+<area shape="rect" id="node9" href="init_8h.html" title="Initialization routines. " alt="" coords="236,109,321,136"/>
+<area shape="rect" id="node24" href="mm_8h.html" title="Memory Manager main header. " alt="" coords="867,348,957,375"/>
+<area shape="rect" id="node4" href="atomic_8h.html" title="Atomic operations. " alt="" coords="449,736,559,763"/>
+<area shape="rect" id="node10" href="statistics_8h.html" title="Statistics module. " alt="" coords="347,184,499,211"/>
+<area shape="rect" id="node11" href="process_8h.html" title="LP control blocks. " alt="" coords="407,259,558,285"/>
+<area shape="rect" id="node12" href="state_8h.html" title="LP state management. " alt="" coords="1025,512,1122,539"/>
+<area shape="rect" id="node23" href="numerical_8h.html" title="Numerical Library. " alt="" coords="705,661,820,688"/>
+<area shape="rect" id="node32" href="ecs_8h.html" title="Event &amp; Cross State Synchornization. " alt="" coords="731,348,818,375"/>
+<area shape="rect" id="node33" href="list_8h.html" title="Generic Lists. " alt="" coords="561,661,681,688"/>
+<area shape="rect" id="node36" href="msgchannel_8h.html" title="A (M, 1) channel for messages. " alt="" coords="681,437,861,464"/>
+<area shape="rect" id="node37" href="ult_8h.html" title="User&#45;Level Threads Headers. " alt="" coords="441,348,524,375"/>
+<area shape="rect" id="node40" href="communication_8h.html" title="Communication Routines. " alt="" coords="643,512,879,539"/>
+<area shape="rect" id="node41" href="cross__state__manager_8h.html" title="Per&#45;thread page table. " alt="" coords="195,333,360,389"/>
+<area shape="rect" id="node13" href="ROOT-Sim_8h.html" title="ROOT&#45;Sim header for model development. " alt="" coords="1049,661,1148,688"/>
+<area shape="rect" id="node20" href="core_8h.html" title="Core ROOT&#45;Sim functionalities. " alt="" coords="939,587,1034,613"/>
+<area shape="rect" id="node26" href="dymelor_8h.html" title="Dynamic Memory Logger and Restorer (DyMeLoR) " alt="" coords="1189,437,1304,464"/>
+<area shape="rect" id="node27" href="bitmap_8h.html" title="Bitmap data type. " alt="" coords="1421,512,1568,539"/>
+<area shape="rect" id="node29" href="timer_8h.html" title="Timers. " alt="" coords="1197,512,1296,539"/>
+<area shape="rect" id="node38" href="jmp_8h.html" title="Architecture&#45;independent ULT header. " alt="" coords="363,437,453,464"/>
+<area shape="rect" id="node39" href="x86_2jmp_8h.html" title="x86 ULT support header " alt="" coords="336,512,453,539"/>
 </map>
 </div>
 </div>
@@ -163,7 +167,7 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:aaa70997ae180af9748d3ec1e883c1c62"><td class="memItemLeft" align="right" valign="top">static tid_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thread_8c.html#aaa70997ae180af9748d3ec1e883c1c62">os_tid</a></td></tr>
+<tr class="memitem:aaa70997ae180af9748d3ec1e883c1c62"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="thread_8h.html#a39319c76773bf6617f29aa122c581cdb">tid_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thread_8c.html#aaa70997ae180af9748d3ec1e883c1c62">os_tid</a></td></tr>
 <tr class="separator:aaa70997ae180af9748d3ec1e883c1c62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9389cf0b133136a0da3eab5ab67a3ae"><td class="memItemLeft" align="right" valign="top">__thread unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thread_8c.html#af9389cf0b133136a0da3eab5ab67a3ae">tid</a></td></tr>
 <tr class="separator:af9389cf0b133136a0da3eab5ab67a3ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -173,8 +177,10 @@ Variables</h2></td></tr>
 <tr class="separator:aae0a4ad209cdd8d95c909638e42cdb07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This module implements a thread barrier. </p>
-<p>Copyright (C) 2008-2018 HPDCS Group <a href="http://www.dis.uniroma1.it/~hpdcs">http://www.dis.uniroma1.it/~hpdcs</a></p>
+<div class="textblock"><p>Generic thread management facilities. </p>
+<p>This module provides generic facilities for thread management. In particular, helper functions to startup worker threads are exposed, and a function to synchronize multiple threads on a software barrier.</p>
+<p>The software barrier also offers a leader election facility, so that once all threads are synchronized on the barrier, the function returns true to only one of them.</p>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (C) 2008-2018 HPDCS Group <a href="https://hpdcs.github.io">https://hpdcs.github.io</a></dd></dl>
 <p>This file is part of ROOT-Sim (ROme OpTimistic Simulator).</p>
 <p>ROOT-Sim is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; only version 3 of the License applies.</p>
 <p>ROOT-Sim is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
@@ -205,7 +211,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>This helper function is the actual entry point for every thread created using the provided internal services. The goal of this function is to silently set the new thread's tid so that any place in the simulator will find that already set. Additionally, when the created thread returns, it frees the memory used to maintain the real entry point and the pointer to its arguments.</p>
+<p>This helper function is the actual entry point for every thread created using the provided internal services. The goal of this function is to start a race on the thread_counter shared variable using a CAS. This race across all the threads is used to determine unique identifiers across all the worker threads. This is done in this helper function to silently set the new thread's tid before any simulation-specific function is ever called, so that any place in the simulator will find that already set. Additionally, when the created thread returns, it frees the memory used to maintain the real entry point and the pointer to its arguments.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">arg</td><td>A pointer to an internally defined structure keeping the real thread's entry point and its arguments</td></tr>
@@ -214,7 +220,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>This function always returns NULL </dd></dl>
 
-<p>Definition at line <a class="el" href="thread_8c_source.html#l00049">49</a> of file <a class="el" href="thread_8c_source.html">thread.c</a>.</p>
+<p>Definition at line <a class="el" href="thread_8c_source.html#l00103">103</a> of file <a class="el" href="thread_8c_source.html">thread.c</a>.</p>
 
 <p><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -223,7 +229,10 @@ Variables</h2></td></tr>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="thread_8c_a9a978a7c6a81cdde2633f5ef7e01b7f4_cgraph.png" border="0" usemap="#thread_8c_a9a978a7c6a81cdde2633f5ef7e01b7f4_cgraph" alt=""/></div>
 <map name="thread_8c_a9a978a7c6a81cdde2633f5ef7e01b7f4_cgraph" id="thread_8c_a9a978a7c6a81cdde2633f5ef7e01b7f4_cgraph">
-<area shape="rect" id="node2" href="atomic_8h.html#a710db68e3b3e156fe414d7745c54ccd9" title="iCAS" alt="" coords="227,5,279,32"/>
+<area shape="rect" id="node2" href="atomic_8h.html#a710db68e3b3e156fe414d7745c54ccd9" title="iCAS" alt="" coords="246,5,298,32"/>
+<area shape="rect" id="node3" href="thread_8h.html#a170621cccd6340430706508452359dd5" title="set_affinity" alt="" coords="227,56,317,83"/>
+<area shape="rect" id="node4" href="dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a" title="rsfree" alt="" coords="243,107,301,133"/>
+<area shape="rect" id="node5" href="platform_8c.html#ae2af2cd130d16958394ae21e9d13035f" title="__real_free" alt="" coords="365,107,457,133"/>
 </map>
 </div>
 </p>
@@ -267,7 +276,6 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>This function initializes a thread barrier. If more than the hereby specified number of threads try to synchronize on the barrier, the behaviour is undefined.</p>
-<dl class="section author"><dt>Author</dt><dd>Alessandro Pellegrini</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">b</td><td>the thread barrier to initialize </td></tr>
@@ -276,7 +284,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="thread_8c_source.html#l00126">126</a> of file <a class="el" href="thread_8c_source.html">thread.c</a>.</p>
+<p>Definition at line <a class="el" href="thread_8c_source.html#l00180">180</a> of file <a class="el" href="thread_8c_source.html">thread.c</a>.</p>
 
 <p><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -323,8 +331,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This function creates n threads, all having the same entry point and the same arguments. It creates a new thread starting from the __helper_create_thread function which silently sets the new thread's tid. Note that the arguments passed to __helper_create_thread are malloc'd here, and free'd there. This means that if start_routine does not return, there will be a memory leak. Additionally, note that arguments pointer by arg are not actually copied here, so all the created threads will share them in memory. Changing passed arguments from one of the newly created threads will result in all the threads seeing the change.</p>
-<dl class="section author"><dt>Author</dt><dd>Alessandro Pellegrini</dd></dl>
+<p>This function creates n threads, all having the same entry point and the same arguments. It creates a new thread starting from the __helper_create_thread function which silently sets the new thread's tid. Note that the arguments passed to __helper_create_thread are malloc'd here, and free'd there. This means that if start_routine does not return, there is a memory leak. Additionally, note that we don't make a copy of the arguments pointed by arg, so all the created threads will share them in memory. Changing passed arguments from one of the newly created threads will result in all the threads seeing the change.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">n</td><td>The number of threads which should be created </td></tr>
@@ -334,7 +341,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="thread_8c_source.html#l00098">98</a> of file <a class="el" href="thread_8c_source.html">thread.c</a>.</p>
+<p>Definition at line <a class="el" href="thread_8c_source.html#l00155">155</a> of file <a class="el" href="thread_8c_source.html">thread.c</a>.</p>
 
 <p><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -343,10 +350,13 @@ Variables</h2></td></tr>
 <div id="dynsection-4-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="thread_8c_a7248efe5c9432ead45b781036c5d7394_cgraph.png" border="0" usemap="#thread_8c_a7248efe5c9432ead45b781036c5d7394_cgraph" alt=""/></div>
 <map name="thread_8c_a7248efe5c9432ead45b781036c5d7394_cgraph" id="thread_8c_a7248efe5c9432ead45b781036c5d7394_cgraph">
-<area shape="rect" id="node2" href="dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="227,5,290,32"/>
-<area shape="rect" id="node4" href="thread_8c.html#a9a978a7c6a81cdde2633f5ef7e01b7f4" title="__helper_create_thread" alt="" coords="172,56,345,83"/>
+<area shape="rect" id="node2" href="dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="227,19,290,45"/>
+<area shape="rect" id="node4" href="thread_8c.html#a9a978a7c6a81cdde2633f5ef7e01b7f4" title="__helper_create_thread" alt="" coords="172,95,345,121"/>
 <area shape="rect" id="node3" href="platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="393,5,503,32"/>
 <area shape="rect" id="node5" href="atomic_8h.html#a710db68e3b3e156fe414d7745c54ccd9" title="iCAS" alt="" coords="422,56,474,83"/>
+<area shape="rect" id="node6" href="thread_8h.html#a170621cccd6340430706508452359dd5" title="set_affinity" alt="" coords="403,107,493,133"/>
+<area shape="rect" id="node7" href="dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a" title="rsfree" alt="" coords="419,157,477,184"/>
+<area shape="rect" id="node8" href="platform_8c.html#ae2af2cd130d16958394ae21e9d13035f" title="__real_free" alt="" coords="551,157,643,184"/>
 </map>
 </div>
 </p>
@@ -379,16 +389,15 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>This function synchronizes all the threads. After a thread leaves this function, it is guaranteed that no other thread has (at least) not entered the function, therefore allowing to create a separation between the execution in portions of the code. If more threads than specified in the initialization of the barrier try to synchronize on it, the behaviour is undefined. The function additionally returns 'true' only to one of the calling threads, allowing the execution of portions of code in isolated mode after the barrier itself. This is like a leader election for free.</p>
-<dl class="section author"><dt>Author</dt><dd>Alessandro Pellegrini</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">b</td><td>the thread barrier to synchronize on</td></tr>
+    <tr><td class="paramname">b</td><td>A pointer to the thread barrier to synchronize on</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true to only one of the threads which synchronized on the barrier </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>false to all threads, except for one which is elected as the leader </dd></dl>
 
-<p>Definition at line <a class="el" href="thread_8c_source.html#l00148">148</a> of file <a class="el" href="thread_8c_source.html">thread.c</a>.</p>
+<p>Definition at line <a class="el" href="thread_8c_source.html#l00200">200</a> of file <a class="el" href="thread_8c_source.html">thread.c</a>.</p>
 
 <p><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -411,17 +420,18 @@ Variables</h2></td></tr>
 <div id="dynsection-7-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="thread_8c_a9f5993fbefc809165c4b74bb8da463d0_icgraph.png" border="0" usemap="#thread_8c_a9f5993fbefc809165c4b74bb8da463d0_icgraph" alt=""/></div>
 <map name="thread_8c_a9f5993fbefc809165c4b74bb8da463d0_icgraph" id="thread_8c_a9f5993fbefc809165c4b74bb8da463d0_icgraph">
-<area shape="rect" id="node2" href="core_8h.html#a8f346536ccfbe77b78ed577674beb6cf" title="simulation_shutdown" alt="" coords="337,39,493,65"/>
-<area shape="rect" id="node7" href="main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="548,119,709,145"/>
-<area shape="rect" id="node10" href="binding_8h.html#ae26b2a8055156e8648f8ad806f5fa5b0" title="rebind_LPs" alt="" coords="179,140,269,167"/>
-<area shape="rect" id="node11" href="scheduler_8h.html#af405fd79c1cd59fccce27658d6e11941" title="initialize_worker_thread" alt="" coords="329,191,500,217"/>
-<area shape="rect" id="node12" href="statistics_8h.html#aeff52bbf045362270639b2baed20762b" title="statistics_stop" alt="" coords="167,39,281,65"/>
-<area shape="rect" id="node3" href="core_8c.html#a9b05d2af2e233e2616633eaa706682ee" title="exit_from_simulation\l_model" alt="" coords="551,53,706,94"/>
-<area shape="rect" id="node9" href="serial_8h.html#aa0dd072d0e792fb9c65220bdddf69a0e" title="serial_simulation" alt="" coords="927,5,1056,32"/>
-<area shape="rect" id="node4" href="core_8h.html#a7fb819521b1ab5fc7644ad216fe7b465" title="base_init" alt="" coords="779,60,857,87"/>
-<area shape="rect" id="node5" href="init_8h.html#a417eb072179d09f441dbae3125049e46" title="SystemInit" alt="" coords="946,60,1037,87"/>
-<area shape="rect" id="node6" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1104,60,1159,87"/>
-<area shape="rect" id="node8" href="main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="757,115,879,141"/>
+<area shape="rect" id="node2" href="mpi_8h.html#a4d5b6bd7866b813152f5ead12012dc46" title="syncronize_all" alt="" coords="359,107,470,133"/>
+<area shape="rect" id="node3" href="main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="548,107,709,133"/>
+<area shape="rect" id="node6" href="core_8h.html#a8f346536ccfbe77b78ed577674beb6cf" title="simulation_shutdown" alt="" coords="337,208,493,235"/>
+<area shape="rect" id="node11" href="binding_8h.html#ae26b2a8055156e8648f8ad806f5fa5b0" title="rebind_LPs" alt="" coords="179,56,269,83"/>
+<area shape="rect" id="node12" href="scheduler_8h.html#af405fd79c1cd59fccce27658d6e11941" title="initialize_worker_thread" alt="" coords="329,5,500,32"/>
+<area shape="rect" id="node13" href="statistics_8h.html#aeff52bbf045362270639b2baed20762b" title="statistics_stop" alt="" coords="167,259,281,285"/>
+<area shape="rect" id="node4" href="main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="757,107,879,133"/>
+<area shape="rect" id="node5" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1104,208,1159,235"/>
+<area shape="rect" id="node7" href="core_8c.html#a9b05d2af2e233e2616633eaa706682ee" title="exit_from_simulation\l_model" alt="" coords="551,198,706,239"/>
+<area shape="rect" id="node10" href="serial_8h.html#aa0dd072d0e792fb9c65220bdddf69a0e" title="serial_simulation" alt="" coords="927,263,1056,289"/>
+<area shape="rect" id="node8" href="core_8h.html#a7fb819521b1ab5fc7644ad216fe7b465" title="base_init" alt="" coords="779,208,857,235"/>
+<area shape="rect" id="node9" href="init_8h.html#a417eb072179d09f441dbae3125049e46" title="SystemInit" alt="" coords="946,208,1037,235"/>
 </map>
 </div>
 </p>
@@ -438,8 +448,9 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>The "local" id of the thread. This is a per-instance value which uniquely identifies a thread on a compute node.</p>
 
-<p>Definition at line <a class="el" href="thread_8c_source.html#l00034">34</a> of file <a class="el" href="thread_8c_source.html">thread.c</a>.</p>
+<p>Definition at line <a class="el" href="thread_8c_source.html#l00072">72</a> of file <a class="el" href="thread_8c_source.html">thread.c</a>.</p>
 
 </div>
 </div>
@@ -451,7 +462,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">tid_t os_tid</td>
+          <td class="memname"><a class="el" href="thread_8h.html#a39319c76773bf6617f29aa122c581cdb">tid_t</a> os_tid</td>
         </tr>
       </table>
   </td>
@@ -460,8 +471,9 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>An OS-level thread id. We never do any join on worker threads, so there is no need to keep track of system ids. Internally, each thread is given a unique id in [0, n_thr], which is used to know who is who. This variable is used only when spawning threads, because the system wants us to know who is what thread from its point of view, although we don't care at all. </p>
 
-<p>Definition at line <a class="el" href="thread_8c_source.html#l00031">31</a> of file <a class="el" href="thread_8c_source.html">thread.c</a>.</p>
+<p>Definition at line <a class="el" href="thread_8c_source.html#l00049">49</a> of file <a class="el" href="thread_8c_source.html">thread.c</a>.</p>
 
 </div>
 </div>
@@ -482,8 +494,9 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>The thread counter is a global variable which is incremented atomically to assign a unique thread ID. Each spawned thread will compete using a CAS to update this counter. Once a thread succeeds, it can use the value it was keeping as its private local id. This variable is used only as a synchronization point upon initialization, later no one cares about its value. </p>
 
-<p>Definition at line <a class="el" href="thread_8c_source.html#l00036">36</a> of file <a class="el" href="thread_8c_source.html">thread.c</a>.</p>
+<p>Definition at line <a class="el" href="thread_8c_source.html#l00083">83</a> of file <a class="el" href="thread_8c_source.html">thread.c</a>.</p>
 
 </div>
 </div>
@@ -496,8 +509,9 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>The id of the thread.</p>
 
-<p>Definition at line <a class="el" href="thread_8c_source.html#l00033">33</a> of file <a class="el" href="thread_8c_source.html">thread.c</a>.</p>
+<p>Definition at line <a class="el" href="thread_8c_source.html#l00060">60</a> of file <a class="el" href="thread_8c_source.html">thread.c</a>.</p>
 
 </div>
 </div>

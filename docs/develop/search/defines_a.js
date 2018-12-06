@@ -18,6 +18,8 @@ var searchData=
   ['list_5ftrunc',['list_trunc',['../list_8h.html#aebe95d4188619bb0ef2044409c31c0e4',1,'list.h']]],
   ['little_5fsize',['LITTLE_SIZE',['../dymelor_8h.html#a67c24404b157cef24c7ae13801d908d6',1,'dymelor.h']]],
   ['lock',['LOCK',['../atomic_8h.html#a0376b2ead2de10bb7ab6a4d21ec304e9',1,'atomic.h']]],
+  ['lock_5fmpi',['lock_mpi',['../mpi_8h.html#a6432fad2842d3aeb3a8dbdc3bdbd069f',1,'mpi.h']]],
+  ['long_5fjmp',['long_jmp',['../x86_2jmp_8h.html#a932eb25d1cb178ce109c7d35b781878f',1,'jmp.h']]],
   ['lp_5fpreallocation_5finitial_5faddress',['LP_PREALLOCATION_INITIAL_ADDRESS',['../dymelor_8h.html#acedb816c002a9b5b27d493de1b451cc8',1,'dymelor.h']]],
   ['lp_5fstack_5fsize',['LP_STACK_SIZE',['../process_8h.html#a49b86a948d5bcaa4b10e093ce5f728d1',1,'process.h']]],
   ['lp_5fstate_5fready',['LP_STATE_READY',['../process_8h.html#aac1420dd29bab87792394df406c8be4e',1,'process.h']]],

@@ -23,6 +23,8 @@
   $(document).ready(function() { init_search(); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="flatdoc.css" rel="stylesheet" type="text/css"/>
+<link href="inline-params.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -112,10 +114,10 @@ $(document).ready(function(){initNavTree('memusage_8c.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>This module provides system-dependend functions to retrieve the current/peak memory usage. This is used for statistics. The original implementation is from David Robert Nadeau, which released its code under the Creative Commons Attribution 3.0 Unported License ( <a href="http://creativecommons.org/licenses/by/3.0/deed.en_US">http://creativecommons.org/licenses/by/3.0/deed.en_US</a> )  
+<p>Memory usage module.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;<a class="el" href="dymelor_8h_source.html">mm/dymelor.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="memusage_8h_source.html">arch/memusage.h</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="memusage_8h_source.html">arch/memusage.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="dymelor_8h_source.html">mm/dymelor.h</a>&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for memusage.c:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -123,16 +125,16 @@ $(document).ready(function(){initNavTree('memusage_8c.html','');});
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="memusage_8c__incl.png" border="0" usemap="#_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2arch_2memusage_8c" alt=""/></div>
 <map name="_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2arch_2memusage_8c" id="_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2arch_2memusage_8c">
-<area shape="rect" id="node2" href="dymelor_8h.html" title="This is the Memory Management Subsystem main header file. " alt="" coords="475,109,590,136"/>
-<area shape="rect" id="node24" href="memusage_8h.html" title="This module provides system&#45;dependend functions to retrieve the current/peak memory usage..." alt="" coords="145,109,283,136"/>
-<area shape="rect" id="node5" href="core_8h.html" title="This header defines all the shared symbols which are needed by different subsystems. " alt="" coords="485,259,580,285"/>
-<area shape="rect" id="node18" href="bitmap_8h.html" title="This header implements a minimal bitmap data type. " alt="" coords="571,184,718,211"/>
-<area shape="rect" id="node20" href="state_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="359,184,456,211"/>
-<area shape="rect" id="node21" href="timer_8h.html" title="This header defines the timers which the simulator uses to monitor its internal behaviour. " alt="" coords="843,184,942,211"/>
-<area shape="rect" id="node6" href="ROOT-Sim_8h.html" title="This header defines all the symbols which are needed to develop a Model to be simulated on top of ROO..." alt="" coords="281,333,379,360"/>
-<area shape="rect" id="node15" href="numerical_8h.html" title="This header is used to define symbols which must be accessible by the simulator but not by the applic..." alt="" coords="142,333,257,360"/>
-<area shape="rect" id="node16" href="thread_8h.html" title="This module implements Kernel Level Thread supports. " alt="" coords="609,333,717,360"/>
-<area shape="rect" id="node17" href="atomic_8h.html" title="This module implements atomic and non&#45;blocking operations used within ROOT&#45;Sim to coordinate threads ..." alt="" coords="611,408,721,435"/>
+<area shape="rect" id="node2" href="memusage_8h.html" title="Memory usage module header. " alt="" coords="1092,109,1231,136"/>
+<area shape="rect" id="node4" href="dymelor_8h.html" title="Dynamic Memory Logger and Restorer (DyMeLoR) " alt="" coords="924,109,1039,136"/>
+<area shape="rect" id="node6" href="core_8h.html" title="Core ROOT&#45;Sim functionalities. " alt="" coords="646,259,741,285"/>
+<area shape="rect" id="node22" href="bitmap_8h.html" title="Bitmap data type. " alt="" coords="519,184,665,211"/>
+<area shape="rect" id="node24" href="state_8h.html" title="LP state management. " alt="" coords="765,184,862,211"/>
+<area shape="rect" id="node25" href="timer_8h.html" title="Timers. " alt="" coords="932,184,1031,211"/>
+<area shape="rect" id="node7" href="ROOT-Sim_8h.html" title="ROOT&#45;Sim header for model development. " alt="" coords="763,333,861,360"/>
+<area shape="rect" id="node16" href="numerical_8h.html" title="Numerical Library. " alt="" coords="885,333,1000,360"/>
+<area shape="rect" id="node17" href="thread_8h.html" title="Generic thread management facilities. " alt="" coords="277,333,385,360"/>
+<area shape="rect" id="node18" href="atomic_8h.html" title="Atomic operations. " alt="" coords="230,408,341,435"/>
 </map>
 </div>
 </div>
@@ -146,8 +148,9 @@ Functions</h2></td></tr>
 <tr class="separator:a8a5c7f9731dfe1f991cdaa336934cdc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This module provides system-dependend functions to retrieve the current/peak memory usage. This is used for statistics. The original implementation is from David Robert Nadeau, which released its code under the Creative Commons Attribution 3.0 Unported License ( <a href="http://creativecommons.org/licenses/by/3.0/deed.en_US">http://creativecommons.org/licenses/by/3.0/deed.en_US</a> ) </p>
-<p>Copyright (C) 2008-2018 HPDCS Group <a href="http://www.dis.uniroma1.it/~hpdcs">http://www.dis.uniroma1.it/~hpdcs</a></p>
+<div class="textblock"><p>Memory usage module. </p>
+<p>This module provides system-dependend functions to retrieve the current/peak memory usage. This is used for statistics. The original implementation is from David Robert Nadeau, which released its code under the Creative Commons Attribution 3.0 Unported License ( <a href="http://creativecommons.org/licenses/by/3.0/deed.en_US">http://creativecommons.org/licenses/by/3.0/deed.en_US</a> )</p>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (C) 2008-2018 HPDCS Group <a href="https://hpdcs.github.io">https://hpdcs.github.io</a></dd></dl>
 <p>This file is part of ROOT-Sim (ROme OpTimistic Simulator).</p>
 <p>ROOT-Sim is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; only version 3 of the License applies.</p>
 <p>ROOT-Sim is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
@@ -169,9 +172,10 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the current resident set size (physical memory use) measured in bytes, or zero if the value cannot be determined on this OS. </p>
+<p>This function computes the current resident set size (physical memory use) in an OS-independent way.</p>
+<dl class="section return"><dt>Returns</dt><dd>current resident set measured in bytes, or zero if the value cannot be determined </dd></dl>
 
-<p>Definition at line <a class="el" href="memusage_8c_source.html#l00112">112</a> of file <a class="el" href="memusage_8c_source.html">memusage.c</a>.</p>
+<p>Definition at line <a class="el" href="memusage_8c_source.html#l00119">119</a> of file <a class="el" href="memusage_8c_source.html">memusage.c</a>.</p>
 
 <p><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -206,9 +210,10 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the peak (maximum so far) resident set size (physical memory use) measured in bytes, or zero if the value cannot be determined on this OS. </p>
+<p>This function is used to compute the peak resident set (physical memory usage) computed in an OS-independent way.</p>
+<dl class="section return"><dt>Returns</dt><dd>peak resident set measured in bytes, or zero if the value cannot be determined </dd></dl>
 
-<p>Definition at line <a class="el" href="memusage_8c_source.html#l00066">66</a> of file <a class="el" href="memusage_8c_source.html">memusage.c</a>.</p>
+<p>Definition at line <a class="el" href="memusage_8c_source.html#l00070">70</a> of file <a class="el" href="memusage_8c_source.html">memusage.c</a>.</p>
 
 <p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>

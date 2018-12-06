@@ -2,7 +2,6 @@ var dymelor_8h =
 [
     [ "_malloc_area", "struct__malloc__area.html", "struct__malloc__area" ],
     [ "_malloc_state", "struct__malloc__state.html", "struct__malloc__state" ],
-    [ "_DYMELOR_H", "dymelor_8h.html#aa090bb77457755fc340a1584bd0fec3a", null ],
     [ "CHECK_AREA_LOCK_BIT", "dymelor_8h.html#a627107f52a65aa34c5fc2e98748b278f", null ],
     [ "CHECK_LOG_MODE_BIT", "dymelor_8h.html#a1f5179deb827efa06df5066f8ef779a9", null ],
     [ "CHECK_SIZE", "dymelor_8h.html#ad9a81253c3141a7eba184ea7b3414bd6", null ],

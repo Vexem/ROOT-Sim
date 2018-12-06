@@ -23,6 +23,8 @@
   $(document).ready(function() { init_search(); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="flatdoc.css" rel="stylesheet" type="text/css"/>
+<link href="inline-params.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -113,24 +115,34 @@ $(document).ready(function(){initNavTree('structdisassembly__state.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="x86_8h_source.html">x86.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="disassemble_8h_source.html">disassemble.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for disassembly_state:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="structdisassembly__state__coll__graph.png" border="0" usemap="#disassembly__state_coll__map" alt="Collaboration graph"/></div>
+<map name="disassembly__state_coll__map" id="disassembly__state_coll__map">
+<area shape="rect" id="node2" href="structinsn__info__x86.html" title="insn_info_x86" alt="" coords="22,5,130,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:af0ea91b1d32c468154e87b69ee778768"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="x86_8h.html#a89163aa2fe49907238034e3954daacda">op_size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdisassembly__state.html#af0ea91b1d32c468154e87b69ee778768">opd_size</a></td></tr>
+<tr class="memitem:af0ea91b1d32c468154e87b69ee778768"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="disassemble_8h.html#a89163aa2fe49907238034e3954daacda">op_size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdisassembly__state.html#af0ea91b1d32c468154e87b69ee778768">opd_size</a></td></tr>
 <tr class="separator:af0ea91b1d32c468154e87b69ee778768"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a898ed21585acf738dfefd97922e31bf4"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="x86_8h.html#a89163aa2fe49907238034e3954daacda">op_size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdisassembly__state.html#a898ed21585acf738dfefd97922e31bf4">addr_size</a></td></tr>
+<tr class="memitem:a898ed21585acf738dfefd97922e31bf4"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="disassemble_8h.html#a89163aa2fe49907238034e3954daacda">op_size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdisassembly__state.html#a898ed21585acf738dfefd97922e31bf4">addr_size</a></td></tr>
 <tr class="separator:a898ed21585acf738dfefd97922e31bf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b94efdce0a156c3516f2c24ad42ca08"><td class="memItemLeft" align="right" valign="top">unsigned char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdisassembly__state.html#a8b94efdce0a156c3516f2c24ad42ca08">text</a></td></tr>
-<tr class="separator:a8b94efdce0a156c3516f2c24ad42ca08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6982c24a05f7387c3577273ce663834c"><td class="memItemLeft" align="right" valign="top">unsigned char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdisassembly__state.html#a6982c24a05f7387c3577273ce663834c">text</a></td></tr>
+<tr class="separator:a6982c24a05f7387c3577273ce663834c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ea98ccb6914fc15fa3d8d90eb8b3923"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdisassembly__state.html#a6ea98ccb6914fc15fa3d8d90eb8b3923">pos</a></td></tr>
 <tr class="separator:a6ea98ccb6914fc15fa3d8d90eb8b3923"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88557af0850c66d04f72817fc01b74a4"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdisassembly__state.html#a88557af0850c66d04f72817fc01b74a4">rex</a></td></tr>
 <tr class="separator:a88557af0850c66d04f72817fc01b74a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa91f663da1b9d017f4323591ba2b1318"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdisassembly__state.html#aa91f663da1b9d017f4323591ba2b1318">mode64</a></td></tr>
 <tr class="separator:aa91f663da1b9d017f4323591ba2b1318"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ca941a77867d6a79c689b286747df3c"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdisassembly__state.html#a3ca941a77867d6a79c689b286747df3c">opcode</a> [2]</td></tr>
-<tr class="separator:a3ca941a77867d6a79c689b286747df3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5635e2fc38d488b845013fbb7b9f6aaf"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdisassembly__state.html#a5635e2fc38d488b845013fbb7b9f6aaf">opcode</a> [2]</td></tr>
+<tr class="separator:a5635e2fc38d488b845013fbb7b9f6aaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a401dcaf0c69b67864984b24eaca19e44"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdisassembly__state.html#a401dcaf0c69b67864984b24eaca19e44">modrm</a></td></tr>
 <tr class="separator:a401dcaf0c69b67864984b24eaca19e44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a27c9ef27a802749851253a3be9f124"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdisassembly__state.html#a2a27c9ef27a802749851253a3be9f124">read_modrm</a></td></tr>
@@ -145,12 +157,12 @@ Data Fields</h2></td></tr>
 <tr class="separator:a5608a187e8b9d7bcc826de7ba48e227a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab74b5dbcf22abd1530ea2f2757ecb20d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdisassembly__state.html#ab74b5dbcf22abd1530ea2f2757ecb20d">immed_size</a></td></tr>
 <tr class="separator:ab74b5dbcf22abd1530ea2f2757ecb20d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab41f37ac790c4dfefcd9af55507052f3"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206">addr_method</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdisassembly__state.html#ab41f37ac790c4dfefcd9af55507052f3">addr</a> [3]</td></tr>
-<tr class="separator:ab41f37ac790c4dfefcd9af55507052f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4061e46115fec291612b56fbfd00d9fb"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdisassembly__state.html#a4061e46115fec291612b56fbfd00d9fb">op</a> [3]</td></tr>
-<tr class="separator:a4061e46115fec291612b56fbfd00d9fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adea5633c6d7b28eadcf66bb6163210a6"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdisassembly__state.html#adea5633c6d7b28eadcf66bb6163210a6">prefix</a> [4]</td></tr>
-<tr class="separator:adea5633c6d7b28eadcf66bb6163210a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b25fb1a8812a3adac3c4b2832d899fc"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206">addr_method</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdisassembly__state.html#a5b25fb1a8812a3adac3c4b2832d899fc">addr</a> [3]</td></tr>
+<tr class="separator:a5b25fb1a8812a3adac3c4b2832d899fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd9a2bea03fcaee3170b3eaa8ea5b820"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdisassembly__state.html#afd9a2bea03fcaee3170b3eaa8ea5b820">op</a> [3]</td></tr>
+<tr class="separator:afd9a2bea03fcaee3170b3eaa8ea5b820"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae86462fea9e4539260f3706bdd234378"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdisassembly__state.html#ae86462fea9e4539260f3706bdd234378">prefix</a> [4]</td></tr>
+<tr class="separator:ae86462fea9e4539260f3706bdd234378"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e319351ebfc5b77c533ff7dd589bb96"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdisassembly__state.html#a9e319351ebfc5b77c533ff7dd589bb96">sse_prefix</a></td></tr>
 <tr class="separator:a9e319351ebfc5b77c533ff7dd589bb96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e8179d5a515dee74fe3b47b7f784518"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdisassembly__state.html#a7e8179d5a515dee74fe3b47b7f784518">orig_pos</a></td></tr>
@@ -159,24 +171,24 @@ Data Fields</h2></td></tr>
 <tr class="separator:a533bb92a3ec357b118596fb3fdc3a852"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90490c22643d87e7fc7da2b84d6c32cc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdisassembly__state.html#a90490c22643d87e7fc7da2b84d6c32cc">uses_rip</a></td></tr>
 <tr class="separator:a90490c22643d87e7fc7da2b84d6c32cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd0880acdbc106abac1b646b019efd51"><td class="memItemLeft" align="right" valign="top">insn_info_x86 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdisassembly__state.html#acd0880acdbc106abac1b646b019efd51">instrument</a></td></tr>
-<tr class="separator:acd0880acdbc106abac1b646b019efd51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56ccc7c16980cd861dd71a96af8fbc81"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structinsn__info__x86.html">insn_info_x86</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdisassembly__state.html#a56ccc7c16980cd861dd71a96af8fbc81">instrument</a></td></tr>
+<tr class="separator:a56ccc7c16980cd861dd71a96af8fbc81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="x86_8h_source.html#l00323">323</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
+<p>Definition at line <a class="el" href="disassemble_8h_source.html#l00459">459</a> of file <a class="el" href="disassemble_8h_source.html">disassemble.h</a>.</p>
 </div><h2 class="groupheader">Field Documentation</h2>
-<a class="anchor" id="ab41f37ac790c4dfefcd9af55507052f3"></a>
+<a class="anchor" id="a5b25fb1a8812a3adac3c4b2832d899fc"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206">addr_method</a> disassembly_state::addr[3]</td>
+          <td class="memname">enum <a class="el" href="disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206">addr_method</a> disassembly_state::addr</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="x86_8h_source.html#l00338">338</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
+<p>Definition at line <a class="el" href="disassemble_8h_source.html#l00474">474</a> of file <a class="el" href="disassemble_8h_source.html">disassemble.h</a>.</p>
 
 </div>
 </div>
@@ -185,12 +197,12 @@ Data Fields</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="x86_8h.html#a89163aa2fe49907238034e3954daacda">op_size</a> disassembly_state::addr_size</td>
+          <td class="memname">enum <a class="el" href="disassemble_8h.html#a89163aa2fe49907238034e3954daacda">op_size</a> disassembly_state::addr_size</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="x86_8h_source.html#l00325">325</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
+<p>Definition at line <a class="el" href="disassemble_8h_source.html#l00461">461</a> of file <a class="el" href="disassemble_8h_source.html">disassemble.h</a>.</p>
 
 </div>
 </div>
@@ -204,7 +216,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="x86_8h_source.html#l00334">334</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
+<p>Definition at line <a class="el" href="disassemble_8h_source.html#l00470">470</a> of file <a class="el" href="disassemble_8h_source.html">disassemble.h</a>.</p>
 
 </div>
 </div>
@@ -218,7 +230,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="x86_8h_source.html#l00335">335</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
+<p>Definition at line <a class="el" href="disassemble_8h_source.html#l00471">471</a> of file <a class="el" href="disassemble_8h_source.html">disassemble.h</a>.</p>
 
 </div>
 </div>
@@ -232,7 +244,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="x86_8h_source.html#l00336">336</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
+<p>Definition at line <a class="el" href="disassemble_8h_source.html#l00472">472</a> of file <a class="el" href="disassemble_8h_source.html">disassemble.h</a>.</p>
 
 </div>
 </div>
@@ -246,21 +258,21 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="x86_8h_source.html#l00337">337</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
+<p>Definition at line <a class="el" href="disassemble_8h_source.html#l00473">473</a> of file <a class="el" href="disassemble_8h_source.html">disassemble.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="acd0880acdbc106abac1b646b019efd51"></a>
+<a class="anchor" id="a56ccc7c16980cd861dd71a96af8fbc81"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">insn_info_x86* disassembly_state::instrument</td>
+          <td class="memname"><a class="el" href="structinsn__info__x86.html">insn_info_x86</a> * disassembly_state::instrument</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="x86_8h_source.html#l00348">348</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
+<p>Definition at line <a class="el" href="disassemble_8h_source.html#l00484">484</a> of file <a class="el" href="disassemble_8h_source.html">disassemble.h</a>.</p>
 
 </div>
 </div>
@@ -274,7 +286,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="x86_8h_source.html#l00329">329</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
+<p>Definition at line <a class="el" href="disassemble_8h_source.html#l00465">465</a> of file <a class="el" href="disassemble_8h_source.html">disassemble.h</a>.</p>
 
 </div>
 </div>
@@ -288,35 +300,35 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="x86_8h_source.html#l00331">331</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
+<p>Definition at line <a class="el" href="disassemble_8h_source.html#l00467">467</a> of file <a class="el" href="disassemble_8h_source.html">disassemble.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a4061e46115fec291612b56fbfd00d9fb"></a>
+<a class="anchor" id="afd9a2bea03fcaee3170b3eaa8ea5b820"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a> disassembly_state::op[3]</td>
+          <td class="memname">enum <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a> disassembly_state::op</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="x86_8h_source.html#l00339">339</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
+<p>Definition at line <a class="el" href="disassemble_8h_source.html#l00475">475</a> of file <a class="el" href="disassemble_8h_source.html">disassemble.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a3ca941a77867d6a79c689b286747df3c"></a>
+<a class="anchor" id="a5635e2fc38d488b845013fbb7b9f6aaf"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned char disassembly_state::opcode[2]</td>
+          <td class="memname">unsigned char disassembly_state::opcode</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="x86_8h_source.html#l00330">330</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
+<p>Definition at line <a class="el" href="disassemble_8h_source.html#l00466">466</a> of file <a class="el" href="disassemble_8h_source.html">disassemble.h</a>.</p>
 
 </div>
 </div>
@@ -325,12 +337,12 @@ Data Fields</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="x86_8h.html#a89163aa2fe49907238034e3954daacda">op_size</a> disassembly_state::opd_size</td>
+          <td class="memname">enum <a class="el" href="disassemble_8h.html#a89163aa2fe49907238034e3954daacda">op_size</a> disassembly_state::opd_size</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="x86_8h_source.html#l00324">324</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
+<p>Definition at line <a class="el" href="disassemble_8h_source.html#l00460">460</a> of file <a class="el" href="disassemble_8h_source.html">disassemble.h</a>.</p>
 
 </div>
 </div>
@@ -344,7 +356,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="x86_8h_source.html#l00342">342</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
+<p>Definition at line <a class="el" href="disassemble_8h_source.html#l00478">478</a> of file <a class="el" href="disassemble_8h_source.html">disassemble.h</a>.</p>
 
 </div>
 </div>
@@ -358,21 +370,21 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="x86_8h_source.html#l00327">327</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
+<p>Definition at line <a class="el" href="disassemble_8h_source.html#l00463">463</a> of file <a class="el" href="disassemble_8h_source.html">disassemble.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="adea5633c6d7b28eadcf66bb6163210a6"></a>
+<a class="anchor" id="ae86462fea9e4539260f3706bdd234378"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned char disassembly_state::prefix[4]</td>
+          <td class="memname">unsigned char disassembly_state::prefix</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="x86_8h_source.html#l00340">340</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
+<p>Definition at line <a class="el" href="disassemble_8h_source.html#l00476">476</a> of file <a class="el" href="disassemble_8h_source.html">disassemble.h</a>.</p>
 
 </div>
 </div>
@@ -386,7 +398,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="x86_8h_source.html#l00343">343</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
+<p>Definition at line <a class="el" href="disassemble_8h_source.html#l00479">479</a> of file <a class="el" href="disassemble_8h_source.html">disassemble.h</a>.</p>
 
 </div>
 </div>
@@ -400,7 +412,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="x86_8h_source.html#l00332">332</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
+<p>Definition at line <a class="el" href="disassemble_8h_source.html#l00468">468</a> of file <a class="el" href="disassemble_8h_source.html">disassemble.h</a>.</p>
 
 </div>
 </div>
@@ -414,7 +426,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="x86_8h_source.html#l00328">328</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
+<p>Definition at line <a class="el" href="disassemble_8h_source.html#l00464">464</a> of file <a class="el" href="disassemble_8h_source.html">disassemble.h</a>.</p>
 
 </div>
 </div>
@@ -428,7 +440,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="x86_8h_source.html#l00333">333</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
+<p>Definition at line <a class="el" href="disassemble_8h_source.html#l00469">469</a> of file <a class="el" href="disassemble_8h_source.html">disassemble.h</a>.</p>
 
 </div>
 </div>
@@ -442,21 +454,21 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="x86_8h_source.html#l00341">341</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
+<p>Definition at line <a class="el" href="disassemble_8h_source.html#l00477">477</a> of file <a class="el" href="disassemble_8h_source.html">disassemble.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a8b94efdce0a156c3516f2c24ad42ca08"></a>
+<a class="anchor" id="a6982c24a05f7387c3577273ce663834c"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned char* disassembly_state::text</td>
+          <td class="memname">unsigned char * disassembly_state::text</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="x86_8h_source.html#l00326">326</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
+<p>Definition at line <a class="el" href="disassemble_8h_source.html#l00462">462</a> of file <a class="el" href="disassemble_8h_source.html">disassemble.h</a>.</p>
 
 </div>
 </div>
@@ -470,11 +482,12 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="x86_8h_source.html#l00346">346</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
+<p>Definition at line <a class="el" href="disassemble_8h_source.html#l00482">482</a> of file <a class="el" href="disassemble_8h_source.html">disassemble.h</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+<hr/>The documentation for this struct was generated from the following files:<ul>
+<li>/home/travis/build/HPDCS/ROOT-Sim/src/arch/x86/<a class="el" href="disassemble_8h_source.html">disassemble.h</a></li>
 <li>/home/travis/build/HPDCS/ROOT-Sim/src/arch/<a class="el" href="x86_8h_source.html">x86.h</a></li>
 </ul>
 </div><!-- contents -->

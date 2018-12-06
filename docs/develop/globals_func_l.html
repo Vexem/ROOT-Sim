@@ -23,6 +23,8 @@
   $(document).ready(function() { init_search(); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="flatdoc.css" rel="stylesheet" type="text/css"/>
+<link href="inline-params.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -98,6 +100,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="globals_func_g.html#index_g"><span>g</span></a></li>
       <li><a href="globals_func_h.html#index_h"><span>h</span></a></li>
       <li><a href="globals_func_i.html#index_i"><span>i</span></a></li>
+      <li><a href="globals_func_j.html#index_j"><span>j</span></a></li>
       <li class="current"><a href="globals_func_l.html#index_l"><span>l</span></a></li>
       <li><a href="globals_func_m.html#index_m"><span>m</span></a></li>
       <li><a href="globals_func_n.html#index_n"><span>n</span></a></li>
@@ -146,6 +149,10 @@ $(document).ready(function(){initNavTree('globals_func_l.html','');});
 &#160;
 
 <h3><a class="anchor" id="index_l"></a>- l -</h3><ul>
+<li>last_reduced_gvt()
+: <a class="el" href="communication_2gvt_8c.html#a022fe9fa84d6e6614c9572d23adfcc9b">gvt.c</a>
+, <a class="el" href="communication_2gvt_8h.html#a022fe9fa84d6e6614c9572d23adfcc9b">gvt.h</a>
+</li>
 <li>left_child()
 : <a class="el" href="buddy_8c.html#ac31dad8abee32480810f0858d59909f0">buddy.c</a>
 </li>
@@ -163,8 +170,8 @@ $(document).ready(function(){initNavTree('globals_func_l.html','');});
 : <a class="el" href="calqueue_8c.html#a7cb34614a7eb1a793956d7cca2b418cb">calqueue.c</a>
 </li>
 <li>log_delete()
-: <a class="el" href="dymelor_8h.html#a638015576623fa22a4710def61ad19ab">dymelor.h</a>
-, <a class="el" href="checkpoints_8c.html#a727e4cd3fa1d7b332b9f212733eec8d3">checkpoints.c</a>
+: <a class="el" href="checkpoints_8c.html#a727e4cd3fa1d7b332b9f212733eec8d3">checkpoints.c</a>
+, <a class="el" href="dymelor_8h.html#a638015576623fa22a4710def61ad19ab">dymelor.h</a>
 </li>
 <li>log_full()
 : <a class="el" href="checkpoints_8c.html#a9be0910d1b3a99682d5d2971b4b79f3b">checkpoints.c</a>
@@ -175,28 +182,34 @@ $(document).ready(function(){initNavTree('globals_func_l.html','');});
 , <a class="el" href="dymelor_8h.html#aea7bcb3e0ec0c731b510785a3ff23e50">dymelor.h</a>
 </li>
 <li>log_state()
-: <a class="el" href="checkpoints_8c.html#af5802791ee41b774e796caa15315c24c">checkpoints.c</a>
-, <a class="el" href="dymelor_8h.html#afbb9e43630a99b023ad7421afdb6dee9">dymelor.h</a>
+: <a class="el" href="dymelor_8h.html#afbb9e43630a99b023ad7421afdb6dee9">dymelor.h</a>
+, <a class="el" href="checkpoints_8c.html#af5802791ee41b774e796caa15315c24c">checkpoints.c</a>
 </li>
 <li>LogState()
-: <a class="el" href="state_8h.html#affa280b9d6f43896c9db64f0e32b2f3d">state.h</a>
-, <a class="el" href="state_8c.html#a29fbf84fed206d7f721cd03b74d082cd">state.c</a>
+: <a class="el" href="state_8c.html#a29fbf84fed206d7f721cd03b74d082cd">state.c</a>
+, <a class="el" href="state_8h.html#affa280b9d6f43896c9db64f0e32b2f3d">state.h</a>
 </li>
 <li>lp_alloc_deschedule()
 : <a class="el" href="ecs_8h.html#a93b282f8af3c72bdbd5d0533a4cc2355">ecs.h</a>
+, <a class="el" href="ecs_8c.html#a93b282f8af3c72bdbd5d0533a4cc2355">ecs.c</a>
 </li>
 <li>lp_alloc_schedule()
-: <a class="el" href="ecs_8h.html#af96855eb85637b829d7d3aa20f97ad3c">ecs.h</a>
+: <a class="el" href="ecs_8c.html#af96855eb85637b829d7d3aa20f97ad3c">ecs.c</a>
+, <a class="el" href="ecs_8h.html#af96855eb85637b829d7d3aa20f97ad3c">ecs.h</a>
+</li>
+<li>lp_alloc_thread_fini()
+: <a class="el" href="ecs_8c.html#a4582ea0af9bdb551552226296569effa">ecs.c</a>
 </li>
 <li>lp_alloc_thread_init()
 : <a class="el" href="ecs_8h.html#a13bad948057bc0998099c1ef6ddaf46c">ecs.h</a>
+, <a class="el" href="ecs_8c.html#a13bad948057bc0998099c1ef6ddaf46c">ecs.c</a>
 </li>
 <li>LP_knapsack()
 : <a class="el" href="binding_8c.html#a7356539bd24b02d48f6ac1d7e37a8eb4">binding.c</a>
 </li>
 <li>LP_main_loop()
-: <a class="el" href="scheduler_8h.html#a1b1b085c6b05a9d202a1629dcd71cffe">scheduler.h</a>
-, <a class="el" href="scheduler_8c.html#a1b1b085c6b05a9d202a1629dcd71cffe">scheduler.c</a>
+: <a class="el" href="scheduler_8c.html#a1b1b085c6b05a9d202a1629dcd71cffe">scheduler.c</a>
+, <a class="el" href="scheduler_8h.html#a1b1b085c6b05a9d202a1629dcd71cffe">scheduler.h</a>
 </li>
 <li>LPs_block_binding()
 : <a class="el" href="binding_8c.html#ab69384062882e0ac864d499d0e8eec14">binding.c</a>

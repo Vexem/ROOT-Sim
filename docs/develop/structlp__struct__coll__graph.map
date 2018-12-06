@@ -1,18 +1,19 @@
 <map id="lp_struct" name="lp_struct">
-<area shape="rect" id="node2" href="$structmemory__map.html" title="memory_map" alt="" coords="240,347,352,373"/>
-<area shape="rect" id="node3" href="$structbuddy.html" title="buddy" alt="" coords="265,245,327,272"/>
-<area shape="rect" id="node4" href="$structspinlock__t.html" title="Spinlock definition. " alt="" coords="425,118,511,145"/>
-<area shape="rect" id="node6" href="$structslab__chain.html" title="slab_chain" alt="" coords="151,245,241,272"/>
-<area shape="rect" id="node11" href="$struct__msg__channel.html" title="_msg_channel" alt="" coords="531,347,645,373"/>
-<area shape="rect" id="node5" href="$structsegment.html" title="segment" alt="" coords="351,245,430,272"/>
-<area shape="rect" id="node7" href="$structslab__header.html" title="slab_header" alt="" coords="239,118,339,145"/>
-<area shape="rect" id="node8" href="$structatomic__t.html" title="Atomic counter definition. " alt="" coords="250,5,329,32"/>
-<area shape="rect" id="node10" href="$struct__malloc__area.html" title="This structure let DyMeLoR handle one malloc area (for serving given&#45;size memory requests) ..." alt="" coords="5,118,112,145"/>
-<area shape="rect" id="node9" href="$struct__malloc__state.html" title="Definition of the memory map. " alt="" coords="10,245,121,272"/>
-<area shape="rect" id="node12" href="$struct__msg__buff.html" title="_msg_buff" alt="" coords="743,245,831,272"/>
-<area shape="rect" id="node13" href="$struct__msg__t.html" title="Message Type definition. " alt="" coords="793,118,863,145"/>
-<area shape="rect" id="node15" href="$struct__outgoing__t.html" title="This structure is used by the communication subsystem to handle outgoing messages. " alt="" coords="871,296,969,323"/>
-<area shape="rect" id="node14" href="$struct__gid__t.html" title="_gid_t" alt="" coords="709,5,769,32"/>
-<area shape="rect" id="node16" href="$struct__lid__t.html" title="_lid_t" alt="" coords="1010,347,1065,373"/>
-<area shape="rect" id="node17" href="$struct__numerical__state.html" title="_numerical_state" alt="" coords="1089,347,1221,373"/>
+<area shape="rect" id="node2" href="$structmemory__map.html" title="memory_map" alt="" coords="723,235,835,261"/>
+<area shape="rect" id="node3" href="$structbuddy.html" title="buddy" alt="" coords="479,184,541,211"/>
+<area shape="rect" id="node4" href="$structspinlock__t.html" title="spinlock_t" alt="" coords="207,157,292,184"/>
+<area shape="rect" id="node6" href="$structslab__chain.html" title="slab_chain" alt="" coords="465,133,555,160"/>
+<area shape="rect" id="node11" href="$struct__msg__channel.html" title="_msg_channel" alt="" coords="721,416,836,443"/>
+<area shape="rect" id="node5" href="$structsegment.html" title="segment" alt="" coords="471,235,549,261"/>
+<area shape="rect" id="node7" href="$structslab__header.html" title="slab_header" alt="" coords="199,73,299,100"/>
+<area shape="rect" id="node8" href="$structatomic__t.html" title="atomic_t" alt="" coords="5,348,84,375"/>
+<area shape="rect" id="node10" href="$struct__malloc__area.html" title="This structure let DyMeLoR handle one malloc area (for serving given&#45;size memory requests) ..." alt="" coords="196,348,303,375"/>
+<area shape="rect" id="node9" href="$struct__malloc__state.html" title="Definition of the memory map. " alt="" coords="455,348,565,375"/>
+<area shape="rect" id="node12" href="$struct__msg__buff.html" title="_msg_buff" alt="" coords="466,449,554,476"/>
+<area shape="rect" id="node13" href="$struct__msg__t.html" title="Message Type definition. " alt="" coords="215,527,284,553"/>
+<area shape="rect" id="node15" href="$struct__outgoing__t.html" title="This structure is used by the communication subsystem to handle outgoing messages. " alt="" coords="591,552,688,579"/>
+<area shape="rect" id="node14" href="$struct__gid__t.html" title="_gid_t" alt="" coords="15,583,75,609"/>
+<area shape="rect" id="node16" href="$struct__lid__t.html" title="_lid_t" alt="" coords="751,665,806,692"/>
+<area shape="rect" id="node17" href="$struct____exec__context__t.html" title="This structure describes the CPU context of a User&#45;Level Thread. " alt="" coords="712,716,845,743"/>
+<area shape="rect" id="node18" href="$struct__numerical__state.html" title="_numerical_state" alt="" coords="713,767,845,793"/>
 </map>

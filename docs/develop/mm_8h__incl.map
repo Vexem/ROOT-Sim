@@ -1,11 +1,11 @@
 <map id="/home/travis/build/HPDCS/ROOT&#45;Sim/src/mm/mm.h" name="/home/travis/build/HPDCS/ROOT&#45;Sim/src/mm/mm.h">
-<area shape="rect" id="node5" href="$core_8h.html" title="This header defines all the shared symbols which are needed by different subsystems. " alt="" coords="501,259,596,285"/>
-<area shape="rect" id="node18" href="$atomic_8h.html" title="This module implements atomic and non&#45;blocking operations used within ROOT&#45;Sim to coordinate threads ..." alt="" coords="787,408,897,435"/>
-<area shape="rect" id="node19" href="$dymelor_8h.html" title="This is the Memory Management Subsystem main header file. " alt="" coords="405,109,519,136"/>
-<area shape="rect" id="node6" href="$ROOT-Sim_8h.html" title="This header defines all the symbols which are needed to develop a Model to be simulated on top of ROO..." alt="" coords="221,333,319,360"/>
-<area shape="rect" id="node16" href="$numerical_8h.html" title="This header is used to define symbols which must be accessible by the simulator but not by the applic..." alt="" coords="394,333,509,360"/>
-<area shape="rect" id="node17" href="$thread_8h.html" title="This module implements Kernel Level Thread supports. " alt="" coords="789,333,897,360"/>
-<area shape="rect" id="node20" href="$bitmap_8h.html" title="This header implements a minimal bitmap data type. " alt="" coords="658,184,805,211"/>
-<area shape="rect" id="node22" href="$state_8h.html" title="State Management subsystem&#39;s header. " alt="" coords="413,184,511,211"/>
-<area shape="rect" id="node23" href="$timer_8h.html" title="This header defines the timers which the simulator uses to monitor its internal behaviour. " alt="" coords="282,184,381,211"/>
+<area shape="rect" id="node5" href="$core_8h.html" title="Core ROOT&#45;Sim functionalities. " alt="" coords="601,259,695,285"/>
+<area shape="rect" id="node18" href="$atomic_8h.html" title="Atomic operations. " alt="" coords="999,408,1110,435"/>
+<area shape="rect" id="node21" href="$dymelor_8h.html" title="Dynamic Memory Logger and Restorer (DyMeLoR) " alt="" coords="411,109,525,136"/>
+<area shape="rect" id="node6" href="$ROOT-Sim_8h.html" title="ROOT&#45;Sim header for model development. " alt="" coords="461,333,560,360"/>
+<area shape="rect" id="node16" href="$numerical_8h.html" title="Numerical Library. " alt="" coords="685,333,800,360"/>
+<area shape="rect" id="node17" href="$thread_8h.html" title="Generic thread management facilities. " alt="" coords="825,333,933,360"/>
+<area shape="rect" id="node22" href="$bitmap_8h.html" title="Bitmap data type. " alt="" coords="395,184,541,211"/>
+<area shape="rect" id="node24" href="$state_8h.html" title="LP state management. " alt="" coords="617,184,714,211"/>
+<area shape="rect" id="node25" href="$timer_8h.html" title="Timers. " alt="" coords="188,184,287,211"/>
 </map>

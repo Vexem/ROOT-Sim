@@ -23,6 +23,8 @@
   $(document).ready(function() { init_search(); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="flatdoc.css" rel="stylesheet" type="text/css"/>
+<link href="inline-params.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -105,6 +107,9 @@ $(document).ready(function(){initNavTree('preempt_8c.html','');});
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">preempt.c File Reference</div>  </div>
 </div><!--header-->
@@ -112,22 +117,521 @@ $(document).ready(function(){initNavTree('preempt_8c.html','');});
 
 <p>LP preemption management.  
 <a href="#details">More...</a></p>
-
+<div class="textblock"><code>#include &lt;timestretch.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="atomic_8h_source.html">arch/atomic.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="core_8h_source.html">core/core.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="process_8h_source.html">scheduler/process.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="scheduler_8h_source.html">scheduler/scheduler.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="dymelor_8h_source.html">mm/dymelor.h</a>&gt;</code><br />
+</div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for preempt.c:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="preempt_8c__incl.png" border="0" usemap="#_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2scheduler_2preempt_8c" alt=""/></div>
+<map name="_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2scheduler_2preempt_8c" id="_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2scheduler_2preempt_8c">
+<area shape="rect" id="node3" href="atomic_8h.html" title="Atomic operations. " alt="" coords="1472,736,1583,763"/>
+<area shape="rect" id="node6" href="core_8h.html" title="Core ROOT&#45;Sim functionalities. " alt="" coords="777,587,872,613"/>
+<area shape="rect" id="node21" href="process_8h.html" title="LP control blocks. " alt="" coords="825,259,976,285"/>
+<area shape="rect" id="node25" href="dymelor_8h.html" title="Dynamic Memory Logger and Restorer (DyMeLoR) " alt="" coords="1377,437,1491,464"/>
+<area shape="rect" id="node42" href="scheduler_8h.html" title="The ROOT&#45;Sim scheduler main module header. " alt="" coords="325,109,487,136"/>
+<area shape="rect" id="node7" href="ROOT-Sim_8h.html" title="ROOT&#45;Sim header for model development. " alt="" coords="619,661,718,688"/>
+<area shape="rect" id="node16" href="numerical_8h.html" title="Numerical Library. " alt="" coords="1182,661,1297,688"/>
+<area shape="rect" id="node17" href="thread_8h.html" title="Generic thread management facilities. " alt="" coords="999,661,1107,688"/>
+<area shape="rect" id="node22" href="state_8h.html" title="LP state management. " alt="" coords="977,512,1075,539"/>
+<area shape="rect" id="node23" href="mm_8h.html" title="Memory Manager main header. " alt="" coords="1161,348,1251,375"/>
+<area shape="rect" id="node31" href="ecs_8h.html" title="Event &amp; Cross State Synchornization. " alt="" coords="999,348,1085,375"/>
+<area shape="rect" id="node32" href="list_8h.html" title="Generic Lists. " alt="" coords="1918,661,2038,688"/>
+<area shape="rect" id="node35" href="msgchannel_8h.html" title="A (M, 1) channel for messages. " alt="" coords="741,437,921,464"/>
+<area shape="rect" id="node36" href="ult_8h.html" title="User&#45;Level Threads Headers. " alt="" coords="651,348,734,375"/>
+<area shape="rect" id="node39" href="communication_8h.html" title="Communication Routines. " alt="" coords="391,348,627,375"/>
+<area shape="rect" id="node40" href="cross__state__manager_8h.html" title="Per&#45;thread page table. " alt="" coords="758,333,923,389"/>
+<area shape="rect" id="node26" href="bitmap_8h.html" title="Bitmap data type. " alt="" coords="1099,512,1246,539"/>
+<area shape="rect" id="node28" href="timer_8h.html" title="Timers. " alt="" coords="1617,512,1715,539"/>
+<area shape="rect" id="node37" href="jmp_8h.html" title="Architecture&#45;independent ULT header. " alt="" coords="457,437,547,464"/>
+<area shape="rect" id="node38" href="x86_2jmp_8h.html" title="x86 ULT support header " alt="" coords="442,512,559,539"/>
+<area shape="rect" id="node43" href="queues_8h.html" title="Message queueing subsystem. " alt="" coords="392,184,524,211"/>
+<area shape="rect" id="node44" href="stf_8h.html" title="O(n) scheduling algorithm. " alt="" coords="549,184,663,211"/>
+</map>
+</div>
+</div>
 <p><a href="preempt_8c_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a733695bd801b6b82cca8742d559d983f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="preempt_8c.html#a733695bd801b6b82cca8742d559d983f">preempt_callback</a> (void)</td></tr>
+<tr class="separator:a733695bd801b6b82cca8742d559d983f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0687cad59e950868aa60f204ef051e15"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="preempt_8c.html#a0687cad59e950868aa60f204ef051e15">preempt_init</a> (void)</td></tr>
+<tr class="separator:a0687cad59e950868aa60f204ef051e15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebd466071a0343a49143ffccfdb148f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="preempt_8c.html#aebd466071a0343a49143ffccfdb148f4">preempt_fini</a> (void)</td></tr>
+<tr class="separator:aebd466071a0343a49143ffccfdb148f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abca549e4ddfb28ffd31e0014c632e774"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="preempt_8c.html#abca549e4ddfb28ffd31e0014c632e774">reset_min_in_transit</a> (unsigned int thread)</td></tr>
+<tr class="separator:abca549e4ddfb28ffd31e0014c632e774"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e0e11fb05a00a94df0c1a82fcf36ceb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="preempt_8c.html#a9e0e11fb05a00a94df0c1a82fcf36ceb">update_min_in_transit</a> (unsigned int thread, <a class="el" href="ROOT-Sim_8h.html#a8f79ad6880e99acb4edd079069847d9d">simtime_t</a> <a class="el" href="process_8h.html#af324d7dd1ed4ba3068a52bafebe1ff20">lvt</a>)</td></tr>
+<tr class="separator:a9e0e11fb05a00a94df0c1a82fcf36ceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a026b8c4ab2cb9af17e1c20d533981604"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="preempt_8c.html#a026b8c4ab2cb9af17e1c20d533981604">preempt</a> (void)</td></tr>
+<tr class="separator:a026b8c4ab2cb9af17e1c20d533981604"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6eb628536a4101250b7118f1edf9017"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="preempt_8c.html#ad6eb628536a4101250b7118f1edf9017">enable_preemption</a> (void)</td></tr>
+<tr class="separator:ad6eb628536a4101250b7118f1edf9017"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72b707faabaeb53be380d902fd30bfc6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="preempt_8c.html#a72b707faabaeb53be380d902fd30bfc6">disable_preemption</a> (void)</td></tr>
+<tr class="separator:a72b707faabaeb53be380d902fd30bfc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a5738b5fc27f252a4e5ed3c6fa141a91d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="ROOT-Sim_8h.html#a8f79ad6880e99acb4edd079069847d9d">simtime_t</a> *volatile&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="preempt_8c.html#a5738b5fc27f252a4e5ed3c6fa141a91d">min_in_transit_lvt</a></td></tr>
+<tr class="separator:a5738b5fc27f252a4e5ed3c6fa141a91d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5969ff4d10b8db6822d56b5ca6a7abcb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structatomic__t.html">atomic_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="preempt_8c.html#a5969ff4d10b8db6822d56b5ca6a7abcb">preempt_count</a></td></tr>
+<tr class="separator:a5969ff4d10b8db6822d56b5ca6a7abcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d1a2af660cb926eda5476e5444a6108"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structatomic__t.html">atomic_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="preempt_8c.html#a9d1a2af660cb926eda5476e5444a6108">overtick_platform</a></td></tr>
+<tr class="separator:a9d1a2af660cb926eda5476e5444a6108"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aceebdebda85d0349eafe9d5162cde4ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structatomic__t.html">atomic_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="preempt_8c.html#aceebdebda85d0349eafe9d5162cde4ab">would_preempt</a></td></tr>
+<tr class="separator:aceebdebda85d0349eafe9d5162cde4ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fd2b1a41a38f8a7d2e79fdafbca343c"><td class="memItemLeft" align="right" valign="top">__thread volatile bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="preempt_8c.html#a7fd2b1a41a38f8a7d2e79fdafbca343c">platform_mode</a> = true</td></tr>
+<tr class="separator:a7fd2b1a41a38f8a7d2e79fdafbca343c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a634dcb6c903855b5e7903877bc18f990"><td class="memItemLeft" align="right" valign="top">__thread bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="preempt_8c.html#a634dcb6c903855b5e7903877bc18f990">rolling_back</a> = false</td></tr>
+<tr class="separator:a634dcb6c903855b5e7903877bc18f990"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>LP preemption management. </p>
-<p>Copyright (C) 2008-2018 HPDCS Group <a href="http://www.dis.uniroma1.it/~hpdcs">http://www.dis.uniroma1.it/~hpdcs</a></p>
+<p>LP preemption management</p>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (C) 2008-2018 HPDCS Group <a href="https://hpdcs.github.io">https://hpdcs.github.io</a></dd></dl>
 <p>This file is part of ROOT-Sim (ROme OpTimistic Simulator).</p>
 <p>ROOT-Sim is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; only version 3 of the License applies.</p>
 <p>ROOT-Sim is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
 <p>You should have received a copy of the GNU General Public License along with ROOT-Sim; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA</p>
 <dl class="section author"><dt>Author</dt><dd>Alessandro Pellegrini </dd>
 <dd>
-Francesco Quaglia </dd></dl>
+Francesco Quaglia</dd></dl>
 <dl class="section date"><dt>Date</dt><dd>March, 2015 </dd></dl>
 
 <p>Definition in file <a class="el" href="preempt_8c_source.html">preempt.c</a>.</p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="a72b707faabaeb53be380d902fd30bfc6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void disable_preemption </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="preempt_8c_source.html#l00209">209</a> of file <a class="el" href="preempt_8c_source.html">preempt.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad6eb628536a4101250b7118f1edf9017"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void enable_preemption </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="preempt_8c_source.html#l00193">193</a> of file <a class="el" href="preempt_8c_source.html">preempt.c</a>.</p>
+
+<p><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="preempt_8c_ad6eb628536a4101250b7118f1edf9017_cgraph.png" border="0" usemap="#preempt_8c_ad6eb628536a4101250b7118f1edf9017_cgraph" alt=""/></div>
+<map name="preempt_8c_ad6eb628536a4101250b7118f1edf9017_cgraph" id="preempt_8c_ad6eb628536a4101250b7118f1edf9017_cgraph">
+<area shape="rect" id="node2" href="preempt_8c.html#a733695bd801b6b82cca8742d559d983f" title="preempt_callback" alt="" coords="200,5,335,32"/>
+</map>
+</div>
+</p>
+
+<p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="preempt_8c_ad6eb628536a4101250b7118f1edf9017_icgraph.png" border="0" usemap="#preempt_8c_ad6eb628536a4101250b7118f1edf9017_icgraph" alt=""/></div>
+<map name="preempt_8c_ad6eb628536a4101250b7118f1edf9017_icgraph" id="preempt_8c_ad6eb628536a4101250b7118f1edf9017_icgraph">
+<area shape="rect" id="node2" href="scheduler_8h.html#af405fd79c1cd59fccce27658d6e11941" title="initialize_worker_thread" alt="" coords="200,5,371,32"/>
+<area shape="rect" id="node3" href="main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="419,5,580,32"/>
+<area shape="rect" id="node4" href="main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="628,5,749,32"/>
+<area shape="rect" id="node5" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="661,56,716,83"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a026b8c4ab2cb9af17e1c20d533981604"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void preempt </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This function is activated when control is transferred back from kernel space, when an APIC timer interrupt is received. When this is the case, this function quickly checks whether some other LP has gained an increased priority over the currently executing one, and in the case changes the control flow so as to activate it. </p>
+
+<p>Definition at line <a class="el" href="preempt_8c_source.html#l00134">134</a> of file <a class="el" href="preempt_8c_source.html">preempt.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a733695bd801b6b82cca8742d559d983f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void preempt_callback </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="preempt_8c_a733695bd801b6b82cca8742d559d983f_icgraph.png" border="0" usemap="#preempt_8c_a733695bd801b6b82cca8742d559d983f_icgraph" alt=""/></div>
+<map name="preempt_8c_a733695bd801b6b82cca8742d559d983f_icgraph" id="preempt_8c_a733695bd801b6b82cca8742d559d983f_icgraph">
+<area shape="rect" id="node2" href="scheduler_8h.html#ad6eb628536a4101250b7118f1edf9017" title="enable_preemption" alt="" coords="188,5,335,32"/>
+<area shape="rect" id="node3" href="scheduler_8h.html#af405fd79c1cd59fccce27658d6e11941" title="initialize_worker_thread" alt="" coords="383,5,553,32"/>
+<area shape="rect" id="node4" href="main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="601,5,763,32"/>
+<area shape="rect" id="node5" href="main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="811,5,932,32"/>
+<area shape="rect" id="node6" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="844,56,899,83"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aebd466071a0343a49143ffccfdb148f4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void preempt_fini </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="preempt_8c_source.html#l00077">77</a> of file <a class="el" href="preempt_8c_source.html">preempt.c</a>.</p>
+
+<p><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="preempt_8c_aebd466071a0343a49143ffccfdb148f4_cgraph.png" border="0" usemap="#preempt_8c_aebd466071a0343a49143ffccfdb148f4_cgraph" alt=""/></div>
+<map name="preempt_8c_aebd466071a0343a49143ffccfdb148f4_cgraph" id="preempt_8c_aebd466071a0343a49143ffccfdb148f4_cgraph">
+<area shape="rect" id="node2" href="dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a" title="rsfree" alt="" coords="156,5,215,32"/>
+<area shape="rect" id="node3" href="platform_8c.html#ae2af2cd130d16958394ae21e9d13035f" title="__real_free" alt="" coords="263,5,355,32"/>
+</map>
+</div>
+</p>
+
+<p><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="preempt_8c_aebd466071a0343a49143ffccfdb148f4_icgraph.png" border="0" usemap="#preempt_8c_aebd466071a0343a49143ffccfdb148f4_icgraph" alt=""/></div>
+<map name="preempt_8c_aebd466071a0343a49143ffccfdb148f4_icgraph" id="preempt_8c_aebd466071a0343a49143ffccfdb148f4_icgraph">
+<area shape="rect" id="node2" href="scheduler_8h.html#a8ed8d4a13d66c1d3a221fb82e72f8e0e" title="scheduler_fini" alt="" coords="156,107,265,133"/>
+<area shape="rect" id="node3" href="core_8h.html#a8f346536ccfbe77b78ed577674beb6cf" title="simulation_shutdown" alt="" coords="313,107,469,133"/>
+<area shape="rect" id="node4" href="core_8c.html#a9b05d2af2e233e2616633eaa706682ee" title="exit_from_simulation\l_model" alt="" coords="521,19,675,61"/>
+<area shape="rect" id="node8" href="main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="517,107,679,133"/>
+<area shape="rect" id="node10" href="serial_8h.html#aa0dd072d0e792fb9c65220bdddf69a0e" title="serial_simulation" alt="" coords="896,132,1025,159"/>
+<area shape="rect" id="node5" href="core_8h.html#a7fb819521b1ab5fc7644ad216fe7b465" title="base_init" alt="" coords="748,5,827,32"/>
+<area shape="rect" id="node6" href="init_8h.html#a417eb072179d09f441dbae3125049e46" title="SystemInit" alt="" coords="915,5,1006,32"/>
+<area shape="rect" id="node7" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1073,56,1128,83"/>
+<area shape="rect" id="node9" href="main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="727,107,848,133"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a0687cad59e950868aa60f204ef051e15"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void preempt_init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="preempt_8c_source.html#l00052">52</a> of file <a class="el" href="preempt_8c_source.html">preempt.c</a>.</p>
+
+<p><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="preempt_8c_a0687cad59e950868aa60f204ef051e15_cgraph.png" border="0" usemap="#preempt_8c_a0687cad59e950868aa60f204ef051e15_cgraph" alt=""/></div>
+<map name="preempt_8c_a0687cad59e950868aa60f204ef051e15_cgraph" id="preempt_8c_a0687cad59e950868aa60f204ef051e15_cgraph">
+<area shape="rect" id="node2" href="dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="156,5,219,32"/>
+<area shape="rect" id="node3" href="platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="267,5,376,32"/>
+</map>
+</div>
+</p>
+
+<p><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="preempt_8c_a0687cad59e950868aa60f204ef051e15_icgraph.png" border="0" usemap="#preempt_8c_a0687cad59e950868aa60f204ef051e15_icgraph" alt=""/></div>
+<map name="preempt_8c_a0687cad59e950868aa60f204ef051e15_icgraph" id="preempt_8c_a0687cad59e950868aa60f204ef051e15_icgraph">
+<area shape="rect" id="node2" href="scheduler_8h.html#ab258cc2856e5f6bb125907cc23358fbd" title="scheduler_init" alt="" coords="156,5,267,32"/>
+<area shape="rect" id="node3" href="init_8h.html#a417eb072179d09f441dbae3125049e46" title="SystemInit" alt="" coords="315,5,405,32"/>
+<area shape="rect" id="node4" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="453,5,508,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="abca549e4ddfb28ffd31e0014c632e774"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void reset_min_in_transit </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>thread</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="preempt_8c_source.html#l00092">92</a> of file <a class="el" href="preempt_8c_source.html">preempt.c</a>.</p>
+
+<p><div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="preempt_8c_abca549e4ddfb28ffd31e0014c632e774_cgraph.png" border="0" usemap="#preempt_8c_abca549e4ddfb28ffd31e0014c632e774_cgraph" alt=""/></div>
+<map name="preempt_8c_abca549e4ddfb28ffd31e0014c632e774_cgraph" id="preempt_8c_abca549e4ddfb28ffd31e0014c632e774_cgraph">
+<area shape="rect" id="node2" href="atomic_8h.html#a697a618720d19f9d4fb9f20d3b0ef604" title="CAS" alt="" coords="205,5,255,32"/>
+</map>
+</div>
+</p>
+
+<p><div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="preempt_8c_abca549e4ddfb28ffd31e0014c632e774_icgraph.png" border="0" usemap="#preempt_8c_abca549e4ddfb28ffd31e0014c632e774_icgraph" alt=""/></div>
+<map name="preempt_8c_abca549e4ddfb28ffd31e0014c632e774_icgraph" id="preempt_8c_abca549e4ddfb28ffd31e0014c632e774_icgraph">
+<area shape="rect" id="node2" href="queues_8h.html#a54eca9bfa893cac072d1b1d3010c2944" title="process_bottom_halves" alt="" coords="205,56,380,83"/>
+<area shape="rect" id="node8" href="binding_8h.html#ae26b2a8055156e8648f8ad806f5fa5b0" title="rebind_LPs" alt="" coords="433,107,524,133"/>
+<area shape="rect" id="node3" href="gvt_2gvt_8c.html#a895d5bfff43f3ee72f9cf7097abf609b" title="GVT_phases" alt="" coords="428,5,529,32"/>
+<area shape="rect" id="node5" href="main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="796,81,957,108"/>
+<area shape="rect" id="node4" href="gvt_2gvt_8h.html#a899b50ab45427cf145360ff3a6c29808" title="gvt_operations" alt="" coords="604,5,721,32"/>
+<area shape="rect" id="node6" href="main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="1005,81,1127,108"/>
+<area shape="rect" id="node7" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1039,132,1093,159"/>
+<area shape="rect" id="node9" href="scheduler_8h.html#af405fd79c1cd59fccce27658d6e11941" title="initialize_worker_thread" alt="" coords="577,157,748,184"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a9e0e11fb05a00a94df0c1a82fcf36ceb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void update_min_in_transit </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>thread</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ROOT-Sim_8h.html#a8f79ad6880e99acb4edd079069847d9d">simtime_t</a>&#160;</td>
+          <td class="paramname"><em>lvt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="preempt_8c_source.html#l00107">107</a> of file <a class="el" href="preempt_8c_source.html">preempt.c</a>.</p>
+
+<p><div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-10-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="preempt_8c_a9e0e11fb05a00a94df0c1a82fcf36ceb_cgraph.png" border="0" usemap="#preempt_8c_a9e0e11fb05a00a94df0c1a82fcf36ceb_cgraph" alt=""/></div>
+<map name="preempt_8c_a9e0e11fb05a00a94df0c1a82fcf36ceb_cgraph" id="preempt_8c_a9e0e11fb05a00a94df0c1a82fcf36ceb_cgraph">
+<area shape="rect" id="node2" href="atomic_8h.html#a697a618720d19f9d4fb9f20d3b0ef604" title="CAS" alt="" coords="217,5,267,32"/>
+</map>
+</div>
+</p>
+
+<p><div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-11-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="preempt_8c_a9e0e11fb05a00a94df0c1a82fcf36ceb_icgraph.png" border="0" usemap="#preempt_8c_a9e0e11fb05a00a94df0c1a82fcf36ceb_icgraph" alt=""/></div>
+<map name="preempt_8c_a9e0e11fb05a00a94df0c1a82fcf36ceb_icgraph" id="preempt_8c_a9e0e11fb05a00a94df0c1a82fcf36ceb_icgraph">
+<area shape="rect" id="node2" href="queues_8h.html#a9ff164dd6a938afa7e892f4028c2a033" title="insert_bottom_half" alt="" coords="217,309,360,336"/>
+<area shape="rect" id="node3" href="communication_8h.html#ab5250867c0edfc326732c059b0c0c3b5" title="Send" alt="" coords="408,208,463,235"/>
+<area shape="rect" id="node23" href="mpi_8h.html#ad243611fd168b265105bce70c193394d" title="receive_remote_msgs" alt="" coords="963,411,1127,437"/>
+<area shape="rect" id="node4" href="communication_8h.html#aa8047651e174f4d26bef644233b5c8f8" title="send_antimessages" alt="" coords="529,309,680,336"/>
+<area shape="rect" id="node13" href="communication_8h.html#ad154a0e0c0815b786ead70143505abd6" title="send_outgoing_msgs" alt="" coords="749,107,907,133"/>
+<area shape="rect" id="node14" href="ecs_8c.html#a672ea2cce8f7ae1214e0a41f46884933" title="ecs_secondary" alt="" coords="546,5,663,32"/>
+<area shape="rect" id="node16" href="ecs_8c.html#ade56ef97d7d3ae799d60f8616f2062cb" title="ecs_initiate" alt="" coords="997,5,1092,32"/>
+<area shape="rect" id="node17" href="ecs_8h.html#a414633c637a80868d1dea7b3acf152f3" title="ecs_send_pages" alt="" coords="541,360,669,387"/>
+<area shape="rect" id="node20" href="ecs_8c.html#a4b58dd1c4132af99fbd29c8a6247ca1b" title="unblock_synchronized\l_objects" alt="" coords="747,158,909,199"/>
+<area shape="rect" id="node21" href="scheduler_8h.html#ac54b610f24de85b6444f61c4c094242c" title="rollback_control_message" alt="" coords="511,259,699,285"/>
+<area shape="rect" id="node22" href="scheduler_8h.html#aacd9fe9684de21c933680f355acb5766" title="process_control_msg" alt="" coords="525,208,684,235"/>
+<area shape="rect" id="node5" href="state_8h.html#a1fd6b7926db41257e07600226d87fffa" title="rollback" alt="" coords="793,275,863,301"/>
+<area shape="rect" id="node6" href="scheduler_8h.html#ac48128e72b303ea22d8ec641a9516b15" title="schedule" alt="" coords="1005,224,1084,251"/>
+<area shape="rect" id="node7" href="gvt_2gvt_8c.html#a895d5bfff43f3ee72f9cf7097abf609b" title="GVT_phases" alt="" coords="1180,360,1281,387"/>
+<area shape="rect" id="node9" href="main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="1548,309,1709,336"/>
+<area shape="rect" id="node12" href="scheduler_8h.html#af405fd79c1cd59fccce27658d6e11941" title="initialize_worker_thread" alt="" coords="1329,208,1500,235"/>
+<area shape="rect" id="node8" href="gvt_2gvt_8h.html#a899b50ab45427cf145360ff3a6c29808" title="gvt_operations" alt="" coords="1356,360,1473,387"/>
+<area shape="rect" id="node10" href="main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="1757,309,1879,336"/>
+<area shape="rect" id="node11" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1791,360,1845,387"/>
+<area shape="rect" id="node15" href="ecs_8c.html#adbe06ee703b26dcc8d82e505075f942d" title="ECS" alt="" coords="804,5,852,32"/>
+<area shape="rect" id="node18" href="scheduler_8h.html#a5766f78dcd3778582d506c3dec34594e" title="receive_control_msg" alt="" coords="751,360,905,387"/>
+<area shape="rect" id="node19" href="queues_8h.html#a54eca9bfa893cac072d1b1d3010c2944" title="process_bottom_halves" alt="" coords="957,360,1132,387"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a class="anchor" id="a5738b5fc27f252a4e5ed3c6fa141a91d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ROOT-Sim_8h.html#a8f79ad6880e99acb4edd079069847d9d">simtime_t</a>* volatile min_in_transit_lvt</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="preempt_8c_source.html#l00044">44</a> of file <a class="el" href="preempt_8c_source.html">preempt.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9d1a2af660cb926eda5476e5444a6108"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structatomic__t.html">atomic_t</a> overtick_platform</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="preempt_8c_source.html#l00047">47</a> of file <a class="el" href="preempt_8c_source.html">preempt.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7fd2b1a41a38f8a7d2e79fdafbca343c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__thread volatile bool platform_mode = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="preempt_8c_source.html#l00050">50</a> of file <a class="el" href="preempt_8c_source.html">preempt.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5969ff4d10b8db6822d56b5ca6a7abcb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structatomic__t.html">atomic_t</a> preempt_count</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="preempt_8c_source.html#l00046">46</a> of file <a class="el" href="preempt_8c_source.html">preempt.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a634dcb6c903855b5e7903877bc18f990"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__thread bool rolling_back = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="preempt_8c_source.html#l00124">124</a> of file <a class="el" href="preempt_8c_source.html">preempt.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aceebdebda85d0349eafe9d5162cde4ab"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structatomic__t.html">atomic_t</a> would_preempt</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="preempt_8c_source.html#l00048">48</a> of file <a class="el" href="preempt_8c_source.html">preempt.c</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

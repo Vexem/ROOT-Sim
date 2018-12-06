@@ -1,5 +1,5 @@
 <map id="next_event_timestamp" name="next_event_timestamp">
-<area shape="rect" id="node2" href="$stf_8h.html#a726ca866bf5abd4a57d94280908b8f14" title="smallest_timestamp\l_first" alt="" coords="224,49,377,90"/>
+<area shape="rect" id="node2" href="$stf_8h.html#a726ca866bf5abd4a57d94280908b8f14" title="O(n) scheduler. " alt="" coords="224,49,377,90"/>
 <area shape="rect" id="node3" href="$scheduler_8h.html#ac48128e72b303ea22d8ec641a9516b15" title="schedule" alt="" coords="425,56,504,83"/>
 <area shape="rect" id="node4" href="$gvt_2gvt_8c.html#a895d5bfff43f3ee72f9cf7097abf609b" title="GVT_phases" alt="" coords="552,5,653,32"/>
 <area shape="rect" id="node6" href="$main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="920,56,1081,83"/>

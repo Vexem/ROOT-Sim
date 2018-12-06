@@ -5,6 +5,7 @@ var searchData=
   ['set_5fbit',['SET_BIT',['../cross__state__manager_8c.html#adcabcf30c16d67bd7f9d8eb096e02705',1,'SET_BIT():&#160;cross_state_manager.c'],['../topology_8c.html#a1cdb32cd42498e5a88dff850a78bf210',1,'SET_BIT():&#160;topology.c']]],
   ['set_5fbit_5fat',['SET_BIT_AT',['../topology_8c.html#aed3e20ffa57e1b02f153791940c0ed1d',1,'topology.c']]],
   ['set_5fgid',['set_gid',['../core_8h.html#ada10d1b9b513d8a990e88b4c655ffe7d',1,'core.h']]],
+  ['set_5fjmp',['set_jmp',['../x86_2jmp_8h.html#a27b53df10e215ef74cf2825bd336b363',1,'jmp.h']]],
   ['set_5flid',['set_lid',['../core_8h.html#a3554b1d923000ad1dc8864d4e891b6bc',1,'core.h']]],
   ['set_5flog_5fmode_5fbit',['SET_LOG_MODE_BIT',['../dymelor_8h.html#ae967f36365cce5a9aa59ee91bd90fdab',1,'dymelor.h']]],
   ['sibling_5fpgd',['SIBLING_PGD',['../cross__state__manager_8h.html#a94280c5a409e0c721eaa9d99b4c6a43d',1,'SIBLING_PGD():&#160;cross_state_manager.h'],['../schedule_8h.html#a94280c5a409e0c721eaa9d99b4c6a43d',1,'SIBLING_PGD():&#160;schedule.h']]],

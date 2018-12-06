@@ -23,6 +23,8 @@
   $(document).ready(function() { init_search(); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="flatdoc.css" rel="stylesheet" type="text/css"/>
+<link href="inline-params.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -114,6 +116,9 @@ $(document).ready(function(){initNavTree('cross__state__manager_8c.html','');});
 <div class="title">cross_state_manager.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Per-thread page table.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;linux/module.h&gt;</code><br />
 <code>#include &lt;linux/kernel.h&gt;</code><br />
 <code>#include &lt;linux/fs.h&gt;</code><br />
@@ -138,7 +143,7 @@ $(document).ready(function(){initNavTree('cross__state__manager_8c.html','');});
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="cross__state__manager_8c__incl.png" border="0" usemap="#_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2arch_2x86_2linux_2cross__state__manager_2cross__state__manager_8c" alt=""/></div>
 <map name="_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2arch_2x86_2linux_2cross__state__manager_2cross__state__manager_8c" id="_2home_2travis_2build_2HPDCS_2ROOT-Sim_2src_2arch_2x86_2linux_2cross__state__manager_2cross__state__manager_8c">
-<area shape="rect" id="node18" href="cross__state__manager_8h.html" title="This is the main header for the Linux Kernel Module which implements per&#45;kernel&#45;thread different page..." alt="" coords="2097,139,2269,165"/>
+<area shape="rect" id="node18" href="cross__state__manager_8h.html" title="Per&#45;thread page table. " alt="" coords="2097,139,2269,165"/>
 </map>
 </div>
 </div>
@@ -276,7 +281,23 @@ Variables</h2></td></tr>
 <tr class="memdesc:a3df4231ae1582b9567d8697630cbe65b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is to access the actual flush_tlb_all using a kernel proble.  <a href="#a3df4231ae1582b9567d8697630cbe65b">More...</a><br /></td></tr>
 <tr class="separator:a3df4231ae1582b9567d8697630cbe65b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Per-thread page table. </p>
+<p>This Linux kernel module implements a modification to the x86_64 page table management to support event cross state dependency tracking</p>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (C) 2008-2018 HPDCS Group <a href="https://hpdcs.github.io">https://hpdcs.github.io</a></dd></dl>
+<p>This file is part of ROOT-Sim (ROme OpTimistic Simulator).</p>
+<p>ROOT-Sim is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; only version 3 of the License applies.</p>
+<p>ROOT-Sim is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+<p>You should have received a copy of the GNU General Public License along with ROOT-Sim; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA</p>
+<dl class="section author"><dt>Author</dt><dd>Alessandro Pellegrini </dd>
+<dd>
+Francesco Quaglia</dd></dl>
+<dl class="section date"><dt>Date</dt><dd>November 15, 2013 - Initial version </dd>
+<dd>
+September 19, 2015 - Full restyle of the module, to use dynamic scheduler patching </dd></dl>
+
+<p>Definition in file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a class="anchor" id="aa78fe738fb15d2490379211eaf88fdcd"></a>
 <div class="memitem">
 <div class="memproto">
@@ -287,7 +308,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00054">54</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
+<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00057">57</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
 
 </div>
 </div>
@@ -315,7 +336,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00062">62</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
+<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00065">65</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
 
 </div>
 </div>
@@ -329,7 +350,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00034">34</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
+<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00037">37</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
 
 </div>
 </div>
@@ -357,7 +378,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00063">63</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
+<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00066">66</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
 
 </div>
 </div>
@@ -385,7 +406,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00061">61</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
+<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00064">64</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
 
 </div>
 </div>
@@ -400,7 +421,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00066">66</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
+<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00069">69</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
 
 </div>
 </div>
@@ -528,7 +549,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00189">189</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
+<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00192">192</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
 
 <p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -567,7 +588,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00215">215</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
+<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00218">218</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
 
 <p><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -606,7 +627,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00199">199</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
+<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00202">202</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
 
 <p><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -743,7 +764,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00308">308</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
+<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00311">311</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
 
 <p><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -804,7 +825,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00140">140</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
+<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00143">143</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
 
 <p><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -846,7 +867,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00789">789</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
+<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00792">792</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
 
 </div>
 </div>
@@ -872,7 +893,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00668">668</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
+<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00671">671</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
 
 <p><div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -927,7 +948,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00472">472</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
+<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00475">475</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
 
 <p><div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -990,7 +1011,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00406">406</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
+<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00409">409</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
 
 </div>
 </div>
@@ -1026,7 +1047,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00424">424</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
+<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00427">427</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
 
 </div>
 </div>
@@ -1052,7 +1073,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00253">253</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
+<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00256">256</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
 
 <p><div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -1092,7 +1113,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00235">235</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
+<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00238">238</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
 
 <p><div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -1131,7 +1152,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00158">158</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
+<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00161">161</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
 
 <p><div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -1171,7 +1192,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00287">287</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
+<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00290">290</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
 
 <p><div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-14-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -1210,7 +1231,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00144">144</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
+<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00147">147</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
 
 <p><div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-15-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -1241,7 +1262,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00654">654</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
+<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00657">657</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
 
 <p><div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-16-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -1280,7 +1301,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00113">113</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
+<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00116">116</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
 
 </div>
 </div>
@@ -1294,7 +1315,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00104">104</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
+<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00107">107</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
 
 </div>
 </div>
@@ -1308,7 +1329,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00122">122</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
+<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00125">125</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
 
 </div>
 </div>
@@ -1322,7 +1343,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00118">118</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
+<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00121">121</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
 
 </div>
 </div>
@@ -1336,7 +1357,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00120">120</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
+<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00123">123</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
 
 </div>
 </div>
@@ -1350,7 +1371,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00110">110</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
+<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00113">113</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
 
 </div>
 </div>
@@ -1374,7 +1395,7 @@ Variables</h2></td></tr>
 
 <p>Device class being created. </p>
 
-<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00088">88</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
+<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00091">91</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
 
 </div>
 </div>
@@ -1398,7 +1419,7 @@ Variables</h2></td></tr>
 
 <p>Device being created. </p>
 
-<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00091">91</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
+<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00094">94</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
 
 </div>
 </div>
@@ -1414,7 +1435,7 @@ Variables</h2></td></tr>
 
 <p>This is to access the actual flush_tlb_all using a kernel proble. </p>
 
-<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00138">138</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
+<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00141">141</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
 
 </div>
 </div>
@@ -1427,13 +1448,13 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div><div class="line">    open: <a class="code" href="cross__state__manager_8c.html#a5d3ce83c2633033611ade809c1ba68a2">rs_ktblmgr_open</a>,</div><div class="line">    unlocked_ioctl: <a class="code" href="cross__state__manager_8c.html#a3b80c9ec104b8748f5d05b51308c4f3a">rs_ktblmgr_ioctl</a>,</div><div class="line">    compat_ioctl: <a class="code" href="cross__state__manager_8c.html#a3b80c9ec104b8748f5d05b51308c4f3a">rs_ktblmgr_ioctl</a>, </div><div class="line">    release: <a class="code" href="cross__state__manager_8c.html#a970ec96dcc3639d131d4d5bac057f512">rs_ktblmgr_release</a></div><div class="line">}</div><div class="ttc" id="cross__state__manager_8c_html_a970ec96dcc3639d131d4d5bac057f512"><div class="ttname"><a href="cross__state__manager_8c.html#a970ec96dcc3639d131d4d5bac057f512">rs_ktblmgr_release</a></div><div class="ttdeci">static int rs_ktblmgr_release(struct inode *, struct file *)</div><div class="ttdef"><b>Definition:</b> <a href="cross__state__manager_8c_source.html#l00424">cross_state_manager.c:424</a></div></div>
-<div class="ttc" id="cross__state__manager_8c_html_a5d3ce83c2633033611ade809c1ba68a2"><div class="ttname"><a href="cross__state__manager_8c.html#a5d3ce83c2633033611ade809c1ba68a2">rs_ktblmgr_open</a></div><div class="ttdeci">static int rs_ktblmgr_open(struct inode *, struct file *)</div><div class="ttdef"><b>Definition:</b> <a href="cross__state__manager_8c_source.html#l00406">cross_state_manager.c:406</a></div></div>
-<div class="ttc" id="cross__state__manager_8c_html_a3b80c9ec104b8748f5d05b51308c4f3a"><div class="ttname"><a href="cross__state__manager_8c.html#a3b80c9ec104b8748f5d05b51308c4f3a">rs_ktblmgr_ioctl</a></div><div class="ttdeci">static long rs_ktblmgr_ioctl(struct file *, unsigned int, unsigned long)</div><div class="ttdef"><b>Definition:</b> <a href="cross__state__manager_8c_source.html#l00472">cross_state_manager.c:472</a></div></div>
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div><div class="line">    open: <a class="code" href="cross__state__manager_8c.html#a5d3ce83c2633033611ade809c1ba68a2">rs_ktblmgr_open</a>,</div><div class="line">    unlocked_ioctl: <a class="code" href="cross__state__manager_8c.html#a3b80c9ec104b8748f5d05b51308c4f3a">rs_ktblmgr_ioctl</a>,</div><div class="line">    compat_ioctl: <a class="code" href="cross__state__manager_8c.html#a3b80c9ec104b8748f5d05b51308c4f3a">rs_ktblmgr_ioctl</a>, </div><div class="line">    release: <a class="code" href="cross__state__manager_8c.html#a970ec96dcc3639d131d4d5bac057f512">rs_ktblmgr_release</a></div><div class="line">}</div><div class="ttc" id="cross__state__manager_8c_html_a970ec96dcc3639d131d4d5bac057f512"><div class="ttname"><a href="cross__state__manager_8c.html#a970ec96dcc3639d131d4d5bac057f512">rs_ktblmgr_release</a></div><div class="ttdeci">static int rs_ktblmgr_release(struct inode *, struct file *)</div><div class="ttdef"><b>Definition:</b> <a href="cross__state__manager_8c_source.html#l00427">cross_state_manager.c:427</a></div></div>
+<div class="ttc" id="cross__state__manager_8c_html_a5d3ce83c2633033611ade809c1ba68a2"><div class="ttname"><a href="cross__state__manager_8c.html#a5d3ce83c2633033611ade809c1ba68a2">rs_ktblmgr_open</a></div><div class="ttdeci">static int rs_ktblmgr_open(struct inode *, struct file *)</div><div class="ttdef"><b>Definition:</b> <a href="cross__state__manager_8c_source.html#l00409">cross_state_manager.c:409</a></div></div>
+<div class="ttc" id="cross__state__manager_8c_html_a3b80c9ec104b8748f5d05b51308c4f3a"><div class="ttname"><a href="cross__state__manager_8c.html#a3b80c9ec104b8748f5d05b51308c4f3a">rs_ktblmgr_ioctl</a></div><div class="ttdeci">static long rs_ktblmgr_ioctl(struct file *, unsigned int, unsigned long)</div><div class="ttdef"><b>Definition:</b> <a href="cross__state__manager_8c_source.html#l00475">cross_state_manager.c:475</a></div></div>
 </div><!-- fragment -->
 <p>File operations for the module. </p>
 
-<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00130">130</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
+<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00133">133</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
 
 </div>
 </div>
@@ -1457,7 +1478,7 @@ Variables</h2></td></tr>
 
 <p>Device major number. </p>
 
-<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00085">85</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
+<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00088">88</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
 
 </div>
 </div>
@@ -1471,7 +1492,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00099">99</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
+<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00102">102</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
 
 </div>
 </div>
@@ -1485,7 +1506,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00116">116</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
+<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00119">119</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
 
 </div>
 </div>
@@ -1499,7 +1520,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00097">97</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
+<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00100">100</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
 
 </div>
 </div>
@@ -1513,7 +1534,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00111">111</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
+<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00114">114</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
 
 </div>
 </div>
@@ -1527,7 +1548,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00125">125</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
+<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00128">128</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
 
 </div>
 </div>
@@ -1541,7 +1562,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00100">100</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
+<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00103">103</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
 
 </div>
 </div>
@@ -1555,7 +1576,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00121">121</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
+<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00124">124</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
 
 </div>
 </div>
@@ -1569,7 +1590,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00098">98</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
+<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00101">101</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
 
 </div>
 </div>
@@ -1583,7 +1604,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00096">96</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
+<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00099">99</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
 
 </div>
 </div>
@@ -1597,7 +1618,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00114">114</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
+<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00117">117</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
 
 </div>
 </div>
@@ -1611,7 +1632,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00115">115</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
+<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00118">118</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
 
 </div>
 </div>
@@ -1625,7 +1646,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00107">107</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
+<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00110">110</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
 
 </div>
 </div>
@@ -1639,7 +1660,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00106">106</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
+<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00109">109</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
 
 </div>
 </div>
@@ -1653,7 +1674,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00082">82</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
+<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00085">85</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
 
 </div>
 </div>
@@ -1667,7 +1688,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00103">103</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
+<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00106">106</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
 
 </div>
 </div>
@@ -1681,7 +1702,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00123">123</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
+<p>Definition at line <a class="el" href="cross__state__manager_8c_source.html#l00126">126</a> of file <a class="el" href="cross__state__manager_8c_source.html">cross_state_manager.c</a>.</p>
 
 </div>
 </div>

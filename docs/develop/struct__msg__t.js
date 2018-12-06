@@ -1,5 +1,6 @@
 var struct__msg__t =
 [
+    [ "colour", "struct__msg__t.html#a3695ea84babb3a1f0342057fa4f25859", null ],
     [ "event_content", "struct__msg__t.html#aea945023f69437fa26afd33e3b437ffe", null ],
     [ "mark", "struct__msg__t.html#a65a20f7802ea4b09d27189655f6afa73", null ],
     [ "message_kind", "struct__msg__t.html#ab433e1c9256ad9e6e7804004b9b8260d", null ],

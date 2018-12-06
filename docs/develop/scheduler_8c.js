@@ -1,6 +1,5 @@
 var scheduler_8c =
 [
-    [ "_INIT_FROM_MAIN", "scheduler_8c.html#a4760c554864538c04e888eb90c9b76a3", null ],
     [ "activate_LP", "scheduler_8c.html#abc4b7b27d2597ef760c4305da6cf476b", null ],
     [ "check_rendevouz_request", "scheduler_8c.html#a49bc15418f486b6b364a1066cf4bf6ad", null ],
     [ "initialize_worker_thread", "scheduler_8c.html#af405fd79c1cd59fccce27658d6e11941", null ],

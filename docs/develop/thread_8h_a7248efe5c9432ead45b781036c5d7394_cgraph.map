@@ -1,6 +1,9 @@
 <map id="create_threads" name="create_threads">
-<area shape="rect" id="node2" href="$dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="227,5,290,32"/>
-<area shape="rect" id="node4" href="$thread_8c.html#a9a978a7c6a81cdde2633f5ef7e01b7f4" title="__helper_create_thread" alt="" coords="172,56,345,83"/>
+<area shape="rect" id="node2" href="$dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="227,19,290,45"/>
+<area shape="rect" id="node4" href="$thread_8c.html#a9a978a7c6a81cdde2633f5ef7e01b7f4" title="__helper_create_thread" alt="" coords="172,95,345,121"/>
 <area shape="rect" id="node3" href="$platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="393,5,503,32"/>
 <area shape="rect" id="node5" href="$atomic_8h.html#a710db68e3b3e156fe414d7745c54ccd9" title="iCAS" alt="" coords="422,56,474,83"/>
+<area shape="rect" id="node6" href="$thread_8h.html#a170621cccd6340430706508452359dd5" title="set_affinity" alt="" coords="403,107,493,133"/>
+<area shape="rect" id="node7" href="$dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a" title="rsfree" alt="" coords="419,157,477,184"/>
+<area shape="rect" id="node8" href="$platform_8c.html#ae2af2cd130d16958394ae21e9d13035f" title="__real_free" alt="" coords="551,157,643,184"/>
 </map>

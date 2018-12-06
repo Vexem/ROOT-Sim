@@ -23,6 +23,8 @@
   $(document).ready(function() { init_search(); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="flatdoc.css" rel="stylesheet" type="text/css"/>
+<link href="inline-params.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -113,50 +115,50 @@ $(document).ready(function(){initNavTree('struct__insn.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="x86_8h_source.html">x86.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="disassemble_8h_source.html">disassemble.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:ae83c3003385af96300fb1ec0de532d87"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__insn.html#ae83c3003385af96300fb1ec0de532d87">instruction</a></td></tr>
-<tr class="separator:ae83c3003385af96300fb1ec0de532d87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87c98591bf84e20fe215e77ff5a6f741"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206">addr_method</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__insn.html#a87c98591bf84e20fe215e77ff5a6f741">addr_method</a> [3]</td></tr>
-<tr class="separator:a87c98591bf84e20fe215e77ff5a6f741"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3be952c73dd534b954588b4b159526ca"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__insn.html#a3be952c73dd534b954588b4b159526ca">operand_type</a> [3]</td></tr>
-<tr class="separator:a3be952c73dd534b954588b4b159526ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03967ecdf82e575e7f9df28c4e78be95"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__insn.html#a03967ecdf82e575e7f9df28c4e78be95">esc_function</a> )(struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *)</td></tr>
-<tr class="separator:a03967ecdf82e575e7f9df28c4e78be95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22d014b16f419642014261a8dad7138d"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__insn.html#a22d014b16f419642014261a8dad7138d">instruction</a></td></tr>
+<tr class="separator:a22d014b16f419642014261a8dad7138d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a983fb0cb1b682752b43d3bbb942bab8b"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206">addr_method</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__insn.html#a983fb0cb1b682752b43d3bbb942bab8b">addr_method</a> [3]</td></tr>
+<tr class="separator:a983fb0cb1b682752b43d3bbb942bab8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e324dfcc507682865cf9198d6b0711d"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__insn.html#a6e324dfcc507682865cf9198d6b0711d">operand_type</a> [3]</td></tr>
+<tr class="separator:a6e324dfcc507682865cf9198d6b0711d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54bf8ccaa54dbcebecdc964f7dbfae4f"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__insn.html#a54bf8ccaa54dbcebecdc964f7dbfae4f">esc_function</a> )(struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *)</td></tr>
+<tr class="separator:a54bf8ccaa54dbcebecdc964f7dbfae4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a793f340f34459c5e3ac7eed83e1fe8e3"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__insn.html#a793f340f34459c5e3ac7eed83e1fe8e3">flags</a></td></tr>
 <tr class="separator:a793f340f34459c5e3ac7eed83e1fe8e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="x86_8h_source.html#l00351">351</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
+<p>Definition at line <a class="el" href="disassemble_8h_source.html#l00488">488</a> of file <a class="el" href="disassemble_8h_source.html">disassemble.h</a>.</p>
 </div><h2 class="groupheader">Field Documentation</h2>
-<a class="anchor" id="a87c98591bf84e20fe215e77ff5a6f741"></a>
+<a class="anchor" id="a983fb0cb1b682752b43d3bbb942bab8b"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206">addr_method</a> _insn::addr_method[3]</td>
+          <td class="memname">enum <a class="el" href="disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206">addr_method</a> _insn::addr_method</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="x86_8h_source.html#l00353">353</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
+<p>Definition at line <a class="el" href="disassemble_8h_source.html#l00490">490</a> of file <a class="el" href="disassemble_8h_source.html">disassemble.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a03967ecdf82e575e7f9df28c4e78be95"></a>
+<a class="anchor" id="a54bf8ccaa54dbcebecdc964f7dbfae4f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void(* _insn::esc_function) (struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *)</td>
+          <td class="memname">void(* _insn::esc_function)(struct <a class="el" href="structdisassembly__state.html">disassembly_state</a> *)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="x86_8h_source.html#l00355">355</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
+<p>Definition at line <a class="el" href="disassemble_8h_source.html#l00492">492</a> of file <a class="el" href="disassemble_8h_source.html">disassemble.h</a>.</p>
 
 </div>
 </div>
@@ -170,39 +172,40 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="x86_8h_source.html#l00356">356</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
+<p>Definition at line <a class="el" href="disassemble_8h_source.html#l00493">493</a> of file <a class="el" href="disassemble_8h_source.html">disassemble.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ae83c3003385af96300fb1ec0de532d87"></a>
+<a class="anchor" id="a22d014b16f419642014261a8dad7138d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char* _insn::instruction</td>
+          <td class="memname">char * _insn::instruction</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="x86_8h_source.html#l00352">352</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
+<p>Definition at line <a class="el" href="disassemble_8h_source.html#l00489">489</a> of file <a class="el" href="disassemble_8h_source.html">disassemble.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a3be952c73dd534b954588b4b159526ca"></a>
+<a class="anchor" id="a6e324dfcc507682865cf9198d6b0711d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a> _insn::operand_type[3]</td>
+          <td class="memname">enum <a class="el" href="disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4">operand_type</a> _insn::operand_type</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="x86_8h_source.html#l00354">354</a> of file <a class="el" href="x86_8h_source.html">x86.h</a>.</p>
+<p>Definition at line <a class="el" href="disassemble_8h_source.html#l00491">491</a> of file <a class="el" href="disassemble_8h_source.html">disassemble.h</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+<hr/>The documentation for this struct was generated from the following files:<ul>
+<li>/home/travis/build/HPDCS/ROOT-Sim/src/arch/x86/<a class="el" href="disassemble_8h_source.html">disassemble.h</a></li>
 <li>/home/travis/build/HPDCS/ROOT-Sim/src/arch/<a class="el" href="x86_8h_source.html">x86.h</a></li>
 </ul>
 </div><!-- contents -->
