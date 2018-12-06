@@ -22,7 +22,7 @@ You can get the latest version of the library using the links on the right colum
 {% for post in site.posts %}
 <h2><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h2>
 {{ post.date | date_to_string }} &middot; {{ post.author }}<br/>
-{{ post.content | strip_html | truncatewords:75}}<br>
+{{ post.content | strip_html | remove_first:post.title | truncatewords:75}}<br>
 <a href="{{ site.url}}{{ post.url }}">Read more...</a><br><br>
 {% endfor %}
 
