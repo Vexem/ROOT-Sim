@@ -19,9 +19,8 @@
 <area shape="rect" id="node18" href="$communication_2gvt_8c.html#a76f513e8aeeeb0abebc46f19ceb72293" title="register_outgoing_msg" alt="" coords="543,465,713,491"/>
 <area shape="rect" id="node20" href="$wnd_8c.html#a16850c4710b9b54fc67b88547b3b87ee" title="store_outgoing_msg" alt="" coords="551,211,705,238"/>
 <area shape="rect" id="node19" href="$atomic_8h.html#ae2153aa1dc0d0362246d6e14f60b5550" title="atomic_inc" alt="" coords="785,465,876,491"/>
-<area shape="rect" id="node22" href="$msgchannel_8c.html#a1ae9825eb7701f2b3f546de2cf071fe2" title="insert_msg" alt="" coords="581,110,675,137"/>
-<area shape="rect" id="node25" href="$preempt_8c.html#a9e0e11fb05a00a94df0c1a82fcf36ceb" title="update_min_in_transit" alt="" coords="546,59,710,86"/>
-<area shape="rect" id="node23" href="$dymelor_8h.html#a480bc47d84033faa5410d5a3c4470ff7" title="rsrealloc" alt="" coords="793,110,869,137"/>
-<area shape="rect" id="node24" href="$platform_8c.html#af571772318d146f693e37e7a580103c0" title="__real_realloc" alt="" coords="948,110,1057,137"/>
-<area shape="rect" id="node26" href="$atomic_8h.html#a697a618720d19f9d4fb9f20d3b0ef604" title="CAS" alt="" coords="806,59,855,86"/>
+<area shape="rect" id="node22" href="$msgchannel_8c.html#a1ae9825eb7701f2b3f546de2cf071fe2" title="insert_msg" alt="" coords="581,59,675,86"/>
+<area shape="rect" id="node25" href="$preempt_8c.html#a9e0e11fb05a00a94df0c1a82fcf36ceb" title="update_min_in_transit" alt="" coords="546,110,710,137"/>
+<area shape="rect" id="node23" href="$dymelor_8h.html#a480bc47d84033faa5410d5a3c4470ff7" title="rsrealloc" alt="" coords="793,59,869,86"/>
+<area shape="rect" id="node24" href="$platform_8c.html#af571772318d146f693e37e7a580103c0" title="__real_realloc" alt="" coords="948,59,1057,86"/>
 </map>

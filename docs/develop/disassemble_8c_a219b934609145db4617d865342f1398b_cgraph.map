@@ -1,5 +1,0 @@
-<map id="esc_0f10_17" name="esc_0f10_17">
-<area shape="rect" id="node2" href="$disassemble_8c.html#aeb9ccfcc110399b92ba8686f9ea19689" title="read_modrm" alt="" coords="156,5,261,32"/>
-<area shape="rect" id="node3" href="$disassemble_8c.html#ad04659b6a93404c93c1744c46de19c7a" title="sse_esc" alt="" coords="172,56,245,83"/>
-<area shape="rect" id="node4" href="$disassemble_8c.html#a5e43ff8ad5ca6db47c94d876ed0e9111" title="sse_prefix_to_index" alt="" coords="309,56,456,83"/>
-</map>

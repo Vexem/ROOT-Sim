@@ -2,7 +2,6 @@ var searchData=
 [
   ['objects',['objects',['../struct__ioctl__info.html#a10adcaf9b020ba8c6d259d5c21e534f5',1,'_ioctl_info']]],
   ['one',['one',['../xxhash_8c.html#a91c24f18b9bb6f72c0843ea3ab2bbede',1,'xxhash.c']]],
-  ['one_5fbyte_5fopcode_5ftable',['one_byte_opcode_table',['../disassemble_8c.html#a7e47813eb264a5ef08341698142ce0d1',1,'disassemble.c']]],
   ['ongvt',['OnGVT',['../structlp__struct.html#abfb6428695f3564d68649bf9622e9db3',1,'lp_struct']]],
   ['op',['op',['../structdisassembly__state.html#afd9a2bea03fcaee3170b3eaa8ea5b820',1,'disassembly_state']]],
   ['opcode',['opcode',['../structinsn__info__x86.html#a62e192c35a1555715e321b59c31f7f05',1,'insn_info_x86::opcode()'],['../structdisassembly__state.html#a5635e2fc38d488b845013fbb7b9f6aaf',1,'disassembly_state::opcode()']]],

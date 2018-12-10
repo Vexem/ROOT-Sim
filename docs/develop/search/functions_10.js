@@ -3,7 +3,6 @@ var searchData=
   ['random',['Random',['../numerical_8c.html#af6956caec1509dadd719fddaaf692489',1,'Random(void):&#160;numerical.c'],['../ROOT-Sim_8h.html#af6956caec1509dadd719fddaaf692489',1,'Random(void):&#160;numerical.c']]],
   ['randomrange',['RandomRange',['../numerical_8c.html#aa41b8512b10550a2e21feec991f752b4',1,'RandomRange(int min, int max):&#160;numerical.c'],['../ROOT-Sim_8h.html#aa41b8512b10550a2e21feec991f752b4',1,'RandomRange(int min, int max):&#160;numerical.c']]],
   ['randomrangenonuniform',['RandomRangeNonUniform',['../numerical_8c.html#a3fb512e9f25cd00982a446931d463082',1,'RandomRangeNonUniform(int x, int min, int max):&#160;numerical.c'],['../ROOT-Sim_8h.html#a3fb512e9f25cd00982a446931d463082',1,'RandomRangeNonUniform(int x, int min, int max):&#160;numerical.c']]],
-  ['read_5fmodrm',['read_modrm',['../disassemble_8c.html#aeb9ccfcc110399b92ba8686f9ea19689',1,'disassemble.c']]],
   ['rebind_5flps',['rebind_LPs',['../binding_8c.html#ae26b2a8055156e8648f8ad806f5fa5b0',1,'rebind_LPs(void):&#160;binding.c'],['../binding_8h.html#ae26b2a8055156e8648f8ad806f5fa5b0',1,'rebind_LPs(void):&#160;binding.c']]],
   ['rebuild_5fstate',['rebuild_state',['../state_8h.html#a5f57db3d5b6a3616c44609b2658e300c',1,'state.h']]],
   ['receive_5fack',['receive_ack',['../communication_8h.html#a80d48a5fa3debe1e9e7ced17af2d8cbb',1,'communication.h']]],

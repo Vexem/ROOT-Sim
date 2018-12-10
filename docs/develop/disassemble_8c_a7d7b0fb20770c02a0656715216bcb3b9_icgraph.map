@@ -1,7 +1,0 @@
-<map id="format_addr_v" name="format_addr_v">
-<area shape="rect" id="node2" href="$disassemble_8c.html#a7592854d94e0f19b3a5855b1f01dac3a" title="format_addr_op" alt="" coords="168,5,292,32"/>
-<area shape="rect" id="node3" href="$x86_8h.html#a6c3a838f0fdd7b2e11c8c010854b840a" title="x86_disassemble_instruction" alt="" coords="340,5,547,32"/>
-<area shape="rect" id="node4" href="$ecs_8c.html#a672ea2cce8f7ae1214e0a41f46884933" title="ecs_secondary" alt="" coords="595,5,712,32"/>
-<area shape="rect" id="node5" href="$ecs_8c.html#adbe06ee703b26dcc8d82e505075f942d" title="ECS" alt="" coords="760,5,808,32"/>
-<area shape="rect" id="node6" href="$ecs_8c.html#ade56ef97d7d3ae799d60f8616f2062cb" title="ecs_initiate" alt="" coords="856,5,951,32"/>
-</map>

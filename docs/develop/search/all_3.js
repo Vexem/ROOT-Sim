@@ -15,7 +15,6 @@ var searchData=
   ['calqueue_5finit',['calqueue_init',['../calqueue_8c.html#adcfbe235cb9e2ef41cc8b565beb8fd6a',1,'calqueue_init(void):&#160;calqueue.c'],['../calqueue_8h.html#adcfbe235cb9e2ef41cc8b565beb8fd6a',1,'calqueue_init(void):&#160;calqueue.c']]],
   ['calqueue_5fnode',['calqueue_node',['../calqueue_8h.html#af294a8fbc07757dd40612ac46b12bae0',1,'calqueue.h']]],
   ['calqueue_5fput',['calqueue_put',['../calqueue_8c.html#abb2b24c674d45ee24727e52597008041',1,'calqueue_put(double timestamp, void *payload):&#160;calqueue.c'],['../calqueue_8h.html#a6ce456642093e0ebcd9563dd723781d8',1,'calqueue_put(double, void *):&#160;calqueue.c']]],
-  ['cas',['CAS',['../atomic_8h.html#a697a618720d19f9d4fb9f20d3b0ef604',1,'CAS(volatile uint64_t *ptr, uint64_t oldVal, uint64_t newVal):&#160;x86.c'],['../x86_8c.html#a697a618720d19f9d4fb9f20d3b0ef604',1,'CAS(volatile uint64_t *ptr, uint64_t oldVal, uint64_t newVal):&#160;x86.c']]],
   ['ccgs_2ec',['ccgs.c',['../ccgs_8c.html',1,'']]],
   ['ccgs_2eh',['ccgs.h',['../ccgs_8h.html',1,'']]],
   ['ccgs_5fcan_5fhalt_5fsimulation',['ccgs_can_halt_simulation',['../ccgs_8c.html#a3126158ffe568559a03e656f723667a1',1,'ccgs_can_halt_simulation(void):&#160;ccgs.c'],['../ccgs_8h.html#a3126158ffe568559a03e656f723667a1',1,'ccgs_can_halt_simulation(void):&#160;ccgs.c']]],

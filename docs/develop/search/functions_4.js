@@ -1,17 +1,9 @@
 var searchData=
 [
-  ['d8_5fopcode',['d8_opcode',['../disassemble_8c.html#a0e1f586ccd2cbc69c218d15cb5cc5486',1,'disassemble.c']]],
-  ['d9_5fopcode',['d9_opcode',['../disassemble_8c.html#adee8777f524cc2889378deda9eaccc49',1,'disassemble.c']]],
-  ['da_5fopcode',['da_opcode',['../disassemble_8c.html#ae2514b9b28c71bbecd64bd0f3827021a',1,'disassemble.c']]],
-  ['db_5fopcode',['db_opcode',['../disassemble_8c.html#a4aeb7375218fe52553cdd94e8752a8c6',1,'disassemble.c']]],
-  ['dc_5fopcode',['dc_opcode',['../disassemble_8c.html#ab039900e0258977a4a6271def21cdded',1,'disassemble.c']]],
-  ['dd_5fopcode',['dd_opcode',['../disassemble_8c.html#a964b216be51b44276ab0de35e00ca0ea',1,'disassemble.c']]],
-  ['de_5fopcode',['de_opcode',['../disassemble_8c.html#a8e0b9edc56f94d6e04616c799fefcda8',1,'disassemble.c']]],
   ['debug',['debug',['../traps-dummy_8h.html#ac7465e1fb2b9c137abbfc4aa266cab12',1,'traps-dummy.h']]],
   ['define_5fmutex',['DEFINE_MUTEX',['../cross__state__manager_8c.html#a44503b769b583487ff18d03ee0b47e05',1,'cross_state_manager.c']]],
   ['device_5fattr',['DEVICE_ATTR',['../cross__state__manager_8c.html#a33dcbff5fe264607ef11f2b1d82269d1',1,'cross_state_manager.c']]],
   ['device_5fnot_5favailable',['device_not_available',['../traps-dummy_8h.html#a75e3a176f45c1a7eb56669c64f10ca08',1,'traps-dummy.h']]],
-  ['df_5fopcode',['df_opcode',['../disassemble_8c.html#ae60c63508d8f86b63290f85a00e20eff',1,'disassemble.c']]],
   ['dirty_5fmem',['dirty_mem',['../dymelor_8c.html#a63e652cb5eb2eb0fd8edb39e59ef7bbe',1,'dirty_mem(void *base, int size):&#160;dymelor.c'],['../dymelor_8h.html#af3e133eb1e589a684794f815e55eafaa',1,'dirty_mem(void *, int):&#160;dymelor.c']]],
   ['dirty_5fsize',['dirty_size',['../dymelor_8h.html#a7949b85fe03df856881243990c5bf91d',1,'dymelor.h']]],
   ['disable_5fpreemption',['disable_preemption',['../preempt_8c.html#a72b707faabaeb53be380d902fd30bfc6',1,'disable_preemption(void):&#160;preempt.c'],['../scheduler_8h.html#a72b707faabaeb53be380d902fd30bfc6',1,'disable_preemption(void):&#160;preempt.c']]],

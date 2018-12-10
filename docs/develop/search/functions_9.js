@@ -1,7 +1,6 @@
 var searchData=
 [
   ['icas',['iCAS',['../atomic_8h.html#a710db68e3b3e156fe414d7745c54ccd9',1,'iCAS(volatile uint32_t *ptr, uint32_t oldVal, uint32_t newVal):&#160;x86.c'],['../x86_8c.html#a710db68e3b3e156fe414d7745c54ccd9',1,'iCAS(volatile uint32_t *ptr, uint32_t oldVal, uint32_t newVal):&#160;x86.c']]],
-  ['immed_5fgrp_5f1',['immed_grp_1',['../disassemble_8c.html#a7e1fdeb89c16f2049eea46dd65408f81',1,'disassemble.c']]],
   ['init_5fchannel',['init_channel',['../msgchannel_8c.html#a9da640576408c47378535edae6e4fec4',1,'init_channel(void):&#160;msgchannel.c'],['../msgchannel_8h.html#a9da640576408c47378535edae6e4fec4',1,'init_channel(void):&#160;msgchannel.c']]],
   ['initialization_5fcomplete',['initialization_complete',['../core_8c.html#a9835611a359d96732cb2531b08212a94',1,'initialization_complete(void):&#160;core.c'],['../core_8h.html#a9835611a359d96732cb2531b08212a94',1,'initialization_complete(void):&#160;core.c']]],
   ['initialize_5fbinding_5fblocks',['initialize_binding_blocks',['../process_8c.html#acefccda9cabe7555434f95628cd9686f',1,'initialize_binding_blocks(void):&#160;process.c'],['../process_8h.html#acefccda9cabe7555434f95628cd9686f',1,'initialize_binding_blocks(void):&#160;process.c']]],

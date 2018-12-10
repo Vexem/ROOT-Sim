@@ -26,7 +26,6 @@ var searchData=
   ['offsetof_5fexec_5fcontext_5ft_5frsp',['offsetof_exec_context_t_rsp',['../asm__defines_8h.html#a93ff9a9784c211f8f6015306893d091a',1,'asm_defines.h']]],
   ['offsetof_5fstruct',['offsetof_struct',['../asm__defines_8h.html#ad39accb4c9da6dde153fb20ea9c68322',1,'asm_defines.h']]],
   ['one',['one',['../xxhash_8c.html#a91c24f18b9bb6f72c0843ea3ab2bbede',1,'xxhash.c']]],
-  ['one_5fbyte_5fopcode_5ftable',['one_byte_opcode_table',['../disassemble_8c.html#a7e47813eb264a5ef08341698142ce0d1',1,'disassemble.c']]],
   ['one_5fused_5fslot',['ONE_USED_SLOT',['../slab_8c.html#a72560ae981bfb319542afc54f14c0190',1,'slab.c']]],
   ['ongvt',['OnGVT',['../structlp__struct.html#abfb6428695f3564d68649bf9622e9db3',1,'lp_struct']]],
   ['ongvt_5finc',['OnGVT_inc',['../core_8h.html#a3f4dbcef1f8f3affaf967a942ddf6089',1,'core.h']]],

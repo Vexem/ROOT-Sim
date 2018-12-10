@@ -45,7 +45,6 @@ var searchData=
   ['idx',['idx',['../struct__malloc__area.html#a18b2de1a94c11b10a512db727b155609',1,'_malloc_area']]],
   ['immed',['immed',['../structinsn__info__x86.html#ad6e7a1bbdcf258a1b70b30143b938fc3',1,'insn_info_x86']]],
   ['immed_5f1',['IMMED_1',['../disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206a7faca00ac104d8f18df7c9844448cd8f',1,'IMMED_1():&#160;disassemble.h'],['../x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206a7faca00ac104d8f18df7c9844448cd8f',1,'IMMED_1():&#160;x86.h']]],
-  ['immed_5fgrp_5f1',['immed_grp_1',['../disassemble_8c.html#a7e1fdeb89c16f2049eea46dd65408f81',1,'disassemble.c']]],
   ['immed_5foffset',['immed_offset',['../structinsn__info__x86.html#a5ba85191f4b5c5fd21d267c9d4e97599',1,'insn_info_x86::immed_offset()'],['../structdisassembly__state.html#a5608a187e8b9d7bcc826de7ba48e227a',1,'disassembly_state::immed_offset()']]],
   ['immed_5fsize',['immed_size',['../structinsn__info__x86.html#a367e39e7456fb16046fcafd7cbc02345',1,'insn_info_x86::immed_size()'],['../structdisassembly__state.html#ab74b5dbcf22abd1530ea2f2757ecb20d',1,'disassembly_state::immed_size()']]],
   ['in_5fred_5fphase',['in_red_phase',['../communication_2gvt_8h.html#a68f3eeb987d9cf402eaba6285d8c0b7d',1,'gvt.h']]],

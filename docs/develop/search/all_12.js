@@ -130,7 +130,7 @@ var searchData=
   ['rdx',['rdx',['../struct____exec__context__t.html#adb85be5d948baf31c4ebade8253aa8e2',1,'__exec_context_t']]],
   ['read',['read',['../struct__msg__buff.html#afd6d14a76eaaeada76c5536b7533a953',1,'_msg_buff']]],
   ['read_5fdest',['read_dest',['../structdisassembly__state.html#a533bb92a3ec357b118596fb3fdc3a852',1,'disassembly_state']]],
-  ['read_5fmodrm',['read_modrm',['../structdisassembly__state.html#a2a27c9ef27a802749851253a3be9f124',1,'disassembly_state::read_modrm()'],['../disassemble_8c.html#aeb9ccfcc110399b92ba8686f9ea19689',1,'read_modrm():&#160;disassemble.c']]],
+  ['read_5fmodrm',['read_modrm',['../structdisassembly__state.html#a2a27c9ef27a802749851253a3be9f124',1,'disassembly_state']]],
   ['readme_2emd',['README.md',['../README_8md.html',1,'']]],
   ['rebind_5finterval',['REBIND_INTERVAL',['../binding_8c.html#aa43355c7a50358be7032e0c702bcd0ef',1,'binding.c']]],
   ['rebind_5flps',['rebind_LPs',['../binding_8c.html#ae26b2a8055156e8648f8ad806f5fa5b0',1,'rebind_LPs(void):&#160;binding.c'],['../binding_8h.html#ae26b2a8055156e8648f8ad806f5fa5b0',1,'rebind_LPs(void):&#160;binding.c']]],
