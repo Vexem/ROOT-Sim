@@ -64,7 +64,6 @@ var searchData=
   ['lp_5fdistribution_5finvalid',['LP_DISTRIBUTION_INVALID',['../core_8h.html#a99fb83031ce9923c84392b4e92f956b5a32998ffe81df802d9b7a51f11fc9ac41',1,'core.h']]],
   ['lp_5fknapsack',['LP_knapsack',['../binding_8c.html#a7356539bd24b02d48f6ac1d7e37a8eb4',1,'binding.c']]],
   ['lp_5fmain_5floop',['LP_main_loop',['../scheduler_8c.html#a1b1b085c6b05a9d202a1629dcd71cffe',1,'LP_main_loop(void *args):&#160;scheduler.c'],['../scheduler_8h.html#a1b1b085c6b05a9d202a1629dcd71cffe',1,'LP_main_loop(void *args):&#160;scheduler.c']]],
-  ['lp_5fmark_5finverse_2ec',['lp_mark_inverse.c',['../lp__mark__inverse_8c.html',1,'']]],
   ['lp_5fmemory_5fioctl_5finfo',['lp_memory_ioctl_info',['../ecs_8c.html#a16a835abb90f21eb8c5bbb79a6b33717',1,'ecs.c']]],
   ['lp_5fpreallocation_5finitial_5faddress',['LP_PREALLOCATION_INITIAL_ADDRESS',['../dymelor_8h.html#acedb816c002a9b5b27d493de1b451cc8',1,'dymelor.h']]],
   ['lp_5fstack_5fsize',['LP_STACK_SIZE',['../process_8h.html#a49b86a948d5bcaa4b10e093ce5f728d1',1,'process.h']]],

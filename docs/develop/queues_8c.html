@@ -260,7 +260,7 @@ Francesco Quaglia</dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This function generates a mark value that is unique w.r.t. the previous values for each Logical Process. It is based on the Cantor Pairing Function, which maps 2 naturals to a single natural. The two naturals are the LP gid (which is unique in the system) and a non decreasing number which gets incremented (on a per-LP basis) upon each function call. It's fast to calculate the mark, it's not fast to invert it. Therefore, inversion is not supported at all in the simulator code (but an external utility is provided for debugging purposes, which can be found in <a class="el" href="lp__mark__inverse_8c.html">src/lp_mark_inverse.c</a>)</p>
+<p>This function generates a mark value that is unique w.r.t. the previous values for each Logical Process. It is based on the Cantor Pairing Function, which maps 2 naturals to a single natural. The two naturals are the LP gid (which is unique in the system) and a non decreasing number which gets incremented (on a per-LP basis) upon each function call. It's fast to calculate the mark, it's not fast to invert it. Therefore, inversion is not supported at all in the simulator code (but an external utility is provided for debugging purposes, which can be found in src/lp_mark_inverse.c)</p>
 <dl class="section author"><dt>Author</dt><dd>Alessandro Pellegrini</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['main',['main',['../lp__mark__inverse_8c.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;lp_mark_inverse.c'],['../main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.c']]],
+  ['main',['main',['../main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main.c']]],
   ['main_5fsimulation_5floop',['main_simulation_loop',['../main_8c.html#aa729cb27350c33119484501e13df4fec',1,'main.c']]],
   ['malloc_5farea_5finit',['malloc_area_init',['../dymelor_8c.html#ac1e32353ad7bdfbf4b701db28602fcbc',1,'dymelor.c']]],
   ['malloc_5fstate_5finit',['malloc_state_init',['../dymelor_8c.html#a8e070de8750bb4afd1be813809e70eb9',1,'malloc_state_init(void):&#160;dymelor.c'],['../dymelor_8h.html#a8e070de8750bb4afd1be813809e70eb9',1,'malloc_state_init(void):&#160;dymelor.c']]],

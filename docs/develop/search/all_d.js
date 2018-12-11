@@ -3,7 +3,7 @@ var searchData=
   ['m_5fread',['M_READ',['../msgchannel_8c.html#a268009c88d5f2165cff85612fa1eda10',1,'msgchannel.c']]],
   ['m_5fstate',['m_state',['../structmemory__map.html#a36ed936aa6dafce74ceaa9b2bb2b8bfb',1,'memory_map']]],
   ['m_5fwrite',['M_WRITE',['../msgchannel_8c.html#ac0120484eb3e8fb4d2ccbe27a5ea8178',1,'msgchannel.c']]],
-  ['main',['main',['../lp__mark__inverse_8c.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;lp_mark_inverse.c'],['../main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.c']]],
+  ['main',['main',['../main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main.c']]],
   ['main_2ec',['main.c',['../main_8c.html',1,'']]],
   ['main_5fsimulation_5floop',['main_simulation_loop',['../main_8c.html#aa729cb27350c33119484501e13df4fec',1,'main.c']]],
   ['major',['major',['../cross__state__manager_8c.html#ac8947941479c38403a09c14a60b03f01',1,'cross_state_manager.c']]],

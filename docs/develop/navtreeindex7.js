@@ -1,8 +1,5 @@
 var NAVTREEINDEX7 =
 {
-"schedule_8h.html#ad27d37ec07359a0746cac39967ab047d":[2,0,0,0,0,0,2,5,13],
-"schedule_8h.html#ae198da9ba5f8aefa8cc3860b7bca0a2c":[2,0,0,0,0,0,2,5,12],
-"schedule_8h.html#aecb53f40fe3f161d8d7b7f24ed6abfac":[2,0,0,0,0,0,2,5,0],
 "schedule_8h_source.html":[2,0,0,0,0,0,2,5],
 "scheduler_8c.html":[2,0,0,9,6],
 "scheduler_8c.html#a1b1b085c6b05a9d202a1629dcd71cffe":[2,0,0,9,6,3],
@@ -249,5 +246,8 @@ var NAVTREEINDEX7 =
 "struct__fault__info__t.html#a7f5404723874a4705921e9857d771567":[1,0,5,3],
 "struct__fault__info__t.html#ab62f3d29e6880eb4ebfdaf52237b1639":[1,0,5,2],
 "struct__gid__t.html":[1,0,6],
-"struct__gid__t.html#a0af56a16d80874f71d2b1e5edc1dc506":[1,0,6,0]
+"struct__gid__t.html#a0af56a16d80874f71d2b1e5edc1dc506":[1,0,6,0],
+"struct__gvt__buffer.html":[1,0,7],
+"struct__gvt__buffer.html#a7db6362f9dd612b9498dd362ff17ef11":[1,0,7,2],
+"struct__gvt__buffer.html#abbd5d6875cc4e79d6146abe6453ced0b":[1,0,7,1]
 };
