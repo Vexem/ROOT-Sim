@@ -44,7 +44,6 @@ var searchData=
   ['slab_5ffree',['slab_free',['../mm_8h.html#a891cd5abfed9deb98413ab7e7c29ef61',1,'slab_free(struct slab_chain *const sch, const void *const addr):&#160;slab.c'],['../slab_8c.html#a891cd5abfed9deb98413ab7e7c29ef61',1,'slab_free(struct slab_chain *const sch, const void *const addr):&#160;slab.c']]],
   ['slab_5finit',['slab_init',['../mm_8h.html#a9ddefb6c0499750d4928a2462d3aa0ae',1,'slab_init(const size_t itemsize):&#160;slab.c'],['../slab_8c.html#a9ddefb6c0499750d4928a2462d3aa0ae',1,'slab_init(const size_t itemsize):&#160;slab.c']]],
   ['slab_5fis_5fvalid',['slab_is_valid',['../slab_8c.html#ac0e4a2a4ab26d7f2399eecbb72fc4cff',1,'slab.c']]],
-  ['slab_5ftraverse',['slab_traverse',['../slab_8c.html#ad2eb7d5429c46bc520999c03e31dd93d',1,'slab.c']]],
   ['smallest_5ftimestamp_5ffirst',['smallest_timestamp_first',['../stf_8c.html#a726ca866bf5abd4a57d94280908b8f14',1,'smallest_timestamp_first(void):&#160;stf.c'],['../stf_8h.html#a726ca866bf5abd4a57d94280908b8f14',1,'smallest_timestamp_first(void):&#160;stf.c']]],
   ['smp_5fthermal_5finterrupt',['smp_thermal_interrupt',['../traps-dummy_8h.html#a502cc410c72796f2ee9cae0226d74153',1,'traps-dummy.h']]],
   ['spin_5flock',['spin_lock',['../atomic_8h.html#a7a6b9868956dd8e51e5de80e16c76fc4',1,'spin_lock(spinlock_t *s):&#160;x86.c'],['../x86_8c.html#a7a6b9868956dd8e51e5de80e16c76fc4',1,'spin_lock(spinlock_t *s):&#160;x86.c']]],

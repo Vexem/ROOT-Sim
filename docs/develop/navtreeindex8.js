@@ -1,6 +1,5 @@
 var NAVTREEINDEX8 =
 {
-"struct__gvt__buffer_1_1__gvt__buffer__row__t.html#a0375e69d05439ca64af6f972a24e08b0":[1,0,7,0,0],
 "struct__gvt__buffer_1_1__gvt__buffer__row__t.html#a18e41d0e7696d89cae06611f08588863":[1,0,7,0,1],
 "struct__gvt__buffer_1_1__gvt__buffer__row__t.html#a510124482423188547b10a306862ccb0":[1,0,7,0,3],
 "struct__gvt__buffer_1_1__gvt__buffer__row__t.html#aedc0016edc7a61f882df22edcfb808a6":[1,0,7,0,2],
@@ -249,5 +248,6 @@ var NAVTREEINDEX8 =
 "structobstacles__t.html#a7778089f24c5e163373a2483b20b49bf":[1,0,36,0],
 "structrootsim__list.html":[1,0,37],
 "structrootsim__list.html#a02ca8d3d74031b0eafef56b4f351bf30":[1,0,37,2],
-"structrootsim__list.html#a39e1193dd4b00d86fcbfef6ecd3fd1d2":[1,0,37,1]
+"structrootsim__list.html#a39e1193dd4b00d86fcbfef6ecd3fd1d2":[1,0,37,1],
+"structrootsim__list.html#ade6389bebff6c77742a7a8913092e338":[1,0,37,0]
 };

@@ -95,7 +95,6 @@ var searchData=
   ['slab_5finit',['slab_init',['../mm_8h.html#a9ddefb6c0499750d4928a2462d3aa0ae',1,'slab_init(const size_t itemsize):&#160;slab.c'],['../slab_8c.html#a9ddefb6c0499750d4928a2462d3aa0ae',1,'slab_init(const size_t itemsize):&#160;slab.c']]],
   ['slab_5fis_5fvalid',['slab_is_valid',['../slab_8c.html#ac0e4a2a4ab26d7f2399eecbb72fc4cff',1,'slab.c']]],
   ['slab_5fmsg_5fsize',['SLAB_MSG_SIZE',['../communication_8h.html#a14ef486128b10eab3ff55b61b9579bab',1,'communication.h']]],
-  ['slab_5ftraverse',['slab_traverse',['../slab_8c.html#ad2eb7d5429c46bc520999c03e31dd93d',1,'slab.c']]],
   ['slabsize',['slabsize',['../structslab__chain.html#a75db576601bd706c2e0b51365742f899',1,'slab_chain']]],
   ['slots',['slots',['../structslab__header.html#a2734d080febf1c3fa0804a4332e74b2c',1,'slab_header::slots()'],['../communication_8h.html#a3de26a5dbd2276c1486afbba5fc8de59',1,'SLOTS():&#160;communication.h']]],
   ['slots_5fall_5fzero',['SLOTS_ALL_ZERO',['../slab_8c.html#a6710951ba04cf2729fe7b5597e422864',1,'slab.c']]],

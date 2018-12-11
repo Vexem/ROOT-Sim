@@ -9,6 +9,5 @@ var slab_8c =
     [ "slab_destroy", "slab_8c.html#af02abdb0d775d32a041c665b80f68448", null ],
     [ "slab_free", "slab_8c.html#a891cd5abfed9deb98413ab7e7c29ef61", null ],
     [ "slab_init", "slab_8c.html#a9ddefb6c0499750d4928a2462d3aa0ae", null ],
-    [ "slab_is_valid", "slab_8c.html#ac0e4a2a4ab26d7f2399eecbb72fc4cff", null ],
-    [ "slab_traverse", "slab_8c.html#ad2eb7d5429c46bc520999c03e31dd93d", null ]
+    [ "slab_is_valid", "slab_8c.html#ac0e4a2a4ab26d7f2399eecbb72fc4cff", null ]
 ];
