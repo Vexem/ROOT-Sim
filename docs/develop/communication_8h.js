@@ -32,11 +32,8 @@ var communication_8h =
       [ "RENDEZVOUS_PAGE_WRITE_BACK", "communication_8h.html#aae2939440b2eb406455c0f4a361d92afa72866eb13d55436a6e62f403a05007e6", null ],
       [ "MAX_VALUE_CONTROL", "communication_8h.html#aae2939440b2eb406455c0f4a361d92afa730a7b0c83aa1189baaed153e83a738e", null ]
     ] ],
-    [ "comm_finalize", "communication_8h.html#acae24b1f48d2fe459c280cf33e61cc6e", null ],
     [ "communication_fini", "communication_8h.html#a6bd2f352e0326608e9a2bef2efbde184", null ],
-    [ "communication_fini_thread", "communication_8h.html#a968b638456f1c0c8a527a859ec62d4c6", null ],
     [ "communication_init", "communication_8h.html#a9d1c122bc3538d94d6fd8328cd6c6a2d", null ],
-    [ "communication_init_thread", "communication_8h.html#aba4063679ded48b45167fecb88abaa32", null ],
     [ "dump_msg_content", "communication_8h.html#ac5d2aab0b4d3d676e4a8fd2d3d6e7bf9", null ],
     [ "get_msg_from_slab", "communication_8h.html#afff0e221f1375dfb80dd4ca64b01a26e", null ],
     [ "get_msg_hdr_from_slab", "communication_8h.html#a30a6ca7540bd034f2f4fa9ddceed6441", null ],

@@ -1,17 +1,17 @@
 <map id="receive_remote_msgs" name="receive_remote_msgs">
 <area shape="rect" id="node2" href="$atomic_8h.html#afd2c05472274bd1c73d5408a213cf429" title="spin_trylock" alt="" coords="243,5,340,32"/>
 <area shape="rect" id="node4" href="$process_8c.html#a2193e0386f7858db77f38146a15d3cd1" title="find_lp_by_gid" alt="" coords="440,107,551,133"/>
-<area shape="rect" id="node5" href="$communication_8c.html#ab957dc2cd186382c50ef8cfde9761909" title="get_msg_from_slab" alt="" coords="217,259,365,285"/>
+<area shape="rect" id="node5" href="$communication_8c.html#ab957dc2cd186382c50ef8cfde9761909" title="Get a buffer to keep a message. " alt="" coords="217,259,365,285"/>
 <area shape="rect" id="node9" href="$atomic_8h.html#a4e8c9d1c6101995f1ecd2141d77e4824" title="spin_unlock" alt="" coords="631,360,727,387"/>
 <area shape="rect" id="node10" href="$dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="260,411,323,437"/>
-<area shape="rect" id="node12" href="$communication_8c.html#aebec05b86f3467473116d555954b80f4" title="validate_msg" alt="" coords="625,157,732,184"/>
+<area shape="rect" id="node12" href="$communication_8c.html#aebec05b86f3467473116d555954b80f4" title="Perform some sanity checks on a message buffer. " alt="" coords="625,157,732,184"/>
 <area shape="rect" id="node14" href="$queues_8c.html#a9ff164dd6a938afa7e892f4028c2a033" title="insert_bottom_half" alt="" coords="220,183,363,209"/>
 <area shape="rect" id="node3" href="$x86_8c.html#af8f8b0714bc5f4f7238feae5ca425117" title="atomic_test_and_set" alt="" coords="417,5,573,32"/>
 <area shape="rect" id="node6" href="$mm_8h.html#a13199823c54d944aa128966cb35c5aa3" title="slab_alloc" alt="" coords="453,309,537,336"/>
 <area shape="rect" id="node7" href="$atomic_8h.html#a7a6b9868956dd8e51e5de80e16c76fc4" title="spin_lock" alt="" coords="639,259,719,285"/>
 <area shape="rect" id="node8" href="$slab_8c.html#ac0e4a2a4ab26d7f2399eecbb72fc4cff" title="slab_is_valid" alt="" coords="628,309,729,336"/>
 <area shape="rect" id="node11" href="$platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="441,411,550,437"/>
-<area shape="rect" id="node13" href="$communication_8c.html#ab442ee81854e910ac0b21e3caf21cc48" title="mark_to_gid" alt="" coords="784,157,885,184"/>
+<area shape="rect" id="node13" href="$communication_8c.html#ab442ee81854e910ac0b21e3caf21cc48" title="Tell the GID of the sender of a message, given its mark. " alt="" coords="784,157,885,184"/>
 <area shape="rect" id="node15" href="$msgchannel_8c.html#a1ae9825eb7701f2b3f546de2cf071fe2" title="insert_msg" alt="" coords="449,208,542,235"/>
 <area shape="rect" id="node18" href="$preempt_8c.html#a9e0e11fb05a00a94df0c1a82fcf36ceb" title="update_min_in_transit" alt="" coords="413,259,577,285"/>
 <area shape="rect" id="node16" href="$dymelor_8h.html#a480bc47d84033faa5410d5a3c4470ff7" title="rsrealloc" alt="" coords="641,208,717,235"/>

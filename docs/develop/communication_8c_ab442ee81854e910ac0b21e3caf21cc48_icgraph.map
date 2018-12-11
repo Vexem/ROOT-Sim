@@ -1,13 +1,13 @@
 <map id="mark_to_gid" name="mark_to_gid">
-<area shape="rect" id="node2" href="$communication_8h.html#aebec05b86f3467473116d555954b80f4" title="validate_msg" alt="" coords="155,341,261,368"/>
-<area shape="rect" id="node3" href="$communication_8h.html#ab5250867c0edfc326732c059b0c0c3b5" title="Send" alt="" coords="696,252,751,278"/>
-<area shape="rect" id="node23" href="$communication_8h.html#a91ccc25aa3eaa49ec96ea9328aa99dbd" title="msg_to_hdr" alt="" coords="674,24,773,50"/>
+<area shape="rect" id="node2" href="$communication_8h.html#aebec05b86f3467473116d555954b80f4" title="Perform some sanity checks on a message buffer. " alt="" coords="155,341,261,368"/>
+<area shape="rect" id="node3" href="$communication_8h.html#ab5250867c0edfc326732c059b0c0c3b5" title="Send a message. " alt="" coords="696,252,751,278"/>
+<area shape="rect" id="node23" href="$communication_8h.html#a91ccc25aa3eaa49ec96ea9328aa99dbd" title="Convert a message to a message header. " alt="" coords="674,24,773,50"/>
 <area shape="rect" id="node24" href="$mpi_8h.html#ad243611fd168b265105bce70c193394d" title="receive_remote_msgs" alt="" coords="641,488,805,514"/>
 <area shape="rect" id="node25" href="$msgchannel_8h.html#a2d02bf5d1d8c1e8835d65ba1e0397e56" title="insert_msg" alt="" coords="309,366,403,393"/>
 <area shape="rect" id="node26" href="$queues_8h.html#a9ff164dd6a938afa7e892f4028c2a033" title="insert_bottom_half" alt="" coords="451,405,593,432"/>
 <area shape="rect" id="node27" href="$msgchannel_8h.html#ae3a1affc608f87d792d99392c71e377a" title="get_msg" alt="" coords="483,341,561,368"/>
-<area shape="rect" id="node4" href="$communication_8h.html#aa8047651e174f4d26bef644233b5c8f8" title="send_antimessages" alt="" coords="872,176,1023,202"/>
-<area shape="rect" id="node13" href="$communication_8h.html#ad154a0e0c0815b786ead70143505abd6" title="send_outgoing_msgs" alt="" coords="868,24,1027,50"/>
+<area shape="rect" id="node4" href="$communication_8h.html#aa8047651e174f4d26bef644233b5c8f8" title="Send all antimessages for a certain LP. " alt="" coords="872,176,1023,202"/>
+<area shape="rect" id="node13" href="$communication_8h.html#ad154a0e0c0815b786ead70143505abd6" title="Send all pending outgoing messages. " alt="" coords="868,24,1027,50"/>
 <area shape="rect" id="node14" href="$ecs_8c.html#a672ea2cce8f7ae1214e0a41f46884933" title="ecs_secondary" alt="" coords="889,125,1006,152"/>
 <area shape="rect" id="node16" href="$ecs_8c.html#ade56ef97d7d3ae799d60f8616f2062cb" title="ecs_initiate" alt="" coords="1340,92,1435,118"/>
 <area shape="rect" id="node17" href="$ecs_8h.html#a414633c637a80868d1dea7b3acf152f3" title="ecs_send_pages" alt="" coords="883,382,1011,409"/>

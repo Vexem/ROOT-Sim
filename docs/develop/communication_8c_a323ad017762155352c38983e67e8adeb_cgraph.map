@@ -1,5 +1,5 @@
 <map id="msg_release" name="msg_release">
-<area shape="rect" id="node2" href="$communication_8c.html#ae6b96249d35969d688d0d84209919c8f" title="which_slab_to_use" alt="" coords="157,56,297,83"/>
+<area shape="rect" id="node2" href="$communication_8c.html#ae6b96249d35969d688d0d84209919c8f" title="Find a slab to allocate a message buffer. " alt="" coords="157,56,297,83"/>
 <area shape="rect" id="node5" href="$mm_8h.html#a891cd5abfed9deb98413ab7e7c29ef61" title="slab_free" alt="" coords="187,183,267,209"/>
 <area shape="rect" id="node8" href="$dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a" title="rsfree" alt="" coords="385,259,444,285"/>
 <area shape="rect" id="node3" href="$core_8c.html#a6793e4c70d69277f24ff0e494ed8ed10" title="find_kernel_by_gid" alt="" coords="345,5,484,32"/>

@@ -1,11 +1,11 @@
 <map id="exit_from_simulation_model" name="exit_from_simulation_model">
-<area shape="rect" id="node2" href="$core_8c.html#a8f346536ccfbe77b78ed577674beb6cf" title="simulation_shutdown" alt="" coords="208,588,364,615"/>
+<area shape="rect" id="node2" href="$core_8c.html#a8f346536ccfbe77b78ed577674beb6cf" title="simulation_shutdown" alt="" coords="208,664,364,691"/>
 <area shape="rect" id="node3" href="$statistics_8c.html#aeff52bbf045362270639b2baed20762b" title="statistics_stop" alt="" coords="428,259,543,285"/>
 <area shape="rect" id="node12" href="$thread_8c.html#a9f5993fbefc809165c4b74bb8da463d0" title="thread_barrier" alt="" coords="648,461,761,488"/>
-<area shape="rect" id="node18" href="$statistics_8c.html#aaa24b8c29fb4c68de95998bd43421bbb" title="statistics_fini" alt="" coords="433,524,537,551"/>
-<area shape="rect" id="node21" href="$scheduler_8c.html#a8ed8d4a13d66c1d3a221fb82e72f8e0e" title="scheduler_fini" alt="" coords="650,588,759,615"/>
-<area shape="rect" id="node23" href="$gvt_2gvt_8c.html#a10977cb9180000f423f184cca0b6338d" title="gvt_fini" alt="" coords="671,740,738,767"/>
-<area shape="rect" id="node30" href="$communication_8c.html#a6bd2f352e0326608e9a2bef2efbde184" title="communication_fini" alt="" coords="412,765,559,792"/>
+<area shape="rect" id="node18" href="$statistics_8c.html#aaa24b8c29fb4c68de95998bd43421bbb" title="statistics_fini" alt="" coords="433,765,537,792"/>
+<area shape="rect" id="node21" href="$gvt_2gvt_8c.html#a10977cb9180000f423f184cca0b6338d" title="gvt_fini" alt="" coords="671,588,738,615"/>
+<area shape="rect" id="node28" href="$communication_8c.html#a6bd2f352e0326608e9a2bef2efbde184" title="Finalize the communication subsystem. " alt="" coords="412,664,559,691"/>
+<area shape="rect" id="node34" href="$scheduler_8c.html#a8ed8d4a13d66c1d3a221fb82e72f8e0e" title="scheduler_fini" alt="" coords="650,816,759,843"/>
 <area shape="rect" id="node36" href="$core_8c.html#a4263f8cc078e5ee19cc22ec610a7cdf2" title="base_fini" alt="" coords="446,816,525,843"/>
 <area shape="rect" id="node4" href="$statistics_8c.html#a0346e881c85552e375308b5b791ae380" title="print_header" alt="" coords="653,5,756,32"/>
 <area shape="rect" id="node5" href="$statistics_8c.html#aa0225117b62fc184e71a61e815f37398" title="print_timer_stats" alt="" coords="639,56,770,83"/>
@@ -17,21 +17,21 @@
 <area shape="rect" id="node16" href="$statistics_8c.html#a86e8ce4bec166c2cf3d95d2d809e2855" title="print_config_to_file" alt="" coords="634,360,775,387"/>
 <area shape="rect" id="node17" href="$mpi_8c.html#aacc8b2ae1bd4babd815a15b52ac2dc2a" title="mpi_reduce_statistics" alt="" coords="624,411,785,437"/>
 <area shape="rect" id="node11" href="$gvt_2gvt_8c.html#a234e866bb1e37fa25dec9bb40134234d" title="get_last_gvt" alt="" coords="889,157,989,184"/>
-<area shape="rect" id="node13" href="$atomic_8h.html#a52336e036d2da5656c6db69b121458ba" title="atomic_dec" alt="" coords="891,411,987,437"/>
-<area shape="rect" id="node14" href="$atomic_8h.html#ab61334506e238ad3190ce02fc53af0fb" title="atomic_inc_and_test" alt="" coords="862,461,1017,488"/>
-<area shape="rect" id="node15" href="$x86_8c.html#a7a6b9868956dd8e51e5de80e16c76fc4" title="spin_lock" alt="" coords="1099,461,1179,488"/>
-<area shape="rect" id="node19" href="$dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a" title="rsfree" alt="" coords="1110,613,1169,640"/>
-<area shape="rect" id="node20" href="$platform_8c.html#ae2af2cd130d16958394ae21e9d13035f" title="__real_free" alt="" coords="1262,613,1354,640"/>
-<area shape="rect" id="node22" href="$preempt_8c.html#aebd466071a0343a49143ffccfdb148f4" title="preempt_fini" alt="" coords="888,613,991,640"/>
-<area shape="rect" id="node24" href="$ccgs_8c.html#ab54ca4e7a4ba70e71cb3129aa0adbb74" title="ccgs_fini" alt="" coords="901,664,977,691"/>
-<area shape="rect" id="node25" href="$communication_2gvt_8c.html#abb460bc63d1b830804752ce6bdd4e30a" title="gvt_init_pending" alt="" coords="1076,867,1203,893"/>
-<area shape="rect" id="node27" href="$communication_2gvt_8c.html#a0ed9e4affac9f35d26194a98a089f2c6" title="join_white_msg_redux" alt="" coords="858,715,1021,741"/>
-<area shape="rect" id="node28" href="$communication_2gvt_8c.html#a4c4efc6874baad6133dd05ed355fe8d8" title="wait_white_msg_redux" alt="" coords="857,765,1022,792"/>
-<area shape="rect" id="node29" href="$communication_2gvt_8c.html#a53ca71f17a218181b76a3ef8ffa12e95" title="join_gvt_redux" alt="" coords="882,816,997,843"/>
-<area shape="rect" id="node26" href="$mpi_8c.html#a621b43e2d97c134914cb2737e13e97e2" title="pending_msgs" alt="" coords="1251,867,1365,893"/>
-<area shape="rect" id="node31" href="$mpi_8c.html#a38b0bdfeab3308a62e50dc362ebd2a68" title="inter_kernel_comm_finalize" alt="" coords="607,841,803,868"/>
-<area shape="rect" id="node35" href="$mpi_8c.html#a7210aa16a06c6aab812ae96561c30a8d" title="mpi_finalize" alt="" coords="656,892,753,919"/>
-<area shape="rect" id="node32" href="$mpi_8c.html#a3ac4bf6fda6cd92f529134aac34edabf" title="dist_termination_finalize" alt="" coords="851,968,1028,995"/>
-<area shape="rect" id="node33" href="$communication_2gvt_8c.html#ac35f5f227c553fffd0911c995c865e17" title="gvt_comm_finalize" alt="" coords="869,917,1010,944"/>
-<area shape="rect" id="node34" href="$communication_2gvt_8c.html#a97741fc617b443cee108c44a26cd513b" title="gvt_init_clear" alt="" coords="1086,917,1193,944"/>
+<area shape="rect" id="node13" href="$atomic_8h.html#a52336e036d2da5656c6db69b121458ba" title="atomic_dec" alt="" coords="891,360,987,387"/>
+<area shape="rect" id="node14" href="$atomic_8h.html#ab61334506e238ad3190ce02fc53af0fb" title="atomic_inc_and_test" alt="" coords="862,411,1017,437"/>
+<area shape="rect" id="node15" href="$x86_8c.html#a7a6b9868956dd8e51e5de80e16c76fc4" title="spin_lock" alt="" coords="1099,411,1179,437"/>
+<area shape="rect" id="node19" href="$dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a" title="rsfree" alt="" coords="1110,816,1169,843"/>
+<area shape="rect" id="node20" href="$platform_8c.html#ae2af2cd130d16958394ae21e9d13035f" title="__real_free" alt="" coords="1262,816,1354,843"/>
+<area shape="rect" id="node22" href="$ccgs_8c.html#ab54ca4e7a4ba70e71cb3129aa0adbb74" title="ccgs_fini" alt="" coords="901,715,977,741"/>
+<area shape="rect" id="node23" href="$communication_2gvt_8c.html#abb460bc63d1b830804752ce6bdd4e30a" title="gvt_init_pending" alt="" coords="1076,588,1203,615"/>
+<area shape="rect" id="node25" href="$communication_2gvt_8c.html#a0ed9e4affac9f35d26194a98a089f2c6" title="join_white_msg_redux" alt="" coords="858,613,1021,640"/>
+<area shape="rect" id="node26" href="$communication_2gvt_8c.html#a4c4efc6874baad6133dd05ed355fe8d8" title="wait_white_msg_redux" alt="" coords="857,461,1022,488"/>
+<area shape="rect" id="node27" href="$communication_2gvt_8c.html#a53ca71f17a218181b76a3ef8ffa12e95" title="join_gvt_redux" alt="" coords="882,512,997,539"/>
+<area shape="rect" id="node24" href="$mpi_8c.html#a621b43e2d97c134914cb2737e13e97e2" title="pending_msgs" alt="" coords="1251,588,1365,615"/>
+<area shape="rect" id="node29" href="$mpi_8c.html#a38b0bdfeab3308a62e50dc362ebd2a68" title="inter_kernel_comm_finalize" alt="" coords="607,664,803,691"/>
+<area shape="rect" id="node33" href="$mpi_8c.html#a7210aa16a06c6aab812ae96561c30a8d" title="mpi_finalize" alt="" coords="656,715,753,741"/>
+<area shape="rect" id="node30" href="$mpi_8c.html#a3ac4bf6fda6cd92f529134aac34edabf" title="dist_termination_finalize" alt="" coords="851,765,1028,792"/>
+<area shape="rect" id="node31" href="$communication_2gvt_8c.html#ac35f5f227c553fffd0911c995c865e17" title="gvt_comm_finalize" alt="" coords="869,664,1010,691"/>
+<area shape="rect" id="node32" href="$communication_2gvt_8c.html#a97741fc617b443cee108c44a26cd513b" title="gvt_init_clear" alt="" coords="1086,664,1193,691"/>
+<area shape="rect" id="node35" href="$preempt_8c.html#aebd466071a0343a49143ffccfdb148f4" title="preempt_fini" alt="" coords="888,816,991,843"/>
 </map>

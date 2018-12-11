@@ -1,15 +1,15 @@
 <map id="find_kernel_by_gid" name="find_kernel_by_gid">
-<area shape="rect" id="node2" href="$communication_8c.html#ae6b96249d35969d688d0d84209919c8f" title="which_slab_to_use" alt="" coords="427,157,567,184"/>
-<area shape="rect" id="node30" href="$communication_8h.html#ab5250867c0edfc326732c059b0c0c3b5" title="Send" alt="" coords="690,309,745,336"/>
+<area shape="rect" id="node2" href="$communication_8c.html#ae6b96249d35969d688d0d84209919c8f" title="Find a slab to allocate a message buffer. " alt="" coords="427,157,567,184"/>
+<area shape="rect" id="node30" href="$communication_8h.html#ab5250867c0edfc326732c059b0c0c3b5" title="Send a message. " alt="" coords="690,309,745,336"/>
 <area shape="rect" id="node32" href="$communication_2gvt_8h.html#a71be178d11f21969670eadcc34d1de0a" title="register_outgoing_msg" alt="" coords="192,208,361,235"/>
 <area shape="rect" id="node33" href="$mpi_8h.html#a41390aa810e506d633d2cf01bc5973bb" title="send_remote_msg" alt="" coords="425,259,568,285"/>
 <area shape="rect" id="node34" href="$communication_2gvt_8h.html#ae864e6ab552e1726236d6707bec455d8" title="register_incoming_msg" alt="" coords="632,5,803,32"/>
 <area shape="rect" id="node35" href="$ecs_8h.html#a85240bd0589eb4591e69afdb7f95af29" title="setup_ecs_on_segment" alt="" coords="409,81,584,108"/>
 <area shape="rect" id="node36" href="$ecs_8c.html#a87cf3267c85a748dc7a0c9ab5d3f696d" title="remote_memory_init" alt="" coords="199,452,355,479"/>
 <area shape="rect" id="node37" href="$process_8h.html#ad58c55ea23fdc3d938b57135b6116feb" title="initialize_lps" alt="" coords="227,688,326,715"/>
-<area shape="rect" id="node3" href="$communication_8h.html#a323ad017762155352c38983e67e8adeb" title="msg_release" alt="" coords="1115,132,1219,159"/>
-<area shape="rect" id="node15" href="$communication_8h.html#aa8047651e174f4d26bef644233b5c8f8" title="send_antimessages" alt="" coords="870,157,1021,184"/>
-<area shape="rect" id="node19" href="$communication_8h.html#a56a4865196c169691525e99bae337519" title="pack_msg" alt="" coords="674,469,761,496"/>
+<area shape="rect" id="node3" href="$communication_8h.html#a323ad017762155352c38983e67e8adeb" title="Release a message buffer. " alt="" coords="1115,132,1219,159"/>
+<area shape="rect" id="node15" href="$communication_8h.html#aa8047651e174f4d26bef644233b5c8f8" title="Send all antimessages for a certain LP. " alt="" coords="870,157,1021,184"/>
+<area shape="rect" id="node19" href="$communication_8h.html#a56a4865196c169691525e99bae337519" title="Pack a message in a platform&#45;level data structure. " alt="" coords="674,469,761,496"/>
 <area shape="rect" id="node4" href="$wnd_8h.html#a930e160f86a257b5143e2d59205d8002" title="prune_outgoing_queue" alt="" coords="1297,132,1467,159"/>
 <area shape="rect" id="node10" href="$fossil_8c.html#af4d5d546129fe91cedfc16ddedf76464" title="fossil_collection" alt="" coords="1321,183,1443,209"/>
 <area shape="rect" id="node13" href="$queues_8h.html#a54eca9bfa893cac072d1b1d3010c2944" title="process_bottom_halves" alt="" coords="1295,81,1469,108"/>
@@ -24,7 +24,7 @@
 <area shape="rect" id="node16" href="$state_8h.html#a1fd6b7926db41257e07600226d87fffa" title="rollback" alt="" coords="1132,259,1203,285"/>
 <area shape="rect" id="node17" href="$scheduler_8h.html#ac48128e72b303ea22d8ec641a9516b15" title="schedule" alt="" coords="1343,284,1421,311"/>
 <area shape="rect" id="node18" href="$scheduler_8h.html#af405fd79c1cd59fccce27658d6e11941" title="initialize_worker_thread" alt="" coords="1520,335,1691,361"/>
-<area shape="rect" id="node20" href="$communication_8h.html#ae0329023aeab7047bcb7b4708698a008" title="ParallelScheduleNewEvent" alt="" coords="851,680,1040,707"/>
+<area shape="rect" id="node20" href="$communication_8h.html#ae0329023aeab7047bcb7b4708698a008" title="Schedule a new message to some LP. " alt="" coords="851,680,1040,707"/>
 <area shape="rect" id="node22" href="$ecs_8c.html#a672ea2cce8f7ae1214e0a41f46884933" title="ecs_secondary" alt="" coords="887,528,1004,555"/>
 <area shape="rect" id="node24" href="$ecs_8c.html#ade56ef97d7d3ae799d60f8616f2062cb" title="ecs_initiate" alt="" coords="1335,528,1429,555"/>
 <area shape="rect" id="node25" href="$ecs_8h.html#a414633c637a80868d1dea7b3acf152f3" title="ecs_send_pages" alt="" coords="881,259,1009,285"/>
@@ -34,5 +34,5 @@
 <area shape="rect" id="node21" href="$init_8h.html#a417eb072179d09f441dbae3125049e46" title="SystemInit" alt="" coords="1122,719,1213,745"/>
 <area shape="rect" id="node23" href="$ecs_8c.html#adbe06ee703b26dcc8d82e505075f942d" title="ECS" alt="" coords="1143,528,1191,555"/>
 <area shape="rect" id="node26" href="$scheduler_8h.html#a5766f78dcd3778582d506c3dec34594e" title="receive_control_msg" alt="" coords="1090,81,1245,108"/>
-<area shape="rect" id="node31" href="$communication_8h.html#ad154a0e0c0815b786ead70143505abd6" title="send_outgoing_msgs" alt="" coords="1088,208,1247,235"/>
+<area shape="rect" id="node31" href="$communication_8h.html#ad154a0e0c0815b786ead70143505abd6" title="Send all pending outgoing messages. " alt="" coords="1088,208,1247,235"/>
 </map>

@@ -3,7 +3,7 @@
 <area shape="rect" id="node13" href="$gvt_2gvt_8h.html#a10977cb9180000f423f184cca0b6338d" title="gvt_fini" alt="" coords="217,68,284,95"/>
 <area shape="rect" id="node14" href="$gvt_2gvt_8c.html#a5eca5fe72026b6f5e5ec76598bde2475" title="start_new_gvt" alt="" coords="412,119,523,145"/>
 <area shape="rect" id="node3" href="$mpi_8h.html#a38b0bdfeab3308a62e50dc362ebd2a68" title="inter_kernel_comm_finalize" alt="" coords="369,17,565,44"/>
-<area shape="rect" id="node4" href="$communication_8h.html#a6bd2f352e0326608e9a2bef2efbde184" title="communication_fini" alt="" coords="613,17,760,44"/>
+<area shape="rect" id="node4" href="$communication_8h.html#a6bd2f352e0326608e9a2bef2efbde184" title="Finalize the communication subsystem. " alt="" coords="613,17,760,44"/>
 <area shape="rect" id="node5" href="$core_8h.html#a8f346536ccfbe77b78ed577674beb6cf" title="simulation_shutdown" alt="" coords="808,60,964,87"/>
 <area shape="rect" id="node6" href="$core_8c.html#a9b05d2af2e233e2616633eaa706682ee" title="exit_from_simulation\l_model" alt="" coords="1015,53,1170,94"/>
 <area shape="rect" id="node10" href="$main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="1012,119,1173,145"/>

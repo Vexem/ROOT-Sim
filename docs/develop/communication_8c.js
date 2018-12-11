@@ -1,10 +1,7 @@
 var communication_8c =
 [
-    [ "comm_finalize", "communication_8c.html#acae24b1f48d2fe459c280cf33e61cc6e", null ],
     [ "communication_fini", "communication_8c.html#a6bd2f352e0326608e9a2bef2efbde184", null ],
-    [ "communication_fini_thread", "communication_8c.html#a968b638456f1c0c8a527a859ec62d4c6", null ],
     [ "communication_init", "communication_8c.html#a9d1c122bc3538d94d6fd8328cd6c6a2d", null ],
-    [ "communication_init_thread", "communication_8c.html#aba4063679ded48b45167fecb88abaa32", null ],
     [ "dump_msg_content", "communication_8c.html#ac5d2aab0b4d3d676e4a8fd2d3d6e7bf9", null ],
     [ "get_msg_from_slab", "communication_8c.html#ab957dc2cd186382c50ef8cfde9761909", null ],
     [ "get_msg_hdr_from_slab", "communication_8c.html#a8c19c92f7666ae90abb179ec12c75023", null ],

@@ -1,6 +1,6 @@
 <map id="rsfree" name="rsfree">
 <area shape="rect" id="node2" href="$thread_8c.html#a9a978a7c6a81cdde2633f5ef7e01b7f4" title="__helper_create_thread" alt="" coords="112,5,285,32"/>
-<area shape="rect" id="node5" href="$communication_8h.html#a323ad017762155352c38983e67e8adeb" title="msg_release" alt="" coords="379,208,483,235"/>
+<area shape="rect" id="node5" href="$communication_8h.html#a323ad017762155352c38983e67e8adeb" title="Release a message buffer. " alt="" coords="379,208,483,235"/>
 <area shape="rect" id="node8" href="$wnd_8h.html#acbe46c456aa03b014ca2134604700789" title="outgoing_window_finalize" alt="" coords="1031,151,1212,177"/>
 <area shape="rect" id="node14" href="$communication_2gvt_8h.html#ac35f5f227c553fffd0911c995c865e17" title="gvt_comm_finalize" alt="" coords="128,917,269,944"/>
 <area shape="rect" id="node18" href="$serial_8h.html#aa0dd072d0e792fb9c65220bdddf69a0e" title="serial_simulation" alt="" coords="1057,891,1186,917"/>
@@ -36,7 +36,7 @@
 <area shape="rect" id="node11" href="$gvt_2gvt_8h.html#a62e7abde0dac08e56aa2a57401aed27b" title="adopt_new_gvt" alt="" coords="835,360,954,387"/>
 <area shape="rect" id="node13" href="$gvt_2gvt_8c.html#a895d5bfff43f3ee72f9cf7097abf609b" title="GVT_phases" alt="" coords="844,157,945,184"/>
 <area shape="rect" id="node15" href="$mpi_8h.html#a38b0bdfeab3308a62e50dc362ebd2a68" title="inter_kernel_comm_finalize" alt="" coords="333,911,529,937"/>
-<area shape="rect" id="node16" href="$communication_8h.html#a6bd2f352e0326608e9a2bef2efbde184" title="communication_fini" alt="" coords="595,881,741,908"/>
+<area shape="rect" id="node16" href="$communication_8h.html#a6bd2f352e0326608e9a2bef2efbde184" title="Finalize the communication subsystem. " alt="" coords="595,881,741,908"/>
 <area shape="rect" id="node17" href="$core_8h.html#a8f346536ccfbe77b78ed577674beb6cf" title="simulation_shutdown" alt="" coords="817,679,973,705"/>
 <area shape="rect" id="node21" href="$calqueue_8c.html#a73051a4cdab05e4724a45e77a5572c9d" title="calqueue_deq" alt="" coords="613,1069,723,1096"/>
 <area shape="rect" id="node23" href="$calqueue_8h.html#a6ce456642093e0ebcd9563dd723781d8" title="calqueue_put" alt="" coords="614,1019,722,1045"/>
@@ -46,6 +46,6 @@
 <area shape="rect" id="node37" href="$ROOT-Sim_8h.html#a12dc5c84395024f28dc92710ffc4fb91" title="DiscardObstacles" alt="" coords="601,1171,735,1197"/>
 <area shape="rect" id="node38" href="$dymelor_8h.html#a8b835f617273e3dcb51a0818e4d38090" title="__wrap_realloc" alt="" coords="611,1120,725,1147"/>
 <area shape="rect" id="node41" href="$scheduler_8h.html#a5766f78dcd3778582d506c3dec34594e" title="receive_control_msg" alt="" coords="354,157,509,184"/>
-<area shape="rect" id="node43" href="$communication_8h.html#a762b3dacaa82c4590e0572ac08117153" title="msg_hdr_release" alt="" coords="365,259,497,285"/>
+<area shape="rect" id="node43" href="$communication_8h.html#a762b3dacaa82c4590e0572ac08117153" title="Release a message header. " alt="" coords="365,259,497,285"/>
 <area shape="rect" id="node49" href="$init_8h.html#a417eb072179d09f441dbae3125049e46" title="SystemInit" alt="" coords="1076,75,1167,101"/>
 </map>

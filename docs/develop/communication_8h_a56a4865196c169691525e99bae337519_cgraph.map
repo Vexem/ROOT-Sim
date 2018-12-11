@@ -1,6 +1,6 @@
 <map id="pack_msg" name="pack_msg">
-<area shape="rect" id="node2" href="$communication_8c.html#ab957dc2cd186382c50ef8cfde9761909" title="get_msg_from_slab" alt="" coords="140,63,288,89"/>
-<area shape="rect" id="node7" href="$communication_8c.html#ae6b96249d35969d688d0d84209919c8f" title="which_slab_to_use" alt="" coords="144,120,284,147"/>
+<area shape="rect" id="node2" href="$communication_8c.html#ab957dc2cd186382c50ef8cfde9761909" title="Get a buffer to keep a message. " alt="" coords="140,63,288,89"/>
+<area shape="rect" id="node7" href="$communication_8c.html#ae6b96249d35969d688d0d84209919c8f" title="Find a slab to allocate a message buffer. " alt="" coords="144,120,284,147"/>
 <area shape="rect" id="node10" href="$dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="183,183,245,209"/>
 <area shape="rect" id="node3" href="$mm_8h.html#a13199823c54d944aa128966cb35c5aa3" title="slab_alloc" alt="" coords="363,56,447,83"/>
 <area shape="rect" id="node4" href="$atomic_8h.html#a7a6b9868956dd8e51e5de80e16c76fc4" title="spin_lock" alt="" coords="533,5,613,32"/>

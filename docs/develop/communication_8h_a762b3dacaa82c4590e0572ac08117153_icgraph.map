@@ -1,5 +1,5 @@
 <map id="msg_hdr_release" name="msg_hdr_release">
-<area shape="rect" id="node2" href="$communication_8h.html#aa8047651e174f4d26bef644233b5c8f8" title="send_antimessages" alt="" coords="185,65,336,92"/>
+<area shape="rect" id="node2" href="$communication_8h.html#aa8047651e174f4d26bef644233b5c8f8" title="Send all antimessages for a certain LP. " alt="" coords="185,65,336,92"/>
 <area shape="rect" id="node11" href="$fossil_8c.html#af4d5d546129fe91cedfc16ddedf76464" title="fossil_collection" alt="" coords="384,153,505,180"/>
 <area shape="rect" id="node3" href="$state_8h.html#a1fd6b7926db41257e07600226d87fffa" title="rollback" alt="" coords="409,59,480,85"/>
 <area shape="rect" id="node4" href="$scheduler_8h.html#ac48128e72b303ea22d8ec641a9516b15" title="schedule" alt="" coords="573,57,652,84"/>

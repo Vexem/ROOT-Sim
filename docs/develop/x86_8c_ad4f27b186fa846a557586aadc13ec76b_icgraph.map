@@ -4,9 +4,9 @@
 <area shape="rect" id="node25" href="$dymelor_8h.html#a0706c4a4237b3b20358ee252bdfb1a0f" title="do_malloc" alt="" coords="185,537,272,564"/>
 <area shape="rect" id="node33" href="$dymelor_8h.html#adb41febfa38b30f522a8b2623ce7ecf4" title="do_free" alt="" coords="193,639,264,665"/>
 <area shape="rect" id="node3" href="$mpi_8h.html#a41390aa810e506d633d2cf01bc5973bb" title="send_remote_msg" alt="" coords="375,285,518,312"/>
-<area shape="rect" id="node4" href="$communication_8h.html#ab5250867c0edfc326732c059b0c0c3b5" title="Send" alt="" coords="619,208,674,235"/>
-<area shape="rect" id="node5" href="$communication_8h.html#aa8047651e174f4d26bef644233b5c8f8" title="send_antimessages" alt="" coords="780,107,931,133"/>
-<area shape="rect" id="node14" href="$communication_8h.html#ad154a0e0c0815b786ead70143505abd6" title="send_outgoing_msgs" alt="" coords="999,141,1158,168"/>
+<area shape="rect" id="node4" href="$communication_8h.html#ab5250867c0edfc326732c059b0c0c3b5" title="Send a message. " alt="" coords="619,208,674,235"/>
+<area shape="rect" id="node5" href="$communication_8h.html#aa8047651e174f4d26bef644233b5c8f8" title="Send all antimessages for a certain LP. " alt="" coords="780,107,931,133"/>
+<area shape="rect" id="node14" href="$communication_8h.html#ad154a0e0c0815b786ead70143505abd6" title="Send all pending outgoing messages. " alt="" coords="999,141,1158,168"/>
 <area shape="rect" id="node15" href="$ecs_8c.html#a672ea2cce8f7ae1214e0a41f46884933" title="ecs_secondary" alt="" coords="797,309,914,336"/>
 <area shape="rect" id="node17" href="$ecs_8c.html#ade56ef97d7d3ae799d60f8616f2062cb" title="ecs_initiate" alt="" coords="1248,309,1343,336"/>
 <area shape="rect" id="node18" href="$ecs_8h.html#a414633c637a80868d1dea7b3acf152f3" title="ecs_send_pages" alt="" coords="791,360,919,387"/>

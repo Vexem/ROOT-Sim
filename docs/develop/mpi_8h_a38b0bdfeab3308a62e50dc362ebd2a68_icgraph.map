@@ -1,5 +1,5 @@
 <map id="inter_kernel_comm_finalize" name="inter_kernel_comm_finalize">
-<area shape="rect" id="node2" href="$communication_8h.html#a6bd2f352e0326608e9a2bef2efbde184" title="communication_fini" alt="" coords="249,107,396,133"/>
+<area shape="rect" id="node2" href="$communication_8h.html#a6bd2f352e0326608e9a2bef2efbde184" title="Finalize the communication subsystem. " alt="" coords="249,107,396,133"/>
 <area shape="rect" id="node3" href="$core_8h.html#a8f346536ccfbe77b78ed577674beb6cf" title="simulation_shutdown" alt="" coords="444,107,600,133"/>
 <area shape="rect" id="node4" href="$core_8c.html#a9b05d2af2e233e2616633eaa706682ee" title="exit_from_simulation\l_model" alt="" coords="651,19,806,61"/>
 <area shape="rect" id="node8" href="$main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="648,107,809,133"/>

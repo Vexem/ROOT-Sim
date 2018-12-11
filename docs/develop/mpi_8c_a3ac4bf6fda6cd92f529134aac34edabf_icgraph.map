@@ -1,6 +1,6 @@
 <map id="dist_termination_finalize" name="dist_termination_finalize">
 <area shape="rect" id="node2" href="$mpi_8h.html#a38b0bdfeab3308a62e50dc362ebd2a68" title="inter_kernel_comm_finalize" alt="" coords="231,107,427,133"/>
-<area shape="rect" id="node3" href="$communication_8h.html#a6bd2f352e0326608e9a2bef2efbde184" title="communication_fini" alt="" coords="475,107,621,133"/>
+<area shape="rect" id="node3" href="$communication_8h.html#a6bd2f352e0326608e9a2bef2efbde184" title="Finalize the communication subsystem. " alt="" coords="475,107,621,133"/>
 <area shape="rect" id="node4" href="$core_8h.html#a8f346536ccfbe77b78ed577674beb6cf" title="simulation_shutdown" alt="" coords="669,107,825,133"/>
 <area shape="rect" id="node5" href="$core_8c.html#a9b05d2af2e233e2616633eaa706682ee" title="exit_from_simulation\l_model" alt="" coords="877,19,1031,61"/>
 <area shape="rect" id="node9" href="$main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="873,107,1035,133"/>

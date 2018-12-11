@@ -1,9 +1,9 @@
 <map id="Send" name="Send">
-<area shape="rect" id="node2" href="$communication_8c.html#aebec05b86f3467473116d555954b80f4" title="validate_msg" alt="" coords="533,83,640,110"/>
+<area shape="rect" id="node2" href="$communication_8c.html#aebec05b86f3467473116d555954b80f4" title="Perform some sanity checks on a message buffer. " alt="" coords="533,83,640,110"/>
 <area shape="rect" id="node4" href="$core_8c.html#a6793e4c70d69277f24ff0e494ed8ed10" title="find_kernel_by_gid" alt="" coords="517,387,656,414"/>
 <area shape="rect" id="node5" href="$mpi_8c.html#a41390aa810e506d633d2cf01bc5973bb" title="send_remote_msg" alt="" coords="108,286,251,313"/>
 <area shape="rect" id="node14" href="$queues_8c.html#a9ff164dd6a938afa7e892f4028c2a033" title="insert_bottom_half" alt="" coords="108,134,251,161"/>
-<area shape="rect" id="node3" href="$communication_8c.html#ab442ee81854e910ac0b21e3caf21cc48" title="mark_to_gid" alt="" coords="708,83,809,110"/>
+<area shape="rect" id="node3" href="$communication_8c.html#ab442ee81854e910ac0b21e3caf21cc48" title="Tell the GID of the sender of a message, given its mark. " alt="" coords="708,83,809,110"/>
 <area shape="rect" id="node6" href="$wnd_8c.html#a76d33aed8e7dfe9ab6d8ce4f9b1f4fd8" title="allocate_outgoing_msg" alt="" coords="299,286,469,313"/>
 <area shape="rect" id="node9" href="$communication_2gvt_8c.html#a76f513e8aeeeb0abebc46f19ceb72293" title="register_outgoing_msg" alt="" coords="299,337,469,363"/>
 <area shape="rect" id="node11" href="$wnd_8c.html#a16850c4710b9b54fc67b88547b3b87ee" title="store_outgoing_msg" alt="" coords="307,235,461,262"/>

@@ -1,7 +1,7 @@
 <map id="__real_free" name="__real_free">
 <area shape="rect" id="node2" href="$platform_8c.html#adcf5b4b5b81ea0baa40c3e26607c1545" title="rsfree" alt="" coords="145,669,204,696"/>
 <area shape="rect" id="node3" href="$thread_8c.html#a9a978a7c6a81cdde2633f5ef7e01b7f4" title="__helper_create_thread" alt="" coords="252,1328,425,1354"/>
-<area shape="rect" id="node6" href="$communication_8h.html#a323ad017762155352c38983e67e8adeb" title="msg_release" alt="" coords="519,821,623,848"/>
+<area shape="rect" id="node6" href="$communication_8h.html#a323ad017762155352c38983e67e8adeb" title="Release a message buffer. " alt="" coords="519,821,623,848"/>
 <area shape="rect" id="node9" href="$wnd_8h.html#acbe46c456aa03b014ca2134604700789" title="outgoing_window_finalize" alt="" coords="1171,961,1352,988"/>
 <area shape="rect" id="node15" href="$communication_2gvt_8h.html#ac35f5f227c553fffd0911c995c865e17" title="gvt_comm_finalize" alt="" coords="268,112,409,138"/>
 <area shape="rect" id="node17" href="$calqueue_8c.html#a4e8867b10c2140a383aaaff9556f17be" title="new_width" alt="" coords="295,213,382,240"/>
@@ -46,6 +46,6 @@
 <area shape="rect" id="node37" href="$ROOT-Sim_8h.html#a12dc5c84395024f28dc92710ffc4fb91" title="DiscardObstacles" alt="" coords="741,1176,875,1202"/>
 <area shape="rect" id="node38" href="$dymelor_8h.html#a8b835f617273e3dcb51a0818e4d38090" title="__wrap_realloc" alt="" coords="751,1226,865,1253"/>
 <area shape="rect" id="node41" href="$scheduler_8h.html#a5766f78dcd3778582d506c3dec34594e" title="receive_control_msg" alt="" coords="494,961,649,988"/>
-<area shape="rect" id="node43" href="$communication_8h.html#a762b3dacaa82c4590e0572ac08117153" title="msg_hdr_release" alt="" coords="505,669,637,696"/>
+<area shape="rect" id="node43" href="$communication_8h.html#a762b3dacaa82c4590e0572ac08117153" title="Release a message header. " alt="" coords="505,669,637,696"/>
 <area shape="rect" id="node49" href="$init_8h.html#a417eb072179d09f441dbae3125049e46" title="SystemInit" alt="" coords="989,1086,1080,1113"/>
 </map>

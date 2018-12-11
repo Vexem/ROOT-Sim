@@ -1,5 +1,5 @@
 <map id="get_msg_hdr_from_slab" name="get_msg_hdr_from_slab">
-<area shape="rect" id="node2" href="$communication_8h.html#ad154a0e0c0815b786ead70143505abd6" title="send_outgoing_msgs" alt="" coords="229,56,388,83"/>
+<area shape="rect" id="node2" href="$communication_8h.html#ad154a0e0c0815b786ead70143505abd6" title="Send all pending outgoing messages. " alt="" coords="229,56,388,83"/>
 <area shape="rect" id="node10" href="$ecs_8c.html#ade56ef97d7d3ae799d60f8616f2062cb" title="ecs_initiate" alt="" coords="261,107,356,133"/>
 <area shape="rect" id="node3" href="$scheduler_8h.html#ac48128e72b303ea22d8ec641a9516b15" title="schedule" alt="" coords="436,56,515,83"/>
 <area shape="rect" id="node4" href="$gvt_2gvt_8c.html#a895d5bfff43f3ee72f9cf7097abf609b" title="GVT_phases" alt="" coords="563,5,664,32"/>
