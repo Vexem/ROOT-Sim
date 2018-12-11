@@ -9,7 +9,6 @@ var searchData=
   ['binding_5facquire_5fphase',['binding_acquire_phase',['../binding_8c.html#a9867b49ef17cba48d9ef05783654dc31',1,'binding.c']]],
   ['binding_5fphase',['binding_phase',['../binding_8c.html#a10bd99f8198c8cf8eb3fd524651b69ee',1,'binding.c']]],
   ['bitmap_5fsize',['bitmap_size',['../struct__malloc__state.html#adc0b5acfd3a10dac6f4760b45a4f1726',1,'_malloc_state']]],
-  ['blocking_5fgvt',['blocking_gvt',['../struct__simulation__configuration.html#a5def373076dc799cfd32c5c24f95294a',1,'_simulation_configuration']]],
   ['bot_5fthreshold',['bot_threshold',['../calqueue_8c.html#ada2da5c1c5bb87b8c29b4b7831b0f30b',1,'calqueue.c']]],
   ['bottom_5fhalves',['bottom_halves',['../structlp__struct.html#ac52145497b157a13bebe61a2efd78d28',1,'lp_struct']]],
   ['bound',['bound',['../structlp__struct.html#aa3b66577f584159ebdf0de01c0831dae',1,'lp_struct']]],

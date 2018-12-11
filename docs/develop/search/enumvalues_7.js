@@ -24,7 +24,6 @@ var searchData=
   ['op_5fw',['OP_W',['../disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a837eb4e36144264d8ba44845b0b5e475',1,'OP_W():&#160;disassemble.h'],['../x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a837eb4e36144264d8ba44845b0b5e475',1,'OP_W():&#160;x86.h']]],
   ['op_5fy',['OP_Y',['../disassemble_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a63d8efdac354871a7a921852be047102',1,'OP_Y():&#160;disassemble.h'],['../x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a63d8efdac354871a7a921852be047102',1,'OP_Y():&#160;x86.h']]],
   ['opt_5fa',['OPT_A',['../init_8c.html#adf856969b3967e4a20be18a3eda24afca14a2fa5a67a463ed8c549cf9c5ee2026',1,'init.c']]],
-  ['opt_5fblocking_5fgvt',['OPT_BLOCKING_GVT',['../init_8c.html#adf856969b3967e4a20be18a3eda24afca06d8b067b8c8cab6eb52a31c22539703',1,'init.c']]],
   ['opt_5fcktrm_5fmode',['OPT_CKTRM_MODE',['../init_8c.html#adf856969b3967e4a20be18a3eda24afca8755d697c1cf8ee9ea9987cf4c2d6302',1,'init.c']]],
   ['opt_5fdeterministic_5fseed',['OPT_DETERMINISTIC_SEED',['../init_8c.html#adf856969b3967e4a20be18a3eda24afcabc7837dc9493501756f1753bcf48b1ce',1,'init.c']]],
   ['opt_5ffirst',['OPT_FIRST',['../init_8c.html#adf856969b3967e4a20be18a3eda24afcad41a0c3f88d8500b7dedbfbd88eec174',1,'init.c']]],

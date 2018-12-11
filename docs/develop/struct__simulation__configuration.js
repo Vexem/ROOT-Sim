@@ -1,6 +1,5 @@
 var struct__simulation__configuration =
 [
-    [ "blocking_gvt", "struct__simulation__configuration.html#a5def373076dc799cfd32c5c24f95294a", null ],
     [ "check_termination_mode", "struct__simulation__configuration.html#ab7a14c879df91c28f45ee074cf389c4b", null ],
     [ "checkpointing", "struct__simulation__configuration.html#a130dbef5867d3f9c5c4e62d6275c30be", null ],
     [ "ckpt_mode", "struct__simulation__configuration.html#ac2b107327c0595c21dcd23bf397a4d45", null ],

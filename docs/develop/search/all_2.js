@@ -42,7 +42,6 @@ var searchData=
   ['bitmap_5fsize',['bitmap_size',['../struct__malloc__state.html#adc0b5acfd3a10dac6f4760b45a4f1726',1,'_malloc_state']]],
   ['bitmask32',['BITMASK32',['../ld_8h.html#a01028e4394e61a6de70f8645a947a2f4',1,'ld.h']]],
   ['blocked_5fstate',['BLOCKED_STATE',['../process_8h.html#ad31c8b23ee88c6da7a24b8074b844be7',1,'process.h']]],
-  ['blocking_5fgvt',['blocking_gvt',['../struct__simulation__configuration.html#a5def373076dc799cfd32c5c24f95294a',1,'_simulation_configuration']]],
   ['bot_5fthreshold',['bot_threshold',['../calqueue_8c.html#ada2da5c1c5bb87b8c29b4b7831b0f30b',1,'calqueue.c']]],
   ['bottom_5fhalves',['bottom_halves',['../structlp__struct.html#ac52145497b157a13bebe61a2efd78d28',1,'lp_struct']]],
   ['bound',['bound',['../structlp__struct.html#aa3b66577f584159ebdf0de01c0831dae',1,'lp_struct']]],

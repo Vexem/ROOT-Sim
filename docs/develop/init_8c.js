@@ -22,7 +22,6 @@ var init_8c =
       [ "OPT_INC", "init_8c.html#adf856969b3967e4a20be18a3eda24afca40f66d6d1c0020ae4e1aee56dc9b8577", null ],
       [ "OPT_A", "init_8c.html#adf856969b3967e4a20be18a3eda24afca14a2fa5a67a463ed8c549cf9c5ee2026", null ],
       [ "OPT_GVT", "init_8c.html#adf856969b3967e4a20be18a3eda24afcafce5887da9f5f2c53fa12a23f87d1b90", null ],
-      [ "OPT_BLOCKING_GVT", "init_8c.html#adf856969b3967e4a20be18a3eda24afca06d8b067b8c8cab6eb52a31c22539703", null ],
       [ "OPT_GVT_SNAPSHOT_CYCLES", "init_8c.html#adf856969b3967e4a20be18a3eda24afcadd909e75655f520a7f41db1ed5526611", null ],
       [ "OPT_SIMULATION_TIME", "init_8c.html#adf856969b3967e4a20be18a3eda24afca6204c9354fbc677de85a6f923368168e", null ],
       [ "OPT_DETERMINISTIC_SEED", "init_8c.html#adf856969b3967e4a20be18a3eda24afcabc7837dc9493501756f1753bcf48b1ce", null ],
