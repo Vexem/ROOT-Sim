@@ -9,7 +9,6 @@ var searchData=
   ['set_5flid',['set_lid',['../core_8h.html#a3554b1d923000ad1dc8864d4e891b6bc',1,'core.h']]],
   ['set_5flog_5fmode_5fbit',['SET_LOG_MODE_BIT',['../dymelor_8h.html#ae967f36365cce5a9aa59ee91bd90fdab',1,'dymelor.h']]],
   ['sibling_5fpgd',['SIBLING_PGD',['../cross__state__manager_8h.html#a94280c5a409e0c721eaa9d99b4c6a43d',1,'SIBLING_PGD():&#160;cross_state_manager.h'],['../schedule_8h.html#a94280c5a409e0c721eaa9d99b4c6a43d',1,'SIBLING_PGD():&#160;schedule.h']]],
-  ['sizeof',['SIZEOF',['../asm__defines_8c.html#afcea8712a6e2efeb7a39d4971289fab8',1,'asm_defines.c']]],
   ['sizeof_5fexec_5fcontext_5ft',['sizeof_exec_context_t',['../asm__defines_8h.html#a14273d1d5717446e2578b30e8c5f7f10',1,'asm_defines.h']]],
   ['sizeof_5fstruct',['sizeof_struct',['../asm__defines_8h.html#ab3ba89781a69b44bdd9b19705a7102af',1,'asm_defines.h']]],
   ['slab_5fmsg_5fsize',['SLAB_MSG_SIZE',['../communication_8h.html#a14ef486128b10eab3ff55b61b9579bab',1,'communication.h']]],

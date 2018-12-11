@@ -24,7 +24,6 @@ var searchData=
   ['flush_5ftlb_5fall_5flookup',['flush_tlb_all_lookup',['../cross__state__manager_8c.html#a3df4231ae1582b9567d8697630cbe65b',1,'cross_state_manager.c']]],
   ['flush_5fwhite_5fmsg_5frecv',['flush_white_msg_recv',['../communication_2gvt_8c.html#adbb9ce2068b5fd917d5e89cc39f66e12',1,'flush_white_msg_recv(void):&#160;gvt.c'],['../communication_2gvt_8h.html#adbb9ce2068b5fd917d5e89cc39f66e12',1,'flush_white_msg_recv(void):&#160;gvt.c']]],
   ['flush_5fwhite_5fmsg_5fsent',['flush_white_msg_sent',['../communication_2gvt_8c.html#a4918516de830ae69a67a15e4178a0485',1,'flush_white_msg_sent(void):&#160;gvt.c'],['../communication_2gvt_8h.html#a4918516de830ae69a67a15e4178a0485',1,'flush_white_msg_sent(void):&#160;gvt.c']]],
-  ['foo',['foo',['../asm__defines_8c.html#a5e70c5a0f6b50b949dd82e048d2993a7',1,'asm_defines.c']]],
   ['fops',['fops',['../cross__state__manager_8c.html#a28ee7ed9613033920e733c9da671f79c',1,'cross_state_manager.c']]],
   ['force_5finline',['FORCE_INLINE',['../xxhash_8c.html#ac032d233a8ebfcd82fd49d0824eefb18',1,'xxhash.c']]],
   ['force_5flp_5fcheckpoint',['force_LP_checkpoint',['../state_8c.html#ae0a3272d4a130bc40478a1ceb7f46e39',1,'force_LP_checkpoint(struct lp_struct *lp):&#160;state.c'],['../state_8h.html#a1e504835961e213c7316064d0c361576',1,'force_LP_checkpoint(struct lp_struct *):&#160;state.c']]],

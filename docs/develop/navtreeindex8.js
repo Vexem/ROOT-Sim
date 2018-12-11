@@ -1,9 +1,5 @@
 var NAVTREEINDEX8 =
 {
-"struct__fault__info__t.html#a7f5404723874a4705921e9857d771567":[1,0,5,3],
-"struct__fault__info__t.html#ab62f3d29e6880eb4ebfdaf52237b1639":[1,0,5,2],
-"struct__gid__t.html":[1,0,6],
-"struct__gid__t.html#a0af56a16d80874f71d2b1e5edc1dc506":[1,0,6,0],
 "struct__gvt__buffer.html":[1,0,7],
 "struct__gvt__buffer.html#a7db6362f9dd612b9498dd362ff17ef11":[1,0,7,2],
 "struct__gvt__buffer.html#abbd5d6875cc4e79d6146abe6453ced0b":[1,0,7,1],
@@ -249,5 +245,9 @@ var NAVTREEINDEX8 =
 "structlp__struct.html#aec31f7797526bb1d516c516104e865c2":[1,0,34,24],
 "structlp__struct.html#aedc9c599caf96b5a60b00ce47a567b6f":[1,0,34,6],
 "structmemory__map.html":[1,0,35],
-"structmemory__map.html#a36ed936aa6dafce74ceaa9b2bb2b8bfb":[1,0,35,1]
+"structmemory__map.html#a36ed936aa6dafce74ceaa9b2bb2b8bfb":[1,0,35,1],
+"structmemory__map.html#aa6db4ba43f49a07f6cc5d40be68d17c6":[1,0,35,2],
+"structmemory__map.html#ab202b168bec47989dc342523737eb86e":[1,0,35,3],
+"structmemory__map.html#abb0ee96b8a29d30b065ef915b1788a05":[1,0,35,0],
+"structobstacles__t.html":[1,0,36]
 };

@@ -9,7 +9,6 @@ var searchData=
   ['fini_5fchannel',['fini_channel',['../msgchannel_8c.html#a0d572f56e0da2287e2a4931433bc0a57',1,'fini_channel(msg_channel *mc):&#160;msgchannel.c'],['../msgchannel_8h.html#a4b2fc9107c3dd7ac649d671a15b12c1e',1,'fini_channel(msg_channel *):&#160;msgchannel.c']]],
   ['flush_5fwhite_5fmsg_5frecv',['flush_white_msg_recv',['../communication_2gvt_8c.html#adbb9ce2068b5fd917d5e89cc39f66e12',1,'flush_white_msg_recv(void):&#160;gvt.c'],['../communication_2gvt_8h.html#adbb9ce2068b5fd917d5e89cc39f66e12',1,'flush_white_msg_recv(void):&#160;gvt.c']]],
   ['flush_5fwhite_5fmsg_5fsent',['flush_white_msg_sent',['../communication_2gvt_8c.html#a4918516de830ae69a67a15e4178a0485',1,'flush_white_msg_sent(void):&#160;gvt.c'],['../communication_2gvt_8h.html#a4918516de830ae69a67a15e4178a0485',1,'flush_white_msg_sent(void):&#160;gvt.c']]],
-  ['foo',['foo',['../asm__defines_8c.html#a5e70c5a0f6b50b949dd82e048d2993a7',1,'asm_defines.c']]],
   ['force_5flp_5fcheckpoint',['force_LP_checkpoint',['../state_8c.html#ae0a3272d4a130bc40478a1ceb7f46e39',1,'force_LP_checkpoint(struct lp_struct *lp):&#160;state.c'],['../state_8h.html#a1e504835961e213c7316064d0c361576',1,'force_LP_checkpoint(struct lp_struct *):&#160;state.c']]],
   ['force_5frebind_5fglp',['force_rebind_GLP',['../binding_8h.html#af474817d834391d1bcdff212f5e69e57',1,'binding.h']]],
   ['format_5fsize',['format_size',['../statistics_8c.html#ab7b584959699657a63a49384f07fd7a9',1,'statistics.c']]],

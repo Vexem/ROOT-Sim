@@ -17,7 +17,6 @@ var searchData=
   ['default_5fcontext',['default_context',['../structlp__struct.html#a81945d7e06f639a893b0a6bb441a6008',1,'lp_struct']]],
   ['default_5fidtr',['default_idtr',['../my__page__fault_8c.html#a0182ed4d27e909cb9a03bd33decb48e9',1,'my_page_fault.c']]],
   ['default_5foutput_5fdir',['DEFAULT_OUTPUT_DIR',['../statistics_8h.html#a9e4c716d77a7090dd989c5f9390fa2fb',1,'statistics.h']]],
-  ['define',['DEFINE',['../asm__defines_8c.html#a8e8c53c369e4f662476096cfbbf6754b',1,'asm_defines.c']]],
   ['define_5fmutex',['DEFINE_MUTEX',['../cross__state__manager_8c.html#a44503b769b583487ff18d03ee0b47e05',1,'cross_state_manager.c']]],
   ['delay',['DELAY',['../schedule_8h.html#a62249e384b997229a3e2ae74ade334e2',1,'schedule.h']]],
   ['dest_5fis_5freg',['dest_is_reg',['../structinsn__info__x86.html#a1198f6841b5993f7c062b45128b1e5e8',1,'insn_info_x86']]],

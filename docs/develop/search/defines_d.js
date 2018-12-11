@@ -2,7 +2,6 @@ var searchData=
 [
   ['object_5fto_5fpdp',['OBJECT_TO_PDP',['../cross__state__manager_8h.html#aef519c971f07d01d37a9bd78b8b72789',1,'cross_state_manager.h']]],
   ['object_5fto_5fpml4',['OBJECT_TO_PML4',['../cross__state__manager_8h.html#a427ac8bb09cf176130a269d1c09b1ae9',1,'cross_state_manager.h']]],
-  ['offsetof',['OFFSETOF',['../asm__defines_8c.html#a06fd590700d3bb729116e93acb353ce3',1,'asm_defines.c']]],
   ['offsetof_5fexec_5fcontext_5ft_5fflags',['offsetof_exec_context_t_flags',['../asm__defines_8h.html#a5dfa12816fef166b62563816c4f033c3',1,'asm_defines.h']]],
   ['offsetof_5fexec_5fcontext_5ft_5ffpu',['offsetof_exec_context_t_fpu',['../asm__defines_8h.html#ad9672790fa3e08b59c2b7dc1e26f386f',1,'asm_defines.h']]],
   ['offsetof_5fexec_5fcontext_5ft_5fr10',['offsetof_exec_context_t_r10',['../asm__defines_8h.html#a120ed915c5f7f784f18f57168a4d63cc',1,'asm_defines.h']]],

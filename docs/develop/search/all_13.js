@@ -83,7 +83,6 @@ var searchData=
   ['size_5f32',['SIZE_32',['../disassemble_8h.html#a89163aa2fe49907238034e3954daacdaaf8c2bd7889de0704f869521c127f1749',1,'SIZE_32():&#160;disassemble.h'],['../x86_8h.html#a89163aa2fe49907238034e3954daacdaaf8c2bd7889de0704f869521c127f1749',1,'SIZE_32():&#160;x86.h']]],
   ['size_5f64',['SIZE_64',['../disassemble_8h.html#a89163aa2fe49907238034e3954daacdaaa211aed09197a479f3e2a24f39295eed',1,'SIZE_64():&#160;disassemble.h'],['../x86_8h.html#a89163aa2fe49907238034e3954daacdaaa211aed09197a479f3e2a24f39295eed',1,'SIZE_64():&#160;x86.h']]],
   ['size_5f8',['SIZE_8',['../disassemble_8h.html#a89163aa2fe49907238034e3954daacdaa9639e22aeeea626bf1cfbdc8a464ee15',1,'SIZE_8():&#160;disassemble.h'],['../x86_8h.html#a89163aa2fe49907238034e3954daacdaa9639e22aeeea626bf1cfbdc8a464ee15',1,'SIZE_8():&#160;x86.h']]],
-  ['sizeof',['SIZEOF',['../asm__defines_8c.html#afcea8712a6e2efeb7a39d4971289fab8',1,'asm_defines.c']]],
   ['sizeof_5fexec_5fcontext_5ft',['sizeof_exec_context_t',['../asm__defines_8h.html#a14273d1d5717446e2578b30e8c5f7f10',1,'asm_defines.h']]],
   ['sizeof_5fstruct',['sizeof_struct',['../asm__defines_8h.html#ab3ba89781a69b44bdd9b19705a7102af',1,'asm_defines.h']]],
   ['slab',['slab',['../structmemory__map.html#ab202b168bec47989dc342523737eb86e',1,'memory_map']]],

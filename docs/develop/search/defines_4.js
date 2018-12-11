@@ -11,7 +11,6 @@ var searchData=
   ['debug',['DEBUG',['../schedule_8c.html#ad72dbcf6d0153db1b8d8a58001feed83',1,'schedule.c']]],
   ['debug_5fschedule_5fhook',['DEBUG_SCHEDULE_HOOK',['../schedule_8c.html#ab24183b1d54ea102e7bf9f64f45ff8c8',1,'schedule.c']]],
   ['default_5foutput_5fdir',['DEFAULT_OUTPUT_DIR',['../statistics_8h.html#a9e4c716d77a7090dd989c5f9390fa2fb',1,'statistics.h']]],
-  ['define',['DEFINE',['../asm__defines_8c.html#a8e8c53c369e4f662476096cfbbf6754b',1,'asm_defines.c']]],
   ['delay',['DELAY',['../schedule_8h.html#a62249e384b997229a3e2ae74ade334e2',1,'schedule.h']]],
   ['direction_5fe',['DIRECTION_E',['../ROOT-Sim_8h.html#a60320934526effb2a380abc59aba514d',1,'ROOT-Sim.h']]],
   ['direction_5fn',['DIRECTION_N',['../ROOT-Sim_8h.html#a0e06c6a7080115a503eb29b431e3e4ff',1,'ROOT-Sim.h']]],
