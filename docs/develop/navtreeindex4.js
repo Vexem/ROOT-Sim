@@ -1,6 +1,5 @@
 var NAVTREEINDEX4 =
 {
-"dymelor_8h.html#a0fd9bfdb65697fdecfd4822e8499806a":[2,0,0,7,3,31],
 "dymelor_8h.html#a1896742bd7a9552d3eac5ce20110d060":[2,0,0,7,3,10],
 "dymelor_8h.html#a1c7f2848dc6193b55e9edddf10aea99d":[2,0,0,7,3,49],
 "dymelor_8h.html#a1e1b739b45c018064a6723267d197457":[2,0,0,7,3,36],
@@ -150,8 +149,8 @@ var NAVTREEINDEX4 =
 "globals_b.html":[2,1,0,2],
 "globals_c.html":[2,1,0,3],
 "globals_d.html":[2,1,0,4],
-"globals_defs.html":[2,1,6,0],
 "globals_defs.html":[2,1,6],
+"globals_defs.html":[2,1,6,0],
 "globals_defs_a.html":[2,1,6,1],
 "globals_defs_b.html":[2,1,6,2],
 "globals_defs_c.html":[2,1,6,3],
@@ -174,8 +173,8 @@ var NAVTREEINDEX4 =
 "globals_defs_x.html":[2,1,6,20],
 "globals_e.html":[2,1,0,5],
 "globals_enum.html":[2,1,4],
-"globals_eval.html":[2,1,5],
 "globals_eval.html":[2,1,5,0],
+"globals_eval.html":[2,1,5],
 "globals_eval_c.html":[2,1,5,1],
 "globals_eval_i.html":[2,1,5,2],
 "globals_eval_k.html":[2,1,5,3],
@@ -190,8 +189,8 @@ var NAVTREEINDEX4 =
 "globals_eval_v.html":[2,1,5,12],
 "globals_eval_x.html":[2,1,5,13],
 "globals_f.html":[2,1,0,6],
-"globals_func.html":[2,1,1,0],
 "globals_func.html":[2,1,1],
+"globals_func.html":[2,1,1,0],
 "globals_func_a.html":[2,1,1,1],
 "globals_func_b.html":[2,1,1,2],
 "globals_func_c.html":[2,1,1,3],
@@ -232,8 +231,8 @@ var NAVTREEINDEX4 =
 "globals_type.html":[2,1,3],
 "globals_u.html":[2,1,0,21],
 "globals_v.html":[2,1,0,22],
-"globals_vars.html":[2,1,2],
 "globals_vars.html":[2,1,2,0],
+"globals_vars.html":[2,1,2],
 "globals_vars_a.html":[2,1,2,1],
 "globals_vars_b.html":[2,1,2,2],
 "globals_vars_c.html":[2,1,2,3],
@@ -249,5 +248,6 @@ var NAVTREEINDEX4 =
 "globals_vars_o.html":[2,1,2,13],
 "globals_vars_p.html":[2,1,2,14],
 "globals_vars_q.html":[2,1,2,15],
-"globals_vars_r.html":[2,1,2,16]
+"globals_vars_r.html":[2,1,2,16],
+"globals_vars_s.html":[2,1,2,17]
 };

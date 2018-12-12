@@ -1,8 +1,8 @@
 <map id="gvt_fini" name="gvt_fini">
 <area shape="rect" id="node2" href="$ccgs_8c.html#ab54ca4e7a4ba70e71cb3129aa0adbb74" title="ccgs_fini" alt="" coords="165,5,241,32"/>
 <area shape="rect" id="node5" href="$communication_2gvt_8c.html#abb460bc63d1b830804752ce6bdd4e30a" title="gvt_init_pending" alt="" coords="139,56,266,83"/>
-<area shape="rect" id="node7" href="$communication_2gvt_8c.html#a0ed9e4affac9f35d26194a98a089f2c6" title="join_white_msg_redux" alt="" coords="121,107,284,133"/>
-<area shape="rect" id="node8" href="$communication_2gvt_8c.html#a4c4efc6874baad6133dd05ed355fe8d8" title="wait_white_msg_redux" alt="" coords="120,157,285,184"/>
+<area shape="rect" id="node7" href="$communication_2gvt_8c.html#a0ed9e4affac9f35d26194a98a089f2c6" title="Join the white message reduction collective operation. " alt="" coords="121,107,284,133"/>
+<area shape="rect" id="node8" href="$communication_2gvt_8c.html#a4c4efc6874baad6133dd05ed355fe8d8" title="Syncronously wait for the completion of white message reduction collective operation. " alt="" coords="120,157,285,184"/>
 <area shape="rect" id="node9" href="$communication_2gvt_8c.html#a53ca71f17a218181b76a3ef8ffa12e95" title="join_gvt_redux" alt="" coords="145,208,260,235"/>
 <area shape="rect" id="node3" href="$dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a" title="rsfree" alt="" coords="361,5,420,32"/>
 <area shape="rect" id="node4" href="$platform_8c.html#ae2af2cd130d16958394ae21e9d13035f" title="__real_free" alt="" coords="496,5,588,32"/>

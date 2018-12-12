@@ -10,7 +10,6 @@ var searchData=
   ['white_5f1_5fmsg_5frecv',['white_1_msg_recv',['../communication_2gvt_8c.html#a7c5bf507fc67fec650614adcb3bf5a78',1,'gvt.c']]],
   ['white_5fcount_5fcomm',['white_count_comm',['../communication_2gvt_8c.html#a93ed03c46ed4898eb43880cfdc7818c7',1,'gvt.c']]],
   ['white_5fcount_5flock',['white_count_lock',['../communication_2gvt_8c.html#a8620b7dcfe0486c757dcbcd2e569b692',1,'gvt.c']]],
-  ['white_5fcount_5fpending',['white_count_pending',['../communication_2gvt_8c.html#a0ebabb6b80bb9ef693de27acd6d4f0fe',1,'gvt.c']]],
   ['white_5fcount_5freq',['white_count_req',['../communication_2gvt_8c.html#a6c3a3f661a96c329f9bb2954e9e280ed',1,'gvt.c']]],
   ['white_5fmsg_5fend_5fcompleted',['white_msg_end_completed',['../communication_2gvt_8h.html#a7afd4854c063266bb9255e4e4dba39f6',1,'gvt.h']]],
   ['white_5fmsg_5frecv',['white_msg_recv',['../communication_2gvt_8c.html#a7d8761a9e2f01cdff70593723d0c0abd',1,'gvt.c']]],

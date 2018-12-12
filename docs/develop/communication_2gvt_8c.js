@@ -32,7 +32,6 @@ var communication_2gvt_8c =
     [ "white_1_msg_recv", "communication_2gvt_8c.html#a7c5bf507fc67fec650614adcb3bf5a78", null ],
     [ "white_count_comm", "communication_2gvt_8c.html#a93ed03c46ed4898eb43880cfdc7818c7", null ],
     [ "white_count_lock", "communication_2gvt_8c.html#a8620b7dcfe0486c757dcbcd2e569b692", null ],
-    [ "white_count_pending", "communication_2gvt_8c.html#a0ebabb6b80bb9ef693de27acd6d4f0fe", null ],
     [ "white_count_req", "communication_2gvt_8c.html#a6c3a3f661a96c329f9bb2954e9e280ed", null ],
     [ "white_msg_recv", "communication_2gvt_8c.html#a7d8761a9e2f01cdff70593723d0c0abd", null ],
     [ "white_msg_sent", "communication_2gvt_8c.html#a39fd394b547fafedf9907b606565298a", null ],

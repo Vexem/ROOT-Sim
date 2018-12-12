@@ -1,5 +1,5 @@
 <map id="gvt_init_pending" name="gvt_init_pending">
-<area shape="rect" id="node2" href="$communication_2gvt_8h.html#ac35f5f227c553fffd0911c995c865e17" title="gvt_comm_finalize" alt="" coords="180,17,321,44"/>
+<area shape="rect" id="node2" href="$communication_2gvt_8h.html#ac35f5f227c553fffd0911c995c865e17" title="Shut down the MPI&#45;based distributed GVT reduction submodule. " alt="" coords="180,17,321,44"/>
 <area shape="rect" id="node13" href="$gvt_2gvt_8h.html#a10977cb9180000f423f184cca0b6338d" title="gvt_fini" alt="" coords="217,68,284,95"/>
 <area shape="rect" id="node14" href="$gvt_2gvt_8c.html#a5eca5fe72026b6f5e5ec76598bde2475" title="start_new_gvt" alt="" coords="412,119,523,145"/>
 <area shape="rect" id="node3" href="$mpi_8h.html#a38b0bdfeab3308a62e50dc362ebd2a68" title="inter_kernel_comm_finalize" alt="" coords="369,17,565,44"/>

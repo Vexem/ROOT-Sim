@@ -4,7 +4,7 @@
 <area shape="rect" id="node20" href="$atomic_8h.html#a52336e036d2da5656c6db69b121458ba" title="atomic_dec" alt="" coords="1245,1111,1341,1138"/>
 <area shape="rect" id="node39" href="$gvt_2gvt_8c.html#a09f7517c5f85f842692721be967ab757" title="reduce_local_gvt" alt="" coords="155,1228,284,1255"/>
 <area shape="rect" id="node40" href="$scheduler_8c.html#ac48128e72b303ea22d8ec641a9516b15" title="schedule" alt="" coords="180,908,259,935"/>
-<area shape="rect" id="node50" href="$communication_2gvt_8c.html#ada741933a843e0427d9768d6bb2a511b" title="exit_red_phase" alt="" coords="160,1279,279,1306"/>
+<area shape="rect" id="node50" href="$communication_2gvt_8c.html#ada741933a843e0427d9768d6bb2a511b" title="Make a thread exit from red phase. " alt="" coords="160,1279,279,1306"/>
 <area shape="rect" id="node3" href="$atomic_8h.html#afd2c05472274bd1c73d5408a213cf429" title="spin_trylock" alt="" coords="812,56,909,83"/>
 <area shape="rect" id="node5" href="$process_8c.html#a2193e0386f7858db77f38146a15d3cd1" title="find_lp_by_gid" alt="" coords="1023,284,1133,311"/>
 <area shape="rect" id="node6" href="$communication_8c.html#ab957dc2cd186382c50ef8cfde9761909" title="Get a buffer to keep a message. " alt="" coords="787,386,935,412"/>

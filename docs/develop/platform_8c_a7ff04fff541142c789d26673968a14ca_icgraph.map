@@ -6,7 +6,7 @@
 <area shape="rect" id="node8" href="$communication_8h.html#a56a4865196c169691525e99bae337519" title="Pack a message in a platform&#45;level data structure. " alt="" coords="315,736,402,763"/>
 <area shape="rect" id="node12" href="$ecs_8h.html#a414633c637a80868d1dea7b3acf152f3" title="ecs_send_pages" alt="" coords="522,837,650,864"/>
 <area shape="rect" id="node15" href="$scheduler_8h.html#aacd9fe9684de21c933680f355acb5766" title="process_control_msg" alt="" coords="507,888,665,915"/>
-<area shape="rect" id="node18" href="$communication_2gvt_8h.html#ae0cb1aa4dae8060ac662c0534849ecf3" title="gvt_comm_init" alt="" coords="301,1216,417,1243"/>
+<area shape="rect" id="node18" href="$communication_2gvt_8h.html#ae0cb1aa4dae8060ac662c0534849ecf3" title="Initialize the MPI&#45;based distributed GVT reduction submodule. " alt="" coords="301,1216,417,1243"/>
 <area shape="rect" id="node20" href="$gvt_2gvt_8h.html#aa6c9337f3fccf8513b8fad1533f743c4" title="gvt_init" alt="" coords="552,416,620,443"/>
 <area shape="rect" id="node21" href="$mpi_8h.html#ad243611fd168b265105bce70c193394d" title="receive_remote_msgs" alt="" coords="277,1165,441,1192"/>
 <area shape="rect" id="node23" href="$mpi_8c.html#a6e129776fd0d7fc31a255a396ce28c39" title="dist_termination_init" alt="" coords="283,1267,435,1293"/>

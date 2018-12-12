@@ -3,7 +3,7 @@
 <area shape="rect" id="node3" href="$thread_8c.html#a9a978a7c6a81cdde2633f5ef7e01b7f4" title="__helper_create_thread" alt="" coords="252,1328,425,1354"/>
 <area shape="rect" id="node6" href="$communication_8h.html#a323ad017762155352c38983e67e8adeb" title="Release a message buffer. " alt="" coords="519,821,623,848"/>
 <area shape="rect" id="node9" href="$wnd_8h.html#acbe46c456aa03b014ca2134604700789" title="outgoing_window_finalize" alt="" coords="1171,961,1352,988"/>
-<area shape="rect" id="node15" href="$communication_2gvt_8h.html#ac35f5f227c553fffd0911c995c865e17" title="gvt_comm_finalize" alt="" coords="268,112,409,138"/>
+<area shape="rect" id="node15" href="$communication_2gvt_8h.html#ac35f5f227c553fffd0911c995c865e17" title="Shut down the MPI&#45;based distributed GVT reduction submodule. " alt="" coords="268,112,409,138"/>
 <area shape="rect" id="node17" href="$calqueue_8c.html#a4e8867b10c2140a383aaaff9556f17be" title="new_width" alt="" coords="295,213,382,240"/>
 <area shape="rect" id="node18" href="$calqueue_8c.html#a091fb2fd34edc1674dcf7418485419b5" title="resize" alt="" coords="541,162,601,189"/>
 <area shape="rect" id="node20" href="$calqueue_8h.html#a180e22d3d13d9685adb6326484a1b418" title="calqueue_get" alt="" coords="981,416,1089,442"/>
