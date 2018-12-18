@@ -1,6 +1,0 @@
-<map id="get_si_code" name="get_si_code">
-<area shape="rect" id="node2" href="$traps-dummy_8h.html#a909861062b139fb7b7dbb3cbaf1e1e62" title="math_error" alt="" coords="194,5,289,32"/>
-<area shape="rect" id="node3" href="$traps-dummy_8h.html#aff28e9c71f27a4c5a07b682de678bb2b" title="math_emulate" alt="" coords="183,56,299,83"/>
-<area shape="rect" id="node4" href="$traps-dummy_8h.html#a502cc410c72796f2ee9cae0226d74153" title="smp_thermal_interrupt" alt="" coords="157,107,326,133"/>
-<area shape="rect" id="node5" href="$traps-dummy_8h.html#af6e3ab63916a30e43f9ef71a4053ba6e" title="mce_threshold_interrupt" alt="" coords="152,157,331,184"/>
-</map>

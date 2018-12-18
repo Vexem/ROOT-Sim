@@ -1,7 +1,0 @@
-<map id="slab_free" name="slab_free">
-<area shape="rect" id="node2" href="$atomic_8h.html#a7a6b9868956dd8e51e5de80e16c76fc4" title="spin_lock" alt="" coords="144,5,224,32"/>
-<area shape="rect" id="node3" href="$slab_8c.html#ac0e4a2a4ab26d7f2399eecbb72fc4cff" title="slab_is_valid" alt="" coords="133,56,235,83"/>
-<area shape="rect" id="node4" href="$dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a" title="rsfree" alt="" coords="155,107,213,133"/>
-<area shape="rect" id="node6" href="$atomic_8h.html#a4e8c9d1c6101995f1ecd2141d77e4824" title="spin_unlock" alt="" coords="136,157,232,184"/>
-<area shape="rect" id="node5" href="$platform_8c.html#ae2af2cd130d16958394ae21e9d13035f" title="__real_free" alt="" coords="283,107,375,133"/>
-</map>

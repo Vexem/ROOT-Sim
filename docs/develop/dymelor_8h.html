@@ -210,97 +210,136 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:acedb816c002a9b5b27d493de1b451cc8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#acedb816c002a9b5b27d493de1b451cc8">LP_PREALLOCATION_INITIAL_ADDRESS</a>&#160;&#160;&#160;(void *)0x0000008000000000</td></tr>
+<tr class="memitem:acedb816c002a9b5b27d493de1b451cc8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acedb816c002a9b5b27d493de1b451cc8"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>LP_PREALLOCATION_INITIAL_ADDRESS</b>&#160;&#160;&#160;(void *)0x0000008000000000</td></tr>
 <tr class="separator:acedb816c002a9b5b27d493de1b451cc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7520c5477c11965aabeedc033c9862b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#ae7520c5477c11965aabeedc033c9862b">MASK</a>&#160;&#160;&#160;0x00000001</td></tr>
+<tr class="memitem:ae7520c5477c11965aabeedc033c9862b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae7520c5477c11965aabeedc033c9862b"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>MASK</b>&#160;&#160;&#160;0x00000001</td></tr>
 <tr class="separator:ae7520c5477c11965aabeedc033c9862b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf35d28195f0f301fe63d0ea867f4379"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#abf35d28195f0f301fe63d0ea867f4379">MIN_CHUNK_SIZE</a>&#160;&#160;&#160;128</td></tr>
+<tr class="memitem:abf35d28195f0f301fe63d0ea867f4379"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abf35d28195f0f301fe63d0ea867f4379"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>MIN_CHUNK_SIZE</b>&#160;&#160;&#160;128</td></tr>
 <tr class="separator:abf35d28195f0f301fe63d0ea867f4379"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a523eaf5b650f38c307a6aab7f957fa2b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#a523eaf5b650f38c307a6aab7f957fa2b">MAX_CHUNK_SIZE</a>&#160;&#160;&#160;4194304</td></tr>
+<tr class="memitem:a523eaf5b650f38c307a6aab7f957fa2b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a523eaf5b650f38c307a6aab7f957fa2b"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>MAX_CHUNK_SIZE</b>&#160;&#160;&#160;4194304</td></tr>
 <tr class="separator:a523eaf5b650f38c307a6aab7f957fa2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1695162cb728d8095129dad396baa0d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#ac1695162cb728d8095129dad396baa0d">NUM_AREAS</a>&#160;&#160;&#160;(log2(<a class="el" href="dymelor_8h.html#a523eaf5b650f38c307a6aab7f957fa2b">MAX_CHUNK_SIZE</a>) - log2(<a class="el" href="dymelor_8h.html#abf35d28195f0f301fe63d0ea867f4379">MIN_CHUNK_SIZE</a>) + 1)</td></tr>
+<tr class="memitem:ac1695162cb728d8095129dad396baa0d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac1695162cb728d8095129dad396baa0d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>NUM_AREAS</b>&#160;&#160;&#160;(log2(MAX_CHUNK_SIZE) - log2(MIN_CHUNK_SIZE) + 1)</td></tr>
 <tr class="separator:ac1695162cb728d8095129dad396baa0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70f42b09949fbf700a8173bdfbac0ca7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#a70f42b09949fbf700a8173bdfbac0ca7">MAX_NUM_AREAS</a>&#160;&#160;&#160;(<a class="el" href="dymelor_8h.html#ac1695162cb728d8095129dad396baa0d">NUM_AREAS</a> * 32)</td></tr>
+<tr class="memitem:a70f42b09949fbf700a8173bdfbac0ca7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a70f42b09949fbf700a8173bdfbac0ca7"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>MAX_NUM_AREAS</b>&#160;&#160;&#160;(NUM_AREAS * 32)</td></tr>
 <tr class="separator:a70f42b09949fbf700a8173bdfbac0ca7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad44c4885711e63afbc4edd5df6f2c2c1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#ad44c4885711e63afbc4edd5df6f2c2c1">MAX_LIMIT_NUM_AREAS</a>&#160;&#160;&#160;<a class="el" href="dymelor_8h.html#a70f42b09949fbf700a8173bdfbac0ca7">MAX_NUM_AREAS</a></td></tr>
+<tr class="memitem:ad44c4885711e63afbc4edd5df6f2c2c1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad44c4885711e63afbc4edd5df6f2c2c1"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>MAX_LIMIT_NUM_AREAS</b>&#160;&#160;&#160;MAX_NUM_AREAS</td></tr>
 <tr class="separator:ad44c4885711e63afbc4edd5df6f2c2c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8d0bbc015a86346f4177f4c152b8c0f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#ae8d0bbc015a86346f4177f4c152b8c0f">MIN_NUM_CHUNKS</a>&#160;&#160;&#160;512</td></tr>
+<tr class="memitem:ae8d0bbc015a86346f4177f4c152b8c0f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae8d0bbc015a86346f4177f4c152b8c0f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>MIN_NUM_CHUNKS</b>&#160;&#160;&#160;512</td></tr>
 <tr class="separator:ae8d0bbc015a86346f4177f4c152b8c0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f47d18aa9ea116103da072b110cf09d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#a2f47d18aa9ea116103da072b110cf09d">MAX_NUM_CHUNKS</a>&#160;&#160;&#160;4096</td></tr>
+<tr class="memitem:a2f47d18aa9ea116103da072b110cf09d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2f47d18aa9ea116103da072b110cf09d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>MAX_NUM_CHUNKS</b>&#160;&#160;&#160;4096</td></tr>
 <tr class="separator:a2f47d18aa9ea116103da072b110cf09d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4cb429ff198100312e85a7ed8f31bad9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#a4cb429ff198100312e85a7ed8f31bad9">MAX_LOG_THRESHOLD</a>&#160;&#160;&#160;1.7</td></tr>
+<tr class="memitem:a4cb429ff198100312e85a7ed8f31bad9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4cb429ff198100312e85a7ed8f31bad9"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>MAX_LOG_THRESHOLD</b>&#160;&#160;&#160;1.7</td></tr>
 <tr class="separator:a4cb429ff198100312e85a7ed8f31bad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a856836df734875fbf1ee18ad28dbc953"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#a856836df734875fbf1ee18ad28dbc953">MIN_LOG_THRESHOLD</a>&#160;&#160;&#160;1.7</td></tr>
+<tr class="memitem:a856836df734875fbf1ee18ad28dbc953"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a856836df734875fbf1ee18ad28dbc953"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>MIN_LOG_THRESHOLD</b>&#160;&#160;&#160;1.7</td></tr>
 <tr class="separator:a856836df734875fbf1ee18ad28dbc953"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd3b4ee065d60cc64218450975828356"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#acd3b4ee065d60cc64218450975828356">INCREMENTAL_GRANULARITY</a>&#160;&#160;&#160;50</td></tr>
+<tr class="memitem:acd3b4ee065d60cc64218450975828356"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acd3b4ee065d60cc64218450975828356"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>INCREMENTAL_GRANULARITY</b>&#160;&#160;&#160;50</td></tr>
 <tr class="separator:acd3b4ee065d60cc64218450975828356"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67c24404b157cef24c7ae13801d908d6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#a67c24404b157cef24c7ae13801d908d6">LITTLE_SIZE</a>&#160;&#160;&#160;32</td></tr>
+<tr class="memitem:a67c24404b157cef24c7ae13801d908d6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a67c24404b157cef24c7ae13801d908d6"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>LITTLE_SIZE</b>&#160;&#160;&#160;32</td></tr>
 <tr class="separator:a67c24404b157cef24c7ae13801d908d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9a81253c3141a7eba184ea7b3414bd6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#ad9a81253c3141a7eba184ea7b3414bd6">CHECK_SIZE</a>&#160;&#160;&#160;0.25</td></tr>
+<tr class="memitem:ad9a81253c3141a7eba184ea7b3414bd6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad9a81253c3141a7eba184ea7b3414bd6"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CHECK_SIZE</b>&#160;&#160;&#160;0.25</td></tr>
 <tr class="separator:ad9a81253c3141a7eba184ea7b3414bd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a697c04e0699a9718b18fca941ada8cca"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#a697c04e0699a9718b18fca941ada8cca">GET_CACHE_LINE_NUMBER</a>(P)&#160;&#160;&#160;((unsigned long)((P &gt;&gt; 4) &amp; (CACHE_SIZE - 1)))</td></tr>
+<tr class="memitem:a697c04e0699a9718b18fca941ada8cca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a697c04e0699a9718b18fca941ada8cca"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>GET_CACHE_LINE_NUMBER</b>(P)&#160;&#160;&#160;((unsigned long)((P &gt;&gt; 4) &amp; (CACHE_SIZE - 1)))</td></tr>
 <tr class="separator:a697c04e0699a9718b18fca941ada8cca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae967f36365cce5a9aa59ee91bd90fdab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#ae967f36365cce5a9aa59ee91bd90fdab">SET_LOG_MODE_BIT</a>(m_area)&#160;&#160;&#160;(((<a class="el" href="dymelor_8h.html#ad7759b54b5e949c07ad98607568694d0">malloc_area</a>*)(m_area))-&gt;chunk_size |=  (<a class="el" href="dymelor_8h.html#ae7520c5477c11965aabeedc033c9862b">MASK</a> &lt;&lt; 0))</td></tr>
+<tr class="memitem:ae967f36365cce5a9aa59ee91bd90fdab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae967f36365cce5a9aa59ee91bd90fdab"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SET_LOG_MODE_BIT</b>(m_area)&#160;&#160;&#160;(((<a class="el" href="struct__malloc__area.html">malloc_area</a>*)(m_area))-&gt;chunk_size |=  (MASK &lt;&lt; 0))</td></tr>
 <tr class="separator:ae967f36365cce5a9aa59ee91bd90fdab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3fe801bd3b09170b74933bb61b92e14d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#a3fe801bd3b09170b74933bb61b92e14d">RESET_LOG_MODE_BIT</a>(m_area)&#160;&#160;&#160;(((<a class="el" href="dymelor_8h.html#ad7759b54b5e949c07ad98607568694d0">malloc_area</a>*)(m_area))-&gt;chunk_size &amp;= ~(<a class="el" href="dymelor_8h.html#ae7520c5477c11965aabeedc033c9862b">MASK</a> &lt;&lt; 0))</td></tr>
+<tr class="memitem:a3fe801bd3b09170b74933bb61b92e14d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3fe801bd3b09170b74933bb61b92e14d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>RESET_LOG_MODE_BIT</b>(m_area)&#160;&#160;&#160;(((<a class="el" href="struct__malloc__area.html">malloc_area</a>*)(m_area))-&gt;chunk_size &amp;= ~(MASK &lt;&lt; 0))</td></tr>
 <tr class="separator:a3fe801bd3b09170b74933bb61b92e14d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f5179deb827efa06df5066f8ef779a9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#a1f5179deb827efa06df5066f8ef779a9">CHECK_LOG_MODE_BIT</a>(m_area)&#160;&#160;&#160;(((<a class="el" href="dymelor_8h.html#ad7759b54b5e949c07ad98607568694d0">malloc_area</a>*)(m_area))-&gt;chunk_size &amp;   (<a class="el" href="dymelor_8h.html#ae7520c5477c11965aabeedc033c9862b">MASK</a> &lt;&lt; 0))</td></tr>
+<tr class="memitem:a1f5179deb827efa06df5066f8ef779a9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1f5179deb827efa06df5066f8ef779a9"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CHECK_LOG_MODE_BIT</b>(m_area)&#160;&#160;&#160;(((<a class="el" href="struct__malloc__area.html">malloc_area</a>*)(m_area))-&gt;chunk_size &amp;   (MASK &lt;&lt; 0))</td></tr>
 <tr class="separator:a1f5179deb827efa06df5066f8ef779a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a706e12898a677460dda8cf45149502ae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#a706e12898a677460dda8cf45149502ae">SET_AREA_LOCK_BIT</a>(m_area)&#160;&#160;&#160;(((<a class="el" href="dymelor_8h.html#ad7759b54b5e949c07ad98607568694d0">malloc_area</a>*)(m_area))-&gt;chunk_size |=  (<a class="el" href="dymelor_8h.html#ae7520c5477c11965aabeedc033c9862b">MASK</a> &lt;&lt; 1))</td></tr>
+<tr class="memitem:a706e12898a677460dda8cf45149502ae"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a706e12898a677460dda8cf45149502ae"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SET_AREA_LOCK_BIT</b>(m_area)&#160;&#160;&#160;(((<a class="el" href="struct__malloc__area.html">malloc_area</a>*)(m_area))-&gt;chunk_size |=  (MASK &lt;&lt; 1))</td></tr>
 <tr class="separator:a706e12898a677460dda8cf45149502ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2dad8601d7e4c4022276c0ed7d4e7c83"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#a2dad8601d7e4c4022276c0ed7d4e7c83">RESET_AREA_LOCK_BIT</a>(m_area)&#160;&#160;&#160;(((<a class="el" href="dymelor_8h.html#ad7759b54b5e949c07ad98607568694d0">malloc_area</a>*)(m_area))-&gt;chunk_size &amp;= ~(<a class="el" href="dymelor_8h.html#ae7520c5477c11965aabeedc033c9862b">MASK</a> &lt;&lt; 1))</td></tr>
+<tr class="memitem:a2dad8601d7e4c4022276c0ed7d4e7c83"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2dad8601d7e4c4022276c0ed7d4e7c83"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>RESET_AREA_LOCK_BIT</b>(m_area)&#160;&#160;&#160;(((<a class="el" href="struct__malloc__area.html">malloc_area</a>*)(m_area))-&gt;chunk_size &amp;= ~(MASK &lt;&lt; 1))</td></tr>
 <tr class="separator:a2dad8601d7e4c4022276c0ed7d4e7c83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a627107f52a65aa34c5fc2e98748b278f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#a627107f52a65aa34c5fc2e98748b278f">CHECK_AREA_LOCK_BIT</a>(m_area)&#160;&#160;&#160;(((<a class="el" href="dymelor_8h.html#ad7759b54b5e949c07ad98607568694d0">malloc_area</a>*)(m_area))-&gt;chunk_size &amp;   (<a class="el" href="dymelor_8h.html#ae7520c5477c11965aabeedc033c9862b">MASK</a> &lt;&lt; 1))</td></tr>
+<tr class="memitem:a627107f52a65aa34c5fc2e98748b278f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a627107f52a65aa34c5fc2e98748b278f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CHECK_AREA_LOCK_BIT</b>(m_area)&#160;&#160;&#160;(((<a class="el" href="struct__malloc__area.html">malloc_area</a>*)(m_area))-&gt;chunk_size &amp;   (MASK &lt;&lt; 1))</td></tr>
 <tr class="separator:a627107f52a65aa34c5fc2e98748b278f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0c88ba4449cb2e7b1e8865c6e356f54"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#ae0c88ba4449cb2e7b1e8865c6e356f54">UNTAGGED_CHUNK_SIZE</a>(m_area)&#160;&#160;&#160;(((<a class="el" href="dymelor_8h.html#ad7759b54b5e949c07ad98607568694d0">malloc_area</a>*)(m_area))-&gt;chunk_size &amp; ~((<a class="el" href="dymelor_8h.html#ae7520c5477c11965aabeedc033c9862b">MASK</a> &lt;&lt; 0) | (<a class="el" href="dymelor_8h.html#ae7520c5477c11965aabeedc033c9862b">MASK</a> &lt;&lt; 1)))</td></tr>
+<tr class="memitem:ae0c88ba4449cb2e7b1e8865c6e356f54"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae0c88ba4449cb2e7b1e8865c6e356f54"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UNTAGGED_CHUNK_SIZE</b>(m_area)&#160;&#160;&#160;(((<a class="el" href="struct__malloc__area.html">malloc_area</a>*)(m_area))-&gt;chunk_size &amp; ~((MASK &lt;&lt; 0) | (MASK &lt;&lt; 1)))</td></tr>
 <tr class="separator:ae0c88ba4449cb2e7b1e8865c6e356f54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d095bc1979e862ea41c3222f153715c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#a9d095bc1979e862ea41c3222f153715c">POWEROF2</a>(x)&#160;&#160;&#160;(1UL &lt;&lt; (1 + (63 - __builtin_clzl((x) - 1))))</td></tr>
+<tr class="memitem:a9d095bc1979e862ea41c3222f153715c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9d095bc1979e862ea41c3222f153715c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>POWEROF2</b>(x)&#160;&#160;&#160;(1UL &lt;&lt; (1 + (63 - __builtin_clzl((x) - 1))))</td></tr>
 <tr class="separator:a9d095bc1979e862ea41c3222f153715c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d8e2eb93e1d963854fdb3c037b92366"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#a2d8e2eb93e1d963854fdb3c037b92366">IS_POWEROF2</a>(x)&#160;&#160;&#160;((x) != 0 &amp;&amp; ((x) &amp; ((x) - 1)) == 0)</td></tr>
+<tr class="memitem:a2d8e2eb93e1d963854fdb3c037b92366"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2d8e2eb93e1d963854fdb3c037b92366"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>IS_POWEROF2</b>(x)&#160;&#160;&#160;((x) != 0 &amp;&amp; ((x) &amp; ((x) - 1)) == 0)</td></tr>
 <tr class="separator:a2d8e2eb93e1d963854fdb3c037b92366"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1896742bd7a9552d3eac5ce20110d060"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#a1896742bd7a9552d3eac5ce20110d060">is_incremental</a>(ckpt)&#160;&#160;&#160;(((<a class="el" href="dymelor_8h.html#a0fd9bfdb65697fdecfd4822e8499806a">malloc_state</a> *)ckpt)-&gt;is_incremental == true)</td></tr>
+<tr class="memitem:a1896742bd7a9552d3eac5ce20110d060"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1896742bd7a9552d3eac5ce20110d060"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>is_incremental</b>(ckpt)&#160;&#160;&#160;(((<a class="el" href="struct__malloc__state.html">malloc_state</a> *)ckpt)-&gt;is_incremental == true)</td></tr>
 <tr class="separator:a1896742bd7a9552d3eac5ce20110d060"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa75aaa50c07bf60465dc17ab3c6f98cd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#aa75aaa50c07bf60465dc17ab3c6f98cd">get_top_pointer</a>(ptr)&#160;&#160;&#160;((unsigned long long *)((char *)ptr - sizeof(unsigned long long)))</td></tr>
+<tr class="memitem:aa75aaa50c07bf60465dc17ab3c6f98cd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa75aaa50c07bf60465dc17ab3c6f98cd"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>get_top_pointer</b>(ptr)&#160;&#160;&#160;((unsigned long long *)((char *)ptr - sizeof(unsigned long long)))</td></tr>
 <tr class="separator:aa75aaa50c07bf60465dc17ab3c6f98cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae063b739e203a16c55fe2ab3e3c4f340"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#ae063b739e203a16c55fe2ab3e3c4f340">get_area_top_pointer</a>(ptr)&#160;&#160;&#160;( (<a class="el" href="dymelor_8h.html#ad7759b54b5e949c07ad98607568694d0">malloc_area</a> **)(*<a class="el" href="dymelor_8h.html#aa75aaa50c07bf60465dc17ab3c6f98cd">get_top_pointer</a>(ptr)) )</td></tr>
+<tr class="memitem:ae063b739e203a16c55fe2ab3e3c4f340"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae063b739e203a16c55fe2ab3e3c4f340"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>get_area_top_pointer</b>(ptr)&#160;&#160;&#160;( (<a class="el" href="struct__malloc__area.html">malloc_area</a> **)(*get_top_pointer(ptr)) )</td></tr>
 <tr class="separator:ae063b739e203a16c55fe2ab3e3c4f340"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2ec2748d56969ed536cf44e31c91c26"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#ae2ec2748d56969ed536cf44e31c91c26">get_area</a>(ptr)&#160;&#160;&#160;( *(<a class="el" href="dymelor_8h.html#ae063b739e203a16c55fe2ab3e3c4f340">get_area_top_pointer</a>(ptr)) )</td></tr>
+<tr class="memitem:ae2ec2748d56969ed536cf44e31c91c26"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae2ec2748d56969ed536cf44e31c91c26"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>get_area</b>(ptr)&#160;&#160;&#160;( *(get_area_top_pointer(ptr)) )</td></tr>
 <tr class="separator:ae2ec2748d56969ed536cf44e31c91c26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:ad7759b54b5e949c07ad98607568694d0"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct__malloc__area.html">_malloc_area</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#ad7759b54b5e949c07ad98607568694d0">malloc_area</a></td></tr>
+<tr class="memitem:ad7759b54b5e949c07ad98607568694d0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad7759b54b5e949c07ad98607568694d0"></a>
+typedef struct <a class="el" href="struct__malloc__area.html">_malloc_area</a>&#160;</td><td class="memItemRight" valign="bottom"><b>malloc_area</b></td></tr>
 <tr class="separator:ad7759b54b5e949c07ad98607568694d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fd9bfdb65697fdecfd4822e8499806a"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct__malloc__state.html">_malloc_state</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#a0fd9bfdb65697fdecfd4822e8499806a">malloc_state</a></td></tr>
+<tr class="memitem:a0fd9bfdb65697fdecfd4822e8499806a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0fd9bfdb65697fdecfd4822e8499806a"></a>
+typedef struct <a class="el" href="struct__malloc__state.html">_malloc_state</a>&#160;</td><td class="memItemRight" valign="bottom"><b>malloc_state</b></td></tr>
 <tr class="separator:a0fd9bfdb65697fdecfd4822e8499806a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a5e838ce5ad75278a81d8451b9e120d70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#a5e838ce5ad75278a81d8451b9e120d70">set_force_full</a> (unsigned int, int)</td></tr>
+<tr class="memitem:a5e838ce5ad75278a81d8451b9e120d70"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5e838ce5ad75278a81d8451b9e120d70"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>set_force_full</b> (unsigned int, int)</td></tr>
 <tr class="separator:a5e838ce5ad75278a81d8451b9e120d70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3e133eb1e589a684794f815e55eafaa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#af3e133eb1e589a684794f815e55eafaa">dirty_mem</a> (void *, int)</td></tr>
 <tr class="separator:af3e133eb1e589a684794f815e55eafaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4270e61b09ce8971dc0099a8d126d6b7"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#a4270e61b09ce8971dc0099a8d126d6b7">get_state_size</a> (int)</td></tr>
+<tr class="memitem:a4270e61b09ce8971dc0099a8d126d6b7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4270e61b09ce8971dc0099a8d126d6b7"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>get_state_size</b> (int)</td></tr>
 <tr class="separator:a4270e61b09ce8971dc0099a8d126d6b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab72247530e122f0e6503db111c18d273"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#ab72247530e122f0e6503db111c18d273">get_log_size</a> (<a class="el" href="dymelor_8h.html#a0fd9bfdb65697fdecfd4822e8499806a">malloc_state</a> *)</td></tr>
+<tr class="memitem:ab72247530e122f0e6503db111c18d273"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#ab72247530e122f0e6503db111c18d273">get_log_size</a> (<a class="el" href="struct__malloc__state.html">malloc_state</a> *)</td></tr>
 <tr class="separator:ab72247530e122f0e6503db111c18d273"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c1ade2a39f9016931b7d1bee3fea813"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#a7c1ade2a39f9016931b7d1bee3fea813">get_inc_log_size</a> (void *)</td></tr>
+<tr class="memitem:a7c1ade2a39f9016931b7d1bee3fea813"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7c1ade2a39f9016931b7d1bee3fea813"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>get_inc_log_size</b> (void *)</td></tr>
 <tr class="separator:a7c1ade2a39f9016931b7d1bee3fea813"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3c88f8e21bdbcfd68f76bf9096594e1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#aa3c88f8e21bdbcfd68f76bf9096594e1">get_granularity</a> (void)</td></tr>
+<tr class="memitem:aa3c88f8e21bdbcfd68f76bf9096594e1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa3c88f8e21bdbcfd68f76bf9096594e1"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>get_granularity</b> (void)</td></tr>
 <tr class="separator:aa3c88f8e21bdbcfd68f76bf9096594e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7949b85fe03df856881243990c5bf91d"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#a7949b85fe03df856881243990c5bf91d">dirty_size</a> (unsigned int, void *, double *)</td></tr>
+<tr class="memitem:a7949b85fe03df856881243990c5bf91d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7949b85fe03df856881243990c5bf91d"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>dirty_size</b> (unsigned int, void *, double *)</td></tr>
 <tr class="separator:a7949b85fe03df856881243990c5bf91d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e070de8750bb4afd1be813809e70eb9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dymelor_8h.html#a0fd9bfdb65697fdecfd4822e8499806a">malloc_state</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#a8e070de8750bb4afd1be813809e70eb9">malloc_state_init</a> (void)</td></tr>
+<tr class="memitem:a8e070de8750bb4afd1be813809e70eb9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct__malloc__state.html">malloc_state</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#a8e070de8750bb4afd1be813809e70eb9">malloc_state_init</a> (void)</td></tr>
 <tr class="separator:a8e070de8750bb4afd1be813809e70eb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5262113c6c16c75226dc3185fe3f37b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#a5262113c6c16c75226dc3185fe3f37b0">malloc_state_wipe</a> (<a class="el" href="dymelor_8h.html#a0fd9bfdb65697fdecfd4822e8499806a">malloc_state</a> **)</td></tr>
+<tr class="memitem:a5262113c6c16c75226dc3185fe3f37b0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5262113c6c16c75226dc3185fe3f37b0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>malloc_state_wipe</b> (<a class="el" href="struct__malloc__state.html">malloc_state</a> **)</td></tr>
 <tr class="separator:a5262113c6c16c75226dc3185fe3f37b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0706c4a4237b3b20358ee252bdfb1a0f"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#a0706c4a4237b3b20358ee252bdfb1a0f">do_malloc</a> (struct <a class="el" href="structlp__struct.html">lp_struct</a> *, size_t)</td></tr>
 <tr class="separator:a0706c4a4237b3b20358ee252bdfb1a0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb41febfa38b30f522a8b2623ce7ecf4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#adb41febfa38b30f522a8b2623ce7ecf4">do_free</a> (struct <a class="el" href="structlp__struct.html">lp_struct</a> *, void *ptr)</td></tr>
+<tr class="memitem:adb41febfa38b30f522a8b2623ce7ecf4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adb41febfa38b30f522a8b2623ce7ecf4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>do_free</b> (struct <a class="el" href="structlp__struct.html">lp_struct</a> *, void *ptr)</td></tr>
 <tr class="separator:adb41febfa38b30f522a8b2623ce7ecf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e1b739b45c018064a6723267d197457"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#a1e1b739b45c018064a6723267d197457">allocate_lp_memory</a> (struct <a class="el" href="structlp__struct.html">lp_struct</a> *, size_t)</td></tr>
+<tr class="memitem:a1e1b739b45c018064a6723267d197457"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e1b739b45c018064a6723267d197457"></a>
+void *&#160;</td><td class="memItemRight" valign="bottom"><b>allocate_lp_memory</b> (struct <a class="el" href="structlp__struct.html">lp_struct</a> *, size_t)</td></tr>
 <tr class="separator:a1e1b739b45c018064a6723267d197457"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abbf4f3ec896ad320072f8c550c46dc94"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#abbf4f3ec896ad320072f8c550c46dc94">free_lp_memory</a> (struct <a class="el" href="structlp__struct.html">lp_struct</a> *, void *)</td></tr>
+<tr class="memitem:abbf4f3ec896ad320072f8c550c46dc94"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abbf4f3ec896ad320072f8c550c46dc94"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>free_lp_memory</b> (struct <a class="el" href="structlp__struct.html">lp_struct</a> *, void *)</td></tr>
 <tr class="separator:abbf4f3ec896ad320072f8c550c46dc94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c7f2848dc6193b55e9edddf10aea99d"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#a1c7f2848dc6193b55e9edddf10aea99d">log_full</a> (struct <a class="el" href="structlp__struct.html">lp_struct</a> *)</td></tr>
 <tr class="separator:a1c7f2848dc6193b55e9edddf10aea99d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -318,17 +357,23 @@ Functions</h2></td></tr>
 <tr class="separator:a8b835f617273e3dcb51a0818e4d38090"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac413ddb09d9d07ab4988b4ef62e38e73"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#ac413ddb09d9d07ab4988b4ef62e38e73">__wrap_calloc</a> (size_t, size_t)</td></tr>
 <tr class="separator:ac413ddb09d9d07ab4988b4ef62e38e73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab034b03a284ecc619e07a051d95b7dd7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#ab034b03a284ecc619e07a051d95b7dd7">clean_buffers_on_gvt</a> (struct <a class="el" href="structlp__struct.html">lp_struct</a> *, <a class="el" href="ROOT-Sim_8h.html#a8f79ad6880e99acb4edd079069847d9d">simtime_t</a>)</td></tr>
+<tr class="memitem:ab034b03a284ecc619e07a051d95b7dd7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab034b03a284ecc619e07a051d95b7dd7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>clean_buffers_on_gvt</b> (struct <a class="el" href="structlp__struct.html">lp_struct</a> *, <a class="el" href="ROOT-Sim_8h.html#a8f79ad6880e99acb4edd079069847d9d">simtime_t</a>)</td></tr>
 <tr class="separator:ab034b03a284ecc619e07a051d95b7dd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e80751b3934b0cd4411695f6743016b"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b">rsalloc</a> (size_t)</td></tr>
+<tr class="memitem:a9e80751b3934b0cd4411695f6743016b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9e80751b3934b0cd4411695f6743016b"></a>
+void *&#160;</td><td class="memItemRight" valign="bottom"><b>rsalloc</b> (size_t)</td></tr>
 <tr class="separator:a9e80751b3934b0cd4411695f6743016b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa6966af54ab40823b6a31934cfba500a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a">rsfree</a> (void *)</td></tr>
+<tr class="memitem:aa6966af54ab40823b6a31934cfba500a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa6966af54ab40823b6a31934cfba500a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>rsfree</b> (void *)</td></tr>
 <tr class="separator:aa6966af54ab40823b6a31934cfba500a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a480bc47d84033faa5410d5a3c4470ff7"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#a480bc47d84033faa5410d5a3c4470ff7">rsrealloc</a> (void *, size_t)</td></tr>
+<tr class="memitem:a480bc47d84033faa5410d5a3c4470ff7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a480bc47d84033faa5410d5a3c4470ff7"></a>
+void *&#160;</td><td class="memItemRight" valign="bottom"><b>rsrealloc</b> (void *, size_t)</td></tr>
 <tr class="separator:a480bc47d84033faa5410d5a3c4470ff7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d9ef7f17d1da53b67c7a8171d2b5ddf"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#a9d9ef7f17d1da53b67c7a8171d2b5ddf">rscalloc</a> (size_t, size_t)</td></tr>
+<tr class="memitem:a9d9ef7f17d1da53b67c7a8171d2b5ddf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9d9ef7f17d1da53b67c7a8171d2b5ddf"></a>
+void *&#160;</td><td class="memItemRight" valign="bottom"><b>rscalloc</b> (size_t, size_t)</td></tr>
 <tr class="separator:a9d9ef7f17d1da53b67c7a8171d2b5ddf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a794968edf9912ed798254397f38d8d7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dymelor_8h.html#a794968edf9912ed798254397f38d8d7f">ecs_init</a> (void)</td></tr>
+<tr class="memitem:a794968edf9912ed798254397f38d8d7f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a794968edf9912ed798254397f38d8d7f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ecs_init</b> (void)</td></tr>
 <tr class="separator:a794968edf9912ed798254397f38d8d7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -349,485 +394,7 @@ Francesco Quaglia</dd></dl>
 <dl class="section date"><dt>Date</dt><dd>April 02, 2008 </dd></dl>
 
 <p>Definition in file <a class="el" href="dymelor_8h_source.html">dymelor.h</a>.</p>
-</div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a class="anchor" id="a627107f52a65aa34c5fc2e98748b278f"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define CHECK_AREA_LOCK_BIT</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">m_area</td><td>)</td>
-          <td>&#160;&#160;&#160;(((<a class="el" href="dymelor_8h.html#ad7759b54b5e949c07ad98607568694d0">malloc_area</a>*)(m_area))-&gt;chunk_size &amp;   (<a class="el" href="dymelor_8h.html#ae7520c5477c11965aabeedc033c9862b">MASK</a> &lt;&lt; 1))</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="dymelor_8h_source.html#l00088">88</a> of file <a class="el" href="dymelor_8h_source.html">dymelor.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a1f5179deb827efa06df5066f8ef779a9"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define CHECK_LOG_MODE_BIT</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">m_area</td><td>)</td>
-          <td>&#160;&#160;&#160;(((<a class="el" href="dymelor_8h.html#ad7759b54b5e949c07ad98607568694d0">malloc_area</a>*)(m_area))-&gt;chunk_size &amp;   (<a class="el" href="dymelor_8h.html#ae7520c5477c11965aabeedc033c9862b">MASK</a> &lt;&lt; 0))</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="dymelor_8h_source.html#l00084">84</a> of file <a class="el" href="dymelor_8h_source.html">dymelor.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ad9a81253c3141a7eba184ea7b3414bd6"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define CHECK_SIZE&#160;&#160;&#160;0.25</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="dymelor_8h_source.html#l00076">76</a> of file <a class="el" href="dymelor_8h_source.html">dymelor.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ae2ec2748d56969ed536cf44e31c91c26"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define get_area</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">ptr</td><td>)</td>
-          <td>&#160;&#160;&#160;( *(<a class="el" href="dymelor_8h.html#ae063b739e203a16c55fe2ab3e3c4f340">get_area_top_pointer</a>(ptr)) )</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="dymelor_8h_source.html#l00139">139</a> of file <a class="el" href="dymelor_8h_source.html">dymelor.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ae063b739e203a16c55fe2ab3e3c4f340"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define get_area_top_pointer</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">ptr</td><td>)</td>
-          <td>&#160;&#160;&#160;( (<a class="el" href="dymelor_8h.html#ad7759b54b5e949c07ad98607568694d0">malloc_area</a> **)(*<a class="el" href="dymelor_8h.html#aa75aaa50c07bf60465dc17ab3c6f98cd">get_top_pointer</a>(ptr)) )</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="dymelor_8h_source.html#l00138">138</a> of file <a class="el" href="dymelor_8h_source.html">dymelor.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a697c04e0699a9718b18fca941ada8cca"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define GET_CACHE_LINE_NUMBER</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">P</td><td>)</td>
-          <td>&#160;&#160;&#160;((unsigned long)((P &gt;&gt; 4) &amp; (CACHE_SIZE - 1)))</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="dymelor_8h_source.html#l00079">79</a> of file <a class="el" href="dymelor_8h_source.html">dymelor.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aa75aaa50c07bf60465dc17ab3c6f98cd"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define get_top_pointer</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">ptr</td><td>)</td>
-          <td>&#160;&#160;&#160;((unsigned long long *)((char *)ptr - sizeof(unsigned long long)))</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="dymelor_8h_source.html#l00137">137</a> of file <a class="el" href="dymelor_8h_source.html">dymelor.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="acd3b4ee065d60cc64218450975828356"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define INCREMENTAL_GRANULARITY&#160;&#160;&#160;50</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="dymelor_8h_source.html#l00071">71</a> of file <a class="el" href="dymelor_8h_source.html">dymelor.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a1896742bd7a9552d3eac5ce20110d060"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define is_incremental</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">ckpt</td><td>)</td>
-          <td>&#160;&#160;&#160;(((<a class="el" href="dymelor_8h.html#a0fd9bfdb65697fdecfd4822e8499806a">malloc_state</a> *)ckpt)-&gt;is_incremental == true)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="dymelor_8h_source.html#l00135">135</a> of file <a class="el" href="dymelor_8h_source.html">dymelor.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a2d8e2eb93e1d963854fdb3c037b92366"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define IS_POWEROF2</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">x</td><td>)</td>
-          <td>&#160;&#160;&#160;((x) != 0 &amp;&amp; ((x) &amp; ((x) - 1)) == 0)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="dymelor_8h_source.html#l00093">93</a> of file <a class="el" href="dymelor_8h_source.html">dymelor.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a67c24404b157cef24c7ae13801d908d6"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define LITTLE_SIZE&#160;&#160;&#160;32</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="dymelor_8h_source.html#l00075">75</a> of file <a class="el" href="dymelor_8h_source.html">dymelor.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="acedb816c002a9b5b27d493de1b451cc8"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define LP_PREALLOCATION_INITIAL_ADDRESS&#160;&#160;&#160;(void *)0x0000008000000000</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="dymelor_8h_source.html#l00049">49</a> of file <a class="el" href="dymelor_8h_source.html">dymelor.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ae7520c5477c11965aabeedc033c9862b"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define MASK&#160;&#160;&#160;0x00000001</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="dymelor_8h_source.html#l00050">50</a> of file <a class="el" href="dymelor_8h_source.html">dymelor.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a523eaf5b650f38c307a6aab7f957fa2b"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define MAX_CHUNK_SIZE&#160;&#160;&#160;4194304</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="dymelor_8h_source.html#l00053">53</a> of file <a class="el" href="dymelor_8h_source.html">dymelor.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ad44c4885711e63afbc4edd5df6f2c2c1"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define MAX_LIMIT_NUM_AREAS&#160;&#160;&#160;<a class="el" href="dymelor_8h.html#a70f42b09949fbf700a8173bdfbac0ca7">MAX_NUM_AREAS</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="dymelor_8h_source.html#l00063">63</a> of file <a class="el" href="dymelor_8h_source.html">dymelor.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a4cb429ff198100312e85a7ed8f31bad9"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define MAX_LOG_THRESHOLD&#160;&#160;&#160;1.7</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="dymelor_8h_source.html#l00067">67</a> of file <a class="el" href="dymelor_8h_source.html">dymelor.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a70f42b09949fbf700a8173bdfbac0ca7"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define MAX_NUM_AREAS&#160;&#160;&#160;(<a class="el" href="dymelor_8h.html#ac1695162cb728d8095129dad396baa0d">NUM_AREAS</a> * 32)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="dymelor_8h_source.html#l00060">60</a> of file <a class="el" href="dymelor_8h_source.html">dymelor.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a2f47d18aa9ea116103da072b110cf09d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define MAX_NUM_CHUNKS&#160;&#160;&#160;4096</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="dymelor_8h_source.html#l00065">65</a> of file <a class="el" href="dymelor_8h_source.html">dymelor.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="abf35d28195f0f301fe63d0ea867f4379"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define MIN_CHUNK_SIZE&#160;&#160;&#160;128</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="dymelor_8h_source.html#l00052">52</a> of file <a class="el" href="dymelor_8h_source.html">dymelor.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a856836df734875fbf1ee18ad28dbc953"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define MIN_LOG_THRESHOLD&#160;&#160;&#160;1.7</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="dymelor_8h_source.html#l00068">68</a> of file <a class="el" href="dymelor_8h_source.html">dymelor.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ae8d0bbc015a86346f4177f4c152b8c0f"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define MIN_NUM_CHUNKS&#160;&#160;&#160;512</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="dymelor_8h_source.html#l00064">64</a> of file <a class="el" href="dymelor_8h_source.html">dymelor.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ac1695162cb728d8095129dad396baa0d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define NUM_AREAS&#160;&#160;&#160;(log2(<a class="el" href="dymelor_8h.html#a523eaf5b650f38c307a6aab7f957fa2b">MAX_CHUNK_SIZE</a>) - log2(<a class="el" href="dymelor_8h.html#abf35d28195f0f301fe63d0ea867f4379">MIN_CHUNK_SIZE</a>) + 1)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="dymelor_8h_source.html#l00059">59</a> of file <a class="el" href="dymelor_8h_source.html">dymelor.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a9d095bc1979e862ea41c3222f153715c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define POWEROF2</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">x</td><td>)</td>
-          <td>&#160;&#160;&#160;(1UL &lt;&lt; (1 + (63 - __builtin_clzl((x) - 1))))</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="dymelor_8h_source.html#l00092">92</a> of file <a class="el" href="dymelor_8h_source.html">dymelor.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a2dad8601d7e4c4022276c0ed7d4e7c83"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define RESET_AREA_LOCK_BIT</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">m_area</td><td>)</td>
-          <td>&#160;&#160;&#160;(((<a class="el" href="dymelor_8h.html#ad7759b54b5e949c07ad98607568694d0">malloc_area</a>*)(m_area))-&gt;chunk_size &amp;= ~(<a class="el" href="dymelor_8h.html#ae7520c5477c11965aabeedc033c9862b">MASK</a> &lt;&lt; 1))</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="dymelor_8h_source.html#l00087">87</a> of file <a class="el" href="dymelor_8h_source.html">dymelor.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a3fe801bd3b09170b74933bb61b92e14d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define RESET_LOG_MODE_BIT</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">m_area</td><td>)</td>
-          <td>&#160;&#160;&#160;(((<a class="el" href="dymelor_8h.html#ad7759b54b5e949c07ad98607568694d0">malloc_area</a>*)(m_area))-&gt;chunk_size &amp;= ~(<a class="el" href="dymelor_8h.html#ae7520c5477c11965aabeedc033c9862b">MASK</a> &lt;&lt; 0))</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="dymelor_8h_source.html#l00083">83</a> of file <a class="el" href="dymelor_8h_source.html">dymelor.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a706e12898a677460dda8cf45149502ae"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define SET_AREA_LOCK_BIT</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">m_area</td><td>)</td>
-          <td>&#160;&#160;&#160;(((<a class="el" href="dymelor_8h.html#ad7759b54b5e949c07ad98607568694d0">malloc_area</a>*)(m_area))-&gt;chunk_size |=  (<a class="el" href="dymelor_8h.html#ae7520c5477c11965aabeedc033c9862b">MASK</a> &lt;&lt; 1))</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="dymelor_8h_source.html#l00086">86</a> of file <a class="el" href="dymelor_8h_source.html">dymelor.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ae967f36365cce5a9aa59ee91bd90fdab"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define SET_LOG_MODE_BIT</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">m_area</td><td>)</td>
-          <td>&#160;&#160;&#160;(((<a class="el" href="dymelor_8h.html#ad7759b54b5e949c07ad98607568694d0">malloc_area</a>*)(m_area))-&gt;chunk_size |=  (<a class="el" href="dymelor_8h.html#ae7520c5477c11965aabeedc033c9862b">MASK</a> &lt;&lt; 0))</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="dymelor_8h_source.html#l00082">82</a> of file <a class="el" href="dymelor_8h_source.html">dymelor.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ae0c88ba4449cb2e7b1e8865c6e356f54"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define UNTAGGED_CHUNK_SIZE</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">m_area</td><td>)</td>
-          <td>&#160;&#160;&#160;(((<a class="el" href="dymelor_8h.html#ad7759b54b5e949c07ad98607568694d0">malloc_area</a>*)(m_area))-&gt;chunk_size &amp; ~((<a class="el" href="dymelor_8h.html#ae7520c5477c11965aabeedc033c9862b">MASK</a> &lt;&lt; 0) | (<a class="el" href="dymelor_8h.html#ae7520c5477c11965aabeedc033c9862b">MASK</a> &lt;&lt; 1)))</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="dymelor_8h_source.html#l00090">90</a> of file <a class="el" href="dymelor_8h_source.html">dymelor.h</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Typedef Documentation</h2>
-<a class="anchor" id="ad7759b54b5e949c07ad98607568694d0"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef struct <a class="el" href="struct__malloc__area.html">_malloc_area</a> <a class="el" href="dymelor_8h.html#ad7759b54b5e949c07ad98607568694d0">malloc_area</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="dymelor_8h_source.html#l00116">116</a> of file <a class="el" href="dymelor_8h_source.html">dymelor.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a0fd9bfdb65697fdecfd4822e8499806a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef struct <a class="el" href="struct__malloc__state.html">_malloc_state</a> <a class="el" href="dymelor_8h.html#a0fd9bfdb65697fdecfd4822e8499806a">malloc_state</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="dymelor_8h_source.html#l00133">133</a> of file <a class="el" href="dymelor_8h_source.html">dymelor.h</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="ac413ddb09d9d07ab4988b4ef62e38e73"></a>
 <div class="memitem">
 <div class="memproto">
@@ -871,17 +438,13 @@ Francesco Quaglia</dd></dl>
 <div id="dynsection-2-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="dymelor_8h_ac413ddb09d9d07ab4988b4ef62e38e73_cgraph.png" border="0" usemap="#dymelor_8h_ac413ddb09d9d07ab4988b4ef62e38e73_cgraph" alt=""/></div>
 <map name="dymelor_8h_ac413ddb09d9d07ab4988b4ef62e38e73_cgraph" id="dymelor_8h_ac413ddb09d9d07ab4988b4ef62e38e73_cgraph">
-<area shape="rect" id="node2" href="dymelor_8h.html#a9d9ef7f17d1da53b67c7a8171d2b5ddf" title="rscalloc" alt="" coords="185,5,255,32"/>
-<area shape="rect" id="node4" href="dymelor_8c.html#a3687f50774c89e7a09833a71adbb7771" title="__wrap_malloc" alt="" coords="163,56,277,83"/>
-<area shape="rect" id="node3" href="platform_8c.html#a035902fca80f8a7d1199d944bb39b300" title="__real_calloc" alt="" coords="325,5,428,32"/>
-<area shape="rect" id="node5" href="dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="508,31,571,57"/>
-<area shape="rect" id="node7" href="dymelor_8c.html#af3915129d419af75579c3d57c8757378" title="do_malloc" alt="" coords="333,132,420,159"/>
-<area shape="rect" id="node6" href="platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="651,31,760,57"/>
-<area shape="rect" id="node8" href="dymelor_8c.html#ae10242575deefaa5500b5426c745f2eb" title="compute_size" alt="" coords="484,81,595,108"/>
-<area shape="rect" id="node9" href="atomic_8h.html#ae2153aa1dc0d0362246d6e14f60b5550" title="atomic_inc" alt="" coords="494,132,585,159"/>
-<area shape="rect" id="node10" href="atomic_8h.html#a52336e036d2da5656c6db69b121458ba" title="atomic_dec" alt="" coords="491,183,587,209"/>
-<area shape="rect" id="node11" href="dymelor_8c.html#ac1e32353ad7bdfbf4b701db28602fcbc" title="malloc_area_init" alt="" coords="476,233,603,260"/>
-<area shape="rect" id="node12" href="dymelor_8c.html#a664ec4ed3ccc0c11db1c283485f6cf83" title="find_next_free" alt="" coords="483,284,595,311"/>
+<area shape="rect" id="node2" href="dymelor_8c.html#a3687f50774c89e7a09833a71adbb7771" title="__wrap_malloc" alt="" coords="163,107,277,133"/>
+<area shape="rect" id="node3" href="dymelor_8c.html#af3915129d419af75579c3d57c8757378" title="do_malloc" alt="" coords="325,107,412,133"/>
+<area shape="rect" id="node4" href="dymelor_8c.html#ae10242575deefaa5500b5426c745f2eb" title="compute_size" alt="" coords="468,5,579,32"/>
+<area shape="rect" id="node5" href="atomic_8h.html#ae2153aa1dc0d0362246d6e14f60b5550" title="atomic_inc" alt="" coords="478,56,569,83"/>
+<area shape="rect" id="node6" href="atomic_8h.html#a52336e036d2da5656c6db69b121458ba" title="atomic_dec" alt="" coords="475,107,571,133"/>
+<area shape="rect" id="node7" href="dymelor_8c.html#ac1e32353ad7bdfbf4b701db28602fcbc" title="malloc_area_init" alt="" coords="460,157,587,184"/>
+<area shape="rect" id="node8" href="dymelor_8c.html#a664ec4ed3ccc0c11db1c283485f6cf83" title="find_next_free" alt="" coords="467,208,579,235"/>
 </map>
 </div>
 </p>
@@ -916,30 +479,13 @@ Francesco Quaglia</dd></dl>
 <p>Definition at line <a class="el" href="dymelor_8c_source.html#l00602">602</a> of file <a class="el" href="dymelor_8c_source.html">dymelor.c</a>.</p>
 
 <p><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-3-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="dymelor_8h_adfe96d5ee00e58a98b9e1ce800612bf1_cgraph.png" border="0" usemap="#dymelor_8h_adfe96d5ee00e58a98b9e1ce800612bf1_cgraph" alt=""/></div>
-<map name="dymelor_8h_adfe96d5ee00e58a98b9e1ce800612bf1_cgraph" id="dymelor_8h_adfe96d5ee00e58a98b9e1ce800612bf1_cgraph">
-<area shape="rect" id="node2" href="dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a" title="rsfree" alt="" coords="289,5,348,32"/>
-<area shape="rect" id="node4" href="dymelor_8c.html#a8ab9f013ad5d2ac3d460ddf42dae3839" title="do_free" alt="" coords="152,56,223,83"/>
-<area shape="rect" id="node3" href="platform_8c.html#ae2af2cd130d16958394ae21e9d13035f" title="__real_free" alt="" coords="415,5,507,32"/>
-<area shape="rect" id="node5" href="atomic_8h.html#ae2153aa1dc0d0362246d6e14f60b5550" title="atomic_inc" alt="" coords="273,56,364,83"/>
-<area shape="rect" id="node6" href="atomic_8h.html#a52336e036d2da5656c6db69b121458ba" title="atomic_dec" alt="" coords="271,107,367,133"/>
-</map>
-</div>
-</p>
-
-<p><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="dymelor_8h_adfe96d5ee00e58a98b9e1ce800612bf1_icgraph.png" border="0" usemap="#dymelor_8h_adfe96d5ee00e58a98b9e1ce800612bf1_icgraph" alt=""/></div>
 <map name="dymelor_8h_adfe96d5ee00e58a98b9e1ce800612bf1_icgraph" id="dymelor_8h_adfe96d5ee00e58a98b9e1ce800612bf1_icgraph">
-<area shape="rect" id="node2" href="ROOT-Sim_8h.html#a12dc5c84395024f28dc92710ffc4fb91" title="DiscardObstacles" alt="" coords="152,5,285,32"/>
-<area shape="rect" id="node3" href="dymelor_8h.html#a8b835f617273e3dcb51a0818e4d38090" title="__wrap_realloc" alt="" coords="161,56,276,83"/>
+<area shape="rect" id="node2" href="dymelor_8h.html#a8b835f617273e3dcb51a0818e4d38090" title="__wrap_realloc" alt="" coords="152,5,267,32"/>
 </map>
 </div>
 </p>
@@ -973,38 +519,32 @@ Francesco Quaglia</dd></dl>
 
 <p>Definition at line <a class="el" href="dymelor_8c_source.html#l00566">566</a> of file <a class="el" href="dymelor_8c_source.html">dymelor.c</a>.</p>
 
-<p><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="dymelor_8h_a26407e99c6266e774c65131ef12b03b8_cgraph.png" border="0" usemap="#dymelor_8h_a26407e99c6266e774c65131ef12b03b8_cgraph" alt=""/></div>
 <map name="dymelor_8h_a26407e99c6266e774c65131ef12b03b8_cgraph" id="dymelor_8h_a26407e99c6266e774c65131ef12b03b8_cgraph">
-<area shape="rect" id="node2" href="dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="335,5,397,32"/>
-<area shape="rect" id="node4" href="dymelor_8c.html#af3915129d419af75579c3d57c8757378" title="do_malloc" alt="" coords="168,107,255,133"/>
-<area shape="rect" id="node3" href="platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="477,5,587,32"/>
-<area shape="rect" id="node5" href="dymelor_8c.html#ae10242575deefaa5500b5426c745f2eb" title="compute_size" alt="" coords="311,56,421,83"/>
-<area shape="rect" id="node6" href="atomic_8h.html#ae2153aa1dc0d0362246d6e14f60b5550" title="atomic_inc" alt="" coords="321,107,411,133"/>
-<area shape="rect" id="node7" href="atomic_8h.html#a52336e036d2da5656c6db69b121458ba" title="atomic_dec" alt="" coords="318,157,414,184"/>
-<area shape="rect" id="node8" href="dymelor_8c.html#ac1e32353ad7bdfbf4b701db28602fcbc" title="malloc_area_init" alt="" coords="303,208,429,235"/>
-<area shape="rect" id="node9" href="dymelor_8c.html#a664ec4ed3ccc0c11db1c283485f6cf83" title="find_next_free" alt="" coords="310,259,422,285"/>
+<area shape="rect" id="node2" href="dymelor_8c.html#af3915129d419af75579c3d57c8757378" title="do_malloc" alt="" coords="168,107,255,133"/>
+<area shape="rect" id="node3" href="dymelor_8c.html#ae10242575deefaa5500b5426c745f2eb" title="compute_size" alt="" coords="311,5,421,32"/>
+<area shape="rect" id="node4" href="atomic_8h.html#ae2153aa1dc0d0362246d6e14f60b5550" title="atomic_inc" alt="" coords="321,56,411,83"/>
+<area shape="rect" id="node5" href="atomic_8h.html#a52336e036d2da5656c6db69b121458ba" title="atomic_dec" alt="" coords="318,107,414,133"/>
+<area shape="rect" id="node6" href="dymelor_8c.html#ac1e32353ad7bdfbf4b701db28602fcbc" title="malloc_area_init" alt="" coords="303,157,429,184"/>
+<area shape="rect" id="node7" href="dymelor_8c.html#a664ec4ed3ccc0c11db1c283485f6cf83" title="find_next_free" alt="" coords="310,208,422,235"/>
 </map>
 </div>
 </p>
 
-<p><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="dymelor_8h_a26407e99c6266e774c65131ef12b03b8_icgraph.png" border="0" usemap="#dymelor_8h_a26407e99c6266e774c65131ef12b03b8_icgraph" alt=""/></div>
 <map name="dymelor_8h_a26407e99c6266e774c65131ef12b03b8_icgraph" id="dymelor_8h_a26407e99c6266e774c65131ef12b03b8_icgraph">
-<area shape="rect" id="node2" href="wrapper_8c.html#a849c010b96eae768d42712e2060efbe1" title="__wrap_strdup" alt="" coords="175,5,290,32"/>
-<area shape="rect" id="node3" href="wrapper_8c.html#a0159c74a123b68c5434b8747172aa255" title="__wrap_strndup" alt="" coords="171,56,294,83"/>
-<area shape="rect" id="node4" href="ROOT-Sim_8h.html#adebe424adaebf0abecac23c41891fbee" title="SetupObstacles" alt="" coords="171,107,294,133"/>
-<area shape="rect" id="node5" href="ROOT-Sim_8h.html#a687b119a53a0db5787416bc460299cd2" title="ComputeMinTour" alt="" coords="168,157,297,184"/>
-<area shape="rect" id="node6" href="dymelor_8h.html#a8b835f617273e3dcb51a0818e4d38090" title="__wrap_realloc" alt="" coords="175,208,290,235"/>
-<area shape="rect" id="node7" href="dymelor_8h.html#ac413ddb09d9d07ab4988b4ef62e38e73" title="__wrap_calloc" alt="" coords="178,259,287,285"/>
+<area shape="rect" id="node2" href="dymelor_8h.html#a8b835f617273e3dcb51a0818e4d38090" title="__wrap_realloc" alt="" coords="168,5,283,32"/>
+<area shape="rect" id="node3" href="dymelor_8h.html#ac413ddb09d9d07ab4988b4ef62e38e73" title="__wrap_calloc" alt="" coords="171,56,280,83"/>
 </map>
 </div>
 </p>
@@ -1047,131 +587,21 @@ Francesco Quaglia</dd></dl>
 
 <p>Definition at line <a class="el" href="dymelor_8c_source.html#l00628">628</a> of file <a class="el" href="dymelor_8c_source.html">dymelor.c</a>.</p>
 
-<p><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="dymelor_8h_a8b835f617273e3dcb51a0818e4d38090_cgraph.png" border="0" usemap="#dymelor_8h_a8b835f617273e3dcb51a0818e4d38090_cgraph" alt=""/></div>
 <map name="dymelor_8h_a8b835f617273e3dcb51a0818e4d38090_cgraph" id="dymelor_8h_a8b835f617273e3dcb51a0818e4d38090_cgraph">
-<area shape="rect" id="node2" href="dymelor_8h.html#a480bc47d84033faa5410d5a3c4470ff7" title="rsrealloc" alt="" coords="187,44,263,71"/>
-<area shape="rect" id="node4" href="dymelor_8c.html#a3687f50774c89e7a09833a71adbb7771" title="__wrap_malloc" alt="" coords="168,120,283,147"/>
-<area shape="rect" id="node13" href="dymelor_8c.html#ad81079124eeb23ae75a56eba434043f0" title="__wrap_free" alt="" coords="176,259,275,285"/>
-<area shape="rect" id="node3" href="platform_8c.html#af571772318d146f693e37e7a580103c0" title="__real_realloc" alt="" coords="331,31,440,57"/>
-<area shape="rect" id="node5" href="dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="520,5,583,32"/>
-<area shape="rect" id="node7" href="dymelor_8c.html#af3915129d419af75579c3d57c8757378" title="do_malloc" alt="" coords="342,132,429,159"/>
-<area shape="rect" id="node6" href="platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="663,5,772,32"/>
-<area shape="rect" id="node8" href="dymelor_8c.html#ae10242575deefaa5500b5426c745f2eb" title="compute_size" alt="" coords="496,107,607,133"/>
-<area shape="rect" id="node9" href="atomic_8h.html#ae2153aa1dc0d0362246d6e14f60b5550" title="atomic_inc" alt="" coords="506,208,597,235"/>
-<area shape="rect" id="node10" href="atomic_8h.html#a52336e036d2da5656c6db69b121458ba" title="atomic_dec" alt="" coords="503,259,599,285"/>
-<area shape="rect" id="node11" href="dymelor_8c.html#ac1e32353ad7bdfbf4b701db28602fcbc" title="malloc_area_init" alt="" coords="488,157,615,184"/>
-<area shape="rect" id="node12" href="dymelor_8c.html#a664ec4ed3ccc0c11db1c283485f6cf83" title="find_next_free" alt="" coords="495,56,607,83"/>
-<area shape="rect" id="node14" href="dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a" title="rsfree" alt="" coords="522,309,581,336"/>
-<area shape="rect" id="node16" href="dymelor_8c.html#a8ab9f013ad5d2ac3d460ddf42dae3839" title="do_free" alt="" coords="350,259,421,285"/>
-<area shape="rect" id="node15" href="platform_8c.html#ae2af2cd130d16958394ae21e9d13035f" title="__real_free" alt="" coords="671,309,763,336"/>
-</map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="a1e1b739b45c018064a6723267d197457"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void* allocate_lp_memory </td>
-          <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structlp__struct.html">lp_struct</a> *&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="buddy_8c_source.html#l00193">193</a> of file <a class="el" href="buddy_8c_source.html">buddy.c</a>.</p>
-
-<p><div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-8-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="dymelor_8h_a1e1b739b45c018064a6723267d197457_cgraph.png" border="0" usemap="#dymelor_8h_a1e1b739b45c018064a6723267d197457_cgraph" alt=""/></div>
-<map name="dymelor_8h_a1e1b739b45c018064a6723267d197457_cgraph" id="dymelor_8h_a1e1b739b45c018064a6723267d197457_cgraph">
-<area shape="rect" id="node2" href="atomic_8h.html#a7a6b9868956dd8e51e5de80e16c76fc4" title="spin_lock" alt="" coords="213,31,293,57"/>
-<area shape="rect" id="node3" href="buddy_8c.html#a58a7821a912bdac3e3b8c33451824414" title="buddy_alloc" alt="" coords="204,81,301,108"/>
-<area shape="rect" id="node8" href="atomic_8h.html#a4e8c9d1c6101995f1ecd2141d77e4824" title="spin_unlock" alt="" coords="205,132,301,159"/>
-<area shape="rect" id="node4" href="buddy_8c.html#afc575c99c743d778f7e7b820a0d05f8e" title="next_power_of_2" alt="" coords="349,5,479,32"/>
-<area shape="rect" id="node5" href="buddy_8c.html#ac31dad8abee32480810f0858d59909f0" title="left_child" alt="" coords="375,56,453,83"/>
-<area shape="rect" id="node6" href="buddy_8c.html#aa176048819d5744297a1bbd86ee62525" title="right_child" alt="" coords="371,107,457,133"/>
-<area shape="rect" id="node7" href="buddy_8c.html#a219b899cef5c55cb480ebcad342b2b2b" title="parent" alt="" coords="382,157,446,184"/>
-</map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="ab034b03a284ecc619e07a051d95b7dd7"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void clean_buffers_on_gvt </td>
-          <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structlp__struct.html">lp_struct</a> *&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="ROOT-Sim_8h.html#a8f79ad6880e99acb4edd079069847d9d">simtime_t</a>&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="dymelor_8c_source.html#l00697">697</a> of file <a class="el" href="dymelor_8c_source.html">dymelor.c</a>.</p>
-
-<p><div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-9-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="dymelor_8h_ab034b03a284ecc619e07a051d95b7dd7_cgraph.png" border="0" usemap="#dymelor_8h_ab034b03a284ecc619e07a051d95b7dd7_cgraph" alt=""/></div>
-<map name="dymelor_8h_ab034b03a284ecc619e07a051d95b7dd7_cgraph" id="dymelor_8h_ab034b03a284ecc619e07a051d95b7dd7_cgraph">
-<area shape="rect" id="node2" href="dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a" title="rsfree" alt="" coords="211,5,269,32"/>
-<area shape="rect" id="node3" href="platform_8c.html#ae2af2cd130d16958394ae21e9d13035f" title="__real_free" alt="" coords="317,5,409,32"/>
-</map>
-</div>
-</p>
-
-<p><div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-10-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="dymelor_8h_ab034b03a284ecc619e07a051d95b7dd7_icgraph.png" border="0" usemap="#dymelor_8h_ab034b03a284ecc619e07a051d95b7dd7_icgraph" alt=""/></div>
-<map name="dymelor_8h_ab034b03a284ecc619e07a051d95b7dd7_icgraph" id="dymelor_8h_ab034b03a284ecc619e07a051d95b7dd7_icgraph">
-<area shape="rect" id="node2" href="gvt_2gvt_8h.html#a62e7abde0dac08e56aa2a57401aed27b" title="adopt_new_gvt" alt="" coords="211,5,329,32"/>
-<area shape="rect" id="node3" href="gvt_2gvt_8h.html#a899b50ab45427cf145360ff3a6c29808" title="gvt_operations" alt="" coords="377,5,495,32"/>
-<area shape="rect" id="node4" href="main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="543,5,704,32"/>
-<area shape="rect" id="node5" href="main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="752,5,873,32"/>
-<area shape="rect" id="node6" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="785,56,840,83"/>
+<area shape="rect" id="node2" href="dymelor_8c.html#a3687f50774c89e7a09833a71adbb7771" title="__wrap_malloc" alt="" coords="168,107,283,133"/>
+<area shape="rect" id="node9" href="dymelor_8c.html#ad81079124eeb23ae75a56eba434043f0" title="__wrap_free" alt="" coords="176,157,275,184"/>
+<area shape="rect" id="node3" href="dymelor_8c.html#af3915129d419af75579c3d57c8757378" title="do_malloc" alt="" coords="331,107,417,133"/>
+<area shape="rect" id="node4" href="dymelor_8c.html#ae10242575deefaa5500b5426c745f2eb" title="compute_size" alt="" coords="473,5,584,32"/>
+<area shape="rect" id="node5" href="atomic_8h.html#ae2153aa1dc0d0362246d6e14f60b5550" title="atomic_inc" alt="" coords="483,56,574,83"/>
+<area shape="rect" id="node6" href="atomic_8h.html#a52336e036d2da5656c6db69b121458ba" title="atomic_dec" alt="" coords="481,107,577,133"/>
+<area shape="rect" id="node7" href="dymelor_8c.html#ac1e32353ad7bdfbf4b701db28602fcbc" title="malloc_area_init" alt="" coords="465,157,592,184"/>
+<area shape="rect" id="node8" href="dymelor_8c.html#a664ec4ed3ccc0c11db1c283485f6cf83" title="find_next_free" alt="" coords="473,208,585,235"/>
 </map>
 </div>
 </p>
@@ -1215,115 +645,6 @@ Roberto Vitali</dd></dl>
 
 <p>Definition at line <a class="el" href="dymelor_8c_source.html#l00453">453</a> of file <a class="el" href="dymelor_8c_source.html">dymelor.c</a>.</p>
 
-<p><div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-11-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="dymelor_8h_af3e133eb1e589a684794f815e55eafaa_icgraph.png" border="0" usemap="#dymelor_8h_af3e133eb1e589a684794f815e55eafaa_icgraph" alt=""/></div>
-<map name="dymelor_8h_af3e133eb1e589a684794f815e55eafaa_icgraph" id="dymelor_8h_af3e133eb1e589a684794f815e55eafaa_icgraph">
-<area shape="rect" id="node2" href="wrapper_8c.html#a4f5f97ebfe8c2843ae98bbf0c93680e6" title="__wrap_strcpy" alt="" coords="159,5,271,32"/>
-<area shape="rect" id="node3" href="wrapper_8c.html#adc39d1077e27609c6df2a710cff4608e" title="__wrap_strncpy" alt="" coords="155,56,275,83"/>
-<area shape="rect" id="node4" href="wrapper_8c.html#ae78445a62202e5e098a0ebda58248d6e" title="__wrap_strcat" alt="" coords="160,107,271,133"/>
-<area shape="rect" id="node5" href="wrapper_8c.html#a9011dfe8d4585401034f080ac925e607" title="__wrap_strncat" alt="" coords="156,157,275,184"/>
-<area shape="rect" id="node6" href="wrapper_8c.html#a5b8a7212c92a91985faae98894336f28" title="__wrap_memcpy" alt="" coords="151,208,280,235"/>
-<area shape="rect" id="node7" href="wrapper_8c.html#a286101e7b3eeb368e1b684c488b00cea" title="__wrap_memmove" alt="" coords="144,259,287,285"/>
-<area shape="rect" id="node8" href="wrapper_8c.html#a28ea569740d8e6c2fc142db4978e01e6" title="__wrap_memset" alt="" coords="152,309,279,336"/>
-<area shape="rect" id="node9" href="wrapper_8c.html#a849c010b96eae768d42712e2060efbe1" title="__wrap_strdup" alt="" coords="158,360,273,387"/>
-<area shape="rect" id="node10" href="wrapper_8c.html#a0159c74a123b68c5434b8747172aa255" title="__wrap_strndup" alt="" coords="154,411,277,437"/>
-</map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="a7949b85fe03df856881243990c5bf91d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">size_t dirty_size </td>
-          <td>(</td>
-          <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>int</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double *&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="adb41febfa38b30f522a8b2623ce7ecf4"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void do_free </td>
-          <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structlp__struct.html">lp_struct</a> *&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>ptr</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="dymelor_8c_source.html#l00352">352</a> of file <a class="el" href="dymelor_8c_source.html">dymelor.c</a>.</p>
-
-<p><div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-12-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="dymelor_8h_adb41febfa38b30f522a8b2623ce7ecf4_cgraph.png" border="0" usemap="#dymelor_8h_adb41febfa38b30f522a8b2623ce7ecf4_cgraph" alt=""/></div>
-<map name="dymelor_8h_adb41febfa38b30f522a8b2623ce7ecf4_cgraph" id="dymelor_8h_adb41febfa38b30f522a8b2623ce7ecf4_cgraph">
-<area shape="rect" id="node2" href="dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a" title="rsfree" alt="" coords="143,5,201,32"/>
-<area shape="rect" id="node4" href="atomic_8h.html#ae2153aa1dc0d0362246d6e14f60b5550" title="atomic_inc" alt="" coords="127,56,217,83"/>
-<area shape="rect" id="node5" href="atomic_8h.html#a52336e036d2da5656c6db69b121458ba" title="atomic_dec" alt="" coords="124,107,220,133"/>
-<area shape="rect" id="node3" href="platform_8c.html#ae2af2cd130d16958394ae21e9d13035f" title="__real_free" alt="" coords="268,5,360,32"/>
-</map>
-</div>
-</p>
-
-<p><div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-13-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-13-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="dymelor_8h_adb41febfa38b30f522a8b2623ce7ecf4_icgraph.png" border="0" usemap="#dymelor_8h_adb41febfa38b30f522a8b2623ce7ecf4_icgraph" alt=""/></div>
-<map name="dymelor_8h_adb41febfa38b30f522a8b2623ce7ecf4_icgraph" id="dymelor_8h_adb41febfa38b30f522a8b2623ce7ecf4_icgraph">
-<area shape="rect" id="node2" href="dymelor_8h.html#adfe96d5ee00e58a98b9e1ce800612bf1" title="__wrap_free" alt="" coords="124,31,223,57"/>
-<area shape="rect" id="node3" href="ROOT-Sim_8h.html#a12dc5c84395024f28dc92710ffc4fb91" title="DiscardObstacles" alt="" coords="271,5,404,32"/>
-<area shape="rect" id="node4" href="dymelor_8h.html#a8b835f617273e3dcb51a0818e4d38090" title="__wrap_realloc" alt="" coords="280,56,395,83"/>
-</map>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="a0706c4a4237b3b20358ee252bdfb1a0f"></a>
@@ -1352,149 +673,35 @@ Roberto Vitali</dd></dl>
 
 <p>Definition at line <a class="el" href="dymelor_8c_source.html#l00172">172</a> of file <a class="el" href="dymelor_8c_source.html">dymelor.c</a>.</p>
 
-<p><div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-14-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-14-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-14-content" class="dyncontent" style="display:none;">
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="dymelor_8h_a0706c4a4237b3b20358ee252bdfb1a0f_cgraph.png" border="0" usemap="#dymelor_8h_a0706c4a4237b3b20358ee252bdfb1a0f_cgraph" alt=""/></div>
 <map name="dymelor_8h_a0706c4a4237b3b20358ee252bdfb1a0f_cgraph" id="dymelor_8h_a0706c4a4237b3b20358ee252bdfb1a0f_cgraph">
 <area shape="rect" id="node2" href="dymelor_8c.html#ae10242575deefaa5500b5426c745f2eb" title="compute_size" alt="" coords="148,5,259,32"/>
 <area shape="rect" id="node3" href="atomic_8h.html#ae2153aa1dc0d0362246d6e14f60b5550" title="atomic_inc" alt="" coords="158,56,249,83"/>
 <area shape="rect" id="node4" href="atomic_8h.html#a52336e036d2da5656c6db69b121458ba" title="atomic_dec" alt="" coords="155,107,251,133"/>
 <area shape="rect" id="node5" href="dymelor_8c.html#ac1e32353ad7bdfbf4b701db28602fcbc" title="malloc_area_init" alt="" coords="140,157,267,184"/>
-<area shape="rect" id="node6" href="dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="172,208,235,235"/>
-<area shape="rect" id="node8" href="dymelor_8c.html#a664ec4ed3ccc0c11db1c283485f6cf83" title="find_next_free" alt="" coords="147,259,259,285"/>
-<area shape="rect" id="node7" href="platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="315,208,424,235"/>
+<area shape="rect" id="node6" href="dymelor_8c.html#a664ec4ed3ccc0c11db1c283485f6cf83" title="find_next_free" alt="" coords="147,208,259,235"/>
 </map>
 </div>
 </p>
 
-<p><div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-15-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-15-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-15-content" class="dyncontent" style="display:none;">
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="dymelor_8h_a0706c4a4237b3b20358ee252bdfb1a0f_icgraph.png" border="0" usemap="#dymelor_8h_a0706c4a4237b3b20358ee252bdfb1a0f_icgraph" alt=""/></div>
 <map name="dymelor_8h_a0706c4a4237b3b20358ee252bdfb1a0f_icgraph" id="dymelor_8h_a0706c4a4237b3b20358ee252bdfb1a0f_icgraph">
-<area shape="rect" id="node2" href="dymelor_8h.html#a26407e99c6266e774c65131ef12b03b8" title="__wrap_malloc" alt="" coords="140,132,255,159"/>
-<area shape="rect" id="node3" href="wrapper_8c.html#a849c010b96eae768d42712e2060efbe1" title="__wrap_strdup" alt="" coords="310,5,425,32"/>
-<area shape="rect" id="node4" href="wrapper_8c.html#a0159c74a123b68c5434b8747172aa255" title="__wrap_strndup" alt="" coords="306,56,429,83"/>
-<area shape="rect" id="node5" href="ROOT-Sim_8h.html#adebe424adaebf0abecac23c41891fbee" title="SetupObstacles" alt="" coords="306,107,429,133"/>
-<area shape="rect" id="node6" href="ROOT-Sim_8h.html#a687b119a53a0db5787416bc460299cd2" title="ComputeMinTour" alt="" coords="303,157,432,184"/>
-<area shape="rect" id="node7" href="dymelor_8h.html#a8b835f617273e3dcb51a0818e4d38090" title="__wrap_realloc" alt="" coords="310,208,425,235"/>
-<area shape="rect" id="node8" href="dymelor_8h.html#ac413ddb09d9d07ab4988b4ef62e38e73" title="__wrap_calloc" alt="" coords="313,259,422,285"/>
+<area shape="rect" id="node2" href="dymelor_8h.html#a26407e99c6266e774c65131ef12b03b8" title="__wrap_malloc" alt="" coords="140,31,255,57"/>
+<area shape="rect" id="node3" href="dymelor_8h.html#a8b835f617273e3dcb51a0818e4d38090" title="__wrap_realloc" alt="" coords="303,5,417,32"/>
+<area shape="rect" id="node4" href="dymelor_8h.html#ac413ddb09d9d07ab4988b4ef62e38e73" title="__wrap_calloc" alt="" coords="305,56,415,83"/>
 </map>
 </div>
 </p>
-
-</div>
-</div>
-<a class="anchor" id="a794968edf9912ed798254397f38d8d7f"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ecs_init </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="ecs_8c_source.html#l00194">194</a> of file <a class="el" href="ecs_8c_source.html">ecs.c</a>.</p>
-
-<p><div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-16-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-16-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-16-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="dymelor_8h_a794968edf9912ed798254397f38d8d7f_icgraph.png" border="0" usemap="#dymelor_8h_a794968edf9912ed798254397f38d8d7f_icgraph" alt=""/></div>
-<map name="dymelor_8h_a794968edf9912ed798254397f38d8d7f_icgraph" id="dymelor_8h_a794968edf9912ed798254397f38d8d7f_icgraph">
-<area shape="rect" id="node2" href="init_8h.html#a417eb072179d09f441dbae3125049e46" title="SystemInit" alt="" coords="124,5,215,32"/>
-<area shape="rect" id="node3" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="263,5,317,32"/>
-</map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="abbf4f3ec896ad320072f8c550c46dc94"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void free_lp_memory </td>
-          <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structlp__struct.html">lp_struct</a> *&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="buddy_8c_source.html#l00216">216</a> of file <a class="el" href="buddy_8c_source.html">buddy.c</a>.</p>
-
-<p><div id="dynsection-17" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-17-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-17-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-17-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="dymelor_8h_abbf4f3ec896ad320072f8c550c46dc94_cgraph.png" border="0" usemap="#dymelor_8h_abbf4f3ec896ad320072f8c550c46dc94_cgraph" alt=""/></div>
-<map name="dymelor_8h_abbf4f3ec896ad320072f8c550c46dc94_cgraph" id="dymelor_8h_abbf4f3ec896ad320072f8c550c46dc94_cgraph">
-<area shape="rect" id="node2" href="atomic_8h.html#a7a6b9868956dd8e51e5de80e16c76fc4" title="spin_lock" alt="" coords="188,5,268,32"/>
-<area shape="rect" id="node3" href="buddy_8c.html#ae4a636805a09ff443c450ae96f28c4c1" title="buddy_free" alt="" coords="181,56,275,83"/>
-<area shape="rect" id="node7" href="atomic_8h.html#a4e8c9d1c6101995f1ecd2141d77e4824" title="spin_unlock" alt="" coords="180,107,276,133"/>
-<area shape="rect" id="node4" href="buddy_8c.html#a219b899cef5c55cb480ebcad342b2b2b" title="parent" alt="" coords="335,5,399,32"/>
-<area shape="rect" id="node5" href="buddy_8c.html#ac31dad8abee32480810f0858d59909f0" title="left_child" alt="" coords="328,56,407,83"/>
-<area shape="rect" id="node6" href="buddy_8c.html#aa176048819d5744297a1bbd86ee62525" title="right_child" alt="" coords="324,107,411,133"/>
-</map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="aa3c88f8e21bdbcfd68f76bf9096594e1"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int get_granularity </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a7c1ade2a39f9016931b7d1bee3fea813"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">size_t get_inc_log_size </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>
@@ -1505,7 +712,7 @@ Roberto Vitali</dd></dl>
         <tr>
           <td class="memname">size_t get_log_size </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="dymelor_8h.html#a0fd9bfdb65697fdecfd4822e8499806a">malloc_state</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="struct__malloc__state.html">malloc_state</a> *&#160;</td>
           <td class="paramname"><em>logged_state</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1525,46 +732,35 @@ Roberto Vitali</dd></dl>
 
 <p>Definition at line <a class="el" href="dymelor_8c_source.html#l00534">534</a> of file <a class="el" href="dymelor_8c_source.html">dymelor.c</a>.</p>
 
-<p><div id="dynsection-18" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-18-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-18-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-18-content" class="dyncontent" style="display:none;">
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="dymelor_8h_ab72247530e122f0e6503db111c18d273_icgraph.png" border="0" usemap="#dymelor_8h_ab72247530e122f0e6503db111c18d273_icgraph" alt=""/></div>
 <map name="dymelor_8h_ab72247530e122f0e6503db111c18d273_icgraph" id="dymelor_8h_ab72247530e122f0e6503db111c18d273_icgraph">
-<area shape="rect" id="node2" href="dymelor_8h.html#a1c7f2848dc6193b55e9edddf10aea99d" title="log_full" alt="" coords="155,44,221,71"/>
-<area shape="rect" id="node3" href="dymelor_8h.html#afbb9e43630a99b023ad7421afdb6dee9" title="log_state" alt="" coords="269,44,351,71"/>
-<area shape="rect" id="node4" href="ccgs_8h.html#af8c1dd6d3ab2078085039fec6c7b0d9f" title="ccgs_compute_snapshot" alt="" coords="399,12,580,39"/>
-<area shape="rect" id="node10" href="state_8h.html#affa280b9d6f43896c9db64f0e32b2f3d" title="LogState" alt="" coords="449,75,529,101"/>
-<area shape="rect" id="node5" href="gvt_2gvt_8h.html#a62e7abde0dac08e56aa2a57401aed27b" title="adopt_new_gvt" alt="" coords="646,5,765,32"/>
-<area shape="rect" id="node6" href="gvt_2gvt_8h.html#a899b50ab45427cf145360ff3a6c29808" title="gvt_operations" alt="" coords="1229,81,1347,108"/>
-<area shape="rect" id="node7" href="main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="1421,107,1583,133"/>
-<area shape="rect" id="node8" href="main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="1631,107,1752,133"/>
-<area shape="rect" id="node9" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1664,157,1719,184"/>
-<area shape="rect" id="node11" href="scheduler_8h.html#a5766f78dcd3778582d506c3dec34594e" title="receive_control_msg" alt="" coords="628,75,783,101"/>
-<area shape="rect" id="node14" href="scheduler_8h.html#ac48128e72b303ea22d8ec641a9516b15" title="schedule" alt="" coords="879,125,957,152"/>
-<area shape="rect" id="node12" href="queues_8h.html#a54eca9bfa893cac072d1b1d3010c2944" title="process_bottom_halves" alt="" coords="831,75,1005,101"/>
-<area shape="rect" id="node13" href="gvt_2gvt_8c.html#a895d5bfff43f3ee72f9cf7097abf609b" title="GVT_phases" alt="" coords="1053,81,1155,108"/>
-<area shape="rect" id="node15" href="scheduler_8h.html#af405fd79c1cd59fccce27658d6e11941" title="initialize_worker_thread" alt="" coords="1203,183,1373,209"/>
+<area shape="rect" id="node2" href="dymelor_8h.html#a1c7f2848dc6193b55e9edddf10aea99d" title="log_full" alt="" coords="155,208,221,234"/>
+<area shape="rect" id="node3" href="dymelor_8h.html#afbb9e43630a99b023ad7421afdb6dee9" title="log_state" alt="" coords="269,208,351,234"/>
+<area shape="rect" id="node4" href="ccgs_8h.html#af8c1dd6d3ab2078085039fec6c7b0d9f" title="ccgs_compute_snapshot" alt="" coords="399,233,580,260"/>
+<area shape="rect" id="node10" href="state_8h.html#affa280b9d6f43896c9db64f0e32b2f3d" title="LogState" alt="" coords="449,182,529,209"/>
+<area shape="rect" id="node5" href="gvt_2gvt_8h.html#a62e7abde0dac08e56aa2a57401aed27b" title="adopt_new_gvt" alt="" coords="628,233,747,260"/>
+<area shape="rect" id="node6" href="gvt_2gvt_8h.html#a899b50ab45427cf145360ff3a6c29808" title="gvt_operations" alt="" coords="1176,233,1293,260"/>
+<area shape="rect" id="node7" href="main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="1545,118,1707,145"/>
+<area shape="rect" id="node8" href="main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="1755,110,1876,137"/>
+<area shape="rect" id="node9" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="2063,124,2117,150"/>
+<area shape="rect" id="node11" href="scheduler_8h.html#ac48128e72b303ea22d8ec641a9516b15" title="schedule" alt="" coords="648,182,727,209"/>
+<area shape="rect" id="node12" href="gvt_2gvt_8h.html#a234e866bb1e37fa25dec9bb40134234d" title="get_last_gvt" alt="" coords="800,106,900,133"/>
+<area shape="rect" id="node20" href="scheduler_8h.html#a1b1b085c6b05a9d202a1629dcd71cffe" title="LP_main_loop" alt="" coords="795,208,905,234"/>
+<area shape="rect" id="node13" href="queues_8h.html#a54eca9bfa893cac072d1b1d3010c2944" title="process_bottom_halves" alt="" coords="953,106,1128,133"/>
+<area shape="rect" id="node14" href="statistics_8c.html#ab7b584959699657a63a49384f07fd7a9" title="format_size" alt="" coords="992,56,1089,82"/>
+<area shape="rect" id="node15" href="statistics_8h.html#aeff52bbf045362270639b2baed20762b" title="statistics_stop" alt="" coords="1177,56,1292,82"/>
+<area shape="rect" id="node16" href="core_8h.html#a8f346536ccfbe77b78ed577674beb6cf" title="simulation_shutdown" alt="" coords="1341,56,1497,82"/>
+<area shape="rect" id="node17" href="core_8c.html#a9b05d2af2e233e2616633eaa706682ee" title="exit_from_simulation\l_model" alt="" coords="1549,52,1703,94"/>
+<area shape="rect" id="node18" href="core_8h.html#a7fb819521b1ab5fc7644ad216fe7b465" title="base_init" alt="" coords="1776,60,1855,86"/>
+<area shape="rect" id="node19" href="init_8h.html#a417eb072179d09f441dbae3125049e46" title="SystemInit" alt="" coords="1924,85,2015,112"/>
 </map>
 </div>
 </p>
-
-</div>
-</div>
-<a class="anchor" id="a4270e61b09ce8971dc0099a8d126d6b7"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">size_t get_state_size </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>
@@ -1594,37 +790,31 @@ Roberto Vitali</dd></dl>
 
 <p>Definition at line <a class="el" href="checkpoints_8c_source.html#l00374">374</a> of file <a class="el" href="checkpoints_8c_source.html">checkpoints.c</a>.</p>
 
-<p><div id="dynsection-19" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-19-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-19-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-19-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="dymelor_8h_a638015576623fa22a4710def61ad19ab_cgraph.png" border="0" usemap="#dymelor_8h_a638015576623fa22a4710def61ad19ab_cgraph" alt=""/></div>
-<map name="dymelor_8h_a638015576623fa22a4710def61ad19ab_cgraph" id="dymelor_8h_a638015576623fa22a4710def61ad19ab_cgraph">
-<area shape="rect" id="node2" href="dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a" title="rsfree" alt="" coords="141,5,200,32"/>
-<area shape="rect" id="node3" href="platform_8c.html#ae2af2cd130d16958394ae21e9d13035f" title="__real_free" alt="" coords="248,5,340,32"/>
-</map>
-</div>
-</p>
-
-<p><div id="dynsection-20" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-20-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-20-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-20-content" class="dyncontent" style="display:none;">
+<div id="dynsection-10-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="dymelor_8h_a638015576623fa22a4710def61ad19ab_icgraph.png" border="0" usemap="#dymelor_8h_a638015576623fa22a4710def61ad19ab_icgraph" alt=""/></div>
 <map name="dymelor_8h_a638015576623fa22a4710def61ad19ab_icgraph" id="dymelor_8h_a638015576623fa22a4710def61ad19ab_icgraph">
-<area shape="rect" id="node2" href="ccgs_8h.html#af8c1dd6d3ab2078085039fec6c7b0d9f" title="ccgs_compute_snapshot" alt="" coords="141,5,323,32"/>
-<area shape="rect" id="node8" href="fossil_8c.html#af4d5d546129fe91cedfc16ddedf76464" title="fossil_collection" alt="" coords="171,56,293,83"/>
-<area shape="rect" id="node9" href="state_8h.html#a1fd6b7926db41257e07600226d87fffa" title="rollback" alt="" coords="197,107,267,133"/>
-<area shape="rect" id="node3" href="gvt_2gvt_8h.html#a62e7abde0dac08e56aa2a57401aed27b" title="adopt_new_gvt" alt="" coords="371,5,489,32"/>
-<area shape="rect" id="node4" href="gvt_2gvt_8h.html#a899b50ab45427cf145360ff3a6c29808" title="gvt_operations" alt="" coords="713,56,831,83"/>
-<area shape="rect" id="node5" href="main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="905,107,1067,133"/>
-<area shape="rect" id="node6" href="main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="1115,107,1236,133"/>
-<area shape="rect" id="node7" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1148,157,1203,184"/>
-<area shape="rect" id="node10" href="scheduler_8h.html#ac48128e72b303ea22d8ec641a9516b15" title="schedule" alt="" coords="391,107,469,133"/>
-<area shape="rect" id="node11" href="gvt_2gvt_8c.html#a895d5bfff43f3ee72f9cf7097abf609b" title="GVT_phases" alt="" coords="537,56,639,83"/>
-<area shape="rect" id="node12" href="scheduler_8h.html#af405fd79c1cd59fccce27658d6e11941" title="initialize_worker_thread" alt="" coords="687,157,857,184"/>
+<area shape="rect" id="node2" href="ccgs_8h.html#af8c1dd6d3ab2078085039fec6c7b0d9f" title="ccgs_compute_snapshot" alt="" coords="141,259,323,286"/>
+<area shape="rect" id="node8" href="fossil_8c.html#af4d5d546129fe91cedfc16ddedf76464" title="fossil_collection" alt="" coords="171,209,293,235"/>
+<area shape="rect" id="node9" href="state_8h.html#a1fd6b7926db41257e07600226d87fffa" title="rollback" alt="" coords="197,158,267,185"/>
+<area shape="rect" id="node3" href="gvt_2gvt_8h.html#a62e7abde0dac08e56aa2a57401aed27b" title="adopt_new_gvt" alt="" coords="371,259,489,286"/>
+<area shape="rect" id="node4" href="gvt_2gvt_8h.html#a899b50ab45427cf145360ff3a6c29808" title="gvt_operations" alt="" coords="919,234,1036,261"/>
+<area shape="rect" id="node5" href="main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="1288,119,1449,146"/>
+<area shape="rect" id="node6" href="main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="1497,111,1619,138"/>
+<area shape="rect" id="node7" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1805,125,1860,151"/>
+<area shape="rect" id="node10" href="scheduler_8h.html#ac48128e72b303ea22d8ec641a9516b15" title="schedule" alt="" coords="391,158,469,185"/>
+<area shape="rect" id="node11" href="gvt_2gvt_8h.html#a234e866bb1e37fa25dec9bb40134234d" title="get_last_gvt" alt="" coords="543,107,643,134"/>
+<area shape="rect" id="node19" href="scheduler_8h.html#a1b1b085c6b05a9d202a1629dcd71cffe" title="LP_main_loop" alt="" coords="537,209,648,235"/>
+<area shape="rect" id="node12" href="queues_8h.html#a54eca9bfa893cac072d1b1d3010c2944" title="process_bottom_halves" alt="" coords="696,107,871,134"/>
+<area shape="rect" id="node13" href="statistics_8c.html#ab7b584959699657a63a49384f07fd7a9" title="format_size" alt="" coords="735,57,832,83"/>
+<area shape="rect" id="node14" href="statistics_8h.html#aeff52bbf045362270639b2baed20762b" title="statistics_stop" alt="" coords="920,57,1035,83"/>
+<area shape="rect" id="node15" href="core_8h.html#a8f346536ccfbe77b78ed577674beb6cf" title="simulation_shutdown" alt="" coords="1084,57,1240,83"/>
+<area shape="rect" id="node16" href="core_8c.html#a9b05d2af2e233e2616633eaa706682ee" title="exit_from_simulation\l_model" alt="" coords="1291,53,1446,95"/>
+<area shape="rect" id="node17" href="core_8h.html#a7fb819521b1ab5fc7644ad216fe7b465" title="base_init" alt="" coords="1519,61,1597,87"/>
+<area shape="rect" id="node18" href="init_8h.html#a417eb072179d09f441dbae3125049e46" title="SystemInit" alt="" coords="1667,86,1757,113"/>
 </map>
 </div>
 </p>
@@ -1664,41 +854,43 @@ Roberto Vitali</dd></dl>
 
 <p>Definition at line <a class="el" href="checkpoints_8c_source.html#l00076">76</a> of file <a class="el" href="checkpoints_8c_source.html">checkpoints.c</a>.</p>
 
-<p><div id="dynsection-21" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-21-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-21-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-21-content" class="dyncontent" style="display:none;">
+<div id="dynsection-11-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="dymelor_8h_a1c7f2848dc6193b55e9edddf10aea99d_cgraph.png" border="0" usemap="#dymelor_8h_a1c7f2848dc6193b55e9edddf10aea99d_cgraph" alt=""/></div>
 <map name="dymelor_8h_a1c7f2848dc6193b55e9edddf10aea99d_cgraph" id="dymelor_8h_a1c7f2848dc6193b55e9edddf10aea99d_cgraph">
-<area shape="rect" id="node2" href="dymelor_8c.html#a90e313c8735836c166694aa746cc841e" title="get_log_size" alt="" coords="145,5,246,32"/>
-<area shape="rect" id="node3" href="dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="164,56,227,83"/>
-<area shape="rect" id="node5" href="statistics_8c.html#adb44a0a2dd40360e160ab4f5091ff324" title="statistics_post_data" alt="" coords="120,107,271,133"/>
-<area shape="rect" id="node4" href="platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="319,56,428,83"/>
+<area shape="rect" id="node2" href="dymelor_8c.html#a90e313c8735836c166694aa746cc841e" title="get_log_size" alt="" coords="120,5,221,32"/>
 </map>
 </div>
 </p>
 
-<p><div id="dynsection-22" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-22-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-22-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-22-content" class="dyncontent" style="display:none;">
+<div id="dynsection-12-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="dymelor_8h_a1c7f2848dc6193b55e9edddf10aea99d_icgraph.png" border="0" usemap="#dymelor_8h_a1c7f2848dc6193b55e9edddf10aea99d_icgraph" alt=""/></div>
 <map name="dymelor_8h_a1c7f2848dc6193b55e9edddf10aea99d_icgraph" id="dymelor_8h_a1c7f2848dc6193b55e9edddf10aea99d_icgraph">
-<area shape="rect" id="node2" href="dymelor_8h.html#afbb9e43630a99b023ad7421afdb6dee9" title="log_state" alt="" coords="120,44,201,71"/>
-<area shape="rect" id="node3" href="ccgs_8h.html#af8c1dd6d3ab2078085039fec6c7b0d9f" title="ccgs_compute_snapshot" alt="" coords="249,12,431,39"/>
-<area shape="rect" id="node9" href="state_8h.html#affa280b9d6f43896c9db64f0e32b2f3d" title="LogState" alt="" coords="300,75,380,101"/>
-<area shape="rect" id="node4" href="gvt_2gvt_8h.html#a62e7abde0dac08e56aa2a57401aed27b" title="adopt_new_gvt" alt="" coords="497,5,615,32"/>
-<area shape="rect" id="node5" href="gvt_2gvt_8h.html#a899b50ab45427cf145360ff3a6c29808" title="gvt_operations" alt="" coords="1080,81,1197,108"/>
-<area shape="rect" id="node6" href="main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="1272,107,1433,133"/>
-<area shape="rect" id="node7" href="main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="1481,107,1603,133"/>
-<area shape="rect" id="node8" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1515,157,1569,184"/>
-<area shape="rect" id="node10" href="scheduler_8h.html#a5766f78dcd3778582d506c3dec34594e" title="receive_control_msg" alt="" coords="479,75,633,101"/>
-<area shape="rect" id="node13" href="scheduler_8h.html#ac48128e72b303ea22d8ec641a9516b15" title="schedule" alt="" coords="729,125,808,152"/>
-<area shape="rect" id="node11" href="queues_8h.html#a54eca9bfa893cac072d1b1d3010c2944" title="process_bottom_halves" alt="" coords="681,75,856,101"/>
-<area shape="rect" id="node12" href="gvt_2gvt_8c.html#a895d5bfff43f3ee72f9cf7097abf609b" title="GVT_phases" alt="" coords="904,81,1005,108"/>
-<area shape="rect" id="node14" href="scheduler_8h.html#af405fd79c1cd59fccce27658d6e11941" title="initialize_worker_thread" alt="" coords="1053,183,1224,209"/>
+<area shape="rect" id="node2" href="dymelor_8h.html#afbb9e43630a99b023ad7421afdb6dee9" title="log_state" alt="" coords="120,208,201,234"/>
+<area shape="rect" id="node3" href="ccgs_8h.html#af8c1dd6d3ab2078085039fec6c7b0d9f" title="ccgs_compute_snapshot" alt="" coords="249,233,431,260"/>
+<area shape="rect" id="node9" href="state_8h.html#affa280b9d6f43896c9db64f0e32b2f3d" title="LogState" alt="" coords="300,182,380,209"/>
+<area shape="rect" id="node4" href="gvt_2gvt_8h.html#a62e7abde0dac08e56aa2a57401aed27b" title="adopt_new_gvt" alt="" coords="479,233,597,260"/>
+<area shape="rect" id="node5" href="gvt_2gvt_8h.html#a899b50ab45427cf145360ff3a6c29808" title="gvt_operations" alt="" coords="1027,233,1144,260"/>
+<area shape="rect" id="node6" href="main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="1396,118,1557,145"/>
+<area shape="rect" id="node7" href="main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="1605,110,1727,137"/>
+<area shape="rect" id="node8" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1913,124,1968,150"/>
+<area shape="rect" id="node10" href="scheduler_8h.html#ac48128e72b303ea22d8ec641a9516b15" title="schedule" alt="" coords="499,182,577,209"/>
+<area shape="rect" id="node11" href="gvt_2gvt_8h.html#a234e866bb1e37fa25dec9bb40134234d" title="get_last_gvt" alt="" coords="651,106,751,133"/>
+<area shape="rect" id="node19" href="scheduler_8h.html#a1b1b085c6b05a9d202a1629dcd71cffe" title="LP_main_loop" alt="" coords="645,208,756,234"/>
+<area shape="rect" id="node12" href="queues_8h.html#a54eca9bfa893cac072d1b1d3010c2944" title="process_bottom_halves" alt="" coords="804,106,979,133"/>
+<area shape="rect" id="node13" href="statistics_8c.html#ab7b584959699657a63a49384f07fd7a9" title="format_size" alt="" coords="843,56,940,82"/>
+<area shape="rect" id="node14" href="statistics_8h.html#aeff52bbf045362270639b2baed20762b" title="statistics_stop" alt="" coords="1028,56,1143,82"/>
+<area shape="rect" id="node15" href="core_8h.html#a8f346536ccfbe77b78ed577674beb6cf" title="simulation_shutdown" alt="" coords="1192,56,1348,82"/>
+<area shape="rect" id="node16" href="core_8c.html#a9b05d2af2e233e2616633eaa706682ee" title="exit_from_simulation\l_model" alt="" coords="1399,52,1554,94"/>
+<area shape="rect" id="node17" href="core_8h.html#a7fb819521b1ab5fc7644ad216fe7b465" title="base_init" alt="" coords="1627,60,1705,86"/>
+<area shape="rect" id="node18" href="init_8h.html#a417eb072179d09f441dbae3125049e46" title="SystemInit" alt="" coords="1775,85,1865,112"/>
 </map>
 </div>
 </p>
@@ -1742,37 +934,42 @@ Roberto Vitali</dd></dl>
 
 <p>Definition at line <a class="el" href="checkpoints_8c_source.html#l00358">358</a> of file <a class="el" href="checkpoints_8c_source.html">checkpoints.c</a>.</p>
 
-<p><div id="dynsection-23" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-23-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-23-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-13-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-23-content" class="dyncontent" style="display:none;">
+<div id="dynsection-13-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="dymelor_8h_aea7bcb3e0ec0c731b510785a3ff23e50_cgraph.png" border="0" usemap="#dymelor_8h_aea7bcb3e0ec0c731b510785a3ff23e50_cgraph" alt=""/></div>
 <map name="dymelor_8h_aea7bcb3e0ec0c731b510785a3ff23e50_cgraph" id="dymelor_8h_aea7bcb3e0ec0c731b510785a3ff23e50_cgraph">
-<area shape="rect" id="node2" href="statistics_8c.html#adb44a0a2dd40360e160ab4f5091ff324" title="statistics_post_data" alt="" coords="289,5,440,32"/>
-<area shape="rect" id="node3" href="checkpoints_8c.html#a10856fb7b6aab5e9072633b8a99875ff" title="restore_full" alt="" coords="148,31,241,57"/>
+<area shape="rect" id="node2" href="checkpoints_8c.html#a10856fb7b6aab5e9072633b8a99875ff" title="restore_full" alt="" coords="148,5,241,32"/>
 </map>
 </div>
 </p>
 
-<p><div id="dynsection-24" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-24-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-24-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-14-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-14-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-24-content" class="dyncontent" style="display:none;">
+<div id="dynsection-14-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="dymelor_8h_aea7bcb3e0ec0c731b510785a3ff23e50_icgraph.png" border="0" usemap="#dymelor_8h_aea7bcb3e0ec0c731b510785a3ff23e50_icgraph" alt=""/></div>
 <map name="dymelor_8h_aea7bcb3e0ec0c731b510785a3ff23e50_icgraph" id="dymelor_8h_aea7bcb3e0ec0c731b510785a3ff23e50_icgraph">
-<area shape="rect" id="node2" href="ccgs_8h.html#af8c1dd6d3ab2078085039fec6c7b0d9f" title="ccgs_compute_snapshot" alt="" coords="148,13,329,40"/>
-<area shape="rect" id="node8" href="state_8h.html#a8ab61cec6bbd780b2523d47b2c8419c4" title="RestoreState" alt="" coords="186,76,291,103"/>
-<area shape="rect" id="node3" href="gvt_2gvt_8h.html#a62e7abde0dac08e56aa2a57401aed27b" title="adopt_new_gvt" alt="" coords="496,5,615,32"/>
-<area shape="rect" id="node4" href="gvt_2gvt_8h.html#a899b50ab45427cf145360ff3a6c29808" title="gvt_operations" alt="" coords="839,55,956,81"/>
-<area shape="rect" id="node5" href="main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="1031,105,1192,132"/>
-<area shape="rect" id="node6" href="main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="1240,105,1361,132"/>
-<area shape="rect" id="node7" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1273,156,1328,183"/>
-<area shape="rect" id="node9" href="state_8h.html#a1fd6b7926db41257e07600226d87fffa" title="rollback" alt="" coords="377,101,448,128"/>
-<area shape="rect" id="node10" href="scheduler_8h.html#ac48128e72b303ea22d8ec641a9516b15" title="schedule" alt="" coords="516,104,595,131"/>
-<area shape="rect" id="node11" href="gvt_2gvt_8c.html#a895d5bfff43f3ee72f9cf7097abf609b" title="GVT_phases" alt="" coords="663,55,764,81"/>
-<area shape="rect" id="node12" href="scheduler_8h.html#af405fd79c1cd59fccce27658d6e11941" title="initialize_worker_thread" alt="" coords="812,156,983,183"/>
+<area shape="rect" id="node2" href="ccgs_8h.html#af8c1dd6d3ab2078085039fec6c7b0d9f" title="ccgs_compute_snapshot" alt="" coords="148,233,329,260"/>
+<area shape="rect" id="node8" href="state_8h.html#affa280b9d6f43896c9db64f0e32b2f3d" title="LogState" alt="" coords="199,182,279,209"/>
+<area shape="rect" id="node3" href="gvt_2gvt_8h.html#a62e7abde0dac08e56aa2a57401aed27b" title="adopt_new_gvt" alt="" coords="377,233,496,260"/>
+<area shape="rect" id="node4" href="gvt_2gvt_8h.html#a899b50ab45427cf145360ff3a6c29808" title="gvt_operations" alt="" coords="925,233,1043,260"/>
+<area shape="rect" id="node5" href="main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="1295,118,1456,145"/>
+<area shape="rect" id="node6" href="main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="1504,110,1625,137"/>
+<area shape="rect" id="node7" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1812,124,1867,150"/>
+<area shape="rect" id="node9" href="scheduler_8h.html#ac48128e72b303ea22d8ec641a9516b15" title="schedule" alt="" coords="397,182,476,209"/>
+<area shape="rect" id="node10" href="gvt_2gvt_8h.html#a234e866bb1e37fa25dec9bb40134234d" title="get_last_gvt" alt="" coords="549,106,649,133"/>
+<area shape="rect" id="node18" href="scheduler_8h.html#a1b1b085c6b05a9d202a1629dcd71cffe" title="LP_main_loop" alt="" coords="544,208,655,234"/>
+<area shape="rect" id="node11" href="queues_8h.html#a54eca9bfa893cac072d1b1d3010c2944" title="process_bottom_halves" alt="" coords="703,106,877,133"/>
+<area shape="rect" id="node12" href="statistics_8c.html#ab7b584959699657a63a49384f07fd7a9" title="format_size" alt="" coords="741,56,839,82"/>
+<area shape="rect" id="node13" href="statistics_8h.html#aeff52bbf045362270639b2baed20762b" title="statistics_stop" alt="" coords="927,56,1041,82"/>
+<area shape="rect" id="node14" href="core_8h.html#a8f346536ccfbe77b78ed577674beb6cf" title="simulation_shutdown" alt="" coords="1091,56,1247,82"/>
+<area shape="rect" id="node15" href="core_8c.html#a9b05d2af2e233e2616633eaa706682ee" title="exit_from_simulation\l_model" alt="" coords="1298,52,1453,94"/>
+<area shape="rect" id="node16" href="core_8h.html#a7fb819521b1ab5fc7644ad216fe7b465" title="base_init" alt="" coords="1525,60,1604,86"/>
+<area shape="rect" id="node17" href="init_8h.html#a417eb072179d09f441dbae3125049e46" title="SystemInit" alt="" coords="1673,85,1764,112"/>
 </map>
 </div>
 </p>
@@ -1804,41 +1001,43 @@ Roberto Vitali</dd></dl>
 
 <p>Definition at line <a class="el" href="checkpoints_8c_source.html#l00195">195</a> of file <a class="el" href="checkpoints_8c_source.html">checkpoints.c</a>.</p>
 
-<p><div id="dynsection-25" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-25-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-25-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-15-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-15-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-25-content" class="dyncontent" style="display:none;">
+<div id="dynsection-15-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="dymelor_8h_afbb9e43630a99b023ad7421afdb6dee9_cgraph.png" border="0" usemap="#dymelor_8h_afbb9e43630a99b023ad7421afdb6dee9_cgraph" alt=""/></div>
 <map name="dymelor_8h_afbb9e43630a99b023ad7421afdb6dee9_cgraph" id="dymelor_8h_afbb9e43630a99b023ad7421afdb6dee9_cgraph">
-<area shape="rect" id="node2" href="statistics_8c.html#adb44a0a2dd40360e160ab4f5091ff324" title="statistics_post_data" alt="" coords="249,5,400,32"/>
-<area shape="rect" id="node3" href="checkpoints_8c.html#a9be0910d1b3a99682d5d2971b4b79f3b" title="log_full" alt="" coords="135,56,201,83"/>
-<area shape="rect" id="node4" href="dymelor_8c.html#a90e313c8735836c166694aa746cc841e" title="get_log_size" alt="" coords="274,56,375,83"/>
-<area shape="rect" id="node5" href="dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="293,107,356,133"/>
-<area shape="rect" id="node6" href="platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="448,107,557,133"/>
+<area shape="rect" id="node2" href="checkpoints_8c.html#a9be0910d1b3a99682d5d2971b4b79f3b" title="log_full" alt="" coords="135,5,201,32"/>
+<area shape="rect" id="node3" href="dymelor_8c.html#a90e313c8735836c166694aa746cc841e" title="get_log_size" alt="" coords="249,5,351,32"/>
 </map>
 </div>
 </p>
 
-<p><div id="dynsection-26" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-26-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-26-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-16-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-16-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-26-content" class="dyncontent" style="display:none;">
+<div id="dynsection-16-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="dymelor_8h_afbb9e43630a99b023ad7421afdb6dee9_icgraph.png" border="0" usemap="#dymelor_8h_afbb9e43630a99b023ad7421afdb6dee9_icgraph" alt=""/></div>
 <map name="dymelor_8h_afbb9e43630a99b023ad7421afdb6dee9_icgraph" id="dymelor_8h_afbb9e43630a99b023ad7421afdb6dee9_icgraph">
-<area shape="rect" id="node2" href="ccgs_8h.html#af8c1dd6d3ab2078085039fec6c7b0d9f" title="ccgs_compute_snapshot" alt="" coords="135,12,316,39"/>
-<area shape="rect" id="node8" href="state_8h.html#affa280b9d6f43896c9db64f0e32b2f3d" title="LogState" alt="" coords="185,75,265,101"/>
-<area shape="rect" id="node3" href="gvt_2gvt_8h.html#a62e7abde0dac08e56aa2a57401aed27b" title="adopt_new_gvt" alt="" coords="382,5,501,32"/>
-<area shape="rect" id="node4" href="gvt_2gvt_8h.html#a899b50ab45427cf145360ff3a6c29808" title="gvt_operations" alt="" coords="965,81,1083,108"/>
-<area shape="rect" id="node5" href="main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="1157,107,1319,133"/>
-<area shape="rect" id="node6" href="main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="1367,107,1488,133"/>
-<area shape="rect" id="node7" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1400,157,1455,184"/>
-<area shape="rect" id="node9" href="scheduler_8h.html#a5766f78dcd3778582d506c3dec34594e" title="receive_control_msg" alt="" coords="364,75,519,101"/>
-<area shape="rect" id="node12" href="scheduler_8h.html#ac48128e72b303ea22d8ec641a9516b15" title="schedule" alt="" coords="615,125,693,152"/>
-<area shape="rect" id="node10" href="queues_8h.html#a54eca9bfa893cac072d1b1d3010c2944" title="process_bottom_halves" alt="" coords="567,75,741,101"/>
-<area shape="rect" id="node11" href="gvt_2gvt_8c.html#a895d5bfff43f3ee72f9cf7097abf609b" title="GVT_phases" alt="" coords="789,81,891,108"/>
-<area shape="rect" id="node13" href="scheduler_8h.html#af405fd79c1cd59fccce27658d6e11941" title="initialize_worker_thread" alt="" coords="939,183,1109,209"/>
+<area shape="rect" id="node2" href="ccgs_8h.html#af8c1dd6d3ab2078085039fec6c7b0d9f" title="ccgs_compute_snapshot" alt="" coords="135,233,316,260"/>
+<area shape="rect" id="node8" href="state_8h.html#affa280b9d6f43896c9db64f0e32b2f3d" title="LogState" alt="" coords="185,182,265,209"/>
+<area shape="rect" id="node3" href="gvt_2gvt_8h.html#a62e7abde0dac08e56aa2a57401aed27b" title="adopt_new_gvt" alt="" coords="364,233,483,260"/>
+<area shape="rect" id="node4" href="gvt_2gvt_8h.html#a899b50ab45427cf145360ff3a6c29808" title="gvt_operations" alt="" coords="912,233,1029,260"/>
+<area shape="rect" id="node5" href="main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="1281,118,1443,145"/>
+<area shape="rect" id="node6" href="main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="1491,110,1612,137"/>
+<area shape="rect" id="node7" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1799,124,1853,150"/>
+<area shape="rect" id="node9" href="scheduler_8h.html#ac48128e72b303ea22d8ec641a9516b15" title="schedule" alt="" coords="384,182,463,209"/>
+<area shape="rect" id="node10" href="gvt_2gvt_8h.html#a234e866bb1e37fa25dec9bb40134234d" title="get_last_gvt" alt="" coords="536,106,636,133"/>
+<area shape="rect" id="node18" href="scheduler_8h.html#a1b1b085c6b05a9d202a1629dcd71cffe" title="LP_main_loop" alt="" coords="531,208,641,234"/>
+<area shape="rect" id="node11" href="queues_8h.html#a54eca9bfa893cac072d1b1d3010c2944" title="process_bottom_halves" alt="" coords="689,106,864,133"/>
+<area shape="rect" id="node12" href="statistics_8c.html#ab7b584959699657a63a49384f07fd7a9" title="format_size" alt="" coords="728,56,825,82"/>
+<area shape="rect" id="node13" href="statistics_8h.html#aeff52bbf045362270639b2baed20762b" title="statistics_stop" alt="" coords="913,56,1028,82"/>
+<area shape="rect" id="node14" href="core_8h.html#a8f346536ccfbe77b78ed577674beb6cf" title="simulation_shutdown" alt="" coords="1077,56,1233,82"/>
+<area shape="rect" id="node15" href="core_8c.html#a9b05d2af2e233e2616633eaa706682ee" title="exit_from_simulation\l_model" alt="" coords="1285,52,1439,94"/>
+<area shape="rect" id="node16" href="core_8h.html#a7fb819521b1ab5fc7644ad216fe7b465" title="base_init" alt="" coords="1512,60,1591,86"/>
+<area shape="rect" id="node17" href="init_8h.html#a417eb072179d09f441dbae3125049e46" title="SystemInit" alt="" coords="1660,85,1751,112"/>
 </map>
 </div>
 </p>
@@ -1850,7 +1049,7 @@ Roberto Vitali</dd></dl>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="dymelor_8h.html#a0fd9bfdb65697fdecfd4822e8499806a">malloc_state</a>* malloc_state_init </td>
+          <td class="memname"><a class="el" href="struct__malloc__state.html">malloc_state</a>* malloc_state_init </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -1862,445 +1061,17 @@ Roberto Vitali</dd></dl>
 
 <p>Definition at line <a class="el" href="dymelor_8c_source.html#l00077">77</a> of file <a class="el" href="dymelor_8c_source.html">dymelor.c</a>.</p>
 
-<p><div id="dynsection-27" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-27-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-27-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-17" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-17-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-17-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-27-content" class="dyncontent" style="display:none;">
+<div id="dynsection-17-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="dymelor_8h_a8e070de8750bb4afd1be813809e70eb9_cgraph.png" border="0" usemap="#dymelor_8h_a8e070de8750bb4afd1be813809e70eb9_cgraph" alt=""/></div>
 <map name="dymelor_8h_a8e070de8750bb4afd1be813809e70eb9_cgraph" id="dymelor_8h_a8e070de8750bb4afd1be813809e70eb9_cgraph">
-<area shape="rect" id="node2" href="dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="216,5,279,32"/>
-<area shape="rect" id="node4" href="dymelor_8c.html#ac1e32353ad7bdfbf4b701db28602fcbc" title="malloc_area_init" alt="" coords="184,56,311,83"/>
-<area shape="rect" id="node3" href="platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="359,5,468,32"/>
+<area shape="rect" id="node2" href="dymelor_8c.html#ac1e32353ad7bdfbf4b701db28602fcbc" title="malloc_area_init" alt="" coords="184,5,311,32"/>
 </map>
 </div>
 </p>
-
-<p><div id="dynsection-28" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-28-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-28-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-28-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="dymelor_8h_a8e070de8750bb4afd1be813809e70eb9_icgraph.png" border="0" usemap="#dymelor_8h_a8e070de8750bb4afd1be813809e70eb9_icgraph" alt=""/></div>
-<map name="dymelor_8h_a8e070de8750bb4afd1be813809e70eb9_icgraph" id="dymelor_8h_a8e070de8750bb4afd1be813809e70eb9_icgraph">
-<area shape="rect" id="node2" href="segment_8c.html#a55b0b8e4a65be959f5adb5343f36ff94" title="initialize_memory_map" alt="" coords="184,5,355,32"/>
-<area shape="rect" id="node3" href="process_8h.html#ad58c55ea23fdc3d938b57135b6116feb" title="initialize_lps" alt="" coords="403,5,501,32"/>
-<area shape="rect" id="node4" href="init_8h.html#a417eb072179d09f441dbae3125049e46" title="SystemInit" alt="" coords="549,5,640,32"/>
-<area shape="rect" id="node5" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="688,5,743,32"/>
-</map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="a5262113c6c16c75226dc3185fe3f37b0"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void malloc_state_wipe </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="dymelor_8h.html#a0fd9bfdb65697fdecfd4822e8499806a">malloc_state</a> **&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="dymelor_8c_source.html#l00114">114</a> of file <a class="el" href="dymelor_8c_source.html">dymelor.c</a>.</p>
-
-<p><div id="dynsection-29" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-29-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-29-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-29-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="dymelor_8h_a5262113c6c16c75226dc3185fe3f37b0_cgraph.png" border="0" usemap="#dymelor_8h_a5262113c6c16c75226dc3185fe3f37b0_cgraph" alt=""/></div>
-<map name="dymelor_8h_a5262113c6c16c75226dc3185fe3f37b0_cgraph" id="dymelor_8h_a5262113c6c16c75226dc3185fe3f37b0_cgraph">
-<area shape="rect" id="node2" href="dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a" title="rsfree" alt="" coords="192,5,251,32"/>
-<area shape="rect" id="node3" href="platform_8c.html#ae2af2cd130d16958394ae21e9d13035f" title="__real_free" alt="" coords="299,5,391,32"/>
-</map>
-</div>
-</p>
-
-<p><div id="dynsection-30" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-30-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-30-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-30-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="dymelor_8h_a5262113c6c16c75226dc3185fe3f37b0_icgraph.png" border="0" usemap="#dymelor_8h_a5262113c6c16c75226dc3185fe3f37b0_icgraph" alt=""/></div>
-<map name="dymelor_8h_a5262113c6c16c75226dc3185fe3f37b0_icgraph" id="dymelor_8h_a5262113c6c16c75226dc3185fe3f37b0_icgraph">
-<area shape="rect" id="node2" href="segment_8c.html#a891f6c2edc03d05f1f17bb046be719f8" title="finalize_memory_map" alt="" coords="192,5,355,32"/>
-</map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="a9e80751b3934b0cd4411695f6743016b"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void* rsalloc </td>
-          <td>(</td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="platform_8c_source.html#l00041">41</a> of file <a class="el" href="platform_8c_source.html">platform.c</a>.</p>
-
-<p><div id="dynsection-31" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-31-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-31-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-31-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="dymelor_8h_a9e80751b3934b0cd4411695f6743016b_cgraph.png" border="0" usemap="#dymelor_8h_a9e80751b3934b0cd4411695f6743016b_cgraph" alt=""/></div>
-<map name="dymelor_8h_a9e80751b3934b0cd4411695f6743016b_cgraph" id="dymelor_8h_a9e80751b3934b0cd4411695f6743016b_cgraph">
-<area shape="rect" id="node2" href="platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="116,5,225,32"/>
-</map>
-</div>
-</p>
-
-<p><div id="dynsection-32" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-32-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-32-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-32-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="dymelor_8h_a9e80751b3934b0cd4411695f6743016b_icgraph.png" border="0" usemap="#dymelor_8h_a9e80751b3934b0cd4411695f6743016b_icgraph" alt=""/></div>
-<map name="dymelor_8h_a9e80751b3934b0cd4411695f6743016b_icgraph" id="dymelor_8h_a9e80751b3934b0cd4411695f6743016b_icgraph">
-<area shape="rect" id="node2" href="thread_8h.html#a7248efe5c9432ead45b781036c5d7394" title="create_threads" alt="" coords="829,239,948,266"/>
-<area shape="rect" id="node4" href="ult_8h.html#a21c80d94da97fa7d1476e8450821a701" title="get_ult_stack" alt="" coords="375,192,482,219"/>
-<area shape="rect" id="node5" href="process_8h.html#ad58c55ea23fdc3d938b57135b6116feb" title="initialize_lps" alt="" coords="616,218,715,244"/>
-<area shape="rect" id="node7" href="communication_8h.html#a56a4865196c169691525e99bae337519" title="Pack a message in a platform&#45;level data structure. " alt="" coords="158,614,245,640"/>
-<area shape="rect" id="node11" href="ecs_8h.html#a414633c637a80868d1dea7b3acf152f3" title="ecs_send_pages" alt="" coords="365,715,493,742"/>
-<area shape="rect" id="node14" href="scheduler_8h.html#aacd9fe9684de21c933680f355acb5766" title="process_control_msg" alt="" coords="349,766,508,792"/>
-<area shape="rect" id="node17" href="communication_2gvt_8h.html#ae0cb1aa4dae8060ac662c0534849ecf3" title="Initialize the MPI&#45;based distributed GVT reduction submodule. " alt="" coords="143,1234,259,1260"/>
-<area shape="rect" id="node19" href="gvt_2gvt_8h.html#aa6c9337f3fccf8513b8fad1533f743c4" title="gvt_init" alt="" coords="395,344,463,371"/>
-<area shape="rect" id="node20" href="mpi_8h.html#ad243611fd168b265105bce70c193394d" title="receive_remote_msgs" alt="" coords="119,1132,283,1159"/>
-<area shape="rect" id="node22" href="mpi_8c.html#a6e129776fd0d7fc31a255a396ce28c39" title="dist_termination_init" alt="" coords="125,1284,277,1311"/>
-<area shape="rect" id="node23" href="wnd_8h.html#a620f72de0294d3c638894de54d14ea27" title="outgoing_window_init" alt="" coords="123,1183,279,1210"/>
-<area shape="rect" id="node24" href="wnd_8h.html#a76d33aed8e7dfe9ab6d8ce4f9b1f4fd8" title="allocate_outgoing_msg" alt="" coords="116,1335,287,1362"/>
-<area shape="rect" id="node26" href="core_8h.html#a0c0887000d8e04c515c4a9a5bf2f5995" title="distribute_lps_on_kernels" alt="" coords="337,243,520,270"/>
-<area shape="rect" id="node27" href="calqueue_8h.html#a6ce456642093e0ebcd9563dd723781d8" title="calqueue_put" alt="" coords="147,1082,255,1108"/>
-<area shape="rect" id="node30" href="serial_8h.html#a0de71d13e4269fdcd423e611e8d3504e" title="SerialScheduleNewEvent" alt="" coords="339,918,519,944"/>
-<area shape="rect" id="node31" href="serial_8h.html#ad2b461e9e9044364a28a61cfadcacdd8" title="serial_init" alt="" coords="624,842,707,868"/>
-<area shape="rect" id="node32" href="msgchannel_8h.html#a9da640576408c47378535edae6e4fec4" title="init_channel" alt="" coords="152,410,251,436"/>
-<area shape="rect" id="node33" href="gvt_2gvt_8h.html#a3706f8033294cf3cf0777945a51db235" title="ccgs_init" alt="" coords="163,476,240,503"/>
-<area shape="rect" id="node34" href="topology_8c.html#a00f601a2428dc0ee70e1e2f8159ac432" title="a_star" alt="" coords="170,1386,233,1412"/>
-<area shape="rect" id="node36" href="buddy_8c.html#aa5a3c94f66dddaa902765cf359a54c06" title="buddy_new" alt="" coords="155,1538,248,1564"/>
-<area shape="rect" id="node37" href="dymelor_8h.html#a1c7f2848dc6193b55e9edddf10aea99d" title="log_full" alt="" coords="168,1639,235,1666"/>
-<area shape="rect" id="node39" href="state_8h.html#affa280b9d6f43896c9db64f0e32b2f3d" title="LogState" alt="" coords="625,1614,705,1640"/>
-<area shape="rect" id="node40" href="dymelor_8h.html#a8e070de8750bb4afd1be813809e70eb9" title="malloc_state_init" alt="" coords="136,192,267,219"/>
-<area shape="rect" id="node41" href="segment_8c.html#a55b0b8e4a65be959f5adb5343f36ff94" title="initialize_memory_map" alt="" coords="343,91,514,118"/>
-<area shape="rect" id="node42" href="dymelor_8h.html#a0706c4a4237b3b20358ee252bdfb1a0f" title="do_malloc" alt="" coords="158,1487,245,1514"/>
-<area shape="rect" id="node43" href="dymelor_8h.html#a26407e99c6266e774c65131ef12b03b8" title="__wrap_malloc" alt="" coords="371,1436,486,1463"/>
-<area shape="rect" id="node45" href="segment_8c.html#ac55535ec45aab23d2a49f371241d5014" title="get_segment" alt="" coords="148,1690,255,1716"/>
-<area shape="rect" id="node46" href="slab_8c.html#a9ddefb6c0499750d4928a2462d3aa0ae" title="slab_init" alt="" coords="164,91,239,118"/>
-<area shape="rect" id="node47" href="binding_8h.html#ae26b2a8055156e8648f8ad806f5fa5b0" title="rebind_LPs" alt="" coords="383,968,474,995"/>
-<area shape="rect" id="node48" href="scheduler_8h.html#a0687cad59e950868aa60f204ef051e15" title="preempt_init" alt="" coords="150,1740,253,1767"/>
-<area shape="rect" id="node49" href="process_8h.html#acefccda9cabe7555434f95628cd9686f" title="initialize_binding\l_blocks" alt="" coords="138,1016,265,1057"/>
-<area shape="rect" id="node50" href="statistics_8h.html#a4a201b8310d7d1c38ee31035202c8ee8" title="statistics_init" alt="" coords="613,606,718,632"/>
-<area shape="rect" id="node3" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1017,547,1072,574"/>
-<area shape="rect" id="node6" href="init_8h.html#a417eb072179d09f441dbae3125049e46" title="SystemInit" alt="" coords="843,547,934,574"/>
-<area shape="rect" id="node8" href="communication_8h.html#ae0329023aeab7047bcb7b4708698a008" title="Schedule a new message to some LP. " alt="" coords="571,487,760,514"/>
-<area shape="rect" id="node9" href="ecs_8c.html#a672ea2cce8f7ae1214e0a41f46884933" title="ecs_secondary" alt="" coords="370,563,487,590"/>
-<area shape="rect" id="node10" href="ecs_8c.html#ade56ef97d7d3ae799d60f8616f2062cb" title="ecs_initiate" alt="" coords="381,614,476,640"/>
-<area shape="rect" id="node12" href="ecs_8c.html#a4b58dd1c4132af99fbd29c8a6247ca1b" title="unblock_synchronized\l_objects" alt="" coords="347,446,510,488"/>
-<area shape="rect" id="node13" href="scheduler_8h.html#ac54b610f24de85b6444f61c4c094242c" title="rollback_control_message" alt="" coords="335,512,523,539"/>
-<area shape="rect" id="node15" href="scheduler_8h.html#af405fd79c1cd59fccce27658d6e11941" title="initialize_worker_thread" alt="" coords="580,943,751,970"/>
-<area shape="rect" id="node16" href="main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="808,968,969,995"/>
-<area shape="rect" id="node18" href="mpi_8h.html#aae0b9d97e0c3d31df6e27e2455e66a13" title="inter_kernel_comm_init" alt="" coords="343,1246,514,1272"/>
-<area shape="rect" id="node21" href="gvt_2gvt_8c.html#a895d5bfff43f3ee72f9cf7097abf609b" title="GVT_phases" alt="" coords="378,1195,479,1222"/>
-<area shape="rect" id="node25" href="mpi_8h.html#a41390aa810e506d633d2cf01bc5973bb" title="send_remote_msg" alt="" coords="357,1335,500,1362"/>
-<area shape="rect" id="node28" href="calqueue_8c.html#a4e8867b10c2140a383aaaff9556f17be" title="new_width" alt="" coords="385,1019,472,1046"/>
-<area shape="rect" id="node29" href="calqueue_8c.html#a091fb2fd34edc1674dcf7418485419b5" title="resize" alt="" coords="635,1082,695,1108"/>
-<area shape="rect" id="node35" href="ROOT-Sim_8h.html#a687b119a53a0db5787416bc460299cd2" title="ComputeMinTour" alt="" coords="601,1386,730,1412"/>
-<area shape="rect" id="node38" href="dymelor_8h.html#afbb9e43630a99b023ad7421afdb6dee9" title="log_state" alt="" coords="388,1639,469,1666"/>
-<area shape="rect" id="node44" href="wrapper_8c.html#a849c010b96eae768d42712e2060efbe1" title="__wrap_strdup" alt="" coords="608,1436,723,1463"/>
-</map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="a9d9ef7f17d1da53b67c7a8171d2b5ddf"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void* rscalloc </td>
-          <td>(</td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="platform_8c_source.html#l00060">60</a> of file <a class="el" href="platform_8c_source.html">platform.c</a>.</p>
-
-<p><div id="dynsection-33" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-33-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-33-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-33-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="dymelor_8h_a9d9ef7f17d1da53b67c7a8171d2b5ddf_cgraph.png" border="0" usemap="#dymelor_8h_a9d9ef7f17d1da53b67c7a8171d2b5ddf_cgraph" alt=""/></div>
-<map name="dymelor_8h_a9d9ef7f17d1da53b67c7a8171d2b5ddf_cgraph" id="dymelor_8h_a9d9ef7f17d1da53b67c7a8171d2b5ddf_cgraph">
-<area shape="rect" id="node2" href="platform_8c.html#a035902fca80f8a7d1199d944bb39b300" title="__real_calloc" alt="" coords="124,5,227,32"/>
-</map>
-</div>
-</p>
-
-<p><div id="dynsection-34" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-34-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-34-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-34-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="dymelor_8h_a9d9ef7f17d1da53b67c7a8171d2b5ddf_icgraph.png" border="0" usemap="#dymelor_8h_a9d9ef7f17d1da53b67c7a8171d2b5ddf_icgraph" alt=""/></div>
-<map name="dymelor_8h_a9d9ef7f17d1da53b67c7a8171d2b5ddf_icgraph" id="dymelor_8h_a9d9ef7f17d1da53b67c7a8171d2b5ddf_icgraph">
-<area shape="rect" id="node2" href="dymelor_8h.html#ac413ddb09d9d07ab4988b4ef62e38e73" title="__wrap_calloc" alt="" coords="124,5,233,32"/>
-</map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="aa6966af54ab40823b6a31934cfba500a"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void rsfree </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="platform_8c_source.html#l00050">50</a> of file <a class="el" href="platform_8c_source.html">platform.c</a>.</p>
-
-<p><div id="dynsection-35" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-35-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-35-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-35-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="dymelor_8h_aa6966af54ab40823b6a31934cfba500a_cgraph.png" border="0" usemap="#dymelor_8h_aa6966af54ab40823b6a31934cfba500a_cgraph" alt=""/></div>
-<map name="dymelor_8h_aa6966af54ab40823b6a31934cfba500a_cgraph" id="dymelor_8h_aa6966af54ab40823b6a31934cfba500a_cgraph">
-<area shape="rect" id="node2" href="platform_8c.html#ae2af2cd130d16958394ae21e9d13035f" title="__real_free" alt="" coords="112,5,204,32"/>
-</map>
-</div>
-</p>
-
-<p><div id="dynsection-36" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-36-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-36-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-36-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="dymelor_8h_aa6966af54ab40823b6a31934cfba500a_icgraph.png" border="0" usemap="#dymelor_8h_aa6966af54ab40823b6a31934cfba500a_icgraph" alt=""/></div>
-<map name="dymelor_8h_aa6966af54ab40823b6a31934cfba500a_icgraph" id="dymelor_8h_aa6966af54ab40823b6a31934cfba500a_icgraph">
-<area shape="rect" id="node2" href="thread_8c.html#a9a978a7c6a81cdde2633f5ef7e01b7f4" title="__helper_create_thread" alt="" coords="112,5,285,32"/>
-<area shape="rect" id="node5" href="communication_8h.html#a323ad017762155352c38983e67e8adeb" title="Release a message buffer. " alt="" coords="379,208,483,235"/>
-<area shape="rect" id="node8" href="wnd_8h.html#acbe46c456aa03b014ca2134604700789" title="outgoing_window_finalize" alt="" coords="1031,151,1212,177"/>
-<area shape="rect" id="node14" href="communication_2gvt_8h.html#ac35f5f227c553fffd0911c995c865e17" title="Shut down the MPI&#45;based distributed GVT reduction submodule. " alt="" coords="128,917,269,944"/>
-<area shape="rect" id="node18" href="serial_8h.html#aa0dd072d0e792fb9c65220bdddf69a0e" title="serial_simulation" alt="" coords="1057,891,1186,917"/>
-<area shape="rect" id="node19" href="calqueue_8c.html#a4e8867b10c2140a383aaaff9556f17be" title="new_width" alt="" coords="155,968,242,995"/>
-<area shape="rect" id="node20" href="calqueue_8c.html#a091fb2fd34edc1674dcf7418485419b5" title="resize" alt="" coords="401,1019,461,1045"/>
-<area shape="rect" id="node22" href="calqueue_8h.html#a180e22d3d13d9685adb6326484a1b418" title="calqueue_get" alt="" coords="841,1069,949,1096"/>
-<area shape="rect" id="node24" href="msgchannel_8h.html#a4b2fc9107c3dd7ac649d671a15b12c1e" title="fini_channel" alt="" coords="150,411,247,437"/>
-<area shape="rect" id="node25" href="gvt_2gvt_8h.html#ab54ca4e7a4ba70e71cb3129aa0adbb74" title="ccgs_fini" alt="" coords="393,835,469,861"/>
-<area shape="rect" id="node27" href="topology_8c.html#a00f601a2428dc0ee70e1e2f8159ac432" title="a_star" alt="" coords="167,664,230,691"/>
-<area shape="rect" id="node28" href="ROOT-Sim_8h.html#a687b119a53a0db5787416bc460299cd2" title="ComputeMinTour" alt="" coords="367,689,496,716"/>
-<area shape="rect" id="node29" href="mm_8h.html#ab30c9a889a3674f024e256479b42bcb4" title="buddy_destroy" alt="" coords="141,613,257,640"/>
-<area shape="rect" id="node30" href="dymelor_8h.html#a638015576623fa22a4710def61ad19ab" title="log_delete" alt="" coords="387,309,475,336"/>
-<area shape="rect" id="node33" href="dymelor_8h.html#a5262113c6c16c75226dc3185fe3f37b0" title="malloc_state_wipe" alt="" coords="129,816,268,843"/>
-<area shape="rect" id="node34" href="segment_8c.html#a891f6c2edc03d05f1f17bb046be719f8" title="finalize_memory_map" alt="" coords="350,777,513,804"/>
-<area shape="rect" id="node35" href="dymelor_8h.html#adb41febfa38b30f522a8b2623ce7ecf4" title="do_free" alt="" coords="163,1171,234,1197"/>
-<area shape="rect" id="node36" href="dymelor_8h.html#adfe96d5ee00e58a98b9e1ce800612bf1" title="__wrap_free" alt="" coords="382,1145,481,1172"/>
-<area shape="rect" id="node39" href="dymelor_8h.html#ab034b03a284ecc619e07a051d95b7dd7" title="clean_buffers_on_gvt" alt="" coords="589,411,747,437"/>
-<area shape="rect" id="node40" href="ecs_8h.html#a414633c637a80868d1dea7b3acf152f3" title="ecs_send_pages" alt="" coords="135,157,263,184"/>
-<area shape="rect" id="node42" href="slab_8c.html#a891cd5abfed9deb98413ab7e7c29ef61" title="slab_free" alt="" coords="159,259,239,285"/>
-<area shape="rect" id="node44" href="slab_8c.html#af02abdb0d775d32a041c665b80f68448" title="slab_destroy" alt="" coords="147,1069,250,1096"/>
-<area shape="rect" id="node45" href="scheduler_8h.html#aebd466071a0343a49143ffccfdb148f4" title="preempt_fini" alt="" coords="147,563,250,589"/>
-<area shape="rect" id="node46" href="scheduler_8h.html#a8ed8d4a13d66c1d3a221fb82e72f8e0e" title="scheduler_fini" alt="" coords="377,563,486,589"/>
-<area shape="rect" id="node47" href="statistics_8c.html#a3035806634335aef4b24643ee79200f1" title="_rmdir" alt="" coords="167,1221,230,1248"/>
-<area shape="rect" id="node48" href="statistics_8h.html#a4a201b8310d7d1c38ee31035202c8ee8" title="statistics_init" alt="" coords="842,56,947,83"/>
-<area shape="rect" id="node50" href="statistics_8h.html#aaa24b8c29fb4c68de95998bd43421bbb" title="statistics_fini" alt="" coords="379,487,483,513"/>
-<area shape="rect" id="node3" href="thread_8h.html#a7248efe5c9432ead45b781036c5d7394" title="create_threads" alt="" coords="1062,12,1181,39"/>
-<area shape="rect" id="node4" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1260,164,1315,191"/>
-<area shape="rect" id="node6" href="wnd_8h.html#a930e160f86a257b5143e2d59205d8002" title="prune_outgoing_queue" alt="" coords="583,208,753,235"/>
-<area shape="rect" id="node10" href="fossil_8c.html#af4d5d546129fe91cedfc16ddedf76464" title="fossil_collection" alt="" coords="607,259,729,285"/>
-<area shape="rect" id="node12" href="queues_8h.html#a54eca9bfa893cac072d1b1d3010c2944" title="process_bottom_halves" alt="" coords="581,157,755,184"/>
-<area shape="rect" id="node7" href="wnd_8h.html#a157ee75a6300b4d0ae3c99afe8c3ae6a" title="prune_outgoing_queues" alt="" coords="807,259,983,285"/>
-<area shape="rect" id="node9" href="main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="1041,252,1202,279"/>
-<area shape="rect" id="node11" href="gvt_2gvt_8h.html#a62e7abde0dac08e56aa2a57401aed27b" title="adopt_new_gvt" alt="" coords="835,360,954,387"/>
-<area shape="rect" id="node13" href="gvt_2gvt_8c.html#a895d5bfff43f3ee72f9cf7097abf609b" title="GVT_phases" alt="" coords="844,157,945,184"/>
-<area shape="rect" id="node15" href="mpi_8h.html#a38b0bdfeab3308a62e50dc362ebd2a68" title="inter_kernel_comm_finalize" alt="" coords="333,911,529,937"/>
-<area shape="rect" id="node16" href="communication_8h.html#a6bd2f352e0326608e9a2bef2efbde184" title="Finalize the communication subsystem. " alt="" coords="595,881,741,908"/>
-<area shape="rect" id="node17" href="core_8h.html#a8f346536ccfbe77b78ed577674beb6cf" title="simulation_shutdown" alt="" coords="817,679,973,705"/>
-<area shape="rect" id="node21" href="calqueue_8c.html#a73051a4cdab05e4724a45e77a5572c9d" title="calqueue_deq" alt="" coords="613,1069,723,1096"/>
-<area shape="rect" id="node23" href="calqueue_8h.html#a6ce456642093e0ebcd9563dd723781d8" title="calqueue_put" alt="" coords="614,1019,722,1045"/>
-<area shape="rect" id="node26" href="gvt_2gvt_8h.html#a10977cb9180000f423f184cca0b6338d" title="gvt_fini" alt="" coords="635,761,701,788"/>
-<area shape="rect" id="node31" href="ccgs_8h.html#af8c1dd6d3ab2078085039fec6c7b0d9f" title="ccgs_compute_snapshot" alt="" coords="577,360,759,387"/>
-<area shape="rect" id="node32" href="state_8h.html#a1fd6b7926db41257e07600226d87fffa" title="rollback" alt="" coords="633,309,703,336"/>
-<area shape="rect" id="node37" href="ROOT-Sim_8h.html#a12dc5c84395024f28dc92710ffc4fb91" title="DiscardObstacles" alt="" coords="601,1171,735,1197"/>
-<area shape="rect" id="node38" href="dymelor_8h.html#a8b835f617273e3dcb51a0818e4d38090" title="__wrap_realloc" alt="" coords="611,1120,725,1147"/>
-<area shape="rect" id="node41" href="scheduler_8h.html#a5766f78dcd3778582d506c3dec34594e" title="receive_control_msg" alt="" coords="354,157,509,184"/>
-<area shape="rect" id="node43" href="communication_8h.html#a762b3dacaa82c4590e0572ac08117153" title="Release a message header. " alt="" coords="365,259,497,285"/>
-<area shape="rect" id="node49" href="init_8h.html#a417eb072179d09f441dbae3125049e46" title="SystemInit" alt="" coords="1076,75,1167,101"/>
-</map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="a480bc47d84033faa5410d5a3c4470ff7"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void* rsrealloc </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="platform_8c_source.html#l00055">55</a> of file <a class="el" href="platform_8c_source.html">platform.c</a>.</p>
-
-<p><div id="dynsection-37" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-37-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-37-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-37-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="dymelor_8h_a480bc47d84033faa5410d5a3c4470ff7_cgraph.png" border="0" usemap="#dymelor_8h_a480bc47d84033faa5410d5a3c4470ff7_cgraph" alt=""/></div>
-<map name="dymelor_8h_a480bc47d84033faa5410d5a3c4470ff7_cgraph" id="dymelor_8h_a480bc47d84033faa5410d5a3c4470ff7_cgraph">
-<area shape="rect" id="node2" href="platform_8c.html#af571772318d146f693e37e7a580103c0" title="__real_realloc" alt="" coords="129,5,239,32"/>
-</map>
-</div>
-</p>
-
-<p><div id="dynsection-38" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-38-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-38-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-38-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="dymelor_8h_a480bc47d84033faa5410d5a3c4470ff7_icgraph.png" border="0" usemap="#dymelor_8h_a480bc47d84033faa5410d5a3c4470ff7_icgraph" alt=""/></div>
-<map name="dymelor_8h_a480bc47d84033faa5410d5a3c4470ff7_icgraph" id="dymelor_8h_a480bc47d84033faa5410d5a3c4470ff7_icgraph">
-<area shape="rect" id="node2" href="communication_8h.html#ae80f5356cc32f9f2373305341e409b3b" title="Place a message in the temporary LP outgoing buffer. " alt="" coords="129,5,285,32"/>
-<area shape="rect" id="node6" href="msgchannel_8h.html#a2d02bf5d1d8c1e8835d65ba1e0397e56" title="insert_msg" alt="" coords="161,56,254,83"/>
-<area shape="rect" id="node28" href="dymelor_8h.html#a8b835f617273e3dcb51a0818e4d38090" title="__wrap_realloc" alt="" coords="150,107,265,133"/>
-<area shape="rect" id="node3" href="communication_8h.html#ae0329023aeab7047bcb7b4708698a008" title="Schedule a new message to some LP. " alt="" coords="333,5,523,32"/>
-<area shape="rect" id="node4" href="init_8h.html#a417eb072179d09f441dbae3125049e46" title="SystemInit" alt="" coords="1575,24,1665,51"/>
-<area shape="rect" id="node5" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1969,111,2024,137"/>
-<area shape="rect" id="node7" href="queues_8h.html#a9ff164dd6a938afa7e892f4028c2a033" title="insert_bottom_half" alt="" coords="357,56,499,83"/>
-<area shape="rect" id="node8" href="communication_8h.html#ab5250867c0edfc326732c059b0c0c3b5" title="Send a message. " alt="" coords="571,259,625,285"/>
-<area shape="rect" id="node27" href="mpi_8h.html#ad243611fd168b265105bce70c193394d" title="receive_remote_msgs" alt="" coords="1125,107,1289,133"/>
-<area shape="rect" id="node9" href="communication_8h.html#aa8047651e174f4d26bef644233b5c8f8" title="Send all antimessages for a certain LP. " alt="" coords="692,309,843,336"/>
-<area shape="rect" id="node17" href="communication_8h.html#ad154a0e0c0815b786ead70143505abd6" title="Send all pending outgoing messages. " alt="" coords="911,371,1070,397"/>
-<area shape="rect" id="node18" href="ecs_8c.html#a672ea2cce8f7ae1214e0a41f46884933" title="ecs_secondary" alt="" coords="709,157,826,184"/>
-<area shape="rect" id="node20" href="ecs_8c.html#ade56ef97d7d3ae799d60f8616f2062cb" title="ecs_initiate" alt="" coords="1160,157,1255,184"/>
-<area shape="rect" id="node21" href="ecs_8h.html#a414633c637a80868d1dea7b3acf152f3" title="ecs_send_pages" alt="" coords="703,208,831,235"/>
-<area shape="rect" id="node24" href="ecs_8c.html#a4b58dd1c4132af99fbd29c8a6247ca1b" title="unblock_synchronized\l_objects" alt="" coords="909,443,1072,485"/>
-<area shape="rect" id="node25" href="scheduler_8h.html#ac54b610f24de85b6444f61c4c094242c" title="rollback_control_message" alt="" coords="673,360,861,387"/>
-<area shape="rect" id="node26" href="scheduler_8h.html#aacd9fe9684de21c933680f355acb5766" title="process_control_msg" alt="" coords="688,259,847,285"/>
-<area shape="rect" id="node10" href="state_8h.html#a1fd6b7926db41257e07600226d87fffa" title="rollback" alt="" coords="955,309,1026,336"/>
-<area shape="rect" id="node11" href="scheduler_8h.html#ac48128e72b303ea22d8ec641a9516b15" title="schedule" alt="" coords="1168,309,1247,336"/>
-<area shape="rect" id="node12" href="gvt_2gvt_8c.html#a895d5bfff43f3ee72f9cf7097abf609b" title="GVT_phases" alt="" coords="1377,208,1479,235"/>
-<area shape="rect" id="node14" href="main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="1727,199,1888,225"/>
-<area shape="rect" id="node16" href="scheduler_8h.html#af405fd79c1cd59fccce27658d6e11941" title="initialize_worker_thread" alt="" coords="1343,259,1513,285"/>
-<area shape="rect" id="node13" href="gvt_2gvt_8h.html#a899b50ab45427cf145360ff3a6c29808" title="gvt_operations" alt="" coords="1561,208,1679,235"/>
-<area shape="rect" id="node15" href="main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="1936,199,2057,225"/>
-<area shape="rect" id="node19" href="ecs_8c.html#adbe06ee703b26dcc8d82e505075f942d" title="ECS" alt="" coords="967,157,1015,184"/>
-<area shape="rect" id="node22" href="scheduler_8h.html#a5766f78dcd3778582d506c3dec34594e" title="receive_control_msg" alt="" coords="913,208,1068,235"/>
-<area shape="rect" id="node23" href="queues_8h.html#a54eca9bfa893cac072d1b1d3010c2944" title="process_bottom_halves" alt="" coords="1120,208,1295,235"/>
-</map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="a5e838ce5ad75278a81d8451b9e120d70"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void set_force_full </td>
-          <td>(</td>
-          <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>int</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>

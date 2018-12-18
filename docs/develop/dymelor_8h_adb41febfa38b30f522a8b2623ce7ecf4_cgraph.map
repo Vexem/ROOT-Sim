@@ -1,6 +1,0 @@
-<map id="do_free" name="do_free">
-<area shape="rect" id="node2" href="$dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a" title="rsfree" alt="" coords="143,5,201,32"/>
-<area shape="rect" id="node4" href="$atomic_8h.html#ae2153aa1dc0d0362246d6e14f60b5550" title="atomic_inc" alt="" coords="127,56,217,83"/>
-<area shape="rect" id="node5" href="$atomic_8h.html#a52336e036d2da5656c6db69b121458ba" title="atomic_dec" alt="" coords="124,107,220,133"/>
-<area shape="rect" id="node3" href="$platform_8c.html#ae2af2cd130d16958394ae21e9d13035f" title="__real_free" alt="" coords="268,5,360,32"/>
-</map>

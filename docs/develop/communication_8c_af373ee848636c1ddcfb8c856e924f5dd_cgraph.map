@@ -1,17 +1,8 @@
 <map id="ParallelScheduleNewEvent" name="ParallelScheduleNewEvent">
-<area shape="rect" id="node2" href="$communication_8c.html#a56a4865196c169691525e99bae337519" title="Pack a message in a platform&#45;level data structure. " alt="" coords="277,157,364,184"/>
-<area shape="rect" id="node13" href="$queues_8c.html#aee531712d642cd5d4a54e613aa2c70f9" title="generate_mark" alt="" coords="261,208,381,235"/>
-<area shape="rect" id="node14" href="$communication_8c.html#ae80f5356cc32f9f2373305341e409b3b" title="Place a message in the temporary LP outgoing buffer. " alt="" coords="243,259,399,285"/>
-<area shape="rect" id="node3" href="$communication_8c.html#ab957dc2cd186382c50ef8cfde9761909" title="Get a buffer to keep a message. " alt="" coords="447,81,595,108"/>
-<area shape="rect" id="node8" href="$communication_8c.html#ae6b96249d35969d688d0d84209919c8f" title="Find a slab to allocate a message buffer. " alt="" coords="451,157,591,184"/>
-<area shape="rect" id="node11" href="$dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="489,208,552,235"/>
-<area shape="rect" id="node4" href="$mm_8h.html#a13199823c54d944aa128966cb35c5aa3" title="slab_alloc" alt="" coords="670,56,754,83"/>
-<area shape="rect" id="node5" href="$atomic_8h.html#a7a6b9868956dd8e51e5de80e16c76fc4" title="spin_lock" alt="" coords="840,5,920,32"/>
-<area shape="rect" id="node6" href="$slab_8c.html#ac0e4a2a4ab26d7f2399eecbb72fc4cff" title="slab_is_valid" alt="" coords="829,56,931,83"/>
-<area shape="rect" id="node7" href="$atomic_8h.html#a4e8c9d1c6101995f1ecd2141d77e4824" title="spin_unlock" alt="" coords="832,107,928,133"/>
-<area shape="rect" id="node9" href="$core_8c.html#a6793e4c70d69277f24ff0e494ed8ed10" title="find_kernel_by_gid" alt="" coords="643,107,781,133"/>
-<area shape="rect" id="node10" href="$process_8c.html#a2193e0386f7858db77f38146a15d3cd1" title="find_lp_by_gid" alt="" coords="657,157,767,184"/>
-<area shape="rect" id="node12" href="$platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="657,208,767,235"/>
-<area shape="rect" id="node15" href="$dymelor_8h.html#a480bc47d84033faa5410d5a3c4470ff7" title="rsrealloc" alt="" coords="483,259,559,285"/>
-<area shape="rect" id="node16" href="$platform_8c.html#af571772318d146f693e37e7a580103c0" title="__real_realloc" alt="" coords="657,259,767,285"/>
+<area shape="rect" id="node2" href="$communication_8c.html#a56a4865196c169691525e99bae337519" title="Pack a message in a platform&#45;level data structure. " alt="" coords="277,31,364,57"/>
+<area shape="rect" id="node6" href="$queues_8c.html#aee531712d642cd5d4a54e613aa2c70f9" title="generate_mark" alt="" coords="261,81,381,108"/>
+<area shape="rect" id="node7" href="$communication_8c.html#ae80f5356cc32f9f2373305341e409b3b" title="Place a message in the temporary LP outgoing buffer. " alt="" coords="243,132,399,159"/>
+<area shape="rect" id="node3" href="$communication_8c.html#ab957dc2cd186382c50ef8cfde9761909" title="Get a buffer to keep a message. " alt="" coords="447,5,595,32"/>
+<area shape="rect" id="node4" href="$communication_8c.html#ae6b96249d35969d688d0d84209919c8f" title="Find a slab to allocate a message buffer. " alt="" coords="451,56,591,83"/>
+<area shape="rect" id="node5" href="$core_8c.html#a6793e4c70d69277f24ff0e494ed8ed10" title="find_kernel_by_gid" alt="" coords="643,56,781,83"/>
 </map>

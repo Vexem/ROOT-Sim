@@ -1,12 +1,10 @@
 <map id="format_size" name="format_size">
-<area shape="rect" id="node2" href="$statistics_8c.html#a478c22a412c225c6a44a07a90d307232" title="print_common_stats" alt="" coords="151,81,305,108"/>
-<area shape="rect" id="node3" href="$statistics_8h.html#aeff52bbf045362270639b2baed20762b" title="statistics_stop" alt="" coords="353,107,468,133"/>
-<area shape="rect" id="node4" href="$core_8h.html#a8f346536ccfbe77b78ed577674beb6cf" title="simulation_shutdown" alt="" coords="516,107,672,133"/>
-<area shape="rect" id="node5" href="$core_8c.html#a9b05d2af2e233e2616633eaa706682ee" title="exit_from_simulation\l_model" alt="" coords="723,19,878,61"/>
-<area shape="rect" id="node9" href="$main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="720,107,881,133"/>
-<area shape="rect" id="node11" href="$serial_8h.html#aa0dd072d0e792fb9c65220bdddf69a0e" title="serial_simulation" alt="" coords="1099,132,1228,159"/>
-<area shape="rect" id="node6" href="$core_8h.html#a7fb819521b1ab5fc7644ad216fe7b465" title="base_init" alt="" coords="951,5,1029,32"/>
-<area shape="rect" id="node7" href="$init_8h.html#a417eb072179d09f441dbae3125049e46" title="SystemInit" alt="" coords="1118,5,1209,32"/>
-<area shape="rect" id="node8" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1276,56,1331,83"/>
-<area shape="rect" id="node10" href="$main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="929,107,1051,133"/>
+<area shape="rect" id="node2" href="$statistics_8h.html#aeff52bbf045362270639b2baed20762b" title="statistics_stop" alt="" coords="151,51,265,77"/>
+<area shape="rect" id="node3" href="$core_8h.html#a8f346536ccfbe77b78ed577674beb6cf" title="simulation_shutdown" alt="" coords="313,51,469,77"/>
+<area shape="rect" id="node4" href="$core_8c.html#a9b05d2af2e233e2616633eaa706682ee" title="exit_from_simulation\l_model" alt="" coords="521,9,675,50"/>
+<area shape="rect" id="node8" href="$main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="517,85,679,112"/>
+<area shape="rect" id="node5" href="$core_8h.html#a7fb819521b1ab5fc7644ad216fe7b465" title="base_init" alt="" coords="748,5,827,32"/>
+<area shape="rect" id="node6" href="$init_8h.html#a417eb072179d09f441dbae3125049e46" title="SystemInit" alt="" coords="896,5,987,32"/>
+<area shape="rect" id="node7" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1035,31,1089,57"/>
+<area shape="rect" id="node9" href="$main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="727,107,848,133"/>
 </map>

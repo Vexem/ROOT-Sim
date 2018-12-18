@@ -4,7 +4,6 @@ var atomic_8h =
     [ "spinlock_t", "structspinlock__t.html", "structspinlock__t" ],
     [ "atomic_read", "atomic_8h.html#a1414350b98d3d1dc33887f9da5878542", null ],
     [ "atomic_set", "atomic_8h.html#af7cad706a5bba06487b2011794061922", null ],
-    [ "LOCK", "atomic_8h.html#a0376b2ead2de10bb7ab6a4d21ec304e9", null ],
     [ "spinlock_init", "atomic_8h.html#a05f9af11a41e8b4f6c8fce373a13ec68", null ],
     [ "atomic_dec", "atomic_8h.html#a52336e036d2da5656c6db69b121458ba", null ],
     [ "atomic_inc", "atomic_8h.html#ae2153aa1dc0d0362246d6e14f60b5550", null ],

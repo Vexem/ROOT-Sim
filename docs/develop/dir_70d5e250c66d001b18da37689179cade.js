@@ -2,7 +2,7 @@ var dir_70d5e250c66d001b18da37689179cade =
 [
     [ "x86", "dir_821359b7c7689d1fc53689b7ab64838f.html", "dir_821359b7c7689d1fc53689b7ab64838f" ],
     [ "asm_defines.c", "asm__defines_8c.html", null ],
-    [ "asm_defines.h", "asm__defines_8h.html", "asm__defines_8h" ],
+    [ "asm_defines.h", "asm__defines_8h_source.html", null ],
     [ "atomic.h", "atomic_8h.html", "atomic_8h" ],
     [ "jmp.h", "jmp_8h.html", null ],
     [ "memusage.c", "memusage_8c.html", "memusage_8c" ],

@@ -1,9 +1,0 @@
-<map id="ecs_install_pages" name="ecs_install_pages">
-<area shape="rect" id="node2" href="$scheduler_8h.html#a5766f78dcd3778582d506c3dec34594e" title="receive_control_msg" alt="" coords="188,31,343,57"/>
-<area shape="rect" id="node3" href="$queues_8h.html#a54eca9bfa893cac072d1b1d3010c2944" title="process_bottom_halves" alt="" coords="391,31,565,57"/>
-<area shape="rect" id="node4" href="$gvt_2gvt_8c.html#a895d5bfff43f3ee72f9cf7097abf609b" title="GVT_phases" alt="" coords="613,5,715,32"/>
-<area shape="rect" id="node6" href="$main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="928,31,1089,57"/>
-<area shape="rect" id="node5" href="$gvt_2gvt_8h.html#a899b50ab45427cf145360ff3a6c29808" title="gvt_operations" alt="" coords="763,5,880,32"/>
-<area shape="rect" id="node7" href="$main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="1137,31,1259,57"/>
-<area shape="rect" id="node8" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1171,81,1225,108"/>
-</map>

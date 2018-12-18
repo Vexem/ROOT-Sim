@@ -6,9 +6,9 @@ var NAVTREE =
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],
       [ "Data Fields", "functions.html", [
-        [ "All", "functions.html", "functions_dup" ],
+        [ "All", "functions.html", null ],
         [ "Functions", "functions_func.html", null ],
-        [ "Variables", "functions_vars.html", "functions_vars" ]
+        [ "Variables", "functions_vars.html", null ]
       ] ]
     ] ],
     [ "Files", null, [
@@ -16,11 +16,11 @@ var NAVTREE =
       [ "Globals", "globals.html", [
         [ "All", "globals.html", "globals_dup" ],
         [ "Functions", "globals_func.html", "globals_func" ],
-        [ "Variables", "globals_vars.html", "globals_vars" ],
+        [ "Variables", "globals_vars.html", null ],
         [ "Typedefs", "globals_type.html", null ],
         [ "Enumerations", "globals_enum.html", null ],
-        [ "Enumerator", "globals_eval.html", "globals_eval" ],
-        [ "Macros", "globals_defs.html", "globals_defs" ]
+        [ "Enumerator", "globals_eval.html", null ],
+        [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
   ] ]
@@ -29,17 +29,16 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "ROOT-Sim_8h.html",
-"communication_2gvt_8h.html#a483f79cd10cadd1e5e1c0343d994f677",
-"cross__state__manager_8c.html#adcabcf30c16d67bd7f9d8eb096e02705",
-"disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206a50b782fd3b55fd452a2cfe3cd30f732e",
-"dymelor_8h.html#a1896742bd7a9552d3eac5ce20110d060",
-"globals_vars_t.html",
-"mpi_8c.html#aae0b9d97e0c3d31df6e27e2455e66a13",
-"scheduler_8c.html#a1b1b085c6b05a9d202a1629dcd71cffe",
-"struct__gvt__buffer_1_1__gvt__buffer__row__t.html#a510124482423188547b10a306862ccb0",
-"structsegment.html#a6064555d3a461215f6be6a82841bc1b7",
-"x86_8h.html#a6d29e175ee2272a9911bc21741795a3b",
-"x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206ab74a2b6a77dd11a4b679bf2ec45cdf68"
+"communication_8c.html#a1bf991ec14bcab7b310ffa40cd651da3",
+"dir_aa3676334ed2ab264e66a43382421912.html",
+"disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206a8074ded5025ac1330c4b3279770e7d14",
+"dymelor_8h.html#ae063b739e203a16c55fe2ab3e3c4f340",
+"main_8c.html#a9d1a2af660cb926eda5476e5444a6108",
+"schedule_8h.html#a94280c5a409e0c721eaa9d99b4c6a43d",
+"struct__gid__t.html#a0af56a16d80874f71d2b1e5edc1dc506",
+"structobstacles__t.html#a412f122d611d3286483565568d54debb",
+"x86_8h.html#a90e83ae77725d7ff8733276d9a1d19e4a9a652f512241f68c5217cd7903b8c765",
+"x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206ae425a15989babbbeeba81da5e134755d"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

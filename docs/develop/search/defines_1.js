@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['a32',['A32',['../disassemble_8h.html#aae7cb450354b391d988125b2948b0258',1,'A32():&#160;disassemble.h'],['../x86_8h.html#aae7cb450354b391d988125b2948b0258',1,'A32():&#160;x86.h'],['../xxhash_8c.html#ab78347b38f01fdb338e5a7ebe36d4a88',1,'A32():&#160;xxhash.c']]],
-  ['a64',['A64',['../disassemble_8h.html#add07b8c8da0bbb2df13aba9e9ef2b9d0',1,'A64():&#160;disassemble.h'],['../x86_8h.html#add07b8c8da0bbb2df13aba9e9ef2b9d0',1,'A64():&#160;x86.h'],['../xxhash_8c.html#ae04b768aafd50d6bac41490acd2b86a0',1,'A64():&#160;xxhash.c']]],
-  ['addr_5f32',['ADDR_32',['../disassemble_8h.html#aabe7107d74bd2e82723fc2c0047dea21',1,'disassemble.h']]],
-  ['addr_5f64',['ADDR_64',['../disassemble_8h.html#a97f077cb4923e3d0a5b2c2ebcf2a9883',1,'disassemble.h']]],
-  ['assign_5fnew_5ffile',['assign_new_file',['../statistics_8c.html#a494ba15a9ecf600f629d328c6b977e11',1,'statistics.c']]],
-  ['atomic_5fread',['atomic_read',['../atomic_8h.html#a1414350b98d3d1dc33887f9da5878542',1,'atomic.h']]],
-  ['atomic_5fset',['atomic_set',['../atomic_8h.html#af7cad706a5bba06487b2011794061922',1,'atomic.h']]],
-  ['auxiliary_5fframes',['AUXILIARY_FRAMES',['../cross__state__manager_8c.html#aa78fe738fb15d2490379211eaf88fdcd',1,'cross_state_manager.c']]]
+  ['bitmap_5fcheck',['bitmap_check',['../bitmap_8h.html#acecbc0a2e252c8c8067a3fa99b050fcc',1,'bitmap.h']]],
+  ['bitmap_5fcount_5freset',['bitmap_count_reset',['../bitmap_8h.html#a246e30aab9dfc70c933448e591064f89',1,'bitmap.h']]],
+  ['bitmap_5ffirst_5freset',['bitmap_first_reset',['../bitmap_8h.html#a4ee0188ddc5b472c0eb79920ef266878',1,'bitmap.h']]],
+  ['bitmap_5fforeach_5fset',['bitmap_foreach_set',['../bitmap_8h.html#aa592e230cb148fce58c921feae418000',1,'bitmap.h']]],
+  ['bitmap_5finitialize',['bitmap_initialize',['../bitmap_8h.html#ab1c658413f576f383c68d0d1f535c5f2',1,'bitmap.h']]],
+  ['bitmap_5frequired_5fsize',['bitmap_required_size',['../bitmap_8h.html#af4ffd530ce69ac8ffb56802aff542cb6',1,'bitmap.h']]],
+  ['bitmap_5freset',['bitmap_reset',['../bitmap_8h.html#a9889dabb4353e0211bbd47d2fdf02fd2',1,'bitmap.h']]],
+  ['bitmap_5fset',['bitmap_set',['../bitmap_8h.html#a753716432f1de918ad59e870e4f53d92',1,'bitmap.h']]]
 ];

@@ -1,6 +1,0 @@
-<map id="remote_memory_init" name="remote_memory_init">
-<area shape="rect" id="node2" href="$core_8c.html#a6793e4c70d69277f24ff0e494ed8ed10" title="find_kernel_by_gid" alt="" coords="209,5,348,32"/>
-<area shape="rect" id="node3" href="$mm_8h.html#a75389d54c9cdeefffef8dff11324cfae" title="get_segment" alt="" coords="225,56,332,83"/>
-<area shape="rect" id="node4" href="$dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="396,56,459,83"/>
-<area shape="rect" id="node5" href="$platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="507,56,616,83"/>
-</map>

@@ -1,5 +1,0 @@
-<map id="finalize_memory_map" name="finalize_memory_map">
-<area shape="rect" id="node2" href="$dymelor_8c.html#a664af2fb6c08d37bb7df7f4f7dbb6e56" title="malloc_state_wipe" alt="" coords="216,5,355,32"/>
-<area shape="rect" id="node3" href="$dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a" title="rsfree" alt="" coords="403,31,461,57"/>
-<area shape="rect" id="node4" href="$platform_8c.html#ae2af2cd130d16958394ae21e9d13035f" title="__real_free" alt="" coords="509,31,601,57"/>
-</map>

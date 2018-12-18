@@ -11,9 +11,9 @@
 <area shape="rect" id="node9" href="$struct__malloc__state.html" title="Definition of the memory map. " alt="" coords="455,348,565,375"/>
 <area shape="rect" id="node12" href="$struct__msg__buff.html" title="_msg_buff" alt="" coords="466,449,554,476"/>
 <area shape="rect" id="node13" href="$struct__msg__t.html" title="Message Type definition. " alt="" coords="215,527,284,553"/>
-<area shape="rect" id="node15" href="$struct__outgoing__t.html" title="This structure is used by the communication subsystem to handle outgoing messages. " alt="" coords="591,552,688,579"/>
-<area shape="rect" id="node14" href="$struct__gid__t.html" title="_gid_t" alt="" coords="15,583,75,609"/>
-<area shape="rect" id="node16" href="$struct__lid__t.html" title="_lid_t" alt="" coords="751,665,806,692"/>
+<area shape="rect" id="node15" href="$struct__outgoing__t.html" title="Per&#45;LP buffer of newly&#45;generated events. " alt="" coords="591,552,688,579"/>
+<area shape="rect" id="node14" href="$struct__gid__t.html" title="Definition of a GID. " alt="" coords="15,583,75,609"/>
+<area shape="rect" id="node16" href="$struct__lid__t.html" title="Definition of a LID. " alt="" coords="751,665,806,692"/>
 <area shape="rect" id="node17" href="$struct____exec__context__t.html" title="This structure describes the CPU context of a User&#45;Level Thread. " alt="" coords="712,716,845,743"/>
 <area shape="rect" id="node18" href="$struct__numerical__state.html" title="_numerical_state" alt="" coords="713,767,845,793"/>
 </map>

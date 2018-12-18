@@ -1,8 +1,0 @@
-<map id="a_star" name="a_star">
-<area shape="rect" id="node2" href="$dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="144,5,207,32"/>
-<area shape="rect" id="node4" href="$topology_8c.html#a7ef1731105f39b4c97a5cc7ff3473401" title="GetReceiver" alt="" coords="126,56,225,83"/>
-<area shape="rect" id="node5" href="$topology_8c.html#a76a3f88d780ea92228c02c44ffcf3cf3" title="compare_astar" alt="" coords="116,107,235,133"/>
-<area shape="rect" id="node6" href="$dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a" title="rsfree" alt="" coords="146,157,205,184"/>
-<area shape="rect" id="node3" href="$platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="283,5,392,32"/>
-<area shape="rect" id="node7" href="$platform_8c.html#ae2af2cd130d16958394ae21e9d13035f" title="__real_free" alt="" coords="291,157,383,184"/>
-</map>

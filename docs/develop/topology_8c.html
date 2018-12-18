@@ -169,48 +169,65 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a4f48c46bd4bf39cdab62117932e85d63"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="topology_8c.html#a4f48c46bd4bf39cdab62117932e85d63">NUM_CHUNKS_PER_BLOCK</a>&#160;&#160;&#160;32</td></tr>
+<tr class="memitem:a4f48c46bd4bf39cdab62117932e85d63"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4f48c46bd4bf39cdab62117932e85d63"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>NUM_CHUNKS_PER_BLOCK</b>&#160;&#160;&#160;32</td></tr>
 <tr class="separator:a4f48c46bd4bf39cdab62117932e85d63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed3e20ffa57e1b02f153791940c0ed1d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="topology_8c.html#aed3e20ffa57e1b02f153791940c0ed1d">SET_BIT_AT</a>(B,  K)&#160;&#160;&#160;( B |= (<a class="el" href="dymelor_8h.html#ae7520c5477c11965aabeedc033c9862b">MASK</a> &lt;&lt; K) )</td></tr>
+<tr class="memitem:aed3e20ffa57e1b02f153791940c0ed1d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aed3e20ffa57e1b02f153791940c0ed1d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SET_BIT_AT</b>(B,  K)&#160;&#160;&#160;( B |= (MASK &lt;&lt; K) )</td></tr>
 <tr class="separator:aed3e20ffa57e1b02f153791940c0ed1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44c17b190d3999cb75cb79eda15d14f8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="topology_8c.html#a44c17b190d3999cb75cb79eda15d14f8">CHECK_BIT_AT</a>(B,  K)&#160;&#160;&#160;( B &amp; (<a class="el" href="dymelor_8h.html#ae7520c5477c11965aabeedc033c9862b">MASK</a> &lt;&lt; K) )</td></tr>
+<tr class="memitem:a44c17b190d3999cb75cb79eda15d14f8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a44c17b190d3999cb75cb79eda15d14f8"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CHECK_BIT_AT</b>(B,  K)&#160;&#160;&#160;( B &amp; (MASK &lt;&lt; K) )</td></tr>
 <tr class="separator:a44c17b190d3999cb75cb79eda15d14f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01054139a8f5aafcfb08beb5011fbe29"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="topology_8c.html#a01054139a8f5aafcfb08beb5011fbe29">CHECK_BIT</a>(A,  I)&#160;&#160;&#160;<a class="el" href="topology_8c.html#a44c17b190d3999cb75cb79eda15d14f8">CHECK_BIT_AT</a>((A)[(int)(I / <a class="el" href="topology_8c.html#a4f48c46bd4bf39cdab62117932e85d63">NUM_CHUNKS_PER_BLOCK</a>)], ((int)I % <a class="el" href="topology_8c.html#a4f48c46bd4bf39cdab62117932e85d63">NUM_CHUNKS_PER_BLOCK</a>))</td></tr>
+<tr class="memitem:a01054139a8f5aafcfb08beb5011fbe29"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a01054139a8f5aafcfb08beb5011fbe29"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CHECK_BIT</b>(A,  I)&#160;&#160;&#160;CHECK_BIT_AT((A)[(int)(I / NUM_CHUNKS_PER_BLOCK)], ((int)I % NUM_CHUNKS_PER_BLOCK))</td></tr>
 <tr class="separator:a01054139a8f5aafcfb08beb5011fbe29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1cdb32cd42498e5a88dff850a78bf210"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="topology_8c.html#a1cdb32cd42498e5a88dff850a78bf210">SET_BIT</a>(A,  I)&#160;&#160;&#160;<a class="el" href="topology_8c.html#aed3e20ffa57e1b02f153791940c0ed1d">SET_BIT_AT</a>((A)[(int)(I / <a class="el" href="topology_8c.html#a4f48c46bd4bf39cdab62117932e85d63">NUM_CHUNKS_PER_BLOCK</a>)], ((int)I % <a class="el" href="topology_8c.html#a4f48c46bd4bf39cdab62117932e85d63">NUM_CHUNKS_PER_BLOCK</a>))</td></tr>
+<tr class="memitem:a1cdb32cd42498e5a88dff850a78bf210"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1cdb32cd42498e5a88dff850a78bf210"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SET_BIT</b>(A,  I)&#160;&#160;&#160;SET_BIT_AT((A)[(int)(I / NUM_CHUNKS_PER_BLOCK)], ((int)I % NUM_CHUNKS_PER_BLOCK))</td></tr>
 <tr class="separator:a1cdb32cd42498e5a88dff850a78bf210"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a32315dec5d1c3899ecf45a7e8c100207"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct__astar__t.html">_astar_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="topology_8c.html#a32315dec5d1c3899ecf45a7e8c100207">astar_t</a></td></tr>
+<tr class="memitem:a32315dec5d1c3899ecf45a7e8c100207"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a32315dec5d1c3899ecf45a7e8c100207"></a>
+typedef struct <a class="el" href="struct__astar__t.html">_astar_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>astar_t</b></td></tr>
 <tr class="separator:a32315dec5d1c3899ecf45a7e8c100207"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ae31d256c580b08dabe6ec9d2a4ef4125"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="topology_8c.html#ae31d256c580b08dabe6ec9d2a4ef4125">FindReceiver</a> (int topology)</td></tr>
+<tr class="memitem:ae31d256c580b08dabe6ec9d2a4ef4125"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae31d256c580b08dabe6ec9d2a4ef4125"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>FindReceiver</b> (int topology)</td></tr>
 <tr class="separator:ae31d256c580b08dabe6ec9d2a4ef4125"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ef1731105f39b4c97a5cc7ff3473401"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="topology_8c.html#a7ef1731105f39b4c97a5cc7ff3473401">GetReceiver</a> (int topology, int direction)</td></tr>
+<tr class="memitem:a7ef1731105f39b4c97a5cc7ff3473401"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7ef1731105f39b4c97a5cc7ff3473401"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>GetReceiver</b> (int topology, int direction)</td></tr>
 <tr class="separator:a7ef1731105f39b4c97a5cc7ff3473401"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adebe424adaebf0abecac23c41891fbee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="topology_8c.html#adebe424adaebf0abecac23c41891fbee">SetupObstacles</a> (<a class="el" href="structobstacles__t.html">obstacles_t</a> **obstacles)</td></tr>
+<tr class="memitem:adebe424adaebf0abecac23c41891fbee"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adebe424adaebf0abecac23c41891fbee"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetupObstacles</b> (<a class="el" href="structobstacles__t.html">obstacles_t</a> **obstacles)</td></tr>
 <tr class="separator:adebe424adaebf0abecac23c41891fbee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9bf6498adf3f15eca14ee4c5fcdbae57"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="topology_8c.html#a9bf6498adf3f15eca14ee4c5fcdbae57">AddObstacles</a> (<a class="el" href="structobstacles__t.html">obstacles_t</a> *obstacles, int num,...)</td></tr>
+<tr class="memitem:a9bf6498adf3f15eca14ee4c5fcdbae57"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9bf6498adf3f15eca14ee4c5fcdbae57"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>AddObstacles</b> (<a class="el" href="structobstacles__t.html">obstacles_t</a> *obstacles, int num,...)</td></tr>
 <tr class="separator:a9bf6498adf3f15eca14ee4c5fcdbae57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a7d842763bccae2fa040b19e7ac18ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="topology_8c.html#a5a7d842763bccae2fa040b19e7ac18ed">AddObstacle</a> (<a class="el" href="structobstacles__t.html">obstacles_t</a> *obstacles, int cell)</td></tr>
+<tr class="memitem:a5a7d842763bccae2fa040b19e7ac18ed"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5a7d842763bccae2fa040b19e7ac18ed"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>AddObstacle</b> (<a class="el" href="structobstacles__t.html">obstacles_t</a> *obstacles, int cell)</td></tr>
 <tr class="separator:a5a7d842763bccae2fa040b19e7ac18ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12dc5c84395024f28dc92710ffc4fb91"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="topology_8c.html#a12dc5c84395024f28dc92710ffc4fb91">DiscardObstacles</a> (<a class="el" href="structobstacles__t.html">obstacles_t</a> *obstacles)</td></tr>
+<tr class="memitem:a12dc5c84395024f28dc92710ffc4fb91"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a12dc5c84395024f28dc92710ffc4fb91"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>DiscardObstacles</b> (<a class="el" href="structobstacles__t.html">obstacles_t</a> *obstacles)</td></tr>
 <tr class="separator:a12dc5c84395024f28dc92710ffc4fb91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76a3f88d780ea92228c02c44ffcf3cf3"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="topology_8c.html#a76a3f88d780ea92228c02c44ffcf3cf3">compare_astar</a> (const void *a, const void *<a class="el" href="schedule_8c.html#a50eae215e841a248a57b41353ea85ee2">b</a>)</td></tr>
+<tr class="memitem:a76a3f88d780ea92228c02c44ffcf3cf3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a76a3f88d780ea92228c02c44ffcf3cf3"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><b>compare_astar</b> (const void *a, const void *b)</td></tr>
 <tr class="separator:a76a3f88d780ea92228c02c44ffcf3cf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00f601a2428dc0ee70e1e2f8159ac432"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="topology_8c.html#a32315dec5d1c3899ecf45a7e8c100207">astar_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="topology_8c.html#a00f601a2428dc0ee70e1e2f8159ac432">a_star</a> (unsigned int *a_star_bitmap, int topology, unsigned int current_cell, unsigned int dest, unsigned int step, <a class="el" href="structobstacles__t.html">obstacles_t</a> *obstacles)</td></tr>
+<tr class="memitem:a00f601a2428dc0ee70e1e2f8159ac432"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a00f601a2428dc0ee70e1e2f8159ac432"></a>
+static <a class="el" href="struct__astar__t.html">astar_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>a_star</b> (unsigned int *a_star_bitmap, int topology, unsigned int current_cell, unsigned int dest, unsigned int step, <a class="el" href="structobstacles__t.html">obstacles_t</a> *obstacles)</td></tr>
 <tr class="separator:a00f601a2428dc0ee70e1e2f8159ac432"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a687b119a53a0db5787416bc460299cd2"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="topology_8c.html#a687b119a53a0db5787416bc460299cd2">ComputeMinTour</a> (unsigned int **<a class="el" href="list_8h.html#a0da4b86f76acd6d3f307717f844b61d2">list</a>, <a class="el" href="structobstacles__t.html">obstacles_t</a> *obstacles, int topology, unsigned int source, unsigned int dest)</td></tr>
+<tr class="memitem:a687b119a53a0db5787416bc460299cd2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a687b119a53a0db5787416bc460299cd2"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>ComputeMinTour</b> (unsigned int **<a class="el" href="list_8h.html#a0da4b86f76acd6d3f307717f844b61d2">list</a>, <a class="el" href="structobstacles__t.html">obstacles_t</a> *obstacles, int topology, unsigned int source, unsigned int dest)</td></tr>
 <tr class="separator:a687b119a53a0db5787416bc460299cd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:ad10e7c125220a74e067172f3323c3a6b"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="topology_8c.html#ad10e7c125220a74e067172f3323c3a6b">first_call</a> = true</td></tr>
+<tr class="memitem:ad10e7c125220a74e067172f3323c3a6b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad10e7c125220a74e067172f3323c3a6b"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>first_call</b> = true</td></tr>
 <tr class="separator:ad10e7c125220a74e067172f3323c3a6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af786d7497e9269a6e1ba6c1e230e4cb0"><td class="memItemLeft" align="right" valign="top">static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="topology_8c.html#af786d7497e9269a6e1ba6c1e230e4cb0">edge</a></td></tr>
+<tr class="memitem:af786d7497e9269a6e1ba6c1e230e4cb0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af786d7497e9269a6e1ba6c1e230e4cb0"></a>
+static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>edge</b></td></tr>
 <tr class="separator:af786d7497e9269a6e1ba6c1e230e4cb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -224,609 +241,7 @@ Variables</h2></td></tr>
 <dl class="section author"><dt>Author</dt><dd>Alessandro Pellegrini </dd></dl>
 
 <p>Definition in file <a class="el" href="topology_8c_source.html">topology.c</a>.</p>
-</div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a class="anchor" id="a01054139a8f5aafcfb08beb5011fbe29"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define CHECK_BIT</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">A, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">I&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td>&#160;&#160;&#160;<a class="el" href="topology_8c.html#a44c17b190d3999cb75cb79eda15d14f8">CHECK_BIT_AT</a>((A)[(int)(I / <a class="el" href="topology_8c.html#a4f48c46bd4bf39cdab62117932e85d63">NUM_CHUNKS_PER_BLOCK</a>)], ((int)I % <a class="el" href="topology_8c.html#a4f48c46bd4bf39cdab62117932e85d63">NUM_CHUNKS_PER_BLOCK</a>))</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="topology_8c_source.html#l00461">461</a> of file <a class="el" href="topology_8c_source.html">topology.c</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a44c17b190d3999cb75cb79eda15d14f8"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define CHECK_BIT_AT</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">B, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">K&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td>&#160;&#160;&#160;( B &amp; (<a class="el" href="dymelor_8h.html#ae7520c5477c11965aabeedc033c9862b">MASK</a> &lt;&lt; K) )</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="topology_8c_source.html#l00459">459</a> of file <a class="el" href="topology_8c_source.html">topology.c</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a4f48c46bd4bf39cdab62117932e85d63"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define NUM_CHUNKS_PER_BLOCK&#160;&#160;&#160;32</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="topology_8c_source.html#l00456">456</a> of file <a class="el" href="topology_8c_source.html">topology.c</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a1cdb32cd42498e5a88dff850a78bf210"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define SET_BIT</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">A, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">I&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td>&#160;&#160;&#160;<a class="el" href="topology_8c.html#aed3e20ffa57e1b02f153791940c0ed1d">SET_BIT_AT</a>((A)[(int)(I / <a class="el" href="topology_8c.html#a4f48c46bd4bf39cdab62117932e85d63">NUM_CHUNKS_PER_BLOCK</a>)], ((int)I % <a class="el" href="topology_8c.html#a4f48c46bd4bf39cdab62117932e85d63">NUM_CHUNKS_PER_BLOCK</a>))</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="topology_8c_source.html#l00462">462</a> of file <a class="el" href="topology_8c_source.html">topology.c</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aed3e20ffa57e1b02f153791940c0ed1d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define SET_BIT_AT</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">B, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">K&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td>&#160;&#160;&#160;( B |= (<a class="el" href="dymelor_8h.html#ae7520c5477c11965aabeedc033c9862b">MASK</a> &lt;&lt; K) )</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="topology_8c_source.html#l00458">458</a> of file <a class="el" href="topology_8c_source.html">topology.c</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Typedef Documentation</h2>
-<a class="anchor" id="a32315dec5d1c3899ecf45a7e8c100207"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef struct <a class="el" href="struct__astar__t.html">_astar_t</a>  <a class="el" href="topology_8c.html#a32315dec5d1c3899ecf45a7e8c100207">astar_t</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="a00f601a2428dc0ee70e1e2f8159ac432"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static <a class="el" href="topology_8c.html#a32315dec5d1c3899ecf45a7e8c100207">astar_t</a> a_star </td>
-          <td>(</td>
-          <td class="paramtype">unsigned int *&#160;</td>
-          <td class="paramname"><em>a_star_bitmap</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>topology</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>current_cell</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>dest</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>step</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structobstacles__t.html">obstacles_t</a> *&#160;</td>
-          <td class="paramname"><em>obstacles</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="topology_8c_source.html#l00522">522</a> of file <a class="el" href="topology_8c_source.html">topology.c</a>.</p>
-
-<p><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="topology_8c_a00f601a2428dc0ee70e1e2f8159ac432_cgraph.png" border="0" usemap="#topology_8c_a00f601a2428dc0ee70e1e2f8159ac432_cgraph" alt=""/></div>
-<map name="topology_8c_a00f601a2428dc0ee70e1e2f8159ac432_cgraph" id="topology_8c_a00f601a2428dc0ee70e1e2f8159ac432_cgraph">
-<area shape="rect" id="node2" href="dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="144,5,207,32"/>
-<area shape="rect" id="node4" href="topology_8c.html#a7ef1731105f39b4c97a5cc7ff3473401" title="GetReceiver" alt="" coords="126,56,225,83"/>
-<area shape="rect" id="node5" href="topology_8c.html#a76a3f88d780ea92228c02c44ffcf3cf3" title="compare_astar" alt="" coords="116,107,235,133"/>
-<area shape="rect" id="node6" href="dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a" title="rsfree" alt="" coords="146,157,205,184"/>
-<area shape="rect" id="node3" href="platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="283,5,392,32"/>
-<area shape="rect" id="node7" href="platform_8c.html#ae2af2cd130d16958394ae21e9d13035f" title="__real_free" alt="" coords="291,157,383,184"/>
-</map>
-</div>
-</p>
-
-<p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-2-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="topology_8c_a00f601a2428dc0ee70e1e2f8159ac432_icgraph.png" border="0" usemap="#topology_8c_a00f601a2428dc0ee70e1e2f8159ac432_icgraph" alt=""/></div>
-<map name="topology_8c_a00f601a2428dc0ee70e1e2f8159ac432_icgraph" id="topology_8c_a00f601a2428dc0ee70e1e2f8159ac432_icgraph">
-<area shape="rect" id="node2" href="ROOT-Sim_8h.html#a687b119a53a0db5787416bc460299cd2" title="ComputeMinTour" alt="" coords="116,5,245,32"/>
-</map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="a5a7d842763bccae2fa040b19e7ac18ed"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void AddObstacle </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structobstacles__t.html">obstacles_t</a> *&#160;</td>
-          <td class="paramname"><em>obstacles</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>cell</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="topology_8c_source.html#l00504">504</a> of file <a class="el" href="topology_8c_source.html">topology.c</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a9bf6498adf3f15eca14ee4c5fcdbae57"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void AddObstacles </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structobstacles__t.html">obstacles_t</a> *&#160;</td>
-          <td class="paramname"><em>obstacles</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>num</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>...</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="topology_8c_source.html#l00487">487</a> of file <a class="el" href="topology_8c_source.html">topology.c</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a76a3f88d780ea92228c02c44ffcf3cf3"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static int compare_astar </td>
-          <td>(</td>
-          <td class="paramtype">const void *&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const void *&#160;</td>
-          <td class="paramname"><em>b</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="topology_8c_source.html#l00518">518</a> of file <a class="el" href="topology_8c_source.html">topology.c</a>.</p>
-
-<p><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-3-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="topology_8c_a76a3f88d780ea92228c02c44ffcf3cf3_icgraph.png" border="0" usemap="#topology_8c_a76a3f88d780ea92228c02c44ffcf3cf3_icgraph" alt=""/></div>
-<map name="topology_8c_a76a3f88d780ea92228c02c44ffcf3cf3_icgraph" id="topology_8c_a76a3f88d780ea92228c02c44ffcf3cf3_icgraph">
-<area shape="rect" id="node2" href="topology_8c.html#a00f601a2428dc0ee70e1e2f8159ac432" title="a_star" alt="" coords="172,5,235,32"/>
-<area shape="rect" id="node3" href="ROOT-Sim_8h.html#a687b119a53a0db5787416bc460299cd2" title="ComputeMinTour" alt="" coords="283,5,412,32"/>
-</map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="a687b119a53a0db5787416bc460299cd2"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned int ComputeMinTour </td>
-          <td>(</td>
-          <td class="paramtype">unsigned int **&#160;</td>
-          <td class="paramname"><em>list</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structobstacles__t.html">obstacles_t</a> *&#160;</td>
-          <td class="paramname"><em>obstacles</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>topology</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>source</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>dest</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="topology_8c_source.html#l00572">572</a> of file <a class="el" href="topology_8c_source.html">topology.c</a>.</p>
-
-<p><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="topology_8c_a687b119a53a0db5787416bc460299cd2_cgraph.png" border="0" usemap="#topology_8c_a687b119a53a0db5787416bc460299cd2_cgraph" alt=""/></div>
-<map name="topology_8c_a687b119a53a0db5787416bc460299cd2_cgraph" id="topology_8c_a687b119a53a0db5787416bc460299cd2_cgraph">
-<area shape="rect" id="node2" href="topology_8c.html#a00f601a2428dc0ee70e1e2f8159ac432" title="a_star" alt="" coords="209,95,271,121"/>
-<area shape="rect" id="node7" href="dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a" title="rsfree" alt="" coords="375,5,434,32"/>
-<area shape="rect" id="node9" href="dymelor_8c.html#a3687f50774c89e7a09833a71adbb7771" title="__wrap_malloc" alt="" coords="183,208,297,235"/>
-<area shape="rect" id="node3" href="dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="544,157,607,184"/>
-<area shape="rect" id="node5" href="topology_8c.html#a7ef1731105f39b4c97a5cc7ff3473401" title="GetReceiver" alt="" coords="355,56,454,83"/>
-<area shape="rect" id="node6" href="topology_8c.html#a76a3f88d780ea92228c02c44ffcf3cf3" title="compare_astar" alt="" coords="345,107,464,133"/>
-<area shape="rect" id="node4" href="platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="687,157,796,184"/>
-<area shape="rect" id="node8" href="platform_8c.html#ae2af2cd130d16958394ae21e9d13035f" title="__real_free" alt="" coords="529,5,621,32"/>
-<area shape="rect" id="node10" href="dymelor_8c.html#af3915129d419af75579c3d57c8757378" title="do_malloc" alt="" coords="361,259,448,285"/>
-<area shape="rect" id="node11" href="dymelor_8c.html#ae10242575deefaa5500b5426c745f2eb" title="compute_size" alt="" coords="520,309,631,336"/>
-<area shape="rect" id="node12" href="atomic_8h.html#ae2153aa1dc0d0362246d6e14f60b5550" title="atomic_inc" alt="" coords="530,360,621,387"/>
-<area shape="rect" id="node13" href="atomic_8h.html#a52336e036d2da5656c6db69b121458ba" title="atomic_dec" alt="" coords="527,411,623,437"/>
-<area shape="rect" id="node14" href="dymelor_8c.html#ac1e32353ad7bdfbf4b701db28602fcbc" title="malloc_area_init" alt="" coords="512,208,639,235"/>
-<area shape="rect" id="node15" href="dymelor_8c.html#a664ec4ed3ccc0c11db1c283485f6cf83" title="find_next_free" alt="" coords="519,259,631,285"/>
-</map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="a12dc5c84395024f28dc92710ffc4fb91"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void DiscardObstacles </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structobstacles__t.html">obstacles_t</a> *&#160;</td>
-          <td class="paramname"><em>obstacles</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="topology_8c_source.html#l00508">508</a> of file <a class="el" href="topology_8c_source.html">topology.c</a>.</p>
-
-<p><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-5-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="topology_8c_a12dc5c84395024f28dc92710ffc4fb91_cgraph.png" border="0" usemap="#topology_8c_a12dc5c84395024f28dc92710ffc4fb91_cgraph" alt=""/></div>
-<map name="topology_8c_a12dc5c84395024f28dc92710ffc4fb91_cgraph" id="topology_8c_a12dc5c84395024f28dc92710ffc4fb91_cgraph">
-<area shape="rect" id="node2" href="dymelor_8c.html#ad81079124eeb23ae75a56eba434043f0" title="__wrap_free" alt="" coords="187,31,285,57"/>
-<area shape="rect" id="node3" href="dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a" title="rsfree" alt="" coords="471,5,529,32"/>
-<area shape="rect" id="node5" href="dymelor_8c.html#a8ab9f013ad5d2ac3d460ddf42dae3839" title="do_free" alt="" coords="333,56,404,83"/>
-<area shape="rect" id="node4" href="platform_8c.html#ae2af2cd130d16958394ae21e9d13035f" title="__real_free" alt="" coords="596,5,688,32"/>
-<area shape="rect" id="node6" href="atomic_8h.html#ae2153aa1dc0d0362246d6e14f60b5550" title="atomic_inc" alt="" coords="455,56,545,83"/>
-<area shape="rect" id="node7" href="atomic_8h.html#a52336e036d2da5656c6db69b121458ba" title="atomic_dec" alt="" coords="452,107,548,133"/>
-</map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="ae31d256c580b08dabe6ec9d2a4ef4125"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned int FindReceiver </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>topology</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="topology_8c_source.html#l00043">43</a> of file <a class="el" href="topology_8c_source.html">topology.c</a>.</p>
-
-<p><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-6-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="topology_8c_ae31d256c580b08dabe6ec9d2a4ef4125_cgraph.png" border="0" usemap="#topology_8c_ae31d256c580b08dabe6ec9d2a4ef4125_cgraph" alt=""/></div>
-<map name="topology_8c_ae31d256c580b08dabe6ec9d2a4ef4125_cgraph" id="topology_8c_ae31d256c580b08dabe6ec9d2a4ef4125_cgraph">
-<area shape="rect" id="node2" href="numerical_8c.html#af6956caec1509dadd719fddaaf692489" title="Random" alt="" coords="153,5,228,32"/>
-<area shape="rect" id="node3" href="numerical_8c.html#add10002a57ce9377a3ac9a495dd713f0" title="do_random" alt="" coords="276,5,371,32"/>
-</map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="a7ef1731105f39b4c97a5cc7ff3473401"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned int GetReceiver </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>topology</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>direction</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="topology_8c_source.html#l00287">287</a> of file <a class="el" href="topology_8c_source.html">topology.c</a>.</p>
-
-<p><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-7-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="topology_8c_a7ef1731105f39b4c97a5cc7ff3473401_icgraph.png" border="0" usemap="#topology_8c_a7ef1731105f39b4c97a5cc7ff3473401_icgraph" alt=""/></div>
-<map name="topology_8c_a7ef1731105f39b4c97a5cc7ff3473401_icgraph" id="topology_8c_a7ef1731105f39b4c97a5cc7ff3473401_icgraph">
-<area shape="rect" id="node2" href="topology_8c.html#a00f601a2428dc0ee70e1e2f8159ac432" title="a_star" alt="" coords="152,5,215,32"/>
-<area shape="rect" id="node3" href="ROOT-Sim_8h.html#a687b119a53a0db5787416bc460299cd2" title="ComputeMinTour" alt="" coords="263,5,392,32"/>
-</map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="adebe424adaebf0abecac23c41891fbee"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetupObstacles </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structobstacles__t.html">obstacles_t</a> **&#160;</td>
-          <td class="paramname"><em>obstacles</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="topology_8c_source.html#l00464">464</a> of file <a class="el" href="topology_8c_source.html">topology.c</a>.</p>
-
-<p><div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-8-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="topology_8c_adebe424adaebf0abecac23c41891fbee_cgraph.png" border="0" usemap="#topology_8c_adebe424adaebf0abecac23c41891fbee_cgraph" alt=""/></div>
-<map name="topology_8c_adebe424adaebf0abecac23c41891fbee_cgraph" id="topology_8c_adebe424adaebf0abecac23c41891fbee_cgraph">
-<area shape="rect" id="node2" href="dymelor_8c.html#a3687f50774c89e7a09833a71adbb7771" title="__wrap_malloc" alt="" coords="176,69,291,96"/>
-<area shape="rect" id="node3" href="dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="505,5,568,32"/>
-<area shape="rect" id="node5" href="dymelor_8c.html#af3915129d419af75579c3d57c8757378" title="do_malloc" alt="" coords="339,107,425,133"/>
-<area shape="rect" id="node4" href="platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="648,5,757,32"/>
-<area shape="rect" id="node6" href="dymelor_8c.html#ae10242575deefaa5500b5426c745f2eb" title="compute_size" alt="" coords="481,56,592,83"/>
-<area shape="rect" id="node7" href="atomic_8h.html#ae2153aa1dc0d0362246d6e14f60b5550" title="atomic_inc" alt="" coords="491,107,582,133"/>
-<area shape="rect" id="node8" href="atomic_8h.html#a52336e036d2da5656c6db69b121458ba" title="atomic_dec" alt="" coords="489,157,585,184"/>
-<area shape="rect" id="node9" href="dymelor_8c.html#ac1e32353ad7bdfbf4b701db28602fcbc" title="malloc_area_init" alt="" coords="473,208,600,235"/>
-<area shape="rect" id="node10" href="dymelor_8c.html#a664ec4ed3ccc0c11db1c283485f6cf83" title="find_next_free" alt="" coords="481,259,593,285"/>
-</map>
-</div>
-</p>
-
-</div>
-</div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a class="anchor" id="af786d7497e9269a6e1ba6c1e230e4cb0"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned int edge</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="topology_8c_source.html#l00039">39</a> of file <a class="el" href="topology_8c_source.html">topology.c</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ad10e7c125220a74e067172f3323c3a6b"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool first_call = true</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="topology_8c_source.html#l00038">38</a> of file <a class="el" href="topology_8c_source.html">topology.c</a>.</p>
-
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

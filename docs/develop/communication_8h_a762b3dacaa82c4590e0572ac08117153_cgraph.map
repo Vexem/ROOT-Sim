@@ -1,9 +1,0 @@
-<map id="msg_hdr_release" name="msg_hdr_release">
-<area shape="rect" id="node2" href="$process_8c.html#a2193e0386f7858db77f38146a15d3cd1" title="find_lp_by_gid" alt="" coords="185,31,296,57"/>
-<area shape="rect" id="node3" href="$mm_8h.html#a891cd5abfed9deb98413ab7e7c29ef61" title="slab_free" alt="" coords="201,81,281,108"/>
-<area shape="rect" id="node4" href="$atomic_8h.html#a7a6b9868956dd8e51e5de80e16c76fc4" title="spin_lock" alt="" coords="355,5,435,32"/>
-<area shape="rect" id="node5" href="$slab_8c.html#ac0e4a2a4ab26d7f2399eecbb72fc4cff" title="slab_is_valid" alt="" coords="344,56,445,83"/>
-<area shape="rect" id="node6" href="$dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a" title="rsfree" alt="" coords="365,107,424,133"/>
-<area shape="rect" id="node8" href="$atomic_8h.html#a4e8c9d1c6101995f1ecd2141d77e4824" title="spin_unlock" alt="" coords="347,157,443,184"/>
-<area shape="rect" id="node7" href="$platform_8c.html#ae2af2cd130d16958394ae21e9d13035f" title="__real_free" alt="" coords="493,107,585,133"/>
-</map>

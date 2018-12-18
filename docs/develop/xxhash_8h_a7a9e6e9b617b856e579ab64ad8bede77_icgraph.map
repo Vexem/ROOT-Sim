@@ -1,7 +1,0 @@
-<map id="XXH64" name="XXH64">
-<area shape="rect" id="node2" href="$scheduler_8h.html#a1b1b085c6b05a9d202a1629dcd71cffe" title="LP_main_loop" alt="" coords="117,5,228,32"/>
-<area shape="rect" id="node6" href="$serial_8h.html#aa0dd072d0e792fb9c65220bdddf69a0e" title="serial_simulation" alt="" coords="276,56,405,83"/>
-<area shape="rect" id="node3" href="$process_8h.html#ad58c55ea23fdc3d938b57135b6116feb" title="initialize_lps" alt="" coords="291,5,390,32"/>
-<area shape="rect" id="node4" href="$init_8h.html#a417eb072179d09f441dbae3125049e46" title="SystemInit" alt="" coords="453,5,544,32"/>
-<area shape="rect" id="node5" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="592,31,647,57"/>
-</map>

@@ -115,7 +115,7 @@ $(document).ready(function(){initNavTree('struct__outgoing__t.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>This structure is used by the communication subsystem to handle outgoing messages.  
+<p>Per-LP buffer of newly-generated events.  
  <a href="struct__outgoing__t.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="communication_8h_source.html">communication.h</a>&gt;</code></p>
@@ -127,83 +127,37 @@ $(document).ready(function(){initNavTree('struct__outgoing__t.html','');});
 <div class="center"><img src="struct__outgoing__t__coll__graph.png" border="0" usemap="#__outgoing__t_coll__map" alt="Collaboration graph"/></div>
 <map name="__outgoing__t_coll__map" id="__outgoing__t_coll__map">
 <area shape="rect" id="node2" href="struct__msg__t.html" title="Message Type definition. " alt="" coords="19,111,89,137"/>
-<area shape="rect" id="node3" href="struct__gid__t.html" title="_gid_t" alt="" coords="24,5,84,32"/>
+<area shape="rect" id="node3" href="struct__gid__t.html" title="Definition of a GID. " alt="" coords="24,5,84,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:a8fdde0c0d90ea6c080cd507aeade6458"><td class="memItemLeft" align="right" valign="top"><a class="el" href="core_8h.html#abb831098e1334cd59d2c5e374416680e">msg_t</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__outgoing__t.html#a8fdde0c0d90ea6c080cd507aeade6458">outgoing_msgs</a></td></tr>
+<tr class="memitem:a8fdde0c0d90ea6c080cd507aeade6458"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8fdde0c0d90ea6c080cd507aeade6458"></a>
+<a class="el" href="core_8h.html#abb831098e1334cd59d2c5e374416680e">msg_t</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__outgoing__t.html#a8fdde0c0d90ea6c080cd507aeade6458">outgoing_msgs</a></td></tr>
+<tr class="memdesc:a8fdde0c0d90ea6c080cd507aeade6458"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resizable array of message pointers. <br /></td></tr>
 <tr class="separator:a8fdde0c0d90ea6c080cd507aeade6458"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83385e3a57fb73a93fa57120121cdb2e"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__outgoing__t.html#a83385e3a57fb73a93fa57120121cdb2e">size</a></td></tr>
+<tr class="memitem:a83385e3a57fb73a93fa57120121cdb2e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a83385e3a57fb73a93fa57120121cdb2e"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__outgoing__t.html#a83385e3a57fb73a93fa57120121cdb2e">size</a></td></tr>
+<tr class="memdesc:a83385e3a57fb73a93fa57120121cdb2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">How many events is this currently keeping. <br /></td></tr>
 <tr class="separator:a83385e3a57fb73a93fa57120121cdb2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a972bae427d92a937aac6346c27e9516d"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__outgoing__t.html#a972bae427d92a937aac6346c27e9516d">max_size</a></td></tr>
+<tr class="memitem:a972bae427d92a937aac6346c27e9516d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a972bae427d92a937aac6346c27e9516d"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__outgoing__t.html#a972bae427d92a937aac6346c27e9516d">max_size</a></td></tr>
+<tr class="memdesc:a972bae427d92a937aac6346c27e9516d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total space in <a class="el" href="struct__outgoing__t.html#a8fdde0c0d90ea6c080cd507aeade6458">outgoing_msgs</a>. <br /></td></tr>
 <tr class="separator:a972bae427d92a937aac6346c27e9516d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4bf364cee906283590c4931055004523"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ROOT-Sim_8h.html#a8f79ad6880e99acb4edd079069847d9d">simtime_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__outgoing__t.html#a4bf364cee906283590c4931055004523">min_in_transit</a></td></tr>
+<tr class="memitem:a4bf364cee906283590c4931055004523"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4bf364cee906283590c4931055004523"></a>
+<a class="el" href="ROOT-Sim_8h.html#a8f79ad6880e99acb4edd079069847d9d">simtime_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__outgoing__t.html#a4bf364cee906283590c4931055004523">min_in_transit</a></td></tr>
+<tr class="memdesc:a4bf364cee906283590c4931055004523"><td class="mdescLeft">&#160;</td><td class="mdescRight">Smallest timestamp of events kept here. <br /></td></tr>
 <tr class="separator:a4bf364cee906283590c4931055004523"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This structure is used by the communication subsystem to handle outgoing messages. </p>
+<div class="textblock"><p>Per-LP buffer of newly-generated events. </p>
+<p>For performance reasons, while executing an event, newly-generated events are packed and pre-buffered in a per-LP data structure defined by the <a class="el" href="communication_8h.html#a783078e33c0d29cd4efb4ffd085646d0">outgoing_t</a> type. This implements a resizable array of pointers to <a class="el" href="core_8h.html#abb831098e1334cd59d2c5e374416680e">msg_t</a> types. Anytime that an event generates more new events than currently supported, the array is doubled in size.</p>
+<p>This structure is used by the communication subsystem to handle outgoing messages. At simulation startup, there is space for at most <a class="el" href="communication_8h.html#a24b4d86fc2ce94ddf7a41b1097cf6bdb">INIT_OUTGOING_MSG</a> messages.</p>
+<p>The structure keeps pointers to messages which have been packed using the <a class="el" href="communication_8c.html#a56a4865196c169691525e99bae337519" title="Pack a message in a platform-level data structure. ">pack_msg()</a> function. This allows to implement from the beginning a zero-copy message passing policy. </p>
 
-<p>Definition at line <a class="el" href="communication_8h_source.html#l00084">84</a> of file <a class="el" href="communication_8h_source.html">communication.h</a>.</p>
-</div><h2 class="groupheader">Field Documentation</h2>
-<a class="anchor" id="a972bae427d92a937aac6346c27e9516d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned int _outgoing_t::max_size</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="communication_8h_source.html#l00087">87</a> of file <a class="el" href="communication_8h_source.html">communication.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a4bf364cee906283590c4931055004523"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="ROOT-Sim_8h.html#a8f79ad6880e99acb4edd079069847d9d">simtime_t</a>* _outgoing_t::min_in_transit</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="communication_8h_source.html#l00088">88</a> of file <a class="el" href="communication_8h_source.html">communication.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a8fdde0c0d90ea6c080cd507aeade6458"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="core_8h.html#abb831098e1334cd59d2c5e374416680e">msg_t</a>** _outgoing_t::outgoing_msgs</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="communication_8h_source.html#l00085">85</a> of file <a class="el" href="communication_8h_source.html">communication.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a83385e3a57fb73a93fa57120121cdb2e"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned int _outgoing_t::size</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="communication_8h_source.html#l00086">86</a> of file <a class="el" href="communication_8h_source.html">communication.h</a>.</p>
-
-</div>
-</div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+<p>Definition at line <a class="el" href="communication_8h_source.html#l00117">117</a> of file <a class="el" href="communication_8h_source.html">communication.h</a>.</p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li>src/communication/<a class="el" href="communication_8h_source.html">communication.h</a></li>
 </ul>
 </div><!-- contents -->

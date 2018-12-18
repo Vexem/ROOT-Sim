@@ -114,8 +114,6 @@ $(document).ready(function(){initNavTree('struct__msg__channel.html','');});
 <div class="title">_msg_channel Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p><code>#include &lt;<a class="el" href="msgchannel_8h_source.html">msgchannel.h</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for _msg_channel:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -126,67 +124,27 @@ $(document).ready(function(){initNavTree('struct__msg__channel.html','');});
 <area shape="rect" id="node2" href="structspinlock__t.html" title="spinlock_t" alt="" coords="5,201,91,228"/>
 <area shape="rect" id="node3" href="struct__msg__buff.html" title="_msg_buff" alt="" coords="115,201,203,228"/>
 <area shape="rect" id="node4" href="struct__msg__t.html" title="Message Type definition. " alt="" coords="124,111,193,137"/>
-<area shape="rect" id="node5" href="struct__gid__t.html" title="_gid_t" alt="" coords="129,5,189,32"/>
+<area shape="rect" id="node5" href="struct__gid__t.html" title="Definition of a GID. " alt="" coords="129,5,189,32"/>
 <area shape="rect" id="node6" href="structatomic__t.html" title="atomic_t" alt="" coords="227,201,306,228"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:a2fc465898a4b937c9091fe8fd18ae819"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct__msg__buff.html">_msg_buff</a> *volatile&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__msg__channel.html#a2fc465898a4b937c9091fe8fd18ae819">buffers</a> [2]</td></tr>
+<tr class="memitem:a2fc465898a4b937c9091fe8fd18ae819"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2fc465898a4b937c9091fe8fd18ae819"></a>
+struct <a class="el" href="struct__msg__buff.html">_msg_buff</a> *volatile&#160;</td><td class="memItemRight" valign="bottom"><b>buffers</b> [2]</td></tr>
 <tr class="separator:a2fc465898a4b937c9091fe8fd18ae819"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7819b62f746883106d704d2009064fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structatomic__t.html">atomic_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__msg__channel.html#ae7819b62f746883106d704d2009064fe">size</a></td></tr>
+<tr class="memitem:ae7819b62f746883106d704d2009064fe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae7819b62f746883106d704d2009064fe"></a>
+<a class="el" href="structatomic__t.html">atomic_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>size</b></td></tr>
 <tr class="separator:ae7819b62f746883106d704d2009064fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06eab331700823e756f98d76e41b781e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structspinlock__t.html">spinlock_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__msg__channel.html#a06eab331700823e756f98d76e41b781e">write_lock</a></td></tr>
+<tr class="memitem:a06eab331700823e756f98d76e41b781e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a06eab331700823e756f98d76e41b781e"></a>
+<a class="el" href="structspinlock__t.html">spinlock_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>write_lock</b></td></tr>
 <tr class="separator:a06eab331700823e756f98d76e41b781e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p>Definition at line <a class="el" href="msgchannel_8h_source.html#l00041">41</a> of file <a class="el" href="msgchannel_8h_source.html">msgchannel.h</a>.</p>
-</div><h2 class="groupheader">Field Documentation</h2>
-<a class="anchor" id="a2fc465898a4b937c9091fe8fd18ae819"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">struct <a class="el" href="struct__msg__buff.html">_msg_buff</a>* volatile _msg_channel::buffers[2]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="msgchannel_8h_source.html#l00042">42</a> of file <a class="el" href="msgchannel_8h_source.html">msgchannel.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ae7819b62f746883106d704d2009064fe"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structatomic__t.html">atomic_t</a> _msg_channel::size</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="msgchannel_8h_source.html#l00043">43</a> of file <a class="el" href="msgchannel_8h_source.html">msgchannel.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a06eab331700823e756f98d76e41b781e"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structspinlock__t.html">spinlock_t</a> _msg_channel::write_lock</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="msgchannel_8h_source.html#l00044">44</a> of file <a class="el" href="msgchannel_8h_source.html">msgchannel.h</a>.</p>
-
-</div>
-</div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li>src/datatypes/<a class="el" href="msgchannel_8h_source.html">msgchannel.h</a></li>
 </ul>
 </div><!-- contents -->

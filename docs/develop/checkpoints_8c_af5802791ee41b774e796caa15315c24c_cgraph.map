@@ -1,7 +1,4 @@
 <map id="log_state" name="log_state">
-<area shape="rect" id="node2" href="$statistics_8c.html#adb44a0a2dd40360e160ab4f5091ff324" title="statistics_post_data" alt="" coords="249,5,400,32"/>
-<area shape="rect" id="node3" href="$checkpoints_8c.html#a9be0910d1b3a99682d5d2971b4b79f3b" title="log_full" alt="" coords="135,56,201,83"/>
-<area shape="rect" id="node4" href="$dymelor_8c.html#a90e313c8735836c166694aa746cc841e" title="get_log_size" alt="" coords="274,56,375,83"/>
-<area shape="rect" id="node5" href="$dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="293,107,356,133"/>
-<area shape="rect" id="node6" href="$platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="448,107,557,133"/>
+<area shape="rect" id="node2" href="$checkpoints_8c.html#a9be0910d1b3a99682d5d2971b4b79f3b" title="log_full" alt="" coords="135,5,201,32"/>
+<area shape="rect" id="node3" href="$dymelor_8c.html#a90e313c8735836c166694aa746cc841e" title="get_log_size" alt="" coords="249,5,351,32"/>
 </map>

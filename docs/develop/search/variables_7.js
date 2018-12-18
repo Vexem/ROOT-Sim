@@ -1,23 +1,6 @@
 var searchData=
 [
-  ['gid',['gid',['../structlp__struct.html#a0bb529c8235ddc8b8a02958046560232',1,'lp_struct']]],
-  ['global_5fstats',['global_stats',['../statistics_8c.html#a157b98456279d00186e47b5a02e98430',1,'statistics.c']]],
-  ['grid',['grid',['../structobstacles__t.html#a7778089f24c5e163373a2483b20b49bf',1,'obstacles_t']]],
-  ['gset',['gset',['../struct__numerical__state.html#a17f123e8fe5b3bc26f8ed33f55bd8728',1,'_numerical_state']]],
-  ['gvt',['gvt',['../struct__gvt__buffer_1_1__gvt__buffer__row__t.html#a510124482423188547b10a306862ccb0',1,'_gvt_buffer::_gvt_buffer_row_t']]],
-  ['gvt_5fbuf',['gvt_buf',['../statistics_8c.html#a49ce85f5efb74b1e42a3cf0d3b49afe2',1,'statistics.c']]],
-  ['gvt_5fcomputations',['gvt_computations',['../structstat__t.html#a903e26fe968d46b311a779a0b297e97b',1,'stat_t']]],
-  ['gvt_5finit_5freqs',['gvt_init_reqs',['../communication_2gvt_8c.html#a864a11544473877b76dc067332d9a8d3',1,'gvt.c']]],
-  ['gvt_5finit_5fround',['gvt_init_round',['../communication_2gvt_8c.html#a1557dfd2b30b86362256afd511b4a1d9',1,'gvt.c']]],
-  ['gvt_5freduction_5fcomm',['gvt_reduction_comm',['../communication_2gvt_8c.html#a346cf02255cc35cfb4eda9bfd867d24c',1,'gvt.c']]],
-  ['gvt_5freduction_5flock',['gvt_reduction_lock',['../communication_2gvt_8c.html#acc87f748b0df40fd022d65970728be8b',1,'gvt.c']]],
-  ['gvt_5freduction_5freq',['gvt_reduction_req',['../communication_2gvt_8c.html#a9e0615aa251769730f88b91b68349e4d',1,'gvt.c']]],
-  ['gvt_5fround_5ftime',['gvt_round_time',['../structstat__t.html#a6912a5148f10973fe7c492c3d474c794',1,'stat_t']]],
-  ['gvt_5fround_5ftime_5fmax',['gvt_round_time_max',['../structstat__t.html#abc0bb721c2d22d6852053454137d14db',1,'stat_t']]],
-  ['gvt_5fround_5ftime_5fmin',['gvt_round_time_min',['../structstat__t.html#ae47d0131b857ae817ef75780af2a37a6',1,'stat_t']]],
-  ['gvt_5fround_5ftimer',['gvt_round_timer',['../gvt_2gvt_8c.html#a690e35321eb61ad065ddff08dbad8541',1,'gvt.c']]],
-  ['gvt_5fsnapshot_5fcycles',['gvt_snapshot_cycles',['../struct__simulation__configuration.html#a09d6b2c270e9a3c8884b459e7f994d3e',1,'_simulation_configuration']]],
-  ['gvt_5ftime',['gvt_time',['../structstat__t.html#a6da86e9c62f45427f576ee17d1b9329b',1,'stat_t']]],
-  ['gvt_5ftime_5fperiod',['gvt_time_period',['../struct__simulation__configuration.html#a365ffd7680fb0751e29ce530df3b80cf',1,'_simulation_configuration']]],
-  ['gvt_5ftimer',['gvt_timer',['../gvt_2gvt_8c.html#a8a20f2660e303bdcae1dfb5c5e4580fe',1,'gvt.c']]]
+  ['init_5fcomplete',['init_complete',['../core_8c.html#a7dd42c912a0afd8bb4f008f23078534c',1,'core.c']]],
+  ['is_5fincremental',['is_incremental',['../struct__malloc__state.html#afd5a53c8420e4c87aa09ff13962c938e',1,'_malloc_state']]],
+  ['iset',['iset',['../struct__numerical__state.html#ae22d6007ea90f06cceb6bcde664f4ed6',1,'_numerical_state']]]
 ];

@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['has_5fbase_5fregister',['has_base_register',['../structinsn__info__x86.html#a62acc98933cc3e9ab91f95c60b2af8d3',1,'insn_info_x86']]],
-  ['has_5findex_5fregister',['has_index_register',['../structinsn__info__x86.html#a3a56577cc83c6c31dd8f2bb34e27fa17',1,'insn_info_x86']]],
-  ['has_5fscale',['has_scale',['../structinsn__info__x86.html#a1ef4c48994c06fe5405e16612fd85e3c',1,'insn_info_x86']]],
-  ['head',['head',['../structrootsim__list.html#ade6389bebff6c77742a7a8913092e338',1,'rootsim_list']]]
+  ['kernel',['kernel',['../core_8c.html#a703e442595e23c103c1aa83e285a36f3',1,'kernel():&#160;core.c'],['../core_8h.html#a5b72e8eae05c10259f81fe6250ec813f',1,'kernel():&#160;core.c']]],
+  ['kernel_5fcontext',['kernel_context',['../ult_8c.html#af3d8429cc9ef046d05e2fb0feebf01d7',1,'kernel_context():&#160;ult.c'],['../ult_8h.html#af3d8429cc9ef046d05e2fb0feebf01d7',1,'kernel_context():&#160;ult.c']]],
+  ['kid',['kid',['../core_8c.html#aa226b86ae30d1baf7f916ce6f24e0a9d',1,'kid():&#160;core.c'],['../core_8h.html#aa226b86ae30d1baf7f916ce6f24e0a9d',1,'kid():&#160;core.c']]]
 ];

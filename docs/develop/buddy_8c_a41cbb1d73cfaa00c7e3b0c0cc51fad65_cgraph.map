@@ -1,9 +1,0 @@
-<map id="allocate_lp_memory" name="allocate_lp_memory">
-<area shape="rect" id="node2" href="$atomic_8h.html#a7a6b9868956dd8e51e5de80e16c76fc4" title="spin_lock" alt="" coords="213,31,293,57"/>
-<area shape="rect" id="node3" href="$buddy_8c.html#a58a7821a912bdac3e3b8c33451824414" title="buddy_alloc" alt="" coords="204,81,301,108"/>
-<area shape="rect" id="node8" href="$atomic_8h.html#a4e8c9d1c6101995f1ecd2141d77e4824" title="spin_unlock" alt="" coords="205,132,301,159"/>
-<area shape="rect" id="node4" href="$buddy_8c.html#afc575c99c743d778f7e7b820a0d05f8e" title="next_power_of_2" alt="" coords="349,5,479,32"/>
-<area shape="rect" id="node5" href="$buddy_8c.html#ac31dad8abee32480810f0858d59909f0" title="left_child" alt="" coords="375,56,453,83"/>
-<area shape="rect" id="node6" href="$buddy_8c.html#aa176048819d5744297a1bbd86ee62525" title="right_child" alt="" coords="371,107,457,133"/>
-<area shape="rect" id="node7" href="$buddy_8c.html#a219b899cef5c55cb480ebcad342b2b2b" title="parent" alt="" coords="382,157,446,184"/>
-</map>

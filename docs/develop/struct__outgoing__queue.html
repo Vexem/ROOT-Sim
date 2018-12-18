@@ -116,6 +116,9 @@ $(document).ready(function(){initNavTree('struct__outgoing__queue.html','');});
 </div><!--header-->
 <div class="contents">
 
+<p>An outgoing queue, to keep track of pending MPI-based message delivery.  
+ <a href="struct__outgoing__queue.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="wnd_8h_source.html">wnd.h</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for _outgoing_queue:</div>
@@ -130,50 +133,23 @@ $(document).ready(function(){initNavTree('struct__outgoing__queue.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:abc610bd122d0eb12dec7f7d9d3119fee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__outgoing__queue.html#abc610bd122d0eb12dec7f7d9d3119fee">list</a> (<a class="el" href="wnd_8h.html#acb6cc590cdae412c2119946ad1dba557">outgoing_msg</a>) queue</td></tr>
+<tr class="memitem:abc610bd122d0eb12dec7f7d9d3119fee"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abc610bd122d0eb12dec7f7d9d3119fee"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__outgoing__queue.html#abc610bd122d0eb12dec7f7d9d3119fee">list</a> (<a class="el" href="wnd_8h.html#acb6cc590cdae412c2119946ad1dba557">outgoing_msg</a>) queue</td></tr>
+<tr class="memdesc:abc610bd122d0eb12dec7f7d9d3119fee"><td class="mdescLeft">&#160;</td><td class="mdescRight">The actual list of pending message delivery operations. <br /></td></tr>
 <tr class="separator:abc610bd122d0eb12dec7f7d9d3119fee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:a30bbe28178f20e4b9fbb55deb0beb599"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structspinlock__t.html">spinlock_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__outgoing__queue.html#a30bbe28178f20e4b9fbb55deb0beb599">lock</a></td></tr>
+<tr class="memitem:a30bbe28178f20e4b9fbb55deb0beb599"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a30bbe28178f20e4b9fbb55deb0beb599"></a>
+<a class="el" href="structspinlock__t.html">spinlock_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__outgoing__queue.html#a30bbe28178f20e4b9fbb55deb0beb599">lock</a></td></tr>
+<tr class="memdesc:a30bbe28178f20e4b9fbb55deb0beb599"><td class="mdescLeft">&#160;</td><td class="mdescRight">A lock used to protect access to the actual queue. <br /></td></tr>
 <tr class="separator:a30bbe28178f20e4b9fbb55deb0beb599"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="wnd_8h_source.html#l00047">47</a> of file <a class="el" href="wnd_8h_source.html">wnd.h</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="abc610bd122d0eb12dec7f7d9d3119fee"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">_outgoing_queue::list </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="wnd_8h.html#acb6cc590cdae412c2119946ad1dba557">outgoing_msg</a>&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<div class="textblock"><p>An outgoing queue, to keep track of pending MPI-based message delivery. </p>
 
-</div>
-</div>
-<h2 class="groupheader">Field Documentation</h2>
-<a class="anchor" id="a30bbe28178f20e4b9fbb55deb0beb599"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structspinlock__t.html">spinlock_t</a> _outgoing_queue::lock</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wnd_8h_source.html#l00048">48</a> of file <a class="el" href="wnd_8h_source.html">wnd.h</a>.</p>
-
-</div>
-</div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+<p>Definition at line <a class="el" href="wnd_8h_source.html#l00050">50</a> of file <a class="el" href="wnd_8h_source.html">wnd.h</a>.</p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li>src/communication/<a class="el" href="wnd_8h_source.html">wnd.h</a></li>
 </ul>
 </div><!-- contents -->

@@ -132,11 +132,17 @@ $(document).ready(function(){initNavTree('structbarrier__t.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:a70ecbbc88287015db96cfd2643cbe5e9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbarrier__t.html#a70ecbbc88287015db96cfd2643cbe5e9">num_threads</a></td></tr>
+<tr class="memitem:a70ecbbc88287015db96cfd2643cbe5e9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a70ecbbc88287015db96cfd2643cbe5e9"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbarrier__t.html#a70ecbbc88287015db96cfd2643cbe5e9">num_threads</a></td></tr>
+<tr class="memdesc:a70ecbbc88287015db96cfd2643cbe5e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of threads which will synchronize on the barrier. <br /></td></tr>
 <tr class="separator:a70ecbbc88287015db96cfd2643cbe5e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a459f12ee602c21f42febc9e6c52d5dba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structatomic__t.html">atomic_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbarrier__t.html#a459f12ee602c21f42febc9e6c52d5dba">c1</a></td></tr>
+<tr class="memitem:a459f12ee602c21f42febc9e6c52d5dba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a459f12ee602c21f42febc9e6c52d5dba"></a>
+<a class="el" href="structatomic__t.html">atomic_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbarrier__t.html#a459f12ee602c21f42febc9e6c52d5dba">c1</a></td></tr>
+<tr class="memdesc:a459f12ee602c21f42febc9e6c52d5dba"><td class="mdescLeft">&#160;</td><td class="mdescRight">First synchronization counter. <br /></td></tr>
 <tr class="separator:a459f12ee602c21f42febc9e6c52d5dba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3ca1f87691ec2af31fdfea80dcd5fca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structatomic__t.html">atomic_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbarrier__t.html#ae3ca1f87691ec2af31fdfea80dcd5fca">c2</a></td></tr>
+<tr class="memitem:ae3ca1f87691ec2af31fdfea80dcd5fca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae3ca1f87691ec2af31fdfea80dcd5fca"></a>
+<a class="el" href="structatomic__t.html">atomic_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbarrier__t.html#ae3ca1f87691ec2af31fdfea80dcd5fca">c2</a></td></tr>
+<tr class="memdesc:ae3ca1f87691ec2af31fdfea80dcd5fca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Second synchronization counter. <br /></td></tr>
 <tr class="separator:ae3ca1f87691ec2af31fdfea80dcd5fca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aafd4ba4a9dcfa7f0473982d31692afea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structatomic__t.html">atomic_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbarrier__t.html#aafd4ba4a9dcfa7f0473982d31692afea">barr</a></td></tr>
 <tr class="separator:aafd4ba4a9dcfa7f0473982d31692afea"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -144,7 +150,7 @@ Data Fields</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Thread barrier definition. </p>
 
-<p>Definition at line <a class="el" href="thread_8h_source.html#l00130">130</a> of file <a class="el" href="thread_8h_source.html">thread.h</a>.</p>
+<p>Definition at line <a class="el" href="thread_8h_source.html#l00102">102</a> of file <a class="el" href="thread_8h_source.html">thread.h</a>.</p>
 </div><h2 class="groupheader">Field Documentation</h2>
 <a class="anchor" id="aafd4ba4a9dcfa7f0473982d31692afea"></a>
 <div class="memitem">
@@ -155,50 +161,9 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>"Barrier in a barrier": this is used to wait for the leader to correctly reset the barrier before re-entering </p>
 
-<p>Definition at line <a class="el" href="thread_8h_source.html#l00134">134</a> of file <a class="el" href="thread_8h_source.html">thread.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a459f12ee602c21f42febc9e6c52d5dba"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structatomic__t.html">atomic_t</a> barrier_t::c1</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="thread_8h_source.html#l00132">132</a> of file <a class="el" href="thread_8h_source.html">thread.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ae3ca1f87691ec2af31fdfea80dcd5fca"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structatomic__t.html">atomic_t</a> barrier_t::c2</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="thread_8h_source.html#l00133">133</a> of file <a class="el" href="thread_8h_source.html">thread.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a70ecbbc88287015db96cfd2643cbe5e9"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int barrier_t::num_threads</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="thread_8h_source.html#l00131">131</a> of file <a class="el" href="thread_8h_source.html">thread.h</a>.</p>
+<p>Definition at line <a class="el" href="thread_8h_source.html#l00106">106</a> of file <a class="el" href="thread_8h_source.html">thread.h</a>.</p>
 
 </div>
 </div>

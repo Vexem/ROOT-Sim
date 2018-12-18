@@ -1,6 +1,0 @@
-<map id="left_child" name="left_child">
-<area shape="rect" id="node2" href="$buddy_8c.html#a58a7821a912bdac3e3b8c33451824414" title="buddy_alloc" alt="" coords="132,5,229,32"/>
-<area shape="rect" id="node4" href="$buddy_8c.html#ae4a636805a09ff443c450ae96f28c4c1" title="buddy_free" alt="" coords="134,56,227,83"/>
-<area shape="rect" id="node3" href="$dymelor_8h.html#a1e1b739b45c018064a6723267d197457" title="allocate_lp_memory" alt="" coords="277,5,428,32"/>
-<area shape="rect" id="node5" href="$dymelor_8h.html#abbf4f3ec896ad320072f8c550c46dc94" title="free_lp_memory" alt="" coords="289,56,416,83"/>
-</map>

@@ -1,10 +1,15 @@
 var searchData=
 [
-  ['half_5fuint_5fbits',['HALF_UINT_BITS',['../thread_8h.html#a2ae777b689a44d6b26e457053e46e4bb',1,'thread.h']]],
-  ['handle_5fstring_5foption',['handle_string_option',['../init_8c.html#ae0197976be3862c433383a1457a86d7c',1,'init.c']]],
-  ['has_5fmodrm',['has_modrm',['../disassemble_8h.html#a2b1380d2364a9b8a407ae0ab8e2f0bce',1,'has_modrm():&#160;disassemble.h'],['../x86_8h.html#a2b1380d2364a9b8a407ae0ab8e2f0bce',1,'has_modrm():&#160;x86.h']]],
-  ['has_5frip_5frelative',['has_rip_relative',['../lend_8h.html#a483db0d1cdda789391b9b96ca6ba69b3',1,'lend.h']]],
-  ['has_5fsib',['has_sib',['../disassemble_8h.html#a86cae36f44f8a34ed89d614894a1d8bb',1,'has_sib():&#160;disassemble.h'],['../x86_8h.html#a86cae36f44f8a34ed89d614894a1d8bb',1,'has_sib():&#160;x86.h']]],
-  ['header_5fstr',['HEADER_STR',['../statistics_8c.html#a9eb08c4f3ad005333d49aa2299e5c7c3',1,'statistics.c']]],
-  ['htm_5fthreads',['HTM_THREADS',['../schedule_8h.html#a6f3284a72975b0fa6f4767995bc4c585',1,'schedule.h']]]
+  ['likely',['likely',['../core_8h.html#ac082df2dd9a1024f6e8d16a61855d989',1,'core.h']]],
+  ['list',['list',['../list_8h.html#a0da4b86f76acd6d3f307717f844b61d2',1,'list.h']]],
+  ['list_5fempty',['list_empty',['../list_8h.html#ac047041c3e2ceecaab99d934a30202a7',1,'list.h']]],
+  ['list_5fhead',['list_head',['../list_8h.html#af69e6aee47741bc668f7872fffd61fc1',1,'list.h']]],
+  ['list_5finsert',['list_insert',['../list_8h.html#aa2bc3c33a8dfef4199d7b6ea7c344325',1,'list.h']]],
+  ['list_5fnext',['list_next',['../list_8h.html#a618d45127cdf86fd6909626dcaec7869',1,'list.h']]],
+  ['list_5fprev',['list_prev',['../list_8h.html#aa76dbe6925172df446dbc3fa2d5272b6',1,'list.h']]],
+  ['list_5ftail',['list_tail',['../list_8h.html#a6be93f236c58229a6ffff6721cf57ab1',1,'list.h']]],
+  ['list_5ftrunc',['list_trunc',['../list_8h.html#aebe95d4188619bb0ef2044409c31c0e4',1,'list.h']]],
+  ['lock_5fmpi',['lock_mpi',['../mpi_8h.html#a6432fad2842d3aeb3a8dbdc3bdbd069f',1,'mpi.h']]],
+  ['long_5fjmp',['long_jmp',['../x86_2jmp_8h.html#a932eb25d1cb178ce109c7d35b781878f',1,'jmp.h']]],
+  ['lvt',['lvt',['../process_8h.html#af324d7dd1ed4ba3068a52bafebe1ff20',1,'process.h']]]
 ];

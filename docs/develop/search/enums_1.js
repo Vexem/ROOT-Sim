@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['addr_5fmethod',['addr_method',['../disassemble_8h.html#aa26d9fcba67ffc76d11c3638391d4206',1,'addr_method():&#160;disassemble.h'],['../x86_8h.html#aa26d9fcba67ffc76d11c3638391d4206',1,'addr_method():&#160;x86.h']]]
+  ['param_5fcodes',['param_codes',['../init_8h.html#af0542cfabfa114e627ec693afe2990d4',1,'init.h']]]
 ];

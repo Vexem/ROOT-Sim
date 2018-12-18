@@ -204,8 +204,9 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a18331b6247faf186c17ea75b89b30651"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct__state__t.html">_state_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="state_8h.html#a18331b6247faf186c17ea75b89b30651">state_t</a></td></tr>
-<tr class="memdesc:a18331b6247faf186c17ea75b89b30651"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure for LP's state.  <a href="#a18331b6247faf186c17ea75b89b30651">More...</a><br /></td></tr>
+<tr class="memitem:a18331b6247faf186c17ea75b89b30651"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a18331b6247faf186c17ea75b89b30651"></a>
+typedef struct <a class="el" href="struct__state__t.html">_state_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="state_8h.html#a18331b6247faf186c17ea75b89b30651">state_t</a></td></tr>
+<tr class="memdesc:a18331b6247faf186c17ea75b89b30651"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure for LP's state. <br /></td></tr>
 <tr class="separator:a18331b6247faf186c17ea75b89b30651"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
@@ -220,15 +221,18 @@ Enumerations</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:affa280b9d6f43896c9db64f0e32b2f3d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="state_8h.html#affa280b9d6f43896c9db64f0e32b2f3d">LogState</a> (struct <a class="el" href="structlp__struct.html">lp_struct</a> *)</td></tr>
 <tr class="separator:affa280b9d6f43896c9db64f0e32b2f3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ab61cec6bbd780b2523d47b2c8419c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="state_8h.html#a8ab61cec6bbd780b2523d47b2c8419c4">RestoreState</a> (struct <a class="el" href="structlp__struct.html">lp_struct</a> *, <a class="el" href="state_8h.html#a18331b6247faf186c17ea75b89b30651">state_t</a> *restore_state)</td></tr>
+<tr class="memitem:a8ab61cec6bbd780b2523d47b2c8419c4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8ab61cec6bbd780b2523d47b2c8419c4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>RestoreState</b> (struct <a class="el" href="structlp__struct.html">lp_struct</a> *, <a class="el" href="state_8h.html#a18331b6247faf186c17ea75b89b30651">state_t</a> *restore_state)</td></tr>
 <tr class="separator:a8ab61cec6bbd780b2523d47b2c8419c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1fd6b7926db41257e07600226d87fffa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="state_8h.html#a1fd6b7926db41257e07600226d87fffa">rollback</a> (struct <a class="el" href="structlp__struct.html">lp_struct</a> *)</td></tr>
 <tr class="separator:a1fd6b7926db41257e07600226d87fffa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a811745ec50221fbd3a285e5aff9b3ff2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="state_8h.html#a18331b6247faf186c17ea75b89b30651">state_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="state_8h.html#a811745ec50221fbd3a285e5aff9b3ff2">find_time_barrier</a> (struct <a class="el" href="structlp__struct.html">lp_struct</a> *, <a class="el" href="ROOT-Sim_8h.html#a8f79ad6880e99acb4edd079069847d9d">simtime_t</a> time)</td></tr>
 <tr class="separator:a811745ec50221fbd3a285e5aff9b3ff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae80da37bb8f3c1027bc4bd5c9ed48670"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="state_8h.html#ae80da37bb8f3c1027bc4bd5c9ed48670">clean_queue_states</a> (struct <a class="el" href="structlp__struct.html">lp_struct</a> *, <a class="el" href="ROOT-Sim_8h.html#a8f79ad6880e99acb4edd079069847d9d">simtime_t</a> <a class="el" href="gvt_2gvt_8c.html#a4c971e3895c95ce253aa6225a00d262b">new_gvt</a>)</td></tr>
+<tr class="memitem:ae80da37bb8f3c1027bc4bd5c9ed48670"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae80da37bb8f3c1027bc4bd5c9ed48670"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>clean_queue_states</b> (struct <a class="el" href="structlp__struct.html">lp_struct</a> *, <a class="el" href="ROOT-Sim_8h.html#a8f79ad6880e99acb4edd079069847d9d">simtime_t</a> new_gvt)</td></tr>
 <tr class="separator:ae80da37bb8f3c1027bc4bd5c9ed48670"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f57db3d5b6a3616c44609b2658e300c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="state_8h.html#a5f57db3d5b6a3616c44609b2658e300c">rebuild_state</a> (struct <a class="el" href="structlp__struct.html">lp_struct</a> *, <a class="el" href="state_8h.html#a18331b6247faf186c17ea75b89b30651">state_t</a> *state_pointer, <a class="el" href="ROOT-Sim_8h.html#a8f79ad6880e99acb4edd079069847d9d">simtime_t</a> time)</td></tr>
+<tr class="memitem:a5f57db3d5b6a3616c44609b2658e300c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5f57db3d5b6a3616c44609b2658e300c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>rebuild_state</b> (struct <a class="el" href="structlp__struct.html">lp_struct</a> *, <a class="el" href="state_8h.html#a18331b6247faf186c17ea75b89b30651">state_t</a> *state_pointer, <a class="el" href="ROOT-Sim_8h.html#a8f79ad6880e99acb4edd079069847d9d">simtime_t</a> time)</td></tr>
 <tr class="separator:a5f57db3d5b6a3616c44609b2658e300c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21e2e986ba2d9879ec7b58084947ba88"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="state_8h.html#a21e2e986ba2d9879ec7b58084947ba88">set_checkpoint_period</a> (struct <a class="el" href="structlp__struct.html">lp_struct</a> *, int period)</td></tr>
 <tr class="separator:a21e2e986ba2d9879ec7b58084947ba88"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -250,22 +254,7 @@ Functions</h2></td></tr>
 Alessandro Pellegrini </dd></dl>
 
 <p>Definition in file <a class="el" href="state_8h_source.html">state.h</a>.</p>
-</div><h2 class="groupheader">Typedef Documentation</h2>
-<a class="anchor" id="a18331b6247faf186c17ea75b89b30651"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef struct <a class="el" href="struct__state__t.html">_state_t</a>  <a class="el" href="state_8h.html#a18331b6247faf186c17ea75b89b30651">state_t</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Structure for LP's state. </p>
-
-</div>
-</div>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
+</div><h2 class="groupheader">Enumeration Type Documentation</h2>
 <a class="anchor" id="adc29c2ff13d900c2f185ee95427fb06c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -292,32 +281,6 @@ Alessandro Pellegrini </dd></dl>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ae80da37bb8f3c1027bc4bd5c9ed48670"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void clean_queue_states </td>
-          <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structlp__struct.html">lp_struct</a> *&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="ROOT-Sim_8h.html#a8f79ad6880e99acb4edd079069847d9d">simtime_t</a>&#160;</td>
-          <td class="paramname"><em>new_gvt</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="a811745ec50221fbd3a285e5aff9b3ff2"></a>
 <div class="memitem">
 <div class="memproto">
@@ -405,15 +368,19 @@ Alessandro Pellegrini</dd></dl>
 <div id="dynsection-3-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="state_8h_a1e504835961e213c7316064d0c361576_icgraph.png" border="0" usemap="#state_8h_a1e504835961e213c7316064d0c361576_icgraph" alt=""/></div>
 <map name="state_8h_a1e504835961e213c7316064d0c361576_icgraph" id="state_8h_a1e504835961e213c7316064d0c361576_icgraph">
-<area shape="rect" id="node2" href="scheduler_8h.html#a5766f78dcd3778582d506c3dec34594e" title="receive_control_msg" alt="" coords="205,33,360,60"/>
-<area shape="rect" id="node9" href="scheduler_8h.html#ac48128e72b303ea22d8ec641a9516b15" title="schedule" alt="" coords="456,84,535,111"/>
-<area shape="rect" id="node3" href="queues_8h.html#a54eca9bfa893cac072d1b1d3010c2944" title="process_bottom_halves" alt="" coords="408,33,583,60"/>
-<area shape="rect" id="node4" href="gvt_2gvt_8c.html#a895d5bfff43f3ee72f9cf7097abf609b" title="GVT_phases" alt="" coords="631,33,732,60"/>
-<area shape="rect" id="node6" href="main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="999,59,1160,85"/>
-<area shape="rect" id="node5" href="gvt_2gvt_8h.html#a899b50ab45427cf145360ff3a6c29808" title="gvt_operations" alt="" coords="807,33,924,60"/>
-<area shape="rect" id="node7" href="main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="1208,59,1329,85"/>
-<area shape="rect" id="node8" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1241,109,1296,136"/>
-<area shape="rect" id="node10" href="scheduler_8h.html#af405fd79c1cd59fccce27658d6e11941" title="initialize_worker_thread" alt="" coords="780,135,951,161"/>
+<area shape="rect" id="node2" href="scheduler_8h.html#ac48128e72b303ea22d8ec641a9516b15" title="schedule" alt="" coords="205,169,284,195"/>
+<area shape="rect" id="node3" href="gvt_2gvt_8h.html#a234e866bb1e37fa25dec9bb40134234d" title="get_last_gvt" alt="" coords="337,118,437,145"/>
+<area shape="rect" id="node5" href="main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="1080,71,1241,98"/>
+<area shape="rect" id="node14" href="scheduler_8h.html#a1b1b085c6b05a9d202a1629dcd71cffe" title="LP_main_loop" alt="" coords="332,219,443,246"/>
+<area shape="rect" id="node4" href="main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="893,67,1015,94"/>
+<area shape="rect" id="node7" href="queues_8h.html#a54eca9bfa893cac072d1b1d3010c2944" title="process_bottom_halves" alt="" coords="491,118,665,145"/>
+<area shape="rect" id="node8" href="statistics_8c.html#ab7b584959699657a63a49384f07fd7a9" title="format_size" alt="" coords="529,17,627,43"/>
+<area shape="rect" id="node6" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1555,42,1609,69"/>
+<area shape="rect" id="node9" href="statistics_8h.html#aeff52bbf045362270639b2baed20762b" title="statistics_stop" alt="" coords="713,17,828,43"/>
+<area shape="rect" id="node10" href="core_8h.html#a8f346536ccfbe77b78ed577674beb6cf" title="simulation_shutdown" alt="" coords="876,17,1032,43"/>
+<area shape="rect" id="node11" href="core_8c.html#a9b05d2af2e233e2616633eaa706682ee" title="exit_from_simulation\l_model" alt="" coords="1083,5,1238,47"/>
+<area shape="rect" id="node12" href="core_8h.html#a7fb819521b1ab5fc7644ad216fe7b465" title="base_init" alt="" coords="1289,14,1368,41"/>
+<area shape="rect" id="node13" href="init_8h.html#a417eb072179d09f441dbae3125049e46" title="SystemInit" alt="" coords="1416,15,1507,42"/>
 </map>
 </div>
 </p>
@@ -450,12 +417,11 @@ Alessandro Pellegrini</dd></dl>
 <div id="dynsection-4-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="state_8h_affa280b9d6f43896c9db64f0e32b2f3d_cgraph.png" border="0" usemap="#state_8h_affa280b9d6f43896c9db64f0e32b2f3d_cgraph" alt=""/></div>
 <map name="state_8h_affa280b9d6f43896c9db64f0e32b2f3d_cgraph" id="state_8h_affa280b9d6f43896c9db64f0e32b2f3d_cgraph">
-<area shape="rect" id="node2" href="dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="421,5,484,32"/>
-<area shape="rect" id="node4" href="checkpoints_8c.html#af5802791ee41b774e796caa15315c24c" title="log_state" alt="" coords="133,56,215,83"/>
-<area shape="rect" id="node3" href="platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="576,5,685,32"/>
-<area shape="rect" id="node5" href="statistics_8c.html#adb44a0a2dd40360e160ab4f5091ff324" title="statistics_post_data" alt="" coords="377,107,528,133"/>
-<area shape="rect" id="node6" href="checkpoints_8c.html#a9be0910d1b3a99682d5d2971b4b79f3b" title="log_full" alt="" coords="263,56,329,83"/>
-<area shape="rect" id="node7" href="dymelor_8c.html#a90e313c8735836c166694aa746cc841e" title="get_log_size" alt="" coords="402,56,503,83"/>
+<area shape="rect" id="node2" href="checkpoints_8c.html#af5802791ee41b774e796caa15315c24c" title="log_state" alt="" coords="140,5,221,32"/>
+<area shape="rect" id="node5" href="checkpoints_8c.html#a21384b7f254e3d372111b3dbbf785e73" title="log_restore" alt="" coords="133,56,228,83"/>
+<area shape="rect" id="node3" href="checkpoints_8c.html#a9be0910d1b3a99682d5d2971b4b79f3b" title="log_full" alt="" coords="289,5,356,32"/>
+<area shape="rect" id="node4" href="dymelor_8c.html#a90e313c8735836c166694aa746cc841e" title="get_log_size" alt="" coords="417,5,519,32"/>
+<area shape="rect" id="node6" href="checkpoints_8c.html#a10856fb7b6aab5e9072633b8a99875ff" title="restore_full" alt="" coords="276,56,369,83"/>
 </map>
 </div>
 </p>
@@ -467,108 +433,19 @@ Alessandro Pellegrini</dd></dl>
 <div id="dynsection-5-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="state_8h_affa280b9d6f43896c9db64f0e32b2f3d_icgraph.png" border="0" usemap="#state_8h_affa280b9d6f43896c9db64f0e32b2f3d_icgraph" alt=""/></div>
 <map name="state_8h_affa280b9d6f43896c9db64f0e32b2f3d_icgraph" id="state_8h_affa280b9d6f43896c9db64f0e32b2f3d_icgraph">
-<area shape="rect" id="node2" href="scheduler_8h.html#a5766f78dcd3778582d506c3dec34594e" title="receive_control_msg" alt="" coords="133,33,288,60"/>
-<area shape="rect" id="node9" href="scheduler_8h.html#ac48128e72b303ea22d8ec641a9516b15" title="schedule" alt="" coords="384,84,463,111"/>
-<area shape="rect" id="node3" href="queues_8h.html#a54eca9bfa893cac072d1b1d3010c2944" title="process_bottom_halves" alt="" coords="336,33,511,60"/>
-<area shape="rect" id="node4" href="gvt_2gvt_8c.html#a895d5bfff43f3ee72f9cf7097abf609b" title="GVT_phases" alt="" coords="559,33,660,60"/>
-<area shape="rect" id="node6" href="main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="927,59,1088,85"/>
-<area shape="rect" id="node5" href="gvt_2gvt_8h.html#a899b50ab45427cf145360ff3a6c29808" title="gvt_operations" alt="" coords="735,33,852,60"/>
-<area shape="rect" id="node7" href="main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="1136,59,1257,85"/>
-<area shape="rect" id="node8" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1169,109,1224,136"/>
-<area shape="rect" id="node10" href="scheduler_8h.html#af405fd79c1cd59fccce27658d6e11941" title="initialize_worker_thread" alt="" coords="708,135,879,161"/>
-</map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="a5f57db3d5b6a3616c44609b2658e300c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void rebuild_state </td>
-          <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structlp__struct.html">lp_struct</a> *&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="state_8h.html#a18331b6247faf186c17ea75b89b30651">state_t</a> *&#160;</td>
-          <td class="paramname"><em>state_pointer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="ROOT-Sim_8h.html#a8f79ad6880e99acb4edd079069847d9d">simtime_t</a>&#160;</td>
-          <td class="paramname"><em>time</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a8ab61cec6bbd780b2523d47b2c8419c4"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void RestoreState </td>
-          <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structlp__struct.html">lp_struct</a> *&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="state_8h.html#a18331b6247faf186c17ea75b89b30651">state_t</a> *&#160;</td>
-          <td class="paramname"><em>restore_state</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="state_8c_source.html#l00122">122</a> of file <a class="el" href="state_8c_source.html">state.c</a>.</p>
-
-<p><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-6-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="state_8h_a8ab61cec6bbd780b2523d47b2c8419c4_cgraph.png" border="0" usemap="#state_8h_a8ab61cec6bbd780b2523d47b2c8419c4_cgraph" alt=""/></div>
-<map name="state_8h_a8ab61cec6bbd780b2523d47b2c8419c4_cgraph" id="state_8h_a8ab61cec6bbd780b2523d47b2c8419c4_cgraph">
-<area shape="rect" id="node2" href="checkpoints_8c.html#a21384b7f254e3d372111b3dbbf785e73" title="log_restore" alt="" coords="159,5,253,32"/>
-<area shape="rect" id="node3" href="statistics_8c.html#adb44a0a2dd40360e160ab4f5091ff324" title="statistics_post_data" alt="" coords="443,5,593,32"/>
-<area shape="rect" id="node4" href="checkpoints_8c.html#a10856fb7b6aab5e9072633b8a99875ff" title="restore_full" alt="" coords="301,31,395,57"/>
-</map>
-</div>
-</p>
-
-<p><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-7-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="state_8h_a8ab61cec6bbd780b2523d47b2c8419c4_icgraph.png" border="0" usemap="#state_8h_a8ab61cec6bbd780b2523d47b2c8419c4_icgraph" alt=""/></div>
-<map name="state_8h_a8ab61cec6bbd780b2523d47b2c8419c4_icgraph" id="state_8h_a8ab61cec6bbd780b2523d47b2c8419c4_icgraph">
-<area shape="rect" id="node2" href="state_8h.html#a1fd6b7926db41257e07600226d87fffa" title="rollback" alt="" coords="159,56,229,83"/>
-<area shape="rect" id="node3" href="scheduler_8h.html#ac48128e72b303ea22d8ec641a9516b15" title="schedule" alt="" coords="277,56,356,83"/>
-<area shape="rect" id="node4" href="gvt_2gvt_8c.html#a895d5bfff43f3ee72f9cf7097abf609b" title="GVT_phases" alt="" coords="404,5,505,32"/>
-<area shape="rect" id="node6" href="main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="772,56,933,83"/>
-<area shape="rect" id="node9" href="scheduler_8h.html#af405fd79c1cd59fccce27658d6e11941" title="initialize_worker_thread" alt="" coords="553,107,724,133"/>
-<area shape="rect" id="node5" href="gvt_2gvt_8h.html#a899b50ab45427cf145360ff3a6c29808" title="gvt_operations" alt="" coords="580,5,697,32"/>
-<area shape="rect" id="node7" href="main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="981,56,1103,83"/>
-<area shape="rect" id="node8" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1015,107,1069,133"/>
+<area shape="rect" id="node2" href="scheduler_8h.html#ac48128e72b303ea22d8ec641a9516b15" title="schedule" alt="" coords="133,169,212,195"/>
+<area shape="rect" id="node3" href="gvt_2gvt_8h.html#a234e866bb1e37fa25dec9bb40134234d" title="get_last_gvt" alt="" coords="265,118,365,145"/>
+<area shape="rect" id="node5" href="main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="1008,71,1169,98"/>
+<area shape="rect" id="node14" href="scheduler_8h.html#a1b1b085c6b05a9d202a1629dcd71cffe" title="LP_main_loop" alt="" coords="260,219,371,246"/>
+<area shape="rect" id="node4" href="main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="821,67,943,94"/>
+<area shape="rect" id="node7" href="queues_8h.html#a54eca9bfa893cac072d1b1d3010c2944" title="process_bottom_halves" alt="" coords="419,118,593,145"/>
+<area shape="rect" id="node8" href="statistics_8c.html#ab7b584959699657a63a49384f07fd7a9" title="format_size" alt="" coords="457,17,555,43"/>
+<area shape="rect" id="node6" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1483,42,1537,69"/>
+<area shape="rect" id="node9" href="statistics_8h.html#aeff52bbf045362270639b2baed20762b" title="statistics_stop" alt="" coords="641,17,756,43"/>
+<area shape="rect" id="node10" href="core_8h.html#a8f346536ccfbe77b78ed577674beb6cf" title="simulation_shutdown" alt="" coords="804,17,960,43"/>
+<area shape="rect" id="node11" href="core_8c.html#a9b05d2af2e233e2616633eaa706682ee" title="exit_from_simulation\l_model" alt="" coords="1011,5,1166,47"/>
+<area shape="rect" id="node12" href="core_8h.html#a7fb819521b1ab5fc7644ad216fe7b465" title="base_init" alt="" coords="1217,14,1296,41"/>
+<area shape="rect" id="node13" href="init_8h.html#a417eb072179d09f441dbae3125049e46" title="SystemInit" alt="" coords="1344,15,1435,42"/>
 </map>
 </div>
 </p>
@@ -601,72 +478,57 @@ Alessandro Pellegrini</dd></dl>
 
 <p>Definition at line <a class="el" href="state_8c_source.html#l00202">202</a> of file <a class="el" href="state_8c_source.html">state.c</a>.</p>
 
-<p><div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="state_8h_a1fd6b7926db41257e07600226d87fffa_cgraph.png" border="0" usemap="#state_8h_a1fd6b7926db41257e07600226d87fffa_cgraph" alt=""/></div>
 <map name="state_8h_a1fd6b7926db41257e07600226d87fffa_cgraph" id="state_8h_a1fd6b7926db41257e07600226d87fffa_cgraph">
-<area shape="rect" id="node2" href="statistics_8c.html#adb44a0a2dd40360e160ab4f5091ff324" title="statistics_post_data" alt="" coords="786,56,937,83"/>
-<area shape="rect" id="node3" href="communication_8c.html#a4b5cfcdce234d44ebd663be3c23e02d1" title="Send all antimessages for a certain LP. " alt="" coords="143,588,293,615"/>
-<area shape="rect" id="node32" href="checkpoints_8c.html#a727e4cd3fa1d7b332b9f212733eec8d3" title="log_delete" alt="" coords="174,740,262,767"/>
-<area shape="rect" id="node33" href="state_8c.html#a2a6130d2b01b91027622fb5c61190a62" title="RestoreState" alt="" coords="165,56,271,83"/>
-<area shape="rect" id="node36" href="state_8c.html#ac716710e9e3da3d0318b467c0ed0b47f" title="silent_execution" alt="" coords="155,917,281,944"/>
-<area shape="rect" id="node41" href="control_8c.html#a7ae7785520d469a4dca37ef7ac881771" title="rollback_control_message" alt="" coords="124,512,312,539"/>
-<area shape="rect" id="node4" href="communication_8c.html#ab957dc2cd186382c50ef8cfde9761909" title="Get a buffer to keep a message. " alt="" coords="579,664,727,691"/>
-<area shape="rect" id="node9" href="communication_8c.html#ae6b96249d35969d688d0d84209919c8f" title="Find a slab to allocate a message buffer. " alt="" coords="583,563,723,589"/>
-<area shape="rect" id="node12" href="communication_8c.html#a5bbdfc874efd40b9126ce2202fb19534" title="convert a message header into a message " alt="" coords="396,613,495,640"/>
-<area shape="rect" id="node13" href="communication_8c.html#ab5250867c0edfc326732c059b0c0c3b5" title="Send a message. " alt="" coords="418,461,473,488"/>
-<area shape="rect" id="node28" href="communication_8c.html#a762b3dacaa82c4590e0572ac08117153" title="Release a message header. " alt="" coords="587,715,719,741"/>
-<area shape="rect" id="node5" href="mm_8h.html#a13199823c54d944aa128966cb35c5aa3" title="slab_alloc" alt="" coords="819,765,903,792"/>
-<area shape="rect" id="node6" href="atomic_8h.html#a7a6b9868956dd8e51e5de80e16c76fc4" title="spin_lock" alt="" coords="1024,639,1104,665"/>
-<area shape="rect" id="node7" href="slab_8c.html#ac0e4a2a4ab26d7f2399eecbb72fc4cff" title="slab_is_valid" alt="" coords="1013,791,1115,817"/>
-<area shape="rect" id="node8" href="atomic_8h.html#a4e8c9d1c6101995f1ecd2141d77e4824" title="spin_unlock" alt="" coords="1016,715,1112,741"/>
-<area shape="rect" id="node10" href="core_8c.html#a6793e4c70d69277f24ff0e494ed8ed10" title="find_kernel_by_gid" alt="" coords="995,335,1133,361"/>
-<area shape="rect" id="node11" href="process_8c.html#a2193e0386f7858db77f38146a15d3cd1" title="find_lp_by_gid" alt="" coords="806,715,917,741"/>
-<area shape="rect" id="node14" href="communication_8c.html#aebec05b86f3467473116d555954b80f4" title="Perform some sanity checks on a message buffer. " alt="" coords="1011,512,1117,539"/>
-<area shape="rect" id="node16" href="mpi_8c.html#a41390aa810e506d633d2cf01bc5973bb" title="send_remote_msg" alt="" coords="582,309,725,336"/>
-<area shape="rect" id="node23" href="queues_8c.html#a9ff164dd6a938afa7e892f4028c2a033" title="insert_bottom_half" alt="" coords="582,512,725,539"/>
-<area shape="rect" id="node15" href="communication_8c.html#ab442ee81854e910ac0b21e3caf21cc48" title="Tell the GID of the sender of a message, given its mark. " alt="" coords="1185,512,1287,539"/>
-<area shape="rect" id="node17" href="wnd_8c.html#a76d33aed8e7dfe9ab6d8ce4f9b1f4fd8" title="allocate_outgoing_msg" alt="" coords="776,208,947,235"/>
-<area shape="rect" id="node20" href="communication_2gvt_8c.html#a76f513e8aeeeb0abebc46f19ceb72293" title="register_outgoing_msg" alt="" coords="777,259,946,285"/>
-<area shape="rect" id="node22" href="wnd_8c.html#a16850c4710b9b54fc67b88547b3b87ee" title="store_outgoing_msg" alt="" coords="785,613,938,640"/>
-<area shape="rect" id="node18" href="dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="1033,183,1095,209"/>
-<area shape="rect" id="node19" href="platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="1181,183,1291,209"/>
-<area shape="rect" id="node21" href="atomic_8h.html#ae2153aa1dc0d0362246d6e14f60b5550" title="atomic_inc" alt="" coords="1019,259,1109,285"/>
-<area shape="rect" id="node24" href="msgchannel_8c.html#a1ae9825eb7701f2b3f546de2cf071fe2" title="insert_msg" alt="" coords="815,563,908,589"/>
-<area shape="rect" id="node27" href="preempt_8c.html#a9e0e11fb05a00a94df0c1a82fcf36ceb" title="update_min_in_transit" alt="" coords="779,664,943,691"/>
-<area shape="rect" id="node25" href="dymelor_8h.html#a480bc47d84033faa5410d5a3c4470ff7" title="rsrealloc" alt="" coords="1026,563,1102,589"/>
-<area shape="rect" id="node26" href="platform_8c.html#af571772318d146f693e37e7a580103c0" title="__real_realloc" alt="" coords="1181,563,1291,589"/>
-<area shape="rect" id="node29" href="mm_8h.html#a891cd5abfed9deb98413ab7e7c29ef61" title="slab_free" alt="" coords="821,816,901,843"/>
-<area shape="rect" id="node30" href="dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a" title="rsfree" alt="" coords="1035,841,1093,868"/>
-<area shape="rect" id="node31" href="platform_8c.html#ae2af2cd130d16958394ae21e9d13035f" title="__real_free" alt="" coords="1190,841,1282,868"/>
-<area shape="rect" id="node34" href="checkpoints_8c.html#a21384b7f254e3d372111b3dbbf785e73" title="log_restore" alt="" coords="398,56,493,83"/>
-<area shape="rect" id="node35" href="checkpoints_8c.html#a10856fb7b6aab5e9072633b8a99875ff" title="restore_full" alt="" coords="607,5,700,32"/>
-<area shape="rect" id="node37" href="control_8c.html#ac428a2905faec2d67f82840f28929ec2" title="reprocess_control_msg" alt="" coords="360,968,531,995"/>
-<area shape="rect" id="node38" href="scheduler_8c.html#abc4b7b27d2597ef760c4305da6cf476b" title="activate_LP" alt="" coords="398,917,493,944"/>
-<area shape="rect" id="node39" href="ecs_8c.html#af96855eb85637b829d7d3aa20f97ad3c" title="lp_alloc_schedule" alt="" coords="587,917,720,944"/>
-<area shape="rect" id="node40" href="ecs_8c.html#a93b282f8af3c72bdbd5d0533a4cc2355" title="lp_alloc_deschedule" alt="" coords="579,968,728,995"/>
-<area shape="rect" id="node42" href="communication_8c.html#a56a4865196c169691525e99bae337519" title="Pack a message in a platform&#45;level data structure. " alt="" coords="402,512,489,539"/>
+<area shape="rect" id="node2" href="communication_8c.html#a4b5cfcdce234d44ebd663be3c23e02d1" title="Send all antimessages for a certain LP. " alt="" coords="124,113,275,140"/>
+<area shape="rect" id="node19" href="checkpoints_8c.html#a727e4cd3fa1d7b332b9f212733eec8d3" title="log_delete" alt="" coords="155,171,243,197"/>
+<area shape="rect" id="node20" href="state_8c.html#ac716710e9e3da3d0318b467c0ed0b47f" title="silent_execution" alt="" coords="137,233,262,260"/>
+<area shape="rect" id="node3" href="communication_8c.html#ab957dc2cd186382c50ef8cfde9761909" title="Get a buffer to keep a message. " alt="" coords="323,56,471,83"/>
+<area shape="rect" id="node4" href="communication_8c.html#ae6b96249d35969d688d0d84209919c8f" title="Find a slab to allocate a message buffer. " alt="" coords="520,157,660,184"/>
+<area shape="rect" id="node6" href="communication_8c.html#a5bbdfc874efd40b9126ce2202fb19534" title="convert a message header into a message " alt="" coords="347,208,446,235"/>
+<area shape="rect" id="node7" href="communication_8c.html#ab5250867c0edfc326732c059b0c0c3b5" title="Send a message. " alt="" coords="369,107,424,133"/>
+<area shape="rect" id="node18" href="communication_8c.html#a762b3dacaa82c4590e0572ac08117153" title="Release a message header. " alt="" coords="331,5,463,32"/>
+<area shape="rect" id="node5" href="core_8c.html#a6793e4c70d69277f24ff0e494ed8ed10" title="find_kernel_by_gid" alt="" coords="928,208,1067,235"/>
+<area shape="rect" id="node8" href="communication_8c.html#aebec05b86f3467473116d555954b80f4" title="Perform some sanity checks on a message buffer. " alt="" coords="741,31,848,57"/>
+<area shape="rect" id="node10" href="mpi_8c.html#a41390aa810e506d633d2cf01bc5973bb" title="Send a message to a remote LP. " alt="" coords="519,259,661,285"/>
+<area shape="rect" id="node17" href="queues_8c.html#a9ff164dd6a938afa7e892f4028c2a033" title="insert_bottom_half" alt="" coords="519,56,661,83"/>
+<area shape="rect" id="node9" href="communication_8c.html#ab442ee81854e910ac0b21e3caf21cc48" title="Tell the GID of the sender of a message, given its mark. " alt="" coords="947,31,1048,57"/>
+<area shape="rect" id="node11" href="wnd_8c.html#a76d33aed8e7dfe9ab6d8ce4f9b1f4fd8" title="Allocate a buffer for an outgoing message node. " alt="" coords="709,208,880,235"/>
+<area shape="rect" id="node12" href="communication_2gvt_8c.html#a76f513e8aeeeb0abebc46f19ceb72293" title="Register an outgoing message, if necessary. " alt="" coords="710,309,879,336"/>
+<area shape="rect" id="node14" href="wnd_8c.html#a16850c4710b9b54fc67b88547b3b87ee" title="Store an outgoing message. " alt="" coords="718,360,871,387"/>
+<area shape="rect" id="node13" href="atomic_8h.html#ae2153aa1dc0d0362246d6e14f60b5550" title="atomic_inc" alt="" coords="952,309,1043,336"/>
+<area shape="rect" id="node15" href="atomic_8h.html#a7a6b9868956dd8e51e5de80e16c76fc4" title="spin_lock" alt="" coords="957,411,1037,437"/>
+<area shape="rect" id="node16" href="atomic_8h.html#a4e8c9d1c6101995f1ecd2141d77e4824" title="spin_unlock" alt="" coords="949,360,1045,387"/>
+<area shape="rect" id="node21" href="scheduler_8c.html#abc4b7b27d2597ef760c4305da6cf476b" title="activate_LP" alt="" coords="349,259,444,285"/>
 </map>
 </div>
 </p>
 
-<p><div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="state_8h_a1fd6b7926db41257e07600226d87fffa_icgraph.png" border="0" usemap="#state_8h_a1fd6b7926db41257e07600226d87fffa_icgraph" alt=""/></div>
 <map name="state_8h_a1fd6b7926db41257e07600226d87fffa_icgraph" id="state_8h_a1fd6b7926db41257e07600226d87fffa_icgraph">
-<area shape="rect" id="node2" href="scheduler_8h.html#ac48128e72b303ea22d8ec641a9516b15" title="schedule" alt="" coords="124,56,203,83"/>
-<area shape="rect" id="node3" href="gvt_2gvt_8c.html#a895d5bfff43f3ee72f9cf7097abf609b" title="GVT_phases" alt="" coords="251,5,352,32"/>
-<area shape="rect" id="node5" href="main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="619,56,780,83"/>
-<area shape="rect" id="node8" href="scheduler_8h.html#af405fd79c1cd59fccce27658d6e11941" title="initialize_worker_thread" alt="" coords="400,107,571,133"/>
-<area shape="rect" id="node4" href="gvt_2gvt_8h.html#a899b50ab45427cf145360ff3a6c29808" title="gvt_operations" alt="" coords="427,5,544,32"/>
-<area shape="rect" id="node6" href="main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="828,56,949,83"/>
-<area shape="rect" id="node7" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="861,107,916,133"/>
+<area shape="rect" id="node2" href="scheduler_8h.html#ac48128e72b303ea22d8ec641a9516b15" title="schedule" alt="" coords="124,169,203,195"/>
+<area shape="rect" id="node3" href="gvt_2gvt_8h.html#a234e866bb1e37fa25dec9bb40134234d" title="get_last_gvt" alt="" coords="256,118,356,145"/>
+<area shape="rect" id="node5" href="main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="999,71,1160,98"/>
+<area shape="rect" id="node14" href="scheduler_8h.html#a1b1b085c6b05a9d202a1629dcd71cffe" title="LP_main_loop" alt="" coords="251,219,361,246"/>
+<area shape="rect" id="node4" href="main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="812,67,933,94"/>
+<area shape="rect" id="node7" href="queues_8h.html#a54eca9bfa893cac072d1b1d3010c2944" title="process_bottom_halves" alt="" coords="409,118,584,145"/>
+<area shape="rect" id="node8" href="statistics_8c.html#ab7b584959699657a63a49384f07fd7a9" title="format_size" alt="" coords="448,17,545,43"/>
+<area shape="rect" id="node6" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1473,42,1528,69"/>
+<area shape="rect" id="node9" href="statistics_8h.html#aeff52bbf045362270639b2baed20762b" title="statistics_stop" alt="" coords="632,17,747,43"/>
+<area shape="rect" id="node10" href="core_8h.html#a8f346536ccfbe77b78ed577674beb6cf" title="simulation_shutdown" alt="" coords="795,17,951,43"/>
+<area shape="rect" id="node11" href="core_8c.html#a9b05d2af2e233e2616633eaa706682ee" title="exit_from_simulation\l_model" alt="" coords="1002,5,1157,47"/>
+<area shape="rect" id="node12" href="core_8h.html#a7fb819521b1ab5fc7644ad216fe7b465" title="base_init" alt="" coords="1208,14,1287,41"/>
+<area shape="rect" id="node13" href="init_8h.html#a417eb072179d09f441dbae3125049e46" title="SystemInit" alt="" coords="1335,15,1425,42"/>
 </map>
 </div>
 </p>
@@ -709,20 +571,6 @@ Alessandro Pellegrini</dd></dl>
 </dl>
 
 <p>Definition at line <a class="el" href="state_8c_source.html#l00331">331</a> of file <a class="el" href="state_8c_source.html">state.c</a>.</p>
-
-<p><div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-10-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="state_8h_a21e2e986ba2d9879ec7b58084947ba88_icgraph.png" border="0" usemap="#state_8h_a21e2e986ba2d9879ec7b58084947ba88_icgraph" alt=""/></div>
-<map name="state_8h_a21e2e986ba2d9879ec7b58084947ba88_icgraph" id="state_8h_a21e2e986ba2d9879ec7b58084947ba88_icgraph">
-<area shape="rect" id="node2" href="process_8h.html#ad58c55ea23fdc3d938b57135b6116feb" title="initialize_lps" alt="" coords="219,5,317,32"/>
-<area shape="rect" id="node3" href="init_8h.html#a417eb072179d09f441dbae3125049e46" title="SystemInit" alt="" coords="365,5,456,32"/>
-<area shape="rect" id="node4" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="504,5,559,32"/>
-</map>
-</div>
-</p>
 
 </div>
 </div>
@@ -771,36 +619,39 @@ Alessandro Pellegrini</dd></dl>
 
 <p>Definition at line <a class="el" href="state_8c_source.html#l00155">155</a> of file <a class="el" href="state_8c_source.html">state.c</a>.</p>
 
-<p><div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-11-content" class="dyncontent" style="display:none;">
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="state_8h_ae68a69540f60adf840c77f7a5dfee6c5_cgraph.png" border="0" usemap="#state_8h_ae68a69540f60adf840c77f7a5dfee6c5_cgraph" alt=""/></div>
 <map name="state_8h_ae68a69540f60adf840c77f7a5dfee6c5_cgraph" id="state_8h_ae68a69540f60adf840c77f7a5dfee6c5_cgraph">
-<area shape="rect" id="node2" href="control_8c.html#ac428a2905faec2d67f82840f28929ec2" title="reprocess_control_msg" alt="" coords="179,5,349,32"/>
-<area shape="rect" id="node3" href="scheduler_8c.html#abc4b7b27d2597ef760c4305da6cf476b" title="activate_LP" alt="" coords="217,56,311,83"/>
-<area shape="rect" id="node4" href="ecs_8c.html#af96855eb85637b829d7d3aa20f97ad3c" title="lp_alloc_schedule" alt="" coords="405,31,539,57"/>
-<area shape="rect" id="node5" href="ecs_8c.html#a93b282f8af3c72bdbd5d0533a4cc2355" title="lp_alloc_deschedule" alt="" coords="397,81,547,108"/>
+<area shape="rect" id="node2" href="scheduler_8c.html#abc4b7b27d2597ef760c4305da6cf476b" title="activate_LP" alt="" coords="179,5,273,32"/>
 </map>
 </div>
 </p>
 
-<p><div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-12-content" class="dyncontent" style="display:none;">
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="state_8h_ae68a69540f60adf840c77f7a5dfee6c5_icgraph.png" border="0" usemap="#state_8h_ae68a69540f60adf840c77f7a5dfee6c5_icgraph" alt=""/></div>
 <map name="state_8h_ae68a69540f60adf840c77f7a5dfee6c5_icgraph" id="state_8h_ae68a69540f60adf840c77f7a5dfee6c5_icgraph">
-<area shape="rect" id="node2" href="state_8h.html#a1fd6b7926db41257e07600226d87fffa" title="rollback" alt="" coords="179,56,249,83"/>
-<area shape="rect" id="node3" href="scheduler_8h.html#ac48128e72b303ea22d8ec641a9516b15" title="schedule" alt="" coords="297,56,376,83"/>
-<area shape="rect" id="node4" href="gvt_2gvt_8c.html#a895d5bfff43f3ee72f9cf7097abf609b" title="GVT_phases" alt="" coords="424,5,525,32"/>
-<area shape="rect" id="node6" href="main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="792,56,953,83"/>
-<area shape="rect" id="node9" href="scheduler_8h.html#af405fd79c1cd59fccce27658d6e11941" title="initialize_worker_thread" alt="" coords="573,107,744,133"/>
-<area shape="rect" id="node5" href="gvt_2gvt_8h.html#a899b50ab45427cf145360ff3a6c29808" title="gvt_operations" alt="" coords="600,5,717,32"/>
-<area shape="rect" id="node7" href="main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="1001,56,1123,83"/>
-<area shape="rect" id="node8" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1035,107,1089,133"/>
+<area shape="rect" id="node2" href="state_8h.html#a1fd6b7926db41257e07600226d87fffa" title="rollback" alt="" coords="179,169,249,195"/>
+<area shape="rect" id="node3" href="scheduler_8h.html#ac48128e72b303ea22d8ec641a9516b15" title="schedule" alt="" coords="297,169,376,195"/>
+<area shape="rect" id="node4" href="gvt_2gvt_8h.html#a234e866bb1e37fa25dec9bb40134234d" title="get_last_gvt" alt="" coords="429,118,529,145"/>
+<area shape="rect" id="node6" href="main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="1172,71,1333,98"/>
+<area shape="rect" id="node15" href="scheduler_8h.html#a1b1b085c6b05a9d202a1629dcd71cffe" title="LP_main_loop" alt="" coords="424,219,535,246"/>
+<area shape="rect" id="node5" href="main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="985,67,1107,94"/>
+<area shape="rect" id="node8" href="queues_8h.html#a54eca9bfa893cac072d1b1d3010c2944" title="process_bottom_halves" alt="" coords="583,118,757,145"/>
+<area shape="rect" id="node9" href="statistics_8c.html#ab7b584959699657a63a49384f07fd7a9" title="format_size" alt="" coords="621,17,719,43"/>
+<area shape="rect" id="node7" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1647,42,1701,69"/>
+<area shape="rect" id="node10" href="statistics_8h.html#aeff52bbf045362270639b2baed20762b" title="statistics_stop" alt="" coords="805,17,920,43"/>
+<area shape="rect" id="node11" href="core_8h.html#a8f346536ccfbe77b78ed577674beb6cf" title="simulation_shutdown" alt="" coords="968,17,1124,43"/>
+<area shape="rect" id="node12" href="core_8c.html#a9b05d2af2e233e2616633eaa706682ee" title="exit_from_simulation\l_model" alt="" coords="1175,5,1330,47"/>
+<area shape="rect" id="node13" href="core_8h.html#a7fb819521b1ab5fc7644ad216fe7b465" title="base_init" alt="" coords="1381,14,1460,41"/>
+<area shape="rect" id="node14" href="init_8h.html#a417eb072179d09f441dbae3125049e46" title="SystemInit" alt="" coords="1508,15,1599,42"/>
 </map>
 </div>
 </p>

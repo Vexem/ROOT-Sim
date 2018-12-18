@@ -190,10 +190,11 @@ $(document).ready(function(){initNavTree('ult_8h.html','');});
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a2f49065c9ac2b1c96ea75680ee2e993d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ult_8h.html#a2f49065c9ac2b1c96ea75680ee2e993d">context_save</a>(context)&#160;&#160;&#160;<a class="el" href="x86_2jmp_8h.html#a27b53df10e215ef74cf2825bd336b363">set_jmp</a>(context)</td></tr>
-<tr class="memdesc:a2f49065c9ac2b1c96ea75680ee2e993d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save machine context for userspace context switch. This is used only in initialization.  <a href="#a2f49065c9ac2b1c96ea75680ee2e993d">More...</a><br /></td></tr>
+<tr class="memdesc:a2f49065c9ac2b1c96ea75680ee2e993d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save machine context for userspace context switch.  <a href="#a2f49065c9ac2b1c96ea75680ee2e993d">More...</a><br /></td></tr>
 <tr class="separator:a2f49065c9ac2b1c96ea75680ee2e993d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe1d22b5ee3a031cd472e42da000ebe0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ult_8h.html#abe1d22b5ee3a031cd472e42da000ebe0">context_restore</a>(context)&#160;&#160;&#160;<a class="el" href="x86_2jmp_8h.html#a932eb25d1cb178ce109c7d35b781878f">long_jmp</a>(context, 1)</td></tr>
-<tr class="memdesc:abe1d22b5ee3a031cd472e42da000ebe0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restore machine context for userspace context switch. This is used only in inizialitaion.  <a href="#abe1d22b5ee3a031cd472e42da000ebe0">More...</a><br /></td></tr>
+<tr class="memitem:abe1d22b5ee3a031cd472e42da000ebe0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abe1d22b5ee3a031cd472e42da000ebe0"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ult_8h.html#abe1d22b5ee3a031cd472e42da000ebe0">context_restore</a>(context)&#160;&#160;&#160;<a class="el" href="x86_2jmp_8h.html#a932eb25d1cb178ce109c7d35b781878f">long_jmp</a>(context, 1)</td></tr>
+<tr class="memdesc:abe1d22b5ee3a031cd472e42da000ebe0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restore machine context for userspace context switch. This is used only in inizialitaion. <br /></td></tr>
 <tr class="separator:abe1d22b5ee3a031cd472e42da000ebe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad180e46256fa79092651eb947c9f0020"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ult_8h.html#ad180e46256fa79092651eb947c9f0020">context_switch</a>(context_old,  context_new)</td></tr>
 <tr class="memdesc:ad180e46256fa79092651eb947c9f0020"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swicth machine context for userspace context switch. This is used to schedule a LP or return control to simulation kernel.  <a href="#ad180e46256fa79092651eb947c9f0020">More...</a><br /></td></tr>
@@ -204,9 +205,13 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a8be83784e5f09e3eec93d340ea1c6af2"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="x86_2jmp_8h.html#ab9635d076084c7159b922aa3f22d7e1e">exec_context_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ult_8h.html#a8be83784e5f09e3eec93d340ea1c6af2">LP_context_t</a></td></tr>
+<tr class="memitem:a8be83784e5f09e3eec93d340ea1c6af2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8be83784e5f09e3eec93d340ea1c6af2"></a>
+typedef <a class="el" href="x86_2jmp_8h.html#ab9635d076084c7159b922aa3f22d7e1e">exec_context_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ult_8h.html#a8be83784e5f09e3eec93d340ea1c6af2">LP_context_t</a></td></tr>
+<tr class="memdesc:a8be83784e5f09e3eec93d340ea1c6af2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definition of an execution context for an LP. This is just syntactic sugar. <br /></td></tr>
 <tr class="separator:a8be83784e5f09e3eec93d340ea1c6af2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af041560b7527757d01ba9157e3258f64"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="x86_2jmp_8h.html#ab9635d076084c7159b922aa3f22d7e1e">exec_context_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ult_8h.html#af041560b7527757d01ba9157e3258f64">kernel_context_t</a></td></tr>
+<tr class="memitem:af041560b7527757d01ba9157e3258f64"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af041560b7527757d01ba9157e3258f64"></a>
+typedef <a class="el" href="x86_2jmp_8h.html#ab9635d076084c7159b922aa3f22d7e1e">exec_context_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ult_8h.html#af041560b7527757d01ba9157e3258f64">kernel_context_t</a></td></tr>
+<tr class="memdesc:af041560b7527757d01ba9157e3258f64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definition of an execution context for a worker thread. This is just syntactic sugar. <br /></td></tr>
 <tr class="separator:af041560b7527757d01ba9157e3258f64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -216,8 +221,9 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:af3d8429cc9ef046d05e2fb0feebf01d7"><td class="memItemLeft" align="right" valign="top">__thread <a class="el" href="ult_8h.html#af041560b7527757d01ba9157e3258f64">kernel_context_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ult_8h.html#af3d8429cc9ef046d05e2fb0feebf01d7">kernel_context</a></td></tr>
-<tr class="memdesc:af3d8429cc9ef046d05e2fb0feebf01d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the execution context of the simulation kernel.  <a href="#af3d8429cc9ef046d05e2fb0feebf01d7">More...</a><br /></td></tr>
+<tr class="memitem:af3d8429cc9ef046d05e2fb0feebf01d7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af3d8429cc9ef046d05e2fb0feebf01d7"></a>
+__thread <a class="el" href="ult_8h.html#af041560b7527757d01ba9157e3258f64">kernel_context_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ult_8h.html#af3d8429cc9ef046d05e2fb0feebf01d7">kernel_context</a></td></tr>
+<tr class="memdesc:af3d8429cc9ef046d05e2fb0feebf01d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the execution context of the simulation kernel. <br /></td></tr>
 <tr class="separator:af3d8429cc9ef046d05e2fb0feebf01d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -234,26 +240,6 @@ Variables</h2></td></tr>
 
 <p>Definition in file <a class="el" href="ult_8h_source.html">ult.h</a>.</p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a class="anchor" id="abe1d22b5ee3a031cd472e42da000ebe0"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define context_restore</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">context</td><td>)</td>
-          <td>&#160;&#160;&#160;<a class="el" href="x86_2jmp_8h.html#a932eb25d1cb178ce109c7d35b781878f">long_jmp</a>(context, 1)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Restore machine context for userspace context switch. This is used only in inizialitaion. </p>
-
-<p>Definition at line <a class="el" href="ult_8h_source.html#l00059">59</a> of file <a class="el" href="ult_8h_source.html">ult.h</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a2f49065c9ac2b1c96ea75680ee2e993d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -268,9 +254,17 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Save machine context for userspace context switch. This is used only in initialization. </p>
+<p>Save machine context for userspace context switch. </p>
+<p>This macro performs a context save in the specified context (a pointer).</p>
+<p>This is used only in initialization to setup the execution contexts. After that, the platform only relies on <a class="el" href="ult_8h.html#ad180e46256fa79092651eb947c9f0020" title="Swicth machine context for userspace context switch. This is used to schedule a LP or return control ...">context_switch()</a></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>A pointer to the <a class="el" href="x86_2jmp_8h.html#ab9635d076084c7159b922aa3f22d7e1e">exec_context_t</a> to save the current CPU context into. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Definition at line <a class="el" href="ult_8h_source.html#l00056">56</a> of file <a class="el" href="ult_8h_source.html">ult.h</a>.</p>
+<p>Definition at line <a class="el" href="ult_8h_source.html#l00069">69</a> of file <a class="el" href="ult_8h_source.html">ult.h</a>.</p>
 
 </div>
 </div>
@@ -302,7 +296,7 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 <p>Swicth machine context for userspace context switch. This is used to schedule a LP or return control to simulation kernel. </p>
 
-<p>Definition at line <a class="el" href="ult_8h_source.html#l00062">62</a> of file <a class="el" href="ult_8h_source.html">ult.h</a>.</p>
+<p>Definition at line <a class="el" href="ult_8h_source.html#l00075">75</a> of file <a class="el" href="ult_8h_source.html">ult.h</a>.</p>
 
 </div>
 </div>
@@ -334,36 +328,7 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 <p>Swicth machine context for userspace context switch. This is used to schedule a LP or return control to simulation kernel. </p>
 
-<p>Definition at line <a class="el" href="ult_8h_source.html#l00067">67</a> of file <a class="el" href="ult_8h_source.html">ult.h</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Typedef Documentation</h2>
-<a class="anchor" id="af041560b7527757d01ba9157e3258f64"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef <a class="el" href="x86_2jmp_8h.html#ab9635d076084c7159b922aa3f22d7e1e">exec_context_t</a> <a class="el" href="ult_8h.html#af041560b7527757d01ba9157e3258f64">kernel_context_t</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="ult_8h_source.html#l00053">53</a> of file <a class="el" href="ult_8h_source.html">ult.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a8be83784e5f09e3eec93d340ea1c6af2"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef <a class="el" href="x86_2jmp_8h.html#ab9635d076084c7159b922aa3f22d7e1e">exec_context_t</a> <a class="el" href="ult_8h.html#a8be83784e5f09e3eec93d340ea1c6af2">LP_context_t</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="ult_8h_source.html#l00052">52</a> of file <a class="el" href="ult_8h_source.html">ult.h</a>.</p>
+<p>Definition at line <a class="el" href="ult_8h_source.html#l00080">80</a> of file <a class="el" href="ult_8h_source.html">ult.h</a>.</p>
 
 </div>
 </div>
@@ -400,43 +365,10 @@ Variables</h2></td></tr>
 <div id="dynsection-2-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="ult_8h_a21c80d94da97fa7d1476e8450821a701_cgraph.png" border="0" usemap="#ult_8h_a21c80d94da97fa7d1476e8450821a701_cgraph" alt=""/></div>
 <map name="ult_8h_a21c80d94da97fa7d1476e8450821a701_cgraph" id="ult_8h_a21c80d94da97fa7d1476e8450821a701_cgraph">
-<area shape="rect" id="node2" href="dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="188,5,251,32"/>
-<area shape="rect" id="node4" href="x86_2jmp_8h.html#a4929790c2fa580d14f27b319f28b4236" title="context_create" alt="" coords="160,56,279,83"/>
-<area shape="rect" id="node3" href="platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="327,5,436,32"/>
+<area shape="rect" id="node2" href="x86_2jmp_8h.html#a4929790c2fa580d14f27b319f28b4236" title="context_create" alt="" coords="160,5,279,32"/>
 </map>
 </div>
 </p>
-
-<p><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-3-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="ult_8h_a21c80d94da97fa7d1476e8450821a701_icgraph.png" border="0" usemap="#ult_8h_a21c80d94da97fa7d1476e8450821a701_icgraph" alt=""/></div>
-<map name="ult_8h_a21c80d94da97fa7d1476e8450821a701_icgraph" id="ult_8h_a21c80d94da97fa7d1476e8450821a701_icgraph">
-<area shape="rect" id="node2" href="process_8h.html#ad58c55ea23fdc3d938b57135b6116feb" title="initialize_lps" alt="" coords="160,5,259,32"/>
-<area shape="rect" id="node3" href="init_8h.html#a417eb072179d09f441dbae3125049e46" title="SystemInit" alt="" coords="307,5,397,32"/>
-<area shape="rect" id="node4" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="445,5,500,32"/>
-</map>
-</div>
-</p>
-
-</div>
-</div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a class="anchor" id="af3d8429cc9ef046d05e2fb0feebf01d7"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">__thread <a class="el" href="ult_8h.html#af041560b7527757d01ba9157e3258f64">kernel_context_t</a> kernel_context</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>This is the execution context of the simulation kernel. </p>
-
-<p>Definition at line <a class="el" href="ult_8c_source.html#l00051">51</a> of file <a class="el" href="ult_8c_source.html">ult.c</a>.</p>
 
 </div>
 </div>

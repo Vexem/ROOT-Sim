@@ -1,13 +1,9 @@
 <map id="__wrap_calloc" name="__wrap_calloc">
-<area shape="rect" id="node2" href="$dymelor_8h.html#a9d9ef7f17d1da53b67c7a8171d2b5ddf" title="rscalloc" alt="" coords="185,5,255,32"/>
-<area shape="rect" id="node4" href="$dymelor_8c.html#a3687f50774c89e7a09833a71adbb7771" title="__wrap_malloc" alt="" coords="163,56,277,83"/>
-<area shape="rect" id="node3" href="$platform_8c.html#a035902fca80f8a7d1199d944bb39b300" title="__real_calloc" alt="" coords="325,5,428,32"/>
-<area shape="rect" id="node5" href="$dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="508,31,571,57"/>
-<area shape="rect" id="node7" href="$dymelor_8c.html#af3915129d419af75579c3d57c8757378" title="do_malloc" alt="" coords="333,132,420,159"/>
-<area shape="rect" id="node6" href="$platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="651,31,760,57"/>
-<area shape="rect" id="node8" href="$dymelor_8c.html#ae10242575deefaa5500b5426c745f2eb" title="compute_size" alt="" coords="484,81,595,108"/>
-<area shape="rect" id="node9" href="$atomic_8h.html#ae2153aa1dc0d0362246d6e14f60b5550" title="atomic_inc" alt="" coords="494,132,585,159"/>
-<area shape="rect" id="node10" href="$atomic_8h.html#a52336e036d2da5656c6db69b121458ba" title="atomic_dec" alt="" coords="491,183,587,209"/>
-<area shape="rect" id="node11" href="$dymelor_8c.html#ac1e32353ad7bdfbf4b701db28602fcbc" title="malloc_area_init" alt="" coords="476,233,603,260"/>
-<area shape="rect" id="node12" href="$dymelor_8c.html#a664ec4ed3ccc0c11db1c283485f6cf83" title="find_next_free" alt="" coords="483,284,595,311"/>
+<area shape="rect" id="node2" href="$dymelor_8c.html#a3687f50774c89e7a09833a71adbb7771" title="__wrap_malloc" alt="" coords="163,107,277,133"/>
+<area shape="rect" id="node3" href="$dymelor_8c.html#af3915129d419af75579c3d57c8757378" title="do_malloc" alt="" coords="325,107,412,133"/>
+<area shape="rect" id="node4" href="$dymelor_8c.html#ae10242575deefaa5500b5426c745f2eb" title="compute_size" alt="" coords="468,5,579,32"/>
+<area shape="rect" id="node5" href="$atomic_8h.html#ae2153aa1dc0d0362246d6e14f60b5550" title="atomic_inc" alt="" coords="478,56,569,83"/>
+<area shape="rect" id="node6" href="$atomic_8h.html#a52336e036d2da5656c6db69b121458ba" title="atomic_dec" alt="" coords="475,107,571,133"/>
+<area shape="rect" id="node7" href="$dymelor_8c.html#ac1e32353ad7bdfbf4b701db28602fcbc" title="malloc_area_init" alt="" coords="460,157,587,184"/>
+<area shape="rect" id="node8" href="$dymelor_8c.html#a664ec4ed3ccc0c11db1c283485f6cf83" title="find_next_free" alt="" coords="467,208,579,235"/>
 </map>

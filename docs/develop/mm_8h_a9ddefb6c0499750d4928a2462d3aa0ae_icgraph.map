@@ -1,6 +1,0 @@
-<map id="slab_init" name="slab_init">
-<area shape="rect" id="node2" href="$segment_8c.html#a55b0b8e4a65be959f5adb5343f36ff94" title="initialize_memory_map" alt="" coords="128,5,299,32"/>
-<area shape="rect" id="node3" href="$process_8h.html#ad58c55ea23fdc3d938b57135b6116feb" title="initialize_lps" alt="" coords="347,5,445,32"/>
-<area shape="rect" id="node4" href="$init_8h.html#a417eb072179d09f441dbae3125049e46" title="SystemInit" alt="" coords="493,5,584,32"/>
-<area shape="rect" id="node5" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="632,5,687,32"/>
-</map>

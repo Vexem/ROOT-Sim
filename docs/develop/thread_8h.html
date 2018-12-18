@@ -207,55 +207,48 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a91e8c6cd119e04ef80418cc6b9999089"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thread_8h.html#a91e8c6cd119e04ef80418cc6b9999089">get_cores</a>()&#160;&#160;&#160;(sysconf( _SC_NPROCESSORS_ONLN ))</td></tr>
-<tr class="memdesc:a91e8c6cd119e04ef80418cc6b9999089"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to get the core count on the hosting machine.  <a href="#a91e8c6cd119e04ef80418cc6b9999089">More...</a><br /></td></tr>
+<tr class="memitem:a91e8c6cd119e04ef80418cc6b9999089"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a91e8c6cd119e04ef80418cc6b9999089"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thread_8h.html#a91e8c6cd119e04ef80418cc6b9999089">get_cores</a>()&#160;&#160;&#160;(sysconf( _SC_NPROCESSORS_ONLN ))</td></tr>
+<tr class="memdesc:a91e8c6cd119e04ef80418cc6b9999089"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to get the core count on the hosting machine. <br /></td></tr>
 <tr class="separator:a91e8c6cd119e04ef80418cc6b9999089"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8fb0e1ad907a8b55df0f051a806e3e81"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thread_8h.html#a8fb0e1ad907a8b55df0f051a806e3e81">new_thread</a>(entry,  arg)&#160;&#160;&#160;pthread_create(&amp;<a class="el" href="thread_8c.html#aaa70997ae180af9748d3ec1e883c1c62">os_tid</a>, NULL, entry, arg)</td></tr>
-<tr class="memdesc:a8fb0e1ad907a8b55df0f051a806e3e81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spawn a new thread.  <a href="#a8fb0e1ad907a8b55df0f051a806e3e81">More...</a><br /></td></tr>
+<tr class="memitem:a8fb0e1ad907a8b55df0f051a806e3e81"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8fb0e1ad907a8b55df0f051a806e3e81"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thread_8h.html#a8fb0e1ad907a8b55df0f051a806e3e81">new_thread</a>(entry,  arg)&#160;&#160;&#160;pthread_create(&amp;<a class="el" href="thread_8c.html#aaa70997ae180af9748d3ec1e883c1c62">os_tid</a>, NULL, entry, arg)</td></tr>
+<tr class="memdesc:a8fb0e1ad907a8b55df0f051a806e3e81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spawn a new thread. <br /></td></tr>
 <tr class="separator:a8fb0e1ad907a8b55df0f051a806e3e81"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ae777b689a44d6b26e457053e46e4bb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thread_8h.html#a2ae777b689a44d6b26e457053e46e4bb">HALF_UINT_BITS</a>&#160;&#160;&#160;(sizeof(unsigned int)*8/2)</td></tr>
+<tr class="memitem:a2ae777b689a44d6b26e457053e46e4bb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thread_8h.html#a2ae777b689a44d6b26e457053e46e4bb">HALF_UINT_BITS</a>&#160;&#160;&#160;(sizeof(unsigned int) * 8 / 2)</td></tr>
 <tr class="separator:a2ae777b689a44d6b26e457053e46e4bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15caf78435042ae8ffb3be82a1699e5b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thread_8h.html#a15caf78435042ae8ffb3be82a1699e5b">MAX_KERNELS</a>&#160;&#160;&#160;((1 &lt;&lt; <a class="el" href="thread_8h.html#a2ae777b689a44d6b26e457053e46e4bb">HALF_UINT_BITS</a>) - 1)</td></tr>
 <tr class="separator:a15caf78435042ae8ffb3be82a1699e5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21d0ab06e146dd2384b6649435dd1486"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thread_8h.html#a21d0ab06e146dd2384b6649435dd1486">MAX_THREADS_PER_KERNEL</a>&#160;&#160;&#160;((1 &lt;&lt; <a class="el" href="thread_8h.html#a2ae777b689a44d6b26e457053e46e4bb">HALF_UINT_BITS</a>) - 1)</td></tr>
 <tr class="separator:a21d0ab06e146dd2384b6649435dd1486"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f06b13eaa2b92d5296d22c524a09998"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thread_8h.html#a2f06b13eaa2b92d5296d22c524a09998">to_global_tid</a>(<a class="el" href="core_8h.html#aa226b86ae30d1baf7f916ce6f24e0a9d">kid</a>,  <a class="el" href="thread_8h.html#afdb3c939f8808eacc8b06ac18e06e6c4">local_tid</a>)&#160;&#160;&#160;( (<a class="el" href="core_8h.html#aa226b86ae30d1baf7f916ce6f24e0a9d">kid</a> &lt;&lt; <a class="el" href="thread_8h.html#a2ae777b689a44d6b26e457053e46e4bb">HALF_UINT_BITS</a>) | <a class="el" href="thread_8h.html#afdb3c939f8808eacc8b06ac18e06e6c4">local_tid</a> )</td></tr>
+<tr class="memdesc:a2f06b13eaa2b92d5296d22c524a09998"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a local tid in a global tid.  <a href="#a2f06b13eaa2b92d5296d22c524a09998">More...</a><br /></td></tr>
 <tr class="separator:a2f06b13eaa2b92d5296d22c524a09998"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad926742bd6265f34189041c095c35e5d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thread_8h.html#ad926742bd6265f34189041c095c35e5d">to_local_tid</a>(global_tid)&#160;&#160;&#160;( global_tid &amp; ((1 &lt;&lt; <a class="el" href="thread_8h.html#a2ae777b689a44d6b26e457053e46e4bb">HALF_UINT_BITS</a>)-1) )</td></tr>
-<tr class="separator:ad926742bd6265f34189041c095c35e5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17cccdaf0ea5bb102a9aa0a429ea1e48"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thread_8h.html#a17cccdaf0ea5bb102a9aa0a429ea1e48">master_thread</a>()&#160;&#160;&#160;(<a class="el" href="thread_8h.html#afdb3c939f8808eacc8b06ac18e06e6c4">local_tid</a> == 0)</td></tr>
-<tr class="memdesc:a17cccdaf0ea5bb102a9aa0a429ea1e48"><td class="mdescLeft">&#160;</td><td class="mdescRight">This macro expands to true if the current KLT is the master thread for the local kernel.  <a href="#a17cccdaf0ea5bb102a9aa0a429ea1e48">More...</a><br /></td></tr>
+<tr class="memitem:a17cccdaf0ea5bb102a9aa0a429ea1e48"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a17cccdaf0ea5bb102a9aa0a429ea1e48"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thread_8h.html#a17cccdaf0ea5bb102a9aa0a429ea1e48">master_thread</a>()&#160;&#160;&#160;(<a class="el" href="thread_8h.html#afdb3c939f8808eacc8b06ac18e06e6c4">local_tid</a> == 0)</td></tr>
+<tr class="memdesc:a17cccdaf0ea5bb102a9aa0a429ea1e48"><td class="mdescLeft">&#160;</td><td class="mdescRight">This macro expands to true if the current KLT is the master thread for the local kernel. <br /></td></tr>
 <tr class="separator:a17cccdaf0ea5bb102a9aa0a429ea1e48"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad96bce38e857db28b105c9cb15ba8ac7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thread_8h.html#ad96bce38e857db28b105c9cb15ba8ac7">running_core</a>()&#160;&#160;&#160;(<a class="el" href="thread_8h.html#afdb3c939f8808eacc8b06ac18e06e6c4">local_tid</a>)</td></tr>
-<tr class="memdesc:ad96bce38e857db28b105c9cb15ba8ac7"><td class="mdescLeft">&#160;</td><td class="mdescRight">This macro tells on what core the current thread is running.  <a href="#ad96bce38e857db28b105c9cb15ba8ac7">More...</a><br /></td></tr>
-<tr class="separator:ad96bce38e857db28b105c9cb15ba8ac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af408b745c1a66868dd7907255a4f1cdc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thread_8h.html#af408b745c1a66868dd7907255a4f1cdc">create_thread</a>(entry,  arg)&#160;&#160;&#160;(<a class="el" href="thread_8h.html#a7248efe5c9432ead45b781036c5d7394">create_threads</a>(1, entry, arg))</td></tr>
-<tr class="memdesc:af408b745c1a66868dd7907255a4f1cdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to create one single thread.  <a href="#af408b745c1a66868dd7907255a4f1cdc">More...</a><br /></td></tr>
-<tr class="separator:af408b745c1a66868dd7907255a4f1cdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06110ec9343614ebb501cae5b4d3bd20"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thread_8h.html#a06110ec9343614ebb501cae5b4d3bd20">thread_barrier_reset</a>(<a class="el" href="schedule_8c.html#a50eae215e841a248a57b41353ea85ee2">b</a>)</td></tr>
+<tr class="memitem:a06110ec9343614ebb501cae5b4d3bd20"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thread_8h.html#a06110ec9343614ebb501cae5b4d3bd20">thread_barrier_reset</a>(b)</td></tr>
 <tr class="memdesc:a06110ec9343614ebb501cae5b4d3bd20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset operation on a thread barrier.  <a href="#a06110ec9343614ebb501cae5b4d3bd20">More...</a><br /></td></tr>
 <tr class="separator:a06110ec9343614ebb501cae5b4d3bd20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a39319c76773bf6617f29aa122c581cdb"><td class="memItemLeft" align="right" valign="top">typedef pthread_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thread_8h.html#a39319c76773bf6617f29aa122c581cdb">tid_t</a></td></tr>
-<tr class="memdesc:a39319c76773bf6617f29aa122c581cdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">How do we identify a thread?  <a href="#a39319c76773bf6617f29aa122c581cdb">More...</a><br /></td></tr>
+<tr class="memitem:a39319c76773bf6617f29aa122c581cdb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a39319c76773bf6617f29aa122c581cdb"></a>
+typedef pthread_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thread_8h.html#a39319c76773bf6617f29aa122c581cdb">tid_t</a></td></tr>
+<tr class="memdesc:a39319c76773bf6617f29aa122c581cdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">How do we identify a thread? <br /></td></tr>
 <tr class="separator:a39319c76773bf6617f29aa122c581cdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a170621cccd6340430706508452359dd5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thread_8h.html#a170621cccd6340430706508452359dd5">set_affinity</a> (int core)</td></tr>
 <tr class="separator:a170621cccd6340430706508452359dd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21f8972c88ac48460bfd8c5f9cc34761"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thread_8h.html#a21f8972c88ac48460bfd8c5f9cc34761">barrier_init</a> (<a class="el" href="structbarrier__t.html">barrier_t</a> *b, int t)</td></tr>
+<tr class="separator:a21f8972c88ac48460bfd8c5f9cc34761"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f5993fbefc809165c4b74bb8da463d0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thread_8h.html#a9f5993fbefc809165c4b74bb8da463d0">thread_barrier</a> (<a class="el" href="structbarrier__t.html">barrier_t</a> *b)</td></tr>
+<tr class="separator:a9f5993fbefc809165c4b74bb8da463d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7248efe5c9432ead45b781036c5d7394"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thread_8h.html#a7248efe5c9432ead45b781036c5d7394">create_threads</a> (unsigned short int n, void *(*start_routine)(void *), void *arg)</td></tr>
 <tr class="separator:a7248efe5c9432ead45b781036c5d7394"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21f8972c88ac48460bfd8c5f9cc34761"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thread_8h.html#a21f8972c88ac48460bfd8c5f9cc34761">barrier_init</a> (<a class="el" href="structbarrier__t.html">barrier_t</a> *<a class="el" href="schedule_8c.html#a50eae215e841a248a57b41353ea85ee2">b</a>, int t)</td></tr>
-<tr class="separator:a21f8972c88ac48460bfd8c5f9cc34761"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f5993fbefc809165c4b74bb8da463d0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thread_8h.html#a9f5993fbefc809165c4b74bb8da463d0">thread_barrier</a> (<a class="el" href="structbarrier__t.html">barrier_t</a> *<a class="el" href="schedule_8c.html#a50eae215e841a248a57b41353ea85ee2">b</a>)</td></tr>
-<tr class="separator:a9f5993fbefc809165c4b74bb8da463d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d9053c24c7ae16cea66b6084ddb16f9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thread_8h.html#a1d9053c24c7ae16cea66b6084ddb16f9">reserve_barrier</a> (<a class="el" href="structbarrier__t.html">barrier_t</a> *<a class="el" href="schedule_8c.html#a50eae215e841a248a57b41353ea85ee2">b</a>)</td></tr>
-<tr class="separator:a1d9053c24c7ae16cea66b6084ddb16f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a467a7c650f07663e323c430ed6a1ad3e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thread_8h.html#a467a7c650f07663e323c430ed6a1ad3e">release_barrier</a> (<a class="el" href="structbarrier__t.html">barrier_t</a> *<a class="el" href="schedule_8c.html#a50eae215e841a248a57b41353ea85ee2">b</a>)</td></tr>
-<tr class="separator:a467a7c650f07663e323c430ed6a1ad3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -278,86 +271,18 @@ Variables</h2></td></tr>
 
 <p>Definition in file <a class="el" href="thread_8h_source.html">thread.h</a>.</p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a class="anchor" id="af408b745c1a66868dd7907255a4f1cdc"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define create_thread</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">entry, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">arg&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td>&#160;&#160;&#160;(<a class="el" href="thread_8h.html#a7248efe5c9432ead45b781036c5d7394">create_threads</a>(1, entry, arg))</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Macro to create one single thread. </p>
-
-<p>Definition at line <a class="el" href="thread_8h_source.html#l00122">122</a> of file <a class="el" href="thread_8h_source.html">thread.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a91e8c6cd119e04ef80418cc6b9999089"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define get_cores</td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;(sysconf( _SC_NPROCESSORS_ONLN ))</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Macro to get the core count on the hosting machine. </p>
-
-<p>Definition at line <a class="el" href="thread_8h_source.html#l00048">48</a> of file <a class="el" href="thread_8h_source.html">thread.h</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a2ae777b689a44d6b26e457053e46e4bb"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define HALF_UINT_BITS&#160;&#160;&#160;(sizeof(unsigned int)*8/2)</td>
+          <td class="memname">#define HALF_UINT_BITS&#160;&#160;&#160;(sizeof(unsigned int) * 8 / 2)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>The global tid is obtained by concatenating of the <code>kid</code> and the <code>local_tid</code> and is stored into an unsigned int. Since we are using half of the unsigned int for each part we have that the total number of kernels and the number of threads per kernel must be less then (2^HALF_UINT_BITS - 1) </p>
 
-<p>Definition at line <a class="el" href="thread_8h_source.html#l00101">101</a> of file <a class="el" href="thread_8h_source.html">thread.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a17cccdaf0ea5bb102a9aa0a429ea1e48"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define master_thread</td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;(<a class="el" href="thread_8h.html#afdb3c939f8808eacc8b06ac18e06e6c4">local_tid</a> == 0)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>This macro expands to true if the current KLT is the master thread for the local kernel. </p>
-
-<p>Definition at line <a class="el" href="thread_8h_source.html#l00110">110</a> of file <a class="el" href="thread_8h_source.html">thread.h</a>.</p>
+<p>Definition at line <a class="el" href="thread_8h_source.html#l00117">117</a> of file <a class="el" href="thread_8h_source.html">thread.h</a>.</p>
 
 </div>
 </div>
@@ -370,8 +295,9 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>This macro tells what is the maximum number of simulation kernel instances which are supported. This has to do with the maximum representable number give the fact that half of the available bits in a tid are used to keep track of the kid on which that kernel resides.</p>
 
-<p>Definition at line <a class="el" href="thread_8h_source.html#l00103">103</a> of file <a class="el" href="thread_8h_source.html">thread.h</a>.</p>
+<p>Definition at line <a class="el" href="thread_8h_source.html#l00129">129</a> of file <a class="el" href="thread_8h_source.html">thread.h</a>.</p>
 
 </div>
 </div>
@@ -384,57 +310,9 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>This macro tells how many threads we can have on a single simulation kernel. The logis is the same as that of <a class="el" href="thread_8h.html#a15caf78435042ae8ffb3be82a1699e5b">MAX_KERNELS</a>, i.e. sharing the available bit in an unsigned long to keep both representations. </p>
 
-<p>Definition at line <a class="el" href="thread_8h_source.html#l00104">104</a> of file <a class="el" href="thread_8h_source.html">thread.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a8fb0e1ad907a8b55df0f051a806e3e81"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define new_thread</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">entry, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">arg&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td>&#160;&#160;&#160;pthread_create(&amp;<a class="el" href="thread_8c.html#aaa70997ae180af9748d3ec1e883c1c62">os_tid</a>, NULL, entry, arg)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Spawn a new thread. </p>
-
-<p>Definition at line <a class="el" href="thread_8h_source.html#l00054">54</a> of file <a class="el" href="thread_8h_source.html">thread.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ad96bce38e857db28b105c9cb15ba8ac7"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define running_core</td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;(<a class="el" href="thread_8h.html#afdb3c939f8808eacc8b06ac18e06e6c4">local_tid</a>)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>This macro tells on what core the current thread is running. </p>
-
-<p>Definition at line <a class="el" href="thread_8h_source.html#l00113">113</a> of file <a class="el" href="thread_8h_source.html">thread.h</a>.</p>
+<p>Definition at line <a class="el" href="thread_8h_source.html#l00137">137</a> of file <a class="el" href="thread_8h_source.html">thread.h</a>.</p>
 
 </div>
 </div>
@@ -446,17 +324,24 @@ Variables</h2></td></tr>
           <td class="memname">#define thread_barrier_reset</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><a class="el" href="schedule_8c.html#a50eae215e841a248a57b41353ea85ee2">b</a></td><td>)</td>
+          <td class="paramname">b</td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> { \</div><div class="line">                        (<a class="code" href="atomic_8h.html#af7cad706a5bba06487b2011794061922">atomic_set</a>((&amp;<a class="code" href="schedule_8c.html#a50eae215e841a248a57b41353ea85ee2">b</a>-&gt;c1), (<a class="code" href="schedule_8c.html#a50eae215e841a248a57b41353ea85ee2">b</a>)-&gt;num_threads)); \</div><div class="line">                        (<a class="code" href="atomic_8h.html#af7cad706a5bba06487b2011794061922">atomic_set</a>((&amp;<a class="code" href="schedule_8c.html#a50eae215e841a248a57b41353ea85ee2">b</a>-&gt;c2), (<a class="code" href="schedule_8c.html#a50eae215e841a248a57b41353ea85ee2">b</a>)-&gt;num_threads)); \</div><div class="line">                        (<a class="code" href="atomic_8h.html#af7cad706a5bba06487b2011794061922">atomic_set</a>((&amp;<a class="code" href="schedule_8c.html#a50eae215e841a248a57b41353ea85ee2">b</a>-&gt;barr), -1)); \</div><div class="line">                    } <span class="keywordflow">while</span> (0)</div><div class="ttc" id="schedule_8c_html_a50eae215e841a248a57b41353ea85ee2"><div class="ttname"><a href="schedule_8c.html#a50eae215e841a248a57b41353ea85ee2">b</a></div><div class="ttdeci">backup_t * b</div><div class="ttdef"><b>Definition:</b> <a href="schedule_8c_source.html#l00121">schedule.c:121</a></div></div>
-<div class="ttc" id="atomic_8h_html_af7cad706a5bba06487b2011794061922"><div class="ttname"><a href="atomic_8h.html#af7cad706a5bba06487b2011794061922">atomic_set</a></div><div class="ttdeci">#define atomic_set(v, i)</div><div class="ttdoc">Set operation on an atomic counter. </div><div class="ttdef"><b>Definition:</b> <a href="atomic_8h_source.html#l00082">atomic.h:82</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> { \</div><div class="line">                        (<a class="code" href="atomic_8h.html#af7cad706a5bba06487b2011794061922">atomic_set</a>((&amp;b-&gt;c1), (b)-&gt;num_threads)); \</div><div class="line">                        (<a class="code" href="atomic_8h.html#af7cad706a5bba06487b2011794061922">atomic_set</a>((&amp;b-&gt;c2), (b)-&gt;num_threads)); \</div><div class="line">                        (<a class="code" href="atomic_8h.html#af7cad706a5bba06487b2011794061922">atomic_set</a>((&amp;b-&gt;barr), -1)); \</div><div class="line">                    } <span class="keywordflow">while</span> (0)</div><div class="ttc" id="atomic_8h_html_af7cad706a5bba06487b2011794061922"><div class="ttname"><a href="atomic_8h.html#af7cad706a5bba06487b2011794061922">atomic_set</a></div><div class="ttdeci">#define atomic_set(v, i)</div><div class="ttdoc">Set operation on an atomic counter. </div><div class="ttdef"><b>Definition:</b> <a href="atomic_8h_source.html#l00069">atomic.h:69</a></div></div>
 </div><!-- fragment -->
 <p>Reset operation on a thread barrier. </p>
+<p>This macro can be used to initialize (or reset) a thread barrier.</p>
+<dl class="section warning"><dt>Warning</dt><dd>Using this macro on a thread barrier on which some thread_barrier is already synchronizing leads to undefined behaviour.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">b</td><td>The thread barrier to reset (the name, not a pointer to) </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Definition at line <a class="el" href="thread_8h_source.html#l00138">138</a> of file <a class="el" href="thread_8h_source.html">thread.h</a>.</p>
+<p>Definition at line <a class="el" href="thread_8h_source.html#l00167">167</a> of file <a class="el" href="thread_8h_source.html">thread.h</a>.</p>
 
 </div>
 </div>
@@ -484,42 +369,18 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="thread_8h_source.html#l00106">106</a> of file <a class="el" href="thread_8h_source.html">thread.h</a>.</p>
+<p>Convert a local tid in a global tid. </p>
+<p>This macro takes a local tid and inserts in the upper part of the bits the id of the kernel on which that thread is running. This makes the global tid.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">kid</td><td>The kid on which a thread is running </td></tr>
+    <tr><td class="paramname">local_tid</td><td>The locally-assigned tid of the thread</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The global kid </dd></dl>
 
-</div>
-</div>
-<a class="anchor" id="ad926742bd6265f34189041c095c35e5d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define to_local_tid</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">global_tid</td><td>)</td>
-          <td>&#160;&#160;&#160;( global_tid &amp; ((1 &lt;&lt; <a class="el" href="thread_8h.html#a2ae777b689a44d6b26e457053e46e4bb">HALF_UINT_BITS</a>)-1) )</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="thread_8h_source.html#l00107">107</a> of file <a class="el" href="thread_8h_source.html">thread.h</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Typedef Documentation</h2>
-<a class="anchor" id="a39319c76773bf6617f29aa122c581cdb"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef pthread_t <a class="el" href="thread_8h.html#a39319c76773bf6617f29aa122c581cdb">tid_t</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>How do we identify a thread? </p>
-
-<p>Definition at line <a class="el" href="thread_8h_source.html#l00051">51</a> of file <a class="el" href="thread_8h_source.html">thread.h</a>.</p>
+<p>Definition at line <a class="el" href="thread_8h_source.html#l00152">152</a> of file <a class="el" href="thread_8h_source.html">thread.h</a>.</p>
 
 </div>
 </div>
@@ -622,13 +483,9 @@ Variables</h2></td></tr>
 <div id="dynsection-3-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="thread_8h_a7248efe5c9432ead45b781036c5d7394_cgraph.png" border="0" usemap="#thread_8h_a7248efe5c9432ead45b781036c5d7394_cgraph" alt=""/></div>
 <map name="thread_8h_a7248efe5c9432ead45b781036c5d7394_cgraph" id="thread_8h_a7248efe5c9432ead45b781036c5d7394_cgraph">
-<area shape="rect" id="node2" href="dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b" title="rsalloc" alt="" coords="227,19,290,45"/>
-<area shape="rect" id="node4" href="thread_8c.html#a9a978a7c6a81cdde2633f5ef7e01b7f4" title="__helper_create_thread" alt="" coords="172,95,345,121"/>
-<area shape="rect" id="node3" href="platform_8c.html#a7ff04fff541142c789d26673968a14ca" title="__real_malloc" alt="" coords="393,5,503,32"/>
-<area shape="rect" id="node5" href="atomic_8h.html#a710db68e3b3e156fe414d7745c54ccd9" title="iCAS" alt="" coords="422,56,474,83"/>
-<area shape="rect" id="node6" href="thread_8h.html#a170621cccd6340430706508452359dd5" title="set_affinity" alt="" coords="403,107,493,133"/>
-<area shape="rect" id="node7" href="dymelor_8h.html#aa6966af54ab40823b6a31934cfba500a" title="rsfree" alt="" coords="419,157,477,184"/>
-<area shape="rect" id="node8" href="platform_8c.html#ae2af2cd130d16958394ae21e9d13035f" title="__real_free" alt="" coords="551,157,643,184"/>
+<area shape="rect" id="node2" href="thread_8c.html#a9a978a7c6a81cdde2633f5ef7e01b7f4" title="__helper_create_thread" alt="" coords="172,31,345,57"/>
+<area shape="rect" id="node3" href="atomic_8h.html#a710db68e3b3e156fe414d7745c54ccd9" title="iCAS" alt="" coords="413,5,465,32"/>
+<area shape="rect" id="node4" href="thread_8h.html#a170621cccd6340430706508452359dd5" title="set_affinity" alt="" coords="393,56,484,83"/>
 </map>
 </div>
 </p>
@@ -644,38 +501,6 @@ Variables</h2></td></tr>
 </map>
 </div>
 </p>
-
-</div>
-</div>
-<a class="anchor" id="a467a7c650f07663e323c430ed6a1ad3e"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void release_barrier </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structbarrier__t.html">barrier_t</a> *&#160;</td>
-          <td class="paramname"><em>b</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a1d9053c24c7ae16cea66b6084ddb16f9"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool reserve_barrier </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structbarrier__t.html">barrier_t</a> *&#160;</td>
-          <td class="paramname"><em>b</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>
@@ -759,7 +584,6 @@ Variables</h2></td></tr>
 <map name="thread_8h_a9f5993fbefc809165c4b74bb8da463d0_cgraph" id="thread_8h_a9f5993fbefc809165c4b74bb8da463d0_cgraph">
 <area shape="rect" id="node2" href="atomic_8h.html#a52336e036d2da5656c6db69b121458ba" title="atomic_dec" alt="" coords="196,5,292,32"/>
 <area shape="rect" id="node3" href="atomic_8h.html#ab61334506e238ad3190ce02fc53af0fb" title="atomic_inc_and_test" alt="" coords="167,56,321,83"/>
-<area shape="rect" id="node4" href="x86_8c.html#a7a6b9868956dd8e51e5de80e16c76fc4" title="spin_lock" alt="" coords="369,56,449,83"/>
 </map>
 </div>
 </p>
@@ -771,18 +595,17 @@ Variables</h2></td></tr>
 <div id="dynsection-7-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="thread_8h_a9f5993fbefc809165c4b74bb8da463d0_icgraph.png" border="0" usemap="#thread_8h_a9f5993fbefc809165c4b74bb8da463d0_icgraph" alt=""/></div>
 <map name="thread_8h_a9f5993fbefc809165c4b74bb8da463d0_icgraph" id="thread_8h_a9f5993fbefc809165c4b74bb8da463d0_icgraph">
-<area shape="rect" id="node2" href="mpi_8h.html#a4d5b6bd7866b813152f5ead12012dc46" title="syncronize_all" alt="" coords="359,107,470,133"/>
-<area shape="rect" id="node3" href="main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="548,107,709,133"/>
-<area shape="rect" id="node6" href="core_8h.html#a8f346536ccfbe77b78ed577674beb6cf" title="simulation_shutdown" alt="" coords="337,208,493,235"/>
-<area shape="rect" id="node11" href="binding_8h.html#ae26b2a8055156e8648f8ad806f5fa5b0" title="rebind_LPs" alt="" coords="179,56,269,83"/>
-<area shape="rect" id="node12" href="scheduler_8h.html#af405fd79c1cd59fccce27658d6e11941" title="initialize_worker_thread" alt="" coords="329,5,500,32"/>
-<area shape="rect" id="node13" href="statistics_8h.html#aeff52bbf045362270639b2baed20762b" title="statistics_stop" alt="" coords="167,259,281,285"/>
-<area shape="rect" id="node4" href="main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="757,107,879,133"/>
-<area shape="rect" id="node5" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1104,208,1159,235"/>
-<area shape="rect" id="node7" href="core_8c.html#a9b05d2af2e233e2616633eaa706682ee" title="exit_from_simulation\l_model" alt="" coords="551,198,706,239"/>
-<area shape="rect" id="node10" href="serial_8h.html#aa0dd072d0e792fb9c65220bdddf69a0e" title="serial_simulation" alt="" coords="927,263,1056,289"/>
-<area shape="rect" id="node8" href="core_8h.html#a7fb819521b1ab5fc7644ad216fe7b465" title="base_init" alt="" coords="779,208,857,235"/>
-<area shape="rect" id="node9" href="init_8h.html#a417eb072179d09f441dbae3125049e46" title="SystemInit" alt="" coords="946,208,1037,235"/>
+<area shape="rect" id="node2" href="mpi_8h.html#a4d5b6bd7866b813152f5ead12012dc46" title="Syncronize all the kernels. " alt="" coords="352,5,463,32"/>
+<area shape="rect" id="node3" href="main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="533,56,695,83"/>
+<area shape="rect" id="node6" href="core_8h.html#a8f346536ccfbe77b78ed577674beb6cf" title="simulation_shutdown" alt="" coords="329,111,485,137"/>
+<area shape="rect" id="node10" href="binding_8h.html#ae26b2a8055156e8648f8ad806f5fa5b0" title="rebind_LPs" alt="" coords="179,208,269,235"/>
+<area shape="rect" id="node11" href="scheduler_8h.html#a1b1b085c6b05a9d202a1629dcd71cffe" title="LP_main_loop" alt="" coords="352,237,463,264"/>
+<area shape="rect" id="node12" href="statistics_8h.html#aeff52bbf045362270639b2baed20762b" title="statistics_stop" alt="" coords="167,107,281,133"/>
+<area shape="rect" id="node4" href="main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="743,59,864,85"/>
+<area shape="rect" id="node5" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1051,47,1105,73"/>
+<area shape="rect" id="node7" href="core_8c.html#a9b05d2af2e233e2616633eaa706682ee" title="exit_from_simulation\l_model" alt="" coords="537,107,691,149"/>
+<area shape="rect" id="node8" href="core_8h.html#a7fb819521b1ab5fc7644ad216fe7b465" title="base_init" alt="" coords="764,111,843,137"/>
+<area shape="rect" id="node9" href="init_8h.html#a417eb072179d09f441dbae3125049e46" title="SystemInit" alt="" coords="912,84,1003,111"/>
 </map>
 </div>
 </p>

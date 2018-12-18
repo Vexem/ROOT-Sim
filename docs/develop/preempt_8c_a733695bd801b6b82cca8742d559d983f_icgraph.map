@@ -1,7 +1,0 @@
-<map id="preempt_callback" name="preempt_callback">
-<area shape="rect" id="node2" href="$scheduler_8h.html#ad6eb628536a4101250b7118f1edf9017" title="enable_preemption" alt="" coords="188,5,335,32"/>
-<area shape="rect" id="node3" href="$scheduler_8h.html#af405fd79c1cd59fccce27658d6e11941" title="initialize_worker_thread" alt="" coords="383,5,553,32"/>
-<area shape="rect" id="node4" href="$main_8c.html#aa729cb27350c33119484501e13df4fec" title="main_simulation_loop" alt="" coords="601,5,763,32"/>
-<area shape="rect" id="node5" href="$main_8c.html#af2ac8c142556588d87e6c069a4ca9894" title="end_computing" alt="" coords="811,5,932,32"/>
-<area shape="rect" id="node6" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="844,56,899,83"/>
-</map>

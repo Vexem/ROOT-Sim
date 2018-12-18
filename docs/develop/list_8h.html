@@ -191,15 +191,18 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a9461ad805b46f1975bbe62b43dbadfcf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list_8h.html#a9461ad805b46f1975bbe62b43dbadfcf">my_offsetof</a>(st,  m)&#160;&#160;&#160;((size_t)( (unsigned char *)&amp;((st)-&gt;m ) - (unsigned char *)(st)))</td></tr>
-<tr class="memdesc:a9461ad805b46f1975bbe62b43dbadfcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">This macro is a slightly-different implementation of the standard offsetof macro.  <a href="#a9461ad805b46f1975bbe62b43dbadfcf">More...</a><br /></td></tr>
+<tr class="memitem:a9461ad805b46f1975bbe62b43dbadfcf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9461ad805b46f1975bbe62b43dbadfcf"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list_8h.html#a9461ad805b46f1975bbe62b43dbadfcf">my_offsetof</a>(st,  m)&#160;&#160;&#160;((size_t)( (unsigned char *)&amp;((st)-&gt;m ) - (unsigned char *)(st)))</td></tr>
+<tr class="memdesc:a9461ad805b46f1975bbe62b43dbadfcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">This macro is a slightly-different implementation of the standard offsetof macro. <br /></td></tr>
 <tr class="separator:a9461ad805b46f1975bbe62b43dbadfcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0da4b86f76acd6d3f307717f844b61d2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list_8h.html#a0da4b86f76acd6d3f307717f844b61d2">list</a>(type)&#160;&#160;&#160;type *</td></tr>
-<tr class="memdesc:a0da4b86f76acd6d3f307717f844b61d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declare a "typed" list. This is a pointer to type, but the variable will instead reference a struct rootsim_list!  <a href="#a0da4b86f76acd6d3f307717f844b61d2">More...</a><br /></td></tr>
+<tr class="memitem:a0da4b86f76acd6d3f307717f844b61d2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0da4b86f76acd6d3f307717f844b61d2"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list_8h.html#a0da4b86f76acd6d3f307717f844b61d2">list</a>(type)&#160;&#160;&#160;type *</td></tr>
+<tr class="memdesc:a0da4b86f76acd6d3f307717f844b61d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declare a "typed" list. This is a pointer to type, but the variable will instead reference a struct rootsim_list! <br /></td></tr>
 <tr class="separator:a0da4b86f76acd6d3f307717f844b61d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22ab8233fb6033f97f2eec8d6a21d99f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list_8h.html#a22ab8233fb6033f97f2eec8d6a21d99f">new_list</a>(type)</td></tr>
 <tr class="separator:a22ab8233fb6033f97f2eec8d6a21d99f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3fb8b3578a6b57bf7fbf84824be9055"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list_8h.html#ab3fb8b3578a6b57bf7fbf84824be9055">list_sizeof</a>(<a class="el" href="list_8h.html#a0da4b86f76acd6d3f307717f844b61d2">list</a>)&#160;&#160;&#160;((struct <a class="el" href="structrootsim__list.html">rootsim_list</a> *)<a class="el" href="list_8h.html#a0da4b86f76acd6d3f307717f844b61d2">list</a>)-&gt;size</td></tr>
+<tr class="memitem:ab3fb8b3578a6b57bf7fbf84824be9055"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab3fb8b3578a6b57bf7fbf84824be9055"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>list_sizeof</b>(<a class="el" href="list_8h.html#a0da4b86f76acd6d3f307717f844b61d2">list</a>)&#160;&#160;&#160;((struct <a class="el" href="structrootsim__list.html">rootsim_list</a> *)<a class="el" href="list_8h.html#a0da4b86f76acd6d3f307717f844b61d2">list</a>)-&gt;size</td></tr>
 <tr class="separator:ab3fb8b3578a6b57bf7fbf84824be9055"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af69e6aee47741bc668f7872fffd61fc1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list_8h.html#af69e6aee47741bc668f7872fffd61fc1">list_head</a>(<a class="el" href="list_8h.html#a0da4b86f76acd6d3f307717f844b61d2">list</a>)&#160;&#160;&#160;((__typeof__ (<a class="el" href="list_8h.html#a0da4b86f76acd6d3f307717f844b61d2">list</a>))(((<a class="el" href="structrootsim__list.html">rootsim_list</a> *)(<a class="el" href="list_8h.html#a0da4b86f76acd6d3f307717f844b61d2">list</a>))-&gt;head))</td></tr>
 <tr class="separator:af69e6aee47741bc668f7872fffd61fc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -214,27 +217,31 @@ Macros</h2></td></tr>
 <tr class="separator:a038ae97b49e1583a702de3823af01132"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac047041c3e2ceecaab99d934a30202a7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list_8h.html#ac047041c3e2ceecaab99d934a30202a7">list_empty</a>(<a class="el" href="list_8h.html#a0da4b86f76acd6d3f307717f844b61d2">list</a>)&#160;&#160;&#160;(((<a class="el" href="structrootsim__list.html">rootsim_list</a> *)<a class="el" href="list_8h.html#a0da4b86f76acd6d3f307717f844b61d2">list</a>)-&gt;size == 0)</td></tr>
 <tr class="separator:ac047041c3e2ceecaab99d934a30202a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76899a3aee7955081821d14e7bfd12e0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list_8h.html#a76899a3aee7955081821d14e7bfd12e0">list_insert_tail</a>(li,  data)</td></tr>
+<tr class="memitem:a76899a3aee7955081821d14e7bfd12e0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>list_insert_tail</b>(li,  data)</td></tr>
 <tr class="separator:a76899a3aee7955081821d14e7bfd12e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f92b3eaf82e0ca515435c9980659f86"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list_8h.html#a3f92b3eaf82e0ca515435c9980659f86">list_insert_head</a>(li,  data)</td></tr>
+<tr class="memitem:a3f92b3eaf82e0ca515435c9980659f86"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>list_insert_head</b>(li,  data)</td></tr>
 <tr class="separator:a3f92b3eaf82e0ca515435c9980659f86"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2bc3c33a8dfef4199d7b6ea7c344325"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list_8h.html#aa2bc3c33a8dfef4199d7b6ea7c344325">list_insert</a>(li,  key_name,  data)</td></tr>
-<tr class="memdesc:aa2bc3c33a8dfef4199d7b6ea7c344325"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert a new node in the list.  <a href="#aa2bc3c33a8dfef4199d7b6ea7c344325">More...</a><br /></td></tr>
+<tr class="memitem:aa2bc3c33a8dfef4199d7b6ea7c344325"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa2bc3c33a8dfef4199d7b6ea7c344325"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list_8h.html#aa2bc3c33a8dfef4199d7b6ea7c344325">list_insert</a>(li,  key_name,  data)</td></tr>
+<tr class="memdesc:aa2bc3c33a8dfef4199d7b6ea7c344325"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert a new node in the list. <br /></td></tr>
 <tr class="separator:aa2bc3c33a8dfef4199d7b6ea7c344325"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef6064281d8fd6b298b9df0613151b24"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list_8h.html#aef6064281d8fd6b298b9df0613151b24">list_delete_by_content</a>(li,  node)</td></tr>
+<tr class="memitem:aef6064281d8fd6b298b9df0613151b24"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aef6064281d8fd6b298b9df0613151b24"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>list_delete_by_content</b>(li,  node)</td></tr>
 <tr class="separator:aef6064281d8fd6b298b9df0613151b24"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f6873b487124acda0c34da04fce5db6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list_8h.html#a0f6873b487124acda0c34da04fce5db6">list_pop</a>(<a class="el" href="list_8h.html#a0da4b86f76acd6d3f307717f844b61d2">list</a>)</td></tr>
+<tr class="memitem:a0f6873b487124acda0c34da04fce5db6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>list_pop</b>(<a class="el" href="list_8h.html#a0da4b86f76acd6d3f307717f844b61d2">list</a>)</td></tr>
 <tr class="separator:a0f6873b487124acda0c34da04fce5db6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebe95d4188619bb0ef2044409c31c0e4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list_8h.html#aebe95d4188619bb0ef2044409c31c0e4">list_trunc</a>(<a class="el" href="list_8h.html#a0da4b86f76acd6d3f307717f844b61d2">list</a>,  key_name,  key_value,  release_fn)</td></tr>
 <tr class="memdesc:aebe95d4188619bb0ef2044409c31c0e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Truncate a list up to a certain point, starting from the head.  <a href="#aebe95d4188619bb0ef2044409c31c0e4">More...</a><br /></td></tr>
 <tr class="separator:aebe95d4188619bb0ef2044409c31c0e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af39ba1612dbf2ed0f90e335a2d9a8a04"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list_8h.html#af39ba1612dbf2ed0f90e335a2d9a8a04">list_size</a>(<a class="el" href="list_8h.html#a0da4b86f76acd6d3f307717f844b61d2">list</a>)&#160;&#160;&#160;((<a class="el" href="structrootsim__list.html">rootsim_list</a> *)(<a class="el" href="list_8h.html#a0da4b86f76acd6d3f307717f844b61d2">list</a>))-&gt;size</td></tr>
+<tr class="memitem:af39ba1612dbf2ed0f90e335a2d9a8a04"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af39ba1612dbf2ed0f90e335a2d9a8a04"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>list_size</b>(<a class="el" href="list_8h.html#a0da4b86f76acd6d3f307717f844b61d2">list</a>)&#160;&#160;&#160;((<a class="el" href="structrootsim__list.html">rootsim_list</a> *)(<a class="el" href="list_8h.html#a0da4b86f76acd6d3f307717f844b61d2">list</a>))-&gt;size</td></tr>
 <tr class="separator:af39ba1612dbf2ed0f90e335a2d9a8a04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a6ddda22ac69e59fec8ae238cdf24c3e8"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structrootsim__list.html">rootsim_list</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list_8h.html#a6ddda22ac69e59fec8ae238cdf24c3e8">rootsim_list</a></td></tr>
-<tr class="memdesc:a6ddda22ac69e59fec8ae238cdf24c3e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">This structure defines a generic list.  <a href="#a6ddda22ac69e59fec8ae238cdf24c3e8">More...</a><br /></td></tr>
+<tr class="memitem:a6ddda22ac69e59fec8ae238cdf24c3e8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6ddda22ac69e59fec8ae238cdf24c3e8"></a>
+typedef struct <a class="el" href="structrootsim__list.html">rootsim_list</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list_8h.html#a6ddda22ac69e59fec8ae238cdf24c3e8">rootsim_list</a></td></tr>
+<tr class="memdesc:a6ddda22ac69e59fec8ae238cdf24c3e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">This structure defines a generic list. <br /></td></tr>
 <tr class="separator:a6ddda22ac69e59fec8ae238cdf24c3e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -267,54 +274,6 @@ Typedefs</h2></td></tr>
 <p>This macro retrieves the key of a payload data structure given its offset, and casts the value to double. </p>
 
 <p>Definition at line <a class="el" href="list_8h_source.html#l00098">98</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a0da4b86f76acd6d3f307717f844b61d2"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define list</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">type</td><td>)</td>
-          <td>&#160;&#160;&#160;type *</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Declare a "typed" list. This is a pointer to type, but the variable will instead reference a struct rootsim_list! </p>
-
-<p>Definition at line <a class="el" href="list_8h_source.html#l00051">51</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aef6064281d8fd6b298b9df0613151b24"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define list_delete_by_content</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">li, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">node&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="list_8h_source.html#l00210">210</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
 
 </div>
 </div>
@@ -368,42 +327,6 @@ Typedefs</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aa2bc3c33a8dfef4199d7b6ea7c344325"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define list_insert</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">li, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">key_name, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">data&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Insert a new node in the list. </p>
-
-<p>Definition at line <a class="el" href="list_8h_source.html#l00163">163</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a3f92b3eaf82e0ca515435c9980659f86"></a>
 <div class="memitem">
 <div class="memproto">
@@ -427,9 +350,7 @@ Typedefs</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {    \</div><div class="line">        __typeof__(data) __new_n = (data); <span class="comment">/* in-block scope variable */</span>\</div><div class="line">        <span class="keywordtype">size_t</span> __size_before;\</div><div class="line">        <a class="code" href="structrootsim__list.html">rootsim_list</a> *__l;\</div><div class="line">        __new_n-&gt;next = NULL;\</div><div class="line">        __new_n-&gt;prev = NULL;\</div><div class="line">        do {\</div><div class="line">            __l = (<a class="code" href="structrootsim__list.html">rootsim_list</a> *)(li);\</div><div class="line">            assert(__l);\</div><div class="line">            __size_before = __l-&gt;<a class="code" href="structrootsim__list.html#a39e1193dd4b00d86fcbfef6ecd3fd1d2">size</a>;\</div><div class="line">            if(__l-&gt;<a class="code" href="structrootsim__list.html#a39e1193dd4b00d86fcbfef6ecd3fd1d2">size</a> == 0) { <span class="comment">/* is the list empty? */</span>\</div><div class="line">                __l-&gt;head = __new_n;\</div><div class="line">                __l-&gt;tail = __new_n;\</div><div class="line">                break; <span class="comment">/* leave the inner do-while */</span>\</div><div class="line">            }\</div><div class="line">            __new_n-&gt;prev = NULL; <span class="comment">/* Otherwise add at the beginning */</span>\</div><div class="line">            __new_n-&gt;next = __l-&gt;<a class="code" href="structrootsim__list.html#ade6389bebff6c77742a7a8913092e338">head</a>;\</div><div class="line">            ((__typeof(data))__l-&gt;<a class="code" href="structrootsim__list.html#ade6389bebff6c77742a7a8913092e338">head</a>)-&gt;prev = __new_n;\</div><div class="line">            __l-&gt;head = __new_n;\</div><div class="line">        } <span class="keywordflow">while</span>(0);\</div><div class="line">        __l-&gt;size++;\</div><div class="line">        assert(__l-&gt;<a class="code" href="structrootsim__list.html#a39e1193dd4b00d86fcbfef6ecd3fd1d2">size</a> == (__size_before + 1));\</div><div class="line">    } <span class="keywordflow">while</span>(0)</div><div class="ttc" id="structrootsim__list_html_ade6389bebff6c77742a7a8913092e338"><div class="ttname"><a href="structrootsim__list.html#ade6389bebff6c77742a7a8913092e338">rootsim_list::head</a></div><div class="ttdeci">void * head</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00042">list.h:42</a></div></div>
-<div class="ttc" id="structrootsim__list_html"><div class="ttname"><a href="structrootsim__list.html">rootsim_list</a></div><div class="ttdoc">This structure defines a generic list. </div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00040">list.h:40</a></div></div>
-<div class="ttc" id="structrootsim__list_html_a39e1193dd4b00d86fcbfef6ecd3fd1d2"><div class="ttname"><a href="structrootsim__list.html#a39e1193dd4b00d86fcbfef6ecd3fd1d2">rootsim_list::size</a></div><div class="ttdeci">size_t size</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00041">list.h:41</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {    \</div><div class="line">        __typeof__(data) __new_n = (data); <span class="comment">/* in-block scope variable */</span>\</div><div class="line">        <span class="keywordtype">size_t</span> __size_before;\</div><div class="line">        <a class="code" href="structrootsim__list.html">rootsim_list</a> *__l;\</div><div class="line">        __new_n-&gt;next = NULL;\</div><div class="line">        __new_n-&gt;prev = NULL;\</div><div class="line">        do {\</div><div class="line">            __l = (<a class="code" href="structrootsim__list.html">rootsim_list</a> *)(li);\</div><div class="line">            assert(__l);\</div><div class="line">            __size_before = __l-&gt;size;\</div><div class="line">            if(__l-&gt;size == 0) { <span class="comment">/* is the list empty? */</span>\</div><div class="line">                __l-&gt;head = __new_n;\</div><div class="line">                __l-&gt;tail = __new_n;\</div><div class="line">                break; <span class="comment">/* leave the inner do-while */</span>\</div><div class="line">            }\</div><div class="line">            __new_n-&gt;prev = NULL; <span class="comment">/* Otherwise add at the beginning */</span>\</div><div class="line">            __new_n-&gt;next = __l-&gt;head;\</div><div class="line">            ((__typeof(data))__l-&gt;head)-&gt;prev = __new_n;\</div><div class="line">            __l-&gt;head = __new_n;\</div><div class="line">        } <span class="keywordflow">while</span>(0);\</div><div class="line">        __l-&gt;size++;\</div><div class="line">        assert(__l-&gt;size == (__size_before + 1));\</div><div class="line">    } <span class="keywordflow">while</span>(0)</div><div class="ttc" id="structrootsim__list_html"><div class="ttname"><a href="structrootsim__list.html">rootsim_list</a></div><div class="ttdoc">This structure defines a generic list. </div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00040">list.h:40</a></div></div>
 </div><!-- fragment -->
 <p>Definition at line <a class="el" href="list_8h_source.html#l00137">137</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
 
@@ -458,9 +379,7 @@ Typedefs</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {    \</div><div class="line">        __typeof__(data) __new_n = (data); <span class="comment">/* in-block scope variable */</span>\</div><div class="line">        <span class="keywordtype">size_t</span> __size_before;\</div><div class="line">        <a class="code" href="structrootsim__list.html">rootsim_list</a> *__l;\</div><div class="line">        __new_n-&gt;next = NULL;\</div><div class="line">        __new_n-&gt;prev = NULL;\</div><div class="line">        do {\</div><div class="line">            __l = (<a class="code" href="structrootsim__list.html">rootsim_list</a> *)(li);\</div><div class="line">            assert(__l);\</div><div class="line">            __size_before = __l-&gt;<a class="code" href="structrootsim__list.html#a39e1193dd4b00d86fcbfef6ecd3fd1d2">size</a>;\</div><div class="line">            if(__l-&gt;<a class="code" href="structrootsim__list.html#a39e1193dd4b00d86fcbfef6ecd3fd1d2">size</a> == 0) { <span class="comment">/* is the list empty? */</span>\</div><div class="line">                __l-&gt;head = __new_n;\</div><div class="line">                __l-&gt;tail = __new_n;\</div><div class="line">                break; <span class="comment">/* leave the inner do-while */</span>\</div><div class="line">            }\</div><div class="line">            __new_n-&gt;next = NULL; <span class="comment">/* Otherwise add at the end */</span>\</div><div class="line">            __new_n-&gt;prev = __l-&gt;<a class="code" href="structrootsim__list.html#a02ca8d3d74031b0eafef56b4f351bf30">tail</a>;\</div><div class="line">            ((__typeof__(data))(__l-&gt;<a class="code" href="structrootsim__list.html#a02ca8d3d74031b0eafef56b4f351bf30">tail</a>))-&gt;next = __new_n;\</div><div class="line">            __l-&gt;tail = __new_n;\</div><div class="line">        } <span class="keywordflow">while</span>(0);\</div><div class="line">        __l-&gt;size++;\</div><div class="line">        assert(__l-&gt;<a class="code" href="structrootsim__list.html#a39e1193dd4b00d86fcbfef6ecd3fd1d2">size</a> == (__size_before + 1));\</div><div class="line">    } <span class="keywordflow">while</span>(0)</div><div class="ttc" id="structrootsim__list_html_a02ca8d3d74031b0eafef56b4f351bf30"><div class="ttname"><a href="structrootsim__list.html#a02ca8d3d74031b0eafef56b4f351bf30">rootsim_list::tail</a></div><div class="ttdeci">void * tail</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00043">list.h:43</a></div></div>
-<div class="ttc" id="structrootsim__list_html"><div class="ttname"><a href="structrootsim__list.html">rootsim_list</a></div><div class="ttdoc">This structure defines a generic list. </div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00040">list.h:40</a></div></div>
-<div class="ttc" id="structrootsim__list_html_a39e1193dd4b00d86fcbfef6ecd3fd1d2"><div class="ttname"><a href="structrootsim__list.html#a39e1193dd4b00d86fcbfef6ecd3fd1d2">rootsim_list::size</a></div><div class="ttdeci">size_t size</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00041">list.h:41</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {    \</div><div class="line">        __typeof__(data) __new_n = (data); <span class="comment">/* in-block scope variable */</span>\</div><div class="line">        <span class="keywordtype">size_t</span> __size_before;\</div><div class="line">        <a class="code" href="structrootsim__list.html">rootsim_list</a> *__l;\</div><div class="line">        __new_n-&gt;next = NULL;\</div><div class="line">        __new_n-&gt;prev = NULL;\</div><div class="line">        do {\</div><div class="line">            __l = (<a class="code" href="structrootsim__list.html">rootsim_list</a> *)(li);\</div><div class="line">            assert(__l);\</div><div class="line">            __size_before = __l-&gt;size;\</div><div class="line">            if(__l-&gt;size == 0) { <span class="comment">/* is the list empty? */</span>\</div><div class="line">                __l-&gt;head = __new_n;\</div><div class="line">                __l-&gt;tail = __new_n;\</div><div class="line">                break; <span class="comment">/* leave the inner do-while */</span>\</div><div class="line">            }\</div><div class="line">            __new_n-&gt;next = NULL; <span class="comment">/* Otherwise add at the end */</span>\</div><div class="line">            __new_n-&gt;prev = __l-&gt;tail;\</div><div class="line">            ((__typeof__(data))(__l-&gt;tail))-&gt;next = __new_n;\</div><div class="line">            __l-&gt;tail = __new_n;\</div><div class="line">        } <span class="keywordflow">while</span>(0);\</div><div class="line">        __l-&gt;size++;\</div><div class="line">        assert(__l-&gt;size == (__size_before + 1));\</div><div class="line">    } <span class="keywordflow">while</span>(0)</div><div class="ttc" id="structrootsim__list_html"><div class="ttname"><a href="structrootsim__list.html">rootsim_list</a></div><div class="ttdoc">This structure defines a generic list. </div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00040">list.h:40</a></div></div>
 </div><!-- fragment -->
 <p>Definition at line <a class="el" href="list_8h_source.html#l00112">112</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
 
@@ -504,8 +423,7 @@ Typedefs</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {<a class="code" href="list_8h.html#a6ddda22ac69e59fec8ae238cdf24c3e8">\</a></div><div class="line"><a class="code" href="list_8h.html#a6ddda22ac69e59fec8ae238cdf24c3e8">		rootsim_list</a> *__l;\</div><div class="line">        size_t __size_before;\</div><div class="line">        __typeof__ (<a class="code" href="list_8h.html#a0da4b86f76acd6d3f307717f844b61d2">list</a>) __n;\</div><div class="line">        __typeof__ (<a class="code" href="list_8h.html#a0da4b86f76acd6d3f307717f844b61d2">list</a>) __n_next;\</div><div class="line">        __l = (<a class="code" href="structrootsim__list.html">rootsim_list</a> *)(<a class="code" href="list_8h.html#a0da4b86f76acd6d3f307717f844b61d2">list</a>);\</div><div class="line">        assert(__l);\</div><div class="line">        __size_before = __l-&gt;size;\</div><div class="line">        __n = __l-&gt;head;\</div><div class="line">        if(__n != NULL) {\</div><div class="line">            __l-&gt;<a class="code" href="structrootsim__list.html#ade6389bebff6c77742a7a8913092e338">head</a> = __n-&gt;next;\</div><div class="line">            if(__n-&gt;next != NULL) {\</div><div class="line">                __n-&gt;next-&gt;prev = NULL;\</div><div class="line">            }\</div><div class="line">            __n_next = __n-&gt;next;\</div><div class="line">            __n-&gt;next = (<span class="keywordtype">void</span> *)0xDEFEC8ED;\</div><div class="line">            __n-&gt;prev = (<span class="keywordtype">void</span> *)0xDEFEC8ED;\</div><div class="line">            __n = __n_next;\</div><div class="line">            __l-&gt;size--;\</div><div class="line">            assert(__l-&gt;size == (__size_before - 1));\</div><div class="line">        }\</div><div class="line">    } <span class="keywordflow">while</span>(0)</div><div class="ttc" id="list_8h_html_a6ddda22ac69e59fec8ae238cdf24c3e8"><div class="ttname"><a href="list_8h.html#a6ddda22ac69e59fec8ae238cdf24c3e8">rootsim_list</a></div><div class="ttdeci">struct rootsim_list rootsim_list</div><div class="ttdoc">This structure defines a generic list. </div></div>
-<div class="ttc" id="structrootsim__list_html_ade6389bebff6c77742a7a8913092e338"><div class="ttname"><a href="structrootsim__list.html#ade6389bebff6c77742a7a8913092e338">rootsim_list::head</a></div><div class="ttdeci">void * head</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00042">list.h:42</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {<a class="code" href="list_8h.html#a6ddda22ac69e59fec8ae238cdf24c3e8">\</a></div><div class="line"><a class="code" href="list_8h.html#a6ddda22ac69e59fec8ae238cdf24c3e8">		rootsim_list</a> *__l;\</div><div class="line">        size_t __size_before;\</div><div class="line">        __typeof__ (<a class="code" href="list_8h.html#a0da4b86f76acd6d3f307717f844b61d2">list</a>) __n;\</div><div class="line">        __typeof__ (<a class="code" href="list_8h.html#a0da4b86f76acd6d3f307717f844b61d2">list</a>) __n_next;\</div><div class="line">        __l = (<a class="code" href="structrootsim__list.html">rootsim_list</a> *)(<a class="code" href="list_8h.html#a0da4b86f76acd6d3f307717f844b61d2">list</a>);\</div><div class="line">        assert(__l);\</div><div class="line">        __size_before = __l-&gt;size;\</div><div class="line">        __n = __l-&gt;head;\</div><div class="line">        if(__n != NULL) {\</div><div class="line">            __l-&gt;head = __n-&gt;next;\</div><div class="line">            if(__n-&gt;next != NULL) {\</div><div class="line">                __n-&gt;next-&gt;prev = NULL;\</div><div class="line">            }\</div><div class="line">            __n_next = __n-&gt;next;\</div><div class="line">            __n-&gt;next = (<span class="keywordtype">void</span> *)0xDEFEC8ED;\</div><div class="line">            __n-&gt;prev = (<span class="keywordtype">void</span> *)0xDEFEC8ED;\</div><div class="line">            __n = __n_next;\</div><div class="line">            __l-&gt;size--;\</div><div class="line">            assert(__l-&gt;size == (__size_before - 1));\</div><div class="line">        }\</div><div class="line">    } <span class="keywordflow">while</span>(0)</div><div class="ttc" id="list_8h_html_a6ddda22ac69e59fec8ae238cdf24c3e8"><div class="ttname"><a href="list_8h.html#a6ddda22ac69e59fec8ae238cdf24c3e8">rootsim_list</a></div><div class="ttdeci">struct rootsim_list rootsim_list</div><div class="ttdoc">This structure defines a generic list. </div></div>
 <div class="ttc" id="list_8h_html_a0da4b86f76acd6d3f307717f844b61d2"><div class="ttname"><a href="list_8h.html#a0da4b86f76acd6d3f307717f844b61d2">list</a></div><div class="ttdeci">#define list(type)</div><div class="ttdoc">Declare a &quot;typed&quot; list. This is a pointer to type, but the variable will instead reference a struct r...</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00051">list.h:51</a></div></div>
 <div class="ttc" id="structrootsim__list_html"><div class="ttname"><a href="structrootsim__list.html">rootsim_list</a></div><div class="ttdoc">This structure defines a generic list. </div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00040">list.h:40</a></div></div>
 </div><!-- fragment -->
@@ -535,42 +453,6 @@ Typedefs</h2></td></tr>
 </dl>
 
 <p>Definition at line <a class="el" href="list_8h_source.html#l00095">95</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="af39ba1612dbf2ed0f90e335a2d9a8a04"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define list_size</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><a class="el" href="list_8h.html#a0da4b86f76acd6d3f307717f844b61d2">list</a></td><td>)</td>
-          <td>&#160;&#160;&#160;((<a class="el" href="structrootsim__list.html">rootsim_list</a> *)(<a class="el" href="list_8h.html#a0da4b86f76acd6d3f307717f844b61d2">list</a>))-&gt;size</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="list_8h_source.html#l00297">297</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ab3fb8b3578a6b57bf7fbf84824be9055"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define list_sizeof</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><a class="el" href="list_8h.html#a0da4b86f76acd6d3f307717f844b61d2">list</a></td><td>)</td>
-          <td>&#160;&#160;&#160;((struct <a class="el" href="structrootsim__list.html">rootsim_list</a> *)<a class="el" href="list_8h.html#a0da4b86f76acd6d3f307717f844b61d2">list</a>)-&gt;size</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="list_8h_source.html#l00067">67</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
 
 </div>
 </div>
@@ -646,36 +528,6 @@ Typedefs</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a9461ad805b46f1975bbe62b43dbadfcf"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define my_offsetof</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">st, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">m&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td>&#160;&#160;&#160;((size_t)( (unsigned char *)&amp;((st)-&gt;m ) - (unsigned char *)(st)))</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>This macro is a slightly-different implementation of the standard offsetof macro. </p>
-
-<p>Definition at line <a class="el" href="list_8h_source.html#l00048">48</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a22ab8233fb6033f97f2eec8d6a21d99f"></a>
 <div class="memitem">
 <div class="memproto">
@@ -689,25 +541,9 @@ Typedefs</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">(type *)({ \</div><div class="line">                void *__lmptr; \</div><div class="line">                __lmptr = (<span class="keywordtype">void</span> *)<a class="code" href="dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b">rsalloc</a>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structrootsim__list.html">rootsim_list</a>)); \</div><div class="line">                bzero(__lmptr, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structrootsim__list.html">rootsim_list</a>));\</div><div class="line">                __lmptr;\</div><div class="line">            })</div><div class="ttc" id="dymelor_8h_html_a9e80751b3934b0cd4411695f6743016b"><div class="ttname"><a href="dymelor_8h.html#a9e80751b3934b0cd4411695f6743016b">rsalloc</a></div><div class="ttdeci">void * rsalloc(size_t)</div><div class="ttdef"><b>Definition:</b> <a href="platform_8c_source.html#l00041">platform.c:41</a></div></div>
-<div class="ttc" id="structrootsim__list_html"><div class="ttname"><a href="structrootsim__list.html">rootsim_list</a></div><div class="ttdoc">This structure defines a generic list. </div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00040">list.h:40</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line">(type *)({ \</div><div class="line">                void *__lmptr; \</div><div class="line">                __lmptr = (<span class="keywordtype">void</span> *)rsalloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structrootsim__list.html">rootsim_list</a>)); \</div><div class="line">                bzero(__lmptr, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structrootsim__list.html">rootsim_list</a>));\</div><div class="line">                __lmptr;\</div><div class="line">            })</div><div class="ttc" id="structrootsim__list_html"><div class="ttname"><a href="structrootsim__list.html">rootsim_list</a></div><div class="ttdoc">This structure defines a generic list. </div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00040">list.h:40</a></div></div>
 </div><!-- fragment --><p>This macro allocates a struct <a class="el" href="structrootsim__list.html" title="This structure defines a generic list. ">rootsim_list</a> object and cast it to the type pointer. It can be used to mimic the C++ syntax of templated lists, like: </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;list(int) = new_list(int);</div></div><!-- fragment --> 
 <p>Definition at line <a class="el" href="list_8h_source.html#l00059">59</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Typedef Documentation</h2>
-<a class="anchor" id="a6ddda22ac69e59fec8ae238cdf24c3e8"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef struct <a class="el" href="structrootsim__list.html">rootsim_list</a>  <a class="el" href="structrootsim__list.html">rootsim_list</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>This structure defines a generic list. </p>
 
 </div>
 </div>
