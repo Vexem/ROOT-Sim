@@ -195,7 +195,7 @@ static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 <p>This module implements the message delivery support functions. Message delivery is carried out asynchronously via MPI, therefore we need a way to let MPI notify us when a certain message has been delivered to the destination simulation kernel and is now in charge of it.</p>
 <p>This module implements a set of per-remote-kernel queues in which each remote message is registered before an Isend operation is initiated.</p>
 <p>MPI will eventually notify us of the delivery of that message. By scanning the outgoing queues, we can know what messages have reached destination and remove the corresponding entry.</p>
-<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (C) 2008-2018 HPDCS Group <a href="https://hpdcs.github.io">https://hpdcs.github.io</a></dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (C) 2008-2019 HPDCS Group <a href="https://hpdcs.github.io">https://hpdcs.github.io</a></dd></dl>
 <p>This file is part of ROOT-Sim (ROme OpTimistic Simulator).</p>
 <p>ROOT-Sim is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; only version 3 of the License applies.</p>
 <p>ROOT-Sim is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
