@@ -20,6 +20,7 @@ var scheduler_8h =
     [ "reset_min_in_transit", "scheduler_8h.html#a0f2f594a18880f3097d2ae28642ce14e", null ],
     [ "rollback_control_message", "scheduler_8h.html#ac54b610f24de85b6444f61c4c094242c", null ],
     [ "schedule", "scheduler_8h.html#ac48128e72b303ea22d8ec641a9516b15", null ],
+    [ "schedule_on_init", "scheduler_8h.html#aaa47fe5008a0fb6cf3accc6086e8bbf4", null ],
     [ "scheduler_fini", "scheduler_8h.html#a8ed8d4a13d66c1d3a221fb82e72f8e0e", null ],
     [ "scheduler_init", "scheduler_8h.html#ab258cc2856e5f6bb125907cc23358fbd", null ],
     [ "update_min_in_transit", "scheduler_8h.html#adcd431b5e8c4f500132c3e27921bc6c1", null ],

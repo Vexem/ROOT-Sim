@@ -2,6 +2,7 @@ var searchData=
 [
   ['ecs_2ec',['ecs.c',['../ecs_8c.html',1,'']]],
   ['ecs_2eh',['ecs.h',['../ecs_8h.html',1,'']]],
+  ['edge',['edge',['../struct__topology__global__t.html#a6b1f6b1d0fee2261fe7b4ca51d6513e4',1,'_topology_global_t']]],
   ['end_5fcomputing',['end_computing',['../main_8c.html#af2ac8c142556588d87e6c069a4ca9894',1,'main.c']]],
   ['enter_5fred_5fphase',['enter_red_phase',['../communication_2gvt_8c.html#aa6de31111fcebe2242dc5af0a17f5d44',1,'enter_red_phase(void):&#160;gvt.c'],['../communication_2gvt_8h.html#aa6de31111fcebe2242dc5af0a17f5d44',1,'enter_red_phase(void):&#160;gvt.c']]],
   ['exec_5fcontext_5ft',['exec_context_t',['../x86_2jmp_8h.html#ab9635d076084c7159b922aa3f22d7e1e',1,'jmp.h']]],

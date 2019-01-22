@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['obstacles_5ft',['obstacles_t',['../structobstacles__t.html',1,'obstacles_t'],['../ROOT-Sim_8h.html#a6fba9eb42f1e917ac2454a28b873351c',1,'obstacles_t():&#160;ROOT-Sim.h']]],
   ['ongvt',['OnGVT',['../structlp__struct.html#abfb6428695f3564d68649bf9622e9db3',1,'lp_struct']]],
   ['opt_5ffirst',['OPT_FIRST',['../init_8c.html#adf856969b3967e4a20be18a3eda24afcad41a0c3f88d8500b7dedbfbd88eec174',1,'init.c']]],
   ['os_5ftid',['os_tid',['../thread_8c.html#aaa70997ae180af9748d3ec1e883c1c62',1,'thread.c']]],

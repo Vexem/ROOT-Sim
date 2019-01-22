@@ -10,7 +10,7 @@ var struct__msg__t =
     [ "rendezvous_mark", "struct__msg__t.html#a0574e7d28eb3da6c8a3726f349e6b5e8", null ],
     [ "send_time", "struct__msg__t.html#ab91b58e69cff9d4197edc2941db3583c", null ],
     [ "sender", "struct__msg__t.html#a8bb4216be85b5548ed89a485dec528f2", null ],
-    [ "size", "struct__msg__t.html#a62696f09be6a4c3607462cd7a343bf4c", null ],
+    [ "size", "struct__msg__t.html#accd7f1d29511c745cc3c36f864ff537b", null ],
     [ "timestamp", "struct__msg__t.html#a5b6dacf8e63a2fe8aef2687e468b33cd", null ],
     [ "type", "struct__msg__t.html#aec75985b18e7f60f076a0a3f50ad3700", null ]
 ];

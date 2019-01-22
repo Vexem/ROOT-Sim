@@ -5,6 +5,7 @@ var searchData=
   ['ccgs_5fcompleted_5fsimulation',['ccgs_completed_simulation',['../ccgs_8c.html#afe20674513ecbac145c9bd20d2d949d4',1,'ccgs.c']]],
   ['check_5ftermination_5fmode',['check_termination_mode',['../struct__simulation__configuration.html#ab7a14c879df91c28f45ee074cf389c4b',1,'_simulation_configuration']]],
   ['checkpointing',['checkpointing',['../struct__simulation__configuration.html#a130dbef5867d3f9c5c4e62d6275c30be',1,'_simulation_configuration']]],
+  ['chkp_5fsize',['chkp_size',['../struct__topology__global__t.html#a5b7cdd5dcd9b0c65c911ae50b0bb487f',1,'_topology_global_t']]],
   ['ckpt_5fmode',['ckpt_mode',['../struct__simulation__configuration.html#ac2b107327c0595c21dcd23bf397a4d45',1,'_simulation_configuration']]],
   ['ckpt_5fperiod',['ckpt_period',['../struct__simulation__configuration.html#af43693114b89878cdcc49974052c30b0',1,'_simulation_configuration::ckpt_period()'],['../structlp__struct.html#aedc9c599caf96b5a60b00ce47a567b6f',1,'lp_struct::ckpt_period()']]],
   ['context',['context',['../structlp__struct.html#a9fe22bc7520960bcc8420379bda6bd75',1,'lp_struct']]],

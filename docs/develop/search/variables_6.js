@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['geometry',['geometry',['../struct__topology__global__t.html#ae83c7ac8de9ae02702ece8264466ac5c',1,'_topology_global_t']]],
   ['gid',['gid',['../structlp__struct.html#a0bb529c8235ddc8b8a02958046560232',1,'lp_struct']]],
   ['global_5fstats',['global_stats',['../statistics_8c.html#a157b98456279d00186e47b5a02e98430',1,'statistics.c']]],
   ['gset',['gset',['../struct__numerical__state.html#a17f123e8fe5b3bc26f8ed33f55bd8728',1,'_numerical_state']]],

@@ -143,6 +143,8 @@ $(document).ready(function(){initNavTree('init_8c.html','');});
 <code>#include &lt;<a class="el" href="mm_8h_source.html">mm/mm.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="statistics_8h_source.html">statistics/statistics.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="numerical_8h_source.html">lib/numerical.h</a>&gt;</code><br />
+<code>#include &lt;lib/topology.h&gt;</code><br />
+<code>#include &lt;lib/abm_layer.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="serial_8h_source.html">serial/serial.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="mpi_8h_source.html">communication/mpi.h</a>&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -152,34 +154,35 @@ $(document).ready(function(){initNavTree('init_8c.html','');});
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="init_8c__incl.png" border="0" usemap="#src_2core_2init_8c" alt=""/></div>
 <map name="src_2core_2init_8c" id="src_2core_2init_8c">
-<area shape="rect" id="node11" href="ROOT-Sim_8h.html" title="ROOT&#45;Sim header for model development. " alt="" coords="2015,632,2114,659"/>
-<area shape="rect" id="node14" href="thread_8h.html" title="Generic thread management facilities. " alt="" coords="333,632,441,659"/>
-<area shape="rect" id="node19" href="communication_8h.html" title="Communication Routines. " alt="" coords="1424,319,1660,345"/>
-<area shape="rect" id="node20" href="core_8h.html" title="Core ROOT&#45;Sim functionalities. " alt="" coords="1427,557,1521,584"/>
-<area shape="rect" id="node23" href="numerical_8h.html" title="Numerical Library. " alt="" coords="1014,632,1129,659"/>
-<area shape="rect" id="node24" href="init_8h.html" title="Initialization routines. " alt="" coords="1299,80,1385,107"/>
-<area shape="rect" id="node25" href="statistics_8h.html" title="Statistics module. " alt="" coords="1103,155,1255,181"/>
-<area shape="rect" id="node26" href="process_8h.html" title="LP control blocks. " alt="" coords="1271,229,1421,256"/>
-<area shape="rect" id="node27" href="state_8h.html" title="LP state management. " alt="" coords="2016,483,2113,509"/>
-<area shape="rect" id="node28" href="mm_8h.html" title="Memory Manager main header. " alt="" coords="453,319,543,345"/>
-<area shape="rect" id="node31" href="bitmap_8h.html" title="Bitmap data type. " alt="" coords="1743,483,1890,509"/>
-<area shape="rect" id="node34" href="ecs_8h.html" title="Event &amp; Cross State Synchornization. " alt="" coords="1892,319,1979,345"/>
-<area shape="rect" id="node43" href="gvt_2gvt_8h.html" title="Global Virtual Time. " alt="" coords="2255,408,2333,435"/>
-<area shape="rect" id="node44" href="ccgs_8h.html" title="Consistent and Committed Global State. " alt="" coords="2044,229,2131,256"/>
-<area shape="rect" id="node45" href="scheduler_8h.html" title="The ROOT&#45;Sim scheduler main module header. " alt="" coords="1660,80,1821,107"/>
-<area shape="rect" id="node48" href="serial_8h.html" title="Serial scheduler. " alt="" coords="2329,557,2435,584"/>
-<area shape="rect" id="node49" href="mpi_8h.html" title="MPI Support Module. " alt="" coords="708,80,869,107"/>
-<area shape="rect" id="node15" href="atomic_8h.html" title="Atomic operations. " alt="" coords="155,707,265,733"/>
-<area shape="rect" id="node35" href="list_8h.html" title="Generic Lists. " alt="" coords="726,319,846,345"/>
-<area shape="rect" id="node38" href="msgchannel_8h.html" title="A (M, 1) channel for messages. " alt="" coords="1319,483,1499,509"/>
-<area shape="rect" id="node39" href="ult_8h.html" title="User&#45;Level Threads Headers. " alt="" coords="1734,319,1817,345"/>
-<area shape="rect" id="node41" href="cross__state__manager_8h.html" title="Per&#45;thread page table. " alt="" coords="1185,304,1350,360"/>
-<area shape="rect" id="node30" href="dymelor_8h.html" title="Dynamic Memory Logger and Restorer (DyMeLoR) " alt="" coords="719,408,834,435"/>
-<area shape="rect" id="node33" href="timer_8h.html" title="Timers. " alt="" coords="871,483,970,509"/>
-<area shape="rect" id="node40" href="jmp_8h.html" title="Architecture&#45;independent ULT header. " alt="" coords="1730,408,1821,435"/>
-<area shape="rect" id="node46" href="queues_8h.html" title="Message queueing subsystem. " alt="" coords="1280,155,1412,181"/>
-<area shape="rect" id="node47" href="stf_8h.html" title="O(n) scheduling algorithm. " alt="" coords="1639,155,1754,181"/>
-<area shape="rect" id="node50" href="wnd_8h.html" title="Message delivery support. " alt="" coords="694,229,857,256"/>
+<area shape="rect" id="node11" href="ROOT-Sim_8h.html" title="ROOT&#45;Sim header for model development. " alt="" coords="1817,781,1915,808"/>
+<area shape="rect" id="node14" href="thread_8h.html" title="Generic thread management facilities. " alt="" coords="252,781,360,808"/>
+<area shape="rect" id="node19" href="communication_8h.html" title="Communication Routines. " alt="" coords="983,319,1219,345"/>
+<area shape="rect" id="node20" href="core_8h.html" title="Core ROOT&#45;Sim functionalities. " alt="" coords="1236,707,1331,733"/>
+<area shape="rect" id="node23" href="init_8h.html" title="Initialization routines. " alt="" coords="1883,80,1969,107"/>
+<area shape="rect" id="node24" href="statistics_8h.html" title="Statistics module. " alt="" coords="1754,155,1906,181"/>
+<area shape="rect" id="node25" href="process_8h.html" title="LP control blocks. " alt="" coords="1559,229,1709,256"/>
+<area shape="rect" id="node26" href="state_8h.html" title="LP state management. " alt="" coords="2152,483,2249,509"/>
+<area shape="rect" id="node27" href="numerical_8h.html" title="Numerical Library. " alt="" coords="2242,557,2357,584"/>
+<area shape="rect" id="node28" href="abm__layer_8h_source.html" title="lib/abm_layer.h" alt="" coords="2048,557,2167,584"/>
+<area shape="rect" id="node29" href="topology_8h_source.html" title="lib/topology.h" alt="" coords="2381,557,2487,584"/>
+<area shape="rect" id="node31" href="bitmap_8h.html" title="Bitmap data type. " alt="" coords="1866,632,2013,659"/>
+<area shape="rect" id="node33" href="mm_8h.html" title="Memory Manager main header. " alt="" coords="414,319,505,345"/>
+<area shape="rect" id="node36" href="ecs_8h.html" title="Event &amp; Cross State Synchornization. " alt="" coords="1995,319,2081,345"/>
+<area shape="rect" id="node43" href="gvt_2gvt_8h.html" title="Global Virtual Time. " alt="" coords="2104,408,2183,435"/>
+<area shape="rect" id="node44" href="ccgs_8h.html" title="Consistent and Committed Global State. " alt="" coords="2197,229,2284,256"/>
+<area shape="rect" id="node45" href="scheduler_8h.html" title="The ROOT&#45;Sim scheduler main module header. " alt="" coords="1396,80,1557,107"/>
+<area shape="rect" id="node48" href="serial_8h.html" title="Serial scheduler. " alt="" coords="1815,483,1922,509"/>
+<area shape="rect" id="node49" href="mpi_8h.html" title="MPI Support Module. " alt="" coords="635,80,796,107"/>
+<area shape="rect" id="node15" href="atomic_8h.html" title="Atomic operations. " alt="" coords="133,856,244,883"/>
+<area shape="rect" id="node37" href="list_8h.html" title="Generic Lists. " alt="" coords="687,319,807,345"/>
+<area shape="rect" id="node40" href="msgchannel_8h.html" title="A (M, 1) channel for messages. " alt="" coords="1423,483,1603,509"/>
+<area shape="rect" id="node41" href="ult_8h.html" title="User&#45;Level Threads Headers. " alt="" coords="1293,319,1375,345"/>
+<area shape="rect" id="node42" href="cross__state__manager_8h.html" title="Per&#45;thread page table. " alt="" coords="1551,304,1717,360"/>
+<area shape="rect" id="node30" href="jsmn__helper_8h_source.html" title="lib/jsmn_helper.h" alt="" coords="2459,632,2588,659"/>
+<area shape="rect" id="node35" href="dymelor_8h.html" title="Dynamic Memory Logger and Restorer (DyMeLoR) " alt="" coords="731,408,846,435"/>
+<area shape="rect" id="node46" href="queues_8h.html" title="Message queueing subsystem. " alt="" coords="1485,155,1617,181"/>
+<area shape="rect" id="node47" href="stf_8h.html" title="O(n) scheduling algorithm. " alt="" coords="1346,155,1461,181"/>
+<area shape="rect" id="node50" href="wnd_8h.html" title="Message delivery support. " alt="" coords="497,229,659,256"/>
 </map>
 </div>
 </div>
@@ -310,10 +313,10 @@ Roberto Vitali </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">case</span> label:                                 \</div><div class="line">    ({                                      \</div><div class="line">        unsigned __i = 1;                           \</div><div class="line">        while(1) {                              \</div><div class="line">            if(strcmp(arg, <a class="code" href="init_8c.html#a5af1a6ba6e92d6223988600cdf45f479">param_to_text</a>[key - <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afcad41a0c3f88d8500b7dedbfbd88eec174">OPT_FIRST</a>][__i]) == 0) { \</div><div class="line">                var = __i;                      \</div><div class="line">                break;                          \</div><div class="line">            }                               \</div><div class="line">            if(!<a class="code" href="init_8c.html#a5af1a6ba6e92d6223988600cdf45f479">param_to_text</a>[key - <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afcad41a0c3f88d8500b7dedbfbd88eec174">OPT_FIRST</a>][++__i])          \</div><div class="line">                malformed_option_failure();             \</div><div class="line">        }                                   \</div><div class="line">    });                                     \</div><div class="line">    break</div><div class="ttc" id="init_8c_html_adf856969b3967e4a20be18a3eda24afcad41a0c3f88d8500b7dedbfbd88eec174"><div class="ttname"><a href="init_8c.html#adf856969b3967e4a20be18a3eda24afcad41a0c3f88d8500b7dedbfbd88eec174">OPT_FIRST</a></div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00065">init.c:65</a></div></div>
-<div class="ttc" id="init_8c_html_a5af1a6ba6e92d6223988600cdf45f479"><div class="ttname"><a href="init_8c.html#a5af1a6ba6e92d6223988600cdf45f479">param_to_text</a></div><div class="ttdeci">const char *const param_to_text[][5]</div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00099">init.c:99</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">case</span> label:                                 \</div><div class="line">    ({                                      \</div><div class="line">        unsigned __i = 1;                           \</div><div class="line">        while(1) {                              \</div><div class="line">            if(strcmp(arg, <a class="code" href="init_8c.html#a5af1a6ba6e92d6223988600cdf45f479">param_to_text</a>[key - <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afcad41a0c3f88d8500b7dedbfbd88eec174">OPT_FIRST</a>][__i]) == 0) { \</div><div class="line">                var = __i;                      \</div><div class="line">                break;                          \</div><div class="line">            }                               \</div><div class="line">            if(!<a class="code" href="init_8c.html#a5af1a6ba6e92d6223988600cdf45f479">param_to_text</a>[key - <a class="code" href="init_8c.html#adf856969b3967e4a20be18a3eda24afcad41a0c3f88d8500b7dedbfbd88eec174">OPT_FIRST</a>][++__i])          \</div><div class="line">                malformed_option_failure();             \</div><div class="line">        }                                   \</div><div class="line">    });                                     \</div><div class="line">    break</div><div class="ttc" id="init_8c_html_adf856969b3967e4a20be18a3eda24afcad41a0c3f88d8500b7dedbfbd88eec174"><div class="ttname"><a href="init_8c.html#adf856969b3967e4a20be18a3eda24afcad41a0c3f88d8500b7dedbfbd88eec174">OPT_FIRST</a></div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00067">init.c:67</a></div></div>
+<div class="ttc" id="init_8c_html_a5af1a6ba6e92d6223988600cdf45f479"><div class="ttname"><a href="init_8c.html#a5af1a6ba6e92d6223988600cdf45f479">param_to_text</a></div><div class="ttdeci">const char *const param_to_text[][5]</div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00101">init.c:101</a></div></div>
 </div><!-- fragment -->
-<p>Definition at line <a class="el" href="init_8c_source.html#l00186">186</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<p>Definition at line <a class="el" href="init_8c_source.html#l00188">188</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
 </div>
 </div>
@@ -341,7 +344,7 @@ Roberto Vitali </dd></dl>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">({                                                      \</div><div class="line">        unsigned <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> __value;                                     \</div><div class="line">        char *__endptr;                                             \</div><div class="line">        __value = strtoull(arg, &amp;__endptr, 10);                                 \</div><div class="line">        if(!(*arg != <span class="charliteral">&#39;\0&#39;</span> &amp;&amp; *__endptr == <span class="charliteral">&#39;\0&#39;</span> &amp;&amp; (__value &gt; low || __value == low) &amp;&amp; __value &lt;= high)) {  \</div><div class="line">            malformed_option_failure();                                 \</div><div class="line">        }                                                   \</div><div class="line">        __value;                                                \</div><div class="line">    })</div></div><!-- fragment -->
-<p>Definition at line <a class="el" href="init_8c_source.html#l00203">203</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<p>Definition at line <a class="el" href="init_8c_source.html#l00205">205</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
 </div>
 </div>
@@ -363,7 +366,7 @@ Roberto Vitali </dd></dl>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="init_8c_source.html#l00064">64</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<p>Definition at line <a class="el" href="init_8c_source.html#l00066">66</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
 </div>
 </div>
@@ -403,7 +406,7 @@ Alessandro Pellegrini</dd></dl>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="init_8c_source.html#l00394">394</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<p>Definition at line <a class="el" href="init_8c_source.html#l00396">396</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
 <p><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -498,7 +501,7 @@ Alessandro Pellegrini</dd></dl>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div><div class="line">        {0, 0, <span class="stringliteral">&quot;Model specific options&quot;</span>, 0},</div><div class="line">        {0}</div><div class="line">}</div></div><!-- fragment -->
-<p>Definition at line <a class="el" href="init_8c_source.html#l00378">378</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<p>Definition at line <a class="el" href="init_8c_source.html#l00380">380</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
 </div>
 </div>
@@ -520,7 +523,7 @@ Alessandro Pellegrini</dd></dl>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div><div class="line">    {<span class="stringliteral">&quot;np&quot;</span>,          OPT_NP,         <span class="stringliteral">&quot;VALUE&quot;</span>,    0,      <span class="stringliteral">&quot;Number of total cores being used by the simulation&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;nprc&quot;</span>,        OPT_NPRC,       <span class="stringliteral">&quot;VALUE&quot;</span>,    0,      <span class="stringliteral">&quot;Total number of Logical Processes being lunched at simulation startup&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;output-dir&quot;</span>,      OPT_OUTPUT_DIR,     <span class="stringliteral">&quot;PATH&quot;</span>,     0,      <span class="stringliteral">&quot;Path to a folder where execution statistics are stored. If not present, it is created&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;scheduler&quot;</span>,       OPT_SCHEDULER,      <span class="stringliteral">&quot;TYPE&quot;</span>,     0,      <span class="stringliteral">&quot;LP Scheduling algorithm. Supported values are: stf&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;npwd&quot;</span>,        OPT_NPWD,       0,      0,      <span class="stringliteral">&quot;Non Piece-Wise-Deterministic simulation model. See manpage for accurate description&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;p&quot;</span>,           OPT_P,          <span class="stringliteral">&quot;VALUE&quot;</span>,    0,      <span class="stringliteral">&quot;Checkpointing interval&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;full&quot;</span>,        OPT_FULL,       0,      0,      <span class="stringliteral">&quot;Take only full logs&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;inc&quot;</span>,         OPT_INC,        0,      0,      <span class="stringliteral">&quot;Take only incremental logs (still to be released)&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;A&quot;</span>,           OPT_A,          0,      0,      <span class="stringliteral">&quot;Autonomic subsystem: set checkpointing interval and log mode automatically at runtime (still to be released)&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;gvt&quot;</span>,         OPT_GVT,        <span class="stringliteral">&quot;VALUE&quot;</span>,    0,      <span class="stringliteral">&quot;Time between two GVT reductions (in milliseconds)&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;cktrm-mode&quot;</span>,      OPT_CKTRM_MODE,     <span class="stringliteral">&quot;TYPE&quot;</span>,     0,      <span class="stringliteral">&quot;Termination Detection mode. Supported values: normal, incremental&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;gvt-snapshot-cycles&quot;</span>, OPT_GVT_SNAPSHOT_CYCLES, <span class="stringliteral">&quot;VALUE&quot;</span>,   0,      <span class="stringliteral">&quot;Termination detection is invoked after this number of GVT reductions&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;simulation-time&quot;</span>, OPT_SIMULATION_TIME,    <span class="stringliteral">&quot;VALUE&quot;</span>,    0,      <span class="stringliteral">&quot;Halt the simulation when all LPs reach this logical time. 0 means infinite&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;lps-distribution&quot;</span>,    OPT_LPS_DISTRIBUTION,   <span class="stringliteral">&quot;TYPE&quot;</span>,     0,      <span class="stringliteral">&quot;LPs distributions over simulation kernels policies. Supported values: block, circular&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;deterministic-seed&quot;</span>,  OPT_DETERMINISTIC_SEED, 0,      0,      <span class="stringliteral">&quot;Do not change the initial random seed for LPs. Enforces different deterministic simulation runs&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;verbose&quot;</span>,     OPT_VERBOSE,        <span class="stringliteral">&quot;TYPE&quot;</span>,     0,      <span class="stringliteral">&quot;Verbose execution&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;stats&quot;</span>,       OPT_STATS,      <span class="stringliteral">&quot;TYPE&quot;</span>,     0,      <span class="stringliteral">&quot;Level of detail in the output statistics&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;seed&quot;</span>,        OPT_SEED,       <span class="stringliteral">&quot;VALUE&quot;</span>,    0,      <span class="stringliteral">&quot;Manually specify the initial random seed&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;serial&quot;</span>,      OPT_SERIAL,     0,      0,      <span class="stringliteral">&quot;Run a serial simulation (using Calendar Queues)&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;sequential&quot;</span>,      OPT_SERIAL,     0,      OPTION_ALIAS,   NULL, 0},</div><div class="line">    {<span class="stringliteral">&quot;no-core-binding&quot;</span>, OPT_NO_CORE_BINDING,    0,      0,      <span class="stringliteral">&quot;Disable the binding of threads to specific physical processing cores&quot;</span>, 0},</div><div class="line"></div><div class="line"></div><div class="line">    {<span class="stringliteral">&quot;no-preemption&quot;</span>,   OPT_PREEMPTION,     0,      0,      <span class="stringliteral">&quot;Disable Preemptive Time Warp&quot;</span>, 0},</div><div class="line"></div><div class="line">    {0}</div><div class="line">}</div></div><!-- fragment -->
-<p>Definition at line <a class="el" href="init_8c_source.html#l00151">151</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<p>Definition at line <a class="el" href="init_8c_source.html#l00153">153</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
 </div>
 </div>
@@ -535,7 +538,7 @@ Alessandro Pellegrini</dd></dl>
 </div><div class="memdoc">
 <p>This array contains the stringified version of the parameter values ROOT-Sim accepts. You can index the first level of the array using the enum param_codes while for the second level you have to refer to the enumerations listed in relevant modules headers. </p>
 
-<p>Definition at line <a class="el" href="init_8c_source.html#l00099">99</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<p>Definition at line <a class="el" href="init_8c_source.html#l00101">101</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
 </div>
 </div>

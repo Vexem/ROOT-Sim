@@ -8,7 +8,7 @@ var searchData=
   ['sim_5ferror',['sim_error',['../core_8c.html#a2307c8e62088538255ae65a12861b61a',1,'core.c']]],
   ['simulation_5ftime',['simulation_time',['../struct__simulation__configuration.html#a44b41ab09fa7fd1522c68b4f2618087b',1,'_simulation_configuration']]],
   ['simulation_5ftimer',['simulation_timer',['../statistics_8c.html#a2bb6e82a21ec241a0f3282d066c3aa3b',1,'statistics.c']]],
-  ['size',['size',['../struct__outgoing__t.html#a83385e3a57fb73a93fa57120121cdb2e',1,'_outgoing_t::size()'],['../struct__msg__t.html#a62696f09be6a4c3607462cd7a343bf4c',1,'_msg_t::size()']]],
+  ['size',['size',['../struct__outgoing__t.html#a83385e3a57fb73a93fa57120121cdb2e',1,'_outgoing_t::size()'],['../struct__msg__t.html#accd7f1d29511c745cc3c36f864ff537b',1,'_msg_t::size()']]],
   ['snapshot',['snapshot',['../struct__simulation__configuration.html#a56cc151db02f0a2828f16ec115aaffef',1,'_simulation_configuration']]],
   ['snapshot_5fcycles',['snapshot_cycles',['../fossil_8c.html#a602ebac68bf675e61487f067c18c0386',1,'fossil.c']]],
   ['stack',['stack',['../structlp__struct.html#ae5442b247f230ac414579bfa7a39a488',1,'lp_struct']]],

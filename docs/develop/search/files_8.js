@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['jmp_2eh',['jmp.h',['../jmp_8h.html',1,'']]],
-  ['jmp_2eh',['jmp.h',['../x86_2jmp_8h.html',1,'']]]
+  ['init_2ec',['init.c',['../init_8c.html',1,'']]],
+  ['init_2eh',['init.h',['../init_8h.html',1,'']]]
 ];

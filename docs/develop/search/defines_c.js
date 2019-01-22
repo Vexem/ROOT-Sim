@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['safe_5fasprintf',['safe_asprintf',['../statistics_8c.html#a22dbd30d69ade960a0cf1feadab4601c',1,'statistics.c']]],
-  ['set_5fjmp',['set_jmp',['../x86_2jmp_8h.html#a27b53df10e215ef74cf2825bd336b363',1,'jmp.h']]],
-  ['slab_5fmsg_5fsize',['SLAB_MSG_SIZE',['../communication_8h.html#a14ef486128b10eab3ff55b61b9579bab',1,'communication.h']]],
-  ['spinlock_5finit',['spinlock_init',['../atomic_8h.html#a05f9af11a41e8b4f6c8fce373a13ec68',1,'atomic.h']]],
-  ['startup_5ftime',['STARTUP_TIME',['../core_8h.html#aead7ed0cf8b9db1b998c75f37c498c6c',1,'core.h']]]
+  ['thread_5fbarrier_5freset',['thread_barrier_reset',['../thread_8h.html#a06110ec9343614ebb501cae5b4d3bd20',1,'thread.h']]],
+  ['timer_5ftostring',['timer_tostring',['../timer_8h.html#a58c5258939b6238ab8b2a0888eca03b0',1,'timer.h']]],
+  ['to_5fglobal_5ftid',['to_global_tid',['../thread_8h.html#a2f06b13eaa2b92d5296d22c524a09998',1,'thread.h']]]
 ];

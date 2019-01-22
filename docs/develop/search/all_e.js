@@ -7,6 +7,8 @@ var searchData=
   ['n_5fprc_5fper_5fthread',['n_prc_per_thread',['../scheduler_8c.html#a9b995a5cf4be5b0d1d548409c4e251a9',1,'n_prc_per_thread():&#160;scheduler.c'],['../scheduler_8h.html#a9b995a5cf4be5b0d1d548409c4e251a9',1,'n_prc_per_thread():&#160;scheduler.c']]],
   ['n_5fprc_5ftot',['n_prc_tot',['../core_8c.html#a2e17e8f5ce1357e19e56d5535f897851',1,'n_prc_tot():&#160;core.c'],['../ROOT-Sim_8h.html#a2e17e8f5ce1357e19e56d5535f897851',1,'n_prc_tot():&#160;core.c']]],
   ['n_5fqueues',['n_queues',['../wnd_8c.html#a9034afb1965aa70e291c034e68796d23',1,'wnd.c']]],
+  ['neighbours_5fid',['neighbours_id',['../struct__topology__t.html#a8d4aa67b2756e34dbfa8ef6cbc20af48',1,'_topology_t']]],
+  ['neumaiersum',['NeumaierSum',['../numerical_8c.html#a3f14306a33e848d7853b7375a4db52b6',1,'NeumaierSum(unsigned cnt, double addendums[cnt]):&#160;numerical.c'],['../numerical_8h.html#a3f14306a33e848d7853b7375a4db52b6',1,'NeumaierSum(unsigned cnt, double addendums[cnt]):&#160;numerical.c']]],
   ['new_5flist',['new_list',['../list_8h.html#a22ab8233fb6033f97f2eec8d6a21d99f',1,'list.h']]],
   ['new_5fthread',['new_thread',['../thread_8h.html#a8fb0e1ad907a8b55df0f051a806e3e81',1,'thread.h']]],
   ['next',['next',['../struct__outgoing__msg.html#ad4f57d853997d1aa0a1aeac34d9f0fe4',1,'_outgoing_msg']]],

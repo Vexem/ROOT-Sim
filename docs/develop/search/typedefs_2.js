@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['kernel_5fcontext_5ft',['kernel_context_t',['../ult_8h.html#af041560b7527757d01ba9157e3258f64',1,'ult.h']]]
+  ['gid_5ft',['GID_t',['../core_8h.html#a74ea65c5dea49dba0b0c4b3bb8ee47f1',1,'core.h']]]
 ];

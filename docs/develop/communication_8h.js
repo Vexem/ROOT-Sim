@@ -6,6 +6,11 @@ var communication_8h =
     [ "SLAB_MSG_SIZE", "communication_8h.html#a14ef486128b10eab3ff55b61b9579bab", null ],
     [ "outgoing_t", "communication_8h.html#a783078e33c0d29cd4efb4ffd085646d0", null ],
     [ "_control_msgs", "communication_8h.html#aae2939440b2eb406455c0f4a361d92af", [
+      [ "RESERVED_MSG_CODE", "communication_8h.html#aae2939440b2eb406455c0f4a361d92afac49502e649f5f4683a02bcd641643cdd", null ],
+      [ "TOPOLOGY_UPDATE", "communication_8h.html#aae2939440b2eb406455c0f4a361d92afad8f47650b4bf790168c6d8e58e8489fe", null ],
+      [ "ABM_UPDATE", "communication_8h.html#aae2939440b2eb406455c0f4a361d92afaf9520da8492b410d65670f394a561b7a", null ],
+      [ "ABM_VISITING", "communication_8h.html#aae2939440b2eb406455c0f4a361d92afa9da53e26c516d8e01805cf5e9e53df6a", null ],
+      [ "ABM_LEAVING", "communication_8h.html#aae2939440b2eb406455c0f4a361d92afa96f9494c4247f6be4a1739e8bf86f6d4", null ],
       [ "MIN_VALUE_CONTROL", "communication_8h.html#aae2939440b2eb406455c0f4a361d92afae3a54d983325ffd785a263e26a638d38", null ],
       [ "RENDEZVOUS_START", "communication_8h.html#aae2939440b2eb406455c0f4a361d92afa50168e957cdc644f9b4a00dc1c7d0982", null ],
       [ "RENDEZVOUS_ACK", "communication_8h.html#aae2939440b2eb406455c0f4a361d92afad2f2ea6ad7e33781793f433c42a5314e", null ],

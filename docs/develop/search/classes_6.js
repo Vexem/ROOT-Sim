@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['memory_5fmap',['memory_map',['../structmemory__map.html',1,'']]]
+  ['lp_5fcost_5fid',['lp_cost_id',['../structlp__cost__id.html',1,'']]],
+  ['lp_5fstruct',['lp_struct',['../structlp__struct.html',1,'']]]
 ];

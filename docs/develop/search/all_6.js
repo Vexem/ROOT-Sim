@@ -17,5 +17,6 @@ var searchData=
   ['format_5fsize',['format_size',['../statistics_8c.html#ab7b584959699657a63a49384f07fd7a9',1,'statistics.c']]],
   ['fossil_2ec',['fossil.c',['../fossil_8c.html',1,'']]],
   ['fossil_5fcollection',['fossil_collection',['../fossil_8c.html#af4d5d546129fe91cedfc16ddedf76464',1,'fossil.c']]],
+  ['free_5fneighbours',['free_neighbours',['../struct__topology__t.html#aa2b5d830e3955255b262e939031e2d54',1,'_topology_t']]],
   ['from_5flast_5fckpt',['from_last_ckpt',['../structlp__struct.html#a310bd385217987aaee889cb2de7aad92',1,'lp_struct']]]
 ];

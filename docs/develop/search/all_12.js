@@ -8,6 +8,7 @@ var searchData=
   ['reduce_5fstat_5fvector',['reduce_stat_vector',['../mpi_8c.html#ace2c9a712d7d5f8e73dda54c9de3e358',1,'mpi.c']]],
   ['reduce_5fstats_5fop',['reduce_stats_op',['../mpi_8c.html#aed467d46a8af2392f12767bc8f1f2462',1,'mpi.c']]],
   ['reduced_5fgvt',['reduced_gvt',['../communication_2gvt_8c.html#a8ec157ed8858d0db5f0ef31ae353470a',1,'gvt.c']]],
+  ['region',['region',['../structlp__struct.html#abee9ac06c99669d4fa31e015e140cc9c',1,'lp_struct']]],
   ['register_5fincoming_5fmsg',['register_incoming_msg',['../communication_2gvt_8c.html#a5f8f575e93930869ac20641c7305e850',1,'register_incoming_msg(const msg_t *msg):&#160;gvt.c'],['../communication_2gvt_8h.html#ae864e6ab552e1726236d6707bec455d8',1,'register_incoming_msg(const msg_t *):&#160;gvt.c']]],
   ['register_5foutgoing_5fmsg',['register_outgoing_msg',['../communication_2gvt_8c.html#a76f513e8aeeeb0abebc46f19ceb72293',1,'register_outgoing_msg(const msg_t *msg):&#160;gvt.c'],['../communication_2gvt_8h.html#a71be178d11f21969670eadcc34d1de0a',1,'register_outgoing_msg(const msg_t *):&#160;gvt.c']]],
   ['rendezvous_5fack',['RENDEZVOUS_ACK',['../communication_8h.html#aae2939440b2eb406455c0f4a361d92afad2f2ea6ad7e33781793f433c42a5314e',1,'communication.h']]],
