@@ -119,10 +119,10 @@ $(document).ready(function(){initNavTree('index.html','');});
 <h2>Usage Notes</h2>
 <p>When running <code>make install</code>, the <code>rootsim-cc</code> compiler is added to the path.</p>
 <p>To compile a simulaton model, simply <code>cd</code> into the project's directory and type <code>rootsim-cc *.c -o model</code>. This will create the <code>model</code> executable, which is the model code already linked with the ROOT-sim library. <code>rootsim-cc</code> ultimately relies on <code>gcc</code>, so any flag supported by <code>gcc</code> can be passed to <code>rootsim-cc</code>.</p>
-<p>To test the correctness of the model, it can be run sequentially, typing <code>./model --sequential --nprc &lt;number of required LPs&gt;</code> This allows to spot errors in the implementation more easily.</p>
-<p>Then, to run it in parallel, type <code>./model --np &lt;number of available Cores&gt; --nprc &lt;number of required LPs&gt;</code></p>
-<p>To run in a distributed environment, you can use standard MPI commands, such as: <code>mpiexec -n 2 --hostfile hosts --map-by node ./model --np 2 --nprc 16</code></p>
-<p>This command runs the simulation model on two nodes (<code>-n 2</code>) specified in the <code>hosts</code> file. Each node uses two concurrent threads (<code>--np 2</code>). The simulation involves 16 total Logical Processes (<code>--nprc 16</code>). </p>
+<p>To test the correctness of the model, it can be run sequentially, typing <code>./model --sequential --lp &lt;number of required LPs&gt;</code> This allows to spot errors in the implementation more easily.</p>
+<p>Then, to run it in parallel, type <code>./model --wt &lt;number of desired threads&gt; --lp &lt;number of required LPs&gt;</code></p>
+<p>To run in a distributed environment, you can use standard MPI commands, such as: <code>mpiexec -n 2 --hostfile hosts --map-by node ./model --wt 2 --lp 16</code></p>
+<p>This command runs the simulation model on two nodes (<code>-n 2</code>) specified in the <code>hosts</code> file. Each node uses two concurrent threads (<code>--wt 2</code>). The simulation involves 16 total Logical Processes (<code>--lp 16</code>). </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

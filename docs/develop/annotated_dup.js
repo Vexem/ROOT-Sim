@@ -14,6 +14,7 @@ var annotated_dup =
     [ "_inner_hash_map_t", "struct__inner__hash__map__t.html", "struct__inner__hash__map__t" ],
     [ "_insn", "struct__insn.html", "struct__insn" ],
     [ "_ioctl_info", "struct__ioctl__info.html", "struct__ioctl__info" ],
+    [ "_leave_evt", "struct__leave__evt.html", "struct__leave__evt" ],
     [ "_lid_t", "struct__lid__t.html", "struct__lid__t" ],
     [ "_malloc_area", "struct__malloc__area.html", "struct__malloc__area" ],
     [ "_malloc_state", "struct__malloc__state.html", "struct__malloc__state" ],

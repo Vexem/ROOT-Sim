@@ -24,6 +24,7 @@ var searchData=
   ['_5finner_5fhash_5fmap_5ft',['_inner_hash_map_t',['../struct__inner__hash__map__t.html',1,'']]],
   ['_5finsn',['_insn',['../struct__insn.html',1,'']]],
   ['_5fioctl_5finfo',['_ioctl_info',['../struct__ioctl__info.html',1,'']]],
+  ['_5fleave_5fevt',['_leave_evt',['../struct__leave__evt.html',1,'']]],
   ['_5flid_5ft',['_lid_t',['../struct__lid__t.html',1,'']]],
   ['_5flong_5fjmp',['_long_jmp',['../x86_2jmp_8h.html#afedc6489f0f58a20eace94d2eb2c9790',1,'jmp.h']]],
   ['_5fmalloc_5farea',['_malloc_area',['../struct__malloc__area.html',1,'']]],

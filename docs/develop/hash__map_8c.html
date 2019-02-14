@@ -154,7 +154,7 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>HM_INITIAL_CAPACITY</b>&#160;&#160;&#160;8</td></tr>
 <tr class="separator:a54b202c71ff9f1faf54a3a603aeab60f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3143faab44093320b82ed36a7af1affe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3143faab44093320b82ed36a7af1affe"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>DIB</b>(curr_i,  hash,  capacity_mo)&#160;&#160;&#160;(((curr_i) - (hash)) &amp; (capacity_mo))</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DIB</b>(curr_i,  hash,  capacity_mo)&#160;&#160;&#160;((curr_i) &gt;= ((hash) &amp; (capacity_mo)) ? (curr_i) - ((hash) &amp; (capacity_mo)) : (capacity_mo) + 1 + (curr_i) - ((hash) &amp; (capacity_mo)))</td></tr>
 <tr class="separator:a3143faab44093320b82ed36a7af1affe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acde0f282da067083151794f85017e971"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acde0f282da067083151794f85017e971"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>SWAP_VALUES</b>(a,  b)&#160;&#160;&#160;do{__typeof(a) _tmp = (a); (a) = (b); (b) = _tmp;}while(0)</td></tr>
