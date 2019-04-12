@@ -1,5 +1,6 @@
 var NAVTREEINDEX11 =
 {
+"xxhash_8c.html#a67ed01c8ed85db1b52d11423d6b32787":[2,0,0,8,2,29],
 "xxhash_8c.html#a6cfe9a3ed9c4749c8f57afe91c9749a1":[2,0,0,8,2,8],
 "xxhash_8c.html#a70a4b202f9523a2a811da16cde3f52eb":[2,0,0,8,2,21],
 "xxhash_8c.html#a77a5849877fe70d96dc3c64cb1b0a94e":[2,0,0,8,2,42],

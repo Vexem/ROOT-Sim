@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['validate_5fmsg',['validate_msg',['../communication_8c.html#aebec05b86f3467473116d555954b80f4',1,'validate_msg(msg_t *msg):&#160;communication.c'],['../communication_8h.html#aebec05b86f3467473116d555954b80f4',1,'validate_msg(msg_t *msg):&#160;communication.c']]]
+  ['update_5fneighbours',['update_neighbours',['../abm__layer_8c.html#a15378457893c5a8487ac964bb9903860',1,'abm_layer.c']]]
 ];

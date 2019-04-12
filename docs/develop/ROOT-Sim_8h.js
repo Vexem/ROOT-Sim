@@ -27,9 +27,9 @@ var ROOT_Sim_8h =
       [ "TOPOLOGY_GRAPH", "ROOT-Sim_8h.html#a261622d6fcc1de048481fa0e7a7c898ba50f0faae34fbc1cfec0e9574a1a7d078", null ]
     ] ],
     [ "_topology_type_t", "ROOT-Sim_8h.html#a40c7ceb3807047f04005d838a32d2589", [
+      [ "TOPOLOGY_OBSTACLES", "ROOT-Sim_8h.html#a40c7ceb3807047f04005d838a32d2589aa43f8394201c7de3f7e995f85cdc3f61", null ],
       [ "TOPOLOGY_COSTS", "ROOT-Sim_8h.html#a40c7ceb3807047f04005d838a32d2589ae45801b4b2691c445a6ae1d00bd717d4", null ],
-      [ "TOPOLOGY_PROBABILITIES", "ROOT-Sim_8h.html#a40c7ceb3807047f04005d838a32d2589afbdf1816613fc08c8f2b532acc8ff9ad", null ],
-      [ "TOPOLOGY_OBSTACLES", "ROOT-Sim_8h.html#a40c7ceb3807047f04005d838a32d2589aa43f8394201c7de3f7e995f85cdc3f61", null ]
+      [ "TOPOLOGY_PROBABILITIES", "ROOT-Sim_8h.html#a40c7ceb3807047f04005d838a32d2589afbdf1816613fc08c8f2b532acc8ff9ad", null ]
     ] ],
     [ "__attribute", "ROOT-Sim_8h.html#a3af586586c2909c6461947b46a629b5a", null ],
     [ "AddVisit", "ROOT-Sim_8h.html#a5768380b890332b4000cfed1128cc5bd", null ],

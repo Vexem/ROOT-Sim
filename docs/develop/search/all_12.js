@@ -3,6 +3,7 @@ var searchData=
   ['random',['Random',['../numerical_8c.html#af6956caec1509dadd719fddaaf692489',1,'Random(void):&#160;numerical.c'],['../ROOT-Sim_8h.html#af6956caec1509dadd719fddaaf692489',1,'Random(void):&#160;numerical.c']]],
   ['rebind_5flps',['rebind_LPs',['../binding_8c.html#ae26b2a8055156e8648f8ad806f5fa5b0',1,'rebind_LPs(void):&#160;binding.c'],['../binding_8h.html#ae26b2a8055156e8648f8ad806f5fa5b0',1,'rebind_LPs(void):&#160;binding.c']]],
   ['receive_5fremote_5fmsgs',['receive_remote_msgs',['../mpi_8c.html#ad243611fd168b265105bce70c193394d',1,'receive_remote_msgs(void):&#160;mpi.c'],['../mpi_8h.html#ad243611fd168b265105bce70c193394d',1,'receive_remote_msgs(void):&#160;mpi.c']]],
+  ['receive_5fupdate',['receive_update',['../abm__layer_8c.html#a1d580b69fd1d6ea4b9fbeb98203e06ff',1,'abm_layer.c']]],
   ['red_5f0',['red_0',['../communication_2gvt_8h.html#a7c7599e49403998b2cd1069c62b46c2ea53fb565dfa0a5ae4f3e72ff36e62f3fa',1,'gvt.h']]],
   ['red_5f1',['red_1',['../communication_2gvt_8h.html#a7c7599e49403998b2cd1069c62b46c2ea79f24e8a3ff1bbe40d4290b34ad51e9f',1,'gvt.h']]],
   ['reduce_5fstat_5fvector',['reduce_stat_vector',['../mpi_8c.html#ace2c9a712d7d5f8e73dda54c9de3e358',1,'mpi.c']]],
