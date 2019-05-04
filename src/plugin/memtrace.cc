@@ -39,6 +39,21 @@ static int fn_names_counter = 0, fn_names_arrays = 1;
 #define NUM_FUNCTIONS 512
 
 
+static void check_and_expand(){
+	if (fn_names_counter >= NUM_FUNCTIONS*fn_names_arrays){
+		fn_names_arrays++;
+		char ** tmp = old_fn_names;
+		old_fn_names = (char**) xmalloc(fn_names_arrays*NUM_FUNCTIONS*sizeof(char*));
+		memcpy(old_fn_names, tmp, fn_names_counter - 1);
+		free(tmp);
+
+		tmp = new_fn_names;
+		new_fn_names = (char**) xmalloc(fn_names_arrays*NUM_FUNCTIONS*sizeof(char*));
+		memcpy(new_fn_names, tmp, fn_names_counter - 1);
+		free(tmp);
+	}
+}
+
 /*
  * Work with the GIMPLE representation of the code. Insert the
  * dirty_mem() call after alloca() and into the beginning
@@ -73,18 +88,7 @@ static unsigned int memtrace_instrument_execute(function *fun)
 			fn_names_counter++;
 
 			//check if we need to expand the old_fn_names and new_fn_names arrays
-			if (fn_names_counter >= NUM_FUNCTIONS*fn_names_arrays){
-				fn_names_arrays++;
-				char ** tmp = old_fn_names;
-				old_fn_names = (char**) xmalloc(fn_names_arrays*NUM_FUNCTIONS*sizeof(char*));
-				memcpy(old_fn_names, tmp, fn_names_counter - 1);
-				free(tmp);
-
-				tmp = new_fn_names;
-				new_fn_names = (char**) xmalloc(fn_names_arrays*NUM_FUNCTIONS*sizeof(char*));
-				memcpy(new_fn_names, tmp, fn_names_counter - 1);
-				free(tmp);
-			}	
+			check_and_expand();
 
 			snprintf(str, fname_size + strlen(suffix_fn) + 2, "%s_%s", fun->decl->decl_minimal.name->identifier.id.str, suffix_fn);
 			fun->decl->decl_minimal.name->identifier.id.str = (const unsigned char *)str;
@@ -368,7 +372,7 @@ static unsigned int memtrace_cleanup_execute(void)
  		next = NEXT_INSN(insn);
 
  		/* Check the expression code of the insn */
-		if (!INSN_P(insn) || BARRIER_P(insn) || NOTE_P(insn) || !CALL_P(insn))
+		if ((!INSN_P(insn) && !CALL_P(insn)) || BARRIER_P(insn) || NOTE_P(insn))
 			continue;
 
 		/* CMOVE %eax %ebx
@@ -379,6 +383,8 @@ static unsigned int memtrace_cleanup_execute(void)
         		(reg:SI 0 ax [118])))
 		*/
 		if (GET_CODE(body) == CALL){
+
+			//check for void call to old named functions
 			rtx mem = XEXP(body, 0);
 			rtx symbol = XEXP(mem, 0);
 			char* name = (char*) XSTR(symbol, 0);
@@ -391,7 +397,11 @@ static unsigned int memtrace_cleanup_execute(void)
 			}
 			
 		}
-		else if (GET_CODE(body) == SET){
+
+		
+		if(GET_CODE(body) == SET){
+
+			//check for calls with return to old named functions
 			rtx call = XEXP(body, 1);
 			if (GET_CODE(call) == CALL){
 				rtx mem = XEXP(call, 0);
@@ -406,9 +416,7 @@ static unsigned int memtrace_cleanup_execute(void)
 				}
 			
 			}
-		}
-		
-		if(GET_CODE(body) == SET){
+
 			rtx first = XEXP(body, 0);
 			//print_rtl_single(stdout, first);
 			if ((mode & W_MODE) && GET_CODE(first) == MEM) {
@@ -651,6 +659,77 @@ __visible int plugin_init(struct plugin_name_args *plugin_info,
 
 	old_fn_names = (char**) xmalloc(NUM_FUNCTIONS*sizeof(char*));
 	new_fn_names = (char**) xmalloc(NUM_FUNCTIONS*sizeof(char*));
+
+	FILE * f = fopen("functions.def", "r");
+	char* line = (char*)xmalloc(1024);
+	memset(line, 0, 1024);
+	size_t len = 1024;
+	ssize_t read;
+
+
+	//parse function definitions file generated with cproto
+	while((read = getline(&line, &len, f)) != -1){
+		int i;
+		int parenthesis = 0;
+		bool first = false;
+		printf("%s\n", line);
+		printf("%d\n", len);
+
+		//check for start of arguments, scanning backwards
+		for (i = len - 1 ; i >= 0; i--){
+			printf("%c", line[i]);
+			if (line[i] == ')'){
+				parenthesis--;
+				first = true;
+			}
+			else if (line[i] == '('){
+				parenthesis++;
+				first = true;
+			}		
+			else continue;	
+			if (parenthesis == 0 && first == true)
+				break;
+		}
+		if (i == -1){
+			printf("Pattern not found\n");
+			free(line);
+			line = (char*)xmalloc(1024);
+			memset(line, 0, 1024);
+			continue;
+		}
+			
+		int end = i;
+		printf("Found end %d\n", end);
+
+		//check for start of function name, scanning backward
+		for (i = end ; i>=0; i--){
+			if (line[i] == ' ')
+				break;
+		}
+		int start = i+1;
+		printf("Found start %d\n", start);
+
+		//adding function name to old_fn_names and to new_fn_names (with the suffix appended)
+		char * fname = (char*) xmalloc((end-start+1)*sizeof(char));
+		memcpy(fname, (char*)((unsigned long)line + start), end-start);
+		fname[end-start] = '\0';
+		printf("function name: %s\n", fname);
+
+		old_fn_names[fn_names_counter] = fname;
+		char * fname_new = (char*) xmalloc(end-start+SUFFIX_LEN+1);
+		sprintf(fname_new, "%s_%s", fname, suffix_fn);
+		printf("new function name: %s\n", fname_new);
+		new_fn_names[fn_names_counter] = fname_new;
+		fn_names_counter++;
+
+		//check if we need to expand the old_fn_names and new_fn_names arrays
+		check_and_expand();
+
+		free(line);
+		line = (char*)xmalloc(1024);
+		memset(line, 0, 1024);
+	}
+	fclose(f);
 
 	/* Give the information about the plugin */
 	register_callback(plugin_name, PLUGIN_INFO, NULL, &memtrace_plugin_info);

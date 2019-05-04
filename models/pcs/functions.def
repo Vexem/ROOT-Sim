@@ -1,0 +1,21 @@
+/* application.c */
+static __inline __uint16_t __bswap_16(__uint16_t __bsx);
+static __inline __uint32_t __bswap_32(__uint32_t __bsx);
+static __inline __uint16_t __uint16_identity(__uint16_t __x);
+static __inline __uint32_t __uint32_identity(__uint32_t __x);
+static __inline __uint64_t __uint64_identity(__uint64_t __x);
+static error_t model_parse(int key, char *arg, struct argp_state *state);
+void ProcessEvent(unsigned int me, simtime_t now, int event_type, event_content_type *event_content, unsigned int size, void *ptr);
+_Bool OnGVT(unsigned int me, lp_state_type *snapshot);
+/* functions_app.c */
+static __inline __uint16_t __bswap_16(__uint16_t __bsx);
+static __inline __uint32_t __bswap_32(__uint32_t __bsx);
+static __inline __uint16_t __uint16_identity(__uint16_t __x);
+static __inline __uint32_t __uint32_identity(__uint32_t __x);
+static __inline __uint64_t __uint64_identity(__uint64_t __x);
+double recompute_ta(double ref_ta, simtime_t time_now);
+double generate_cross_path_gain(void);
+double generate_path_gain(void);
+void deallocation(unsigned int me, lp_state_type *pointer, int ch, simtime_t lvt);
+void fading_recheck(lp_state_type *pointer);
+int allocation(lp_state_type *pointer);
