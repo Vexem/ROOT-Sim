@@ -31,6 +31,10 @@
 #include <string.h>
 #include <setjmp.h>
 
+#ifdef HAVE_NUMA
+#include <numa.h>
+#endif
+
 #include <core/core.h>
 #include <arch/thread.h>
 #include <statistics/statistics.h>
@@ -51,6 +55,10 @@
 #define _INIT_FROM_MAIN
 #include <core/init.h>
 #undef _INIT_FROM_MAIN
+
+int controller_committed_events = 0;
+atomic_t final_processed_events;
+__thread int my_processed_events = 0;
 
 /**
  * This jump buffer allows rootsim_error, in case of a failure, to jump
@@ -101,14 +109,121 @@ extern atomic_t would_preempt;
 static void *main_simulation_loop(void *arg) __attribute__((noreturn));
 static void *main_simulation_loop(void *arg)
 {
-
 	(void)arg;
 
 	simtime_t my_time_barrier = -1.0;
 
-#ifdef HAVE_CROSS_STATE
+	//We differentiate here the nature of the main loop
+	switch(Threads[tid]->incarnation) {
+		case THREAD_SYMMETRIC:
+			goto symmetric;
+		case THREAD_CONTROLLER:
+			goto controller;
+		case THREAD_PROCESSING:
+			goto processing;
+		default:
+			fprintf(stderr, "%s:%d: Error: unknown incarnation for thread %d\n", __FILE__, __LINE__, tid);
+			abort();
+	}
+
+
+    controller:
+
+	// Do the initial (local) LP binding, then execute INIT at all (local) LPs
+	initialize_worker_thread();
+
+	#ifdef HAVE_MPI
+	syncronize_all();
+	#endif
+	
+	while (!end_computing()) {
+		
+		// We assume that thread with tid 0 should be a controller. 
+		// Should be adapted for MPI. 
+		
+		#ifdef HAVE_POWER_MANAGEMENT
+		if(master_thread()){
+			powercap_state_machine();
+		}
+		#endif
+
+		// Recompute the LPs-thread binding
+		rebind_LPs();
+
+		#ifdef HAVE_MPI
+		// Check whether we have new ingoing messages sent by remote instances
+		receive_remote_msgs();
+		prune_outgoing_queues();
+		#endif
+
+		// Read output ports of all bound PTs
+		asym_extract_generated_msgs();
+
+		// Forward the messages from the kernel incoming message queue to the destination LPs
+		process_bottom_halves();
+
+		// Activate one LP and process one event. Send messages produced during the events' execution
+		asym_schedule();
+/*		printf("\tPorts: ");
+		int i;
+		for(i = 0; i < n_cores; i++) {
+			if(Threads[i]->incarnation == THREAD_PROCESSING)
+				printf("%d/%d ", atomic_read(&Threads[i]->input_port[1]->size), Threads[i]->port_batch_size);
+		}
+		printf("\n");
+*/
+		my_time_barrier = gvt_operations();
+
+		// Only a master thread on master kernel prints the time barrier
+		if (master_kernel() && master_thread () && D_DIFFER(my_time_barrier, -1.0)) {
+			if (rootsim_config.verbose == VERBOSE_INFO || rootsim_config.verbose == VERBOSE_DEBUG) {
+				#ifdef HAVE_PREEMPTION
+				printf("TIME BARRIER %f - %d preemptions - %d in platform mode - %d would preempt\n", my_time_barrier, atomic_read(&preempt_count), atomic_read(&overtick_platform), atomic_read(&would_preempt));
+				#else
+				printf("TIME BARRIER %f\n", my_time_barrier);
+				#endif
+
+				printf("\tPorts: ");
+		unsigned int i;
+				for(i = 0; i < n_cores; i++) {
+					if(Threads[i]->incarnation == THREAD_PROCESSING)
+						printf("%d/%d ", atomic_read(&Threads[i]->input_port[1]->size), Threads[i]->port_batch_size);
+				}
+				printf("\n");
+
+				fflush(stdout);
+			}
+		}
+
+		#ifdef HAVE_MPI
+		collect_termination();
+		#endif
+	}
+
+	goto finish;
+
+	processing:
+
+	// To enforce data separation more, we need a slab allocator for processing threads as well
+	initialize_processing_thread();
+
+	#ifdef HAVE_CROSS_STATE
 	lp_alloc_thread_init();
-#endif
+	#endif
+	
+	while (!end_computing()) {
+		asym_process();
+	}
+
+	atomic_add(&final_processed_events, my_processed_events);
+
+	goto finish;
+
+	symmetric:
+
+	#ifdef HAVE_CROSS_STATE
+	lp_alloc_thread_init();
+	#endif
 
 	// Do the initial (local) LP binding, then execute INIT at all (local) LPs
 	initialize_worker_thread();
@@ -126,12 +241,20 @@ static void *main_simulation_loop(void *arg)
 	}
 
 	if (setjmp(exit_jmp) != 0) {
-		goto leave_for_error;
+		goto finish;
 	}
 
 	while (!end_computing()) {
-		// Recompute the LPs-thread binding
-		rebind_LPs();
+
+		#ifdef HAVE_POWER_MANAGEMENT          /*-*/ 
+		if(master_thread()){                  /*-*/ 
+			powercap_state_machine();         /*-*/ 
+		}                                     /*-*/ 
+		#endif                                /*-*/ 
+
+
+		// Recompute the LPs-thread core_binding
+		rebind_LPs();								
 
 #ifdef HAVE_MPI
 		// Check whether we have new ingoing messages sent by remote instances
@@ -169,8 +292,8 @@ static void *main_simulation_loop(void *arg)
 #endif
 	}
 
- leave_for_error:
-	thread_barrier(&all_thread_barrier);
+ finish:
+	thread_barrier(&all_thread_barrier); 							//VERIFICARE
 
 	// If we're exiting due to an error, we neatly shut down the simulation
 	if (simulation_error()) {
@@ -193,15 +316,22 @@ int main(int argc, char **argv)
 	volatile int __wait = 0;
 	char hostname[256];
 
-	if ((getenv("WGDB")) != NULL && *(getenv("WGDB")) == '1') {
-		gethostname(hostname, sizeof(hostname));
-		printf("PID %d on %s ready for attach\n", getpid(), hostname);
-		fflush(stdout);
+		if ((getenv("WGDB")) != NULL && *(getenv("WGDB")) == '1') {
+			gethostname(hostname, sizeof(hostname));
+			printf("PID %d on %s ready for attach\n", getpid(), hostname);
+			fflush(stdout);
 
-		while (__wait == 0)
-			sleep(5);
+			while (__wait == 0)
+					sleep(5);
 	}
-#endif
+	#endif
+
+	#ifdef HAVE_NUMA                 /*-*/
+	if(numa_available() < 0) {
+		fprintf(stderr, "Your system does not support NUMA API\n");
+		exit(EXIT_FAILURE);
+	}
+	#endif
 
 	SystemInit(argc, argv);
 

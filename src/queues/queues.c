@@ -136,7 +136,7 @@ void process_bottom_halves(void)
 	msg_t *msg_to_process;
 	msg_t *matched_msg;
 
-	foreach_bound_lp(lp) {
+	foreach_bound_lp(lp) {  //for(struct lp_struct *(lp) = lps_blocks[__lp_counter]; __lp_counter < n_prc && ((lp) = lps_blocks[__lp_counter]); ++__lp_counter)
 
 		while ((msg_to_process = get_msg(lp->bottom_halves)) != NULL) {
 			receiver = find_lp_by_gid(msg_to_process->receiver);
@@ -186,15 +186,22 @@ void process_bottom_halves(void)
 					}
 					
 					receiver->state = LP_STATE_ROLLBACK;
-				}
+
+                    // Delete the matched message
+                    list_delete_by_content(receiver->queue_in,
+                                           matched_msg);
+                    list_insert_tail(receiver->retirement_queue, matched_msg);
+
+                    // Rollback last sent time as well if needed
+                    if(receiver->bound->timestamp < receiver->last_sent_time)
+                        receiver->last_sent_time = receiver->bound->timestamp;
+
+                    msg_release(matched_msg);
+
+                }
 #ifdef HAVE_MPI
 				register_incoming_msg(msg_to_process);
 #endif
-
-				// Delete the matched message
-				list_delete_by_content(receiver->queue_in,
-						       matched_msg);
-				msg_release(matched_msg);
 
 				break;
 
@@ -218,6 +225,10 @@ void process_bottom_halves(void)
 					}
 
 					receiver->state = LP_STATE_ROLLBACK;
+
+                    // Rollback last sent time as well if needed
+                    if(receiver->bound->timestamp < receiver->last_sent_time)
+                        receiver->last_sent_time = receiver->bound->timestamp;
 				}
 #ifdef HAVE_MPI
 				register_incoming_msg(msg_to_process);

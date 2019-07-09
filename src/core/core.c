@@ -47,6 +47,7 @@
 
 /// Barrier for all worker threads
 barrier_t all_thread_barrier;
+barrier_t controller_barrier;
 
 /// Mapping between kernel instances and logical processes
 unsigned int *kernel;
@@ -59,6 +60,9 @@ unsigned int n_ker;
 
 /// Total number of cores required for simulation
 unsigned int n_cores;
+
+/// Used to map a global id to a local id
+unsigned int *to_lid;
 
 /// Total number of logical processes running in the simulation
 unsigned int n_prc_tot;
@@ -77,6 +81,9 @@ bool exit_silently_from_kernel = false;
 
 /// This flag is set when the initialization of the simulator is complete, with no errors
 static bool init_complete = false;
+
+/// Used to map a local id to a global id
+unsigned int *to_gid;
 
 bool user_exit_flag = false;
 
@@ -130,7 +137,12 @@ void base_init(void)
 {
 	struct sigaction new_act = { 0 };
 
-	barrier_init(&all_thread_barrier, n_cores);
+    if(rootsim_config.num_controllers > 0) {
+        barrier_init(&controller_barrier, rootsim_config.num_controllers);
+    } else {
+        barrier_init(&controller_barrier, n_cores);
+    }
+    barrier_init(&all_thread_barrier, n_cores);
 
 	// complete the sigaction struct init
 	new_act.sa_handler = handle_signal;
@@ -142,6 +154,20 @@ void base_init(void)
 	atexit(exit_from_simulation_model);
 }
 
+/**
+* Creates a mapping between logical processes' global and local identifiers
+*
+* @author Francesco Quaglia
+* @author Alessandro Pellegrini
+*
+* @param gid The logical process' global identifier
+* @return The local identifier of the logical process globally identified by gid
+*/
+LID_t GidToLid(GID_t gid) {
+    LID_t ret;
+    set_lid(ret, to_lid[gid.to_int]);
+    return ret;
+}
 /**
 * This function finalizes the core structures of ROOT-Sim, just before terminating a simulation
 *

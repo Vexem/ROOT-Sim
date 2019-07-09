@@ -42,6 +42,8 @@
 #include <datatypes/list.h>
 #include <mm/mm.h>
 #include <arch/atomic.h>
+#include <src/arch/thread.h>
+
 #ifdef HAVE_MPI
 #include <communication/mpi.h>
 #endif
@@ -443,6 +445,8 @@ void send_outgoing_msgs(struct lp_struct *lp)
 
 		// register the message in the sender's output queue, for antimessage management
 		list_insert(lp->queue_out, send_time, msg_hdr);
+        if(msg->send_time > lp->last_sent_time)
+            lp->last_sent_time = msg->send_time;
 	}
 
 	lp->outgoing_buffer.size = 0;
@@ -514,6 +518,52 @@ void pack_msg(msg_t **msg, GID_t sender, GID_t receiver, int type, simtime_t tim
 		memcpy((*msg)->event_content, payload, size);
 }
 
+void asym_send_outgoing_msgs(struct lp_struct *lp) {
+    register unsigned int i = 0;
+    msg_t *msg;
+
+    for(i = 0; i < lp->outgoing_buffer.size; i++) {
+        msg = lp->outgoing_buffer.outgoing_msgs[i];
+
+        pt_put_out_msg(msg);
+//		printf("Putting in the output port the following message\n");
+//		dump_msg_content(msg);
+    }
+
+    lp->outgoing_buffer.size = 0;
+}
+
+void asym_extract_generated_msgs(void) {
+    struct lp_struct *lp_receiver;
+    struct lp_struct *lp_sender;
+    unsigned int i;
+    msg_t *msg;
+    msg_hdr_t *msg_hdr;
+    for(i = 0; i < Threads[tid]->num_PTs; i++) {
+//		printf("Output port size for PT %u: %d\n", Threads[tid]->PTs[i]->tid), atomic_read(&Threads[tid]->PTs[i]->output_port->size);
+        while((msg = pt_get_out_msg(Threads[tid]->PTs[i]->tid)) != NULL) {
+            if(is_control_msg(msg->type) && msg->type == ASYM_ROLLBACK_ACK) {
+                lp_receiver = lps_blocks[GidToLid(msg->receiver).to_int];
+                lp_receiver->state = LP_STATE_ROLLBACK_ALLOWED;
+                // printf("Received ROLLBACK ACK for LP %d with timestamp %lf\n", gid_to_int(msg->receiver), msg->timestamp);
+                msg_release(msg);
+                continue;
+            }
+            Send(msg);
+            lp_sender = lps_blocks[GidToLid(msg->sender).to_int];
+            if(msg->send_time > lp_sender->last_sent_time && lp_sender->state == LP_STATE_READY)
+                lp_sender->last_sent_time = msg->send_time;
+
+            msg_hdr = get_msg_hdr_from_slab(lp_sender);
+            msg_to_hdr(msg_hdr, msg);
+            // register the message in the sender's output queue, for antimessage management
+            // We can use msg->sender here (ensuring data separation) because we're extracting
+            // messages from an output port coming from a PT managed by the current CT, therefore
+            // involving only local LPs.
+            list_insert(lp_sender->queue_out, send_time, msg_hdr);
+        }
+    }
+}
 
 /**
  * @brief Convert a message to a message header

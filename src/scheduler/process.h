@@ -53,11 +53,13 @@
 #define LP_STATE_RUNNING_ECS		0x00004
 #define LP_STATE_ROLLBACK		0x00008
 #define LP_STATE_SILENT_EXEC		0x00010
+#define LP_STATE_ROLLBACK_ALLOWED	0x00020
 #define LP_STATE_SUSPENDED		0x01010
 #define LP_STATE_READY_FOR_SYNCH	0x00011	// This should be a blocked state! Check schedule() and stf()
 #define LP_STATE_WAIT_FOR_SYNCH		0x01001
 #define LP_STATE_WAIT_FOR_UNBLOCK	0x01002
 #define LP_STATE_WAIT_FOR_DATA		0x01004
+#define LP_STATE_WAIT_FOR_ROLLBACK_ACK	0x01008
 
 #define BLOCKED_STATE			0x01000
 #define is_blocked_state(state)	(bool)(state & BLOCKED_STATE)
@@ -84,6 +86,9 @@ struct lp_struct {
 	/// ID of the worker thread towards which the LP is bound
 	unsigned int worker_thread;
 
+    /// ID of the Processing Thread (in case worker_thread above is a controller) which processes events
+    unsigned int		processing_thread;
+
 	/// Current execution state of the LP
 	short unsigned int state;
 
@@ -105,11 +110,17 @@ struct lp_struct {
 	/// Pointer to the last correctly processed event
 	msg_t *bound;
 
+    /// Send time of the last event extracted from the output port of the PT executing events of this LP
+    simtime_t		last_sent_time;
+
 	/// Output messages queue
 	 list(msg_hdr_t) queue_out;
 
 	/// Saved states queue
 	 list(state_t) queue_states;
+
+    /// Event retirement queue
+    list(msg_t)		retirement_queue;
 
 	/// Bottom halves
 	msg_channel *bottom_halves;
@@ -160,6 +171,11 @@ struct lp_struct {
 extern struct lp_struct **lps_blocks;
 extern __thread struct lp_struct **lps_bound_blocks;
 
+// Mask of LP bound to thread that are yet to be filled
+// in the current execution of asym_schedule. It reset
+// to lps_bound_block each time asym_schedule is called.
+extern __thread struct lp_struct **asym_lps_mask;
+
 /** This macro retrieves the LVT for the current LP. There is a small interval window
  *  where the value returned is the one of the next event to be processed. In particular,
  *  this happens in the scheduling function, when the bound is advanced to the next event to
@@ -177,7 +193,13 @@ extern __thread unsigned int __lp_bound_counter;
 #define foreach_bound_lp(lp)	__lp_bound_counter = 0;\
 				for(struct lp_struct *(lp) = lps_bound_blocks[__lp_bound_counter]; __lp_bound_counter < n_prc_per_thread && ((lp) = lps_bound_blocks[__lp_bound_counter]); ++__lp_bound_counter)
 
+#define foreach_bound_mask_lp(lp)	__lp_bound_counter = 0;\
+				for(struct lp_struct *(lp) = asym_lps_mask[__lp_bound_counter]; __lp_bound_counter < n_prc_per_thread && ((lp) = asym_lps_mask[__lp_bound_counter]); ++__lp_bound_counter)
+
 #define LPS_bound_set(entry, lp)	lps_bound_blocks[(entry)] = (lp);
+
+#define LPS_bound(lid) (__builtin_choose_expr(__builtin_types_compatible_p(__typeof__ (lid), unsigned int), lps_bound_blocks[lid], (void)0))
+#define LPS_bound_mask(lid) (__builtin_choose_expr(__builtin_types_compatible_p(__typeof__ (lid), unsigned int), asym_lps_mask[lid], (void)0))
 
 extern void initialize_binding_blocks(void);
 extern void initialize_lps(void);

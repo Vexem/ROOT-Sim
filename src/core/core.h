@@ -40,8 +40,14 @@
 #include <stdint.h>
 #include <setjmp.h>
 
-#include <arch/thread.h>
 
+#include <lib/numerical.h>
+#include <arch/atomic.h>
+
+
+extern int controller_committed_events;
+extern atomic_t final_processed_events;
+extern __thread int my_processed_events;
 
 /// This macro expands to true if the local kernel is the master kernel
 #define master_kernel() (kid == 0)
@@ -145,8 +151,17 @@ typedef struct _lid_t {
 	unsigned int to_int;	///< The LID numerical value
 } LID_t;
 
+// The idle process identifier
+extern LID_t idle_process;
+
 #define is_lid(val) __builtin_types_compatible_p(__typeof__ (val), LID_t)
 #define is_gid(val) __builtin_types_compatible_p(__typeof__ (val), GID_t)
+
+#define lid_equals(first, second) (is_lid(first) && is_lid(second) && first.to_int == second.to_int)
+#define gid_equals(first, second) (is_gid(first) && is_gid(second) && first.to_int == second.to_int)
+
+//#define lid_to_int(lid) __builtin_choose_expr(is_lid(lid), (lid).to_int, (void)0)
+//#define gid_to_int(gid) __builtin_choose_expr(is_gid(gid), (gid).to_int, (void)0)
 
 #define set_lid(lid, value) (__builtin_choose_expr(is_lid(lid), lid.to_int, (void)0) = (value))
 #define set_gid(gid, value) (__builtin_choose_expr(is_gid(gid), gid.to_int, (void)0) = (value))
@@ -163,14 +178,15 @@ typedef unsigned char phase_colour;
 /// Message Type definition
 typedef struct _msg_t {
 
-	/* Place here all memebers of the struct which should not be transmitted over the network */
+	/* Place here all members of the struct which should not be transmitted over the network */
 
 	// Pointers to attach messages to chains
 	struct _msg_t *next;
 	struct _msg_t *prev;
+    bool	unprocessed;
 
 	/* Place here all members which must be transmitted over the network. It is convenient not to reorder the members
-	 * of the structure. If new members have to be addedd, place them right before the "Model data" part.*/
+	 * of the structure. If new members have to be added, place them right before the "Model data" part.*/
 
 	// Kernel's information
 	GID_t sender;
@@ -208,9 +224,6 @@ typedef struct _msg_hdr_t {
 } msg_hdr_t;
 
 
-/// Barrier for all worker threads
-extern barrier_t all_thread_barrier;
-
 // XXX: this should be refactored someway
 extern unsigned int kid,	/* Kernel ID for the local kernel */
  n_ker,				/* Total number of kernel instances */
@@ -232,5 +245,6 @@ extern void simulation_shutdown(int code) __attribute__((noreturn));
 extern inline bool user_requested_exit(void);
 extern inline bool simulation_error(void);
 extern void initialization_complete(void);
+extern LID_t GidToLid(GID_t gid);
 
 #define rootsim_error(fatal, msg, ...) _rootsim_error(fatal, "%s:%d: %s(): " msg, __FILE__, __LINE__, __FUNCTION__, ##__VA_ARGS__)

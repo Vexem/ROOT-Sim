@@ -121,6 +121,8 @@ void insert_msg(msg_channel * mc, msg_t * msg)
 	mc->buffers[M_WRITE]->buffer[index] = msg;
 
 	spin_unlock(&mc->write_lock);
+
+    atomic_inc(&mc->size);
 }
 
 void *get_msg(msg_channel * mc)
@@ -148,4 +150,8 @@ void *get_msg(msg_channel * mc)
 
  leave:
 	return msg;
+}
+// Retrive the current amount of events in the respective input port
+int get_port_current_size(msg_channel *mc){
+    return atomic_read(&mc->size);
 }

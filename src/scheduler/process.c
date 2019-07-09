@@ -36,6 +36,8 @@
 #include <scheduler/process.h>
 #include <scheduler/scheduler.h>
 
+LID_t idle_process;
+
 // TODO: see issue #121 to see how to make this ugly hack disappear
 __thread unsigned int __lp_counter = 0;
 __thread unsigned int __lp_bound_counter = 0;
@@ -48,11 +50,18 @@ struct lp_struct **lps_blocks = NULL;
  */
 __thread struct lp_struct **lps_bound_blocks = NULL;
 
+__thread struct lp_struct **asym_lps_mask = NULL;
+
+
 void initialize_binding_blocks(void)
 {
 	lps_bound_blocks =
 	    (struct lp_struct **)rsalloc(n_prc * sizeof(struct lp_struct *));
 	bzero(lps_bound_blocks, sizeof(struct lp_struct *) * n_prc);
+
+    asym_lps_mask = (struct lp_struct **)rsalloc(n_prc * sizeof(struct lp_struct *));
+    bzero(asym_lps_mask, sizeof(struct lp_struct *) * n_prc);
+
 }
 
 void initialize_lps(void)
@@ -130,6 +139,7 @@ void initialize_lps(void)
 		lp->queue_in = new_list(msg_t);
 		lp->queue_out = new_list(msg_hdr_t);
 		lp->queue_states = new_list(state_t);
+        lp->retirement_queue = new_list(msg_t);
 		lp->rendezvous_queue = new_list(msg_t);
 
 		// No event has been processed so far

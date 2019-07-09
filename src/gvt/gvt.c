@@ -447,6 +447,8 @@ simtime_t gvt_operations(void)
 		if (atomic_read(&counter_finalized) == 0) {
 			if (iCAS(&idle_tkn, 1, 0)) {
 				kernel_phase = kphase_idle;
+            /*    if(rootsim_config.num_controllers > 0)
+                    gvt_interval_passed = 1         */      //COINVOLGE power.h
 			}
 		}
 		return last_gvt;

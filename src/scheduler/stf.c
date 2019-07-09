@@ -77,3 +77,45 @@ struct lp_struct *smallest_timestamp_first(void)
 
 	return next_lp;
 }
+
+/* This function implements a selection strategy similar
+* to smallest timestamp first algorithm for the asymmetric
+* architecture. It returns the LP of the logical process with
+* the smallest timestamp among the set of LPs passed as parameter
+* This is necessary to skip LPs for whom the respective input port
+* is already filled.
+*
+* TO BE IMPLEMENTED.
+*
+* @author Stefano Conoci
+* @author Alessandro Pellegrini */
+
+struct lp_struct *asym_smallest_timestamp_first(void){
+
+    simtime_t stf_candidate_time = INFTY;
+    struct lp_struct *lp_res;   //the return value
+    simtime_t evt_time;
+
+
+    foreach_bound_mask_lp(lp) {
+        // If waiting for synch, don't take into account the LP
+        if(is_blocked_state(lp->state)) {
+            continue; // continue to the next element
+        }
+        //If the LP is in READY_FOR_SYNCH has to handle the same messagge of ECS
+        if(lp->state == LP_STATE_READY_FOR_SYNCH) {
+                     // The LP handles the suspended event as the next event
+            evt_time = lvt(lp);
+        }else {
+            // Compute the next event's timestamp. Translate the id from the local binding to the local ID
+            evt_time = next_event_timestamp(lp);
+            //printf(" evt_time: %f", (evt_time < INFTY ? evt_time : -1.0));
+        }
+        if(evt_time < stf_candidate_time && evt_time < INFTY) {
+            stf_candidate_time = evt_time;
+            lp_res = lp;
+        }
+    }
+
+    return lp_res;
+}

@@ -41,6 +41,7 @@
 #include <gvt/gvt.h>
 
 #include <arch/thread.h>
+#include <src/core/init.h>
 
 #define REBIND_INTERVAL 10.0
 
@@ -67,6 +68,17 @@ static __thread int local_binding_phase = 0;
 
 static atomic_t worker_thread_reduction;
 
+// When calling this function, n_prc_per_thread
+// must have been updated with the new number of bound LPs.
+static void rebind_LPs_to_PTs(void) {
+    unsigned int i;
+    unsigned int curr_pt_idx = 0;
+
+    for(i = 0; i < n_prc_per_thread; i++) {
+        LPS_bound(i)->processing_thread = Threads[tid]->PTs[curr_pt_idx]->tid;
+        curr_pt_idx = (curr_pt_idx + 1) % Threads[tid]->num_PTs;
+    }
+}
 /**
 * Performs a (deterministic) block allocation between LPs and WTs
 *
@@ -74,14 +86,22 @@ static atomic_t worker_thread_reduction;
 */
 static inline void LPs_block_binding(void)
 {
-	unsigned int i, j;
+    unsigned int binding_threads;
+    unsigned int i, j;
 	unsigned int buf1;
 	unsigned int offset;
 	unsigned int block_leftover;
 	struct lp_struct *lp;
 
-	buf1 = (n_prc / n_cores);
-	block_leftover = n_prc - buf1 * n_cores;
+    // We determine here the number of threads used for binding, depending on the
+    // actual (current) incarnation of available threads.
+    if(rootsim_config.num_controllers == 0)
+        binding_threads = n_cores;
+    else
+        binding_threads = rootsim_config.num_controllers;
+
+	buf1 = (n_prc / binding_threads);
+	block_leftover = n_prc - buf1 * binding_threads;
 
 	if (block_leftover > 0) {
 		buf1++;
@@ -108,6 +128,11 @@ static inline void LPs_block_binding(void)
 			buf1--;
 		}
 	}
+
+    // In case we're running with the asymmetric architecture, we have
+    // to rebind as well
+    if(rootsim_config.num_controllers > 0)
+        rebind_LPs_to_PTs();
 }
 
 /**
@@ -251,6 +276,12 @@ static void install_binding(void)
 */
 void rebind_LPs(void)
 {
+    unsigned int binding_threads;
+
+    if(rootsim_config.num_controllers == 0)
+        binding_threads = n_cores;
+    else
+        binding_threads = rootsim_config.num_controllers;
 
 	if (unlikely(first_lp_binding)) {
 		first_lp_binding = false;
@@ -266,7 +297,7 @@ void rebind_LPs(void)
 
 			lp_cost = rsalloc(sizeof(struct lp_cost_id) * n_prc);
 
-			atomic_set(&worker_thread_reduction, n_cores);
+			atomic_set(&worker_thread_reduction, binding_threads);
 		}
 
 		return;
