@@ -83,6 +83,8 @@ __thread unsigned int local_tid;
  */
 static unsigned int thread_counter = 0;
 
+/// Thread Control Blocks
+Thread_State **Threads;
 
 /**
 * This helper function is the actual entry point for every thread created
