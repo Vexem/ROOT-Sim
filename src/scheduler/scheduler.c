@@ -224,6 +224,16 @@ void initialize_worker_thread(void)
 		printf("Initializing LPs... ");
 		fflush(stdout);
 	}
+
+    if(rootsim_config.num_controllers == 0) {
+        thread_barrier(&all_thread_barrier);
+    } else {
+        thread_barrier(&controller_barrier);
+    }
+
+    if (master_thread() && master_kernel())
+        printf("done\n");
+
     // Schedule an INIT event to the newly instantiated LP
     // We need two separate foreach_bound_lp here, because
     // in this way we are sure that there is at least one
@@ -237,7 +247,6 @@ void initialize_worker_thread(void)
         lp->state_log_forced = true;
     }
 
-
 // Worker Threads synchronization barrier: they all should start working together
 	if(rootsim_config.num_controllers == 0) {
 		thread_barrier(&all_thread_barrier);
@@ -248,10 +257,6 @@ void initialize_worker_thread(void)
     foreach_bound_lp(lp) {
         schedule_on_init(lp);        //VERIFICARE
     }
-
-	if (master_thread() && master_kernel())
-		printf("done\n");
-
 
 	if(rootsim_config.num_controllers == 0) {
 		thread_barrier(&all_thread_barrier);
