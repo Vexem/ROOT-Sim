@@ -311,7 +311,7 @@ static error_t parse_opt (int key, char *arg, struct argp_state *state)
 			break;
 
 		case OPT_CONTROLLERS:
-			rootsim_config.num_controllers = parseInt(optarg);
+			rootsim_config.num_controllers = parse_ullong_limits(0,INT_MAX);   //VERIFICARE VALORI
 			break;
 
 #ifdef HAVE_PREEMPTION
@@ -435,6 +435,7 @@ void SystemInit(int argc, char **argv)
 		numerical_init();
 		statistics_init();
 		serial_init();
+        threads_init();
 		topology_init();
 		abm_layer_init();
 		return;
