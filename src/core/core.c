@@ -155,20 +155,6 @@ void base_init(void)
 }
 
 /**
-* Creates a mapping between logical processes' global and local identifiers
-*
-* @author Francesco Quaglia
-* @author Alessandro Pellegrini
-*
-* @param gid The logical process' global identifier
-* @return The local identifier of the logical process globally identified by gid
-*/
-LID_t GidToLid(GID_t gid) {
-    LID_t ret;
-    set_lid(ret, to_lid[gid.to_int]);
-    return ret;
-}
-/**
 * This function finalizes the core structures of ROOT-Sim, just before terminating a simulation
 *
 * @author Roberto Vitali

@@ -352,7 +352,6 @@ void asym_process(void) {
     msg_t *msg;
     msg_t *msg_hi;
     msg_t *hi_prio_msg;
-    LID_t lid;
 
     timer_start(timer_local_thread);
 
@@ -440,8 +439,7 @@ void asym_process(void) {
         abort();
     }
 
-    lid = GidToLid(msg->receiver);
-    lp = lps_blocks[lid.to_int];
+    lp = find_lp_by_gid(msg->receiver);
 
     // TODO: find a way to set the LP to RUNNING without incurring in a race condition with the CT
 
@@ -473,9 +471,9 @@ void asym_process(void) {
 */
 
 void asym_schedule(void) {
-    struct lp_struct *lp;
 
-    LID_t lid, curr_lid;
+    struct lp_struct *lp,*curr_lp;
+    LID_t lid;
     msg_t *event, *curr_event;
     msg_t *rollback_control;
     unsigned int port_events_to_fill[n_cores];
@@ -646,12 +644,12 @@ void asym_schedule(void) {
                 int found = 0;
                 lid = idle_process;
                 while(curr_event != NULL && !found){
-                    curr_lid = GidToLid(curr_event->receiver);
-                    if(port_events_to_fill[lps_blocks[curr_lid.to_int]->processing_thread] > 0 &&
-                            lps_blocks[curr_lid.to_int]->state != LP_STATE_WAIT_FOR_ROLLBACK_ACK){
+                    curr_lp = find_lp_by_gid(curr_event->receiver);
+                    if(port_events_to_fill[curr_lp->processing_thread] > 0 &&
+                            curr_lp->state != LP_STATE_WAIT_FOR_ROLLBACK_ACK){
                         found = 1;
-                        lp = lps_blocks[curr_lid.to_int];    //lps_blocks[curr_lid.to_int] sostituisce LPS(curr_lid)
-                        lid = lp->lid;   //necessario per ora per la questione dell'idle_process
+                        lp = curr_lp;
+                        lid = lp->lid;
                     }
                     else{
                         curr_event = heap_pop(Threads[tid]->events_heap);

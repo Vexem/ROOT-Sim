@@ -245,6 +245,5 @@ extern void simulation_shutdown(int code) __attribute__((noreturn));
 extern inline bool user_requested_exit(void);
 extern inline bool simulation_error(void);
 extern void initialization_complete(void);
-extern LID_t GidToLid(GID_t gid);
 
 #define rootsim_error(fatal, msg, ...) _rootsim_error(fatal, "%s:%d: %s(): " msg, __FILE__, __LINE__, __FUNCTION__, ##__VA_ARGS__)

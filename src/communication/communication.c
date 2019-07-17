@@ -543,14 +543,14 @@ void asym_extract_generated_msgs(void) {
 //		printf("Output port size for PT %u: %d\n", Threads[tid]->PTs[i]->tid), atomic_read(&Threads[tid]->PTs[i]->output_port->size);
         while((msg = pt_get_out_msg(Threads[tid]->PTs[i]->tid)) != NULL) {
             if(is_control_msg(msg->type) && msg->type == ASYM_ROLLBACK_ACK) {
-                lp_receiver = lps_blocks[GidToLid(msg->receiver).to_int];
+                lp_receiver =  find_lp_by_gid(msg->receiver);
                 lp_receiver->state = LP_STATE_ROLLBACK_ALLOWED;
                 // printf("Received ROLLBACK ACK for LP %d with timestamp %lf\n", gid_to_int(msg->receiver), msg->timestamp);
                 msg_release(msg);
                 continue;
             }
             Send(msg);
-            lp_sender = lps_blocks[GidToLid(msg->sender).to_int];
+            lp_sender = find_lp_by_gid(msg->sender);
             if(msg->send_time > lp_sender->last_sent_time && lp_sender->state == LP_STATE_READY)
                 lp_sender->last_sent_time = msg->send_time;
 

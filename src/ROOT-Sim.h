@@ -51,18 +51,6 @@
 /// This is the message code which is sent by the simulation kernel upon startup
 #define INIT	0
 
-/// This macro can be used to convert command line parameters to integers
-#define parseInt(s) ({\
-			int __value;\
-			char *__endptr;\
-			__value = (int)strtol(s, &__endptr, 10);\
-			if(!(*s != '\0' && *__endptr == '\0')) {\
-				fprintf(stderr, "%s:%d: Invalid conversion value: %s\n", __FILE__, __LINE__, s);\
-			}\
-			__value;\
-		     })
-
-
 /// This defines the type with whom timestamps are represented
 typedef double simtime_t;
 
