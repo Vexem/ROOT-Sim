@@ -175,7 +175,7 @@ static const struct argp_option argp_options[] = {
 	{"serial",		OPT_SERIAL,		0,		0,		"Run a serial simulation (using Calendar Queues)", 0},
 	{"sequential",		OPT_SERIAL,		0,		OPTION_ALIAS,	NULL, 0},
 	{"no-core-binding",	OPT_NO_CORE_BINDING,	0,		0,		"Disable the binding of threads to specific physical processing cores", 0},
-	{"ncontrollers",	OPT_CONTROLLERS,	0,		0,		"Initial number of Controller Threads", 0},
+	{"ncontrollers",	OPT_CONTROLLERS,	"VALUE",		0,		"Initial number of Controller Threads", 0},
 
 
 #ifdef HAVE_PREEMPTION
@@ -311,7 +311,7 @@ static error_t parse_opt (int key, char *arg, struct argp_state *state)
 			break;
 
 		case OPT_CONTROLLERS:
-			rootsim_config.num_controllers = parse_ullong_limits(0,INT_MAX);   //VERIFICARE VALORI
+			rootsim_config.num_controllers = parse_ullong_limits(0,INT_MAX);
 			break;
 
 #ifdef HAVE_PREEMPTION
@@ -435,7 +435,6 @@ void SystemInit(int argc, char **argv)
 		numerical_init();
 		statistics_init();
 		serial_init();
-        threads_init();
 		topology_init();
 		abm_layer_init();
 		return;

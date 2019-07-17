@@ -255,7 +255,7 @@ void initialize_worker_thread(void)
 	}
 
     foreach_bound_lp(lp) {
-        schedule_on_init(lp);        //VERIFICARE
+        schedule_on_init(lp);
     }
 
 	if(rootsim_config.num_controllers == 0) {
