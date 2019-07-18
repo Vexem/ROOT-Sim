@@ -57,7 +57,7 @@
 
 #endif /* __HEAP_H_ */
 
-typedef struct {
+/*typedef struct {
     double priority;
     void *data;
 } node_heap_t;
@@ -66,10 +66,4 @@ typedef struct {
     node_heap_t *nodes;
     int len;
     int size;
-} heap_t;
-
-
-void heap_push(heap_t *, double, void *);
-
-// Returns data sorted from lowest to highest priority
-void* heap_pop(heap_t *);
+} heap_t;*/
