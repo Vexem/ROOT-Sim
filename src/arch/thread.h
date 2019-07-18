@@ -200,13 +200,11 @@ typedef struct _Thread_State {
 
     /* If CT, it is a pointer to a priority queue used in BATCH_LOWEST_TIMESTAMP
      * for scheduling a batch of events*/
-  //  heap_t *events_heap;
+    //  heap_t *events_heap;
 
     rootsim_heap(msg_t) heap;
 
-
 } Thread_State;
-
 
 /**
  * @brief Reset operation on a thread barrier

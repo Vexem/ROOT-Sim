@@ -587,7 +587,7 @@ void asym_schedule(void) {
         // Clean the priority queue
         heap_empty(Threads[tid]->heap);
 
-      /*  bzero(Threads[tid]->events_heap->nodes, Threads[tid]->events_heap->len*sizeof(node_heap_t));
+      /*bzero(Threads[tid]->events_heap->nodes, Threads[tid]->events_heap->len*sizeof(node_heap_t));
         Threads[tid]->events_heap->len = 0;*/
 
         for(i = 0; i < n_prc_per_thread; i++){
@@ -606,8 +606,7 @@ void asym_schedule(void) {
                         heap_insert(Threads[tid]->heap,*curr_event,__cmp_ts);
 
                         //heap_push(Threads[tid]->events_heap, curr_event->timestamp, curr_event);
-
-                        //printf("Pushing to priority queue event from LP %d with timestamp %lf\n",
+                        // printf("Pushing to priority queue event from LP %d with timestamp %lf\n",
                         //lid_to_int(asym_lps_mask[i]->lid), curr_event->timestamp);
                         j++;
                         curr_event = curr_event->next;
@@ -648,8 +647,7 @@ void asym_schedule(void) {
 
                 extracted_event = heap_extract(Threads[tid]->heap,__cmp_ts);
                 curr_event = &extracted_event;
-        //      curr_event = heap_pop(Threads[tid]->events_heap);
-
+                //curr_event = heap_pop(Threads[tid]->events_heap);
 
                 //printf("Retrieving from priority queue event from LP %d with timestamp %lf\n",
                 //		lid_to_int(GidToLid(curr_event->sender)), curr_event->timestamp);
@@ -665,7 +663,7 @@ void asym_schedule(void) {
                     }
                     else{
                         extracted_event = heap_extract(Threads[tid]->heap,__cmp_ts);
-        //              curr_event = heap_pop(Threads[tid]->events_heap);
+                        //curr_event = heap_pop(Threads[tid]->events_heap);
                         //lid = idle_process;
                     }
                 }
