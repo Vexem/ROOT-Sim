@@ -585,8 +585,7 @@ void asym_schedule(void) {
     // queue events_heap
     if(rootsim_config.scheduler == BATCH_LOWEST_TIMESTAMP){
         // Clean the priority queue
-        heap_empty(Threads[tid]->heap);
-
+        
       /*bzero(Threads[tid]->events_heap->nodes, Threads[tid]->events_heap->len*sizeof(node_heap_t));
         Threads[tid]->events_heap->len = 0;*/
 
