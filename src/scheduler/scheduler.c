@@ -585,10 +585,11 @@ void asym_schedule(void) {
     // queue events_heap
     if(rootsim_config.scheduler == BATCH_LOWEST_TIMESTAMP){
         // Clean the priority queue
-        
+
       /*bzero(Threads[tid]->events_heap->nodes, Threads[tid]->events_heap->len*sizeof(node_heap_t));
         Threads[tid]->events_heap->len = 0;*/
-
+        bzero(array_items(Threads[tid]->heap),sizeof(*array_items(Threads[tid]->heap))*array_count(Threads[tid]->heap));  //basta heap_empty?
+        heap_empty(Threads[tid]->heap);
         for(i = 0; i < n_prc_per_thread; i++){
             if(asym_lps_mask[i] != NULL && !is_blocked_state(asym_lps_mask[i]->state)){
                 if(asym_lps_mask[i]->bound == NULL && !list_empty(asym_lps_mask[i]->queue_in)){
