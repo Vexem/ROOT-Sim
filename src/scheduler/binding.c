@@ -95,10 +95,12 @@ static inline void LPs_block_binding(void)
 
     // We determine here the number of threads used for binding, depending on the
     // actual (current) incarnation of available threads.
-    if(rootsim_config.num_controllers == 0)
+    if(rootsim_config.num_controllers == 0) {
         binding_threads = n_cores;
-    else
+    }
+    else{
         binding_threads = rootsim_config.num_controllers;
+    }
 
 	buf1 = (n_prc / binding_threads);
 	block_leftover = n_prc - buf1 * binding_threads;
@@ -278,10 +280,12 @@ void rebind_LPs(void)
 {
     unsigned int binding_threads;
 
-    if(rootsim_config.num_controllers == 0)
+    if(rootsim_config.num_controllers == 0) {
         binding_threads = n_cores;
-    else
+    }
+    else{
         binding_threads = rootsim_config.num_controllers;
+    }
 
 	if (unlikely(first_lp_binding)) {
 		first_lp_binding = false;

@@ -194,15 +194,18 @@ typedef struct _Thread_State {
     /// If PT, it defines the current batch size for the input port
     unsigned int port_batch_size;
 
-    /* Pointer to an array of chars used by controllers as a counter of the number
-    of events scheduled for each LP during the execution of asym_schedule*/
+    /** Pointer to an array of chars used by controllers as a counter of the number
+     *of events scheduled for each LP during the execution of asym_schedule. */
     int *curr_scheduled_events;
 
-    /* If CT, it is a pointer to a priority queue used in BATCH_LOWEST_TIMESTAMP
+    /** If CT, it is -NOT- a pointer to a priority queue used in BATCH_LOWEST_TIMESTAMP
      * for scheduling a batch of events*/
+    rootsim_heap(msg_t) heap;
+
     //  heap_t *events_heap;
 
-    rootsim_heap(msg_t) heap;
+
+
 
 } Thread_State;
 
