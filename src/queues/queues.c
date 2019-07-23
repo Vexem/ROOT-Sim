@@ -196,8 +196,8 @@ void process_bottom_halves(void)
                     list_insert_tail(receiver->retirement_queue, matched_msg);
 
                     // Rollback last sent time as well if needed
-                    if(receiver->bound->timestamp < receiver->last_sent_time)
-                        receiver->last_sent_time = receiver->bound->timestamp;
+                 /*   if(receiver->bound->timestamp < receiver->last_sent_time)
+                        receiver->last_sent_time = receiver->bound->timestamp;*/
 
 
                 } else {
@@ -238,9 +238,9 @@ void process_bottom_halves(void)
 
 					receiver->state = LP_STATE_ROLLBACK;
 
-                    // Rollback last sent time as well if needed
+                /*    // Rollback last sent time as well if needed
                     if(receiver->bound->timestamp < receiver->last_sent_time)
-                        receiver->last_sent_time = receiver->bound->timestamp;
+                        receiver->last_sent_time = receiver->bound->timestamp;*/
 				}
 #ifdef HAVE_MPI
 				register_incoming_msg(msg_to_process);

@@ -348,10 +348,10 @@ bool check_rendevouz_request(struct lp_struct *lp)
  * @Author: Alessandro Pellegrini
  */
 void asym_process(void) {
-    struct lp_struct *lp;
     msg_t *msg;
     msg_t *msg_hi;
     msg_t *hi_prio_msg;
+    struct lp_struct *lp;
 
     timer_start(timer_local_thread);
 
@@ -444,6 +444,7 @@ void asym_process(void) {
     // TODO: find a way to set the LP to RUNNING without incurring in a race condition with the CT
 
     // Process this event
+
     activate_LP(lp, msg);
     my_processed_events++;
     msg->unprocessed = false;
@@ -472,11 +473,10 @@ void asym_process(void) {
 #define __cmp_ts(a, b) (((a).timestamp > (b).timestamp) - ((b).timestamp > (a).timestamp))
 
 void asym_schedule(void) {
-
-    struct lp_struct *lp,*curr_lp;
     LID_t lid;
     msg_t *event, *curr_event, extracted_event;
     msg_t *rollback_control;
+    struct lp_struct *lp,*curr_lp;
     unsigned int port_events_to_fill[n_cores];
     unsigned int port_current_size[n_cores];
     unsigned int i, j, thread_id_mask;
@@ -585,11 +585,11 @@ void asym_schedule(void) {
     // queue events_heap
     if(rootsim_config.scheduler == BATCH_LOWEST_TIMESTAMP){
         // Clean the priority queue
-
       /*bzero(Threads[tid]->events_heap->nodes, Threads[tid]->events_heap->len*sizeof(node_heap_t));
         Threads[tid]->events_heap->len = 0;*/
-        bzero(array_items(Threads[tid]->heap),sizeof(*array_items(Threads[tid]->heap))*array_count(Threads[tid]->heap));  //basta heap_empty?
-        heap_empty(Threads[tid]->heap);
+        bzero(array_items(Threads[tid]->heap),sizeof(*array_items(Threads[tid]->heap))*array_count(Threads[tid]->heap));
+        array_count(Threads[tid]->heap) = 0;
+
         for(i = 0; i < n_prc_per_thread; i++){
             if(asym_lps_mask[i] != NULL && !is_blocked_state(asym_lps_mask[i]->state)){
                 if(asym_lps_mask[i]->bound == NULL && !list_empty(asym_lps_mask[i]->queue_in)){
@@ -640,7 +640,11 @@ void asym_schedule(void) {
 
             case SCHEDULER_STF:
                 lp = asym_smallest_timestamp_first();
-                lid = lp->lid;
+                if(lp!=NULL) {
+                    lid = lp->lid;
+                }
+                else
+                    lid = idle_process;
                 break;
 
             case BATCH_LOWEST_TIMESTAMP:
@@ -671,6 +675,9 @@ void asym_schedule(void) {
 
             default:
                 lp = asym_smallest_timestamp_first();
+                if(lp==NULL) {
+                    lid = idle_process;
+                }
         }
 
         // No logical process found with events to be processed

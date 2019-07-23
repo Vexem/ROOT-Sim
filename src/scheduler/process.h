@@ -199,7 +199,6 @@ extern __thread unsigned int __lp_bound_counter;
 #define LPS_bound_set(entry, lp)	lps_bound_blocks[(entry)] = (lp);
 
 #define LPS_bound(lid) (__builtin_choose_expr(__builtin_types_compatible_p(__typeof__ (lid), unsigned int), lps_bound_blocks[lid], (void)0))
-#define LPS_bound_mask(lid) (__builtin_choose_expr(__builtin_types_compatible_p(__typeof__ (lid), unsigned int), asym_lps_mask[lid], (void)0))
 
 extern void initialize_binding_blocks(void);
 extern void initialize_lps(void);

@@ -32,6 +32,7 @@
 #include <stdlib.h>
 #include <float.h>
 
+#include <core/init.h>
 #include <core/core.h>
 #include <gvt/gvt.h>
 #include <queues/queues.h>
@@ -283,8 +284,8 @@ void ParallelScheduleNewEvent(unsigned int gid_receiver, simtime_t timestamp, un
 		rootsim_error(false, "Warning: the destination LP %u is out of range. The event has been ignored\n", gid_receiver);
 		goto out;
 	}
-	// Check if the associated timestamp is negative
-	if (unlikely(timestamp < lvt(current))) {
+	// Check if the associated timestamp is negative.In asymmetric computation, anyhow, this sanity check doesn't hold.
+	if (unlikely(rootsim_config.num_controllers == 0 && timestamp < lvt(current))) {
 		rootsim_error(true, "LP %u is trying to generate an event (type %d) to %u in the past! (Current LVT = %f, generated event's timestamp = %f) Aborting...\n",
 			      current->gid, event_type, gid_receiver,
 			      lvt(current), timestamp);
@@ -534,7 +535,6 @@ void asym_send_outgoing_msgs(struct lp_struct *lp) {
 }
 
 void asym_extract_generated_msgs(void) {
-    struct lp_struct *lp_receiver;
     struct lp_struct *lp_sender;
     unsigned int i;
     msg_t *msg;
@@ -543,13 +543,13 @@ void asym_extract_generated_msgs(void) {
 //		printf("Output port size for PT %u: %d\n", Threads[tid]->PTs[i]->tid), atomic_read(&Threads[tid]->PTs[i]->output_port->size);
         while((msg = pt_get_out_msg(Threads[tid]->PTs[i]->tid)) != NULL) {
             if(is_control_msg(msg->type) && msg->type == ASYM_ROLLBACK_ACK) {
-                lp_receiver =  find_lp_by_gid(msg->receiver);
-                lp_receiver->state = LP_STATE_ROLLBACK_ALLOWED;
+                find_lp_by_gid(msg->receiver)->state = LP_STATE_ROLLBACK_ALLOWED;
                 // printf("Received ROLLBACK ACK for LP %d with timestamp %lf\n", gid_to_int(msg->receiver), msg->timestamp);
                 msg_release(msg);
                 continue;
             }
             Send(msg);
+
             lp_sender = find_lp_by_gid(msg->sender);
             if(msg->send_time > lp_sender->last_sent_time && lp_sender->state == LP_STATE_READY)
                 lp_sender->last_sent_time = msg->send_time;
