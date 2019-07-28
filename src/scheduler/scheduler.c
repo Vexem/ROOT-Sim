@@ -238,7 +238,7 @@ void initialize_worker_thread(void)
     // We need two separate foreach_bound_lp here, because
     // in this way we are sure that there is at least one
     // event to be used as the bound and we do not have to make
-    // any check on null throughout the scheduler co
+    // any check on null throughout the scheduler code.
 
     foreach_bound_lp(lp) {
         pack_msg(&init_event, lp->gid, lp->gid, INIT, 0.0, 0.0, 0, NULL);
@@ -303,10 +303,10 @@ void activate_LP(struct lp_struct *next, msg_t * evt)
 	lp_alloc_schedule();
 #endif
 
-	if (unlikely(is_blocked_state(next->state))) {
+   /* if (unlikely(is_blocked_state(next->state))) {
 		rootsim_error(true, "Critical condition: LP %d has a wrong state: %d. Aborting...\n",
 			      next->gid.to_int, next->state);
-	}
+	}*/
 
 	context_switch(&kernel_context, &next->context);
 
@@ -355,16 +355,18 @@ void asym_process(void) {
 
     timer_start(timer_local_thread);
 
-    // We initially check for high priority msgs. If one is present,
-    // we process it and then return. In this way, the next call to
-    // asym_process() will again check for high priority events, making
-    // them really high priority.
+    /** We initially check for high priority msgs. If one is present,
+    *   we process it and then return. In this way, the next call to
+    *   asym_process() will again check for high priority events, making
+    *   them really high priority. */
+
     msg = pt_get_hi_prio_msg();
     if(msg != NULL) {
         list_insert_tail(hi_prio_list, msg);
-        // Never change this return to anything else: we call asym_process()
-        // within asym_process() to forcely match a high priority queue when
-        // there could be a priority inversion between hi and lo prio ports.
+
+     /** Never change this return to anything else: we call asym_process()
+      *  within asym_process() to forcely match a high priority queue when
+      *  there could be a priority inversion between hi and lo prio ports. */
         return;
     }
 
@@ -386,7 +388,7 @@ void asym_process(void) {
             if(hi_prio_msg->event_content[0] == 0) {
                 hi_prio_msg->event_content[0] = 1;
 
-//				printf("Sending a ROLLBACK_ACK for LP %d at time %f\n", msg->receiver.id, msg->timestamp);
+                //printf("Sending a ROLLBACK_ACK for LP %d at time %f\n", msg->receiver.id, msg->timestamp);
                 // atomic_sub(&notice_count, 1);
 
                 // Send back an ack to start processing the actual rollback operation
@@ -402,17 +404,17 @@ void asym_process(void) {
     // Match a ROLLBACK_NOTICE with a ROLLBACK_BUBBLE and remove it from the
     // local hi_priority_list.
     if(is_control_msg(msg->type) && msg->type == ASYM_ROLLBACK_BUBBLE) {
-//		asym_process();
+    //	asym_process();
 
         ariprova:
         hi_prio_msg = list_head(hi_prio_list);
         while(hi_prio_msg != NULL) {
             if(msg->mark == hi_prio_msg->mark) {
-//				msg_release(msg);
+            //msg_release(msg);
 
                 // TODO: switch to bool
                 if(hi_prio_msg->event_content[0] == 0) {
-//					printf("Sending a ROLLBACK_ACK (2)  for LP %d at time %f\n", msg->receiver.id, msg->timestamp);
+                //printf("Sending a ROLLBACK_ACK (2)  for LP %d at time %f\n", msg->receiver.id, msg->timestamp);
                     // atomic_sub(&notice_count, 1);
 
                     // Send back an ack to start processing the actual rollback operation
@@ -422,7 +424,7 @@ void asym_process(void) {
                 }
 
                 list_delete_by_content(hi_prio_list, hi_prio_msg);
-//				msg_release(hi_prio_msg);
+                //msg_release(hi_prio_msg);
                 return;
             }
             hi_prio_msg = list_next(hi_prio_msg);
@@ -458,7 +460,7 @@ void asym_process(void) {
     // scope of the current development phase here.
     LogState(lp);
 
-    //printf("asym_process for PT %d completed in %d millisecond\n", tid, timer_value_milli(timer_local_thread));
+  //printf("asym_process for PT %d completed in %d millisecond\n", tid, timer_value_milli(timer_local_thread));
 
 }
 /**
@@ -487,29 +489,12 @@ void asym_schedule(void) {
     unsigned int sent_events = 0;
     unsigned int sent_notice = 0;
 
-    /* Testing heap
-    heap_t heap_test;
-    heap_test.size = 0;
-    heap_test.len = 0;
-
-    if(lps_blocks[1]->bound != NULL && lps_blocks[2]->bound != NULL){
-        // DEBUG: testing heap implementantion
-        printf("Adding to heap bound of LP 1 and LP2\n");
-        heap_push(&heap_test, lps_blocks[1]->bound->timestamp, lps_blocks[1]->bound);
-        heap_push(&heap_test, lps_blocks[2]->bound->timestamp, lps_blocks[2]->bound);
-        printf("Retrieving LPS in order of timestamp bound\n");
-        msg_t *first_dequeue = heap_pop(&heap_test);
-        msg_t *second_dequeue = heap_pop(&heap_test);
-        printf("First dequeue: %lf, second dequeue: %lf\n", first_dequeue->timestamp, second_dequeue->timestamp);
-    }
-    */
-
 //	printf("NOTICE COUNT: %d\n", atomic_read(&notice_count));
 
     timer_start(timer_local_thread);
 
-    // Compute utilization rate of the input ports since the last call to asym_schedule
-    // and resize the ports if necessary
+   /** Compute utilization rate of the input ports since the last call to asym_schedule
+    *  and resize the ports if necessary */
     for(i = 0; i < Threads[tid]->num_PTs; i++){
         Thread_State* pt = Threads[tid]->PTs[i];
         int port_size = pt->port_batch_size;
@@ -547,11 +532,10 @@ void asym_schedule(void) {
 
     //printf("asym_schedule: port resize completed for controller %d at millisecond %d\n", tid, timer_value_milli(timer_local_thread));
 
-
-    // Compute the total number of events necessary to fill all
-    // the input ports, considering the current batch value
-    // and the current number of events yet to be processed in
-    // each port
+    /** Compute the total number of events necessary to fill all
+     *  the input ports, considering the current batch value
+     *  and the current number of events yet to be processed in
+     *  each port */
     for(i = 0; i < Threads[tid]->num_PTs; i++){
         Thread_State* pt = Threads[tid]->PTs[i];
         toAdd = pt->port_batch_size - port_current_size[pt->tid];
@@ -569,9 +553,9 @@ void asym_schedule(void) {
     //printf("asym_schedule: events_to_fill computed for controller %d at millisecond %d\n", tid, timer_value_milli(timer_local_thread));
 
 
-    // Create a copy of lps_bound_blocks in asym_lps_mask which will
-    // be modified during scheduling in order to jump LPs bound to PT
-    // for whom the input port is already filled
+    /** Create a copy of lps_bound_blocks in asym_lps_mask which will
+     * be modified during scheduling in order to jump LPs bound to PT
+     * for whom the input port is already filled */
     memcpy(asym_lps_mask, lps_bound_blocks, sizeof(struct lp_struct *) * n_prc_per_thread);
     for(i = 0; i < n_prc_per_thread; i++) {
         Thread_State *pt = Threads[asym_lps_mask[i]->processing_thread];
@@ -581,8 +565,8 @@ void asym_schedule(void) {
     }
     //printf("asym_schedule: asym_lps_mask computed for controller %d at millisecond %d\n", tid, timer_value_milli(timer_local_thread));
 
-    // Put up to MAX_LP_EVENTS_PER_BATCH events for each LP in the priority
-    // queue events_heap
+     /** Put up to MAX_LP_EVENTS_PER_BATCH events for each LP in the priority
+      * queue events_heap */
     if(rootsim_config.scheduler == BATCH_LOWEST_TIMESTAMP){
         // Clean the priority queue
       /*bzero(Threads[tid]->events_heap->nodes, Threads[tid]->events_heap->len*sizeof(node_heap_t));
@@ -641,6 +625,7 @@ void asym_schedule(void) {
             case SCHEDULER_STF:
                 lp = asym_smallest_timestamp_first();
                 if(lp!=NULL) {
+                //  printf("CONTROLLER THREAD: lp-gid = %d \n", lp->gid.to_int);
                     lid = lp->lid;
                 }
                 else
@@ -656,7 +641,7 @@ void asym_schedule(void) {
                 //printf("Retrieving from priority queue event from LP %d with timestamp %lf\n",
                 //		lid_to_int(GidToLid(curr_event->sender)), curr_event->timestamp);
                 int found = 0;
-                lid = idle_process;
+                    lid = idle_process;
                 while(curr_event != NULL && !found){
                     curr_lp = find_lp_by_gid(curr_event->receiver);
                     if(port_events_to_fill[curr_lp->processing_thread] > 0 &&
@@ -668,7 +653,7 @@ void asym_schedule(void) {
                     else{
                         extracted_event = heap_extract(Threads[tid]->heap,__cmp_ts);
                         //curr_event = heap_pop(Threads[tid]->events_heap);
-                        //lid = idle_process;
+                        lid = idle_process;
                     }
                 }
                 break;
@@ -676,7 +661,7 @@ void asym_schedule(void) {
             default:
                 lp = asym_smallest_timestamp_first();
                 if(lp==NULL) {
-                    lid = idle_process;
+                    lid=idle_process;
                 }
         }
 
@@ -685,6 +670,7 @@ void asym_schedule(void) {
             statistics_post_data(lp, STAT_IDLE_CYCLES, 1.0);
             continue;
         }
+       // printf("lid: %d, bound_mark: %llu, bound_timestamp %f \n",lp->lid.to_int,lp->bound->mark,lp->bound->timestamp);
 
         // If we have to rollback
         if(lp->state == LP_STATE_ROLLBACK) {
@@ -705,8 +691,8 @@ void asym_schedule(void) {
             // Set the LP to a blocked state
             lp->state = LP_STATE_WAIT_FOR_ROLLBACK_ACK;
 
-            // Notify the PT in charge of managing this LP that the rollback is complete and
-            // events to the LP should not be discarded anymore
+            /** Notify the PT in charge of managing this LP that the rollback is complete and
+             * events to the LP should not be discarded anymore */
 //			printf("Sending a ROLLBACK_BUBBLE for LP %d at time %f\n", lid.id, lvt(lid));
 
             pack_msg(&rollback_control, lp->gid, lp->gid, ASYM_ROLLBACK_BUBBLE, lvt(lp), lvt(lp), 0, NULL);
@@ -739,15 +725,16 @@ void asym_schedule(void) {
 
         if(!is_blocked_state(lp->state) && lp->state != LP_STATE_READY_FOR_SYNCH){
             event = advance_to_next_event(lp);
+         /* printf("lid: %d, bound_mark: %llu, bound_timestamp %f \n",lp->lid.to_int,lp->bound->mark,lp->bound->timestamp);
+            printf("event_mark %llu, event_timestamp %f\n",event->mark,event->timestamp);   */
         } else {
             event = lp->bound;
         }
 
-
-        // Sanity check: if we get here, it means that lid is a LP which has
-        // at least one event to be executed. If advance_to_next_event() returns
-        // NULL, it means that lid has no events to be executed. This is
-        // a critical condition and we abort.
+        /** Sanity check: if we get here, it means that lid is a LP which has
+         *  at least one event to be executed. If advance_to_next_event() returns
+         *  NULL, it means that lid has no events to be executed. This is
+         *  a critical condition and we abort. */
         if(event == NULL) {
             rootsim_error(true, "Critical condition: LP %d seems to have events to be processed, but I cannot find them. Aborting...\n", lid);
         }
@@ -767,6 +754,7 @@ void asym_schedule(void) {
 #endif
 
         thread_id_mask = lp->processing_thread;
+   //   printf("CONTROLLER THREAD: event->mark = %llu \n", event->mark);
 
         // Put the event in the low prio queue of the associated PT
         event->unprocessed = true;
@@ -795,9 +783,9 @@ void asym_schedule(void) {
 
             //printf("asym_schedule: event sent for controller %d at millisecond %d\n", tid, timer_value_milli(timer_local_thread));
 
-            // If one port becomes full, should set all pointers to LP
-            // mapped to the PT of the respective port to NULL
-            // printf("thread_id_mask: %u\n", thread_id_mask);
+            /** If one port becomes full, should set all pointers to LP
+             *  mapped to the PT of the respective port to NULL
+             *  printf("thread_id_mask: %u\n", thread_id_mask); */
             if(port_events_to_fill[thread_id_mask] == 0){
                 for(i = 0; i<n_prc_per_thread; i++){
                     if(asym_lps_mask[i] != NULL && asym_lps_mask[i]->processing_thread == thread_id_mask)
@@ -824,9 +812,9 @@ void asym_schedule(void) {
         total_idle_microseconds[tid] += timer_value_micro(timer_local_thread);
     }
 
-    //printf("Sent events: %u\n", sent_events);
-    //printf("Sent rollback notice: %u\n", sent_notice);
-    //printf("asym_schedule for controller %d completed in %d milliseconds\n", tid, timer_value_milli(timer_local_thread));
+ /* printf("Sent events: %u\n", sent_events);
+    printf("Sent rollback notice: %u\n", sent_notice);
+    printf("asym_schedule for controller %d completed in %d milliseconds\n", tid, timer_value_milli(timer_local_thread)); */
 }
 
 /**

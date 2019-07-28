@@ -74,7 +74,6 @@ struct lp_struct *smallest_timestamp_first(void)
 			next_lp = lp;
 		}
 	}
-
 	return next_lp;
 }
 
@@ -90,12 +89,10 @@ struct lp_struct *smallest_timestamp_first(void)
 * @author Stefano Conoci
 * @author Alessandro Pellegrini */
 
-struct lp_struct *asym_smallest_timestamp_first(void) {
-
+struct lp_struct *asym_smallest_timestamp_first(void)
+{
     struct lp_struct *next_lp = NULL;
     simtime_t evt_time, next_time = INFTY;
-    unsigned int i = n_prc_per_thread;
-
     foreach_bound_mask_lp(lp) {
         if (lp != NULL) {
             // If waiting for synch, don't take into account the LP
@@ -114,10 +111,9 @@ struct lp_struct *asym_smallest_timestamp_first(void) {
             if (evt_time < next_time && evt_time < INFTY) {
                 next_time = evt_time;
                 next_lp = lp;
-                i--;
             }
         }
     }
-
+ //   printf("lid: %d, gid: %d, state: %d, bound_mark: %llu, bound_timestamp %f \n",next_lp->lid.to_int,next_lp->gid.to_int,next_lp->state,next_lp->bound->mark, next_lp->bound->timestamp);
     return next_lp;
 }

@@ -69,7 +69,7 @@ simtime_t next_event_timestamp(struct lp_struct *lp)
 	} else {
 		evt = list_next(lp->bound);
 		if (likely(evt != NULL)) {
-			return evt->timestamp;
+            return evt->timestamp;
 		}
 	}
 
@@ -136,7 +136,7 @@ void process_bottom_halves(void)
 	msg_t *msg_to_process;
 	msg_t *matched_msg;
 
-	foreach_bound_lp(lp) {  //for(struct lp_struct *(lp) = lps_blocks[__lp_counter]; __lp_counter < n_prc && ((lp) = lps_blocks[__lp_counter]); ++__lp_counter)
+	foreach_bound_lp(lp) {
 
 		while ((msg_to_process = get_msg(lp->bottom_halves)) != NULL) {
 			receiver = find_lp_by_gid(msg_to_process->receiver);

@@ -173,6 +173,7 @@ static void *main_simulation_loop(void *arg)
 		printf("\n");
 */
 		my_time_barrier = gvt_operations();
+		//printf("MTB: %f\n",my_time_barrier);
 
 		// Only a master thread on master kernel prints the time barrier
 		if (master_kernel() && master_thread () && D_DIFFER(my_time_barrier, -1.0)) {

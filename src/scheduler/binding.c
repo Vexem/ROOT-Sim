@@ -262,6 +262,11 @@ static void install_binding(void)
 			}
 		}
 	}
+
+    // In case we're running with the asymmetric architecture, we have
+    // to rebind as well
+    if(rootsim_config.num_controllers > 0)
+        rebind_LPs_to_PTs();
 }
 
 #endif
@@ -337,8 +342,8 @@ void rebind_LPs(void)
 		reset_min_in_transit(local_tid);
 #endif
 
-		if (thread_barrier(&all_thread_barrier)) {
-			atomic_set(&worker_thread_reduction, n_cores);
+		if (thread_barrier(&controller_barrier)) {
+			atomic_set(&worker_thread_reduction, binding_threads);
 		}
 
 	}

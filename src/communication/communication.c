@@ -208,7 +208,7 @@ msg_t *get_msg_from_slab(struct lp_struct *lp)
  * antimessage, or a message which is now beyond the commit horizon
  * identified by the GVT).
  *
- * To free the message, this function checks againts the total size
+ * To free the message, this function checks against the total size
  * of the message, considering both the size of the @ref msg_t structure
  * and that of the payload kept in the @c event_content member of @ref msg_t.
  * If the total size is smaller than @ref SLAB_MSG_SIZE, then the message
