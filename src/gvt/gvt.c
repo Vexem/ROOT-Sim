@@ -218,7 +218,9 @@ static inline void reduce_local_gvt(void)
 
 		local_min[local_tid] =
 		    min(local_min[local_tid], lp->bound->timestamp);
-	}
+            //  printf("GVT LID: %d, bound->timestamp = %f \n",lp->lid.to_int, lp->bound->timestamp);
+
+    }
 }
 
 simtime_t GVT_phases(void)

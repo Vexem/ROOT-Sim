@@ -170,26 +170,36 @@ static int compare_lp_cost(const void *a, const void *b)
 static inline void LP_knapsack(void)
 {
 	register unsigned int i, j;
-	double reference_knapsack = 0;
+    unsigned int binding_threads;
+    double reference_knapsack = 0;
 	bool assigned;
 	double assignments[n_cores];
 
 	if (!master_thread())
 		return;
 
+    // We determine here the number of threads used for binding, depending on the
+    // actual (current) incarnation of available threads.
+    if(rootsim_config.num_controllers == 0){
+        binding_threads = n_cores;
+    }
+    else{
+        binding_threads = rootsim_config.num_controllers;
+    }
+
 	// Estimate the reference knapsack
 	for (i = 0; i < n_prc; i++) {
 		reference_knapsack += lp_cost[i].workload_factor;
 	}
-	reference_knapsack /= n_cores;
+	reference_knapsack /= binding_threads;
 
 	// Sort the expected times
 	qsort(lp_cost, n_prc, sizeof(struct lp_cost_id), compare_lp_cost);
 
 	// At least one LP per thread
-	bzero(assignments, sizeof(double) * n_cores);
+	bzero(assignments, sizeof(double) * binding_threads);
 	j = 0;
-	for (i = 0; i < n_cores; i++) {
+	for (i = 0; i < binding_threads; i++) {
 		assignments[j] += lp_cost[i].workload_factor;
 		new_LPS_binding[i] = j;
 		j++;
@@ -199,7 +209,7 @@ static inline void LP_knapsack(void)
 	for (; i < n_prc; i++) {
 		assigned = false;
 
-		for (j = 0; j < n_cores; j++) {
+		for (j = 0; j < binding_threads; j++) {
 			// Simulate assignment
 			if (assignments[j] + lp_cost[i].workload_factor <=
 			    reference_knapsack) {
@@ -219,7 +229,7 @@ static inline void LP_knapsack(void)
 		j = 0;
 		for (; i < n_prc; i++) {
 			new_LPS_binding[i] = j;
-			j = (j + 1) % n_cores;
+			j = (j + 1) % binding_threads;
 		}
 	}
 }

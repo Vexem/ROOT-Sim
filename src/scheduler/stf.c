@@ -99,14 +99,14 @@ struct lp_struct *asym_smallest_timestamp_first(void)
             if (is_blocked_state(lp->state)) {
                 continue; // continue to the next element
             }
-            //If the LP is in READY_FOR_SYNCH has to handle the same messagge of ECS
+            //If the LP is in READY_FOR_SYNCH has to handle the same message of ECS
             if (lp->state == LP_STATE_READY_FOR_SYNCH) {
                 // The LP handles the suspended event as the next event
                 evt_time = lvt(lp);
             } else {
                 // Compute the next event's timestamp. Translate the id from the local binding to the local ID
                 evt_time = next_event_timestamp(lp);
-                //printf(" evt_time: %f", (evt_time < INFTY ? evt_time : -1.0));
+                //printf(" evt_time: %f\n", (evt_time < INFTY ? evt_time : -1.0));
             }
             if (evt_time < next_time && evt_time < INFTY) {
                 next_time = evt_time;
@@ -114,6 +114,5 @@ struct lp_struct *asym_smallest_timestamp_first(void)
             }
         }
     }
- //   printf("lid: %d, gid: %d, state: %d, bound_mark: %llu, bound_timestamp %f \n",next_lp->lid.to_int,next_lp->gid.to_int,next_lp->state,next_lp->bound->mark, next_lp->bound->timestamp);
     return next_lp;
 }

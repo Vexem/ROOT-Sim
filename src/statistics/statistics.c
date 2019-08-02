@@ -480,6 +480,9 @@ void statistics_stop(int exit_code)
 		if((rootsim_config.stats == STATS_ALL || rootsim_config.stats == STATS_PERF))
 			print_gvt_stats_file();
 
+        if(Threads[tid]->incarnation == THREAD_PROCESSING)
+            return;
+
 		/* dump per-LP statistics if required. They are already reduced during the GVT phase */
 		if(rootsim_config.stats == STATS_LP || rootsim_config.stats == STATS_ALL) {
 			f = thread_files[STAT_FILE_T_LP][local_tid];

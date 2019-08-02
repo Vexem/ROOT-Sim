@@ -306,6 +306,7 @@ void ParallelScheduleNewEvent(unsigned int gid_receiver, simtime_t timestamp, un
 		fflush(stdout);
 	}
 
+
 	insert_outgoing_msg(event);
 
  out:
@@ -453,6 +454,21 @@ void send_outgoing_msgs(struct lp_struct *lp)
 	lp->outgoing_buffer.size = 0;
 }
 
+void asym_send_outgoing_msgs(struct lp_struct *lp) {
+    register unsigned int i = 0;
+    msg_t *msg;
+    printf("current gid: %d\n", lp->gid.to_int);
+
+    for(i = 0; i < lp->outgoing_buffer.size; i++) {
+        msg = lp->outgoing_buffer.outgoing_msgs[i];
+
+        pt_put_out_msg(msg);
+        //printf("Putting in the output port the following message\n");
+        //dump_msg_content(msg);
+    }
+
+    lp->outgoing_buffer.size = 0;
+}
 
 /**
  * @brief Pack a message in a platform-level data structure
@@ -517,21 +533,6 @@ void pack_msg(msg_t **msg, GID_t sender, GID_t receiver, int type, simtime_t tim
 
 	if (payload != NULL && size > 0)
 		memcpy((*msg)->event_content, payload, size);
-}
-
-void asym_send_outgoing_msgs(struct lp_struct *lp) {
-    register unsigned int i = 0;
-    msg_t *msg;
-
-    for(i = 0; i < lp->outgoing_buffer.size; i++) {
-        msg = lp->outgoing_buffer.outgoing_msgs[i];
-
-        pt_put_out_msg(msg);
-//		printf("Putting in the output port the following message\n");
-//		dump_msg_content(msg);
-    }
-
-    lp->outgoing_buffer.size = 0;
 }
 
 void asym_extract_generated_msgs(void) {

@@ -247,7 +247,7 @@ void initialize_worker_thread(void)
         lp->state_log_forced = true;
     }
 
-// Worker Threads synchronization barrier: they all should start working together
+    // Worker Threads synchronization barrier: they all should start working together
 	if(rootsim_config.num_controllers == 0) {
 		thread_barrier(&all_thread_barrier);
 	} else {
@@ -303,10 +303,10 @@ void activate_LP(struct lp_struct *next, msg_t * evt)
 	lp_alloc_schedule();
 #endif
 
-   /* if (unlikely(is_blocked_state(next->state))) {
+    if (unlikely(is_blocked_state(next->state))) {
 		rootsim_error(true, "Critical condition: LP %d has a wrong state: %d. Aborting...\n",
 			      next->gid.to_int, next->state);
-	}*/
+	}
 
 	context_switch(&kernel_context, &next->context);
 
@@ -359,7 +359,7 @@ void asym_process(void) {
     *   we process it and then return. In this way, the next call to
     *   asym_process() will again check for high priority events, making
     *   them really high priority. */
-
+   // printf("asym_process: %d/%d Hi prio: %d tid: %d\n ", atomic_read(&Threads[tid]->input_port[1]->size),  Threads[tid]->port_batch_size, atomic_read(&Threads[tid]->input_port[0]->size), tid);
     msg = pt_get_hi_prio_msg();
     if(msg != NULL) {
         list_insert_tail(hi_prio_list, msg);
@@ -666,11 +666,12 @@ void asym_schedule(void) {
         }
 
         // No logical process found with events to be processed
+        // idle_process = 0
         if (lid_equals(lid, idle_process)) {
             statistics_post_data(lp, STAT_IDLE_CYCLES, 1.0);
             continue;
         }
-       // printf("lid: %d, bound_mark: %llu, bound_timestamp %f \n",lp->lid.to_int,lp->bound->mark,lp->bound->timestamp);
+        //printf("lid: %d, bound_mark: %llu, bound_timestamp %f \n",lp->lid.to_int,lp->bound->mark,lp->bound->timestamp);
 
         // If we have to rollback
         if(lp->state == LP_STATE_ROLLBACK) {
@@ -725,8 +726,6 @@ void asym_schedule(void) {
 
         if(!is_blocked_state(lp->state) && lp->state != LP_STATE_READY_FOR_SYNCH){
             event = advance_to_next_event(lp);
-         /* printf("lid: %d, bound_mark: %llu, bound_timestamp %f \n",lp->lid.to_int,lp->bound->mark,lp->bound->timestamp);
-            printf("event_mark %llu, event_timestamp %f\n",event->mark,event->timestamp);   */
         } else {
             event = lp->bound;
         }
@@ -754,11 +753,11 @@ void asym_schedule(void) {
 #endif
 
         thread_id_mask = lp->processing_thread;
-   //   printf("CONTROLLER THREAD: event->mark = %llu \n", event->mark);
 
         // Put the event in the low prio queue of the associated PT
         event->unprocessed = true;
         pt_put_lo_prio_msg(thread_id_mask, event);
+        //printf("asym_scheduler: %d/%d Hi prio: %d tid: %d\n ", atomic_read(&Threads[tid]->input_port[1]->size),  Threads[tid]->port_batch_size, atomic_read(&Threads[tid]->input_port[0]->size), tid);
         sent_events++;
 
         // Modify port_events_to_fill to reflect last message sent
