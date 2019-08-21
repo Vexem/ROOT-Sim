@@ -306,7 +306,7 @@ void ParallelScheduleNewEvent(unsigned int gid_receiver, simtime_t timestamp, un
 		fflush(stdout);
 	}
 
-
+    //printf("INSERT_outgoing_msg mark: %llu, \n",event->mark);
 	insert_outgoing_msg(event);
 
  out:
@@ -317,9 +317,9 @@ void ParallelScheduleNewEvent(unsigned int gid_receiver, simtime_t timestamp, un
 /**
  * @brief Send all antimessages for a certain LP
  *
- * This function send all the antimessages for a certain LP, provided
+ * This function sends all the antimessages for a certain LP, provided
  * a simulation time (which is associated with the time at which
- * we are rolling back.
+ * we are rolling back).
  *
  * After that the antimessage is sent, the header is immediately removed
  * from the output queue, as MPI guarantees that the antimessage is
@@ -333,7 +333,10 @@ void send_antimessages(struct lp_struct *lp, simtime_t after_simtime)
 	msg_hdr_t *anti_msg, *anti_msg_prev;
 	msg_t *msg;
 
-	if (unlikely(list_empty(lp->queue_out)))
+    //printf("send_antimessages to lp: %d, starting from time: %f \n", lp->gid.to_int, after_simtime);
+
+
+    if (unlikely(list_empty(lp->queue_out)))
 		return;
 
 	// Scan the output queue backwards, sending all required antimessages
@@ -342,6 +345,8 @@ void send_antimessages(struct lp_struct *lp, simtime_t after_simtime)
 		msg = get_msg_from_slab(which_slab_to_use(anti_msg->sender, anti_msg->receiver));
 		hdr_to_msg(anti_msg, msg);
 		msg->message_kind = negative;
+
+        //printf("mark: %llu, remove_timestamp: %f \n", msg->mark, anti_msg->timestamp);
 
 		Send(msg);
 
@@ -457,7 +462,7 @@ void send_outgoing_msgs(struct lp_struct *lp)
 void asym_send_outgoing_msgs(struct lp_struct *lp) {
     register unsigned int i = 0;
     msg_t *msg;
-    printf("current gid: %d\n", lp->gid.to_int);
+    //printf("current gid: %d\n", lp->gid.to_int);
 
     for(i = 0; i < lp->outgoing_buffer.size; i++) {
         msg = lp->outgoing_buffer.outgoing_msgs[i];

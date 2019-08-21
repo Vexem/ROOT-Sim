@@ -71,11 +71,10 @@ static atomic_t worker_thread_reduction;
 // When calling this function, n_prc_per_thread
 // must have been updated with the new number of bound LPs.
 static void rebind_LPs_to_PTs(void) {
-    unsigned int i;
     unsigned int curr_pt_idx = 0;
 
-    for(i = 0; i < n_prc_per_thread; i++) {
-        LPS_bound(i)->processing_thread = Threads[tid]->PTs[curr_pt_idx]->tid;
+    foreach_bound_lp(lp) {
+        lp->processing_thread = Threads[tid]->PTs[curr_pt_idx]->tid;
         curr_pt_idx = (curr_pt_idx + 1) % Threads[tid]->num_PTs;
     }
 }
@@ -295,6 +294,8 @@ void rebind_LPs(void)
 {
     unsigned int binding_threads;
 
+    // We determine here the number of threads used for binding, depending on the
+    // actual (current) incarnation of available threads.
     if(rootsim_config.num_controllers == 0) {
         binding_threads = n_cores;
     }

@@ -69,9 +69,9 @@ enum _control_msgs {
 	RENDEZVOUS_GET_PAGE,		///< ECS protocol: a remote LP is asked for a certain set of pages
 	RENDEZVOUS_GET_PAGE_ACK,	///< ECS protocol: the sender LP is giving a lease on a set of pages
 	RENDEZVOUS_PAGE_WRITE_BACK,	///< ECS protocol: modified pages are sent back to the owner LP
-	ASYM_ROLLBACK_ACK,
     ASYM_ROLLBACK_NOTICE,
     ASYM_ROLLBACK_BUBBLE,
+	ASYM_ROLLBACK_ACK,
     MAX_VALUE_CONTROL,		///< Anything after this value is considered as an impossible message
 };
 

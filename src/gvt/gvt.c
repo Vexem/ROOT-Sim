@@ -216,10 +216,13 @@ static inline void reduce_local_gvt(void)
 		if (lp->bound->next == NULL)
 			continue;
 
-		local_min[local_tid] =
-		    min(local_min[local_tid], lp->bound->timestamp);
-            //  printf("GVT LID: %d, bound->timestamp = %f \n",lp->lid.to_int, lp->bound->timestamp);
+		//local_min[local_tid] =
+		//   min(local_min[local_tid], lp->bound->timestamp);
 
+        local_min[local_tid] =
+                min(local_min[local_tid], lp->last_sent_time);
+
+        printf("GVT -- lp: %d| bound->timestamp = %f| last sent time: %f \n", lp->gid.to_int, lp->bound->timestamp, lp->last_sent_time);
     }
 }
 
@@ -407,6 +410,7 @@ simtime_t gvt_operations(void)
 		}
 		return -1.0;
 	}
+
 
 #ifdef HAVE_MPI
 	if (kernel_phase == kphase_white_msg_redux

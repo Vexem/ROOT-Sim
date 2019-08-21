@@ -166,7 +166,7 @@ enum thread_incarnation {
 
 /// Thread State Control Block
 typedef struct _Thread_State {
-    /// This member tells what incar
+    /// This member tells what incarnation the thread has
     enum thread_incarnation	incarnation;
 
     /// tid, used to identify a thread within a local machine
@@ -203,9 +203,6 @@ typedef struct _Thread_State {
     rootsim_heap(msg_t) heap;
 
     //  heap_t *events_heap;
-
-
-
 
 } Thread_State;
 

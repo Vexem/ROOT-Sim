@@ -68,6 +68,7 @@ simtime_t next_event_timestamp(struct lp_struct *lp)
 		return list_head(lp->queue_in)->timestamp;
 	} else {
 		evt = list_next(lp->bound);
+		//printf("EVT = %d lp->bound->next = %d\n", evt !=NULL,lp->bound->next!= NULL);
 		if (likely(evt != NULL)) {
             return evt->timestamp;
 		}
@@ -140,6 +141,7 @@ void process_bottom_halves(void)
 
 		while ((msg_to_process = get_msg(lp->bottom_halves)) != NULL) {
 			receiver = find_lp_by_gid(msg_to_process->receiver);
+            // printf("message extracted from lp %d's bottom halves: %llu \n", lp->gid.to_int,msg_to_process->mark);
 
 			// Sanity check
 			if (unlikely
@@ -176,6 +178,7 @@ void process_bottom_halves(void)
 					dump_msg_content(msg_to_process);
 					rootsim_error(true, "Aborting...\n");
 				}
+
 				// If the matched message is in the past, we have to rollback
 				if (matched_msg->timestamp <= lvt(receiver)) {
 
@@ -184,7 +187,7 @@ void process_bottom_halves(void)
 						&& D_EQUAL(receiver->bound->timestamp, msg_to_process->timestamp)) {
 						receiver->bound = list_prev(receiver->bound);
 					}
-					
+
 					receiver->state = LP_STATE_ROLLBACK;
 
                     if(matched_msg->unprocessed == false)
@@ -199,15 +202,15 @@ void process_bottom_halves(void)
                     if(receiver->bound->timestamp < receiver->last_sent_time)
                         receiver->last_sent_time = receiver->bound->timestamp;
 
-
-                } else {
+                }
+				else {
                     delete:
+
                     // Unchain the event from the input queue
                     list_delete_by_content(receiver->queue_in,
                                            matched_msg);
                     // Delete the matched message
                     msg_release(matched_msg);
-
                     //list_insert_tail(LPS(lid_receiver)->retirement_queue, matched_msg);
 
 				}
@@ -224,7 +227,7 @@ void process_bottom_halves(void)
 				list_insert(receiver->queue_in, timestamp,
 					    msg_to_process);
 
-				// Check if we've just inserted an out-of-order event.
+                    // Check if we've just inserted an out-of-order event.
 				// Here we check for a strictly minor timestamp since
 				// the queue is FIFO for same-timestamp events. Therefore,
 				// A contemporaneous event does not cause a causal violation.
@@ -240,56 +243,56 @@ void process_bottom_halves(void)
 
                     // Rollback last sent time as well if needed
                     if(receiver->bound->timestamp < receiver->last_sent_time)
-                        receiver->last_sent_time = receiver->bound->timestamp;
-				}
-#ifdef HAVE_MPI
-				register_incoming_msg(msg_to_process);
-#endif
-				break;
+                         receiver->last_sent_time = receiver->bound->timestamp;
+                 }
+ #ifdef HAVE_MPI
+                 register_incoming_msg(msg_to_process);
+ #endif
+                 break;
 
-				// It's a control message
-			case control:
+                 // It's a control message
+             case control:
 
-				// Check if it is an anti control message
-				if (!anti_control_message(msg_to_process)) {
-					msg_release(msg_to_process);
-					continue;
-				}
+                 // Check if it is an anti control message
+                 if (!anti_control_message(msg_to_process)) {
+                     msg_release(msg_to_process);
+                     continue;
+                 }
 
-				break;
+                 break;
 
-			default:
-				rootsim_error(true, "Received a message which is neither positive nor negative. Aborting...\n");
-			}
-		}
-	}
+             default:
+                 rootsim_error(true, "Received a message which is neither positive nor negative. Aborting...\n");
+             }
+         }
+     }
 
-	// We have processed all in transit messages.
-	// Actually, during this operation, some new in transit messages could
-	// be placed by other threads. In this case, we loose their presence.
-	// This is not a correctness error. The only issue could be that the
-	// preemptive scheme will not detect this, and some events could
-	// be in fact executed out of order.
-#ifdef HAVE_PREEMPTION
-	reset_min_in_transit(local_tid);
-#endif
-}
+     // We have processed all in transit messages.
+     // Actually, during this operation, some new in transit messages could
+     // be placed by other threads. In this case, we loose their presence.
+     // This is not a correctness error. The only issue could be that the
+     // preemptive scheme will not detect this, and some events could
+     // be in fact executed out of order.
+ #ifdef HAVE_PREEMPTION
+     reset_min_in_transit(local_tid);
+ #endif
+ }
 
-/**
-* This function generates a mark value that is unique w.r.t. the previous values for each Logical Process.
-* It is based on the Cantor Pairing Function, which maps 2 naturals to a single natural.
-* The two naturals are the LP gid (which is unique in the system) and a non decreasing number
-* which gets incremented (on a per-LP basis) upon each function call.
-* It's fast to calculate the mark, it's not fast to invert it. Therefore, inversion is not
-* supported at all in the simulator code (but an external utility is provided for debugging purposes,
-* which can be found in src/lp_mark_inverse.c)
-*
-* @author Alessandro Pellegrini
-*
-* @param lp A pointer to the LP's lp_struct for which we want to generate
-*           a system-wide unique mark
-* @return A value to be used as a unique mark for the message within the LP
-*/
+ /**
+ * This function generates a mark value that is unique w.r.t. the previous values for each Logical Process.
+ * It is based on the Cantor Pairing Function, which maps 2 naturals to a single natural.
+ * The two naturals are the LP gid (which is unique in the system) and a non decreasing number
+ * which gets incremented (on a per-LP basis) upon each function call.
+ * It's fast to calculate the mark, it's not fast to invert it. Therefore, inversion is not
+ * supported at all in the simulator code (but an external utility is provided for debugging purposes,
+ * which can be found in src/lp_mark_inverse.c)
+ *
+ * @author Alessandro Pellegrini
+ *
+ * @param lp A pointer to the LP's lp_struct for which we want to generate
+ *           a system-wide unique mark
+ * @return A value to be used as a unique mark for the message within the LP
+ */
 unsigned long long generate_mark(struct lp_struct *lp)
 {
 	unsigned long long k1 = (unsigned long long)lp->gid.to_int;

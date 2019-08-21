@@ -87,7 +87,7 @@ struct lp_struct {
 	unsigned int worker_thread;
 
     /// ID of the Processing Thread (in case worker_thread above is a controller) which processes events
-    unsigned int		processing_thread;
+    unsigned int processing_thread;
 
 	/// Current execution state of the LP
 	short unsigned int state;
@@ -111,7 +111,7 @@ struct lp_struct {
 	msg_t *bound;
 
     /// Send time of the last event extracted from the output port of the PT executing events of this LP
-    simtime_t		last_sent_time;
+    simtime_t last_sent_time;
 
 	/// Output messages queue
 	 list(msg_hdr_t) queue_out;
@@ -120,7 +120,7 @@ struct lp_struct {
 	 list(state_t) queue_states;
 
     /// Event retirement queue
-    list(msg_t)		retirement_queue;
+    list(msg_t) retirement_queue;
 
 	/// Bottom halves
 	msg_channel *bottom_halves;
@@ -197,8 +197,6 @@ extern __thread unsigned int __lp_bound_counter;
 				for(struct lp_struct *(lp) = asym_lps_mask[__lp_bound_counter]; __lp_bound_counter < n_prc_per_thread && ((lp) = asym_lps_mask[__lp_bound_counter]); ++__lp_bound_counter)
 
 #define LPS_bound_set(entry, lp)	lps_bound_blocks[(entry)] = (lp);
-
-#define LPS_bound(lid) (__builtin_choose_expr(__builtin_types_compatible_p(__typeof__ (lid), unsigned int), lps_bound_blocks[lid], (void)0))
 
 extern void initialize_binding_blocks(void);
 extern void initialize_lps(void);

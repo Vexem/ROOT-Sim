@@ -72,7 +72,7 @@ static void malloc_area_init(malloc_area * m_area, size_t size, int num_chunks)
 }
 
 /**
-* This function inizializes a malloc_state.
+* This function initializes a malloc_state.
 */
 malloc_state *malloc_state_init(void)
 {

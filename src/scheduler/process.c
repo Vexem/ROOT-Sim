@@ -36,8 +36,6 @@
 #include <scheduler/process.h>
 #include <scheduler/scheduler.h>
 
-LID_t idle_process;
-
 // TODO: see issue #121 to see how to make this ugly hack disappear
 __thread unsigned int __lp_counter = 0;
 __thread unsigned int __lp_bound_counter = 0;

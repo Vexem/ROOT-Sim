@@ -136,7 +136,7 @@ void scheduler_fini(void)
 }
 
 /**
-* This is a LP main loop. It s the embodiment of the usrespace thread implementing the logic of the LP.
+* This is a LP main loop. It s the embodiment of the userspace thread implementing the logic of the LP.
 * Whenever an event is to be scheduled, the corresponding metadata are set by the schedule() function,
 * which in turns calls activate_LP() to execute the actual context switch.
 * This ProcessEvent wrapper explicitly returns control to simulation kernel user thread when an event
@@ -171,7 +171,7 @@ void LP_main_loop(void *args)
 		timer_start(event_timer);
 
 		// Process the event
-		if(&abm_settings){
+        if(&abm_settings){
 			ProcessEventABM();
 		}else if (&topology_settings){
 			ProcessEventTopology();
@@ -303,10 +303,10 @@ void activate_LP(struct lp_struct *next, msg_t * evt)
 	lp_alloc_schedule();
 #endif
 
-    if (unlikely(is_blocked_state(next->state))) {
+   /* if (unlikely(is_blocked_state(next->state))) {
 		rootsim_error(true, "Critical condition: LP %d has a wrong state: %d. Aborting...\n",
 			      next->gid.to_int, next->state);
-	}
+	} */
 
 	context_switch(&kernel_context, &next->context);
 
@@ -355,18 +355,17 @@ void asym_process(void) {
 
     timer_start(timer_local_thread);
 
-    /** We initially check for high priority msgs. If one is present,
-    *   we process it and then return. In this way, the next call to
-    *   asym_process() will again check for high priority events, making
-    *   them really high priority. */
-   // printf("asym_process: %d/%d Hi prio: %d tid: %d\n ", atomic_read(&Threads[tid]->input_port[1]->size),  Threads[tid]->port_batch_size, atomic_read(&Threads[tid]->input_port[0]->size), tid);
+    // We initially check for high priority msgs. If one is present,
+    // we process it and then return. In this way, the next call to
+    // asym_process() will again check for high priority events, making
+    // them really high priority.
     msg = pt_get_hi_prio_msg();
     if(msg != NULL) {
         list_insert_tail(hi_prio_list, msg);
 
-     /** Never change this return to anything else: we call asym_process()
-      *  within asym_process() to forcely match a high priority queue when
-      *  there could be a priority inversion between hi and lo prio ports. */
+        // Never change this return to anything else: we call asym_process()
+        // within asym_process() to forcely match a high priority queue when
+        // there could be a priority inversion between hi and lo prio ports.
         return;
     }
 
@@ -446,7 +445,6 @@ void asym_process(void) {
     // TODO: find a way to set the LP to RUNNING without incurring in a race condition with the CT
 
     // Process this event
-
     activate_LP(lp, msg);
     my_processed_events++;
     msg->unprocessed = false;
@@ -505,10 +503,10 @@ void asym_schedule(void) {
         }
         double utilization_rate = (double) delta_utilization / (double) port_size;
 
-        // DEBUG
-        //printf("Port current size: %u, port size %u, delta_utilization %d\n", port_current_size[pt->tid], port_size, delta_utilization);
-        //printf("Input port size of PT %u: %d (utilization factor: %f)\n", pt->tid, port_current_size[pt->tid], utilization_rate);
-        // DEBUG
+        /* DEBUG
+        printf("Port current size: %u, port size %u, delta_utilization %d\n", port_current_size[pt->tid], port_size, delta_utilization);
+        printf("Input port size of PT %u: %d (utilization factor: %f)\n", pt->tid, port_current_size[pt->tid], utilization_rate);
+           DEBUG */
 
         // If utilization rate is too high, the size of the port should be increased
         if(utilization_rate > UPPER_PORT_THRESHOLD){
@@ -557,10 +555,10 @@ void asym_schedule(void) {
      * be modified during scheduling in order to jump LPs bound to PT
      * for whom the input port is already filled */
     memcpy(asym_lps_mask, lps_bound_blocks, sizeof(struct lp_struct *) * n_prc_per_thread);
-    for(i = 0; i < n_prc_per_thread; i++) {
-        Thread_State *pt = Threads[asym_lps_mask[i]->processing_thread];
+    foreach_bound_mask_lp(lp_a){
+        Thread_State *pt = Threads[lp_a->processing_thread];
         if(port_current_size[pt->tid] >= pt->port_batch_size) {
-            asym_lps_mask[i] = NULL;
+            lp_a = NULL;
         }
     }
     //printf("asym_schedule: asym_lps_mask computed for controller %d at millisecond %d\n", tid, timer_value_milli(timer_local_thread));
@@ -574,13 +572,13 @@ void asym_schedule(void) {
         bzero(array_items(Threads[tid]->heap),sizeof(*array_items(Threads[tid]->heap))*array_count(Threads[tid]->heap));
         array_count(Threads[tid]->heap) = 0;
 
-        for(i = 0; i < n_prc_per_thread; i++){
-            if(asym_lps_mask[i] != NULL && !is_blocked_state(asym_lps_mask[i]->state)){
-                if(asym_lps_mask[i]->bound == NULL && !list_empty(asym_lps_mask[i]->queue_in)){
-                    curr_event = list_head(asym_lps_mask[i]->queue_in);
+        foreach_bound_mask_lp(lp_b){
+            if(lp_b != NULL && !is_blocked_state(lp_b->state)){
+                if(lp_b->bound == NULL && !list_empty(lp_b->queue_in)){
+                    curr_event = list_head(lp_b->queue_in);
                 }
                 else{
-                    curr_event = list_next(asym_lps_mask[i]->bound);
+                    curr_event = list_next(lp_b->bound);
                 }
 
                 j = 0;
@@ -591,7 +589,7 @@ void asym_schedule(void) {
 
                         //heap_push(Threads[tid]->events_heap, curr_event->timestamp, curr_event);
                         // printf("Pushing to priority queue event from LP %d with timestamp %lf\n",
-                        //lid_to_int(asym_lps_mask[i]->lid), curr_event->timestamp);
+                        //lid_to_int(lp->lid), curr_event->timestamp);
                         j++;
                         curr_event = curr_event->next;
                     }
@@ -607,12 +605,12 @@ void asym_schedule(void) {
 
     for(i = 0; i < events_to_fill; i++) {
 
-//		printf("SCHED: mask: ");
-//		int jk;
-//		for(jk = 0; jk < n_prc_per_thread; jk++) {
-//			printf("%p, ", asym_lps_mask[jk]);
-//		}
-//		puts("");
+     /* printf("SCHED: mask: ");
+		int jk;
+		for(jk = 0; jk < n_prc_per_thread; jk++) {
+			printf("%p, ", asym_lps_mask[jk]);
+		}
+		puts(""); */
 
 #ifdef HAVE_CROSS_STATE
         bool resume_execution = false;
@@ -624,12 +622,6 @@ void asym_schedule(void) {
 
             case SCHEDULER_STF:
                 lp = asym_smallest_timestamp_first();
-                if(lp!=NULL) {
-                //  printf("CONTROLLER THREAD: lp-gid = %d \n", lp->gid.to_int);
-                    lid = lp->lid;
-                }
-                else
-                    lid = idle_process;
                 break;
 
             case BATCH_LOWEST_TIMESTAMP:
@@ -641,7 +633,7 @@ void asym_schedule(void) {
                 //printf("Retrieving from priority queue event from LP %d with timestamp %lf\n",
                 //		lid_to_int(GidToLid(curr_event->sender)), curr_event->timestamp);
                 int found = 0;
-                    lid = idle_process;
+                    lp = NULL;
                 while(curr_event != NULL && !found){
                     curr_lp = find_lp_by_gid(curr_event->receiver);
                     if(port_events_to_fill[curr_lp->processing_thread] > 0 &&
@@ -653,25 +645,21 @@ void asym_schedule(void) {
                     else{
                         extracted_event = heap_extract(Threads[tid]->heap,__cmp_ts);
                         //curr_event = heap_pop(Threads[tid]->events_heap);
-                        lid = idle_process;
+                        lp = NULL;
                     }
                 }
                 break;
 
             default:
                 lp = asym_smallest_timestamp_first();
-                if(lp==NULL) {
-                    lid=idle_process;
-                }
+
         }
 
         // No logical process found with events to be processed
-        // idle_process = 0
-        if (lid_equals(lid, idle_process)) {
-            statistics_post_data(lp, STAT_IDLE_CYCLES, 1.0);
-            continue;
+        if (unlikely(lp == NULL)) {
+            statistics_post_data(NULL, STAT_IDLE_CYCLES, 1.0);
+            return;
         }
-        //printf("lid: %d, bound_mark: %llu, bound_timestamp %f \n",lp->lid.to_int,lp->bound->mark,lp->bound->timestamp);
 
         // If we have to rollback
         if(lp->state == LP_STATE_ROLLBACK) {
@@ -694,7 +682,7 @@ void asym_schedule(void) {
 
             /** Notify the PT in charge of managing this LP that the rollback is complete and
              * events to the LP should not be discarded anymore */
-//			printf("Sending a ROLLBACK_BUBBLE for LP %d at time %f\n", lid.id, lvt(lid));
+            // printf("Sending a ROLLBACK_BUBBLE for LP %d at time %f\n", lid.id, lvt(lid));
 
             pack_msg(&rollback_control, lp->gid, lp->gid, ASYM_ROLLBACK_BUBBLE, lvt(lp), lvt(lp), 0, NULL);
             rollback_control->message_kind = control;
@@ -734,11 +722,11 @@ void asym_schedule(void) {
          *  at least one event to be executed. If advance_to_next_event() returns
          *  NULL, it means that lid has no events to be executed. This is
          *  a critical condition and we abort. */
-        if(event == NULL) {
-            rootsim_error(true, "Critical condition: LP %d seems to have events to be processed, but I cannot find them. Aborting...\n", lid);
+        if(unlikely(event == NULL)) {
+            rootsim_error(true, "Critical condition: LP %d seems to have events to be processed, but I cannot find them. Aborting...\n", lp->gid);
         }
 
-        if(!process_control_msg(event)) {
+        if (unlikely(!process_control_msg(event))) {
             return;
         }
 
@@ -771,9 +759,9 @@ void asym_schedule(void) {
             Threads[tid]->curr_scheduled_events[lp_id] = Threads[tid]->curr_scheduled_events[lp_id]+1;
             //printf("curr_scheduled_events[%u] = %d\n", lp_id, Threads[tid]->curr_scheduled_events[lp_id]);
             if(Threads[tid]->curr_scheduled_events[lp_id] >= MAX_LP_EVENTS_PER_BATCH){
-                for(i=0; i<n_prc_per_thread; i++){
-                    if(asym_lps_mask[i] != NULL && lid_equals(asym_lps_mask[i]->lid,lid)){
-                        asym_lps_mask[i] = NULL;
+                foreach_bound_mask_lp(lp_c){
+                    if(lp_c!= NULL && lid_equals(lp_c->lid,lid)){
+                        lp_c = NULL;
                         //printf("Setting to NULL pointer to LP %d\n", lp_id);
                         break;
                     }
@@ -786,9 +774,9 @@ void asym_schedule(void) {
              *  mapped to the PT of the respective port to NULL
              *  printf("thread_id_mask: %u\n", thread_id_mask); */
             if(port_events_to_fill[thread_id_mask] == 0){
-                for(i = 0; i<n_prc_per_thread; i++){
-                    if(asym_lps_mask[i] != NULL && asym_lps_mask[i]->processing_thread == thread_id_mask)
-                        asym_lps_mask[i] = NULL;
+                foreach_bound_mask_lp(lp_d){
+                    if(lp_d != NULL && lp_d->processing_thread == thread_id_mask)
+                        lp_d = NULL;
                 }
             }
 
@@ -847,6 +835,7 @@ void schedule(void)
 		statistics_post_data(NULL, STAT_IDLE_CYCLES, 1.0);
 		return;
 	}
+
 	// If we have to rollback
 	if (next->state == LP_STATE_ROLLBACK) {
 		rollback(next);
@@ -888,7 +877,6 @@ void schedule(void)
 		next->state = LP_STATE_RUNNING_ECS;
 	else
 		next->state = LP_STATE_RUNNING;
-
 	activate_LP(next, event);
 
 	if (!is_blocked_state(next->state)) {
