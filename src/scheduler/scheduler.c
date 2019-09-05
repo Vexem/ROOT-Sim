@@ -303,12 +303,14 @@ void activate_LP(struct lp_struct *next, msg_t * evt)
 	lp_alloc_schedule();
 #endif
 
-   /* if (unlikely(is_blocked_state(next->state))) {
+    if (unlikely(is_blocked_state(next->state))) {
 		rootsim_error(true, "Critical condition: LP %d has a wrong state: %d. Aborting...\n",
 			      next->gid.to_int, next->state);
-	} */
+	}
 
 	context_switch(&kernel_context, &next->context);
+
+    current->last_processed = evt;
 
 //      #ifdef HAVE_PREEMPTION
 //        if(!rootsim_config.disable_preemption)
@@ -483,7 +485,7 @@ void asym_schedule(void) {
     unsigned int events_to_fill = 0;
     char first_encountered = 0;
     unsigned long long mark;
-    int toAdd, delta_utilization;
+    int toAdd = 0, delta_utilization = 0;
     unsigned int sent_events = 0;
     unsigned int sent_notice = 0;
 
@@ -493,7 +495,7 @@ void asym_schedule(void) {
 
    /** Compute utilization rate of the input ports since the last call to asym_schedule
     *  and resize the ports if necessary */
-    for(i = 0; i < Threads[tid]->num_PTs; i++){
+    for(i = 0; i < Threads[tid]->num_PTs; i++) {
         Thread_State* pt = Threads[tid]->PTs[i];
         int port_size = pt->port_batch_size;
         port_current_size[pt->tid] = get_port_current_size(pt->input_port[PORT_PRIO_LO]);
@@ -760,7 +762,7 @@ void asym_schedule(void) {
             //printf("curr_scheduled_events[%u] = %d\n", lp_id, Threads[tid]->curr_scheduled_events[lp_id]);
             if(Threads[tid]->curr_scheduled_events[lp_id] >= MAX_LP_EVENTS_PER_BATCH){
                 foreach_bound_mask_lp(lp_c){
-                    if(lp_c!= NULL && lid_equals(lp_c->lid,lid)){
+                    if(lp_c!= NULL && lid_equals(lp_c->lid,lid)){  // undefined behavior
                         lp_c = NULL;
                         //printf("Setting to NULL pointer to LP %d\n", lp_id);
                         break;

@@ -67,7 +67,9 @@ msg_channel *init_channel(void)
 {
 	msg_channel *mc = rsalloc(sizeof(msg_channel));
 
-	mc->buffers[M_READ] = rsalloc(sizeof(struct _msg_buff));
+    atomic_set(&mc->size,0);
+
+    mc->buffers[M_READ] = rsalloc(sizeof(struct _msg_buff));
 	mc->buffers[M_WRITE] = rsalloc(sizeof(struct _msg_buff));
 
 	if (mc->buffers[M_READ] == NULL || mc->buffers[M_WRITE] == NULL)

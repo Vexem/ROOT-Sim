@@ -277,6 +277,7 @@ void threads_init(void) {
         Threads[i]->num_PTs = 0;
         if(n_cores - rootsim_config.num_controllers > 0) {
             Threads[i]->PTs = rsalloc(sizeof(Thread_State *) * (n_cores - rootsim_config.num_controllers));
+            memset(Threads[i]->PTs, 0, sizeof(Thread_State *) * (n_cores - rootsim_config.num_controllers));
         } else {
             Threads[i]->PTs = NULL;
         }

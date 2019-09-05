@@ -108,6 +108,9 @@ struct lp_struct {
 	 list(msg_t) queue_in;
 
 	/// Pointer to the last correctly processed event
+	msg_t *last_processed;
+
+	/// Pointer to the last scheduled event
 	msg_t *bound;
 
     /// Send time of the last event extracted from the output port of the PT executing events of this LP
