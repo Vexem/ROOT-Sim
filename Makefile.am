@@ -59,7 +59,6 @@ librootsim_a_SOURCES =	src/main.c \
 			src/datatypes/calqueue.c \
 			src/datatypes/hash_map.c \
 			src/datatypes/msgchannel.c \
-            src/datatypes/heap.c \
 			src/gvt/gvt.c \
 			src/gvt/fossil.c \
 			src/gvt/ccgs.c \
