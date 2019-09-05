@@ -218,13 +218,14 @@ static inline void reduce_local_gvt(void)
 
         local_min[local_tid] =
                 min(local_min[local_tid], lp->last_processed->timestamp);
-        local_min[local_tid] =
-                min(local_min[local_tid], lp->bound->timestamp);
+
+        //local_min[local_tid] =
+        //       min(local_min[local_tid], lp->bound->timestamp);
 
         // local_min[local_tid] =
-         //       min(local_min[local_tid], lp->last_sent_time);
+        //       min(local_min[local_tid], lp->last_sent_time);
 
-         printf("GVT -- lp: %d| last_processed->timestamp = %f| last sent time: %f \n", lp->gid.to_int, lp->last_processed->timestamp, lp->last_sent_time);
+         printf("GVT_lp: %d | LAST_PROCESSED = %f | BOUND = %f \n", lp->gid.to_int, lp->last_processed->timestamp, lp->bound->timestamp);
     }
 }
 
