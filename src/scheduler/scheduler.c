@@ -636,6 +636,7 @@ void asym_schedule(void) {
                 //		lid_to_int(GidToLid(curr_event->sender)), curr_event->timestamp);
                 int found = 0;
                     lp = NULL;
+                    lid = idle_process;
                 while(curr_event != NULL && !found){
                     curr_lp = find_lp_by_gid(curr_event->receiver);
                     if(port_events_to_fill[curr_lp->processing_thread] > 0 &&
@@ -648,6 +649,7 @@ void asym_schedule(void) {
                         extracted_event = heap_extract(Threads[tid]->heap,__cmp_ts);
                         //curr_event = heap_pop(Threads[tid]->events_heap);
                         lp = NULL;
+                        lid = idle_process;
                     }
                 }
                 break;

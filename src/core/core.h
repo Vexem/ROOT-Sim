@@ -151,6 +151,9 @@ typedef struct _lid_t {
 	unsigned int to_int;	///< The LID numerical value
 } LID_t;
 
+// The idle process identifier
+extern LID_t idle_process;
+
 #define is_lid(val) __builtin_types_compatible_p(__typeof__ (val), LID_t)
 #define is_gid(val) __builtin_types_compatible_p(__typeof__ (val), GID_t)
 
