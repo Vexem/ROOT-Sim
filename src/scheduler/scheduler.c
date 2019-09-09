@@ -475,7 +475,6 @@ void asym_process(void) {
 #define __cmp_ts(a, b) (((a).timestamp > (b).timestamp) - ((b).timestamp > (a).timestamp))
 
 void asym_schedule(void) {
-    LID_t lid;
     msg_t *event, *curr_event, extracted_event;
     msg_t *rollback_control;
     struct lp_struct *lp,*curr_lp;
@@ -636,20 +635,17 @@ void asym_schedule(void) {
                 //		lid_to_int(GidToLid(curr_event->sender)), curr_event->timestamp);
                 int found = 0;
                     lp = NULL;
-                    lid = idle_process;
                 while(curr_event != NULL && !found){
                     curr_lp = find_lp_by_gid(curr_event->receiver);
                     if(port_events_to_fill[curr_lp->processing_thread] > 0 &&
                             curr_lp->state != LP_STATE_WAIT_FOR_ROLLBACK_ACK){
                         found = 1;
                         lp = curr_lp;
-                        lid = curr_lp->lid;
                     }
                     else{
                         extracted_event = heap_extract(Threads[tid]->heap,__cmp_ts);
                         //curr_event = heap_pop(Threads[tid]->events_heap);
                         lp = NULL;
-                        lid = idle_process;
                     }
                 }
                 break;
@@ -663,9 +659,6 @@ void asym_schedule(void) {
             statistics_post_data(NULL, STAT_IDLE_CYCLES, 1.0);
             return;
         }
-
-        if(rootsim_config.scheduler == SCHEDULER_STF)
-            lid = lp->lid;
 
         // If we have to rollback
         if(lp->state == LP_STATE_ROLLBACK) {
@@ -766,7 +759,7 @@ void asym_schedule(void) {
             //printf("curr_scheduled_events[%u] = %d\n", lp_id, Threads[tid]->curr_scheduled_events[lp_id]);
             if(Threads[tid]->curr_scheduled_events[lp_id] >= MAX_LP_EVENTS_PER_BATCH){
                 foreach_bound_mask_lp(lp_c){
-                    if(lp_c!= NULL && lid_equals(lp_c->lid,lid)){  //undefined behavior
+                    if(lp_c!= NULL && lid_equals(lp_c->lid,lp->lid)){
                         lp_c = NULL;
                         //printf("Setting to NULL pointer to LP %d\n", lp_id);
                         break;

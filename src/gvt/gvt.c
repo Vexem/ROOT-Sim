@@ -225,8 +225,9 @@ static inline void reduce_local_gvt(void)
         // local_min[local_tid] =
         //       min(local_min[local_tid], lp->last_sent_time);
 
-         printf("GVT-> lp: %d | LAST_PROCESSED = %f | BOUND = %f \n", lp->gid.to_int, lp->last_processed->timestamp, lp->bound->timestamp);
+        printf("GVT-> lp: %d | LAST_PROCESSED = %f | BOUND = %f \n", lp->gid.to_int, lp->last_processed->timestamp, lp->bound->timestamp);
     }
+    printf("    Local min for thread %d = %f \n", local_tid, local_min[local_tid]);
 }
 
 simtime_t GVT_phases(void)
