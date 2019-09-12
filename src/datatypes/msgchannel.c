@@ -99,6 +99,10 @@ msg_channel *init_channel(void)
 void insert_msg(msg_channel * mc, msg_t * msg)
 {
 
+    if(msg->receiver.to_int >n_prc_tot){
+        printf("--------------------------RECEIVER: %d --------------------------------\n", msg->receiver.to_int);
+    }
+
 	spin_lock(&mc->write_lock);
 
 	// Reallocate the live BH buffer. Don't touch the other buffer,

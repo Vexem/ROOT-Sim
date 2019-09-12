@@ -645,7 +645,7 @@ void hdr_to_msg(msg_hdr_t *hdr, msg_t *msg)
 void dump_msg_content(msg_t *msg)
 {
 	printf("\tsender: %u\n", msg->sender.to_int);
-	printf("\treceiver: %u\n", msg->sender.to_int);
+	printf("\treceiver: %u\n", msg->receiver.to_int); //fixed sender.to_int
 #ifdef HAVE_MPI
 	printf("\tcolour: %d\n", msg->colour);
 #endif
@@ -720,6 +720,11 @@ unsigned int mark_to_gid(unsigned long long mark)
 void validate_msg(msg_t *msg)
 {
 	assert(msg->sender.to_int <= n_prc_tot);
+	if(msg->receiver.to_int > n_prc_tot) {
+	    printf("VALIDATE MSG: msg->receiver.to_int > n_prc_tot\n");
+        dump_msg_content(msg);
+        printf("\n");
+    };
 	assert(msg->receiver.to_int <= n_prc_tot);
 	assert(msg->message_kind == positive || msg->message_kind == negative || msg->message_kind == control);
 	assert(mark_to_gid(msg->mark) <= n_prc_tot);

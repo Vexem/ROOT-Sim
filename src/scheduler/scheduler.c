@@ -719,7 +719,7 @@ void asym_schedule(void) {
 
         /** Sanity check: if we get here, it means that lid is a LP which has
          *  at least one event to be executed. If advance_to_next_event() returns
-         *  NULL, it means that lid has no events to be executed. This is
+          *  NULL, it means that lid has no events to be executed. This is
          *  a critical condition and we abort. */
         if(unlikely(event == NULL)) {
             rootsim_error(true, "Critical condition: LP %d seems to have events to be processed, but I cannot find them. Aborting...\n", lp->gid);
@@ -743,6 +743,7 @@ void asym_schedule(void) {
 
         // Put the event in the low prio queue of the associated PT
         event->unprocessed = true;
+
         pt_put_lo_prio_msg(thread_id_mask, event);
         //printf("asym_scheduler: %d/%d Hi prio: %d tid: %d\n ", atomic_read(&Threads[tid]->input_port[1]->size),  Threads[tid]->port_batch_size, atomic_read(&Threads[tid]->input_port[0]->size), tid);
         sent_events++;
