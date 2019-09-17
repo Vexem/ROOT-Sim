@@ -178,7 +178,8 @@ void LP_main_loop(void *args)
 		}else{
 			switch_to_application_mode();
 			current->ProcessEvent(current->gid.to_int,
-				      current_evt->timestamp, current_evt->type,
+				      current_evt->timestamp,
+				      current_evt->type,
 				      current_evt->event_content,
 				      current_evt->size,
 				      current->current_base_pointer);
@@ -362,9 +363,14 @@ void asym_process(void) {
     // asym_process() will again check for high priority events, making
     // them really high priority.
     msg = pt_get_hi_prio_msg();
-    if(msg != NULL) {
-        list_insert_tail(hi_prio_list, msg);
 
+    if(msg != NULL) {
+        if(msg->type==ASYM_ROLLBACK_BUBBLE){
+            fprintf(stderr, "asym_process: ASYM_ROLLBACK_BUBBLE (type %d)  message shouldn't stay in the hi_prio queue!\n",msg->type);
+            dump_msg_content(msg);
+            abort();
+        }
+        list_insert_tail(hi_prio_list, msg);
         // Never change this return to anything else: we call asym_process()
         // within asym_process() to forcely match a high priority queue when
         // there could be a priority inversion between hi and lo prio ports.
@@ -380,7 +386,11 @@ void asym_process(void) {
         total_idle_microseconds[tid] += timer_value_micro(timer_local_thread);
         return;
     }
-
+    if(msg->type==ASYM_ROLLBACK_NOTICE){
+        fprintf(stderr, "asym_process: ASYM_ROLLBACK_NOTICE (type %d)  message shouldn't stay in the lo_prio queue!\n",msg->type);
+        dump_msg_content(msg);
+        abort();
+    }
     // Check if we picked a stale message
     hi_prio_msg = list_head(hi_prio_list);
     while(hi_prio_msg != NULL) {
@@ -442,8 +452,19 @@ void asym_process(void) {
         abort();
     }
 
+
     lp = find_lp_by_gid(msg->receiver);
 
+    if(is_control_msg(msg->type)){
+        fprintf(stderr, "asym_process: a control msg (type %d) shouldn't be here!\n",msg->type);
+        dump_msg_content(msg);
+        abort();
+    }
+
+    if(is_blocked_state(lp->state)){
+        fprintf(stderr, "asym_process: lp state (= %d) shouldn't be blocked before calling activate_LP!\n",lp->state);
+        abort();
+    }
     // TODO: find a way to set the LP to RUNNING without incurring in a race condition with the CT
 
     // Process this event
@@ -504,10 +525,10 @@ void asym_schedule(void) {
         }
         double utilization_rate = (double) delta_utilization / (double) port_size;
 
-        /* DEBUG
-        printf("Port current size: %u, port size %u, delta_utilization %d\n", port_current_size[pt->tid], port_size, delta_utilization);
-        printf("Input port size of PT %u: %d (utilization factor: %f)\n", pt->tid, port_current_size[pt->tid], utilization_rate);
-           DEBUG */
+        // DEBUG
+        //printf("PT %d: curr port size: %u, port size %u, delta_util %d (util rate: %f)\n",pt->tid, port_current_size[pt->tid], port_size, delta_utilization, utilization_rate);
+        //printf("Input current port size of PT %u: %d (utilization rate: %f)\n", pt->tid, port_current_size[pt->tid], utilization_rate);
+        // DEBUG
 
         // If utilization rate is too high, the size of the port should be increased
         if(utilization_rate > UPPER_PORT_THRESHOLD){
@@ -516,16 +537,16 @@ void asym_schedule(void) {
             }else if(pt->port_batch_size < MAX_PORT_SIZE){
                 pt->port_batch_size++;
             }
-            //printf("Increased port size of PT %u to %d\n", pt->tid, pt->port_batch_size);
+        //    printf("PT %u: INCREASED port size to %d\n", pt->tid, pt->port_batch_size);
         }
-            // If utilization rate is too low, the size of the port should be decreased
+        //If utilization rate is too low, the size of the port should be decreased
         else if (utilization_rate < LOWER_PORT_THRESHOLD){
             if(pt->port_batch_size > BATCH_STEP){
                 pt->port_batch_size-=BATCH_STEP;
             }else if(pt->port_batch_size > 1){
                 pt->port_batch_size--;
             }
-            //printf("Reduced port size of PT %u to %d\n", pt->tid, pt->port_batch_size);
+        //    printf("PT %u: REDUCED port size to %d\n", pt->tid, pt->port_batch_size);
         }
     }
 
@@ -674,7 +695,9 @@ void asym_schedule(void) {
             pack_msg(&rollback_control, lp->gid, lp->gid, ASYM_ROLLBACK_NOTICE, lvt(lp), lvt(lp), sizeof(char), &first_encountered);
             rollback_control->message_kind = control;
             rollback_control->mark = mark;
+
             pt_put_hi_prio_msg(lp->processing_thread, rollback_control);
+
 
             // Set the LP to a blocked state
             lp->state = LP_STATE_WAIT_FOR_ROLLBACK_ACK;
@@ -686,6 +709,7 @@ void asym_schedule(void) {
             pack_msg(&rollback_control, lp->gid, lp->gid, ASYM_ROLLBACK_BUBBLE, lvt(lp), lvt(lp), 0, NULL);
             rollback_control->message_kind = control;
             rollback_control->mark = mark;
+
             pt_put_lo_prio_msg(lp->processing_thread, rollback_control);
 
             continue;
@@ -743,8 +767,11 @@ void asym_schedule(void) {
 
         // Put the event in the low prio queue of the associated PT
         event->unprocessed = true;
-
+        if(event->type == ASYM_ROLLBACK_NOTICE){
+            printf("ALERT: PUTTING ASYM_ROLLBACK_NOTICE INTO LO PRIO MSG \n");
+        }
         pt_put_lo_prio_msg(thread_id_mask, event);
+
         //printf("asym_scheduler: %d/%d Hi prio: %d tid: %d\n ", atomic_read(&Threads[tid]->input_port[1]->size),  Threads[tid]->port_batch_size, atomic_read(&Threads[tid]->input_port[0]->size), tid);
         sent_events++;
 

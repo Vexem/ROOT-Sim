@@ -184,11 +184,11 @@ static void *main_simulation_loop(void *arg)
 				printf("TIME BARRIER %f\n", my_time_barrier);
 				#endif
 
-				printf("\tPorts: ");
+				printf("\tPorts-> ");
 		unsigned int i;
 				for(i = 0; i < n_cores; i++) {
 					if(Threads[i]->incarnation == THREAD_PROCESSING)
-						printf("%d/%d ", atomic_read(&Threads[i]->input_port[1]->size), Threads[i]->port_batch_size);
+						printf("PT%d: %d/%d | ",i, atomic_read(&Threads[i]->input_port[PORT_PRIO_LO]->size), Threads[i]->port_batch_size);
 				}
 				printf("\n");
 

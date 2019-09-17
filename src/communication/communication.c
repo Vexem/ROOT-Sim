@@ -721,9 +721,8 @@ void validate_msg(msg_t *msg)
 {
 	assert(msg->sender.to_int <= n_prc_tot);
 	if(msg->receiver.to_int > n_prc_tot) {
-	    printf("VALIDATE MSG: msg->receiver.to_int > n_prc_tot\n");
+	    printf("MESSAGE VALIDATION FAILED: message receiver id > n_prc_tot\n");
         dump_msg_content(msg);
-        printf("\n");
     };
 	assert(msg->receiver.to_int <= n_prc_tot);
 	assert(msg->message_kind == positive || msg->message_kind == negative || msg->message_kind == control);

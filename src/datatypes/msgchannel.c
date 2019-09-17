@@ -99,10 +99,6 @@ msg_channel *init_channel(void)
 void insert_msg(msg_channel * mc, msg_t * msg)
 {
 
-    if(msg->receiver.to_int >n_prc_tot){
-        printf("--------------------------RECEIVER: %d --------------------------------\n", msg->receiver.to_int);
-    }
-
 	spin_lock(&mc->write_lock);
 
 	// Reallocate the live BH buffer. Don't touch the other buffer,
@@ -119,12 +115,20 @@ void insert_msg(msg_channel * mc, msg_t * msg)
 			rootsim_error(true, "Unable to reallocate message channel\n");
 
 	}
+
+
 #ifndef NDEBUG
 	validate_msg(msg);
 #endif
 
 	int index = mc->buffers[M_WRITE]->written++;
 	mc->buffers[M_WRITE]->buffer[index] = msg;
+
+    /*if(msg->type==65545) {
+        printf("WRITE: Mark: %llu |Sen: %d |Rec: %d |ts: %f |type: %d | kind: %d \n", msg->mark, msg->sender.to_int,
+               msg->receiver.to_int, msg->timestamp, msg->type, msg->message_kind);
+        printf("WRITE: now mc->buffers[M_WRITE]->buffer[%d] points to  %p \n",index,mc->buffers[M_WRITE]->buffer[index]);
+    }*/
 
 	spin_unlock(&mc->write_lock);
 
@@ -147,6 +151,7 @@ void *get_msg(msg_channel * mc)
 
 	int index = mc->buffers[M_READ]->read++;
 	msg = mc->buffers[M_READ]->buffer[index];
+
 	atomic_dec(&mc->size);
 
 #ifndef NDEBUG
@@ -157,7 +162,7 @@ void *get_msg(msg_channel * mc)
  leave:
 	return msg;
 }
-// Retrive the current amount of events in the respective input port
+// Retrieves the current amount of events in the respective input port
 int get_port_current_size(msg_channel *mc){
     return atomic_read(&mc->size);
 }

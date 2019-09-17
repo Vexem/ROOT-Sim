@@ -329,7 +329,8 @@ void ProcessEventTopology(void){
 		default:
 			switch_to_application_mode();
             current->ProcessEvent(current->gid.to_int,
-                                  current_evt->timestamp, current_evt->type,
+                                  current_evt->timestamp,
+                                  current_evt->type,
                                   current_evt->event_content,
                                   current_evt->size,
                                   current->current_base_pointer);

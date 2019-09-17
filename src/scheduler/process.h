@@ -92,7 +92,7 @@ struct lp_struct {
 	/// Current execution state of the LP
 	short unsigned int state;
 
-	/// This variable mainains the current checkpointing interval for the LP
+	/// This variable maintains the current checkpointing interval for the LP
 	unsigned int ckpt_period;
 
 	/// Counts how many events executed from the last checkpoint (to support PSS)
@@ -174,8 +174,8 @@ struct lp_struct {
 extern struct lp_struct **lps_blocks;
 extern __thread struct lp_struct **lps_bound_blocks;
 
-// Mask of LP bound to thread that are yet to be filled
-// in the current execution of asym_schedule. It reset
+// Mask of LPs bounded to threads that are yet to be filled
+// in the current execution of asym_schedule. It resets
 // to lps_bound_block each time asym_schedule is called.
 extern __thread struct lp_struct **asym_lps_mask;
 

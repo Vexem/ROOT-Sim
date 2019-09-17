@@ -85,7 +85,7 @@
 // in the size of input ports based on the feedback from the previous schedule
 #define BATCH_STEP 	4
 
-// This macro defins the default value of the batch size of each input port
+// This macro defines the default value of the batch size of each input port
 #define PORT_START_BATCH_SIZE	4
 
 enum {
