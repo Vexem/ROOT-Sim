@@ -75,7 +75,7 @@
 #define LOWER_PORT_THRESHOLD	0.4
 
 // This marco defines the maximum logical size for the input queues
-#define MAX_PORT_SIZE	128
+#define MAX_PORT_SIZE	1024
 
 // This macro defines the maximum number of events of a given lp can be put
 // in the input port in a single asym_schedule execution

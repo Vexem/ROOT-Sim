@@ -61,7 +61,7 @@ enum _control_msgs {
 	ABM_UPDATE,			/**< Used by ABM API, right now these are treated as normal positive messages */
 	ABM_VISITING,			/**< Used by ABM API, right now these are treated as normal positive messages */
 	ABM_LEAVING,			/**< Used by ABM API, right now these are treated as normal positive messages */
-	MIN_VALUE_CONTROL = 65537,	///< Separation value between model and platform messages
+	MIN_VALUE_CONTROL = 64537,	///< Separation value between model and platform messages
 	RENDEZVOUS_START,		///< ECS protocol: start synchronizing two LPs for a page fault
 	RENDEZVOUS_ACK,			///< ECS protocol: the sender LP has been synchronized and is now blocked
 	RENDEZVOUS_UNBLOCK,		///< ECS protocol: the destination LP can resume its normal execution

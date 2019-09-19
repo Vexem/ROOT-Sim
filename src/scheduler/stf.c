@@ -114,5 +114,6 @@ struct lp_struct *asym_smallest_timestamp_first(void)
             }
         }
     }
+
     return next_lp;
 }

@@ -231,6 +231,8 @@ void rollback(struct lp_struct *lp)
 		return;
 	}
 
+	printf("#");
+
 	// Discard any possible execution state related to a blocked execution
 	memcpy(&lp->context, &lp->default_context, sizeof(LP_context_t));
 
