@@ -56,6 +56,8 @@ void fossil_collection(struct lp_struct *lp, simtime_t time_barrier)
 	msg_t *last_kept_event;
 	double committed_events;
 
+	return;
+
 	// State list must be handled specifically, as nodes point to malloc'd
 	// nodes. We therefore manually scan the list and free the memory.
 	while ((state = list_head(lp->queue_states)) != NULL

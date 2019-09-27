@@ -141,7 +141,7 @@ void process_bottom_halves(void)
 
 		while ((msg_to_process = get_msg(lp->bottom_halves)) != NULL) {
 			receiver = find_lp_by_gid(msg_to_process->receiver);
-            // printf("message extracted from lp %d's bottom halves: %llu \n", lp->gid.to_int,msg_to_process->mark);
+            printf("message extracted from lp %d's bottom halves: %d at %f\n", lp->gid.to_int, msg_to_process->type, msg_to_process->timestamp);
 
 			// Sanity check
 			if (unlikely
@@ -157,7 +157,7 @@ void process_bottom_halves(void)
 
 			switch (msg_to_process->message_kind) {
 
-				// It's an antimessage
+			    // It's an antimessage
 			case negative:
 
 				statistics_post_data(receiver, STAT_ANTIMESSAGE, 1.0);
@@ -190,16 +190,19 @@ void process_bottom_halves(void)
 
 					receiver->state = LP_STATE_ROLLBACK;
 
+					printf("Setting %d to be rolled back: ANTIMESSAGE:\n", receiver->gid.to_int);
+                    dump_msg_content(matched_msg);
+
                     if(matched_msg->unprocessed == false)
                         goto delete;
 
                     // Delete the matched message
-                    list_delete_by_content(receiver->queue_in,matched_msg);
+                    list_delete_by_content(receiver->queue_in, matched_msg);
                     list_insert_tail(receiver->retirement_queue, matched_msg);
 
                     // Rollback last sent time as well if needed
-                    if(receiver->bound->timestamp < receiver->last_sent_time)       //PER ORA INUTILE
-                        receiver->last_sent_time = receiver->bound->timestamp;
+                    //if(receiver->bound->timestamp < receiver->last_sent_time)       //PER ORA INUTILE
+                    //    receiver->last_sent_time = receiver->bound->timestamp;
 
                 }
 				else {
@@ -229,7 +232,8 @@ void process_bottom_halves(void)
 				// Here we check for a strictly minor timestamp since
 				// the queue is FIFO for same-timestamp events. Therefore,
 				// A contemporaneous event does not cause a causal violation.
-				if (msg_to_process->timestamp < lvt(receiver)) {
+				double foo = lvt(receiver);
+				if (msg_to_process->timestamp < foo) {
 
 					receiver->bound = list_prev(msg_to_process);
 					while ((receiver->bound != NULL)
@@ -238,10 +242,12 @@ void process_bottom_halves(void)
 					}
 
 					receiver->state = LP_STATE_ROLLBACK;
+                    printf("Setting %d to be rolled back: STRAGGLER (ts: %f < clock: %f):\n", receiver->gid.to_int, msg_to_process->timestamp, foo);
+                    dump_msg_content(msg_to_process);
 
                     // Rollback last sent time as well if needed
-                    if(receiver->bound->timestamp < receiver->last_sent_time)
-                         receiver->last_sent_time = receiver->bound->timestamp;
+                    //if(receiver->bound->timestamp < receiver->last_sent_time)
+                    //     receiver->last_sent_time = receiver->bound->timestamp;
                  }
  #ifdef HAVE_MPI
                  register_incoming_msg(msg_to_process);

@@ -237,6 +237,9 @@ void rollback(struct lp_struct *lp)
 	statistics_post_data(lp, STAT_ROLLBACK, 1.0);
 
 	last_correct_event = lp->bound;
+
+	printf("Rolling back %d at %f\n", lp->gid.to_int, last_correct_event->timestamp);
+
 	// Send antimessages
 	send_antimessages(lp, last_correct_event->timestamp);
 
@@ -262,6 +265,8 @@ void rollback(struct lp_struct *lp)
 	// value, so it should be the last function to be called within rollback()
 	// Control messages must be rolled back as well
 	rollback_control_message(lp, last_correct_event->timestamp);
+
+    printf("Rolled back %d at %f (%d events reprocessed)\n", lp->gid.to_int, last_correct_event->timestamp, reprocessed_events);
 }
 
 /**
