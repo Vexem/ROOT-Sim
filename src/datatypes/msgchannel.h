@@ -45,10 +45,10 @@ typedef struct _msg_channel {
 	spinlock_t write_lock;
 } msg_channel;
 
-#define INITIAL_CHANNEL_SIZE (4096)
+#define INITIAL_CHANNEL_SIZE (512)
 
 extern msg_channel *init_channel(void);
 extern void fini_channel(msg_channel *);
 extern void insert_msg(msg_channel *, msg_t *);
-extern msg_t *get_msg(msg_channel *);
+extern void *get_msg(msg_channel *);
 extern int get_port_current_size(msg_channel *);

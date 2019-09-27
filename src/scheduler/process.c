@@ -43,7 +43,7 @@ __thread unsigned int __lp_bound_counter = 0;
 /// Maintain LPs' simulation and execution states
 struct lp_struct **lps_blocks = NULL;
 
-/** Each KLT has a binding towards some LPs. This is the structure used
+/** Each KLT(CT) has a binding towards some LPs. This is the structure used
  *  to keep track of LPs currently being handled
  */
 __thread struct lp_struct **lps_bound_blocks = NULL;

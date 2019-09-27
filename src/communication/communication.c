@@ -546,7 +546,7 @@ void asym_extract_generated_msgs(void) {
     msg_t *msg;
     msg_hdr_t *msg_hdr;
     for(i = 0; i < Threads[tid]->num_PTs; i++) {
-//		printf("Output port size for PT %u: %d\n", Threads[tid]->PTs[i]->tid), atomic_read(&Threads[tid]->PTs[i]->output_port->size);
+            // printf("Output port size for PT %u: %d\n", Threads[tid]->PTs[i]->tid), atomic_read(&Threads[tid]->PTs[i]->output_port->size);
         while((msg = pt_get_out_msg(Threads[tid]->PTs[i]->tid)) != NULL) {
             if(is_control_msg(msg->type) && msg->type == ASYM_ROLLBACK_ACK) {
                 find_lp_by_gid(msg->receiver)->state = LP_STATE_ROLLBACK_ALLOWED;

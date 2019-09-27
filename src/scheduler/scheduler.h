@@ -75,7 +75,7 @@
 #define LOWER_PORT_THRESHOLD	0.4
 
 // This marco defines the maximum logical size for the input queues
-#define MAX_PORT_SIZE	1024
+#define MAX_PORT_SIZE	128
 
 // This macro defines the maximum number of events of a given lp can be put
 // in the input port in a single asym_schedule execution
@@ -100,6 +100,7 @@ extern void scheduler_fini(void);
 extern void schedule(void);
 extern void asym_schedule(void);
 extern void asym_process(void);
+extern bool update_hi_prio_list(void);
 extern void schedule_on_init(struct lp_struct *next);
 extern void initialize_processing_thread(void);
 extern void initialize_worker_thread(void);
@@ -107,7 +108,7 @@ extern void activate_LP(struct lp_struct *, msg_t *);
 extern void LP_main_loop(void *args);
 
 extern bool receive_control_msg(msg_t *);
-extern bool process_control_msg(msg_t *);
+extern bool to_be_sent_to_LP(msg_t *msg);
 extern bool reprocess_control_msg(msg_t *);
 extern void rollback_control_message(struct lp_struct *current, simtime_t);
 extern bool anti_control_message(msg_t * msg);
@@ -123,7 +124,7 @@ void disable_preemption(void);
 
 extern __thread struct lp_struct *current;
 extern __thread msg_t *current_evt;
-extern __thread unsigned int n_prc_per_thread;
+extern __thread unsigned int n_lp_per_thread;
 extern long *total_idle_microseconds;
 
 #ifdef HAVE_PREEMPTION

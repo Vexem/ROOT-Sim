@@ -187,8 +187,10 @@ static void *main_simulation_loop(void *arg)
 				printf("\tPorts-> ");
 		unsigned int i;
 				for(i = 0; i < n_cores; i++) {
-					if(Threads[i]->incarnation == THREAD_PROCESSING)
-						printf("PT%d: %d/%d | ",i, atomic_read(&Threads[i]->input_port[PORT_PRIO_LO]->size), Threads[i]->port_batch_size);
+					if(Threads[i]->incarnation == THREAD_PROCESSING){
+                        unsigned int port_curr_size = get_port_current_size(Threads[i]->input_port[PORT_PRIO_LO]);
+						printf("PT%d: %d/%d | ",i, port_curr_size, Threads[i]->port_batch_size);
+					}
 				}
 				printf("\n");
 

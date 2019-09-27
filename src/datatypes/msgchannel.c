@@ -103,14 +103,12 @@ void insert_msg(msg_channel * mc, msg_t * msg)
 
 	// Reallocate the live BH buffer. Don't touch the other buffer,
 	// as in this way the critical section is much shorter
-	if (unlikely(mc->buffers[M_WRITE]->written == mc->buffers[M_WRITE]->size)) {
+    if (unlikely(mc->buffers[M_WRITE]->written == mc->buffers[M_WRITE]->size)) {
 
 		mc->buffers[M_WRITE]->size *= 2;
 		mc->buffers[M_WRITE]->buffer =
 		    rsrealloc((void *)mc->buffers[M_WRITE]->buffer,
 			      mc->buffers[M_WRITE]->size * sizeof(msg_t *));
-
-		printf("resized message channel\n");
 
 		if (unlikely(mc->buffers[M_WRITE]->buffer == NULL))
 			rootsim_error(true, "Unable to reallocate message channel\n");
@@ -136,7 +134,7 @@ void insert_msg(msg_channel * mc, msg_t * msg)
     atomic_inc(&mc->size);
 }
 
-msg_t *get_msg(msg_channel * mc)
+void *get_msg(msg_channel * mc)
 {
 	msg_t *msg = NULL;
 

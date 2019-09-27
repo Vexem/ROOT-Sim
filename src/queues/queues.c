@@ -194,12 +194,11 @@ void process_bottom_halves(void)
                         goto delete;
 
                     // Delete the matched message
-                    list_delete_by_content(receiver->queue_in,
-                                           matched_msg);
+                    list_delete_by_content(receiver->queue_in,matched_msg);
                     list_insert_tail(receiver->retirement_queue, matched_msg);
 
                     // Rollback last sent time as well if needed
-                    if(receiver->bound->timestamp < receiver->last_sent_time)
+                    if(receiver->bound->timestamp < receiver->last_sent_time)       //PER ORA INUTILE
                         receiver->last_sent_time = receiver->bound->timestamp;
 
                 }
@@ -207,8 +206,7 @@ void process_bottom_halves(void)
                     delete:
 
                     // Unchain the event from the input queue
-                    list_delete_by_content(receiver->queue_in,
-                                           matched_msg);
+                    list_delete_by_content(receiver->queue_in,matched_msg);
                     // Delete the matched message
                     msg_release(matched_msg);
                     //list_insert_tail(LPS(lid_receiver)->retirement_queue, matched_msg);

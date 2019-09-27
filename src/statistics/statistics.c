@@ -359,7 +359,7 @@ static void print_common_stats(FILE *f, struct stat_t *stats_p, bool want_thread
 	}
 	if(want_thread_stats) {
 		fprintf(f, "THREAD ID ................. : %d \n",	local_tid);
-		fprintf(f, "LPs HOSTED BY THREAD ...... : %d \n",	n_prc_per_thread);
+		fprintf(f, "LPs HOSTED BY THREAD ...... : %d \n", n_lp_per_thread);
 	}
 	fprintf(f, "\n");
 	fprintf(f, "TOTAL EXECUTED EVENTS ..... : %.0f \n",		stats_p->tot_events);
@@ -515,7 +515,7 @@ void statistics_stop(int exit_code)
 		foreach_bound_lp(lp) {
 			thread_stats[local_tid].vec += lp_stats[lp->lid.to_int].vec;
 		}
-		thread_stats[local_tid].exponential_event_time /= n_prc_per_thread;
+		thread_stats[local_tid].exponential_event_time /= n_lp_per_thread;
 
 		// Compute derived statistics and dump everything
 		f = thread_files[STAT_FILE_T_THREAD][local_tid];

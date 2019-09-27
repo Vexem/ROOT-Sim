@@ -98,7 +98,7 @@ void adopt_new_gvt(simtime_t new_gvt)
 {
 	unsigned int i;
 
-	state_t *time_barrier_pointer[n_prc_per_thread];
+	state_t *time_barrier_pointer[n_lp_per_thread];
 	bool compute_snapshot;
 
 	// Snapshot should be recomputed only periodically

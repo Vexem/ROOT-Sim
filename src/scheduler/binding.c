@@ -68,7 +68,7 @@ static __thread int local_binding_phase = 0;
 
 static atomic_t worker_thread_reduction;
 
-// When calling this function, n_prc_per_thread
+// When calling this function, n_lp_per_thread
 // must have been updated with the new number of bound LPs.
 static void rebind_LPs_to_PTs(void) {
     unsigned int curr_pt_idx = 0;
@@ -108,7 +108,7 @@ static inline void LPs_block_binding(void)
 		buf1++;
 	}
 
-	n_prc_per_thread = 0;
+    n_lp_per_thread = 0;
 	i = 0;
 	offset = 0;
 
@@ -117,7 +117,7 @@ static inline void LPs_block_binding(void)
 		while (j < buf1) {
 			if (offset == local_tid) {
 				lp = lps_blocks[i];
-				LPS_bound_set(n_prc_per_thread++, lp);
+				LPS_bound_set(n_lp_per_thread++, lp);
 				lp->worker_thread = local_tid;
 			}
 			i++;
@@ -260,11 +260,11 @@ static void install_binding(void)
 {
 	unsigned int i = 0;
 
-	n_prc_per_thread = 0;
+	n_lp_per_thread = 0;
 
 	foreach_lp(lp) {
 		if (new_LPS_binding[i++] == local_tid) {
-			LPS_bound_set(n_prc_per_thread++, lp);
+			LPS_bound_set(n_lp_per_thread++, lp);
 
 			if (local_tid != lp->worker_thread) {
 				lp->worker_thread = local_tid;
