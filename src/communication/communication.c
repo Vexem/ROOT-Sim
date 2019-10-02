@@ -277,6 +277,7 @@ void ParallelScheduleNewEvent(unsigned int gid_receiver, simtime_t timestamp, un
 
 	// In Silent execution, we do not send again already sent messages
 	if (unlikely(current->state == LP_STATE_SILENT_EXEC)) {
+        printf("OLD event received (SILENT EXECUTION, receiver:%d, ts: %f)\n", gid_receiver, timestamp);
 		return;
 	}
 	// Check whether the destination LP is out of range
@@ -306,7 +307,8 @@ void ParallelScheduleNewEvent(unsigned int gid_receiver, simtime_t timestamp, un
 		fflush(stdout);
 	}
 
-    //printf("INSERT_outgoing_msg mark: %llu, \n",event->mark);
+    printf("NEW event received (type: %d, sender: LP%d, receiver: LP%d, ts: %f) \n",
+            event->type, event->sender.to_int, event->receiver.to_int, event->timestamp);
 	insert_outgoing_msg(event);
 
  out:
@@ -347,7 +349,7 @@ void send_antimessages(struct lp_struct *lp, simtime_t after_simtime)
 		msg->message_kind = negative;
 
         //printf("mark: %llu, remove_timestamp: %f \n", msg->mark, anti_msg->timestamp);
-
+        printf("Sending ANTIMESSAGE to LP%d  with ts %f\n",msg->receiver.to_int,msg->timestamp);
 		Send(msg);
 
 		// Remove the already-sent antimessage from the output queue
@@ -448,6 +450,8 @@ void send_outgoing_msgs(struct lp_struct *lp)
 		msg = lp->outgoing_buffer.outgoing_msgs[i];
 		msg_to_hdr(msg_hdr, msg);
 
+        printf("Sending message (type: %d) to the LP's bottom halves | sender: LP%d, receiver: LP%d, ts: %f\n",
+               msg->type, msg->sender.to_int, msg->receiver.to_int, msg->timestamp);
 		Send(msg);
 
 		// register the message in the sender's output queue, for antimessage management
@@ -467,8 +471,10 @@ void asym_send_outgoing_msgs(struct lp_struct *lp) {
     for(i = 0; i < lp->outgoing_buffer.size; i++) {
         msg = lp->outgoing_buffer.outgoing_msgs[i];
 
+        printf("Putting message (type: %d) in the PT's output_port | sender: LP%d, receiver: LP%d, ts: %f\n",
+                msg->type, msg->sender.to_int, msg->receiver.to_int, msg->timestamp);
         pt_put_out_msg(msg);
-        printf("Putting in the output port message %d from %d to %d at %f\n", msg->type, msg->sender.to_int, msg->receiver.to_int, msg->timestamp);
+
         //dump_msg_content(msg);
     }
 
@@ -554,9 +560,14 @@ void asym_extract_generated_msgs(void) {
                 msg_release(msg);
                 continue;
             }
+
+            printf("Sending message (type: %d) to the LP's bottom halves | sender: LP%d, receiver: LP%d, ts: %f\n",
+                   msg->type, msg->sender.to_int, msg->receiver.to_int, msg->timestamp);
             Send(msg);
 
             lp_sender = find_lp_by_gid(msg->sender);
+
+            //NO LONGER USED
             //if(msg->send_time > lp_sender->last_sent_time && lp_sender->state == LP_STATE_READY)
             //    lp_sender->last_sent_time = msg->send_time;
 

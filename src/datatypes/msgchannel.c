@@ -75,20 +75,17 @@ msg_channel *init_channel(void)
 	if (mc->buffers[M_READ] == NULL || mc->buffers[M_WRITE] == NULL)
 		rootsim_error(true, "Unable to allocate message channel\n");
 
-	mc->buffers[M_READ]->buffer =
-	    rsalloc(INITIAL_CHANNEL_SIZE * sizeof(msg_t *));
+	mc->buffers[M_READ]->buffer = rsalloc(INITIAL_CHANNEL_SIZE * sizeof(msg_t *));
 	mc->buffers[M_READ]->size = INITIAL_CHANNEL_SIZE;
 	mc->buffers[M_READ]->written = 0;
 	mc->buffers[M_READ]->read = 0;
 
-	mc->buffers[M_WRITE]->buffer =
-	    rsalloc(INITIAL_CHANNEL_SIZE * sizeof(msg_t *));
+	mc->buffers[M_WRITE]->buffer = rsalloc(INITIAL_CHANNEL_SIZE * sizeof(msg_t *));
 	mc->buffers[M_WRITE]->size = INITIAL_CHANNEL_SIZE;
 	mc->buffers[M_WRITE]->written = 0;
 	mc->buffers[M_WRITE]->read = 0;
 
-	if (mc->buffers[M_READ]->buffer == NULL
-	    || mc->buffers[M_WRITE]->buffer == NULL)
+	if (mc->buffers[M_READ]->buffer == NULL || mc->buffers[M_WRITE]->buffer == NULL)
 		rootsim_error(true, "Unable to allocate message channel\n");
 
 	spinlock_init(&mc->write_lock);
@@ -106,13 +103,11 @@ void insert_msg(msg_channel * mc, msg_t * msg)
     if (unlikely(mc->buffers[M_WRITE]->written == mc->buffers[M_WRITE]->size)) {
 
 		mc->buffers[M_WRITE]->size *= 2;
-		mc->buffers[M_WRITE]->buffer =
-		    rsrealloc((void *)mc->buffers[M_WRITE]->buffer,
-			      mc->buffers[M_WRITE]->size * sizeof(msg_t *));
+		mc->buffers[M_WRITE]->buffer = rsrealloc((void *)mc->buffers[M_WRITE]->buffer,
+		        mc->buffers[M_WRITE]->size * sizeof(msg_t *));
 
 		if (unlikely(mc->buffers[M_WRITE]->buffer == NULL))
 			rootsim_error(true, "Unable to reallocate message channel\n");
-
 	}
 
 
@@ -150,7 +145,6 @@ void *get_msg(msg_channel * mc)
 
 	int index = mc->buffers[M_READ]->read++;
 	msg = mc->buffers[M_READ]->buffer[index];
-
 	atomic_dec(&mc->size);
 
 #ifndef NDEBUG

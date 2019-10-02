@@ -76,7 +76,7 @@ typedef struct _state_t {
 struct lp_struct;
 
 extern bool LogState(struct lp_struct *);
-extern void RestoreState(struct lp_struct *, state_t * restore_state);
+extern void RestoreState(struct lp_struct *, state_t * state_to_restore);
 extern void rollback(struct lp_struct *);
 extern state_t *find_time_barrier(struct lp_struct *, simtime_t time);
 extern void clean_queue_states(struct lp_struct *, simtime_t new_gvt);

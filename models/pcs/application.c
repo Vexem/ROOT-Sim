@@ -87,7 +87,7 @@ void ProcessEvent(unsigned int me, simtime_t now, int event_type, event_content_
 	
 	unsigned int w;
 
-	//printf("%d executing %d at %f\n", me, event_type, now);
+	printf("MODEL: LP%d executing evt type %d with ts %f\n", me, event_type, now);
 
 	event_content_type new_event_content;
 
@@ -132,12 +132,14 @@ void ProcessEvent(unsigned int me, simtime_t now, int event_type, event_content_
 
 			// Start the simulation
 			timestamp = (simtime_t) (20 * Random());
+            printf("MODEL -INIT-: NEW scheduled event (receiver: LP%d, type: %d, ts: %f) \n",
+                   me,START_CALL, timestamp);
 			ScheduleNewEvent(me, timestamp, START_CALL, NULL, 0);
 
 			// If needed, start the first fading recheck
 			//if (state->fading_recheck) {
-				timestamp = (simtime_t) (FADING_RECHECK_FREQUENCY * Random());
-				ScheduleNewEvent(me, timestamp, FADING_RECHECK, NULL, 0);
+			//	timestamp = (simtime_t) (FADING_RECHECK_FREQUENCY * Random());
+			//	ScheduleNewEvent(me, timestamp, FADING_RECHECK, NULL, 0);
 		//	}
 
 			break;
@@ -191,7 +193,9 @@ void ProcessEvent(unsigned int me, simtime_t now, int event_type, event_content_
 
 				}
 
-				if(new_event_content.call_term_time < handoff_time) {
+				if(1 || new_event_content.call_term_time < handoff_time) {
+                    printf("MODEL -START_CALL-: NEW event scheduled (receiver: LP%d, type: %d, ts: %f) \n",
+                           me, END_CALL, new_event_content.call_term_time);
 					ScheduleNewEvent(me, new_event_content.call_term_time, END_CALL, &new_event_content, sizeof(new_event_content));
 				} else {
 					new_event_content.cell = FindReceiver();
@@ -218,7 +222,8 @@ void ProcessEvent(unsigned int me, simtime_t now, int event_type, event_content_
 					timestamp= now + (simtime_t) (5 * Random());
 
 			}
-
+            printf("MODEL -START_CALL-: NEW event scheduled (receiver: LP%d, type: %d, ts: %f) \n",
+                   me, START_CALL, timestamp);
 			ScheduleNewEvent(me, timestamp, START_CALL, NULL, 0);
 
 			break;
@@ -314,7 +319,9 @@ void ProcessEvent(unsigned int me, simtime_t now, int event_type, event_content_
 
 bool OnGVT(unsigned int me, lp_state_type *snapshot) {
 	(void)me;
-	
+
+	printf("PT%d: %f%%\n", me, (double)snapshot->complete_calls/complete_calls);
+
 	if (snapshot->complete_calls < complete_calls)
 		return false;
 	return true;

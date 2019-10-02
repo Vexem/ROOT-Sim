@@ -95,6 +95,7 @@ msg_t *advance_to_next_event(struct lp_struct *lp)
 {
 	if (likely(list_next(lp->bound) != NULL)) {
 		lp->bound = list_next(lp->bound);
+		printf("BOUND ADVANCED for LP%d to ts %f\n",lp->gid.to_int,lp->bound->timestamp);
 	} else {
 		return NULL;
 	}
@@ -141,7 +142,8 @@ void process_bottom_halves(void)
 
 		while ((msg_to_process = get_msg(lp->bottom_halves)) != NULL) {
 			receiver = find_lp_by_gid(msg_to_process->receiver);
-            printf("message extracted from lp %d's bottom halves: %d at %f\n", lp->gid.to_int, msg_to_process->type, msg_to_process->timestamp);
+            printf("Message (type: %d, ts: %f, kind: %u) extracted from LP%d's bottom halves\n",
+                   msg_to_process->type, msg_to_process->timestamp, msg_to_process->message_kind,lp->gid.to_int );
 
 			// Sanity check
 			if (unlikely
@@ -164,23 +166,22 @@ void process_bottom_halves(void)
 
 				// Find the message matching the antimessage
 				matched_msg = list_tail(receiver->queue_in);
-				while (matched_msg != NULL
-				       && matched_msg->mark !=
-				       msg_to_process->mark) {
+				while (matched_msg != NULL && matched_msg->mark != msg_to_process->mark) {
 					matched_msg = list_prev(matched_msg);
 				}
 
 				// Sanity check
 				if (unlikely(matched_msg == NULL)) {
-					rootsim_error(false,
-						      "LP %d Received an antimessage, but no such mark has been found!\n",
+					rootsim_error(false,"LP %d Received an antimessage, but no such mark has been found!\n",
 						      receiver->gid.to_int);
 					dump_msg_content(msg_to_process);
 					rootsim_error(true, "Aborting...\n");
 				}
 
 				// If the matched message is in the past, we have to rollback
-				if (matched_msg->timestamp <= lvt(receiver)) {
+                    double bound_ts1 = lvt(receiver);
+
+                    if (matched_msg->timestamp <= bound_ts1) {
 
 					receiver->bound = list_prev(matched_msg);
 					while ((receiver->bound != NULL)
@@ -190,8 +191,11 @@ void process_bottom_halves(void)
 
 					receiver->state = LP_STATE_ROLLBACK;
 
-					printf("Setting %d to be rolled back: ANTIMESSAGE:\n", receiver->gid.to_int);
-                    dump_msg_content(matched_msg);
+					printf("\nSetting LP%d to be rolled back (ANTIMESSAGE - ts: %f <= bound: %f)\n", receiver->gid.to_int,msg_to_process->timestamp,bound_ts1);
+                    printf("LP%d's bound RETURNED BACK to: %f\n",receiver->gid.to_int,receiver->bound->timestamp);
+                    printf("MATCHED MESSAGE-> Mark: %llu |Sen: LP%d |Rec: LP%d |ts: %f |type: %d |kind: %d \n\n", matched_msg->mark, matched_msg->sender.to_int,
+                           matched_msg->receiver.to_int, matched_msg->timestamp, matched_msg->type, matched_msg->message_kind);
+                    //dump_msg_content(matched_msg);
 
                     if(matched_msg->unprocessed == false)
                         goto delete;
@@ -225,25 +229,27 @@ void process_bottom_halves(void)
 			case positive:
 
 				// A positive message is directly placed in the queue
-				list_insert(receiver->queue_in, timestamp,
-					    msg_to_process);
+				list_insert(receiver->queue_in, timestamp, msg_to_process);
 
-                    // Check if we've just inserted an out-of-order event.
+                // Check if we've just inserted an out-of-order event.
 				// Here we check for a strictly minor timestamp since
 				// the queue is FIFO for same-timestamp events. Therefore,
 				// A contemporaneous event does not cause a causal violation.
-				double foo = lvt(receiver);
-				if (msg_to_process->timestamp < foo) {
+				double bound_ts2 = lvt(receiver);
+				if (msg_to_process->timestamp < bound_ts2) {
 
 					receiver->bound = list_prev(msg_to_process);
-					while ((receiver->bound != NULL)
+                    while ((receiver->bound != NULL)
 					       && D_EQUAL(receiver->bound->timestamp, msg_to_process->timestamp)) {
 						receiver->bound = list_prev(receiver->bound);
 					}
 
 					receiver->state = LP_STATE_ROLLBACK;
-                    printf("Setting %d to be rolled back: STRAGGLER (ts: %f < clock: %f):\n", receiver->gid.to_int, msg_to_process->timestamp, foo);
-                    dump_msg_content(msg_to_process);
+                    printf("\nSetting LP%d to be rolled back (STRAGGLER - ts: %f < bound: %f)\n", receiver->gid.to_int, msg_to_process->timestamp, bound_ts2);
+                    printf("LP%d's bound RETURNED BACK to: %f\n",receiver->gid.to_int,receiver->bound->timestamp);
+                    printf("STRAGGLER MESSAGE-> Mark: %llu |Sen: LP%d |Rec: LP%d |ts: %f |type: %d |kind: %d \n\n", msg_to_process->mark, msg_to_process->sender.to_int,
+                           msg_to_process->receiver.to_int, msg_to_process->timestamp, msg_to_process->type, msg_to_process->message_kind);
+                    //dump_msg_content(msg_to_process);
 
                     // Rollback last sent time as well if needed
                     //if(receiver->bound->timestamp < receiver->last_sent_time)

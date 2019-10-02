@@ -615,6 +615,8 @@ void asym_schedule(void) {
             rb_management->mark = mark;
             pt_put_lo_prio_msg(chosen_LP->processing_thread, rb_management);
 
+            printf("NOTICE & BUBBLE Sent to PT%d regarding LP%d with bound %f\n",chosen_LP->processing_thread,chosen_LP->gid.to_int,chosen_LP->bound->timestamp);
+
             continue;
         }
 
@@ -650,7 +652,8 @@ void asym_schedule(void) {
 
         chosen_EVT->unprocessed = true;
         pt_put_lo_prio_msg(chosen_LP->processing_thread, chosen_EVT);
-        printf("Sent to PT event %d from %d to %d at %f\n", chosen_EVT->type, chosen_EVT->sender.to_int, chosen_EVT->receiver.to_int, chosen_EVT->timestamp);
+        printf("Message (type %d) sent to PT%d, (sender: LP%d, receiver: LP%d, with ts %f)\n",
+                chosen_EVT->type,chosen_LP->processing_thread , chosen_EVT->sender.to_int, chosen_EVT->receiver.to_int, chosen_EVT->timestamp);
         sent_events++;
         events_to_fill_PT_port[chosen_LP->processing_thread]--;
         int chosen_LP_id = chosen_LP->lid.to_int;
