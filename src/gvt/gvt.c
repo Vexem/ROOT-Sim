@@ -213,8 +213,11 @@ static inline void reduce_local_gvt(void)
 		// events, we can safely assume that it should not
 		// participate to the computation of the GVT, because any
 		// event to it will appear *after* the GVT
-		if (lp->last_processed->next == NULL)
-			continue;
+		// FIXME: this condition in an asymmetric execution
+		// does not make much sense, because we have a double
+		// speculative execution part
+		//if (lp->last_processed->next == NULL)
+		//	continue;
 
         local_min[local_tid] =
                 min(local_min[local_tid], lp->last_processed->timestamp);

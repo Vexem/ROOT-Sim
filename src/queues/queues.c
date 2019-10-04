@@ -93,14 +93,17 @@ simtime_t next_event_timestamp(struct lp_struct *lp)
 */
 msg_t *advance_to_next_event(struct lp_struct *lp)
 {
+    msg_t *bound = NULL;
+
+    spin_lock(&lp->bound_lock);
 	if (likely(list_next(lp->bound) != NULL)) {
 		lp->bound = list_next(lp->bound);
 		printf("BOUND ADVANCED for LP%d to ts %f\n",lp->gid.to_int,lp->bound->timestamp);
-	} else {
-		return NULL;
+		bound = lp->bound;
 	}
+    spin_unlock(&lp->bound_lock);
 
-	return lp->bound;
+	return bound;
 }
 
 /**
@@ -162,6 +165,8 @@ void process_bottom_halves(void)
 			    // It's an antimessage
 			case negative:
 
+			    spin_lock(&receiver->bound_lock);
+
 				statistics_post_data(receiver, STAT_ANTIMESSAGE, 1.0);
 
 				// Find the message matching the antimessage
@@ -183,51 +188,51 @@ void process_bottom_halves(void)
 
                     if (matched_msg->timestamp <= bound_ts1) {
 
-					receiver->bound = list_prev(matched_msg);
-					while ((receiver->bound != NULL)
-						&& D_EQUAL(receiver->bound->timestamp, msg_to_process->timestamp)) {
-						receiver->bound = list_prev(receiver->bound);
-					}
+                        receiver->bound = list_prev(matched_msg);
+                        while ((receiver->bound != NULL)
+                            && D_EQUAL(receiver->bound->timestamp, msg_to_process->timestamp)) {
+                            receiver->bound = list_prev(receiver->bound);
+                        }
 
-					receiver->state = LP_STATE_ROLLBACK;
+                        receiver->state = LP_STATE_ROLLBACK;
 
-					printf("\nSetting LP%d to be rolled back (ANTIMESSAGE - ts: %f <= bound: %f)\n", receiver->gid.to_int,msg_to_process->timestamp,bound_ts1);
-                    printf("LP%d's bound RETURNED BACK to: %f\n",receiver->gid.to_int,receiver->bound->timestamp);
-                    printf("MATCHED MESSAGE-> Mark: %llu |Sen: LP%d |Rec: LP%d |ts: %f |type: %d |kind: %d \n\n", matched_msg->mark, matched_msg->sender.to_int,
-                           matched_msg->receiver.to_int, matched_msg->timestamp, matched_msg->type, matched_msg->message_kind);
-                    //dump_msg_content(matched_msg);
+                        printf("\nSetting LP%d to be rolled back (ANTIMESSAGE - ts: %f <= bound: %f)\n", receiver->gid.to_int,msg_to_process->timestamp,bound_ts1);
+                        printf("LP%d's bound RETURNED BACK to: %f\n",receiver->gid.to_int,receiver->bound->timestamp);
+                        printf("MATCHED MESSAGE-> Mark: %llu |Sen: LP%d |Rec: LP%d |ts: %f |type: %d |kind: %d \n\n", matched_msg->mark, matched_msg->sender.to_int,
+                               matched_msg->receiver.to_int, matched_msg->timestamp, matched_msg->type, matched_msg->message_kind);
+                        //dump_msg_content(matched_msg);
 
-                    if(matched_msg->unprocessed == false)
-                        goto delete;
+                        if(matched_msg->unprocessed == false)
+                            goto delete;
 
-                    // Delete the matched message
-                    list_delete_by_content(receiver->queue_in, matched_msg);
-                    list_insert_tail(receiver->retirement_queue, matched_msg);
+                        // Delete the matched message
+                        list_delete_by_content(receiver->queue_in, matched_msg);
+                        list_insert_tail(receiver->retirement_queue, matched_msg);
 
-                    // Rollback last sent time as well if needed
-                    //if(receiver->bound->timestamp < receiver->last_sent_time)       //PER ORA INUTILE
-                    //    receiver->last_sent_time = receiver->bound->timestamp;
+                        // Rollback last sent time as well if needed
+                        //if(receiver->bound->timestamp < receiver->last_sent_time)       //PER ORA INUTILE
+                        //    receiver->last_sent_time = receiver->bound->timestamp;
 
-                }
-				else {
-                    delete:
+                    } else {
+                        delete:
 
-                    // Unchain the event from the input queue
-                    list_delete_by_content(receiver->queue_in,matched_msg);
-                    // Delete the matched message
-                    msg_release(matched_msg);
-                    //list_insert_tail(LPS(lid_receiver)->retirement_queue, matched_msg);
+                        // Unchain the event from the input queue
+                        list_delete_by_content(receiver->queue_in,matched_msg);
+                        // Delete the matched message
+                        printf("RELEASING message (LP%d, ts:%f | QUEUES)\n",receiver->gid.to_int,matched_msg->timestamp);
+                        msg_release(matched_msg);
+                        //list_insert_tail(LPS(lid_receiver)->retirement_queue, matched_msg);
 
-				}
+                    }
 #ifdef HAVE_MPI
 				register_incoming_msg(msg_to_process);
 #endif
-
+                    spin_unlock(&receiver->bound_lock);
 				break;
 
 				// It's a positive message
 			case positive:
-
+                spin_lock(&receiver->bound_lock);
 				// A positive message is directly placed in the queue
 				list_insert(receiver->queue_in, timestamp, msg_to_process);
 
@@ -258,6 +263,7 @@ void process_bottom_halves(void)
  #ifdef HAVE_MPI
                  register_incoming_msg(msg_to_process);
  #endif
+                    spin_unlock(&receiver->bound_lock);
                  break;
 
                  // It's a control message

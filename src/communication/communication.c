@@ -277,7 +277,7 @@ void ParallelScheduleNewEvent(unsigned int gid_receiver, simtime_t timestamp, un
 
 	// In Silent execution, we do not send again already sent messages
 	if (unlikely(current->state == LP_STATE_SILENT_EXEC)) {
-        printf("OLD event received (SILENT EXECUTION, receiver:%d, ts: %f)\n", gid_receiver, timestamp);
+        printf("OLD event received (SILENT EXECUTION, receiver: LP%d, ts: %f)\n", gid_receiver, timestamp);
 		return;
 	}
 	// Check whether the destination LP is out of range
@@ -298,7 +298,7 @@ void ParallelScheduleNewEvent(unsigned int gid_receiver, simtime_t timestamp, un
 	}
 
 	// Copy all the information into the event structure
-	pack_msg(&event, current->gid, receiver, event_type, timestamp, lvt(current), event_size, event_content);
+	pack_msg(&event, current->gid, receiver, event_type, timestamp, current_evt->timestamp, event_size, event_content);
 	event->mark = generate_mark(current);
 
 	if (unlikely(event->type == RENDEZVOUS_START)) {
@@ -349,7 +349,7 @@ void send_antimessages(struct lp_struct *lp, simtime_t after_simtime)
 		msg->message_kind = negative;
 
         //printf("mark: %llu, remove_timestamp: %f \n", msg->mark, anti_msg->timestamp);
-        printf("Sending ANTIMESSAGE to LP%d  with ts %f\n",msg->receiver.to_int,msg->timestamp);
+        printf("Sending ANTIMESSAGE to LP%d  with ts %f sendtime %f\n",msg->receiver.to_int,msg->timestamp, msg->send_time);
 		Send(msg);
 
 		// Remove the already-sent antimessage from the output queue
@@ -471,11 +471,9 @@ void asym_send_outgoing_msgs(struct lp_struct *lp) {
     for(i = 0; i < lp->outgoing_buffer.size; i++) {
         msg = lp->outgoing_buffer.outgoing_msgs[i];
 
-        printf("Putting message (type: %d) in the PT's output_port | sender: LP%d, receiver: LP%d, ts: %f\n",
-                msg->type, msg->sender.to_int, msg->receiver.to_int, msg->timestamp);
-        pt_put_out_msg(msg);
+        printf("Putting message (type: %d) in the PT's output_port | sender: LP%d, receiver: LP%d, ts: %f\n", msg->type, msg->sender.to_int, msg->receiver.to_int, msg->timestamp);
 
-        //dump_msg_content(msg);
+        pt_put_out_msg(msg);
     }
 
     lp->outgoing_buffer.size = 0;
@@ -561,8 +559,8 @@ void asym_extract_generated_msgs(void) {
                 continue;
             }
 
-            printf("Sending message (type: %d) to the LP's bottom halves | sender: LP%d, receiver: LP%d, ts: %f\n",
-                   msg->type, msg->sender.to_int, msg->receiver.to_int, msg->timestamp);
+            printf("Sending message (type: %d) to the LP's bottom halves | sender: LP%d, receiver: LP%d, ts: %f, sendtime: %f\n",
+                   msg->type, msg->sender.to_int, msg->receiver.to_int, msg->timestamp,  msg->send_time);
             Send(msg);
 
             lp_sender = find_lp_by_gid(msg->sender);
@@ -735,6 +733,11 @@ void validate_msg(msg_t *msg)
 	    printf("MESSAGE VALIDATION FAILED: message receiver id > n_prc_tot\n");
         dump_msg_content(msg);
     };
+	if(msg->send_time > msg->timestamp) {
+        printf("MESSAGE VALIDATION FAILED: message send_time > timestamp\n");
+        dump_msg_content(msg);
+        abort();
+	}
 	assert(msg->receiver.to_int <= n_prc_tot);
 	assert(msg->message_kind == positive || msg->message_kind == negative || msg->message_kind == control);
 	assert(mark_to_gid(msg->mark) <= n_prc_tot);

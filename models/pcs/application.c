@@ -193,7 +193,7 @@ void ProcessEvent(unsigned int me, simtime_t now, int event_type, event_content_
 
 				}
 
-				if(1 || new_event_content.call_term_time < handoff_time) {
+				if(new_event_content.call_term_time < handoff_time) {
                     printf("MODEL -START_CALL-: NEW event scheduled (receiver: LP%d, type: %d, ts: %f) \n",
                            me, END_CALL, new_event_content.call_term_time);
 					ScheduleNewEvent(me, new_event_content.call_term_time, END_CALL, &new_event_content, sizeof(new_event_content));

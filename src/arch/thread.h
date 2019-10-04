@@ -236,7 +236,13 @@ void threads_init(void);
 
 
 // Macros to retrieve messages from PT port
-#define pt_get_lo_prio_msg() get_msg(Threads[tid]->input_port[PORT_PRIO_LO])
+#define pt_get_lo_prio_msg() ({\
+    msg_t *__m = get_msg(Threads[tid]->input_port[PORT_PRIO_LO]);\
+    if(__m) printf("PT: Extracted event %d to LP%d at time %f at %s:%d\n", __m->type, __m->receiver.to_int, __m->timestamp, __FILE__, __LINE__);\
+    __m;    \
+})
+
+
 #define pt_get_hi_prio_msg() get_msg(Threads[tid]->input_port[PORT_PRIO_HI])
 #define pt_get_out_msg(th_id) get_msg(Threads[(th_id)]->output_port)
 

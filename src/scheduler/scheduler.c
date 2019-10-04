@@ -303,11 +303,11 @@ void activate_LP(struct lp_struct *next, msg_t * evt)
 	lp_alloc_schedule();
 #endif
 
-    if (unlikely(is_blocked_state(next->state))) {
+  /*  if (unlikely(is_blocked_state(next->state))) {
 		rootsim_error(true, "Critical condition: LP %d has a wrong state: %d. Aborting...\n",
 			      next->gid.to_int, next->state);
 	}
-
+*/
 	context_switch(&kernel_context, &next->context);
 
     current->last_processed = evt;
@@ -360,13 +360,16 @@ void asym_process_one_event(msg_t *msg) {
         dump_msg_content(msg);
         abort();
     }
-    if(is_blocked_state(LP->state)){
+  /*  if(is_blocked_state(LP->state)){
         fprintf(stderr, "AP: lp (gid = %d) with state %d shouldn't be blocked before calling activate_LP!\n",
                 LP->gid.to_int,LP->state);
         abort();
     }
+*/
     // Process this event
+    spin_lock(&LP->bound_lock);
     activate_LP(LP, msg);
+    spin_unlock(&LP->bound_lock);
     msg->unprocessed = false;
 
     // Send back to the controller the (possibly) generated events
@@ -396,7 +399,7 @@ void asym_process(void){
     if(hi_prio_msg != NULL) {
 
         do {
-            while((lo_prio_msg = pt_get_lo_prio_msg()) == NULL);   //
+            while((lo_prio_msg = pt_get_lo_prio_msg()) == NULL);
 
             if (lo_prio_msg->type == ASYM_ROLLBACK_BUBBLE) {
 
@@ -631,6 +634,7 @@ void asym_schedule(void) {
                     break;
                 }
                 list_delete_by_content(chosen_LP->retirement_queue,evt_to_prune);
+                printf("RELEASING message (LP%d, ts:%f | SCHEDULER)\n",chosen_LP->gid.to_int,evt_to_prune->timestamp);
                 msg_release(evt_to_prune);
             }
             continue;
