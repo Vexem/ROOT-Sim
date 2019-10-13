@@ -82,12 +82,12 @@ struct argp model_argp = {model_options, model_parse, NULL, NULL, NULL, NULL, NU
 
 struct _topology_settings_t topology_settings = {.default_geometry = TOPOLOGY_HEXAGON};
 
-void ProcessEvent(unsigned int me, simtime_t now, int event_type, event_content_type *event_content, unsigned int size, void *ptr) {
+void ProcessEvent(unsigned int curr_lp, simtime_t event_ts, int event_type, event_content_type *event_content, unsigned int size, void *ptr) {
 	(void)size;
 	
 	unsigned int w;
 
-	printf("MODEL: LP%d executing evt type %d with ts %f\n", me, event_type, now);
+	printf("MODEL: LP%d executing event (type %d) with ts %f and call term time: %f\n", curr_lp, event_type, event_ts, event_content->call_term_time);
 
 	event_content_type new_event_content;
 
@@ -102,11 +102,16 @@ void ProcessEvent(unsigned int me, simtime_t now, int event_type, event_content_
 	state = (lp_state_type*)ptr;
 
 	if(state != NULL) {
-		state->lvt = now;
+		state->lvt = event_ts;
 		state->executed_events++;
 	}
 
-
+	if(event_type == HANDOFF_LEAVE || event_type == HANDOFF_RECV) {
+	    if(event_content->call_term_time == 000000) {
+            fprintf(stderr,"MODEL: LP%d, type: %d, WARNING: CALL TERM TIME for event_ts %f = %f\n", curr_lp, event_type, event_ts, event_content->call_term_time);
+            abort();
+        }
+    }
 	switch(event_type) {
 
 		case INIT:
@@ -132,14 +137,14 @@ void ProcessEvent(unsigned int me, simtime_t now, int event_type, event_content_
 
 			// Start the simulation
 			timestamp = (simtime_t) (20 * Random());
-            printf("MODEL -INIT-: NEW scheduled event (receiver: LP%d, type: %d, ts: %f) \n",
-                   me,START_CALL, timestamp);
-			ScheduleNewEvent(me, timestamp, START_CALL, NULL, 0);
+            printf("MODEL CASE <%d - INIT>: FIRST START CALL event (receiver: LP%d, type: %d, ts: %f) \n",
+                   event_type, curr_lp, START_CALL, timestamp);
+			ScheduleNewEvent(curr_lp, timestamp, START_CALL, NULL, 0);
 
 			// If needed, start the first fading recheck
 			//if (state->fading_recheck) {
 			//	timestamp = (simtime_t) (FADING_RECHECK_FREQUENCY * Random());
-			//	ScheduleNewEvent(me, timestamp, FADING_RECHECK, NULL, 0);
+			//	ScheduleNewEvent(curr_lp, timestamp, FADING_RECHECK, NULL, 0);
 		//	}
 
 			break;
@@ -156,24 +161,24 @@ void ProcessEvent(unsigned int me, simtime_t now, int event_type, event_content_
 				state->channel_counter--;
 
 				new_event_content.channel = allocation(state);
-				new_event_content.from = me;
-				new_event_content.sent_at = now;
+				new_event_content.from = curr_lp;
+				new_event_content.sent_at = event_ts;
 
-//				printf("(%d) allocation %d at %f\n", me, new_event_content.channel, now);
+//				printf("(%d) allocation %d at %f\n", curr_lp, new_event_content.channel, event_ts);
 
 				// Determine call duration
 				switch (DURATION_DISTRIBUTION) {
 
 					case UNIFORM:
-						new_event_content.call_term_time = now + (simtime_t)(ta_duration * Random());
+						new_event_content.call_term_time = event_ts + (simtime_t)(ta_duration * Random());
 						break;
 
 					case EXPONENTIAL:
-						new_event_content.call_term_time = now + (simtime_t)(Expent(ta_duration));
+						new_event_content.call_term_time = event_ts + (simtime_t)(Expent(ta_duration));
 						break;
 
 					default:
- 						new_event_content.call_term_time = now + (simtime_t) (5 * Random() );
+ 						new_event_content.call_term_time = event_ts + (simtime_t) (5 * Random() );
 				}
 
 				// Determine whether the call will be handed-off or not
@@ -181,50 +186,52 @@ void ProcessEvent(unsigned int me, simtime_t now, int event_type, event_content_
 
 					case UNIFORM:
 
-						handoff_time  = now + (simtime_t)((ta_change) * Random());
+						handoff_time  = event_ts + (simtime_t)((ta_change) * Random());
 						break;
 
 					case EXPONENTIAL:
-						handoff_time = now + (simtime_t)(Expent(ta_change));
+						handoff_time = event_ts + (simtime_t)(Expent(ta_change));
 						break;
 
 					default:
-						handoff_time = now + (simtime_t)(5 * Random());
+						handoff_time = event_ts + (simtime_t)(5 * Random());
 
 				}
 
 				if(new_event_content.call_term_time < handoff_time) {
-                    printf("MODEL -START_CALL-: NEW event scheduled (receiver: LP%d, type: %d, ts: %f) \n",
-                           me, END_CALL, new_event_content.call_term_time);
-					ScheduleNewEvent(me, new_event_content.call_term_time, END_CALL, &new_event_content, sizeof(new_event_content));
+                    printf("MODEL CASE <%d - START_CALL>: new END_CALL event scheduled (receiver: LP%d, type: %d, ts: %f, ctt: %f) \n",
+                           event_type, curr_lp, END_CALL, new_event_content.call_term_time, new_event_content.call_term_time);
+					ScheduleNewEvent(curr_lp, new_event_content.call_term_time, END_CALL, &new_event_content, sizeof(new_event_content));
 				} else {
 					new_event_content.cell = FindReceiver();
-					ScheduleNewEvent(me, handoff_time, HANDOFF_LEAVE, &new_event_content, sizeof(new_event_content));
+                    printf("MODEL CASE <%d - START_CALL>: new HANDOFF_LEAVE event scheduled (receiver: LP%d, type: %d, ts: %f, ctt: %f) \n",
+                           event_type, curr_lp, HANDOFF_LEAVE, handoff_time, new_event_content.call_term_time);
+					ScheduleNewEvent(curr_lp, handoff_time, HANDOFF_LEAVE, &new_event_content, sizeof(new_event_content));
 				}
 			}
 
 
 			if (variable_ta)
-				state->ta = recompute_ta(ref_ta, now);
+				state->ta = recompute_ta(ref_ta, event_ts);
 
 			// Determine the time at which a new call will be issued
 			switch (DISTRIBUTION) {
 
 				case UNIFORM:
-					timestamp= now + (simtime_t)(state->ta * Random());
+					timestamp= event_ts + (simtime_t)(state->ta * Random());
 					break;
 
 				case EXPONENTIAL:
-					timestamp= now + (simtime_t)(Expent(state->ta));
+					timestamp= event_ts + (simtime_t)(Expent(state->ta));
 					break;
 
 				default:
-					timestamp= now + (simtime_t) (5 * Random());
+					timestamp= event_ts + (simtime_t) (5 * Random());
 
 			}
-            printf("MODEL -START_CALL-: NEW event scheduled (receiver: LP%d, type: %d, ts: %f) \n",
-                   me, START_CALL, timestamp);
-			ScheduleNewEvent(me, timestamp, START_CALL, NULL, 0);
+            printf("MODEL CASE <%d - START_CALL>: new START_CALL event scheduled (receiver: LP%d, type: %d, ts: %f) \n",
+                   event_type, curr_lp, START_CALL, timestamp);
+			ScheduleNewEvent(curr_lp, timestamp, START_CALL, NULL, 0);
 
 			break;
 
@@ -232,7 +239,7 @@ void ProcessEvent(unsigned int me, simtime_t now, int event_type, event_content_
 
 			state->channel_counter++;
 			state->complete_calls++;
-			deallocation(me, state, event_content->channel, now);
+			deallocation(curr_lp, state, event_content->channel, event_ts);
 
 			break;
 
@@ -240,19 +247,21 @@ void ProcessEvent(unsigned int me, simtime_t now, int event_type, event_content_
 
 			state->channel_counter++;
 			state->leaving_handoffs++;
-			deallocation(me, state, event_content->channel, now);
+			deallocation(curr_lp, state, event_content->channel, event_ts);
 
 			new_event_content.call_term_time =  event_content->call_term_time;
-			new_event_content.from = me;
+			new_event_content.from = curr_lp;
 			new_event_content.dummy = &(state->dummy);
-			ScheduleNewEvent(event_content->cell, now, HANDOFF_RECV, &new_event_content, sizeof(new_event_content));
+            printf("MODEL CASE <%d - HANDOFF_LEAVE>: new HANDOFF_RECV event scheduled (receiver: LP%d, type: %d, ts: %f, ctt: %f) \n",
+                   event_type, event_content->cell, HANDOFF_RECV, event_ts, new_event_content.call_term_time);
+			ScheduleNewEvent(event_content->cell, event_ts, HANDOFF_RECV, &new_event_content, sizeof(new_event_content));
 			break;
 
 		case HANDOFF_RECV:
 			state->arriving_handoffs++;
 			state->arriving_calls++;
 
-			if(Random() < 0.3 && me == 1 && event_content->from == 2){//&& state->dummy_flag == false) {
+			if(Random() < 0.3 && curr_lp == 1 && event_content->from == 2){//&& state->dummy_flag == false) {
 				*(event_content->dummy) = 1;
 				state->dummy_flag = true;
 			}
@@ -268,23 +277,27 @@ void ProcessEvent(unsigned int me, simtime_t now, int event_type, event_content_
 
 				switch (CELL_CHANGE_DISTRIBUTION) {
 					case UNIFORM:
-						handoff_time  = now + (simtime_t)((ta_change) * Random());
+						handoff_time  = event_ts + (simtime_t)((ta_change) * Random());
 
 						break;
 					case EXPONENTIAL:
-						handoff_time = now + (simtime_t)(Expent(ta_change));
+						handoff_time = event_ts + (simtime_t)(Expent(ta_change));
 
 						break;
 					default:
-						handoff_time = now+
-						(simtime_t) (5 * Random());
+						handoff_time = event_ts +
+                                       (simtime_t) (5 * Random());
 				}
 
 				if(new_event_content.call_term_time < handoff_time ) {
-					ScheduleNewEvent(me, new_event_content.call_term_time, END_CALL, &new_event_content, sizeof(new_event_content));
+                    printf("MODEL CASE <%d - HANDOFF_RECV>: new END_CALL event scheduled (receiver: LP%d, type: %d, ts: %f, ctt: %f) \n",
+                           event_type, curr_lp, END_CALL, new_event_content.call_term_time, new_event_content.call_term_time);
+					ScheduleNewEvent(curr_lp, new_event_content.call_term_time, END_CALL, &new_event_content, sizeof(new_event_content));
 				} else {
 					new_event_content.cell = FindReceiver();
-					ScheduleNewEvent(me, handoff_time, HANDOFF_LEAVE, &new_event_content, sizeof(new_event_content));
+                    printf("MODEL CASE <%d - HANDOFF_RECV>: new HANDOFF_LEAVE event scheduled (receiver: LP%d, type: %d, ts: %f, ctt: %f) \n",
+                           event_type, curr_lp, HANDOFF_LEAVE, handoff_time, new_event_content.call_term_time);
+					ScheduleNewEvent(curr_lp, handoff_time, HANDOFF_LEAVE, &new_event_content, sizeof(new_event_content));
 				}
 			}
 
@@ -292,7 +305,7 @@ void ProcessEvent(unsigned int me, simtime_t now, int event_type, event_content_
 			break;
 
 
-				case FADING_RECHECK:
+		case FADING_RECHECK:
 
 /*
 			if(state->check_fading)
@@ -303,14 +316,16 @@ void ProcessEvent(unsigned int me, simtime_t now, int event_type, event_content_
 
 			fading_recheck(state);
 
-			timestamp = now + (simtime_t) (FADING_RECHECK_FREQUENCY );
-			ScheduleNewEvent(me, timestamp, FADING_RECHECK, NULL, 0);
+			timestamp = event_ts + (simtime_t) (FADING_RECHECK_FREQUENCY );
+            printf("MODEL CASE <%d - FADING_RECHECK>: new FADING_RECHECK event scheduled (receiver: LP%d, type: %d, ts: %f, ctt: %f) \n",
+                   event_type, curr_lp, FADING_RECHECK, timestamp, new_event_content.call_term_time);
+			ScheduleNewEvent(curr_lp, timestamp, FADING_RECHECK, NULL, 0);
 
 			break;
 
 
 		default:
-			fprintf(stdout, "PCS: Unknown event type! (me = %d - event type = %d)\n", me, event_type);
+			fprintf(stdout, "PCS: Unknown event type! (curr_lp = %d - event type = %d)\n", curr_lp, event_type);
 			abort();
 
 	}
@@ -320,7 +335,7 @@ void ProcessEvent(unsigned int me, simtime_t now, int event_type, event_content_
 bool OnGVT(unsigned int me, lp_state_type *snapshot) {
 	(void)me;
 
-	printf("PT%d: %f%%\n", me, (double)snapshot->complete_calls/complete_calls);
+	fprintf(stdout,"PT%d: %f%%\n", me, (double)snapshot->complete_calls/complete_calls);
 
 	if (snapshot->complete_calls < complete_calls)
 		return false;

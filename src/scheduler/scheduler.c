@@ -347,8 +347,11 @@ bool check_rendevouz_request(struct lp_struct *lp)
 void asym_process_one_event(msg_t *msg) {
     struct lp_struct *LP;
 
+    validate_msg(msg);
+
+
     if(is_control_msg(msg->type)&& msg->type!=ASYM_ROLLBACK_BUBBLE){
-        fprintf(stderr, "AP: Type %d  message shouldn't stay in the lo_prio queue!\n",msg->type);
+        printf("\tERROR: Type %d  message shouldn't stay in the lo_prio queue!\n",msg->type);
         dump_msg_content(msg);
         abort();
     }
@@ -356,16 +359,17 @@ void asym_process_one_event(msg_t *msg) {
     LP = find_lp_by_gid(msg->receiver);
 
     if(is_control_msg(msg->type)){
-        fprintf(stderr, "AP: a lo_prio control msg (type %d) shouldn't be here!\n", msg->type);
+        printf("\tERROR: a lo_prio control msg (type %d) shouldn't be here!\n", msg->type);
         dump_msg_content(msg);
         abort();
     }
-  /*  if(is_blocked_state(LP->state)){
+
+/*  if(is_blocked_state(LP->state)){
         fprintf(stderr, "AP: lp (gid = %d) with state %d shouldn't be blocked before calling activate_LP!\n",
                 LP->gid.to_int,LP->state);
         abort();
-    }
-*/
+    }       */
+
     // Process this event
     spin_lock(&LP->bound_lock);
     activate_LP(LP, msg);
@@ -389,8 +393,8 @@ void asym_process(void){
     msg_t *lo_prio_msg;
     msg_t *hi_prio_msg;
     msg_t *rb_ack;
-    struct lp_struct *LP;
-    bool updated;
+    //struct lp_struct *LP;
+    //bool updated;
 
     update_hi_prio_list();
 
@@ -405,7 +409,7 @@ void asym_process(void){
 
                 // Sanity check
                 if (lo_prio_msg->mark != hi_prio_msg->mark) {
-                    printf("Inversione di priorità delle bubble/notice");
+                    fprintf(stderr,"WARNING: INVERSIONE di priorità delle bubble/notice\n");
                     fflush(stdout);
                     abort();
                 }
@@ -426,6 +430,8 @@ void asym_process(void){
 
 
     lo_prio_msg = pt_get_lo_prio_msg();
+
+
     if(lo_prio_msg == NULL)
          return;
 
@@ -655,6 +661,7 @@ void asym_schedule(void) {
         }
 
         chosen_EVT->unprocessed = true;
+        validate_msg(chosen_EVT);
         pt_put_lo_prio_msg(chosen_LP->processing_thread, chosen_EVT);
         printf("Message (type %d) sent to PT%d, (sender: LP%d, receiver: LP%d, with ts %f)\n",
                 chosen_EVT->type,chosen_LP->processing_thread , chosen_EVT->sender.to_int, chosen_EVT->receiver.to_int, chosen_EVT->timestamp);

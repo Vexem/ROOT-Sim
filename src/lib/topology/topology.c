@@ -309,6 +309,17 @@ double GetValueTopology(unsigned from, unsigned to) {
 	return ret;
 }
 
+void check_content(msg_t *msg, event_content_type *payload){
+    simtime_t call_term_time = payload->call_term_time;
+    if(msg->type == 20 || msg->type == 0 || is_control_msg(msg->type) || msg->message_kind == negative)
+        return;
+    else if(call_term_time == 0.000000){
+        fprintf(stderr,"WARNING: LP%d - PAYLOAD WITH CALL TERM TIME = 0.000000\n", msg->receiver.to_int);
+        dump_msg_content(msg);
+        abort();
+    }
+}
+
 void ProcessEventTopology(void){
 	switch(current_evt->type){
 		case TOPOLOGY_UPDATE:
@@ -328,6 +339,7 @@ void ProcessEventTopology(void){
 			break;
 		default:
 			switch_to_application_mode();
+            validate_msg(current_evt);
             current->ProcessEvent(current->gid.to_int,
                                   current_evt->timestamp,
                                   current_evt->type,

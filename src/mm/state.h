@@ -53,7 +53,7 @@ typedef struct _state_t {
 
 	/// Simulation time associated with the state log
 	simtime_t lvt;
-	/// A pointer to the actual log
+	/// A pointer to the current log
 	void *log;
 	/// This log has been taken after the execution of this event
 	msg_t *last_event;

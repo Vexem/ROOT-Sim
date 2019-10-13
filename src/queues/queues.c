@@ -160,6 +160,8 @@ void process_bottom_halves(void)
 				continue;
 			}
 
+            validate_msg(msg_to_process);
+
 			switch (msg_to_process->message_kind) {
 
 			    // It's an antimessage
@@ -196,9 +198,9 @@ void process_bottom_halves(void)
 
                         receiver->state = LP_STATE_ROLLBACK;
 
-                        printf("\nSetting LP%d to be rolled back (ANTIMESSAGE - ts: %f <= bound: %f)\n", receiver->gid.to_int,msg_to_process->timestamp,bound_ts1);
-                        printf("LP%d's bound RETURNED BACK to: %f\n",receiver->gid.to_int,receiver->bound->timestamp);
-                        printf("MATCHED MESSAGE-> Mark: %llu |Sen: LP%d |Rec: LP%d |ts: %f |type: %d |kind: %d \n\n", matched_msg->mark, matched_msg->sender.to_int,
+                        printf(">>>Setting LP%d to be ROLLED BACK (ANTIMESSAGE - ts: %f <= bound: %f)<<<\n", receiver->gid.to_int,msg_to_process->timestamp,bound_ts1);
+                        printf(">>>LP%d's bound RETURNED BACK to: %f<<<\n",receiver->gid.to_int,receiver->bound->timestamp);
+                        printf(">>>MATCHED MESSAGE-> Mark: %llu |Sen: LP%d |Rec: LP%d |ts: %f |type: %d |kind: %d<<< \n", matched_msg->mark, matched_msg->sender.to_int,
                                matched_msg->receiver.to_int, matched_msg->timestamp, matched_msg->type, matched_msg->message_kind);
                         //dump_msg_content(matched_msg);
 
@@ -250,9 +252,9 @@ void process_bottom_halves(void)
 					}
 
 					receiver->state = LP_STATE_ROLLBACK;
-                    printf("\nSetting LP%d to be rolled back (STRAGGLER - ts: %f < bound: %f)\n", receiver->gid.to_int, msg_to_process->timestamp, bound_ts2);
-                    printf("LP%d's bound RETURNED BACK to: %f\n",receiver->gid.to_int,receiver->bound->timestamp);
-                    printf("STRAGGLER MESSAGE-> Mark: %llu |Sen: LP%d |Rec: LP%d |ts: %f |type: %d |kind: %d \n\n", msg_to_process->mark, msg_to_process->sender.to_int,
+                    printf(">>>Setting LP%d to be ROLLED BACK (STRAGGLER - ts: %f < bound: %f)<<<\n", receiver->gid.to_int, msg_to_process->timestamp, bound_ts2);
+                    printf(">>>LP%d's bound RETURNED BACK to: %f<<<\n",receiver->gid.to_int,receiver->bound->timestamp);
+                    printf(">>>STRAGGLER MESSAGE-> Mark: %llu |Sen: LP%d |Rec: LP%d |ts: %f |type: %d |kind: %d<<<\n", msg_to_process->mark, msg_to_process->sender.to_int,
                            msg_to_process->receiver.to_int, msg_to_process->timestamp, msg_to_process->type, msg_to_process->message_kind);
                     //dump_msg_content(msg_to_process);
 

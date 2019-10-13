@@ -181,18 +181,18 @@ static void *main_simulation_loop(void *arg)
 				#ifdef HAVE_PREEMPTION
 				printf("TIME BARRIER %f - %d preemptions - %d in platform mode - %d would preempt\n", my_time_barrier, atomic_read(&preempt_count), atomic_read(&overtick_platform), atomic_read(&would_preempt));
 				#else
-				printf("TIME BARRIER %f\n", my_time_barrier);
+				fprintf(stdout,"TIME BARRIER %f\n", my_time_barrier);
 				#endif
 
-				printf("\tPorts-> ");
+				fprintf(stdout,"\tPorts-> ");
 		unsigned int i;
 				for(i = 0; i < n_cores; i++) {
 					if(Threads[i]->incarnation == THREAD_PROCESSING){
                         unsigned int port_curr_size = get_port_current_size(Threads[i]->input_port[PORT_PRIO_LO]);
-						printf("PT%d: %d/%d | ",i, port_curr_size, Threads[i]->port_batch_size);
+						fprintf(stdout,"PT%d: %d/%d | ",i, port_curr_size, Threads[i]->port_batch_size);
 					}
 				}
-				printf("\n");
+				fprintf(stdout,"\n");
 
 				fflush(stdout);
 			}

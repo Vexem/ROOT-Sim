@@ -306,9 +306,9 @@ void ParallelScheduleNewEvent(unsigned int gid_receiver, simtime_t timestamp, un
 		printf("rendezvous_start mark=%llu\n", event->rendezvous_mark);
 		fflush(stdout);
 	}
-
-    printf("NEW event received (type: %d, sender: LP%d, receiver: LP%d, ts: %f) \n",
-            event->type, event->sender.to_int, event->receiver.to_int, event->timestamp);
+    validate_msg(event);
+    printf("NEW EVENT successfully received from MODEL (type: %d, sender: LP%d, receiver: LP%d, ts: %f, send time: %f) \n",
+            event->type, event->sender.to_int, event->receiver.to_int, event->timestamp, event->send_time);
 	insert_outgoing_msg(event);
 
  out:
@@ -328,14 +328,14 @@ void ParallelScheduleNewEvent(unsigned int gid_receiver, simtime_t timestamp, un
  * eventually received at the destination.
  *
  * @param lp A pointer to the LP lp_struct for which antimessages should be sent
- * @param after_simtime The simulation time instant after which to send antimessages
+ * @param correct_event_ts The simulation time instant after which to send antimessages
  */
-void send_antimessages(struct lp_struct *lp, simtime_t after_simtime)
+void send_antimessages(struct lp_struct *lp, simtime_t correct_event_ts)
 {
 	msg_hdr_t *anti_msg, *anti_msg_prev;
 	msg_t *msg;
 
-    //printf("send_antimessages to lp: %d, starting from time: %f \n", lp->gid.to_int, after_simtime);
+    //printf("send_antimessages to lp: %d, starting from time: %f \n", lp->gid.to_int, correct_event_ts);
 
 
     if (unlikely(list_empty(lp->queue_out)))
@@ -343,7 +343,7 @@ void send_antimessages(struct lp_struct *lp, simtime_t after_simtime)
 
 	// Scan the output queue backwards, sending all required antimessages
 	anti_msg = list_tail(lp->queue_out);
-	while (anti_msg != NULL && anti_msg->send_time > after_simtime) {
+	while (anti_msg != NULL && anti_msg->send_time > correct_event_ts) {
 		msg = get_msg_from_slab(which_slab_to_use(anti_msg->sender, anti_msg->receiver));
 		hdr_to_msg(anti_msg, msg);
 		msg->message_kind = negative;
@@ -406,14 +406,16 @@ void Send(msg_t *msg)
  */
 void insert_outgoing_msg(msg_t *msg)
 {
+    int index;
 
 	// if the model is generating many events at the same time, reallocate the outgoing buffer
 	if (unlikely(current->outgoing_buffer.size == current->outgoing_buffer.max_size)) {
 		current->outgoing_buffer.max_size *= 2;
 		current->outgoing_buffer.outgoing_msgs = rsrealloc(current->outgoing_buffer.outgoing_msgs, sizeof(msg_t *) * current->outgoing_buffer.max_size);
 	}
-
-	current->outgoing_buffer.outgoing_msgs[current->outgoing_buffer.size++] = msg;
+    index = current->outgoing_buffer.size++;
+	current->outgoing_buffer.outgoing_msgs[index] = msg;
+    validate_msg(current->outgoing_buffer.outgoing_msgs[index]);
 
 	// Store the minimum timestamp of outgoing messages
 	// TODO: check whether this is still used by preemptive Time Warp or not
@@ -450,7 +452,7 @@ void send_outgoing_msgs(struct lp_struct *lp)
 		msg = lp->outgoing_buffer.outgoing_msgs[i];
 		msg_to_hdr(msg_hdr, msg);
 
-        printf("Sending message (type: %d) to the LP's bottom halves | sender: LP%d, receiver: LP%d, ts: %f\n",
+        printf("Sending message (type %d) to the LP's bottom halves | sender: LP%d, receiver: LP%d, ts: %f\n",
                msg->type, msg->sender.to_int, msg->receiver.to_int, msg->timestamp);
 		Send(msg);
 
@@ -471,7 +473,7 @@ void asym_send_outgoing_msgs(struct lp_struct *lp) {
     for(i = 0; i < lp->outgoing_buffer.size; i++) {
         msg = lp->outgoing_buffer.outgoing_msgs[i];
 
-        printf("Putting message (type: %d) in the PT's output_port | sender: LP%d, receiver: LP%d, ts: %f\n", msg->type, msg->sender.to_int, msg->receiver.to_int, msg->timestamp);
+        printf("Putting message (type %d) in the PT's output_port | sender: LP%d, receiver: LP%d, ts: %f\n", msg->type, msg->sender.to_int, msg->receiver.to_int, msg->timestamp);
 
         pt_put_out_msg(msg);
     }
@@ -653,18 +655,21 @@ void hdr_to_msg(msg_hdr_t *hdr, msg_t *msg)
  */
 void dump_msg_content(msg_t *msg)
 {
-	printf("\tsender: %u\n", msg->sender.to_int);
-	printf("\treceiver: %u\n", msg->receiver.to_int); //fixed sender.to_int
+
+    fprintf(stderr,"\tMark: %llu |Sender: LP%d |Receiver: LP%d |TS: %f |Send T.: %f |Type: %d |Kind: %d |Randezvous: %llu \n", msg->mark, msg->sender.to_int,
+           msg->receiver.to_int, msg->timestamp, msg->send_time, msg->type, msg->message_kind, msg->rendezvous_mark);
+/*  printf("\tsender: %u\n", msg->sender.to_int);
+	printf("\treceiver: %u\n", msg->receiver.to_int); //fixed sender.to_int */
 #ifdef HAVE_MPI
 	printf("\tcolour: %d\n", msg->colour);
 #endif
-	printf("\ttype: %d\n", msg->type);
+/*	printf("\ttype: %d\n", msg->type);
 	printf("\tmessage_kind: %d\n", msg->message_kind);
 	printf("\ttimestamp: %f\n", msg->timestamp);
 	printf("\tsend_time: %f\n", msg->send_time);
 	printf("\tmark: %llu\n", msg->mark);
 	printf("\trendezvous_mark: %llu\n", msg->rendezvous_mark);
-	printf("\tsize: %d\n", msg->size);
+	printf("\tsize: %d\n", msg->size);  */
 }
 
 
@@ -728,17 +733,19 @@ unsigned int mark_to_gid(unsigned long long mark)
  */
 void validate_msg(msg_t *msg)
 {
+    check_content(msg,msg->event_content);
+
 	assert(msg->sender.to_int <= n_prc_tot);
 	if(msg->receiver.to_int > n_prc_tot) {
-	    printf("MESSAGE VALIDATION FAILED: message receiver id > n_prc_tot\n");
+	    printf("\t->MESSAGE VALIDATION FAILED<-: message receiver id > n_prc_tot, dest: LP%d\n", msg->receiver.to_int);
         dump_msg_content(msg);
     };
+    assert(msg->receiver.to_int <= n_prc_tot);
 	if(msg->send_time > msg->timestamp) {
-        printf("MESSAGE VALIDATION FAILED: message send_time > timestamp\n");
+        printf("\t->MESSAGE VALIDATION FAILED<-: message send_time > timestamp, dest: LP%d\n", msg->receiver.to_int);
         dump_msg_content(msg);
-        abort();
 	}
-	assert(msg->receiver.to_int <= n_prc_tot);
+	assert(msg->send_time <= msg->timestamp);
 	assert(msg->message_kind == positive || msg->message_kind == negative || msg->message_kind == control);
 	assert(mark_to_gid(msg->mark) <= n_prc_tot);
 	assert(mark_to_gid(msg->rendezvous_mark) <= n_prc_tot);

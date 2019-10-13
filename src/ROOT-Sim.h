@@ -47,7 +47,7 @@
 
 extern __thread unsigned int tid;
 
-#define printf(fmt, ...) printf("(%s) %s:%d: " fmt, (tid == 1 ? "PT" : "CT"), __FILE__, __LINE__, ##__VA_ARGS__)
+#define printf(fmt, ...) printf("(%s) - " fmt, (tid == 1 ? "PT" : "CT"), ##__VA_ARGS__)
 
 #ifdef INIT
 #undef INIT

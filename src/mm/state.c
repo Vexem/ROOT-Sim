@@ -221,7 +221,7 @@ void rollback(struct lp_struct *lp)
 {
 	state_t *state_to_restore, *s;
 	msg_t *last_correct_event;
-	msg_t *last_corr_evt_after_restore;
+	msg_t *last_restored_event;
 	unsigned int reprocessed_events;
 
 	// Sanity check
@@ -257,8 +257,8 @@ void rollback(struct lp_struct *lp)
 	// Restore the simulation state and correct the state base pointer
 	RestoreState(lp, state_to_restore);
 
-    last_corr_evt_after_restore = state_to_restore->last_event;
-	reprocessed_events = silent_execution(lp, last_corr_evt_after_restore, last_correct_event);
+    last_restored_event = state_to_restore->last_event;
+	reprocessed_events = silent_execution(lp, last_restored_event, last_correct_event);
 	statistics_post_data(lp, STAT_SILENT, (double)reprocessed_events);
 
 	// TODO: silent execution resets the LP state to the previous
@@ -266,7 +266,7 @@ void rollback(struct lp_struct *lp)
 	// Control messages must be rolled back as well
 	rollback_control_message(lp, last_correct_event->timestamp);
 
-    printf("Roll'd back LP%d to evt with ts %f (%d events reprocessed)\n",
+    printf("ROLLED BACK LP%d to evt with ts %f (%d events reprocessed)\n",
             lp->gid.to_int, last_correct_event->timestamp, reprocessed_events);
 }
 
