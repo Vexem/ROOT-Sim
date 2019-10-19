@@ -47,7 +47,7 @@
 
 extern __thread unsigned int tid;
 
-#define printf(fmt, ...) printf("(%s) - " fmt, (tid == 1 ? "PT" : "CT"), ##__VA_ARGS__)
+#define debug(fmt, ...) printf("(%s) - " fmt, (tid == 1 ? "PT" : "CT"), ##__VA_ARGS__)
 
 #ifdef INIT
 #undef INIT
@@ -202,7 +202,7 @@ __attribute((weak)) extern struct _abm_settings_t{
 	const bool keep_history;
 } abm_settings;
 
-int			GetNeighbourInfo	(direction_t i, unsigned int *region_id, void **data_p);
+int			    GetNeighbourInfo	(direction_t i, unsigned int *region_id, void **data_p);
 void			TrackNeighbourInfo	(void *neighbour_data);
 
 bool 			IterAgents		(agent_t *agent_p);

@@ -98,7 +98,7 @@ msg_t *advance_to_next_event(struct lp_struct *lp)
     spin_lock(&lp->bound_lock);
 	if (likely(list_next(lp->bound) != NULL)) {
 		lp->bound = list_next(lp->bound);
-		printf("BOUND ADVANCED for LP%d to ts %f\n",lp->gid.to_int,lp->bound->timestamp);
+		debug("BOUND ADVANCED for LP%d to ts %f\n",lp->gid.to_int,lp->bound->timestamp);
 		bound = lp->bound;
 	}
     spin_unlock(&lp->bound_lock);
@@ -145,7 +145,7 @@ void process_bottom_halves(void)
 
 		while ((msg_to_process = get_msg(lp->bottom_halves)) != NULL) {
 			receiver = find_lp_by_gid(msg_to_process->receiver);
-            printf("Message (type: %d, ts: %f, kind: %u) extracted from LP%d's bottom halves\n",
+            debug("Message (type: %d, ts: %f, kind: %u) extracted from LP%d's bottom halves\n",
                    msg_to_process->type, msg_to_process->timestamp, msg_to_process->message_kind,lp->gid.to_int );
 
 			// Sanity check
@@ -198,9 +198,9 @@ void process_bottom_halves(void)
 
                         receiver->state = LP_STATE_ROLLBACK;
 
-                        printf(">>>Setting LP%d to be ROLLED BACK (ANTIMESSAGE - ts: %f <= bound: %f)<<<\n", receiver->gid.to_int,msg_to_process->timestamp,bound_ts1);
-                        printf(">>>LP%d's bound RETURNED BACK to: %f<<<\n",receiver->gid.to_int,receiver->bound->timestamp);
-                        printf(">>>MATCHED MESSAGE-> Mark: %llu |Sen: LP%d |Rec: LP%d |ts: %f |type: %d |kind: %d<<< \n", matched_msg->mark, matched_msg->sender.to_int,
+                        debug(">>>Setting LP%d to be ROLLED BACK (ANTIMESSAGE - ts: %f <= bound: %f)<<<\n", receiver->gid.to_int,msg_to_process->timestamp,bound_ts1);
+                        debug(">>>LP%d's bound RETURNED BACK to: %f<<<\n",receiver->gid.to_int,receiver->bound->timestamp);
+                        debug(">>>MATCHED MESSAGE-> Mark: %llu |Sen: LP%d |Rec: LP%d |ts: %f |type: %d |kind: %d<<< \n", matched_msg->mark, matched_msg->sender.to_int,
                                matched_msg->receiver.to_int, matched_msg->timestamp, matched_msg->type, matched_msg->message_kind);
                         //dump_msg_content(matched_msg);
 
@@ -221,7 +221,7 @@ void process_bottom_halves(void)
                         // Unchain the event from the input queue
                         list_delete_by_content(receiver->queue_in,matched_msg);
                         // Delete the matched message
-                        printf("RELEASING message (LP%d, ts:%f | QUEUES)\n",receiver->gid.to_int,matched_msg->timestamp);
+                        debug("RELEASING message (LP%d, ts:%f | QUEUES)\n",receiver->gid.to_int,matched_msg->timestamp);
                         msg_release(matched_msg);
                         //list_insert_tail(LPS(lid_receiver)->retirement_queue, matched_msg);
 
@@ -252,9 +252,9 @@ void process_bottom_halves(void)
 					}
 
 					receiver->state = LP_STATE_ROLLBACK;
-                    printf(">>>Setting LP%d to be ROLLED BACK (STRAGGLER - ts: %f < bound: %f)<<<\n", receiver->gid.to_int, msg_to_process->timestamp, bound_ts2);
-                    printf(">>>LP%d's bound RETURNED BACK to: %f<<<\n",receiver->gid.to_int,receiver->bound->timestamp);
-                    printf(">>>STRAGGLER MESSAGE-> Mark: %llu |Sen: LP%d |Rec: LP%d |ts: %f |type: %d |kind: %d<<<\n", msg_to_process->mark, msg_to_process->sender.to_int,
+                    debug(">>>Setting LP%d to be ROLLED BACK (STRAGGLER - ts: %f < bound: %f)<<<\n", receiver->gid.to_int, msg_to_process->timestamp, bound_ts2);
+                    debug(">>>LP%d's bound RETURNED BACK to: %f<<<\n",receiver->gid.to_int,receiver->bound->timestamp);
+                    debug(">>>STRAGGLER MESSAGE-> Mark: %llu |Sen: LP%d |Rec: LP%d |ts: %f |type: %d |kind: %d<<<\n", msg_to_process->mark, msg_to_process->sender.to_int,
                            msg_to_process->receiver.to_int, msg_to_process->timestamp, msg_to_process->type, msg_to_process->message_kind);
                     //dump_msg_content(msg_to_process);
 

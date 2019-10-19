@@ -41,7 +41,8 @@ void UncheckedScheduleNewEvent(unsigned int gid_receiver, simtime_t timestamp, u
 // if the model is using a topology this gets called instead of the plain ProcessEvent
 void ProcessEventTopology(void);
 
-void check_content(msg_t *msg, event_content_type *payload);
+void check_content(msg_t *msg, void *payload);
+void print_content(msg_t *msg, void *payload);
 
 // STUFF FOR INTERNAL USE (in between topology sources)
 unsigned 	size_checkpoint_probabilities	(void);

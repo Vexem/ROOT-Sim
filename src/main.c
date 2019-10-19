@@ -344,7 +344,6 @@ int main(int argc, char **argv)
 	if (rootsim_config.serial) {
 		serial_simulation();
 	} else {
-
 		// The number of locally required threads is now set. Detach them and then join the main simulation loop
 		if (!simulation_error()) {
 			if (n_cores > 1) {

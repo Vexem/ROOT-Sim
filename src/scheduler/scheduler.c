@@ -293,6 +293,7 @@ void activate_LP(struct lp_struct *next, msg_t * evt)
 	current = next;
 	current_evt = evt;
 
+
 //      #ifdef HAVE_PREEMPTION
 //      if(!rootsim_config.disable_preemption)
 //              enable_preemption();
@@ -308,7 +309,7 @@ void activate_LP(struct lp_struct *next, msg_t * evt)
 			      next->gid.to_int, next->state);
 	}
 */
-	context_switch(&kernel_context, &next->context);
+    context_switch(&kernel_context, &next->context);
 
     current->last_processed = evt;
 
@@ -347,19 +348,10 @@ bool check_rendevouz_request(struct lp_struct *lp)
 void asym_process_one_event(msg_t *msg) {
     struct lp_struct *LP;
 
-    validate_msg(msg);
-
-
-    if(is_control_msg(msg->type)&& msg->type!=ASYM_ROLLBACK_BUBBLE){
-        printf("\tERROR: Type %d  message shouldn't stay in the lo_prio queue!\n",msg->type);
-        dump_msg_content(msg);
-        abort();
-    }
-
     LP = find_lp_by_gid(msg->receiver);
 
     if(is_control_msg(msg->type)){
-        printf("\tERROR: a lo_prio control msg (type %d) shouldn't be here!\n", msg->type);
+        fprintf(stderr,"\tERROR: lo_prio control msg (type %d) shouldn't be here!\n", msg->type);
         dump_msg_content(msg);
         abort();
     }
@@ -379,7 +371,6 @@ void asym_process_one_event(msg_t *msg) {
     // Send back to the controller the (possibly) generated events
     asym_send_outgoing_msgs(LP);
     LogState(LP);
-
 }
 
 /**
@@ -405,11 +396,18 @@ void asym_process(void){
         do {
             while((lo_prio_msg = pt_get_lo_prio_msg()) == NULL);
 
+            if(is_control_msg(lo_prio_msg->type) && lo_prio_msg->type!=ASYM_ROLLBACK_BUBBLE){
+                fprintf(stderr,"ERROR: Type %d message shouldn't stay in the lo_prio queue!\n",lo_prio_msg->type);
+                dump_msg_content(lo_prio_msg);
+                fflush(stdout);
+                abort();
+            }
+
             if (lo_prio_msg->type == ASYM_ROLLBACK_BUBBLE) {
 
                 // Sanity check
                 if (lo_prio_msg->mark != hi_prio_msg->mark) {
-                    fprintf(stderr,"WARNING: INVERSIONE di priorità delle bubble/notice\n");
+                    fprintf(stderr,"WARNING: bubble/notice priority INVERSION\n");
                     fflush(stdout);
                     abort();
                 }
@@ -624,7 +622,7 @@ void asym_schedule(void) {
             rb_management->mark = mark;
             pt_put_lo_prio_msg(chosen_LP->processing_thread, rb_management);
 
-            printf("NOTICE & BUBBLE Sent to PT%d regarding LP%d with bound %f\n",chosen_LP->processing_thread,chosen_LP->gid.to_int,chosen_LP->bound->timestamp);
+            debug("NOTICE & BUBBLE Sent to PT%d regarding LP%d with bound %f\n",chosen_LP->processing_thread,chosen_LP->gid.to_int,chosen_LP->bound->timestamp);
 
             continue;
         }
@@ -640,7 +638,7 @@ void asym_schedule(void) {
                     break;
                 }
                 list_delete_by_content(chosen_LP->retirement_queue,evt_to_prune);
-                printf("RELEASING message (LP%d, ts:%f | SCHEDULER)\n",chosen_LP->gid.to_int,evt_to_prune->timestamp);
+                debug("RELEASING message (LP%d, ts:%f | SCHEDULER)\n",chosen_LP->gid.to_int,evt_to_prune->timestamp);
                 msg_release(evt_to_prune);
             }
             continue;
@@ -661,9 +659,8 @@ void asym_schedule(void) {
         }
 
         chosen_EVT->unprocessed = true;
-        validate_msg(chosen_EVT);
         pt_put_lo_prio_msg(chosen_LP->processing_thread, chosen_EVT);
-        printf("Message (type %d) sent to PT%d, (sender: LP%d, receiver: LP%d, with ts %f)\n",
+        debug("Message (type %d) sent to PT%d, (sender: LP%d, receiver: LP%d, with ts %f)\n",
                 chosen_EVT->type,chosen_LP->processing_thread , chosen_EVT->sender.to_int, chosen_EVT->receiver.to_int, chosen_EVT->timestamp);
         sent_events++;
         events_to_fill_PT_port[chosen_LP->processing_thread]--;

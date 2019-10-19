@@ -309,15 +309,34 @@ double GetValueTopology(unsigned from, unsigned to) {
 	return ret;
 }
 
-void check_content(msg_t *msg, event_content_type *payload){
-    simtime_t call_term_time = payload->call_term_time;
+void check_content(msg_t *msg, void *payload){
+    event_content_type *eventContentType = (event_content_type*) payload;
+
     if(msg->type == 20 || msg->type == 0 || is_control_msg(msg->type) || msg->message_kind == negative)
         return;
-    else if(call_term_time == 0.000000){
-        fprintf(stderr,"WARNING: LP%d - PAYLOAD WITH CALL TERM TIME = 0.000000\n", msg->receiver.to_int);
+    if(msg->type == 31 && eventContentType->cell != -1){
+        fprintf(stderr,"Type 31 msg integrity compromised (cell =/= -1 and = %d)\n",eventContentType->cell);
+        print_content(msg,eventContentType);
         dump_msg_content(msg);
+        fflush(stdout);
         abort();
     }
+    if(D_EQUAL(eventContentType->call_term_time,0)){
+        fprintf(stderr,"WARNING: LP%d - PAYLOAD WITH CALL TERM TIME = %f\n", msg->receiver.to_int, eventContentType->call_term_time);
+        print_content(msg,eventContentType);
+        dump_msg_content(msg);
+        fflush(stdout);
+        abort();
+    }
+
+    debug("MSG type:%d, passed the control with cell=%d and ctt=%f\n",msg->type,eventContentType->cell,eventContentType->call_term_time);
+
+}
+
+void print_content(msg_t *msg,void *payload){
+    event_content_type *eventContentType = (event_content_type*) payload;
+    debug("MSG_type:%d, ts:%f ||| PAYLOAD: cell: %d |from: %u |sent at: %f |channel: %d |call t.t.: %f\n",msg->type,msg->timestamp, eventContentType->cell, eventContentType->from,
+          eventContentType->sent_at, eventContentType->channel, eventContentType->call_term_time);
 }
 
 void ProcessEventTopology(void){
@@ -339,7 +358,6 @@ void ProcessEventTopology(void){
 			break;
 		default:
 			switch_to_application_mode();
-            validate_msg(current_evt);
             current->ProcessEvent(current->gid.to_int,
                                   current_evt->timestamp,
                                   current_evt->type,
