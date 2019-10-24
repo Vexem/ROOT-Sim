@@ -91,18 +91,16 @@ void ProcessEvent(unsigned int curr_lp, simtime_t event_ts, int event_type, even
 	(void)size;
 
 	unsigned int w;
-    printf("MODEL: LP%d executing event (type %d) with ts %f and ...\n", curr_lp, event_type, event_ts);
-    printf("    ...WITH CONTENT - cell: %d |from: %u |sent at: %f |channel: %d |call t.t.: %f\n", event_content->cell, event_content->from,
-           event_content->sent_at, event_content->channel, event_content->call_term_time);
-
-   /* if(event_type == HANDOFF_LEAVE || event_type == HANDOFF_RECV) {
+/*
+    if(event_type == HANDOFF_LEAVE || event_type == HANDOFF_RECV) {
         if(event_content->call_term_time == 000000) {
             fprintf(stderr,"MODEL: LP%d, executing event (type: %d) with ts %f, ->WARNING: CALL TERM TIME = %f<-\n", curr_lp, event_type, event_ts, event_content->call_term_time);
             print_cnt(event_content);
             abort();
         }
-    }*/
-	event_content_type new_event_content;
+    }
+*/
+    event_content_type new_event_content;
 
 	new_event_content.cell = -1;
 	new_event_content.channel = -1;
@@ -113,6 +111,10 @@ void ProcessEvent(unsigned int curr_lp, simtime_t event_ts, int event_type, even
 
 	lp_state_type *state;
 	state = (lp_state_type*)ptr;
+
+    printf("MODEL: LP%u executing event (type %d) with ts %f and ...\n", curr_lp, event_type, event_ts);
+    printf("    ...WITH CONTENT - cell: %d |from: %u |sent at: %f |channel: %d |call t.t.: %f\n", event_content->cell, event_content->from,
+           event_content->sent_at, event_content->channel, event_content->call_term_time);
 
 	if(state != NULL) {
 		state->lvt = event_ts;

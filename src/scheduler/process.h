@@ -187,7 +187,7 @@ extern __thread struct lp_struct **asym_lps_mask;
  *  this happens in the scheduling function, when the bound is advanced to the next event to
  *  be processed, just before its actual execution.
  */
-#define lvt(lp) (lp->bound != NULL ? lp->bound->timestamp : 0.0)
+//#define lvt(lp) (lp->bound != NULL ? lp->bound->timestamp : 0.0)
 
 // TODO: see issue #121 to see how to make this ugly hack disappear
 extern __thread unsigned int __lp_counter;

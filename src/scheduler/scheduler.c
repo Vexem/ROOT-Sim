@@ -87,7 +87,7 @@ __thread msg_t *current_evt;
 
 // Timer per thread used to gather statistics on execution time for
 // controllers and processers in asymmetric executions
-static __thread timer timer_local_thread;
+//static __thread timer timer_local_thread;
 
 // Pointer to an array of longs which are used as an accumulator of time
 // spent idle in asym_schedule or asym_process
@@ -367,7 +367,13 @@ void asym_process_one_event(msg_t *msg) {
     activate_LP(LP, msg);
     spin_unlock(&LP->bound_lock);
     msg->unprocessed = false;
-
+/*
+    if(msg->timestamp > LP->bound->timestamp) {
+        debug("Processing an event (%f) after bound (%f) at LP%d\n", msg->timestamp, LP->bound->timestamp, LP->gid.to_int);
+        fflush(stdout);
+        abort();
+    }
+*/
     // Send back to the controller the (possibly) generated events
     asym_send_outgoing_msgs(LP);
     LogState(LP);
@@ -387,14 +393,22 @@ void asym_process(void){
     //struct lp_struct *LP;
     //bool updated;
 
-    update_hi_prio_list();
+    //update_hi_prio_list();
 
-    hi_prio_msg = list_head(hi_prio_list);
+    //hi_prio_msg = list_head(hi_prio_list);
+    hi_prio_msg = pt_get_hi_prio_msg();
 
     if(hi_prio_msg != NULL) {
 
+        debug("Extracted event from hi prio for LP%d:\n", hi_prio_msg->receiver.to_int);
+
         do {
-            while((lo_prio_msg = pt_get_lo_prio_msg()) == NULL);
+            while((lo_prio_msg = pt_get_lo_prio_msg()) == NULL) {
+                debug("Looping...\n");
+            }
+
+            debug("Extracted event from lo prio q for LP%d:\n", lo_prio_msg->receiver.to_int);
+            dump_msg_content(lo_prio_msg);
 
             if(is_control_msg(lo_prio_msg->type) && lo_prio_msg->type!=ASYM_ROLLBACK_BUBBLE){
                 fprintf(stderr,"ERROR: Type %d message shouldn't stay in the lo_prio queue!\n",lo_prio_msg->type);
@@ -405,6 +419,8 @@ void asym_process(void){
 
             if (lo_prio_msg->type == ASYM_ROLLBACK_BUBBLE) {
 
+                debug("Extracted a BUBBLE\n");
+
                 // Sanity check
                 if (lo_prio_msg->mark != hi_prio_msg->mark) {
                     fprintf(stderr,"WARNING: bubble/notice priority INVERSION\n");
@@ -414,12 +430,14 @@ void asym_process(void){
 
                 pack_msg(&rb_ack, lo_prio_msg->receiver, lo_prio_msg->receiver, ASYM_ROLLBACK_ACK, lo_prio_msg->timestamp, lo_prio_msg->timestamp, 0, NULL);
                 rb_ack->message_kind = control;
+
+                debug("Sending back a ROLLBACK ACK\n");
                 pt_put_out_msg(rb_ack);
-                list_pop(hi_prio_list);
+                //list_pop(hi_prio_list);
                 return;
             }
 
-            if(lo_prio_msg->timestamp < hi_prio_msg->timestamp) {
+            if(lo_prio_msg->receiver.to_int != hi_prio_msg->receiver.to_int || lo_prio_msg->timestamp < hi_prio_msg->timestamp) {
                 asym_process_one_event(lo_prio_msg);
                 continue;
             }
@@ -430,7 +448,7 @@ void asym_process(void){
     lo_prio_msg = pt_get_lo_prio_msg();
 
 
-    if(lo_prio_msg == NULL)
+    if(lo_prio_msg == NULL || find_lp_by_gid(lo_prio_msg->receiver)->bound->timestamp < lo_prio_msg->timestamp)
          return;
 
     asym_process_one_event(lo_prio_msg);
@@ -607,8 +625,8 @@ void asym_schedule(void) {
 
         if(chosen_LP->state == LP_STATE_ROLLBACK) { // = LP received an out-of-order msg and needs a rollback
 
-            pack_msg(&rb_management, chosen_LP->gid, chosen_LP->gid, ASYM_ROLLBACK_NOTICE, lvt(chosen_LP),
-                    lvt(chosen_LP), sizeof(char), &first_encountered);// Send rollback notice in the high priority port
+            pack_msg(&rb_management, chosen_LP->gid, chosen_LP->gid, ASYM_ROLLBACK_NOTICE, chosen_LP->bound->timestamp,
+                     chosen_LP->bound->timestamp, sizeof(char), &first_encountered);// Send rollback notice in the high priority port
             mark = generate_mark(chosen_LP);
             rb_management->message_kind = control;
             rb_management->mark = mark;
@@ -616,8 +634,8 @@ void asym_schedule(void) {
 
             chosen_LP->state = LP_STATE_WAIT_FOR_ROLLBACK_ACK;  //BLOCKED STATE
 
-            pack_msg(&rb_management, chosen_LP->gid, chosen_LP->gid, ASYM_ROLLBACK_BUBBLE, lvt(chosen_LP),
-                    lvt(chosen_LP),0, NULL);
+            pack_msg(&rb_management, chosen_LP->gid, chosen_LP->gid, ASYM_ROLLBACK_BUBBLE, chosen_LP->bound->timestamp,
+                     chosen_LP->bound->timestamp,0, NULL);
             rb_management->message_kind = control;
             rb_management->mark = mark;
             pt_put_lo_prio_msg(chosen_LP->processing_thread, rb_management);

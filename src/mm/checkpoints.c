@@ -99,7 +99,7 @@ void *log_full(struct lp_struct *lp)
 	// Copy malloc_state in the ckpt
 	memcpy(ptr, lp->mm->m_state, sizeof(malloc_state));
 	ptr = (void *)((char *)ptr + sizeof(malloc_state));
-	((malloc_state *) ckpt)->timestamp = lvt(lp);
+	((malloc_state *) ckpt)->timestamp = lp->last_processed->timestamp;
 
 	for (i = 0; i < lp->mm->m_state->num_areas; i++) {
 

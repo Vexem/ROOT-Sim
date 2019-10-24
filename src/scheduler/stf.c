@@ -65,7 +65,7 @@ struct lp_struct *smallest_timestamp_first(void)
 		// If the LP is in READY_FOR_SYNCH it has to handle the same ECS message
 		if (lp->state == LP_STATE_READY_FOR_SYNCH) {
 			// The LP handles the suspended event as the next event
-			evt_time = lvt(lp);
+			evt_time = lp->last_processed->timestamp;
 		} else {
 			// Compute the next event's timestamp.
 			evt_time = next_event_timestamp(lp);
@@ -91,7 +91,7 @@ struct lp_struct *smallest_timestamp_first(void)
 *
 * @author Stefano Conoci
 * @author Alessandro Pellegrini */
-
+/*
 struct lp_struct *asym_smallest_timestamp_first(void)
 {
     struct lp_struct *next_lp = NULL;
@@ -119,3 +119,4 @@ struct lp_struct *asym_smallest_timestamp_first(void)
     }
     return next_lp;
 }
+ */

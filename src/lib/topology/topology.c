@@ -10,6 +10,7 @@
 
 #include <math.h>
 
+#include <arch/thread.h>
 #include <scheduler/scheduler.h>
 #include <lib/jsmn_helper.h>
 #include <lib/numerical.h>
@@ -51,13 +52,13 @@ void UncheckedScheduleNewEvent(unsigned int gid_receiver, simtime_t timestamp, u
 	}
 
 	// Check if the associated timestamp is negative
-	if(timestamp < lvt(current)) {
-		rootsim_error(true, "LP %u is trying to generate an event (type %d) to %u in the past! (Current LVT = %f, generated event's timestamp = %f) Aborting...\n", current, event_type, receiver.to_int, lvt(current), timestamp);
+	if(timestamp < current_evt->timestamp) {
+		rootsim_error(true, "LP %u is trying to generate an event (type %d) to %u in the past! (Current LVT = %f, generated event's timestamp = %f) Aborting...\n", current, event_type, receiver.to_int, current_evt->timestamp, timestamp);
 	}
 #endif
 
 	// Copy all the information into the event structure
-	pack_msg(&event, current->gid, receiver, event_type, timestamp, lvt(current), event_size, event_content);
+	pack_msg(&event, current->gid, receiver, event_type, timestamp, current_evt->timestamp, event_size, event_content);
 	event->mark = generate_mark(current);
 
 	insert_outgoing_msg(event);

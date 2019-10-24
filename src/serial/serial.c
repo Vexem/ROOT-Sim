@@ -60,9 +60,9 @@ void SerialScheduleNewEvent(unsigned int rcv, simtime_t stamp,
 	msg_t *event;
 
 	// Sanity checks
-	if (unlikely(stamp < lvt(current))) {
+	if (unlikely(stamp < current->bound->timestamp)) {
 		rootsim_error(true, "LP %d is trying to send events in the past. Current time: %f, scheduled time: %f\n",
-			      current->gid.to_int, lvt(current), stamp);
+			      current->gid.to_int, current->bound->timestamp, stamp);
 	}
 	// Populate the message data structure
 	set_gid(receiver, rcv);
@@ -72,7 +72,7 @@ void SerialScheduleNewEvent(unsigned int rcv, simtime_t stamp,
 	event->sender = current->gid;
 	event->receiver = receiver;
 	event->timestamp = stamp;
-	event->send_time = lvt(current);
+	event->send_time = current->bound->timestamp;
 	event->type = event_type;
 	event->size = event_size;
 	memcpy(event->event_content, event_content, event_size);
@@ -215,8 +215,8 @@ void serial_simulation(void)
 		// Print the time advancement periodically
 		if (timer_value_milli(serial_gvt_timer) > (int)rootsim_config.gvt_time_period) {
 			timer_restart(serial_gvt_timer);
-			printf("TIME BARRIER: %f\n", lvt(current));
-			statistics_on_gvt_serial(lvt(current));
+			printf("TIME BARRIER: %f\n", current->bound->timestamp);
+			statistics_on_gvt_serial(current->bound->timestamp);
 		}
 
 		current = NULL;

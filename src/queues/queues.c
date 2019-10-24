@@ -186,7 +186,7 @@ void process_bottom_halves(void)
 				}
 
 				// If the matched message is in the past, we have to rollback
-                    double bound_ts1 = lvt(receiver);
+                    double bound_ts1 = receiver->bound->timestamp;
 
                     if (matched_msg->timestamp <= bound_ts1) {
 
@@ -242,7 +242,7 @@ void process_bottom_halves(void)
 				// Here we check for a strictly minor timestamp since
 				// the queue is FIFO for same-timestamp events. Therefore,
 				// A contemporaneous event does not cause a causal violation.
-				double bound_ts2 = lvt(receiver);
+				double bound_ts2 = receiver->bound->timestamp;
 				if (msg_to_process->timestamp < bound_ts2) {
 
 					receiver->bound = list_prev(msg_to_process);

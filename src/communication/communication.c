@@ -32,6 +32,7 @@
 #include <stdlib.h>
 #include <float.h>
 
+#include <arch/thread.h>
 #include <core/init.h>
 #include <core/core.h>
 #include <gvt/gvt.h>
@@ -285,11 +286,11 @@ void ParallelScheduleNewEvent(unsigned int gid_receiver, simtime_t timestamp, un
 		rootsim_error(false, "Warning: the destination LP %u is out of range. The event has been ignored\n", gid_receiver);
 		goto out;
 	}
-	// Check if the associated timestamp is negative.In asymmetric computation, anyhow, this sanity check doesn't hold.
-	if (unlikely(rootsim_config.num_controllers == 0 && timestamp < lvt(current))) {
+	// Check if the associated timestamp is negative. In asymmetric computation, anyhow, this sanity check doesn't hold.
+	if (unlikely(rootsim_config.num_controllers == 0 && timestamp < current_evt->timestamp)) {
 		rootsim_error(true, "LP %u is trying to generate an event (type %d) to %u in the past! (Current LVT = %f, generated event's timestamp = %f) Aborting...\n",
 			      current->gid, event_type, gid_receiver,
-			      lvt(current), timestamp);
+                      current_evt->timestamp, timestamp);
 	}
 	// Check if the event type is mapped to an internal control message
 	if (unlikely(event_type >= RESERVED_MSG_CODE)) {
@@ -528,6 +529,9 @@ void pack_msg(msg_t **msg, GID_t sender, GID_t receiver, int type, simtime_t tim
 	// Check if we can rely on a slab to initialize the message
 	if (likely(sizeof(msg_t) + size <= SLAB_MSG_SIZE)) {
 		*msg = get_msg_from_slab(which_slab_to_use(sender, receiver));
+#ifndef NDEBUG
+		bzero(*msg, sizeof(msg_t) + size);
+#endif
 	} else {
 		*msg = rsalloc(sizeof(msg_t) + size);
 		bzero(*msg, sizeof(msg_t) + size);

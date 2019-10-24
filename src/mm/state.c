@@ -35,6 +35,7 @@
 #include <math.h>
 #include <string.h>
 
+#include <arch/thread.h>
 #include <core/core.h>
 #include <core/init.h>
 #include <core/timer.h>
@@ -97,7 +98,7 @@ bool LogState(struct lp_struct *lp)
 		new_state = rsalloc(sizeof(*new_state));
 
 		// Associate the checkpoint with current LVT and last-executed event
-		new_state->lvt = lvt(lp);
+		new_state->lvt = lp->last_processed->timestamp;
 		new_state->last_event = lp->bound;
 
 		// Log simulation model buffers

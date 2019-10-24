@@ -320,7 +320,7 @@ void *do_malloc(struct lp_struct *lp, size_t size)
 	}
 
 	m_area->state_changed = 1;
-	m_area->last_access = lvt(current);
+	m_area->last_access = current_evt->timestamp;
 
 	if (!CHECK_LOG_MODE_BIT(m_area)) {
 		if ((double)m_area->alloc_chunks / (double)m_area->num_chunks > MAX_LOG_THRESHOLD) {
@@ -418,7 +418,7 @@ void do_free(struct lp_struct *lp, void *ptr)
 
 	m_area->state_changed = 1;
 
-	m_area->last_access = lvt(current);
+	m_area->last_access = current_evt->timestamp;
 
 	if (CHECK_LOG_MODE_BIT(m_area)) {
 		if ((double)m_area->alloc_chunks / (double)m_area->num_chunks < MIN_LOG_THRESHOLD) {

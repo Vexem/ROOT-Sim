@@ -45,10 +45,15 @@
 #include <limits.h>
 #include <argp.h>
 
-extern __thread unsigned int tid;
+//extern __thread unsigned int tid;
 
-#define debug(fmt, ...) printf("(%s) - " fmt, (tid == 1 ? "PT" : "CT"), ##__VA_ARGS__)
-
+/*
+#define debug(fmt, ...) do { \
+        printf("(%s) %s:%d: " fmt, (tid == 1 ? "PT" : "CT"), __FILE__, __LINE__, ##__VA_ARGS__);\
+        fflush(stdout);\
+    } while(0)
+*/
+#define debug(...) {}
 #ifdef INIT
 #undef INIT
 #endif
