@@ -45,6 +45,11 @@ const struct argp_option model_options[] = {
 		} \
 	break
 
+#define debug(fmt, ...) do { \
+        printf("(MODEL) -> " fmt, ##__VA_ARGS__);\
+        fflush(stdout);\
+    } while(0)
+
 static error_t model_parse (int key, char *arg, struct argp_state *state) {
 	(void)state;
 	
@@ -83,8 +88,8 @@ struct argp model_argp = {model_options, model_parse, NULL, NULL, NULL, NULL, NU
 struct _topology_settings_t topology_settings = {.default_geometry = TOPOLOGY_HEXAGON};
 
 void print_cnt(event_content_type *payload){
-    printf("MODEL EVENT CONTENT - cell: %d |from: %u |sent at: %f |channel: %d |call t.t.: %f\n", payload->cell, payload->from,
-            payload->sent_at, payload->channel, payload->call_term_time);
+    //printf("MODEL EVENT CONTENT - cell: %d |from: %u |sent at: %f |channel: %d |call t.t.: %f\n", payload->cell, payload->from,
+     //       payload->sent_at, payload->channel, payload->call_term_time);
 }
 
 void ProcessEvent(unsigned int curr_lp, simtime_t event_ts, int event_type, event_content_type *event_content, unsigned int size, void *ptr) {
@@ -94,7 +99,7 @@ void ProcessEvent(unsigned int curr_lp, simtime_t event_ts, int event_type, even
 /*
     if(event_type == HANDOFF_LEAVE || event_type == HANDOFF_RECV) {
         if(event_content->call_term_time == 000000) {
-            fprintf(stderr,"MODEL: LP%d, executing event (type: %d) with ts %f, ->WARNING: CALL TERM TIME = %f<-\n", curr_lp, event_type, event_ts, event_content->call_term_time);
+            fprintf(stderr,"MODEL: LP%d, executing event (type %d) with ts %f, ->WARNING: CALL TERM TIME = %f<-\n", curr_lp, event_type, event_ts, event_content->call_term_time);
             print_cnt(event_content);
             abort();
         }
@@ -112,9 +117,9 @@ void ProcessEvent(unsigned int curr_lp, simtime_t event_ts, int event_type, even
 	lp_state_type *state;
 	state = (lp_state_type*)ptr;
 
-    printf("MODEL: LP%u executing event (type %d) with ts %f and ...\n", curr_lp, event_type, event_ts);
-    printf("    ...WITH CONTENT - cell: %d |from: %u |sent at: %f |channel: %d |call t.t.: %f\n", event_content->cell, event_content->from,
-           event_content->sent_at, event_content->channel, event_content->call_term_time);
+    debug("Message (type %d) EXECUTED by LP%u with ts %f \n", event_type, curr_lp, event_ts);
+    //printf("    ...WITH CONTENT - cell: %d |from: %u |sent at: %f |channel: %d |call t.t.: %f\n", event_content->cell, event_content->from,
+    //      event_content->sent_at, event_content->channel, event_content->call_term_time);
 
 	if(state != NULL) {
 		state->lvt = event_ts;
@@ -146,8 +151,8 @@ void ProcessEvent(unsigned int curr_lp, simtime_t event_ts, int event_type, even
 
 			// Start the simulation
 			timestamp = (simtime_t) (20 * Random());
-            printf("MODEL CASE <%d - INIT>: FIRST START CALL event (receiver: LP%d, type: %d, ts: %f) \n",
-                   event_type, curr_lp, START_CALL, timestamp);
+            // printf("MODEL CASE <%d - INIT>: FIRST START CALL event (receiver: LP%u, type: %d, ts: %f) \n",
+            //        event_type, curr_lp, START_CALL, timestamp);
 			ScheduleNewEvent(curr_lp, timestamp, START_CALL, NULL, 0);
 
 			// If needed, start the first fading recheck
@@ -207,16 +212,14 @@ void ProcessEvent(unsigned int curr_lp, simtime_t event_ts, int event_type, even
 
 				}
 
-				if(new_event_content.call_term_time < handoff_time) {
-                    printf("MODEL CASE <%d - START_CALL>: new END_CALL event scheduled (receiver: LP%d, type: %d, ts: %f, ctt: %f) \n",
-                           event_type, curr_lp, END_CALL, new_event_content.call_term_time, new_event_content.call_term_time);
-                    print_cnt(&new_event_content);
+				if(1||new_event_content.call_term_time < handoff_time) {
+                    debug("Message <type %d - START_CALL> scheduled new END_CALL message (receiver: LP%u, type: %d, ts: %f, ctt: %f) \n",
+                            event_type, curr_lp, END_CALL, new_event_content.call_term_time, new_event_content.call_term_time);
 					ScheduleNewEvent(curr_lp, new_event_content.call_term_time, END_CALL, &new_event_content, sizeof(new_event_content));
 				} else {
 					new_event_content.cell = FindReceiver();
-                    printf("MODEL CASE <%d - START_CALL>: new HANDOFF_LEAVE event scheduled (receiver: LP%d, type: %d, ts: %f, ctt: %f) \n",
-                           event_type, curr_lp, HANDOFF_LEAVE, handoff_time, new_event_content.call_term_time);
-                    print_cnt(&new_event_content);
+                    debug("Message <type %d - START_CALL> scheduled new HANDOFF_LEAVE message (receiver: LP%u, type: %d, ts: %f, ctt: %f) \n",
+                                     event_type, curr_lp, HANDOFF_LEAVE, handoff_time, new_event_content.call_term_time);
 					ScheduleNewEvent(curr_lp, handoff_time, HANDOFF_LEAVE, &new_event_content, sizeof(new_event_content));
 				}
 			}
@@ -240,8 +243,8 @@ void ProcessEvent(unsigned int curr_lp, simtime_t event_ts, int event_type, even
 					timestamp= event_ts + (simtime_t) (5 * Random());
 
 			}
-            printf("MODEL CASE <%d - START_CALL>: new START_CALL event scheduled (receiver: LP%d, type: %d, ts: %f) \n",
-                   event_type, curr_lp, START_CALL, timestamp);
+            //printf("MODEL CASE <%d - START_CALL>: new START_CALL event scheduled (receiver: LP%u, type: %d, ts: %f) \n",
+            //        event_type, curr_lp, START_CALL, timestamp);
 			ScheduleNewEvent(curr_lp, timestamp, START_CALL, NULL, 0);
 
 			break;
@@ -263,9 +266,8 @@ void ProcessEvent(unsigned int curr_lp, simtime_t event_ts, int event_type, even
 			new_event_content.call_term_time =  event_content->call_term_time;
 			new_event_content.from = curr_lp;
 			new_event_content.dummy = &(state->dummy);
-            printf("MODEL CASE <%d - HANDOFF_LEAVE>: new HANDOFF_RECV event scheduled (receiver: LP%d, type: %d, ts: %f, ctt: %f) \n",
+            debug("Message <type %d - HANDOFF_LEAVE> scheduled new HANDOFF_RECV message (receiver: LP%u, type: %d, ts: %f, ctt: %f) \n",
                    event_type, event_content->cell, HANDOFF_RECV, event_ts, new_event_content.call_term_time);
-            print_cnt(&new_event_content);
 			ScheduleNewEvent(event_content->cell, event_ts, HANDOFF_RECV, &new_event_content, sizeof(new_event_content));
 			break;
 
@@ -302,15 +304,13 @@ void ProcessEvent(unsigned int curr_lp, simtime_t event_ts, int event_type, even
 				}
 
 				if(new_event_content.call_term_time < handoff_time ) {
-                    printf("MODEL CASE <%d - HANDOFF_RECV>: new END_CALL event scheduled (receiver: LP%d, type: %d, ts: %f, ctt: %f) \n",
-                           event_type, curr_lp, END_CALL, new_event_content.call_term_time, new_event_content.call_term_time);
-                    print_cnt(&new_event_content);
+                    debug("Message <type %d - HANDOFF_RECV> scheduled new END_CALL message (receiver: LP%u, type: %d, ts: %f, ctt: %f) \n",
+                                event_type, curr_lp, END_CALL, new_event_content.call_term_time, new_event_content.call_term_time);
 					ScheduleNewEvent(curr_lp, new_event_content.call_term_time, END_CALL, &new_event_content, sizeof(new_event_content));
 				} else {
 					new_event_content.cell = FindReceiver();
-                    printf("MODEL CASE <%d - HANDOFF_RECV>: new HANDOFF_LEAVE event scheduled (receiver: LP%d, type: %d, ts: %f, ctt: %f) \n",
-                           event_type, curr_lp, HANDOFF_LEAVE, handoff_time, new_event_content.call_term_time);
-                    print_cnt(&new_event_content);
+                    debug("Message <type %d - HANDOFF_RECV> scheduled new HANDOFF_LEAVE message (receiver: LP%u, type: %d, ts: %f, ctt: %f) \n",
+                               event_type, curr_lp, HANDOFF_LEAVE, handoff_time, new_event_content.call_term_time);
 					ScheduleNewEvent(curr_lp, handoff_time, HANDOFF_LEAVE, &new_event_content, sizeof(new_event_content));
 				}
 			}
@@ -331,15 +331,15 @@ void ProcessEvent(unsigned int curr_lp, simtime_t event_ts, int event_type, even
 			fading_recheck(state);
 
 			timestamp = event_ts + (simtime_t) (FADING_RECHECK_FREQUENCY );
-            printf("MODEL CASE <%d - FADING_RECHECK>: new FADING_RECHECK event scheduled (receiver: LP%d, type: %d, ts: %f, ctt: %f) \n",
-                   event_type, curr_lp, FADING_RECHECK, timestamp, new_event_content.call_term_time);
+            debug("Message <type %d - FADING_RECHECK> scheduled new FADING_RECHECK message (receiver: LP%u, type: %d, ts: %f, ctt: %f) \n",
+                    event_type, curr_lp, FADING_RECHECK, timestamp, new_event_content.call_term_time);
 			ScheduleNewEvent(curr_lp, timestamp, FADING_RECHECK, NULL, 0);
 
 			break;
 
 
 		default:
-			fprintf(stdout, "PCS: Unknown event type! (curr_lp = %d - event type = %d)\n", curr_lp, event_type);
+            fprintf(stdout, "\tPCS: Unknown event type! (curr_lp = %u - event type = %d)\n", curr_lp, event_type);
 			abort();
 
 	}

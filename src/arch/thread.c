@@ -276,7 +276,7 @@ void threads_init(void) {
         // Initialize the pointer of possible PTs for this thread
         Threads[i]->num_PTs = 0;
         //if(n_cores - rootsim_config.num_controllers > 0) {          //SEMPRE SODDISFATTA, VEDI RIGA 237
-        if(i < rootsim_config.num_controllers) {          //SEMPRE SODDISFATTA, VEDI RIGA 237
+        if(i < rootsim_config.num_controllers) {
             Threads[i]->PTs = rsalloc(sizeof(Thread_State *) * (n_cores - rootsim_config.num_controllers));
             memset(Threads[i]->PTs, 0, sizeof(Thread_State *) * (n_cores - rootsim_config.num_controllers));
         } else {

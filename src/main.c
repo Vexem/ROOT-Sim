@@ -122,7 +122,7 @@ static void *main_simulation_loop(void *arg)
 		case THREAD_PROCESSING:
 			goto processing;
 		default:
-			fprintf(stderr, "%s:%d: Error: unknown incarnation for thread %d\n", __FILE__, __LINE__, tid);
+			fprintf(stderr, "\n%s:%d: Error: unknown incarnation for thread %d\n", __FILE__, __LINE__, tid);
 			abort();
 	}
 

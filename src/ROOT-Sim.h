@@ -47,13 +47,14 @@
 
 //extern __thread unsigned int tid;
 
-/*
+#define __FILENAME__ (strrchr(__FILE__, '/') ? strrchr(__FILE__, '/') + 1 : __FILE__)
+
 #define debug(fmt, ...) do { \
-        printf("(%s) %s:%d: " fmt, (tid == 1 ? "PT" : "CT"), __FILE__, __LINE__, ##__VA_ARGS__);\
+        printf("(%s) %s:%d -> " fmt, (tid == 1 ? "PT" : "CT"), __FILENAME__, __LINE__, ##__VA_ARGS__);\
         fflush(stdout);\
     } while(0)
-*/
-#define debug(...) {}
+
+//#define debug(...) {}
 #ifdef INIT
 #undef INIT
 #endif
