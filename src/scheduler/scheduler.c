@@ -163,7 +163,7 @@ void LP_main_loop(void *args)
 
 #ifdef EXTRA_CHECKS
 		if (current->bound->size > 0) {
-			hash1 = XXH64(current_evt->event_content, current_evt->size, current->gid);
+			hash1 = XXH64(current_evt->event_content, current_evt->size, current->gid.to_int);
 		}
 #endif
 
@@ -190,13 +190,12 @@ void LP_main_loop(void *args)
 #ifdef EXTRA_CHECKS
 		if (current->bound->size > 0) {
 			hash2 =
-			    XXH64(current_evt->event_content, current_evt->size,
-				  current->gid);
+			    XXH64(current_evt->event_content, current_evt->size, current->gid.to_int);
 		}
 
 		if (hash1 != hash2) {
 			rootsim_error(true,
-				      "Error, LP %d has modified the payload of event %d during its processing. Aborting...\n",
+				      "Error, LP %src/scheduler/.deps/scheduler.Tpod has modified the payload of event %d during its processing. Aborting...\n",
 				      current->gid, current->bound->type);
 		}
 #endif
@@ -386,7 +385,7 @@ void asym_process_one_event(msg_t *msg) {
 * threads for later execution. Rollbacks are executed by the controller, and
 * are triggered here in a lazy fashion.
 */
-void asym_process(void){
+void asym_process(void) {
 
     msg_t *lo_prio_msg;
     msg_t *hi_prio_msg;
@@ -399,16 +398,14 @@ void asym_process(void){
     //hi_prio_msg = list_head(hi_prio_list);
 
 
-    while((hi_prio_msg = pt_get_hi_prio_msg())!= NULL) {
+    while((hi_prio_msg = pt_get_hi_prio_msg()) !=  NULL) {
 
             debug("Message (type %d) EXTRACTED from HI_PRIO_QUEUE | sender: LP%u |receiver: LP%u |ts: %f |Send T.: %f \n",
                   hi_prio_msg->type, hi_prio_msg->sender.to_int, hi_prio_msg->receiver.to_int, hi_prio_msg->timestamp,
                   hi_prio_msg->send_time);
 
             do {
-                while ((lo_prio_msg = pt_get_lo_prio_msg()) == NULL) {
-                    debug("Looping...\n");
-                }
+                while ((lo_prio_msg = pt_get_lo_prio_msg()) == NULL);
 
                 debug("Message (type %d) EXTRACTED from LO_PRIO_QUEUE | sender: LP%u |receiver: LP%u |ts: %f |Send T.: %f \n",
                       lo_prio_msg->type, lo_prio_msg->sender.to_int, lo_prio_msg->receiver.to_int,
@@ -439,6 +436,7 @@ void asym_process(void){
                     pack_msg(&rb_ack, lo_prio_msg->receiver, lo_prio_msg->receiver, ASYM_ROLLBACK_ACK,
                              lo_prio_msg->timestamp, lo_prio_msg->timestamp, 0, NULL);
                     rb_ack->message_kind = control;
+                    rb_ack->mark = hi_prio_msg->mark;
 
                     debug("Message ROLLBACK ACK SENT -> LP%u, ts %f\n", lo_prio_msg->receiver.to_int,
                           lo_prio_msg->timestamp);
@@ -635,10 +633,11 @@ void asym_schedule(void) {
         if(chosen_LP->state == LP_STATE_ROLLBACK) { // = LP received an out-of-order msg and needs a rollback
 
             pack_msg(&rb_management, chosen_LP->gid, chosen_LP->gid, ASYM_ROLLBACK_NOTICE, chosen_LP->bound->timestamp,
-                     chosen_LP->bound->timestamp, sizeof(char), &first_encountered);// Send rollback notice in the high priority port
+                     chosen_LP->bound->timestamp, 0, NULL);// Send rollback notice in the high priority port
             mark = generate_mark(chosen_LP);
             rb_management->message_kind = control;
             rb_management->mark = mark;
+            chosen_LP->rollback_mark = mark;
             pt_put_hi_prio_msg(chosen_LP->processing_thread, rb_management);
 
             chosen_LP->state = LP_STATE_WAIT_FOR_ROLLBACK_ACK;  //BLOCKED STATE
@@ -656,7 +655,7 @@ void asym_schedule(void) {
         }
 
         if(chosen_LP->state == LP_STATE_ROLLBACK_ALLOWED) { // = extracted ASYM_ROLLBACK_ACK from PT output queue for chosen_LP
-            chosen_LP->state = LP_STATE_ROLLBACK;
+           // chosen_LP->state = LP_STATE_ROLLBACK;
             rollback(chosen_LP);
             chosen_LP->state = LP_STATE_READY;
 
@@ -665,12 +664,12 @@ void asym_schedule(void) {
                 if(evt_to_prune == NULL){
                     break;
                 }
-                else if (evt_to_prune->unprocessed==false) {  //TO BE VERIFIED
+               // else if (evt_to_prune->unprocessed==false) {  //TO BE VERIFIED
                     list_delete_by_content(chosen_LP->retirement_queue, evt_to_prune);
                     debug("Message (type %d) RELEASED (LP%u, ts:%f | SCHEDULER)\n", evt_to_prune->type,
                           chosen_LP->gid.to_int, evt_to_prune->timestamp);
                     msg_release(evt_to_prune);
-                }
+                //}
             }
             continue;
         }

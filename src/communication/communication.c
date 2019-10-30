@@ -136,6 +136,11 @@ void msg_hdr_release(msg_hdr_t *msg)
 	struct lp_struct *lp;
 
 	lp = find_lp_by_gid(msg->sender);
+
+#ifndef NDEBUG
+	bzero(msg, sizeof(msg_hdr_t));
+#endif
+
 	slab_free(lp->mm->slab, msg);
 }
 
@@ -229,12 +234,18 @@ void msg_release(msg_t *msg)
 {
 	struct lp_struct *lp;
 
-	if (likely(sizeof(msg_t) + msg->size <= SLAB_MSG_SIZE)) {
+/*	if (likely(sizeof(msg_t) + msg->size <= SLAB_MSG_SIZE)) {
 		lp = which_slab_to_use(msg->sender, msg->receiver);
+#ifndef NDEBUG
+        bzero(msg, sizeof(msg_t) + msg->size);
+#endif
 		slab_free(lp->mm->slab, msg);
-	} else {
+	} else {*/
+#ifndef NDEBUG
+        bzero(msg, sizeof(msg_t) + msg->size);
+#endif
 		rsfree(msg);
-	}
+//	}
 }
 
 
@@ -529,15 +540,15 @@ void asym_send_outgoing_msgs(struct lp_struct *lp) {
 void pack_msg(msg_t **msg, GID_t sender, GID_t receiver, int type, simtime_t timestamp, simtime_t send_time, size_t size, void *payload)
 {
 	// Check if we can rely on a slab to initialize the message
-	if (likely(sizeof(msg_t) + size <= SLAB_MSG_SIZE)) {
+	/*if (likely(sizeof(msg_t) + size <= SLAB_MSG_SIZE)) {
 		*msg = get_msg_from_slab(which_slab_to_use(sender, receiver));
 #ifndef NDEBUG
 		bzero(*msg, sizeof(msg_t) + size);
 #endif
-	} else {
+	} else {*/
 		*msg = rsalloc(sizeof(msg_t) + size);
 		bzero(*msg, sizeof(msg_t) + size);
-	}
+	//}
 
 	(*msg)->sender = sender;
 	(*msg)->receiver = receiver;
@@ -553,7 +564,7 @@ void pack_msg(msg_t **msg, GID_t sender, GID_t receiver, int type, simtime_t tim
 }
 
 void asym_extract_generated_msgs(void) {
-    struct lp_struct *lp_sender;
+    struct lp_struct *lp_sender, *lp_receiver;
     unsigned int i;
     msg_t *msg;
     msg_hdr_t *msg_hdr;
@@ -561,8 +572,29 @@ void asym_extract_generated_msgs(void) {
             // printf("Output port size for PT %u: %d\n", Threads[tid]->PTs[i]->tid), atomic_read(&Threads[tid]->PTs[i]->output_port->size);
         while((msg = pt_get_out_msg(Threads[tid]->PTs[i]->tid)) != NULL) {
             if(is_control_msg(msg->type) && msg->type == ASYM_ROLLBACK_ACK) {
-                find_lp_by_gid(msg->receiver)->state = LP_STATE_ROLLBACK_ALLOWED;
-                // printf("Received ROLLBACK ACK for LP %d with timestamp %lf\n", gid_to_int(msg->receiver), msg->timestamp);
+
+                lp_receiver = find_lp_by_gid(msg->receiver);
+
+                /* We check against LP_STATE_ROLLBACK to account for the following pattern:
+                 *  - LP_x receives a straggler, its bound is rolled back and moves to LP_STATE_ROLLBACK
+                 *  - LP_x is picked by STF: NOTICE/BUBBLES are sent to PT
+                 *  - LP_x and LP_y receive a straggler, but LP_y goes behind LP_x
+                 *  - LP_y is picked by STF: NOTICE/BUBBLES are sent to PT
+                 *  - PT sends back ACK for LP_x, for the first incarnation of rollback
+                 */
+                if(msg->mark == lp_receiver->rollback_mark && lp_receiver->state != LP_STATE_ROLLBACK) {
+
+                    lp_receiver->rollback_mark = -1;
+
+                    // Sanity check
+                    if (lp_receiver->state != LP_STATE_WAIT_FOR_ROLLBACK_ACK) {
+                        printf("LP%u received a ROLLBACK_ACK but is in state %d\n", msg->receiver.to_int, lp_receiver->state);
+                        abort();
+                    }
+
+                    lp_receiver->state = LP_STATE_ROLLBACK_ALLOWED;
+                    // printf("Received ROLLBACK ACK for LP %d with timestamp %lf\n", gid_to_int(msg->receiver), msg->timestamp);
+                }
                 msg_release(msg);
                 continue;
             }
@@ -754,6 +786,7 @@ void validate_msg(msg_t *msg)
 	assert(msg->send_time <= msg->timestamp);
 	assert(msg->message_kind == positive || msg->message_kind == negative || msg->message_kind == control);
 	assert(mark_to_gid(msg->mark) <= n_prc_tot);
+    assert(mark_to_gid(msg->mark) == msg->sender.to_int);
 	assert(mark_to_gid(msg->rendezvous_mark) <= n_prc_tot);
 	assert(msg->type < MAX_VALUE_CONTROL);
 }

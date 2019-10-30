@@ -99,7 +99,7 @@ bool LogState(struct lp_struct *lp)
 
 		// Associate the checkpoint with current LVT and last-executed event
 		new_state->lvt = lp->last_processed->timestamp;
-		new_state->last_event = lp->bound;
+		new_state->last_event = lp->last_processed;
 
 		// Log simulation model buffers
 		new_state->log = log_state(lp);
@@ -109,8 +109,7 @@ bool LogState(struct lp_struct *lp)
 		new_state->base_pointer = lp->current_base_pointer;
 
 		// Log library-related states
-		memcpy(&new_state->numerical, &lp->numerical,
-		       sizeof(numerical_state_t));
+		memcpy(&new_state->numerical, &lp->numerical, sizeof(numerical_state_t));
 
 		if(&topology_settings && topology_settings.write_enabled){
 			new_state->topology = rsalloc(topology_global.chkp_size);
@@ -226,12 +225,12 @@ void rollback(struct lp_struct *lp)
 	unsigned int reprocessed_events;
 
 	// Sanity check
-	if (unlikely(lp->state != LP_STATE_ROLLBACK)) {
+/*	if (unlikely(lp->state != LP_STATE_ROLLBACK)) {
 		rootsim_error(false, "I'm asked to roll back LP %d's execution, but rollback_bound is not set. Ignoring...\n",
 			      lp->gid.to_int);
 		return;
 	}
-
+*/
 	// Discard any possible execution state related to a blocked execution
 	memcpy(&lp->context, &lp->default_context, sizeof(LP_context_t));
 

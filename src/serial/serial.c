@@ -60,7 +60,7 @@ void SerialScheduleNewEvent(unsigned int rcv, simtime_t stamp,
 	msg_t *event;
 
 	// Sanity checks
-	if (unlikely(stamp < current->bound->timestamp)) {
+	if (unlikely(current->bound != NULL) && unlikely(stamp < current->bound->timestamp)) {
 		rootsim_error(true, "LP %d is trying to send events in the past. Current time: %f, scheduled time: %f\n",
 			      current->gid.to_int, current->bound->timestamp, stamp);
 	}
@@ -72,7 +72,7 @@ void SerialScheduleNewEvent(unsigned int rcv, simtime_t stamp,
 	event->sender = current->gid;
 	event->receiver = receiver;
 	event->timestamp = stamp;
-	event->send_time = current->bound->timestamp;
+	event->send_time = current->bound != NULL ? current->bound->timestamp : 0.0;
 	event->type = event_type;
 	event->size = event_size;
 	memcpy(event->event_content, event_content, event_size);
@@ -136,7 +136,7 @@ void serial_simulation(void)
 
 #ifdef EXTRA_CHECKS
 		if (event->size > 0) {
-			hash1 = XXH64(event->event_content, event->size, current);
+			hash1 = XXH64(event->event_content, event->size, current->gid.to_int);
 		}
 #endif
 
@@ -156,7 +156,7 @@ void serial_simulation(void)
 
 #ifdef EXTRA_CHECKS
 		if (event->size > 0) {
-			hash2 = XXH64(event->event_content, event->size, current);
+			hash2 = XXH64(event->event_content, event->size, current->gid.to_int);
 		}
 
 		if (hash1 != hash2) {

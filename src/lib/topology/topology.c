@@ -311,6 +311,8 @@ double GetValueTopology(unsigned from, unsigned to) {
 }
 
 void check_content(msg_t *msg, void *payload){
+    return;
+
     event_content_type *eventContentType = (event_content_type*) payload;
 
     if(msg->type == 20 || msg->type == 0 || is_control_msg(msg->type) || msg->message_kind == negative)

@@ -191,9 +191,9 @@ void process_bottom_halves(void)
                     if (matched_msg->timestamp <= bound_ts1) {
 
                         receiver->bound = list_prev(matched_msg);
-                        while ((receiver->bound != NULL)
-                            && D_EQUAL(receiver->bound->timestamp, msg_to_process->timestamp)) {
+                        while ((receiver->bound != NULL) && D_EQUAL(receiver->bound->timestamp, msg_to_process->timestamp)) {
                             receiver->bound = list_prev(receiver->bound);
+                            assert(receiver->bound != NULL);
                         }
 
                         receiver->state = LP_STATE_ROLLBACK;
@@ -243,13 +243,15 @@ void process_bottom_halves(void)
 				// Here we check for a strictly minor timestamp since
 				// the queue is FIFO for same-timestamp events. Therefore,
 				// A contemporaneous event does not cause a causal violation.
-				double bound_ts2 = receiver->bound->timestamp;
+				double bound_ts2 = receiver->bound->timestamp; // bound has been NULL once
 				if (msg_to_process->timestamp < bound_ts2) {
 
+                    assert(list_prev(msg_to_process) != NULL);
 					receiver->bound = list_prev(msg_to_process);
-                    while ((receiver->bound != NULL)
-					       && D_EQUAL(receiver->bound->timestamp, msg_to_process->timestamp)) {
+                    assert(receiver->bound != NULL);
+                    while ((receiver->bound != NULL) && D_EQUAL(receiver->bound->timestamp, msg_to_process->timestamp)) {
 						receiver->bound = list_prev(receiver->bound);
+                        assert(receiver->bound != NULL);
 					}
 
 					receiver->state = LP_STATE_ROLLBACK;

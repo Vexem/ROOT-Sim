@@ -45,10 +45,12 @@ const struct argp_option model_options[] = {
 		} \
 	break
 
-#define debug(fmt, ...) do { \
+/*#define debug(fmt, ...) do { \
         printf("(MODEL) -> " fmt, ##__VA_ARGS__);\
         fflush(stdout);\
-    } while(0)
+    } while(0)*/
+
+#define debug(...) {}
 
 static error_t model_parse (int key, char *arg, struct argp_state *state) {
 	(void)state;
@@ -212,7 +214,7 @@ void ProcessEvent(unsigned int curr_lp, simtime_t event_ts, int event_type, even
 
 				}
 
-				if(1||new_event_content.call_term_time < handoff_time) {
+				if(new_event_content.call_term_time < handoff_time) {
                     debug("Message <type %d - START_CALL> scheduled new END_CALL message (receiver: LP%u, type: %d, ts: %f, ctt: %f) \n",
                             event_type, curr_lp, END_CALL, new_event_content.call_term_time, new_event_content.call_term_time);
 					ScheduleNewEvent(curr_lp, new_event_content.call_term_time, END_CALL, &new_event_content, sizeof(new_event_content));
@@ -265,7 +267,6 @@ void ProcessEvent(unsigned int curr_lp, simtime_t event_ts, int event_type, even
 
 			new_event_content.call_term_time =  event_content->call_term_time;
 			new_event_content.from = curr_lp;
-			new_event_content.dummy = &(state->dummy);
             debug("Message <type %d - HANDOFF_LEAVE> scheduled new HANDOFF_RECV message (receiver: LP%u, type: %d, ts: %f, ctt: %f) \n",
                    event_type, event_content->cell, HANDOFF_RECV, event_ts, new_event_content.call_term_time);
 			ScheduleNewEvent(event_content->cell, event_ts, HANDOFF_RECV, &new_event_content, sizeof(new_event_content));
@@ -274,11 +275,6 @@ void ProcessEvent(unsigned int curr_lp, simtime_t event_ts, int event_type, even
 		case HANDOFF_RECV:
 			state->arriving_handoffs++;
 			state->arriving_calls++;
-
-			if(Random() < 0.3 && curr_lp == 1 && event_content->from == 2){//&& state->dummy_flag == false) {
-				*(event_content->dummy) = 1;
-				state->dummy_flag = true;
-			}
 
 			if (state->channel_counter == 0)
 				state->blocked_on_handoff++;
@@ -349,7 +345,7 @@ void ProcessEvent(unsigned int curr_lp, simtime_t event_ts, int event_type, even
 bool OnGVT(unsigned int me, lp_state_type *snapshot) {
 	(void)me;
 
-	fprintf(stdout,"PT%d: %f%%\n", me, (double)snapshot->complete_calls/complete_calls);
+	//fprintf(stdout,"PT%d: %f%%\n", me, (double)snapshot->complete_calls/complete_calls*100.0);
 
 	if (snapshot->complete_calls < complete_calls)
 		return false;

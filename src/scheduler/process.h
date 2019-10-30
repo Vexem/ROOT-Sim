@@ -134,8 +134,12 @@ struct lp_struct {
 	/// Processed rendezvous queue
 	 list(msg_t) rendezvous_queue;
 
-	/// Unique identifier within the LP
-	unsigned long long mark;
+    /// Unique identifier within the LP
+    unsigned long long mark;
+
+    /// Variable used to keep track of NOTICES sent to PTs in asymmetrics to
+    /// avoid nested rollback processing
+    unsigned long long rollback_mark;
 
 	/// Buffer used by KLTs for buffering outgoing messages during the execution of an event
 	outgoing_t outgoing_buffer;
