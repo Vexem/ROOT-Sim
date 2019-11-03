@@ -140,6 +140,7 @@ void process_bottom_halves(void)
 
 	msg_t *msg_to_process;
 	msg_t *matched_msg;
+    double ts_bound;
 
 	foreach_bound_lp(lp) {
 
@@ -186,9 +187,9 @@ void process_bottom_halves(void)
 				}
 
 				// If the matched message is in the past, we have to rollback
-                    double bound_ts1 = receiver->bound->timestamp;
+                    ts_bound = receiver->bound->timestamp;
 
-                    if (matched_msg->timestamp <= bound_ts1) {
+                    if (matched_msg->timestamp <= ts_bound) {
 
                         receiver->bound = list_prev(matched_msg);
                         while ((receiver->bound != NULL) && D_EQUAL(receiver->bound->timestamp, msg_to_process->timestamp)) {
@@ -197,8 +198,9 @@ void process_bottom_halves(void)
                         }
 
                         receiver->state = LP_STATE_ROLLBACK;
+                        receiver->rollback_status = REQUESTED;
 
-                        debug("[>RB<] Setting LP%u to be ROLLED BACK (ANTIMESSAGE - ts: %f <= bound: %f)\n", receiver->gid.to_int,msg_to_process->timestamp,bound_ts1);
+                        debug("[>RB<] Setting LP%u to be ROLLED BACK (ANTIMESSAGE - ts: %f <= bound: %f)\n", receiver->gid.to_int, msg_to_process->timestamp, ts_bound);
                         debug("[>RB<] LP%u's bound RETURNED BACK to: %f\n",receiver->gid.to_int,receiver->bound->timestamp);
                         debug("[>RB<] MATCHED MESSAGE-> Mark: %llu |Sen: LP%u |Rec: LP%u |ts: %f |type: %d |kind: %d \n", matched_msg->mark, matched_msg->sender.to_int,
                                matched_msg->receiver.to_int, matched_msg->timestamp, matched_msg->type, matched_msg->message_kind);
@@ -243,8 +245,9 @@ void process_bottom_halves(void)
 				// Here we check for a strictly minor timestamp since
 				// the queue is FIFO for same-timestamp events. Therefore,
 				// A contemporaneous event does not cause a causal violation.
-				double bound_ts2 = receiver->bound->timestamp; // bound has been NULL once
-				if (msg_to_process->timestamp < bound_ts2) {
+
+				ts_bound = receiver->bound->timestamp;  // bound has been NULL once
+				if (msg_to_process->timestamp < ts_bound) {
 
                     assert(list_prev(msg_to_process) != NULL);
 					receiver->bound = list_prev(msg_to_process);
@@ -255,7 +258,10 @@ void process_bottom_halves(void)
 					}
 
 					receiver->state = LP_STATE_ROLLBACK;
-                    debug("[>RB<] Setting LP%u to be ROLLED BACK (STRAGGLER - ts: %f < bound: %f)\n", receiver->gid.to_int, msg_to_process->timestamp, bound_ts2);
+                    receiver->rollback_status = REQUESTED;
+
+
+                    debug("[>RB<] Setting LP%u to be ROLLED BACK (STRAGGLER - ts: %f < bound: %f)\n", receiver->gid.to_int, msg_to_process->timestamp, ts_bound);
                     debug("[>RB<] LP%u's bound RETURNED BACK to: %f\n",receiver->gid.to_int,receiver->bound->timestamp);
                     debug("[>RB<] STRAGGLER MESSAGE-> Mark: %llu |Sen: LP%u |Rec: LP%u |ts: %f |type: %d |kind: %d\n", msg_to_process->mark, msg_to_process->sender.to_int,
                            msg_to_process->receiver.to_int, msg_to_process->timestamp, msg_to_process->type, msg_to_process->message_kind);

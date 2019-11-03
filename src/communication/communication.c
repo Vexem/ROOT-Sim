@@ -232,20 +232,21 @@ msg_t *get_msg_from_slab(struct lp_struct *lp)
  */
 void msg_release(msg_t *msg)
 {
-	struct lp_struct *lp;
+/*	struct lp_struct *lp;
 
-/*	if (likely(sizeof(msg_t) + msg->size <= SLAB_MSG_SIZE)) {
+	if (likely(sizeof(msg_t) + msg->size <= SLAB_MSG_SIZE)) {
 		lp = which_slab_to_use(msg->sender, msg->receiver);
 #ifndef NDEBUG
         bzero(msg, sizeof(msg_t) + msg->size);
 #endif
 		slab_free(lp->mm->slab, msg);
 	} else {*/
+
 #ifndef NDEBUG
         bzero(msg, sizeof(msg_t) + msg->size);
 #endif
 		rsfree(msg);
-//	}
+	//}
 }
 
 
@@ -293,7 +294,7 @@ void ParallelScheduleNewEvent(unsigned int gid_receiver, simtime_t timestamp, un
 		return;
 	}
 	// Check whether the destination LP is out of range
-	if (unlikely(gid_receiver > n_prc_tot - 1)) {	// It's unsigned, so no need to check whether it's < 0
+	if (unlikely(gid_receiver > n_LP_tot - 1)) {	// It's unsigned, so no need to check whether it's < 0
 		rootsim_error(false, "Warning: the destination LP %u is out of range. The event has been ignored\n", gid_receiver);
 		goto out;
 	}
@@ -571,6 +572,9 @@ void asym_extract_generated_msgs(void) {
     for(i = 0; i < Threads[tid]->num_PTs; i++) {
             // printf("Output port size for PT %u: %d\n", Threads[tid]->PTs[i]->tid), atomic_read(&Threads[tid]->PTs[i]->output_port->size);
         while((msg = pt_get_out_msg(Threads[tid]->PTs[i]->tid)) != NULL) {
+
+            validate_msg(msg);
+
             if(is_control_msg(msg->type) && msg->type == ASYM_ROLLBACK_ACK) {
 
                 lp_receiver = find_lp_by_gid(msg->receiver);
@@ -582,19 +586,49 @@ void asym_extract_generated_msgs(void) {
                  *  - LP_y is picked by STF: NOTICE/BUBBLES are sent to PT
                  *  - PT sends back ACK for LP_x, for the first incarnation of rollback
                  */
-                if(msg->mark == lp_receiver->rollback_mark && lp_receiver->state != LP_STATE_ROLLBACK) {
+                if(lp_receiver->rollback_status == REQUESTED){
+                    debug("Message (type %d) is DISCARDED since LP%u received a new straggler/negative message but it's not been scheduled yet\n",
+                            msg->type,lp_receiver->gid.to_int);
+                    goto discard;
+                }
 
-                    lp_receiver->rollback_mark = -1;
+                if(lp_receiver->rollback_status == PROCESSING && lp_receiver->rollback_mark > msg->mark){
+                    debug("Message (type %d) is DISCARDED since LP%u is in a more recent rollback stance\n", msg->type,lp_receiver->gid.to_int);
+                    goto discard;
+                }
+
+                if(lp_receiver->rollback_status == IDLE){
+                    printf("\tERROR: The impossible happened, LP%u with rollback_mark = %llu and rb_status IDLE just received a ROLLBACK_ACK",
+                            lp_receiver->gid.to_int,lp_receiver->rollback_mark);
+                    dump_msg_content(msg);
+                    abort();
+                }
+
+                if(lp_receiver->rollback_mark < msg->mark){
+                    printf("\tERROR: msg mark (%llu) CANNOT BE BIGGER than LP%u's rollback mark (%llu)\n",msg->mark,lp_receiver->gid.to_int,lp_receiver->rollback_mark);
+                    dump_msg_content(msg);
+                    abort();
+                }
+
+                if(lp_receiver->rollback_status == PROCESSING && msg->mark == lp_receiver->rollback_mark) {
 
                     // Sanity check
                     if (lp_receiver->state != LP_STATE_WAIT_FOR_ROLLBACK_ACK) {
-                        printf("LP%u received a ROLLBACK_ACK but is in state %d\n", msg->receiver.to_int, lp_receiver->state);
+                        printf("\tLP%u received a ROLLBACK_ACK but is in state %d\n", msg->receiver.to_int, lp_receiver->state);
                         abort();
                     }
 
                     lp_receiver->state = LP_STATE_ROLLBACK_ALLOWED;
-                    // printf("Received ROLLBACK ACK for LP %d with timestamp %lf\n", gid_to_int(msg->receiver), msg->timestamp);
+                    lp_receiver->rollback_status = IDLE;
+                    debug("Message ROLLBACK ACK RECEIVED for LP%u with timestamp %llu\n", gid_to_int(msg->receiver), msg->timestamp);
+                    goto discard;
                 }
+
+                printf("\tSTRANGE ASYM_ROLLBACK_ACK RECEIVED");
+                dump_msg_content(msg);
+                abort();
+
+                discard:
                 msg_release(msg);
                 continue;
             }
@@ -771,23 +805,33 @@ unsigned int mark_to_gid(unsigned long long mark)
  */
 void validate_msg(msg_t *msg)
 {
-    check_content(msg,msg->event_content);
+    //check_content(msg,msg->event_content);
 
-	assert(msg->sender.to_int <= n_prc_tot);
-	if(msg->receiver.to_int > n_prc_tot) {
-	    printf("\t->MESSAGE VALIDATION FAILED<-: message receiver id > n_prc_tot, dest: LP%d\n", msg->receiver.to_int);
+	if(msg->receiver.to_int > n_LP_tot) {
+	    printf("\tMESSAGE VALIDATION FAILED: message receiver id > n_LP_tot, dest: LP%d\n", msg->receiver.to_int);
         dump_msg_content(msg);
     };
-    assert(msg->receiver.to_int <= n_prc_tot);
-	if(msg->send_time > msg->timestamp) {
-        printf("\t->MESSAGE VALIDATION FAILED<-: message send_time > timestamp, dest: LP%d\n", msg->receiver.to_int);
+    if(msg->sender.to_int > n_LP_tot) {
+        printf("\tMESSAGE VALIDATION FAILED: message receiver id > n_LP_tot, dest: LP%d\n", msg->receiver.to_int);
         dump_msg_content(msg);
-	}
-	assert(msg->send_time <= msg->timestamp);
+    };
+    if(msg->send_time > msg->timestamp) {
+        printf("\tMESSAGE VALIDATION FAILED: message send_time > timestamp, dest: LP%d\n", msg->receiver.to_int);
+        dump_msg_content(msg);
+    }
+    if(msg->type == 0){
+        printf("\tMESSAGE VALIDATION FAILED: message type = 0, dest: LP%d\n", msg->receiver.to_int);
+        dump_msg_content(msg);
+    }
+
+    assert(msg->receiver.to_int <= n_LP_tot);
+    assert(msg->sender.to_int <= n_LP_tot);
+    assert(msg->send_time <= msg->timestamp);
+    assert(msg->type != 0); //special case when the whole msg = 0
 	assert(msg->message_kind == positive || msg->message_kind == negative || msg->message_kind == control);
-	assert(mark_to_gid(msg->mark) <= n_prc_tot);
+	assert(mark_to_gid(msg->mark) <= n_LP_tot);
     assert(mark_to_gid(msg->mark) == msg->sender.to_int);
-	assert(mark_to_gid(msg->rendezvous_mark) <= n_prc_tot);
+	assert(mark_to_gid(msg->rendezvous_mark) <= n_LP_tot);
 	assert(msg->type < MAX_VALUE_CONTROL);
 }
 #endif

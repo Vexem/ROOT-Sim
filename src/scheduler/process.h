@@ -64,6 +64,9 @@
 #define BLOCKED_STATE			0x01000
 #define is_blocked_state(state)	(bool)(state & BLOCKED_STATE)
 
+typedef enum { IDLE, REQUESTED, PROCESSING } rb_status;
+
+
 struct lp_struct {
 	/// LP execution state.
 	LP_context_t context;
@@ -143,6 +146,9 @@ struct lp_struct {
 
 	/// Buffer used by KLTs for buffering outgoing messages during the execution of an event
 	outgoing_t outgoing_buffer;
+
+    /// Current status of a possible rollback request
+	rb_status rollback_status;
 
 	/**
 	 * Implementation of OnGVT used for this LP. This can be changed

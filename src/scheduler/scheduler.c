@@ -283,14 +283,14 @@ void initialize_worker_thread(void)
 *
 * @date November 11, 2013
 *
-* @param next A pointer to the lp_struct of the LP which has to be activated
-* @param evt A pointer to the event to be processed by the LP
+* @param next_LP A pointer to the lp_struct of the LP which has to be activated
+* @param next_evt A pointer to the event to be processed by the LP
 */
-void activate_LP(struct lp_struct *next, msg_t * evt)
+void activate_LP(struct lp_struct *next_LP, msg_t * next_evt)
 {
 	// Notify the LP main execution loop of the information to be used for actual simulation
-	current = next;
-	current_evt = evt;
+	current = next_LP;
+	current_evt = next_evt;
 
 
 //      #ifdef HAVE_PREEMPTION
@@ -303,15 +303,15 @@ void activate_LP(struct lp_struct *next, msg_t * evt)
 	lp_alloc_schedule();
 #endif
 
-  /*  if (unlikely(is_blocked_state(next->state))) {
+  /*  if (unlikely(is_blocked_state(next_LP->state))) {
 		rootsim_error(true, "Critical condition: LP %d has a wrong state: %d. Aborting...\n",
-			      next->gid.to_int, next->state);
+			      next_LP->gid.to_int, next_LP->state);
 	}
 */
-    context_switch(&kernel_context, &next->context);
+    context_switch(&kernel_context, &next_LP->context);
 
-    current->last_processed = evt;
-    //debug("Message with ts:%f is LAST_PROCESSED for LP%u \n", evt->timestamp, current->gid.to_int );
+    current->last_processed = next_evt;
+    //debug("Message with ts:%f is LAST_PROCESSED for LP%u \n", next_evt->timestamp, current->gid.to_int );
 
 //      #ifdef HAVE_PREEMPTION
 //        if(!rootsim_config.disable_preemption)
@@ -320,7 +320,7 @@ void activate_LP(struct lp_struct *next, msg_t * evt)
 
 #ifdef HAVE_CROSS_STATE
 	// Deactivate memory view for the current LP if no conflict has arisen
-	if (!is_blocked_state(next->state)) {
+	if (!is_blocked_state(next_LP->state)) {
 //              printf("Deschedule %d\n",lp);
 		lp_alloc_deschedule();
 	}
@@ -347,14 +347,7 @@ bool check_rendevouz_request(struct lp_struct *lp)
 
 void asym_process_one_event(msg_t *msg) {
     struct lp_struct *LP;
-
     LP = find_lp_by_gid(msg->receiver);
-
-    if(is_control_msg(msg->type)){
-        fprintf(stderr,"\tERROR: LO_PRIO control msg (type %d) shouldn't be here!\n", msg->type);
-        dump_msg_content(msg);
-        abort();
-    }
 
 /*  if(is_blocked_state(LP->state)){
         fprintf(stderr, "AP: lp (gid = %d) with state %d shouldn't be blocked before calling activate_LP!\n",
@@ -364,6 +357,11 @@ void asym_process_one_event(msg_t *msg) {
 
     // Process this event
     spin_lock(&LP->bound_lock);
+    if(!belongs_to_pcs(msg->type)) {
+        printf("\tERROR: some STRANGE message was about to be sent to PCS\n");
+        dump_msg_content(msg);
+        abort();
+    }
     activate_LP(LP, msg);
     spin_unlock(&LP->bound_lock);
     msg->unprocessed = false;
@@ -379,6 +377,68 @@ void asym_process_one_event(msg_t *msg) {
     LogState(LP);
 }
 
+
+
+void find_a_match(msg_t *lo_prio) {
+
+    msg_t *hi_prio_msg;
+    msg_t *rb_ack;
+    int type;
+
+    while(1) {
+        hi_prio_msg = pt_get_hi_prio_msg();
+        validate_msg(hi_prio_msg);
+
+            type = hi_prio_msg->type;
+            if (is_control_msg(type)){
+                if(type != ASYM_ROLLBACK_NOTICE){
+                    fprintf(stderr, "\tERROR: Type %d CONTROL message SHOULDN'T stay in the HI_PRIO queue!\n",
+                            hi_prio_msg->type);
+                    dump_msg_content(hi_prio_msg);
+                    fflush(stdout);
+                    abort();
+                }
+                else{  //IT IS A NOTICE
+
+                    if(lo_prio->receiver.to_int != hi_prio_msg->receiver.to_int){
+                        printf("\tWARNING: lo/hi prio messages have DIFFERENT receivers\n");
+                        dump_msg_content(lo_prio);
+                        dump_msg_content(hi_prio_msg);
+                        abort();
+                    }
+                    if(lo_prio->mark != hi_prio_msg->mark) {    //SAME RECEIVERS BUT DIFFERENT MARKS
+                        fprintf(stderr, "\tWARNING: same receiver but BUBBLE/NOTICE priority INVERSION\n");
+                        dump_msg_content(lo_prio);
+                        dump_msg_content(hi_prio_msg);
+                        fflush(stdout);
+                        abort();
+                    }
+                    else {      //BUBBLE MATCHED
+                        pack_msg(&rb_ack, lo_prio->receiver, lo_prio->receiver, ASYM_ROLLBACK_ACK,
+                                 lo_prio->timestamp, lo_prio->timestamp, 0, NULL);
+                        rb_ack->message_kind = control;
+                        rb_ack->mark = hi_prio_msg->mark;
+                        debug("Message ROLLBACK ACK SENT -> LP%u, ts %f\n", lo_prio_msg->receiver.to_int,
+                              lo_prio_msg->timestamp);
+                        pt_put_out_msg(rb_ack);
+                        msg_release(lo_prio);       //CONTROLLARE
+                        msg_release(hi_prio_msg);   //CONTROLLARE
+                        return;
+                    }
+                }
+            }
+            else { //NOT A CONTROL MESSAGE
+                fprintf(stderr, "\tNON-CONTROL msg in Hi_prio channel\n");
+                dump_msg_content(lo_prio);
+                dump_msg_content(hi_prio_msg);
+                fflush(stdout);
+                abort();
+            }
+    }
+
+
+}
+
 /**
 * This is a new and simplified version of the asymmetric scheduler. This function extracts a bunch of events
 * to be processed by LPs bound to a controller and sends them to processing
@@ -390,6 +450,8 @@ void asym_process(void) {
     msg_t *lo_prio_msg;
     msg_t *hi_prio_msg;
     msg_t *rb_ack;
+    int type;
+
     //struct lp_struct *LP;
     //bool updated;
 
@@ -399,58 +461,72 @@ void asym_process(void) {
 
 
     while((hi_prio_msg = pt_get_hi_prio_msg()) !=  NULL) {
+        validate_msg(hi_prio_msg);
 
-            debug("Message (type %d) EXTRACTED from HI_PRIO_QUEUE | sender: LP%u |receiver: LP%u |ts: %f |Send T.: %f \n",
-                  hi_prio_msg->type, hi_prio_msg->sender.to_int, hi_prio_msg->receiver.to_int, hi_prio_msg->timestamp,
-                  hi_prio_msg->send_time);
+        debug("Message (type %d) EXTRACTED from HI_PRIO_QUEUE | sender: LP%u |receiver: LP%u |ts: %f |Send T.: %f \n",
+                hi_prio_msg->type, hi_prio_msg->sender.to_int, hi_prio_msg->receiver.to_int, hi_prio_msg->timestamp,
+                hi_prio_msg->send_time);
+        do {
+            while ((lo_prio_msg = pt_get_lo_prio_msg()) == NULL);
+            validate_msg(lo_prio_msg);
+            debug("Message (type %d) EXTRACTED from LO_PRIO_QUEUE | sender: LP%u |receiver: LP%u |ts: %f |Send T.: %f \n",
+                    lo_prio_msg->type, lo_prio_msg->sender.to_int, lo_prio_msg->receiver.to_int,
+                    lo_prio_msg->timestamp, lo_prio_msg->send_time);
 
-            do {
-                while ((lo_prio_msg = pt_get_lo_prio_msg()) == NULL);
-
-                debug("Message (type %d) EXTRACTED from LO_PRIO_QUEUE | sender: LP%u |receiver: LP%u |ts: %f |Send T.: %f \n",
-                      lo_prio_msg->type, lo_prio_msg->sender.to_int, lo_prio_msg->receiver.to_int,
-                      lo_prio_msg->timestamp,
-                      lo_prio_msg->send_time);
-
-
-                if (is_control_msg(lo_prio_msg->type) && lo_prio_msg->type != ASYM_ROLLBACK_BUBBLE) {
-                    fprintf(stderr, "\tERROR: Type %d message shouldn't stay in the LO_PRIO queue!\n",
+            type = lo_prio_msg->type;
+            if (is_control_msg(type)){
+                if(type != ASYM_ROLLBACK_BUBBLE){
+                    fprintf(stderr, "\tERROR: Type %d CONTROL message SHOULDN'T stay in the LO_PRIO queue!\n",
                             lo_prio_msg->type);
                     dump_msg_content(lo_prio_msg);
                     fflush(stdout);
                     abort();
                 }
-
-                if (lo_prio_msg->type == ASYM_ROLLBACK_BUBBLE) {
-
+                else{  //IT IS A BUBBLE
                     debug("Message BUBBLE EXTRACTED -> LP%u, ts %f\n", lo_prio_msg->receiver.to_int,
-                          lo_prio_msg->timestamp);
-
-                    // Sanity check
-                    if (lo_prio_msg->mark != hi_prio_msg->mark) {
-                        fprintf(stderr, "\tWARNING: bubble/notice priority INVERSION\n");
+                            lo_prio_msg->timestamp);
+                    if(lo_prio_msg->receiver.to_int != hi_prio_msg->receiver.to_int){   //DIFFERENT RECEIVERS
+                        printf("\tWARNING: lo/hi prio messages have DIFFERENT receivers\n");
+                        dump_msg_content(lo_prio_msg);
+                        dump_msg_content(hi_prio_msg);
+                        abort();
+                    }
+                    if(lo_prio_msg->mark != hi_prio_msg->mark) {    //SAME RECEIVERS BUT DIFFERENT MARKS
+                        fprintf(stderr, "\tWARNING: same receiver but BUBBLE/NOTICE priority INVERSION\n");
+                        dump_msg_content(lo_prio_msg);
+                        dump_msg_content(hi_prio_msg);
                         fflush(stdout);
                         abort();
                     }
-
-                    pack_msg(&rb_ack, lo_prio_msg->receiver, lo_prio_msg->receiver, ASYM_ROLLBACK_ACK,
-                             lo_prio_msg->timestamp, lo_prio_msg->timestamp, 0, NULL);
-                    rb_ack->message_kind = control;
-                    rb_ack->mark = hi_prio_msg->mark;
-
-                    debug("Message ROLLBACK ACK SENT -> LP%u, ts %f\n", lo_prio_msg->receiver.to_int,
-                          lo_prio_msg->timestamp);
-                    pt_put_out_msg(rb_ack);
-                    //list_pop(hi_prio_list);
-                    return;
+                    else {      //BUBBLE MATCHED!
+                        pack_msg(&rb_ack, lo_prio_msg->receiver, lo_prio_msg->receiver, ASYM_ROLLBACK_ACK,
+                                lo_prio_msg->timestamp, lo_prio_msg->timestamp, 0, NULL);
+                        rb_ack->message_kind = control;
+                        rb_ack->mark = hi_prio_msg->mark;
+                        debug("Message ROLLBACK ACK SENT -> LP%u, ts %f\n", lo_prio_msg->receiver.to_int,
+                                lo_prio_msg->timestamp);
+                        pt_put_out_msg(rb_ack);
+                        msg_release(lo_prio_msg);   //CONTROLLARE
+                        msg_release(hi_prio_msg);   //CONTROLLARE
+                        return;
+                    }
                 }
-
+            }
+            else { //NOT A CONTROL MESSAGE
                 if (lo_prio_msg->receiver.to_int != hi_prio_msg->receiver.to_int ||
-                    lo_prio_msg->timestamp < hi_prio_msg->timestamp) {
-                    asym_process_one_event(lo_prio_msg);
-                    continue;
+                lo_prio_msg->timestamp < hi_prio_msg->timestamp ) {
+                    if(belongs_to_pcs(lo_prio_msg->type)) {
+                        asym_process_one_event(lo_prio_msg);
+                        continue;
+                    }
+                    else{
+                        printf("\tERROR: some STRANGE message was about to be sent to PCS\n");
+                        dump_msg_content(lo_prio_msg);
+                        abort();
+                    }
                 }
-            } while (true);
+            }
+        } while (true);
     }
 
     lo_prio_msg = pt_get_lo_prio_msg();
@@ -458,7 +534,34 @@ void asym_process(void) {
     if(lo_prio_msg == NULL)// || find_lp_by_gid(lo_prio_msg->receiver)->bound->timestamp < lo_prio_msg->timestamp)
          return;
 
+    type = lo_prio_msg->type;
+
+    if(is_control_msg(lo_prio_msg->type)){
+
+        if(type == ASYM_ROLLBACK_BUBBLE){
+            find_a_match(lo_prio_msg);
+            return;
+        }
+
+        else if (type == ASYM_ROLLBACK_NOTICE) {
+            printf("\tERROR: I've found a NOTICE in a lo_prio channel\n");
+            dump_msg_content((lo_prio_msg));
+            abort();
+        }
+        else{
+            printf("\tCONTROL MSG is neither a NOTICE or a BUBBLE");
+            dump_msg_content(lo_prio_msg);
+            abort();
+        }
+    }
+
+    if(!belongs_to_pcs(lo_prio_msg->type)) {
+        printf("\tERROR: some STRANGE message was about to be sent to PCS\n");
+        dump_msg_content(lo_prio_msg);
+        abort();
+    }
     asym_process_one_event(lo_prio_msg);
+
 
 
 
@@ -621,7 +724,7 @@ void asym_schedule(void) {
             chosen_LP = smallest_timestamp_first();   //TEMP CHANGE FROM ASYM_TS_FIRST
         }
         else{
-            fprintf(stderr, "\t WARNINIG: asym scheduler supports only the STF scheduler by now\n");
+            fprintf(stderr, "\tWARNING: asym scheduler supports only the STF scheduler by now\n");
             abort();
         }
 
@@ -631,13 +734,22 @@ void asym_schedule(void) {
         }
 
         if(chosen_LP->state == LP_STATE_ROLLBACK) { // = LP received an out-of-order msg and needs a rollback
+            mark = generate_mark(chosen_LP);
+
+            if(chosen_LP->rollback_status == REQUESTED)
+                chosen_LP->rollback_status = PROCESSING;
+
+            else{
+                printf("\tERROR: Impossible rollback_status\n");
+                abort();
+            }
+
+            chosen_LP->rollback_mark = mark;
 
             pack_msg(&rb_management, chosen_LP->gid, chosen_LP->gid, ASYM_ROLLBACK_NOTICE, chosen_LP->bound->timestamp,
                      chosen_LP->bound->timestamp, 0, NULL);// Send rollback notice in the high priority port
-            mark = generate_mark(chosen_LP);
             rb_management->message_kind = control;
             rb_management->mark = mark;
-            chosen_LP->rollback_mark = mark;
             pt_put_hi_prio_msg(chosen_LP->processing_thread, rb_management);
 
             chosen_LP->state = LP_STATE_WAIT_FOR_ROLLBACK_ACK;  //BLOCKED STATE
@@ -655,7 +767,7 @@ void asym_schedule(void) {
         }
 
         if(chosen_LP->state == LP_STATE_ROLLBACK_ALLOWED) { // = extracted ASYM_ROLLBACK_ACK from PT output queue for chosen_LP
-           // chosen_LP->state = LP_STATE_ROLLBACK;
+            chosen_LP->state = LP_STATE_ROLLBACK;
             rollback(chosen_LP);
             chosen_LP->state = LP_STATE_READY;
 

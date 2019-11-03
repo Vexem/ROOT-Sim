@@ -75,8 +75,17 @@ enum _control_msgs {
     MAX_VALUE_CONTROL,		///< Anything after this value is considered as an impossible message
 };
 
+enum _pcs_msgs{
+    START_CALL = 20,
+    END_CALL,
+    HANDOFF_LEAVE =	30,
+    HANDOFF_RECV,
+    FADING_RECHECK = 40
+};
+
 /// This macro tells whether a message is a control message, by its type
-#define is_control_msg(type)	(type >= MIN_VALUE_CONTROL && type != RENDEZVOUS_START)
+#define is_control_msg(type)    (type >= MIN_VALUE_CONTROL && type != RENDEZVOUS_START)
+#define belongs_to_pcs(type)    (type>= START_CALL && type <= FADING_RECHECK)
 
 
 /**

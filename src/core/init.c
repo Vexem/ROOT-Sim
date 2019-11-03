@@ -240,7 +240,7 @@ static error_t parse_opt (int key, char *arg, struct argp_state *state)
 			break;
 
 		case OPT_NPRC:
-			n_prc_tot = parse_ullong_limits(1, UINT_MAX);
+            n_LP_tot = parse_ullong_limits(1, UINT_MAX);
 			break;
 
 		case OPT_OUTPUT_DIR:
@@ -362,11 +362,11 @@ static error_t parse_opt (int key, char *arg, struct argp_state *state)
 			if(n_cores > MAX_THREADS_PER_KERNEL)
 				rootsim_error(true, "Too many threads, maximum supported number is %u\n", MAX_THREADS_PER_KERNEL);
 
-			if(n_prc_tot > MAX_LPs)
+			if(n_LP_tot > MAX_LPs)
 				rootsim_error(true, "Too many LPs, maximum supported number is %u\n", MAX_LPs);
 
-			if(!rootsim_config.serial && n_prc_tot < n_cores)
-				rootsim_error(true, "Requested a simulation run with %u LPs and %u worker threads: the mapping is not possible\n", n_prc_tot, n_cores);
+			if(!rootsim_config.serial && n_LP_tot < n_cores)
+				rootsim_error(true, "Requested a simulation run with %u LPs and %u worker threads: the mapping is not possible\n", n_LP_tot, n_cores);
 
 			print_config();
 

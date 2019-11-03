@@ -109,6 +109,8 @@ void ProcessEvent(unsigned int curr_lp, simtime_t event_ts, int event_type, even
 */
     event_content_type new_event_content;
 
+    bool shortcut = 1;      //1 FOR DEBUG
+
 	new_event_content.cell = -1;
 	new_event_content.channel = -1;
 	new_event_content.call_term_time = -1;
@@ -214,7 +216,7 @@ void ProcessEvent(unsigned int curr_lp, simtime_t event_ts, int event_type, even
 
 				}
 
-				if(new_event_content.call_term_time < handoff_time) {
+				if(shortcut || new_event_content.call_term_time < handoff_time) {
                     debug("Message <type %d - START_CALL> scheduled new END_CALL message (receiver: LP%u, type: %d, ts: %f, ctt: %f) \n",
                             event_type, curr_lp, END_CALL, new_event_content.call_term_time, new_event_content.call_term_time);
 					ScheduleNewEvent(curr_lp, new_event_content.call_term_time, END_CALL, &new_event_content, sizeof(new_event_content));
@@ -335,7 +337,7 @@ void ProcessEvent(unsigned int curr_lp, simtime_t event_ts, int event_type, even
 
 
 		default:
-            fprintf(stdout, "\tPCS: Unknown event type! (curr_lp = %u - event type = %d)\n", curr_lp, event_type);
+            fprintf(stdout, "\tMODEL (PCS): UNKNOWN event type! (current LP = %u | MSG type = %d)\n", curr_lp, event_type);
 			abort();
 
 	}

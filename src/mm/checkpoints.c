@@ -159,7 +159,7 @@ void *log_full(struct lp_struct *lp)
 
 	// Sanity check
 	if (unlikely((char *)ckpt + size != ptr))
-		rootsim_error(true, "Actual (full) ckpt size is wrong by %d bytes!\nlid = %d ckpt = %p size = %#x (%d), ptr = %p, ckpt + size = %p\n",
+		rootsim_error(true, "Actual (full) checkpoint size is wrong by %d bytes!\nlid = %d ckpt = %p size = %#x (%d), ptr = %p, ckpt + size = %p\n",
 			      (char *)ckpt + size - (char *)ptr, lp->lid.to_int,
 			      ckpt, size, size, ptr, (char *)ckpt + size);
 

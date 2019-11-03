@@ -254,23 +254,23 @@ static void print_config_to_file(FILE *f)
 		"LPs Distribution Mode across Kernels: %s\n"
 		"Check Termination Mode: %s\n"
 		"Set Seed: %ld\n",
-		n_ker,
-		get_cores(),
-		n_cores,
-		n_prc_tot,
-		rootsim_config.output_dir,
-		param_to_text[PARAM_SCHEDULER][rootsim_config.scheduler],
+             n_ker,
+             get_cores(),
+             n_cores,
+             n_LP_tot,
+             rootsim_config.output_dir,
+             param_to_text[PARAM_SCHEDULER][rootsim_config.scheduler],
 		#ifdef HAVE_MPI
 		((mpi_support_multithread)? "yes":"no"),
 		#endif
 		rootsim_config.gvt_time_period / 1000.0,
-		param_to_text[PARAM_STATE_SAVING][rootsim_config.checkpointing],
-		rootsim_config.ckpt_period,
-		param_to_text[PARAM_SNAPSHOT][rootsim_config.snapshot],
-		rootsim_config.simulation_time,
-		param_to_text[PARAM_LPS_DISTRIBUTION][rootsim_config.lps_distribution],
-		param_to_text[PARAM_CKTRM_MODE][rootsim_config.check_termination_mode],
-		rootsim_config.set_seed);
+             param_to_text[PARAM_STATE_SAVING][rootsim_config.checkpointing],
+             rootsim_config.ckpt_period,
+             param_to_text[PARAM_SNAPSHOT][rootsim_config.snapshot],
+             rootsim_config.simulation_time,
+             param_to_text[PARAM_LPS_DISTRIBUTION][rootsim_config.lps_distribution],
+             param_to_text[PARAM_CKTRM_MODE][rootsim_config.check_termination_mode],
+             rootsim_config.set_seed);
 }
 
 
@@ -355,7 +355,7 @@ static void print_common_stats(FILE *f, struct stat_t *stats_p, bool want_thread
 		fprintf(f, "TOTAL_THREADS ............. : %d \n",	n_cores);
 	} else {
 		fprintf(f, "TOTAL_THREADS ............. : %d \n",	n_cores * n_ker);
-		fprintf(f, "TOTAL LPs.................. : %d \n",	n_prc_tot);
+		fprintf(f, "TOTAL LPs.................. : %d \n", n_LP_tot);
 	}
 	if(want_thread_stats) {
 		fprintf(f, "THREAD ID ................. : %d \n",	local_tid);
@@ -455,7 +455,7 @@ void statistics_stop(int exit_code)
 
 		print_header(f, "SERIAL STATISTICS");
 		print_timer_stats(f, &simulation_timer, &simulation_finished, total_time);
-		fprintf(f, "TOTAL LPs.................. : %d \n", 		n_prc_tot);
+		fprintf(f, "TOTAL LPs.................. : %d \n", n_LP_tot);
 		fprintf(f, "TOTAL EXECUTED EVENTS ..... : %.0f \n", 		system_wide_stats.tot_events);
 		fprintf(f, "AVERAGE EVENT COST......... : %.3f us\n",		total_time / system_wide_stats.tot_events * 1000 * 1000);
 		fprintf(f, "AVERAGE EVENT COST (EMA)... : %.2f us\n",		system_wide_stats.exponential_event_time);

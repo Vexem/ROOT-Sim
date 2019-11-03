@@ -46,7 +46,7 @@ void UncheckedScheduleNewEvent(unsigned int gid_receiver, simtime_t timestamp, u
 
 #ifndef NDEBUG
 	// Check whether the destination LP is out of range
-	if(receiver.to_int >= n_prc_tot) { // It's unsigned, so no need to check whether it's < 0
+	if(receiver.to_int >= n_LP_tot) { // It's unsigned, so no need to check whether it's < 0
 		rootsim_error(true, "Warning: the destination LP %u %lf %u is out of range. The event has been ignored\n", receiver.to_int, timestamp, event_type);
 		return;
 	}
@@ -114,10 +114,10 @@ static void *load_topology_file(const char *file_name) {
 	if(parse_unsigned_by_key(root_token, json_base, root_token, "regions_count", &lp_cnt) < 0)
 		rootsim_error(true, "Invalid or missing json value with key \"regions_count\" (must be an unsigned integer)");
 	// sanity checks on the number of instantiated LPs
-	if(lp_cnt + topology_settings.out_of_topology > n_prc_tot)
-		rootsim_error(true, "This topology needs an higher number of available LPs (%lu versus %lu available LPs)", lp_cnt, n_prc_tot);
-	if(lp_cnt + topology_settings.out_of_topology < n_prc_tot)
-		rootsim_error(true, "The requested regions are fewer than the available LPs (%lu versus %lu available LPs)", lp_cnt, n_prc_tot);
+	if(lp_cnt + topology_settings.out_of_topology > n_LP_tot)
+		rootsim_error(true, "This topology needs an higher number of available LPs (%lu versus %lu available LPs)", lp_cnt, n_LP_tot);
+	if(lp_cnt + topology_settings.out_of_topology < n_LP_tot)
+		rootsim_error(true, "The requested regions are fewer than the available LPs (%lu versus %lu available LPs)", lp_cnt, n_LP_tot);
 
 	// look for the topology type
 	const char *type_choices[] = {
@@ -214,10 +214,10 @@ void topology_init(void) {
 	// this is the data extracted from the topology file
 	void *t_data = NULL;
 	// basic sanity check
-	if(topology_settings.out_of_topology >= n_prc_tot)
+	if(topology_settings.out_of_topology >= n_LP_tot)
 		rootsim_error(true, "Not enough LPs to run even a default topology with %u control LPs", topology_settings.out_of_topology);
 	// set default values
-	topology_global.lp_cnt = n_prc_tot - topology_settings.out_of_topology;
+	topology_global.lp_cnt = n_LP_tot - topology_settings.out_of_topology;
 	topology_global.geometry = topology_settings.default_geometry;
 	topology_global.directions = directions_count();
 	// load settings from file if specified

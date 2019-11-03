@@ -29,7 +29,6 @@ typedef struct _event_content_type {
     simtime_t sent_at; // Simulation time at which the call was handed off
     int channel; // Channel to be freed in case of END_CALL
     simtime_t   call_term_time; // Termination time of the call (used mainly in HANDOFF_RECV)
-    int *dummy;
 } event_content_type;
 
 // this initializes the topology environment

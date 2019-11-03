@@ -95,7 +95,6 @@ msg_channel *init_channel(void)
 
 void insert_msg(msg_channel * mc, msg_t * msg)
 {
-
 	spin_lock(&mc->write_lock);
 
 	// Reallocate the live BH buffer. Don't touch the other buffer,
@@ -109,7 +108,6 @@ void insert_msg(msg_channel * mc, msg_t * msg)
 		if (unlikely(mc->buffers[M_WRITE]->buffer == NULL))
 			rootsim_error(true, "Unable to reallocate message channel\n");
 	}
-
 
 #ifndef NDEBUG
 	validate_msg(msg);

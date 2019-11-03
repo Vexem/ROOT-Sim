@@ -225,12 +225,12 @@ void rollback(struct lp_struct *lp)
 	unsigned int reprocessed_events;
 
 	// Sanity check
-/*	if (unlikely(lp->state != LP_STATE_ROLLBACK)) {
+	if (unlikely(lp->state != LP_STATE_ROLLBACK)) {
 		rootsim_error(false, "I'm asked to roll back LP %d's execution, but rollback_bound is not set. Ignoring...\n",
 			      lp->gid.to_int);
 		return;
 	}
-*/
+
 	// Discard any possible execution state related to a blocked execution
 	memcpy(&lp->context, &lp->default_context, sizeof(LP_context_t));
 

@@ -52,14 +52,14 @@
 /*#define debug(fmt, ...) do { \
         printf("(%s) %s:%d -> " fmt, (tid == 1 ? "PT" : "CT"), __FILENAME__, __LINE__, ##__VA_ARGS__);\
         fflush(stdout);\
-    } while(0)
-*/
+    } while(0)*/
+
 #define debug(...) {}
 #ifdef INIT
 #undef INIT
 #endif
 /// This is the message code which is sent by the simulation kernel upon startup
-#define INIT	0
+#define INIT	1
 
 /// This defines the type with whom timestamps are represented
 typedef double simtime_t;
@@ -68,7 +68,7 @@ typedef double simtime_t;
 #define INFTY DBL_MAX
 
 /// This is the definition of the number of LPs running in the current simulation
-extern unsigned int n_prc_tot;
+extern unsigned int n_LP_tot;
 
 /// This can be implemented by the model for smart argument handling
 __attribute((weak))
@@ -177,7 +177,7 @@ void 		SetValueTopology(unsigned from, unsigned to, double value);
 // finds a receiver with probabilities weighted on neighbours link (works only for topology type TOPOLOGY_PROBABILITIES)
 unsigned int 	FindReceiver	(void);
 
-// returns the count of regions involved in the topology (can be less than n_prc_tot)
+// returns the count of regions involved in the topology (can be less than n_LP_tot)
 unsigned int	RegionsCount	(void);
 
 // returns the maximum count of neighbours this region has, this is made to simplify direction handling (need to explain better xxx)

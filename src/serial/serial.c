@@ -84,15 +84,15 @@ void SerialScheduleNewEvent(unsigned int rcv, simtime_t stamp,
 void serial_init(void)
 {
 	// Sanity check on the number of LPs
-	if (unlikely(n_prc_tot == 0)) {
+	if (unlikely(n_LP_tot == 0)) {
 		rootsim_error(true, "You must specify the total number of Logical Processes\n");
 	}
 	// Initialize the calendar queue
 	calqueue_init();
 
 	// Initialize the per LP variables
-	serial_completed_simulation = rsalloc(sizeof(bool) * n_prc_tot);
-	bzero(serial_completed_simulation, sizeof(bool) * n_prc_tot);
+	serial_completed_simulation = rsalloc(sizeof(bool) * n_LP_tot);
+	bzero(serial_completed_simulation, sizeof(bool) * n_LP_tot);
 
 	// Generate the INIT events for all the LPs
 	foreach_lp(lp) {
@@ -178,7 +178,7 @@ void serial_simulation(void)
 				if (!serial_completed_simulation[event->receiver.to_int] && current->OnGVT(event->receiver.to_int, current->current_base_pointer)) {
 					completed++;
 					serial_completed_simulation[event->receiver.to_int] = true;
-					if (unlikely(completed == n_prc_tot)) {
+					if (unlikely(completed == n_LP_tot)) {
 						serial_simulation_complete = true;
 					}
 				}
@@ -201,7 +201,7 @@ void serial_simulation(void)
 
 				serial_completed_simulation[event->receiver.to_int] = new_termination_decision;
 
-				if (unlikely(completed == n_prc_tot)) {
+				if (unlikely(completed == n_LP_tot)) {
 					serial_simulation_complete = true;
 				}
 			}

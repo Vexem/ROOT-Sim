@@ -82,7 +82,7 @@ void initialize_lps(void)
 	// We now iterate over all LP Gids. Everytime that we find an LP
 	// which should be locally hosted, we create the local lp_struct
 	// process control block.
-	for (i = 0; i < n_prc_tot; i++) {
+	for (i = 0; i < n_LP_tot; i++) {
 		set_gid(gid, i);
 		if (find_kernel_by_gid(gid) != kid)
 			continue;
