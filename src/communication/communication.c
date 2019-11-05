@@ -624,7 +624,7 @@ void asym_extract_generated_msgs(void) {
                     goto discard;
                 }
 
-                printf("\tSTRANGE ASYM_ROLLBACK_ACK RECEIVED");
+                printf("\tERROR: STRANGE ASYM_ROLLBACK_ACK received");
                 dump_msg_content(msg);
                 abort();
 
@@ -731,7 +731,7 @@ void dump_msg_content(msg_t *msg)
     printf("\tMark: %llu |Sender: LP%u |Receiver: LP%u |TS: %f |Send T.: %f |Type: %d |Kind: %d |Randezvous: %llu \n", msg->mark, msg->sender.to_int,
            msg->receiver.to_int, msg->timestamp, msg->send_time, msg->type, msg->message_kind, msg->rendezvous_mark);
 /*  printf("\tsender: %u\n", msg->sender.to_int);
-	printf("\treceiver: %u\n", msg->receiver.to_int); //fixed sender.to_int */
+	printf("\treceiver: %u\n", msg->receiver.to_int); */
 #ifdef HAVE_MPI
 	printf("\tcolour: %d\n", msg->colour);
 #endif
@@ -820,14 +820,14 @@ void validate_msg(msg_t *msg)
         dump_msg_content(msg);
     }
     if(msg->type == 0){
-        printf("\tMESSAGE VALIDATION FAILED: message type = 0, dest: LP%d\n", msg->receiver.to_int);
+        printf("\tMESSAGE VALIDATION FAILED: message type = %d, dest: LP%d\n",msg->type,  msg->receiver.to_int);
         dump_msg_content(msg);
     }
 
     assert(msg->receiver.to_int <= n_LP_tot);
     assert(msg->sender.to_int <= n_LP_tot);
     assert(msg->send_time <= msg->timestamp);
-    assert(msg->type != 0); //special case when the whole msg = 0
+    assert(msg->type != 0);
 	assert(msg->message_kind == positive || msg->message_kind == negative || msg->message_kind == control);
 	assert(mark_to_gid(msg->mark) <= n_LP_tot);
     assert(mark_to_gid(msg->mark) == msg->sender.to_int);

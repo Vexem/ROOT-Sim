@@ -525,6 +525,9 @@ void asym_process(void) {
                         abort();
                     }
                 }
+                else{   //TO BE DISCARDED
+                    lo_prio_msg->unprocessed=false;
+                }
             }
         } while (true);
     }
@@ -771,19 +774,21 @@ void asym_schedule(void) {
             rollback(chosen_LP);
             chosen_LP->state = LP_STATE_READY;
 
-            while(true){
-                evt_to_prune = list_head(chosen_LP->retirement_queue);
-                if(evt_to_prune == NULL){
-                    break;
-                }
-               // else if (evt_to_prune->unprocessed==false) {  //TO BE VERIFIED
+            evt_to_prune = list_head(chosen_LP->retirement_queue);
+            while(evt_to_prune!=NULL){
+                if (evt_to_prune->unprocessed==false) {
                     list_delete_by_content(chosen_LP->retirement_queue, evt_to_prune);
                     debug("Message (type %d) RELEASED (LP%u, ts:%f | SCHEDULER)\n", evt_to_prune->type,
                           chosen_LP->gid.to_int, evt_to_prune->timestamp);
                     msg_release(evt_to_prune);
-                //}
+                }
+                else{
+                    evt_to_prune = list_next(evt_to_prune);
+                    if (evt_to_prune == NULL) evt_to_prune = list_head(chosen_LP->retirement_queue);
+                    continue;
+                }
+                evt_to_prune = list_head(chosen_LP->retirement_queue);
             }
-            continue;
         }
 
         if(chosen_LP->state != LP_STATE_READY_FOR_SYNCH && !is_blocked_state(chosen_LP->state)){

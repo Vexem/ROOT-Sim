@@ -109,7 +109,7 @@ void ProcessEvent(unsigned int curr_lp, simtime_t event_ts, int event_type, even
 */
     event_content_type new_event_content;
 
-    bool shortcut = 1;      //1 FOR DEBUG
+    bool shortcut = true;      //TRUE FOR DEBUG
 
 	new_event_content.cell = -1;
 	new_event_content.channel = -1;
