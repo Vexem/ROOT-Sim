@@ -286,7 +286,7 @@ void initialize_worker_thread(void)
 * @param next_LP A pointer to the lp_struct of the LP which has to be activated
 * @param next_evt A pointer to the event to be processed by the LP
 */
-void activate_LP(struct lp_struct *next_LP, msg_t * next_evt)
+void activate_LP(struct lp_struct *next_LP, msg_t *next_evt)
 {
 	// Notify the LP main execution loop of the information to be used for actual simulation
 	current = next_LP;
@@ -310,8 +310,7 @@ void activate_LP(struct lp_struct *next_LP, msg_t * next_evt)
 */
     context_switch(&kernel_context, &next_LP->context);
 
-    current->last_processed = next_evt;
-    //debug("Message with ts:%f is LAST_PROCESSED for LP%u \n", next_evt->timestamp, current->gid.to_int );
+
 
 //      #ifdef HAVE_PREEMPTION
 //        if(!rootsim_config.disable_preemption)
@@ -326,7 +325,11 @@ void activate_LP(struct lp_struct *next_LP, msg_t * next_evt)
 	}
 #endif
 
-	current = NULL;
+    current->last_processed = next_evt;
+    current_evt->unprocessed = false;
+
+    current = NULL;
+    current_evt = NULL;
 }
 
 bool check_rendevouz_request(struct lp_struct *lp)
@@ -364,7 +367,6 @@ void asym_process_one_event(msg_t *msg) {
     }
     activate_LP(LP, msg);
     spin_unlock(&LP->bound_lock);
-    msg->unprocessed = false;
 /*
     if(msg->timestamp > LP->bound->timestamp) {
         debug("Processing an event (%f) after bound (%f) at LP%d\n", msg->timestamp, LP->bound->timestamp, LP->gid.to_int);
@@ -418,10 +420,8 @@ void find_a_match(msg_t *lo_prio) {
                                  lo_prio->timestamp, lo_prio->timestamp, 0, NULL);
                         rb_ack->message_kind = control;
                         rb_ack->mark = hi_prio_msg->mark;
-                        debug("Message ROLLBACK ACK SENT -> LP%u, ts %f\n", lo_prio_msg->receiver.to_int,
-                              lo_prio_msg->timestamp);
                         pt_put_out_msg(rb_ack);
-                        msg_release(lo_prio);       //CONTROLLARE
+                        //msg_release(lo_prio);       //CONTROLLARE
                         msg_release(hi_prio_msg);   //CONTROLLARE
                         return;
                     }
@@ -463,15 +463,9 @@ void asym_process(void) {
     while((hi_prio_msg = pt_get_hi_prio_msg()) !=  NULL) {
         validate_msg(hi_prio_msg);
 
-        debug("Message (type %d) EXTRACTED from HI_PRIO_QUEUE | sender: LP%u |receiver: LP%u |ts: %f |Send T.: %f \n",
-                hi_prio_msg->type, hi_prio_msg->sender.to_int, hi_prio_msg->receiver.to_int, hi_prio_msg->timestamp,
-                hi_prio_msg->send_time);
         do {
             while ((lo_prio_msg = pt_get_lo_prio_msg()) == NULL);
             validate_msg(lo_prio_msg);
-            debug("Message (type %d) EXTRACTED from LO_PRIO_QUEUE | sender: LP%u |receiver: LP%u |ts: %f |Send T.: %f \n",
-                    lo_prio_msg->type, lo_prio_msg->sender.to_int, lo_prio_msg->receiver.to_int,
-                    lo_prio_msg->timestamp, lo_prio_msg->send_time);
 
             type = lo_prio_msg->type;
             if (is_control_msg(type)){
@@ -483,8 +477,6 @@ void asym_process(void) {
                     abort();
                 }
                 else{  //IT IS A BUBBLE
-                    debug("Message BUBBLE EXTRACTED -> LP%u, ts %f\n", lo_prio_msg->receiver.to_int,
-                            lo_prio_msg->timestamp);
                     if(lo_prio_msg->receiver.to_int != hi_prio_msg->receiver.to_int){   //DIFFERENT RECEIVERS
                         printf("\tWARNING: lo/hi prio messages have DIFFERENT receivers\n");
                         dump_msg_content(lo_prio_msg);
@@ -506,7 +498,7 @@ void asym_process(void) {
                         debug("Message ROLLBACK ACK SENT -> LP%u, ts %f\n", lo_prio_msg->receiver.to_int,
                                 lo_prio_msg->timestamp);
                         pt_put_out_msg(rb_ack);
-                        msg_release(lo_prio_msg);   //CONTROLLARE
+                        //msg_release(lo_prio_msg);   //CONTROLLARE
                         msg_release(hi_prio_msg);   //CONTROLLARE
                         return;
                     }
@@ -525,9 +517,9 @@ void asym_process(void) {
                         abort();
                     }
                 }
-                else{   //TO BE DISCARDED
-                    lo_prio_msg->unprocessed=false;
-                }
+               /* else{   //TO BE DISCARDED
+                    lo_prio_msg->unprocessed = false;
+                }*/
             }
         } while (true);
     }
@@ -671,7 +663,7 @@ void asym_schedule(void) {
     char first_encountered = 0;
     msg_t *chosen_EVT;
     msg_t *rb_management;
-    msg_t *evt_to_prune;
+    msg_t *evt_to_prune, *evt_to_prune_next;
 
     //timer_start(timer_local_thread);
 
@@ -763,9 +755,6 @@ void asym_schedule(void) {
             rb_management->mark = mark;
             pt_put_lo_prio_msg(chosen_LP->processing_thread, rb_management);
 
-            debug("Messages NOTICE & BUBBLE SENT to PT | receiver: LP%u, bound (=ts) %f\n",
-                    chosen_LP->gid.to_int,chosen_LP->bound->timestamp);
-
             continue;
         }
 
@@ -775,19 +764,13 @@ void asym_schedule(void) {
             chosen_LP->state = LP_STATE_READY;
 
             evt_to_prune = list_head(chosen_LP->retirement_queue);
-            while(evt_to_prune!=NULL){
-                if (evt_to_prune->unprocessed==false) {
+            while(evt_to_prune != NULL) {
+                evt_to_prune_next = list_next(evt_to_prune);
+                if (evt_to_prune->unprocessed == false && chosen_LP->last_processed != evt_to_prune) {
                     list_delete_by_content(chosen_LP->retirement_queue, evt_to_prune);
-                    debug("Message (type %d) RELEASED (LP%u, ts:%f | SCHEDULER)\n", evt_to_prune->type,
-                          chosen_LP->gid.to_int, evt_to_prune->timestamp);
                     msg_release(evt_to_prune);
                 }
-                else{
-                    evt_to_prune = list_next(evt_to_prune);
-                    if (evt_to_prune == NULL) evt_to_prune = list_head(chosen_LP->retirement_queue);
-                    continue;
-                }
-                evt_to_prune = list_head(chosen_LP->retirement_queue);
+                evt_to_prune = evt_to_prune_next;
             }
         }
 
@@ -807,8 +790,6 @@ void asym_schedule(void) {
 
         chosen_EVT->unprocessed = true;
         pt_put_lo_prio_msg(chosen_LP->processing_thread, chosen_EVT);
-        debug("Message (type %d) SENT to PT%u, (sender: LP%u, receiver: LP%u, ts %f)\n",
-                chosen_EVT->type,chosen_LP->processing_thread , chosen_EVT->sender.to_int, chosen_EVT->receiver.to_int, chosen_EVT->timestamp);
         sent_events++;
         events_to_fill_PT_port[chosen_LP->processing_thread]--;
         int chosen_LP_id = chosen_LP->lid.to_int;

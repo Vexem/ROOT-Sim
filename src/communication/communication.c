@@ -290,7 +290,6 @@ void ParallelScheduleNewEvent(unsigned int gid_receiver, simtime_t timestamp, un
 
 	// In Silent execution, we do not send again already sent messages
 	if (unlikely(current->state == LP_STATE_SILENT_EXEC)) {
-        debug("OLD Message RECEIVED (SILENT EXECUTION, receiver: LP%u, ts: %f)\n", gid_receiver, timestamp);
 		return;
 	}
 	// Check whether the destination LP is out of range
@@ -316,12 +315,9 @@ void ParallelScheduleNewEvent(unsigned int gid_receiver, simtime_t timestamp, un
 
 	if (unlikely(event->type == RENDEZVOUS_START)) {
 		event->rendezvous_mark = current_evt->rendezvous_mark;
-        debug("rendezvous_start mark = %llu\n", event->rendezvous_mark);
 		fflush(stdout);
 	}
     validate_msg(event);
-    debug("Message (type %d) successfully RECEIVED from MODEL (sender: LP%u, receiver: LP%u, ts: %f, send time: %f)\n",
-            event->type, event->sender.to_int, event->receiver.to_int, event->timestamp, event->send_time);
 	insert_outgoing_msg(event);
 
  out:
@@ -362,8 +358,6 @@ void send_antimessages(struct lp_struct *lp, simtime_t correct_event_ts)
 		msg->message_kind = negative;
 
         //printf("mark: %llu, remove_timestamp: %f \n", msg->mark, anti_msg->timestamp);
-        debug("Antimessage (type %d) SENT | receiver: LP%u, ts: %f sendtime: %f\n",
-                msg->type, msg->receiver.to_int,msg->timestamp, msg->send_time);
 		Send(msg);
 
 		// Remove the already-sent antimessage from the output queue
@@ -466,8 +460,6 @@ void send_outgoing_msgs(struct lp_struct *lp)
 		msg = lp->outgoing_buffer.outgoing_msgs[i];
 		msg_to_hdr(msg_hdr, msg);
 
-        debug("Message (type %d) SENT to the LP's bottom halves | sender: LP%u, receiver: LP%u, ts: %f\n",
-               msg->type, msg->sender.to_int, msg->receiver.to_int, msg->timestamp);
 		Send(msg);
 
 		// register the message in the sender's output queue, for antimessage management
@@ -486,9 +478,6 @@ void asym_send_outgoing_msgs(struct lp_struct *lp) {
 
     for(i = 0; i < lp->outgoing_buffer.size; i++) {
         msg = lp->outgoing_buffer.outgoing_msgs[i];
-
-        debug("Message (type %d) PUT in the PT's output_port | sender: LP%u, receiver: LP%u, ts: %f\n", msg->type,
-                msg->sender.to_int, msg->receiver.to_int, msg->timestamp);
 
         pt_put_out_msg(msg);
     }
@@ -586,25 +575,22 @@ void asym_extract_generated_msgs(void) {
                  *  - LP_y is picked by STF: NOTICE/BUBBLES are sent to PT
                  *  - PT sends back ACK for LP_x, for the first incarnation of rollback
                  */
-                if(lp_receiver->rollback_status == REQUESTED){
-                    debug("Message (type %d) is DISCARDED since LP%u received a new straggler/negative message but it's not been scheduled yet\n",
-                            msg->type,lp_receiver->gid.to_int);
+                if(lp_receiver->rollback_status == REQUESTED) {
                     goto discard;
                 }
 
                 if(lp_receiver->rollback_status == PROCESSING && lp_receiver->rollback_mark > msg->mark){
-                    debug("Message (type %d) is DISCARDED since LP%u is in a more recent rollback stance\n", msg->type,lp_receiver->gid.to_int);
                     goto discard;
                 }
 
-                if(lp_receiver->rollback_status == IDLE){
+                if(lp_receiver->rollback_status == IDLE) {
                     printf("\tERROR: The impossible happened, LP%u with rollback_mark = %llu and rb_status IDLE just received a ROLLBACK_ACK",
                             lp_receiver->gid.to_int,lp_receiver->rollback_mark);
                     dump_msg_content(msg);
                     abort();
                 }
 
-                if(lp_receiver->rollback_mark < msg->mark){
+                if(lp_receiver->rollback_mark < msg->mark) {
                     printf("\tERROR: msg mark (%llu) CANNOT BE BIGGER than LP%u's rollback mark (%llu)\n",msg->mark,lp_receiver->gid.to_int,lp_receiver->rollback_mark);
                     dump_msg_content(msg);
                     abort();
@@ -620,7 +606,6 @@ void asym_extract_generated_msgs(void) {
 
                     lp_receiver->state = LP_STATE_ROLLBACK_ALLOWED;
                     lp_receiver->rollback_status = IDLE;
-                    debug("Message ROLLBACK ACK RECEIVED for LP%u with timestamp %llu\n", gid_to_int(msg->receiver), msg->timestamp);
                     goto discard;
                 }
 
@@ -633,8 +618,6 @@ void asym_extract_generated_msgs(void) {
                 continue;
             }
 
-            debug("Message (type %d) SENT to the LP's bottom halves | sender: LP%u, receiver: LP%u, ts: %f, sendtime: %f\n",
-                   msg->type, msg->sender.to_int, msg->receiver.to_int, msg->timestamp,  msg->send_time);
             Send(msg);
 
             lp_sender = find_lp_by_gid(msg->sender);
@@ -819,15 +802,10 @@ void validate_msg(msg_t *msg)
         printf("\tMESSAGE VALIDATION FAILED: message send_time > timestamp, dest: LP%d\n", msg->receiver.to_int);
         dump_msg_content(msg);
     }
-    if(msg->type == 0){
-        printf("\tMESSAGE VALIDATION FAILED: message type = %d, dest: LP%d\n",msg->type,  msg->receiver.to_int);
-        dump_msg_content(msg);
-    }
 
     assert(msg->receiver.to_int <= n_LP_tot);
     assert(msg->sender.to_int <= n_LP_tot);
     assert(msg->send_time <= msg->timestamp);
-    assert(msg->type != 0);
 	assert(msg->message_kind == positive || msg->message_kind == negative || msg->message_kind == control);
 	assert(mark_to_gid(msg->mark) <= n_LP_tot);
     assert(mark_to_gid(msg->mark) == msg->sender.to_int);

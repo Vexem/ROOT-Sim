@@ -109,7 +109,7 @@ void ProcessEvent(unsigned int curr_lp, simtime_t event_ts, int event_type, even
 */
     event_content_type new_event_content;
 
-    bool shortcut = true;      //TRUE FOR DEBUG
+    bool shortcut = false;      //TRUE FOR DEBUG
 
 	new_event_content.cell = -1;
 	new_event_content.channel = -1;
@@ -121,7 +121,6 @@ void ProcessEvent(unsigned int curr_lp, simtime_t event_ts, int event_type, even
 	lp_state_type *state;
 	state = (lp_state_type*)ptr;
 
-    debug("Message (type %d) EXECUTED by LP%u with ts %f \n", event_type, curr_lp, event_ts);
     //printf("    ...WITH CONTENT - cell: %d |from: %u |sent at: %f |channel: %d |call t.t.: %f\n", event_content->cell, event_content->from,
     //      event_content->sent_at, event_content->channel, event_content->call_term_time);
 
@@ -217,13 +216,9 @@ void ProcessEvent(unsigned int curr_lp, simtime_t event_ts, int event_type, even
 				}
 
 				if(shortcut || new_event_content.call_term_time < handoff_time) {
-                    debug("Message <type %d - START_CALL> scheduled new END_CALL message (receiver: LP%u, type: %d, ts: %f, ctt: %f) \n",
-                            event_type, curr_lp, END_CALL, new_event_content.call_term_time, new_event_content.call_term_time);
 					ScheduleNewEvent(curr_lp, new_event_content.call_term_time, END_CALL, &new_event_content, sizeof(new_event_content));
 				} else {
 					new_event_content.cell = FindReceiver();
-                    debug("Message <type %d - START_CALL> scheduled new HANDOFF_LEAVE message (receiver: LP%u, type: %d, ts: %f, ctt: %f) \n",
-                                     event_type, curr_lp, HANDOFF_LEAVE, handoff_time, new_event_content.call_term_time);
 					ScheduleNewEvent(curr_lp, handoff_time, HANDOFF_LEAVE, &new_event_content, sizeof(new_event_content));
 				}
 			}
@@ -269,8 +264,6 @@ void ProcessEvent(unsigned int curr_lp, simtime_t event_ts, int event_type, even
 
 			new_event_content.call_term_time =  event_content->call_term_time;
 			new_event_content.from = curr_lp;
-            debug("Message <type %d - HANDOFF_LEAVE> scheduled new HANDOFF_RECV message (receiver: LP%u, type: %d, ts: %f, ctt: %f) \n",
-                   event_type, event_content->cell, HANDOFF_RECV, event_ts, new_event_content.call_term_time);
 			ScheduleNewEvent(event_content->cell, event_ts, HANDOFF_RECV, &new_event_content, sizeof(new_event_content));
 			break;
 
@@ -302,13 +295,9 @@ void ProcessEvent(unsigned int curr_lp, simtime_t event_ts, int event_type, even
 				}
 
 				if(new_event_content.call_term_time < handoff_time ) {
-                    debug("Message <type %d - HANDOFF_RECV> scheduled new END_CALL message (receiver: LP%u, type: %d, ts: %f, ctt: %f) \n",
-                                event_type, curr_lp, END_CALL, new_event_content.call_term_time, new_event_content.call_term_time);
 					ScheduleNewEvent(curr_lp, new_event_content.call_term_time, END_CALL, &new_event_content, sizeof(new_event_content));
 				} else {
 					new_event_content.cell = FindReceiver();
-                    debug("Message <type %d - HANDOFF_RECV> scheduled new HANDOFF_LEAVE message (receiver: LP%u, type: %d, ts: %f, ctt: %f) \n",
-                               event_type, curr_lp, HANDOFF_LEAVE, handoff_time, new_event_content.call_term_time);
 					ScheduleNewEvent(curr_lp, handoff_time, HANDOFF_LEAVE, &new_event_content, sizeof(new_event_content));
 				}
 			}
@@ -329,8 +318,6 @@ void ProcessEvent(unsigned int curr_lp, simtime_t event_ts, int event_type, even
 			fading_recheck(state);
 
 			timestamp = event_ts + (simtime_t) (FADING_RECHECK_FREQUENCY );
-            debug("Message <type %d - FADING_RECHECK> scheduled new FADING_RECHECK message (receiver: LP%u, type: %d, ts: %f, ctt: %f) \n",
-                    event_type, curr_lp, FADING_RECHECK, timestamp, new_event_content.call_term_time);
 			ScheduleNewEvent(curr_lp, timestamp, FADING_RECHECK, NULL, 0);
 
 			break;

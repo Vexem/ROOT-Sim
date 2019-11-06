@@ -219,11 +219,8 @@ static inline void reduce_local_gvt(void)
 		//if (lp->last_processed->next == NULL)
 		//	continue;
 
-        local_min[local_tid] =
-                min(local_min[local_tid], lp->last_processed->timestamp);
-
-        local_min[local_tid] =
-                min(local_min[local_tid], lp->bound->timestamp);
+        local_min[local_tid] = min(local_min[local_tid], lp->last_processed->timestamp);
+        local_min[local_tid] = min(local_min[local_tid], lp->bound->timestamp);
 
         // local_min[local_tid] =
         //       min(local_min[local_tid], lp->last_sent_time);
@@ -252,26 +249,27 @@ simtime_t GVT_phases(void)
 	}
 
 	if (thread_phase == tphase_send && atomic_read(&counter_A) == 0) {
-    /**
-    * In the asymmetric version, repeating a main loop is such that
-    * the output port is completely emptied in the next iteration of the main
-    * loop
-    */
-    if(rootsim_config.num_controllers == 0){
-#ifdef HAVE_MPI
-        // Check whether we have new ingoing messages sent by remote instances
-		receive_remote_msgs();
-#endif
-        process_bottom_halves();
-        schedule();
-    } else {
-        asym_extract_generated_msgs();
-        process_bottom_halves();
+        /**
+        * In the asymmetric version, repeating a main loop is such that
+        * the output port is completely emptied in the next iteration of the main
+        * loop
+        */
+        if(rootsim_config.num_controllers == 0) {
+    #ifdef HAVE_MPI
+            // Check whether we have new ingoing messages sent by remote instances
+            receive_remote_msgs();
+    #endif
+            process_bottom_halves();
+            schedule();
+        } else {
+            asym_extract_generated_msgs();
+            process_bottom_halves();
+        }
+
+        thread_phase = tphase_B;
+        atomic_dec(&counter_send);
+        return -1.0;
     }
-		thread_phase = tphase_B;
-		atomic_dec(&counter_send);
-		return -1.0;
-	}
 
 	if (thread_phase == tphase_B && atomic_read(&counter_send) == 0) {
 #ifdef HAVE_MPI
@@ -344,8 +342,7 @@ simtime_t gvt_operations(void)
 	// slightly the number of clock reads
 	if (kernel_phase == kphase_idle) {
 
-		if (start_new_gvt() &&
-		    iCAS(&current_GVT_round, my_GVT_round, my_GVT_round + 1)) {
+		if (start_new_gvt() && iCAS(&current_GVT_round, my_GVT_round, my_GVT_round + 1)) {
 
 			timer_start(gvt_round_timer);
 

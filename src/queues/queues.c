@@ -98,7 +98,6 @@ msg_t *advance_to_next_event(struct lp_struct *lp)
     spin_lock(&lp->bound_lock);
 	if (likely(list_next(lp->bound) != NULL)) {
 		lp->bound = list_next(lp->bound);
-		debug("BOUND ADVANCED for LP%u to ts %f\n",lp->gid.to_int,lp->bound->timestamp);
 		bound = lp->bound;
 	}
     spin_unlock(&lp->bound_lock);
@@ -146,8 +145,6 @@ void process_bottom_halves(void)
 
 		while ((msg_to_process = get_msg(lp->bottom_halves)) != NULL) {
 			receiver = find_lp_by_gid(msg_to_process->receiver);
-            debug("Message (type %d) EXTRACTED from LP%u's BOTTOM HALVES (ts: %f, kind: %u)\n",
-                   msg_to_process->type, lp->gid.to_int, msg_to_process->timestamp, msg_to_process->message_kind);
 
 			// Sanity check
 			if (unlikely
@@ -187,52 +184,37 @@ void process_bottom_halves(void)
 				}
 
 				// If the matched message is in the past, we have to rollback
-                    ts_bound = receiver->bound->timestamp;
+                ts_bound = receiver->bound->timestamp;
+                if (matched_msg->timestamp <= ts_bound) {
 
-                    if (matched_msg->timestamp <= ts_bound) {
-
-                        receiver->bound = list_prev(matched_msg);
-                        while ((receiver->bound != NULL) && D_EQUAL(receiver->bound->timestamp, msg_to_process->timestamp)) {
-                            receiver->bound = list_prev(receiver->bound);
-                            assert(receiver->bound != NULL);
-                        }
-
-                        receiver->state = LP_STATE_ROLLBACK;
-                        receiver->rollback_status = REQUESTED;
-
-                        debug("[>RB<] Setting LP%u to be ROLLED BACK (ANTIMESSAGE - ts: %f <= bound: %f)\n", receiver->gid.to_int, msg_to_process->timestamp, ts_bound);
-                        debug("[>RB<] LP%u's bound RETURNED BACK to: %f\n",receiver->gid.to_int,receiver->bound->timestamp);
-                        debug("[>RB<] MATCHED MESSAGE-> Mark: %llu |Sen: LP%u |Rec: LP%u |ts: %f |type: %d |kind: %d \n", matched_msg->mark, matched_msg->sender.to_int,
-                               matched_msg->receiver.to_int, matched_msg->timestamp, matched_msg->type, matched_msg->message_kind);
-                        //dump_msg_content(matched_msg);
-
-                        if(matched_msg->unprocessed == false)
-                            goto delete;
-
-                        // Delete the matched message
-                        list_delete_by_content(receiver->queue_in, matched_msg);
-                        list_insert_tail(receiver->retirement_queue, matched_msg);
-
-                        // Rollback last sent time as well if needed
-                        //if(receiver->bound->timestamp < receiver->last_sent_time)       //PER ORA INUTILE
-                        //    receiver->last_sent_time = receiver->bound->timestamp;
-
-                    } else {
-                        delete:
-
-                        // Unchain the event from the input queue
-                        list_delete_by_content(receiver->queue_in,matched_msg);
-                        // Delete the matched message
-                        debug("Message (type %d) RELEASED (LP%u, ts:%f | QUEUES)\n", matched_msg->type, receiver->gid.to_int,matched_msg->timestamp);
-
-                        msg_release(matched_msg);
-                        //list_insert_tail(LPS(lid_receiver)->retirement_queue, matched_msg);
-
+                    receiver->bound = list_prev(matched_msg);
+                    while ((receiver->bound != NULL) && D_EQUAL(receiver->bound->timestamp, msg_to_process->timestamp)) {
+                        receiver->bound = list_prev(receiver->bound);
+                        assert(receiver->bound != NULL);
                     }
+
+                    receiver->state = LP_STATE_ROLLBACK;
+                    receiver->rollback_status = REQUESTED;
+
+                    //dump_msg_content(matched_msg);
+                }
+
+                // The matched message is unchained from the queue in
+                list_delete_by_content(receiver->queue_in, matched_msg);
+
+                if(matched_msg->unprocessed == true || receiver->last_processed == matched_msg) {
+                    // If the pointer is still reachable, give it to a garbage collector
+                    list_insert_tail(receiver->retirement_queue, matched_msg);
+                } else {
+                    // Delete the matched message
+                    msg_release(matched_msg);
+                }
+
+
 #ifdef HAVE_MPI
-				register_incoming_msg(msg_to_process);
+            register_incoming_msg(msg_to_process);
 #endif
-                    spin_unlock(&receiver->bound_lock);
+                spin_unlock(&receiver->bound_lock);
 				break;
 
 				// It's a positive message
@@ -261,10 +243,6 @@ void process_bottom_halves(void)
                     receiver->rollback_status = REQUESTED;
 
 
-                    debug("[>RB<] Setting LP%u to be ROLLED BACK (STRAGGLER - ts: %f < bound: %f)\n", receiver->gid.to_int, msg_to_process->timestamp, ts_bound);
-                    debug("[>RB<] LP%u's bound RETURNED BACK to: %f\n",receiver->gid.to_int,receiver->bound->timestamp);
-                    debug("[>RB<] STRAGGLER MESSAGE-> Mark: %llu |Sen: LP%u |Rec: LP%u |ts: %f |type: %d |kind: %d\n", msg_to_process->mark, msg_to_process->sender.to_int,
-                           msg_to_process->receiver.to_int, msg_to_process->timestamp, msg_to_process->type, msg_to_process->message_kind);
                     //dump_msg_content(msg_to_process);
 
                     // Rollback last sent time as well if needed

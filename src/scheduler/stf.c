@@ -56,10 +56,8 @@ struct lp_struct *smallest_timestamp_first(void)
 	simtime_t evt_time, next_time = INFTY;
 
 	foreach_bound_lp(lp) {
-        spin_lock(&lp->bound_lock);
 		// If waiting for synch, don't take into account the LP
 		if (is_blocked_state(lp->state)) {
-            spin_unlock(&lp->bound_lock);
 			continue;
 		}
 		// If the LP is in READY_FOR_SYNCH it has to handle the same ECS message
@@ -75,7 +73,6 @@ struct lp_struct *smallest_timestamp_first(void)
 			next_time = evt_time;
 			next_lp = lp;
 		}
-        spin_unlock(&lp->bound_lock);
 	}
 	return next_lp;
 }

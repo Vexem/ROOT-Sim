@@ -332,14 +332,11 @@ void check_content(msg_t *msg, void *payload){
         abort();
     }
 
-    //debug("Message (type %d) PASSED THE CONTROL | cell: %d, ctt: %f\n",msg->type,eventContentType->cell,eventContentType->call_term_time);
 
 }
 
 void print_content(msg_t *msg,void *payload){
     event_content_type *eventContentType = (event_content_type*) payload;
-    debug("Message (type %d), ts:%f ||| PAYLOAD: cell: %d |from: %u |sent at: %f |channel: %d |call t.t.: %f\n",msg->type,msg->timestamp, eventContentType->cell, eventContentType->from,
-          eventContentType->sent_at, eventContentType->channel, eventContentType->call_term_time);
 }
 
 void ProcessEventTopology(void){
