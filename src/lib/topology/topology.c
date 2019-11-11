@@ -310,35 +310,6 @@ double GetValueTopology(unsigned from, unsigned to) {
 	return ret;
 }
 
-void check_content(msg_t *msg, void *payload){
-    return;
-
-    event_content_type *eventContentType = (event_content_type*) payload;
-
-    if(msg->type == 20 || msg->type == 0 || is_control_msg(msg->type) || msg->message_kind == negative)
-        return;
-    if(msg->type == 31 && eventContentType->cell != -1){
-        fprintf(stderr,"\tERROR: Type 31 msg integrity compromised (cell =/= -1 and = %d)\n",eventContentType->cell);
-        print_content(msg,eventContentType);
-        dump_msg_content(msg);
-        fflush(stdout);
-        abort();
-    }
-    if(D_EQUAL(eventContentType->call_term_time,0)){
-        fprintf(stderr,"\tERROR: LP%d - PAYLOAD WITH CALL TERM TIME = %f\n", msg->receiver.to_int, eventContentType->call_term_time);
-        print_content(msg,eventContentType);
-        dump_msg_content(msg);
-        fflush(stdout);
-        abort();
-    }
-
-
-}
-
-void print_content(msg_t *msg,void *payload){
-    event_content_type *eventContentType = (event_content_type*) payload;
-}
-
 void ProcessEventTopology(void){
 	switch(current_evt->type){
 		case TOPOLOGY_UPDATE:

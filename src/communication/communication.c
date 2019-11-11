@@ -232,21 +232,14 @@ msg_t *get_msg_from_slab(struct lp_struct *lp)
  */
 void msg_release(msg_t *msg)
 {
-/*	struct lp_struct *lp;
+    struct lp_struct *lp;
 
-	if (likely(sizeof(msg_t) + msg->size <= SLAB_MSG_SIZE)) {
-		lp = which_slab_to_use(msg->sender, msg->receiver);
-#ifndef NDEBUG
-        bzero(msg, sizeof(msg_t) + msg->size);
-#endif
-		slab_free(lp->mm->slab, msg);
-	} else {*/
-
-#ifndef NDEBUG
-        bzero(msg, sizeof(msg_t) + msg->size);
-#endif
-		rsfree(msg);
-	//}
+    if (likely(sizeof(msg_t) + msg->size <= SLAB_MSG_SIZE)) {
+        lp = which_slab_to_use(msg->sender, msg->receiver);
+        slab_free(lp->mm->slab, msg);
+    } else {
+        rsfree(msg);
+    }
 }
 
 
@@ -344,8 +337,6 @@ void send_antimessages(struct lp_struct *lp, simtime_t correct_event_ts)
 	msg_hdr_t *anti_msg, *anti_msg_prev;
 	msg_t *msg;
 
-    //printf("send_antimessages to lp: %d, starting from time: %f \n", lp->gid.to_int, correct_event_ts);
-
 
     if (unlikely(list_empty(lp->queue_out)))
 		return;
@@ -357,7 +348,6 @@ void send_antimessages(struct lp_struct *lp, simtime_t correct_event_ts)
 		hdr_to_msg(anti_msg, msg);
 		msg->message_kind = negative;
 
-        //printf("mark: %llu, remove_timestamp: %f \n", msg->mark, anti_msg->timestamp);
 		Send(msg);
 
 		// Remove the already-sent antimessage from the output queue
@@ -464,8 +454,6 @@ void send_outgoing_msgs(struct lp_struct *lp)
 
 		// register the message in the sender's output queue, for antimessage management
 		list_insert(lp->queue_out, send_time, msg_hdr);
-        //if(msg->send_time > lp->last_sent_time)
-        //    lp->last_sent_time = msg->send_time;
 	}
 
 	lp->outgoing_buffer.size = 0;
@@ -529,28 +517,25 @@ void asym_send_outgoing_msgs(struct lp_struct *lp) {
  */
 void pack_msg(msg_t **msg, GID_t sender, GID_t receiver, int type, simtime_t timestamp, simtime_t send_time, size_t size, void *payload)
 {
-	// Check if we can rely on a slab to initialize the message
-	/*if (likely(sizeof(msg_t) + size <= SLAB_MSG_SIZE)) {
-		*msg = get_msg_from_slab(which_slab_to_use(sender, receiver));
-#ifndef NDEBUG
-		bzero(*msg, sizeof(msg_t) + size);
-#endif
-	} else {*/
-		*msg = rsalloc(sizeof(msg_t) + size);
-		bzero(*msg, sizeof(msg_t) + size);
-	//}
+// Check if we can rely on a slab to initialize the message
+    if (likely(sizeof(msg_t) + size <= SLAB_MSG_SIZE)) {
+        *msg = get_msg_from_slab(which_slab_to_use(sender, receiver));
+    } else {
+        *msg = rsalloc(sizeof(msg_t) + size);
+        bzero(*msg, sizeof(msg_t) + size);
+    }
 
-	(*msg)->sender = sender;
-	(*msg)->receiver = receiver;
-	(*msg)->type = type;
-	(*msg)->message_kind = positive;
-	(*msg)->timestamp = timestamp;
-	(*msg)->send_time = send_time;
-	(*msg)->size = size;
-	// TODO: si può generare qua dentro la marca, perché si usa sempre il sender. Occhio al gid/lid!!!!
+    (*msg)->sender = sender;
+    (*msg)->receiver = receiver;
+    (*msg)->type = type;
+    (*msg)->message_kind = positive;
+    (*msg)->timestamp = timestamp;
+    (*msg)->send_time = send_time;
+    (*msg)->size = size;
+    // TODO: si può generare qua dentro la marca, perché si usa sempre il sender. Occhio al gid/lid!!!!
 
-	if (payload != NULL && size > 0)
-		memcpy((*msg)->event_content, payload, size);
+    if (payload != NULL && size > 0)
+        memcpy((*msg)->event_content, payload, size);
 }
 
 void asym_extract_generated_msgs(void) {
@@ -583,14 +568,14 @@ void asym_extract_generated_msgs(void) {
                     goto discard;
                 }
 
-                if(lp_receiver->rollback_status == IDLE) {
+                if(lp_receiver->rollback_status == IDLE) {  //integrity check
                     printf("\tERROR: The impossible happened, LP%u with rollback_mark = %llu and rb_status IDLE just received a ROLLBACK_ACK",
                             lp_receiver->gid.to_int,lp_receiver->rollback_mark);
                     dump_msg_content(msg);
                     abort();
                 }
 
-                if(lp_receiver->rollback_mark < msg->mark) {
+                if(lp_receiver->rollback_mark < msg->mark) {    //integrity check
                     printf("\tERROR: msg mark (%llu) CANNOT BE BIGGER than LP%u's rollback mark (%llu)\n",msg->mark,lp_receiver->gid.to_int,lp_receiver->rollback_mark);
                     dump_msg_content(msg);
                     abort();
@@ -621,10 +606,6 @@ void asym_extract_generated_msgs(void) {
             Send(msg);
 
             lp_sender = find_lp_by_gid(msg->sender);
-
-            //NO LONGER USED
-            //if(msg->send_time > lp_sender->last_sent_time && lp_sender->state == LP_STATE_READY)
-            //    lp_sender->last_sent_time = msg->send_time;
 
             msg_hdr = get_msg_hdr_from_slab(lp_sender);
             msg_to_hdr(msg_hdr, msg);
@@ -788,21 +769,6 @@ unsigned int mark_to_gid(unsigned long long mark)
  */
 void validate_msg(msg_t *msg)
 {
-    //check_content(msg,msg->event_content);
-
-	if(msg->receiver.to_int > n_LP_tot) {
-	    printf("\tMESSAGE VALIDATION FAILED: message receiver id > n_LP_tot, dest: LP%d\n", msg->receiver.to_int);
-        dump_msg_content(msg);
-    };
-    if(msg->sender.to_int > n_LP_tot) {
-        printf("\tMESSAGE VALIDATION FAILED: message receiver id > n_LP_tot, dest: LP%d\n", msg->receiver.to_int);
-        dump_msg_content(msg);
-    };
-    if(msg->send_time > msg->timestamp) {
-        printf("\tMESSAGE VALIDATION FAILED: message send_time > timestamp, dest: LP%d\n", msg->receiver.to_int);
-        dump_msg_content(msg);
-    }
-
     assert(msg->receiver.to_int <= n_LP_tot);
     assert(msg->sender.to_int <= n_LP_tot);
     assert(msg->send_time <= msg->timestamp);

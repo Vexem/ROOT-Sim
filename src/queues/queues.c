@@ -68,13 +68,11 @@ simtime_t next_event_timestamp(struct lp_struct *lp)
 		return list_head(lp->queue_in)->timestamp;
 	} else {
 		evt = list_next(lp->bound);
-		//printf("EVT = %d lp->bound->next = %d\n", evt !=NULL,lp->bound->next!= NULL);
 		if (likely(evt != NULL)) {
             return evt->timestamp;
 		}
 	}
-
-	return INFTY;
+    return INFTY;
 
 }
 
@@ -146,14 +144,11 @@ void process_bottom_halves(void)
 		while ((msg_to_process = get_msg(lp->bottom_halves)) != NULL) {
 			receiver = find_lp_by_gid(msg_to_process->receiver);
 
-			// Sanity check
-			if (unlikely
-			    (msg_to_process->timestamp < get_last_gvt()))
-				rootsim_error(true,
-					      "\tThe impossible happened: I'm receiving a message before the GVT\n");
 
-			// Handle control messages
-			if (unlikely(!receive_control_msg(msg_to_process))) {
+            if (unlikely (msg_to_process->timestamp < get_last_gvt()))  // Sanity check
+                rootsim_error(true,"\tThe impossible happened: I'm receiving a message before the GVT\n");
+
+       			if (unlikely(!receive_control_msg(msg_to_process))) {   // Handle control messages
 				msg_release(msg_to_process);
 				continue;
 			}
@@ -162,29 +157,25 @@ void process_bottom_halves(void)
 
 			switch (msg_to_process->message_kind) {
 
-			    // It's an antimessage
-			case negative:
+			case negative:  // It's an antimessage
 
 			    spin_lock(&receiver->bound_lock);
 
 				statistics_post_data(receiver, STAT_ANTIMESSAGE, 1.0);
 
-				// Find the message matching the antimessage
-				matched_msg = list_tail(receiver->queue_in);
+				matched_msg = list_tail(receiver->queue_in);    // Find the message matching the antimessage
 				while (matched_msg != NULL && matched_msg->mark != msg_to_process->mark) {
 					matched_msg = list_prev(matched_msg);
 				}
 
-				// Sanity check
-				if (unlikely(matched_msg == NULL)) {
+				if (unlikely(matched_msg == NULL)) {    	// Sanity check
 					rootsim_error(false,"LP %d Received an antimessage, but no such mark has been found!\n",
 						      receiver->gid.to_int);
 					dump_msg_content(msg_to_process);
 					rootsim_error(true, "Aborting...\n");
 				}
 
-				// If the matched message is in the past, we have to rollback
-                ts_bound = receiver->bound->timestamp;
+                ts_bound = receiver->bound->timestamp;  // If the matched message is in the past, we have to rollback
                 if (matched_msg->timestamp <= ts_bound) {
 
                     receiver->bound = list_prev(matched_msg);
@@ -195,22 +186,16 @@ void process_bottom_halves(void)
 
                     receiver->state = LP_STATE_ROLLBACK;
                     receiver->rollback_status = REQUESTED;
-
-                    //dump_msg_content(matched_msg);
                 }
 
-                // The matched message is unchained from the queue in
-                list_delete_by_content(receiver->queue_in, matched_msg);
+                list_delete_by_content(receiver->queue_in, matched_msg);  // The matched message is unchained from the queue in
 
                 if(matched_msg->unprocessed == true || receiver->last_processed == matched_msg) {
                     // If the pointer is still reachable, give it to a garbage collector
                     list_insert_tail(receiver->retirement_queue, matched_msg);
                 } else {
-                    // Delete the matched message
-                    msg_release(matched_msg);
+                    msg_release(matched_msg);  // Delete the matched message
                 }
-
-
 #ifdef HAVE_MPI
             register_incoming_msg(msg_to_process);
 #endif
@@ -241,13 +226,6 @@ void process_bottom_halves(void)
 
 					receiver->state = LP_STATE_ROLLBACK;
                     receiver->rollback_status = REQUESTED;
-
-
-                    //dump_msg_content(msg_to_process);
-
-                    // Rollback last sent time as well if needed
-                    //if(receiver->bound->timestamp < receiver->last_sent_time)
-                    //     receiver->last_sent_time = receiver->bound->timestamp;
                  }
  #ifdef HAVE_MPI
                  register_incoming_msg(msg_to_process);

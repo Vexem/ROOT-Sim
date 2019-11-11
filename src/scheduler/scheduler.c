@@ -71,9 +71,6 @@ __thread unsigned int n_lp_per_thread;
 /// This is a per-thread variable pointing to the block state of the LP currently scheduled
 __thread struct lp_struct *current;
 
-/// This is a list to keep high-priority messages yet to be processed
-static __thread list(msg_t) hi_prio_list;
-
 /**
  * This is a per-thread variable telling what is the event that should be executed
  * when activating an LP. It is incorrect to rely on current->bound, as there
@@ -147,8 +144,7 @@ void scheduler_fini(void)
 *
 * @param args arguments passed to the LP main loop. Currently, this is not used.
 */
-void LP_main_loop(void *args)
-{
+void LP_main_loop(void *args) {
 #ifdef EXTRA_CHECKS
 	unsigned long long hash1, hash2;
 	hash1 = hash2 = 0;
@@ -207,11 +203,6 @@ void LP_main_loop(void *args)
 		// Give back control to the simulation kernel's user-level thread
 		context_switch(&current->context, &kernel_context);
 	}
-}
-
-
-void initialize_processing_thread(void) {
-    hi_prio_list = new_list(msg_t);
 }
 
 void initialize_worker_thread(void)
@@ -286,8 +277,8 @@ void initialize_worker_thread(void)
 * @param next_LP A pointer to the lp_struct of the LP which has to be activated
 * @param next_evt A pointer to the event to be processed by the LP
 */
-void activate_LP(struct lp_struct *next_LP, msg_t *next_evt)
-{
+void activate_LP(struct lp_struct *next_LP, msg_t *next_evt) {
+
 	// Notify the LP main execution loop of the information to be used for actual simulation
 	current = next_LP;
 	current_evt = next_evt;
@@ -302,15 +293,7 @@ void activate_LP(struct lp_struct *next_LP, msg_t *next_evt)
 	// Activate memory view for the current LP
 	lp_alloc_schedule();
 #endif
-
-  /*  if (unlikely(is_blocked_state(next_LP->state))) {
-		rootsim_error(true, "Critical condition: LP %d has a wrong state: %d. Aborting...\n",
-			      next_LP->gid.to_int, next_LP->state);
-	}
-*/
     context_switch(&kernel_context, &next_LP->context);
-
-
 
 //      #ifdef HAVE_PREEMPTION
 //        if(!rootsim_config.disable_preemption)
@@ -325,15 +308,15 @@ void activate_LP(struct lp_struct *next_LP, msg_t *next_evt)
 	}
 #endif
 
-    current->last_processed = next_evt;
-    current_evt->unprocessed = false;
+    next_LP->last_processed = next_evt;
+    next_evt->unprocessed = false;      ///CONTROLLARE
 
     current = NULL;
     current_evt = NULL;
 }
 
-bool check_rendevouz_request(struct lp_struct *lp)
-{
+
+bool check_rendevouz_request(struct lp_struct *lp) {
 	msg_t *temp_mess;
 
 	if (lp->state != LP_STATE_WAIT_FOR_SYNCH)
@@ -352,36 +335,16 @@ void asym_process_one_event(msg_t *msg) {
     struct lp_struct *LP;
     LP = find_lp_by_gid(msg->receiver);
 
-/*  if(is_blocked_state(LP->state)){
-        fprintf(stderr, "AP: lp (gid = %d) with state %d shouldn't be blocked before calling activate_LP!\n",
-                LP->gid.to_int,LP->state);
-        abort();
-    }       */
-
-    // Process this event
-    spin_lock(&LP->bound_lock);
-    if(!belongs_to_pcs(msg->type)) {
-        printf("\tERROR: some STRANGE message was about to be sent to PCS\n");
-        dump_msg_content(msg);
-        abort();
-    }
+    spin_lock(&LP->bound_lock); //Process this event
     activate_LP(LP, msg);
     spin_unlock(&LP->bound_lock);
-/*
-    if(msg->timestamp > LP->bound->timestamp) {
-        debug("Processing an event (%f) after bound (%f) at LP%d\n", msg->timestamp, LP->bound->timestamp, LP->gid.to_int);
-        fflush(stdout);
-        abort();
-    }
-*/
-    // Send back to the controller the (possibly) generated events
-    asym_send_outgoing_msgs(LP);
+
+    asym_send_outgoing_msgs(LP); //Send back to the controller the (possibly) generated events
     LogState(LP);
 }
 
 
-
-void find_a_match(msg_t *lo_prio) {
+void find_a_match(msg_t *lo_prio_msg) {
 
     msg_t *hi_prio_msg;
     msg_t *rb_ack;
@@ -400,43 +363,40 @@ void find_a_match(msg_t *lo_prio) {
                     fflush(stdout);
                     abort();
                 }
-                else{  //IT IS A NOTICE
+                else{   //IT IS A NOTICE
 
-                    if(lo_prio->receiver.to_int != hi_prio_msg->receiver.to_int){
+                    if(lo_prio_msg->receiver.to_int != hi_prio_msg->receiver.to_int){   //DIFFERENT RECEIVERS
                         printf("\tWARNING: lo/hi prio messages have DIFFERENT receivers\n");
-                        dump_msg_content(lo_prio);
+                        dump_msg_content(lo_prio_msg);
                         dump_msg_content(hi_prio_msg);
                         abort();
                     }
-                    if(lo_prio->mark != hi_prio_msg->mark) {    //SAME RECEIVERS BUT DIFFERENT MARKS
+                    if(lo_prio_msg->mark != hi_prio_msg->mark) {    //SAME RECEIVERS BUT DIFFERENT MARKS
                         fprintf(stderr, "\tWARNING: same receiver but BUBBLE/NOTICE priority INVERSION\n");
-                        dump_msg_content(lo_prio);
+                        dump_msg_content(lo_prio_msg);
                         dump_msg_content(hi_prio_msg);
-                        fflush(stdout);
                         abort();
                     }
                     else {      //BUBBLE MATCHED
-                        pack_msg(&rb_ack, lo_prio->receiver, lo_prio->receiver, ASYM_ROLLBACK_ACK,
-                                 lo_prio->timestamp, lo_prio->timestamp, 0, NULL);
+                        pack_msg(&rb_ack, lo_prio_msg->receiver, lo_prio_msg->receiver, ASYM_ROLLBACK_ACK,
+                                 lo_prio_msg->timestamp, lo_prio_msg->timestamp, 0, NULL);
                         rb_ack->message_kind = control;
                         rb_ack->mark = hi_prio_msg->mark;
                         pt_put_out_msg(rb_ack);
-                        //msg_release(lo_prio);       //CONTROLLARE
-                        msg_release(hi_prio_msg);   //CONTROLLARE
+                        msg_release(lo_prio_msg);   //FREE THE BUBBLE
+                        msg_release(hi_prio_msg);   //FREE THE NOTICE
                         return;
                     }
                 }
             }
-            else { //NOT A CONTROL MESSAGE
-                fprintf(stderr, "\tNON-CONTROL msg in Hi_prio channel\n");
-                dump_msg_content(lo_prio);
+            else {  //NOT A CONTROL MESSAGE
+                fprintf(stderr, "\tNON-CONTROL msg in hi_prio channel\n");
+                dump_msg_content(lo_prio_msg);
                 dump_msg_content(hi_prio_msg);
                 fflush(stdout);
                 abort();
             }
     }
-
-
 }
 
 /**
@@ -451,14 +411,6 @@ void asym_process(void) {
     msg_t *hi_prio_msg;
     msg_t *rb_ack;
     int type;
-
-    //struct lp_struct *LP;
-    //bool updated;
-
-    //update_hi_prio_list();
-
-    //hi_prio_msg = list_head(hi_prio_list);
-
 
     while((hi_prio_msg = pt_get_hi_prio_msg()) !=  NULL) {
         validate_msg(hi_prio_msg);
@@ -478,7 +430,7 @@ void asym_process(void) {
                 }
                 else{  //IT IS A BUBBLE
                     if(lo_prio_msg->receiver.to_int != hi_prio_msg->receiver.to_int){   //DIFFERENT RECEIVERS
-                        printf("\tWARNING: lo/hi prio messages have DIFFERENT receivers\n");
+                        printf("\tERROR: lo/hi prio messages have DIFFERENT receivers\n");
                         dump_msg_content(lo_prio_msg);
                         dump_msg_content(hi_prio_msg);
                         abort();
@@ -490,7 +442,7 @@ void asym_process(void) {
                         fflush(stdout);
                         abort();
                     }
-                    else {      //BUBBLE MATCHED!
+                    else {  //BUBBLE-NOTICE MATCHED!
                         pack_msg(&rb_ack, lo_prio_msg->receiver, lo_prio_msg->receiver, ASYM_ROLLBACK_ACK,
                                 lo_prio_msg->timestamp, lo_prio_msg->timestamp, 0, NULL);
                         rb_ack->message_kind = control;
@@ -498,35 +450,27 @@ void asym_process(void) {
                         debug("Message ROLLBACK ACK SENT -> LP%u, ts %f\n", lo_prio_msg->receiver.to_int,
                                 lo_prio_msg->timestamp);
                         pt_put_out_msg(rb_ack);
-                        //msg_release(lo_prio_msg);   //CONTROLLARE
-                        msg_release(hi_prio_msg);   //CONTROLLARE
+                        msg_release(lo_prio_msg);   //FREE THE BUBBLE
+                        msg_release(hi_prio_msg);   //FREE THE NOTICE
                         return;
                     }
                 }
             }
-            else { //NOT A CONTROL MESSAGE
-                if (lo_prio_msg->receiver.to_int != hi_prio_msg->receiver.to_int ||
-                lo_prio_msg->timestamp < hi_prio_msg->timestamp ) {
-                    if(belongs_to_pcs(lo_prio_msg->type)) {
+            else {  //NOT A CONTROL MESSAGE
+                if (lo_prio_msg->receiver.to_int != hi_prio_msg->receiver.to_int || lo_prio_msg->timestamp < hi_prio_msg->timestamp ) {
                         asym_process_one_event(lo_prio_msg);
                         continue;
-                    }
-                    else{
-                        printf("\tERROR: some STRANGE message was about to be sent to PCS\n");
-                        dump_msg_content(lo_prio_msg);
-                        abort();
-                    }
                 }
-               /* else{   //TO BE DISCARDED
+                else {  ///TO BE DISCARDED (ts>bubble_ts) >>>CONTROLLARE<<<
                     lo_prio_msg->unprocessed = false;
-                }*/
+                }
             }
         } while (true);
     }
 
     lo_prio_msg = pt_get_lo_prio_msg();
 
-    if(lo_prio_msg == NULL)// || find_lp_by_gid(lo_prio_msg->receiver)->bound->timestamp < lo_prio_msg->timestamp)
+    if(lo_prio_msg == NULL)
          return;
 
     type = lo_prio_msg->type;
@@ -543,109 +487,8 @@ void asym_process(void) {
             dump_msg_content((lo_prio_msg));
             abort();
         }
-        else{
-            printf("\tCONTROL MSG is neither a NOTICE or a BUBBLE");
-            dump_msg_content(lo_prio_msg);
-            abort();
-        }
-    }
-
-    if(!belongs_to_pcs(lo_prio_msg->type)) {
-        printf("\tERROR: some STRANGE message was about to be sent to PCS\n");
-        dump_msg_content(lo_prio_msg);
-        abort();
     }
     asym_process_one_event(lo_prio_msg);
-
-
-
-
-    //printf("Extracted lp_MSG-> Mark: %llu |Sen: %d |Rec: %d |ts: %f |type: %d |kind: %d \n", lo_prio_msg->mark, lo_prio_msg->sender.to_int,
-    //         lo_prio_msg->receiver.to_int, lo_prio_msg->timestamp, lo_prio_msg->type, lo_prio_msg->message_kind);
-/*
-    if(lo_prio_msg->type == ASYM_ROLLBACK_BUBBLE) {
-        no_match:
-        hi_prio_msg = list_head(hi_prio_list);
-        while (hi_prio_msg != NULL) {
-            if (lo_prio_msg->mark == hi_prio_msg->mark) {   //MATCH
-                if(hi_prio_msg->event_content[0]==0){
-                    pack_msg(&rb_ack, lo_prio_msg->receiver, lo_prio_msg->receiver, ASYM_ROLLBACK_ACK,
-                            lo_prio_msg->timestamp, lo_prio_msg->timestamp, 0, NULL);
-                    rb_ack->message_kind = control;
-                    pt_put_out_msg(rb_ack);
-                }
-                list_delete_by_content(hi_prio_list, hi_prio_msg);
-                return;
-            }
-            hi_prio_msg = list_next(hi_prio_msg);
-        }
-        updated = update_hi_prio_list();
-        while(updated == false){
-            updated = update_hi_prio_list();
-        }
-        goto no_match;
-
-        fprintf(stderr, "Cannot match a bubble!\n");
-        abort();
-    }
-
-    hi_prio_msg = list_head(hi_prio_list);
-
-    while(hi_prio_msg!=NULL) {
-        if (gid_equals(lo_prio_msg->receiver, hi_prio_msg->receiver) && !is_control_msg(lo_prio_msg->type) &&
-            lo_prio_msg->timestamp > hi_prio_msg->timestamp) {
-            if (hi_prio_msg->event_content[0] == 0) {    //A FLAG
-                hi_prio_msg->event_content[0] = 1;
-                pack_msg(&rb_ack, lo_prio_msg->receiver, lo_prio_msg->receiver, ASYM_ROLLBACK_ACK,
-                         lo_prio_msg->timestamp, lo_prio_msg->timestamp, 0, NULL);
-                rb_ack->message_kind = control;
-                pt_put_out_msg(rb_ack);
-            }
-            return;
-        }
-        hi_prio_msg = list_next(hi_prio_msg);
-    }
-
-    LP = find_lp_by_gid(lo_prio_msg->receiver);
-
-    if(is_control_msg(lo_prio_msg->type)){
-        fprintf(stderr, "AP: a lo_prio control msg (type %d) shouldn't be here!\n", lo_prio_msg->type);
-        dump_msg_content(lo_prio_msg);
-        abort();
-    }
-    if(is_blocked_state(LP->state)){
-        fprintf(stderr, "AP: lp (gid = %d) with state %d shouldn't be blocked before calling activate_LP!\n",
-                LP->gid.to_int,LP->state);
-        abort();
-    }
-    // Process this event
-    activate_LP(LP, lo_prio_msg);
-    lo_prio_msg->unprocessed = false;
-
-    // Send back to the controller the (possibly) generated events
-    asym_send_outgoing_msgs(LP);
-    LogState(LP);
-    */
-
-}
-
-bool update_hi_prio_list(void) {
-    msg_t *hi_priority;
-    bool updated = false;
-    hi_priority = pt_get_hi_prio_msg();
-    while (hi_priority != NULL) {
-        if (hi_priority->type != ASYM_ROLLBACK_NOTICE){
-            fprintf(stderr,"UHPL: type %d  message shouldn't stay in the hi_prio queue!\n",
-                    hi_priority->type);
-            dump_msg_content(hi_priority);
-            abort();
-        }
-        updated = true;
-        list_insert_tail(hi_prio_list, hi_priority);
-        hi_priority = pt_get_hi_prio_msg();
-    }
-    //printf("%s \n", updated ? "Hi_Prio_List updated" : "Hi_Prio_List NOT updated");
-    return updated;
 }
 
 
@@ -660,81 +503,76 @@ void asym_schedule(void) {
     unsigned int n_PTs = Threads[tid]->num_PTs;  //PTs assigned to THIS CT
     unsigned long long mark;
     struct lp_struct *chosen_LP;
-    char first_encountered = 0;
     msg_t *chosen_EVT;
     msg_t *rb_management;
     msg_t *evt_to_prune, *evt_to_prune_next;
 
     //timer_start(timer_local_thread);
 
-    for(i=0; i < n_PTs; i++){
+    for (i = 0; i < n_PTs; i++) {
         Thread_State *PT = Threads[tid]->PTs[i];
         port_current_size[PT->tid] = get_port_current_size(PT->input_port[PORT_PRIO_LO]);
         delta_utilization = PT->port_batch_size - port_current_size[PT->tid];
-        if(delta_utilization < 0){ delta_utilization = 0; }
-        double utilization_rate = 1.0-((double) delta_utilization / (double) PT->port_batch_size);
-        //the bigger the utilization rate is, the smaller amount of free space the port can offer
-   //   printf("port_current_size[PT->tid]: %d, utilization_rate: %f, port_batch_size: %d \n",port_current_size[PT->tid], utilization_rate,PT->port_batch_size);
-        if(utilization_rate > UPPER_PORT_THRESHOLD){
-            if(PT->port_batch_size <= (MAX_PORT_SIZE - BATCH_STEP)){
-                PT->port_batch_size+=BATCH_STEP;
-            }else if(PT->port_batch_size < MAX_PORT_SIZE){
+        if (delta_utilization < 0) { delta_utilization = 0; }
+        double utilization_rate = 1.0 - ((double) delta_utilization / (double) PT->port_batch_size);
+
+        ///The bigger the utilization rate is, the smaller amount of free space the port can offer
+        //   printf("port_current_size[PT->tid]: %d, utilization_rate: %f, port_batch_size: %d \n",port_current_size[PT->tid], utilization_rate,PT->port_batch_size);
+        if (utilization_rate > UPPER_PORT_THRESHOLD) {
+            if (PT->port_batch_size <= (MAX_PORT_SIZE - BATCH_STEP)) {
+                PT->port_batch_size += BATCH_STEP;
+            } else if (PT->port_batch_size < MAX_PORT_SIZE) {
                 PT->port_batch_size++;
             }
-        }
-        else if (utilization_rate < LOWER_PORT_THRESHOLD){
-            if(PT->port_batch_size > BATCH_STEP){
-                PT->port_batch_size-=BATCH_STEP;
-            }else if(PT->port_batch_size > 1){
+        } else if (utilization_rate < LOWER_PORT_THRESHOLD) {
+            if (PT->port_batch_size > BATCH_STEP) {
+                PT->port_batch_size -= BATCH_STEP;
+            } else if (PT->port_batch_size > 1) {
                 PT->port_batch_size--;
             }
         }
 
         EventsToAdd = PT->port_batch_size - port_current_size[PT->tid];
-        if(EventsToAdd > 0) {
+        if (EventsToAdd > 0) {
             events_to_fill_PT_port[PT->tid] = EventsToAdd;
             tot_events_to_schedule += EventsToAdd;
-        }
-        else {
+        } else {
             events_to_fill_PT_port[PT->tid] = 0;
         }
     }
 
     memcpy(asym_lps_mask, lps_bound_blocks, sizeof(struct lp_struct *) * n_lp_per_thread);
-    for(i = 0; i < n_lp_per_thread; i++) {
+    for (i = 0; i < n_lp_per_thread; i++) {
         Thread_State *PT = Threads[asym_lps_mask[i]->processing_thread];  //PT assigned to that lp "i"
-        if(port_current_size[PT->tid] >= PT->port_batch_size) {
+        if (port_current_size[PT->tid] >= PT->port_batch_size) {
             asym_lps_mask[i] = NULL;
         }
     }
 
-
-
     // Pointer to an array of chars used by controllers as a counter of the number of events scheduled for
     // each LP during the execution of asym_schedule.
-    bzero(Threads[tid]->curr_scheduled_events, sizeof(int)*n_prc);
+    bzero(Threads[tid]->curr_scheduled_events, sizeof(int) * n_prc);
 
-    for(i = 0; i < tot_events_to_schedule; i++) {
-        if(rootsim_config.scheduler == SCHEDULER_STF){
-            chosen_LP = smallest_timestamp_first();   //TEMP CHANGE FROM ASYM_TS_FIRST
-        }
-        else{
+    for (i = 0; i < tot_events_to_schedule; i++) {
+        if (rootsim_config.scheduler == SCHEDULER_STF) {
+            chosen_LP = asym_smallest_timestamp_first();
+        } else {
             fprintf(stderr, "\tWARNING: asym scheduler supports only the STF scheduler by now\n");
             abort();
         }
 
         if (unlikely(chosen_LP == NULL)) {
-            //statistics_post_data(NULL, STAT_IDLE_CYCLES, 1.0);     //TEMPORARILY COMMENTED
+            //  statistics_post_data(NULL, STAT_IDLE_CYCLES, 1.0);
             return;
         }
 
-        if(chosen_LP->state == LP_STATE_ROLLBACK) { // = LP received an out-of-order msg and needs a rollback
+        if (chosen_LP->state == LP_STATE_ROLLBACK) { // = LP received an out-of-order msg and needs a rollback
             mark = generate_mark(chosen_LP);
 
-            if(chosen_LP->rollback_status == REQUESTED)
+            if (chosen_LP->rollback_status == REQUESTED)
                 chosen_LP->rollback_status = PROCESSING;
 
-            else{
+            else {
                 printf("\tERROR: Impossible rollback_status\n");
                 abort();
             }
@@ -750,7 +588,7 @@ void asym_schedule(void) {
             chosen_LP->state = LP_STATE_WAIT_FOR_ROLLBACK_ACK;  //BLOCKED STATE
 
             pack_msg(&rb_management, chosen_LP->gid, chosen_LP->gid, ASYM_ROLLBACK_BUBBLE, chosen_LP->bound->timestamp,
-                     chosen_LP->bound->timestamp,0, NULL);
+                     chosen_LP->bound->timestamp, 0, NULL);
             rb_management->message_kind = control;
             rb_management->mark = mark;
             pt_put_lo_prio_msg(chosen_LP->processing_thread, rb_management);
@@ -758,13 +596,13 @@ void asym_schedule(void) {
             continue;
         }
 
-        if(chosen_LP->state == LP_STATE_ROLLBACK_ALLOWED) { // = extracted ASYM_ROLLBACK_ACK from PT output queue for chosen_LP
+        if (chosen_LP->state == LP_STATE_ROLLBACK_ALLOWED) { // = extracted ASYM_ROLLBACK_ACK from PT output queue for chosen_LP
             chosen_LP->state = LP_STATE_ROLLBACK;
             rollback(chosen_LP);
             chosen_LP->state = LP_STATE_READY;
 
             evt_to_prune = list_head(chosen_LP->retirement_queue);
-            while(evt_to_prune != NULL) {
+            while (evt_to_prune != NULL) {
                 evt_to_prune_next = list_next(evt_to_prune);
                 if (evt_to_prune->unprocessed == false && chosen_LP->last_processed != evt_to_prune) {
                     list_delete_by_content(chosen_LP->retirement_queue, evt_to_prune);
@@ -774,17 +612,17 @@ void asym_schedule(void) {
             }
         }
 
-        if(chosen_LP->state != LP_STATE_READY_FOR_SYNCH && !is_blocked_state(chosen_LP->state)){
+        if (chosen_LP->state != LP_STATE_READY_FOR_SYNCH && !is_blocked_state(chosen_LP->state)) {
             chosen_EVT = advance_to_next_event(chosen_LP);
         } else {
             chosen_EVT = chosen_LP->bound;
         }
 
-        if(unlikely(chosen_EVT == NULL)) {
-            rootsim_error(true, "Critical condition: LP %d seems to have events to be processed, but I cannot find them. Aborting...\n", chosen_LP->gid);
+        if (unlikely(chosen_EVT == NULL)) {
+            rootsim_error(true,"Critical condition: LP %d seems to have events to be processed, but I cannot find them. Aborting...\n", chosen_LP->gid);
         }
 
-        if (unlikely(!to_be_sent_to_LP(chosen_EVT))) {    //if it is NOT a message to be passed to the LP (it is a control msg)
+        if (unlikely(!to_be_sent_to_LP(chosen_EVT))) {    //NOT a message to be passed to the LP (a control msg)
             return;
         }
 
@@ -794,32 +632,33 @@ void asym_schedule(void) {
         events_to_fill_PT_port[chosen_LP->processing_thread]--;
         int chosen_LP_id = chosen_LP->lid.to_int;
 
-        if(rootsim_config.scheduler == SCHEDULER_STF){
-            Threads[tid]->curr_scheduled_events[chosen_LP_id] = Threads[tid]->curr_scheduled_events[chosen_LP_id]+1;
-            if(Threads[tid]->curr_scheduled_events[chosen_LP_id] >= MAX_LP_EVENTS_PER_BATCH){
+        if (rootsim_config.scheduler == SCHEDULER_STF) {
+
+            Threads[tid]->curr_scheduled_events[chosen_LP_id] = Threads[tid]->curr_scheduled_events[chosen_LP_id] + 1;
+
+            if (Threads[tid]->curr_scheduled_events[chosen_LP_id] >= MAX_LP_EVENTS_PER_BATCH) {
                 //FIND THE LP IN THE MASK AND SET IT TO NULL
-                /* for(i=0; i<n_lp_per_thread; i++){
-                       if(asym_lps_mask[i] != NULL && lid_equals(asym_lps_mask[i]->lid,chosen_LP->lid)){
-                           asym_lps_mask[i] = NULL;
-                           //printf("Setting to NULL pointer to LP %d\n", lp_id);
-                           break;
-                       }
-                   } */
-            }
-            if(events_to_fill_PT_port[chosen_LP->processing_thread] == 0){     //NO MORE EMPTY SLOTS OVER FOR THAT PT
-                //FIND THE LP IN THE MASK AND SET IT TO NULL
-                /* for(i = 0; i<n_lp_per_thread; i++){
-                       if(asym_lps_mask[i] != NULL && asym_lps_mask[i]->processing_thread == chosen_LP->processing_thread)
-                           asym_lps_mask[i] = NULL; */
+                for (i = 0; i < n_lp_per_thread; i++) {
+                    if (asym_lps_mask[i] != NULL && lid_equals(asym_lps_mask[i]->lid, chosen_LP->lid)) {
+                        asym_lps_mask[i] = NULL;
+                        break;
+                    }
+                }
             }
 
-
+            if (events_to_fill_PT_port[chosen_LP->processing_thread] == 0) {  //NO MORE EMPTY SLOTS FOR THAT PT
+                //FIND THE LP IN THE MASK AND SET IT TO NULL
+                for (i = 0; i < n_lp_per_thread; i++) {
+                    if (asym_lps_mask[i] != NULL && asym_lps_mask[i]->processing_thread == chosen_LP->processing_thread)
+                        asym_lps_mask[i] = NULL;
+                }
+            }
         }
     }
 
-    if(sent_events == 0){
-        //  total_idle_microseconds[tid] += timer_value_micro(timer_local_thread);
-    }
+    if (sent_events == 0) {
+            //  total_idle_microseconds[tid] += timer_value_micro(timer_local_thread);
+        }
 }
 
 
