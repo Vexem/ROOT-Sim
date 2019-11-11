@@ -454,6 +454,9 @@ void send_outgoing_msgs(struct lp_struct *lp)
 
 		// register the message in the sender's output queue, for antimessage management
 		list_insert(lp->queue_out, send_time, msg_hdr);
+
+        if(msg->send_time > lp->last_sent_time)
+            lp->last_sent_time = msg->send_time;
 	}
 
 	lp->outgoing_buffer.size = 0;
@@ -560,6 +563,7 @@ void asym_extract_generated_msgs(void) {
                  *  - LP_y is picked by STF: NOTICE/BUBBLES are sent to PT
                  *  - PT sends back ACK for LP_x, for the first incarnation of rollback
                  */
+
                 if(lp_receiver->rollback_status == REQUESTED) {
                     goto discard;
                 }
@@ -606,6 +610,9 @@ void asym_extract_generated_msgs(void) {
             Send(msg);
 
             lp_sender = find_lp_by_gid(msg->sender);
+
+            if(msg->send_time > lp_sender->last_sent_time && lp_sender->state == LP_STATE_READY)
+                lp_sender->last_sent_time = msg->send_time;
 
             msg_hdr = get_msg_hdr_from_slab(lp_sender);
             msg_to_hdr(msg_hdr, msg);

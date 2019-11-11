@@ -308,7 +308,6 @@ void activate_LP(struct lp_struct *next_LP, msg_t *next_evt) {
 	}
 #endif
 
-    next_LP->last_processed = next_evt;
     next_evt->unprocessed = false;      ///CONTROLLARE
 
     current = NULL;
@@ -335,9 +334,7 @@ void asym_process_one_event(msg_t *msg) {
     struct lp_struct *LP;
     LP = find_lp_by_gid(msg->receiver);
 
-    spin_lock(&LP->bound_lock); //Process this event
     activate_LP(LP, msg);
-    spin_unlock(&LP->bound_lock);
 
     asym_send_outgoing_msgs(LP); //Send back to the controller the (possibly) generated events
     LogState(LP);
@@ -604,7 +601,7 @@ void asym_schedule(void) {
             evt_to_prune = list_head(chosen_LP->retirement_queue);
             while (evt_to_prune != NULL) {
                 evt_to_prune_next = list_next(evt_to_prune);
-                if (evt_to_prune->unprocessed == false && chosen_LP->last_processed != evt_to_prune) {
+                if (evt_to_prune->unprocessed == false) {
                     list_delete_by_content(chosen_LP->retirement_queue, evt_to_prune);
                     msg_release(evt_to_prune);
                 }
