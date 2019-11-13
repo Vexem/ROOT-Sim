@@ -108,8 +108,7 @@ typedef struct {
 	atomic_t c1;		///< First synchronization counter
 	atomic_t c2;		///< Second synchronization counter
 	atomic_t barr;		/**< "Barrier in a barrier": this is used to wait for the leader
-				 *   to correctly reset the barrier before re-entering
-				 */
+				          *   to correctly reset the barrier before re-entering  */
 } barrier_t;
 
 /**

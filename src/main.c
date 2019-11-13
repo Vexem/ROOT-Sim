@@ -59,6 +59,9 @@
 int controller_committed_events = 0;
 atomic_t final_processed_events;
 __thread int my_processed_events = 0;
+timer threads_config_timer;
+double check_interval = 4;
+static int reassign = false;
 
 /**
  * This jump buffer allows rootsim_error, in case of a failure, to jump
@@ -101,6 +104,11 @@ static void finish() {
         simulation_shutdown(EXIT_FAILURE);
     }
     simulation_shutdown(EXIT_SUCCESS);
+}
+
+static void wait(){
+
+    thread_barrier(&all_thread_barrier);
 }
 
 static void symmetric_execution() {
@@ -171,6 +179,7 @@ static void symmetric_execution() {
 static void asymmetric_execution(enum thread_incarnation incarnation) {
 
     simtime_t my_time_barrier = -1.0;
+    timer_start(threads_config_timer);
 
     if (incarnation == THREAD_CONTROLLER) {
 
@@ -182,58 +191,73 @@ static void asymmetric_execution(enum thread_incarnation incarnation) {
 
         while (!end_computing()) {
 
-        // We assume that thread with tid 0 should be a controller.
-        // Should be adapted for MPI.
+            // We assume that thread with tid 0 should be a controller.
+            // Should be adapted for MPI.
 
-        #ifdef HAVE_POWER_MANAGEMENT
-        if(master_thread()){
-            powercap_state_machine();
-        }
-        #endif
+            #ifdef HAVE_POWER_MANAGEMENT
+            if(master_thread()){
+                powercap_state_machine();
+            }
+            #endif
 
-        rebind_LPs();  //Recompute the LPs-thread binding
+            rebind_LPs();  //Recompute the LPs-thread binding
 
-        #ifdef HAVE_MPI
-        // Check whether we have new ingoing messages sent by remote instances
-        receive_remote_msgs();
-        prune_outgoing_queues();
-        #endif
+            #ifdef HAVE_MPI
+            // Check whether we have new ingoing messages sent by remote instances
+            receive_remote_msgs();
+            prune_outgoing_queues();
+            #endif
 
-        asym_extract_generated_msgs();  //Read output ports of all bound PTs
+            asym_extract_generated_msgs();  //Read output ports of all bound PTs
 
-        process_bottom_halves();  //Forward the messages from the kernel incoming message queue to the destination LPs
+            process_bottom_halves();  //Forward the messages from the kernel incoming message queue to the destination LPs
 
-        asym_schedule();  //Activate one LP and process one event. Send messages produced during the events' execution
+            asym_schedule();  //Activate one LP and process one event. Send messages produced during the events' execution
 
-        my_time_barrier = gvt_operations();
+            my_time_barrier = gvt_operations();
 
-        // Only a master thread on master kernel prints the time barrier
-        if (master_kernel() && master_thread () && D_DIFFER(my_time_barrier, -1.0)) {
-            if (rootsim_config.verbose == VERBOSE_INFO || rootsim_config.verbose == VERBOSE_DEBUG) {
+            // Only a master thread on master kernel prints the time barrier
+            if (master_kernel() && master_thread () && D_DIFFER(my_time_barrier, -1.0)) {
+                if (rootsim_config.verbose == VERBOSE_INFO || rootsim_config.verbose == VERBOSE_DEBUG) {
 
-                #ifdef HAVE_PREEMPTION
-                printf("TIME BARRIER %f - %d preemptions - %d in platform mode - %d would preempt\n", my_time_barrier, atomic_read(&preempt_count), atomic_read(&overtick_platform), atomic_read(&would_preempt));
-                #else
-                fprintf(stdout,"TIME BARRIER %f\n", my_time_barrier);
-                #endif
+                    #ifdef HAVE_PREEMPTION
+                    printf("TIME BARRIER %f - %d preemptions - %d in platform mode - %d would preempt\n", my_time_barrier, atomic_read(&preempt_count), atomic_read(&overtick_platform), atomic_read(&would_preempt));
+                    #else
+                    fprintf(stdout,"TIME BARRIER %f\n", my_time_barrier);
+                    #endif
 
-                fprintf(stdout,"\tPorts-> ");
-                unsigned int i;
-                for(i = 0; i < n_cores; i++) {
-                    if(Threads[i]->incarnation == THREAD_PROCESSING){
-                        unsigned int port_curr_size = get_port_current_size(Threads[i]->input_port[PORT_PRIO_LO]);
-                        fprintf(stdout,"PT%d: %d/%d | ",i, port_curr_size, Threads[i]->port_batch_size);
+                    fprintf(stdout,"\tPorts-> ");
+                    unsigned int i;
+                    for(i = 0; i < n_cores; i++) {
+                        if(Threads[i]->incarnation == THREAD_PROCESSING){
+                            unsigned int port_curr_size = get_port_current_size(Threads[i]->input_port[PORT_PRIO_LO]);
+                            fprintf(stdout,"PT%d: %d/%d | ",i, port_curr_size, Threads[i]->port_batch_size);
+                        }
                     }
+                    fprintf(stdout,"\n");
+                    fflush(stdout);
                 }
-                fprintf(stdout,"\n");
-                fflush(stdout);
+            }
+
+            #ifdef HAVE_MPI
+            collect_termination();
+            #endif
+
+            if (timer_value_seconds(threads_config_timer)> check_interval && master_thread()) {
+                reassign = true;
+                fprintf(stdout,"REASSIGNATION...\n");
+            }
+
+            if(reassign == true){
+                wait();
+                if(master_thread()){
+                    fprintf(stdout, "REASSIGNATION DONE !\n");
+                    reassign = false;
+                    timer_restart(threads_config_timer);
+                }
             }
         }
 
-        #ifdef HAVE_MPI
-        collect_termination();
-        #endif
-        }
         finish();
     }
 
@@ -245,6 +269,17 @@ static void asymmetric_execution(enum thread_incarnation incarnation) {
 
         while (!end_computing()) {
             asym_process();
+
+            if(reassign == true){
+                do{
+                    asym_process();
+                   // fprintf(stdout, "Thread %d: MSGS in lo_prio: %d \n",local_tid,get_port_current_size(Threads[local_tid]->input_port[PORT_PRIO_LO]));
+                   // fprintf(stdout, "Thread %d: MSGS in hi_prio: %d \n",local_tid,get_port_current_size(Threads[local_tid]->input_port[PORT_PRIO_HI]));
+                }while (get_port_current_size(Threads[local_tid]->input_port[PORT_PRIO_LO]) != 0 &&
+                get_port_current_size(Threads[local_tid]->input_port[PORT_PRIO_HI]) != 0);
+
+                wait();
+            }
         }
 
         atomic_add(&final_processed_events, my_processed_events);

@@ -93,10 +93,12 @@ msg_t *advance_to_next_event(struct lp_struct *lp)
 {
     msg_t *bound = NULL;
 
+    spin_lock(&lp->bound_lock);
 	if (likely(list_next(lp->bound) != NULL)) {
 		lp->bound = list_next(lp->bound);
 		bound = lp->bound;
 	}
+    spin_unlock(&lp->bound_lock);
 
 	return bound;
 }
@@ -157,6 +159,8 @@ void process_bottom_halves(void)
 
 			case negative:  // It's an antimessage
 
+			    spin_lock(&receiver->bound_lock);
+
 				statistics_post_data(receiver, STAT_ANTIMESSAGE, 1.0);
 
 				matched_msg = list_tail(receiver->queue_in);    // Find the message matching the antimessage
@@ -182,28 +186,25 @@ void process_bottom_halves(void)
 
                     receiver->state = LP_STATE_ROLLBACK;
                     receiver->rollback_status = REQUESTED;
-
-                    if(receiver->bound->timestamp < receiver->last_sent_time) {
-                        receiver->last_sent_time = receiver->bound->timestamp;
-                    }
                 }
 
                 list_delete_by_content(receiver->queue_in, matched_msg);  // The matched message is unchained from the queue in
 
-                if(matched_msg->unprocessed == true) {
+                if(matched_msg->unprocessed == true || receiver->last_processed == matched_msg) {
                     // If the pointer is still reachable, give it to a garbage collector
                     list_insert_tail(receiver->retirement_queue, matched_msg);
-
                 } else {
                     msg_release(matched_msg);  // Delete the matched message
                 }
 #ifdef HAVE_MPI
             register_incoming_msg(msg_to_process);
 #endif
+                spin_unlock(&receiver->bound_lock);
 				break;
 
 				// It's a positive message
 			case positive:
+                spin_lock(&receiver->bound_lock);
 				// A positive message is directly placed in the queue
 				list_insert(receiver->queue_in, timestamp, msg_to_process);
 
@@ -225,14 +226,11 @@ void process_bottom_halves(void)
 
 					receiver->state = LP_STATE_ROLLBACK;
                     receiver->rollback_status = REQUESTED;
-
-                    if(receiver->bound->timestamp < receiver->last_sent_time) {
-                        receiver->last_sent_time = receiver->bound->timestamp;
-                    }
                  }
  #ifdef HAVE_MPI
                  register_incoming_msg(msg_to_process);
  #endif
+                    spin_unlock(&receiver->bound_lock);
                  break;
 
                  // It's a control message

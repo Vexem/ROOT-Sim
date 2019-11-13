@@ -155,8 +155,7 @@ static void *__helper_create_thread(void *arg)
 *            threads' entry point
 *
 */
-void create_threads(unsigned short int n, void *(*start_routine)(void *), void *arg)
-{
+void create_threads(unsigned short int n, void *(*start_routine)(void *), void *arg) {
 	int i;
 
 	// We create our thread within our helper function, which accepts just
@@ -180,8 +179,7 @@ void create_threads(unsigned short int n, void *(*start_routine)(void *), void *
 * @param b the thread barrier to initialize
 * @param t the number of threads which will synchronize on the barrier
 */
-void barrier_init(barrier_t * b, int t)
-{
+void barrier_init(barrier_t * b, int t) {
 	b->num_threads = t;
 	thread_barrier_reset(b);
 }
@@ -200,8 +198,7 @@ void barrier_init(barrier_t * b, int t)
 *
 * @return false to all threads, except for one which is elected as the leader
 */
-bool thread_barrier(barrier_t * b)
-{
+bool thread_barrier(barrier_t * b) {
 	// Wait for the leader to finish resetting the barrier
 	while (atomic_read(&b->barr) != -1) ;
 
@@ -288,7 +285,6 @@ void threads_init(void) {
         // threads make upon their creation.
         Threads[i]->tid = i;
         Threads[i]->global_tid = to_global_tid(kid, i);
-
     }
 
     // In this second run, we mutually assign PTs to CTs and vice versa (we loop over PTs)

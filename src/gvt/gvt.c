@@ -204,7 +204,7 @@ static inline void reduce_local_gvt(void)
 		// If no message has been processed, local estimate for
 		// GVT is forced to 0.0. This can happen, e.g., if
 		// GVT is computed very early in the run
-		if (unlikely(lp->bound == NULL)) {
+		if (unlikely(lp->last_processed == NULL)) {
 			local_min[local_tid] = 0.0;
 			break;
 		}
@@ -219,8 +219,8 @@ static inline void reduce_local_gvt(void)
 		//if (lp->last_processed->next == NULL)
 		//	continue;
 
-        //local_min[local_tid] = min(local_min[local_tid], lp->last_processed->timestamp);
-        local_min[local_tid] = min(local_min[local_tid], lp->last_sent_time);
+        local_min[local_tid] = min(local_min[local_tid], lp->last_processed->timestamp);
+        local_min[local_tid] = min(local_min[local_tid], lp->bound->timestamp);
 
     }
 }
