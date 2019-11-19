@@ -212,5 +212,6 @@ extern __thread unsigned int __lp_bound_counter;
 #define LPS_bound_set(entry, lp)	lps_bound_blocks[(entry)] = (lp);
 
 extern void initialize_binding_blocks(void);
+extern void free_binding_blocks(void);
 extern void initialize_lps(void);
 extern struct lp_struct *find_lp_by_gid(GID_t);

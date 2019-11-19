@@ -226,6 +226,56 @@ bool thread_barrier(barrier_t * b) {
 	return false;
 }
 
+void threads_reassign(void){
+
+    unsigned int max_controllers = n_cores/2;
+    unsigned int idx;
+    unsigned int curr_ct = 0;
+
+
+    if(rootsim_config.num_controllers+1<= max_controllers){
+        rootsim_config.num_controllers += 1 ;
+    }
+    else if(rootsim_config.num_controllers-1 >= 1){
+        rootsim_config.num_controllers -= 1 ;
+    }
+
+    for(idx = 0; idx < n_cores; idx++) {
+
+        if(idx < rootsim_config.num_controllers)
+           Threads[idx]->incarnation = THREAD_CONTROLLER;
+        else
+           Threads[idx]->incarnation = THREAD_PROCESSING;
+
+        Threads[idx]->port_batch_size = PORT_START_BATCH_SIZE;
+        Threads[idx]->num_PTs = 0;
+
+        if(Threads[idx]->PTs!=NULL){
+            rsfree(Threads[idx]->PTs);
+        }
+
+        if(idx < rootsim_config.num_controllers) {
+            Threads[idx]->PTs = rsalloc(sizeof(Thread_State *) * (n_cores - rootsim_config.num_controllers));
+            memset(Threads[idx]->PTs, 0, sizeof(Thread_State *) * (n_cores - rootsim_config.num_controllers));
+        } else {
+            Threads[idx]->PTs = NULL;
+        }
+    }
+
+    if(rootsim_config.num_controllers > 0) {
+        for(idx = rootsim_config.num_controllers; idx < n_cores; idx++) {
+            Threads[idx]->CT = Threads[curr_ct];
+            Threads[curr_ct]->PTs[Threads[curr_ct]->num_PTs] = Threads[idx];
+
+            printf("PT %d sees as its CT: %d\n", Threads[idx]->tid, Threads[idx]->CT->tid);
+            printf("CT %d has got a new PT: %d\n", Threads[curr_ct]->tid, Threads[curr_ct]->PTs[Threads[curr_ct]->num_PTs]->tid);
+
+            Threads[curr_ct]->num_PTs++;
+            curr_ct = (curr_ct + 1) % rootsim_config.num_controllers;
+        }
+    }
+}
+
 void threads_init(void) {
     unsigned int i;
     unsigned int curr_ct = 0;

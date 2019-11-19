@@ -145,8 +145,11 @@ void process_bottom_halves(void)
 			receiver = find_lp_by_gid(msg_to_process->receiver);
 
 
-            if (unlikely (msg_to_process->timestamp < get_last_gvt()))  // Sanity check
-                rootsim_error(true,"\tThe impossible happened: I'm receiving a message before the GVT\n");
+            if (unlikely (msg_to_process->timestamp < get_last_gvt())) { // Sanity check
+                dump_msg_content(msg_to_process);
+                printf("LAST GVT: %f\n", get_last_gvt());
+                rootsim_error(true,"I'm receiving a message before the GVT\n");
+            }
 
        			if (unlikely(!receive_control_msg(msg_to_process))) {   // Handle control messages
 				msg_release(msg_to_process);

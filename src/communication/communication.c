@@ -564,7 +564,7 @@ void asym_extract_generated_msgs(void) {
                     goto discard;
                 }
 
-                if(lp_receiver->rollback_status == PROCESSING && lp_receiver->rollback_mark > msg->mark){
+                if(lp_receiver->rollback_status == PROCESSING && lp_receiver->rollback_mark > msg->mark) {
                     goto discard;
                 }
 

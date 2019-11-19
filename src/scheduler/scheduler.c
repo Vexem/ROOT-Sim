@@ -205,8 +205,7 @@ void LP_main_loop(void *args) {
 	}
 }
 
-void initialize_worker_thread(void)
-{
+void initialize_worker_thread(void) {
     msg_t *init_event;
 
 	// Divide LPs among worker threads, for the first time here

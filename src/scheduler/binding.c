@@ -45,6 +45,10 @@
 
 #define REBIND_INTERVAL 10.0
 
+/// A guard to know whether WTs are initialized or not
+static unsigned int to_bind;
+static bool n_processes_set = false;
+
 struct lp_cost_id {
 	double workload_factor;
 	unsigned int id;
@@ -53,7 +57,7 @@ struct lp_cost_id {
 struct lp_cost_id *lp_cost;
 
 /// A guard to know whether this is the first invocation or not
-static __thread bool first_lp_binding = true;
+static bool first_lp_binding = true;
 
 static unsigned int *new_LPS_binding;
 static timer rebinding_timer;
@@ -83,29 +87,26 @@ static void rebind_LPs_to_PTs(void) {
 *
 * @author Alessandro Pellegrini
 */
-static inline void LPs_block_binding(void)
-{
+static inline void LPs_block_binding(void) {
     unsigned int binding_threads;
     unsigned int i, j;
-	unsigned int buf1;
+	unsigned int LP_per_thread;
 	unsigned int offset;
 	unsigned int block_leftover;
 	struct lp_struct *lp;
 
     // We determine here the number of threads used for binding, depending on the
     // actual (current) incarnation of available threads.
-    if(rootsim_config.num_controllers == 0) {
+    if(rootsim_config.num_controllers == 0)
         binding_threads = n_cores;
-    }
-    else{
+    else
         binding_threads = rootsim_config.num_controllers;
-    }
 
-	buf1 = (n_prc / binding_threads);
-	block_leftover = n_prc - buf1 * binding_threads;
+    LP_per_thread = (n_prc / binding_threads);
+	block_leftover = n_prc - LP_per_thread * binding_threads;
 
 	if (block_leftover > 0) {
-		buf1++;
+		LP_per_thread++;
 	}
 
     n_lp_per_thread = 0;
@@ -114,19 +115,21 @@ static inline void LPs_block_binding(void)
 
 	while (i < n_prc) {
 		j = 0;
-		while (j < buf1) {
+		while (j < LP_per_thread) {
 			if (offset == local_tid) {
 				lp = lps_blocks[i];
 				LPS_bound_set(n_lp_per_thread++, lp);
+				///DEBUG
+				//printf("POSITION:%d, lid:%u, thread:%d \n", n_lp_per_thread-1, lps_bound_blocks[n_lp_per_thread-1]->gid.to_int, local_tid);
 				lp->worker_thread = local_tid;
-			}
+            }
 			i++;
 			j++;
 		}
 		offset++;
 		block_leftover--;
 		if (block_leftover == 0) {
-			buf1--;
+			LP_per_thread--;
 		}
 	}
 
@@ -166,8 +169,7 @@ static int compare_lp_cost(const void *a, const void *b)
 *
 * @author Alessandro Pellegrini
 */
-static inline void LP_knapsack(void)
-{
+static inline void LP_knapsack(void) {
 	register unsigned int i, j;
     unsigned int binding_threads;
     double reference_knapsack = 0;
@@ -280,6 +282,13 @@ static void install_binding(void)
 
 #endif
 
+void reassignation_rebind(void) {
+    free_binding_blocks();
+    initialize_binding_blocks();
+    LPs_block_binding();
+}
+
+
 /**
 * This function is used to create a temporary binding between LPs and KLT.
 * The first time this function is called, each worker thread sets up its data
@@ -290,25 +299,33 @@ static void install_binding(void)
 
 * @author Alessandro Pellegrini
 */
-void rebind_LPs(void)
-{
+void rebind_LPs(void) {
+
     unsigned int binding_threads;
+    if(unlikely(n_processes_set == false)) {
+        to_bind = rootsim_config.num_controllers - 1;
+        n_processes_set = true;
+    }
 
     // We determine here the number of threads used for binding, depending on the
     // actual (current) incarnation of available threads.
-    if(rootsim_config.num_controllers == 0) {
+    if(rootsim_config.num_controllers == 0)
         binding_threads = n_cores;
-    }
-    else{
+    else {
         binding_threads = rootsim_config.num_controllers;
     }
 
 	if (unlikely(first_lp_binding)) {
-		first_lp_binding = false;
+	    if (to_bind == 0){
+	        first_lp_binding = false;
+	    }
+	    else {
+            to_bind -=1;
+	    }
 
 		initialize_binding_blocks();
 
-		LPs_block_binding();
+		LPs_block_binding();        ///WHAT REALLY MATTERS
 
 		timer_start(rebinding_timer);
 

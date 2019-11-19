@@ -60,8 +60,11 @@ int controller_committed_events = 0;
 atomic_t final_processed_events;
 __thread int my_processed_events = 0;
 timer threads_config_timer;
-double check_interval = 4;
+double check_interval = 6.5;
 static int reassign = false;
+
+/// A guard to know whether WTs are initialized or not
+static unsigned int starting_controllers;
 
 /**
  * This jump buffer allows rootsim_error, in case of a failure, to jump
@@ -107,7 +110,6 @@ static void finish() {
 }
 
 static void wait(){
-
     thread_barrier(&all_thread_barrier);
 }
 
@@ -176,14 +178,20 @@ static void symmetric_execution() {
     }
 }
 
-static void asymmetric_execution(enum thread_incarnation incarnation) {
+static void asymmetric_execution() {
 
     simtime_t my_time_barrier = -1.0;
     timer_start(threads_config_timer);
+    starting_controllers = rootsim_config.num_controllers;
 
-    if (incarnation == THREAD_CONTROLLER) {
+    BEGINNING:
 
-        initialize_worker_thread();  //Do the initial (local) LP binding, then execute INIT at all (local) LPs
+    if (Threads[local_tid]->incarnation == THREAD_CONTROLLER) {
+
+        if (unlikely(starting_controllers > 0)) {        //NO NEED OF AN ATOMIC OPERATION
+            initialize_worker_thread();  //Do the initial (local) LP binding, then execute INIT at all (local) LPs
+            starting_controllers -= 1;
+        }
 
         #ifdef HAVE_MPI
         syncronize_all();
@@ -243,29 +251,40 @@ static void asymmetric_execution(enum thread_incarnation incarnation) {
             collect_termination();
             #endif
 
-            if (timer_value_seconds(threads_config_timer)> check_interval && master_thread()) {
+            if (timer_value_seconds(threads_config_timer) > check_interval && master_kernel() && master_thread () ) {
                 reassign = true;
                 fprintf(stdout,"REASSIGNATION...\n");
             }
 
-            if(reassign == true){
+            if(reassign == true) {
                 wait();
-                if(master_thread()){
+                if(master_thread()) {
+                    threads_reassign();
+                    update_participants();
                     fprintf(stdout, "REASSIGNATION DONE !\n");
                     reassign = false;
+                    wait();
                     timer_restart(threads_config_timer);
                 }
+                else {
+                    wait();
+                }
+
+                if(Threads[local_tid]->incarnation == THREAD_PROCESSING) goto BEGINNING;
+
+                reassignation_rebind();
             }
         }
 
         finish();
     }
 
-    else if (incarnation == THREAD_PROCESSING) {
+    if (Threads[local_tid]->incarnation == THREAD_PROCESSING) {
 
         #ifdef HAVE_CROSS_STATE
         lp_alloc_thread_init();
         #endif
+
 
         while (!end_computing()) {
             asym_process();
@@ -275,10 +294,15 @@ static void asymmetric_execution(enum thread_incarnation incarnation) {
                     asym_process();
                    // fprintf(stdout, "Thread %d: MSGS in lo_prio: %d \n",local_tid,get_port_current_size(Threads[local_tid]->input_port[PORT_PRIO_LO]));
                    // fprintf(stdout, "Thread %d: MSGS in hi_prio: %d \n",local_tid,get_port_current_size(Threads[local_tid]->input_port[PORT_PRIO_HI]));
-                }while (get_port_current_size(Threads[local_tid]->input_port[PORT_PRIO_LO]) != 0 &&
+                } while (get_port_current_size(Threads[local_tid]->input_port[PORT_PRIO_LO]) != 0 &&
                 get_port_current_size(Threads[local_tid]->input_port[PORT_PRIO_HI]) != 0);
 
                 wait();
+                wait();
+                if(Threads[local_tid]->incarnation == THREAD_CONTROLLER){
+                    reassignation_rebind();
+                    goto BEGINNING;
+                }
             }
         }
 
@@ -310,7 +334,7 @@ static void *main_simulation_loop(void *arg) {
     }
 
     else if(incarnation == THREAD_PROCESSING || incarnation == THREAD_CONTROLLER){
-        asymmetric_execution(incarnation);
+        asymmetric_execution();
     }
 
     else {

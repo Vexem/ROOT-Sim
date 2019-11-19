@@ -47,13 +47,13 @@
 
 enum kernel_phases {
 	kphase_start,
-#ifdef HAVE_MPI
+    #ifdef HAVE_MPI
 	kphase_white_msg_redux,
-#endif
+    #endif
 	kphase_kvt,
-#ifdef HAVE_MPI
+    #ifdef HAVE_MPI
 	kphase_gvt_redux,
-#endif
+    #endif
 	kphase_fossil,
 	kphase_idle
 };
@@ -135,15 +135,15 @@ static unsigned int gvt_participants;
 /**
 * Initialization of the GVT subsystem.
 */
-void gvt_init(void)
-{
+void gvt_init(void) {
+
 	unsigned int i;
 
 	// This allows the first GVT phase to start
 	atomic_set(&counter_finalized, 0);
 
 	// Initialize the local minima
-	local_min = rsalloc(sizeof(simtime_t) * n_cores);
+	local_min =         rsalloc(sizeof(simtime_t) * n_cores);
 	local_min_barrier = rsalloc(sizeof(simtime_t) * n_cores);
 	for (i = 0; i < n_cores; i++) {
 		local_min[i] = INFTY;
@@ -162,15 +162,19 @@ void gvt_init(void)
 	ccgs_init();
 }
 
+void update_participants(void) {
+        gvt_participants = rootsim_config.num_controllers;
+}
+
 /**
 * Finalizer of the GVT subsystem.
 */
-void gvt_fini(void)
-{
+void gvt_fini(void) {
+
 	// Finalize the CCGS subsystem
 	ccgs_fini();
 
-#ifdef HAVE_MPI
+    #ifdef HAVE_MPI
 	if ((kernel_phase == kphase_idle && !master_thread() && gvt_init_pending()) || kernel_phase == kphase_start) {
 		join_white_msg_redux();
 		wait_white_msg_redux();
@@ -179,7 +183,7 @@ void gvt_fini(void)
 		wait_white_msg_redux();
 		join_gvt_redux(-1.0);
 	}
-#endif
+    #endif
 }
 
 /**
@@ -188,8 +192,8 @@ void gvt_fini(void)
  * the committed trajectory. It's so far mainly used for termination
  * detection based on passed simulation time.
  */
-inline simtime_t get_last_gvt(void)
-{
+inline simtime_t get_last_gvt(void) {
+
     /* TODO: è un po' una porcata, perché potrebbe esserci una corsa
        critica su new_gvt, ma è da verificare */
     if(Threads[tid]->incarnation == THREAD_PROCESSING){
@@ -198,8 +202,8 @@ inline simtime_t get_last_gvt(void)
 	return last_gvt;
 }
 
-static inline void reduce_local_gvt(void)
-{
+static inline void reduce_local_gvt(void) {
+
 	foreach_bound_lp(lp) {
 		// If no message has been processed, local estimate for
 		// GVT is forced to 0.0. This can happen, e.g., if
@@ -225,15 +229,17 @@ static inline void reduce_local_gvt(void)
     }
 }
 
-simtime_t GVT_phases(void)
-{
+
+simtime_t GVT_phases(void) {
+
 	unsigned int i;
 
 	if (thread_phase == tphase_A) {
-#ifdef HAVE_MPI
+
+        #ifdef HAVE_MPI
 		// Check whether we have new ingoing messages sent by remote instances
 		receive_remote_msgs();
-#endif
+        #endif
 		process_bottom_halves();
 
 		reduce_local_gvt();
@@ -250,10 +256,10 @@ simtime_t GVT_phases(void)
         * loop
         */
         if(rootsim_config.num_controllers == 0) {
-    #ifdef HAVE_MPI
+        #ifdef HAVE_MPI
             // Check whether we have new ingoing messages sent by remote instances
             receive_remote_msgs();
-    #endif
+        #endif
             process_bottom_halves();
             schedule();
         } else {
@@ -267,21 +273,21 @@ simtime_t GVT_phases(void)
     }
 
 	if (thread_phase == tphase_B && atomic_read(&counter_send) == 0) {
-#ifdef HAVE_MPI
+        #ifdef HAVE_MPI
 		// Check whether we have new ingoing messages sent by remote instances
 		receive_remote_msgs();
-#endif
+        #endif
 		process_bottom_halves();
 
 		reduce_local_gvt();
 
-#ifdef HAVE_MPI
+        #ifdef HAVE_MPI
 		// WARNING: local thread cannot send any remote
 		// message between the two following calls
 		exit_red_phase();
 		local_min[local_tid] =
 		    min(local_min[local_tid], min_outgoing_red_msg[local_tid]);
-#endif
+        #endif
 
 		thread_phase = tphase_aware;
 		atomic_dec(&counter_B);
@@ -299,14 +305,15 @@ simtime_t GVT_phases(void)
 	return -1.0;
 }
 
-bool start_new_gvt(void)
-{
-#ifdef HAVE_MPI
+
+bool start_new_gvt(void) {
+
+    #ifdef HAVE_MPI
 	if (!master_kernel()) {
 		//Check if we received a new GVT init msg
 		return gvt_init_pending();
 	}
-#endif
+    #endif
 
 	// Has enough time passed since the last GVT reduction?
 	return timer_value_milli(gvt_timer) >
@@ -329,10 +336,9 @@ bool start_new_gvt(void)
 * 	  will be shown associated with the same kernel id (no way to distinguish between
 * 	  different threads here).
 */
-simtime_t gvt_operations(void)
-{
+simtime_t gvt_operations(void) {
 
-	// GVT reduction initialization.
+    // GVT reduction initialization.
 	// This is different from the paper's pseudocode to reduce
 	// slightly the number of clock reads
 	if (kernel_phase == kphase_idle) {
@@ -341,32 +347,32 @@ simtime_t gvt_operations(void)
 
 			timer_start(gvt_round_timer);
 
-#ifdef HAVE_MPI
+            #ifdef HAVE_MPI
 			//inform all the other kernels about the new gvt
 			if (master_kernel()) {
 				broadcast_gvt_init(current_GVT_round);
 			} else {
 				gvt_init_clear();
 			}
-#endif
+            #endif
 
 			// Reduce the current CCGS termination detection
 			ccgs_reduce_termination();
 
 			/* kernel GVT round setup */
 
-#ifdef HAVE_MPI
+            #ifdef HAVE_MPI
 			flush_white_msg_recv();
 
 			init_kvt_tkn = 1;
 			commit_gvt_tkn = 1;
-#endif
+            #endif
 
 			init_completed_tkn = 1;
 			commit_kvt_tkn = 1;
 			idle_tkn = 1;
 
-			atomic_set(&counter_initialized, gvt_participants);
+            atomic_set(&counter_initialized, gvt_participants);
 			atomic_set(&counter_kvt, gvt_participants);
 			atomic_set(&counter_finalized, gvt_participants);
 
@@ -389,9 +395,9 @@ simtime_t gvt_operations(void)
 		// Keep track of this update
 		my_GVT_round = current_GVT_round;
 
-#ifdef HAVE_MPI
+		#ifdef HAVE_MPI
 		enter_red_phase();
-#endif
+        #endif
 
 		local_min[local_tid] = INFTY;
 
@@ -399,19 +405,19 @@ simtime_t gvt_operations(void)
 		atomic_dec(&counter_initialized);
 		if (atomic_read(&counter_initialized) == 0) {
 			if (iCAS(&init_completed_tkn, 1, 0)) {
-#ifdef HAVE_MPI
+        #ifdef HAVE_MPI
 				join_white_msg_redux();
 				kernel_phase = kphase_white_msg_redux;
-#else
+        #else
 				kernel_phase = kphase_kvt;
-#endif
+        #endif
 			}
 		}
 		return -1.0;
 	}
 
 
-#ifdef HAVE_MPI
+    #ifdef HAVE_MPI
 	if (kernel_phase == kphase_white_msg_redux
 	    && white_msg_redux_completed() && all_white_msg_received()) {
 		if (iCAS(&init_kvt_tkn, 1, 0)) {
@@ -420,30 +426,29 @@ simtime_t gvt_operations(void)
 		}
 		return -1.0;
 	}
-#endif
+    #endif
 
 	/* KVT phase:
 	 * make all the threads agree on a common virtual time for this kernel */
 	if (kernel_phase == kphase_kvt && thread_phase != tphase_aware) {
 		simtime_t kvt = GVT_phases();
 		if (D_DIFFER(kvt, -1.0)) {
-			if (iCAS(&commit_kvt_tkn, 1, 0)) {
-
+            if (iCAS(&commit_kvt_tkn, 1, 0)) {
 #ifdef HAVE_MPI
 				join_gvt_redux(kvt);
 				kernel_phase = kphase_gvt_redux;
 
-#else
+                #else
 				new_gvt = kvt;
 				kernel_phase = kphase_fossil;
 
-#endif
+                #endif
 			}
 		}
 		return -1.0;
 	}
 
-#ifdef HAVE_MPI
+    #ifdef HAVE_MPI
 	if (kernel_phase == kphase_gvt_redux && gvt_redux_completed()) {
 		if (iCAS(&commit_gvt_tkn, 1, 0)) {
 			int gvt_round_time = timer_value_micro(gvt_round_timer);
@@ -454,7 +459,7 @@ simtime_t gvt_operations(void)
 		}
 		return -1.0;
 	}
-#endif
+    #endif
 
 	/* GVT adoption phase:
 	 * the last agreed GVT needs to be adopted by every thread */
@@ -486,6 +491,5 @@ simtime_t gvt_operations(void)
 		}
 		return last_gvt;
 	}
-
 	return -1.0;
 }

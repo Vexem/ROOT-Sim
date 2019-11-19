@@ -37,6 +37,7 @@
 
 /* API from gvt.c */
 extern void gvt_init(void);
+extern void update_participants(void);
 extern void gvt_fini(void);
 extern simtime_t gvt_operations(void);
 inline extern simtime_t get_last_gvt(void);
