@@ -279,35 +279,38 @@ void initialize_worker_thread(void) {
 void activate_LP(struct lp_struct *next_LP, msg_t *next_evt) {
 
 	// Notify the LP main execution loop of the information to be used for actual simulation
+	/*if(next_evt->timestamp<get_last_gvt()){
+	    dump_msg_content(next_evt);
+	    printf("%d\n",get_last_gvt);
+	}*/
 	current = next_LP;
 	current_evt = next_evt;
 
+     //#ifdef HAVE_PREEMPTION
+    //if(!rootsim_config.disable_preemption)
+    //  enable_preemption();
+    //#endif
 
-//      #ifdef HAVE_PREEMPTION
-//      if(!rootsim_config.disable_preemption)
-//              enable_preemption();
-//      #endif
-
-#ifdef HAVE_CROSS_STATE
+    #ifdef HAVE_CROSS_STATE
 	// Activate memory view for the current LP
 	lp_alloc_schedule();
-#endif
+    #endif
     context_switch(&kernel_context, &next_LP->context);
 
-//      #ifdef HAVE_PREEMPTION
-//        if(!rootsim_config.disable_preemption)
-//                disable_preemption();
-//        #endif
+    //#ifdef HAVE_PREEMPTION
+    //if(!rootsim_config.disable_preemption)
+    //        disable_preemption();
+    //#endif
 
-#ifdef HAVE_CROSS_STATE
+    #ifdef HAVE_CROSS_STATE
 	// Deactivate memory view for the current LP if no conflict has arisen
 	if (!is_blocked_state(next_LP->state)) {
 //              printf("Deschedule %d\n",lp);
 		lp_alloc_deschedule();
 	}
-#endif
+    #endif
 
-    next_LP->last_processed = next_evt;
+    next_LP->next_last_processed = next_evt;
     next_evt->unprocessed = false;      ///CONTROLLARE
 
     current = NULL;
@@ -334,9 +337,9 @@ void asym_process_one_event(msg_t *msg) {
     struct lp_struct *LP;
     LP = find_lp_by_gid(msg->receiver);
 
-    spin_lock(&LP->bound_lock); //Process this event
+    //spin_lock(&LP->bound_lock); //Process this event
     activate_LP(LP, msg);
-    spin_unlock(&LP->bound_lock);
+    //spin_unlock(&LP->bound_lock);
 
     asym_send_outgoing_msgs(LP); //Send back to the controller the (possibly) generated events
     LogState(LP);
@@ -362,7 +365,7 @@ void find_a_match(msg_t *lo_prio_msg) {
                     fflush(stdout);
                     abort();
                 }
-                else{   //IT IS A NOTICE
+                else {   //IT IS A NOTICE
 
                     if(lo_prio_msg->receiver.to_int != hi_prio_msg->receiver.to_int){   //DIFFERENT RECEIVERS
                         printf("\tWARNING: lo/hi prio messages have DIFFERENT receivers\n");
@@ -389,12 +392,13 @@ void find_a_match(msg_t *lo_prio_msg) {
                 }
             }
             else {  //NOT A CONTROL MESSAGE
+
                 fprintf(stderr, "\tNON-CONTROL msg in hi_prio channel\n");
                 dump_msg_content(lo_prio_msg);
                 dump_msg_content(hi_prio_msg);
                 fflush(stdout);
                 abort();
-            }
+        }
     }
 }
 
@@ -788,6 +792,7 @@ void schedule_on_init(struct lp_struct *next)
 	next->state = LP_STATE_RUNNING;
 
 	activate_LP(next, event);
+	next->last_processed = next->next_last_processed;
 
 	if (!is_blocked_state(next->state)) {
 		next->state = LP_STATE_READY;

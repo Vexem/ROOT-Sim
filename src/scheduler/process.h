@@ -113,6 +113,9 @@ struct lp_struct {
 	/// Pointer to the last correctly processed event
 	msg_t *last_processed;
 
+	///Pointer to the last correctly processed event (to be confirmed by the CT)
+	msg_t *next_last_processed;
+
 	/// Pointer to the last scheduled event
 	msg_t *bound;
 
@@ -214,4 +217,5 @@ extern __thread unsigned int __lp_bound_counter;
 extern void initialize_binding_blocks(void);
 extern void free_binding_blocks(void);
 extern void initialize_lps(void);
+extern void update_last_processed(void);
 extern struct lp_struct *find_lp_by_gid(GID_t);

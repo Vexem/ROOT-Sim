@@ -93,12 +93,12 @@ msg_t *advance_to_next_event(struct lp_struct *lp)
 {
     msg_t *bound = NULL;
 
-    spin_lock(&lp->bound_lock);
+    //spin_lock(&lp->bound_lock);
 	if (likely(list_next(lp->bound) != NULL)) {
 		lp->bound = list_next(lp->bound);
 		bound = lp->bound;
 	}
-    spin_unlock(&lp->bound_lock);
+    //spin_unlock(&lp->bound_lock);
 
 	return bound;
 }
@@ -120,7 +120,14 @@ void insert_bottom_half(msg_t * msg)
 
 	validate_msg(msg);
 
-	insert_msg(lp->bottom_halves, msg);
+    if(msg->timestamp <get_last_gvt()){
+        printf("eccolo->");
+        dump_msg_content(msg);
+        abort();
+    }
+
+
+    insert_msg(lp->bottom_halves, msg);
 #ifdef HAVE_PREEMPTION
 	update_min_in_transit(lp->worker_thread, msg->timestamp);
 #endif
@@ -148,13 +155,18 @@ void process_bottom_halves(void)
             if (unlikely (msg_to_process->timestamp < get_last_gvt())) { // Sanity check
                 dump_msg_content(msg_to_process);
                 printf("LAST GVT: %f\n", get_last_gvt());
+                printf("LP's boundTS: %f\n", receiver->bound->timestamp);
                 rootsim_error(true,"I'm receiving a message before the GVT\n");
             }
 
-       			if (unlikely(!receive_control_msg(msg_to_process))) {   // Handle control messages
+            if (unlikely(!receive_control_msg(msg_to_process))) {   // Handle control messages
 				msg_release(msg_to_process);
 				continue;
 			}
+
+           /* if(local_tid==1)
+                printf("TS:%f, LAST GVT: %f\n", msg_to_process->timestamp, get_last_gvt());*/
+
 
             validate_msg(msg_to_process);
 
@@ -162,7 +174,7 @@ void process_bottom_halves(void)
 
 			case negative:  // It's an antimessage
 
-			    spin_lock(&receiver->bound_lock);
+			    //spin_lock(&receiver->bound_lock);
 
 				statistics_post_data(receiver, STAT_ANTIMESSAGE, 1.0);
 
@@ -202,12 +214,12 @@ void process_bottom_halves(void)
 #ifdef HAVE_MPI
             register_incoming_msg(msg_to_process);
 #endif
-                spin_unlock(&receiver->bound_lock);
+                //spin_unlock(&receiver->bound_lock);
 				break;
 
 				// It's a positive message
 			case positive:
-                spin_lock(&receiver->bound_lock);
+                //spin_lock(&receiver->bound_lock);
 				// A positive message is directly placed in the queue
 				list_insert(receiver->queue_in, timestamp, msg_to_process);
 
@@ -233,7 +245,7 @@ void process_bottom_halves(void)
  #ifdef HAVE_MPI
                  register_incoming_msg(msg_to_process);
  #endif
-                    spin_unlock(&receiver->bound_lock);
+                    //spin_unlock(&receiver->bound_lock);
                  break;
 
                  // It's a control message

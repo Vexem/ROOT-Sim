@@ -19,12 +19,13 @@
 #define COMPLETE_ALLOC		5000
 
 // Event types
-#define ALLOC		1
+#define ALLOC		11
 #define DEALLOC 	2
 #define LOOP		3
 
-#define COMPLETE_EVENTS 100000	// for the LOOP traditional case
-#define LOOP_COUNT	10000
+#define COMPLETE_EVENTS 1000	// for the LOOP traditional case
+#define LOOP_COUNT	100000
+#define FANOUT 10
 
 
 // This is the events' payload which is exchanged across LPs

@@ -450,7 +450,7 @@ void send_outgoing_msgs(struct lp_struct *lp)
 		msg = lp->outgoing_buffer.outgoing_msgs[i];
 		msg_to_hdr(msg_hdr, msg);
 
-		Send(msg);
+     	Send(msg);
 
 		// register the message in the sender's output queue, for antimessage management
 		list_insert(lp->queue_out, send_time, msg_hdr);
@@ -468,6 +468,7 @@ void asym_send_outgoing_msgs(struct lp_struct *lp) {
         msg = lp->outgoing_buffer.outgoing_msgs[i];
 
         pt_put_out_msg(msg);
+
     }
 
     lp->outgoing_buffer.size = 0;
@@ -538,12 +539,26 @@ void pack_msg(msg_t **msg, GID_t sender, GID_t receiver, int type, simtime_t tim
         memcpy((*msg)->event_content, payload, size);
 }
 
+
+bool check_output_channels_emptiness(void) {
+    unsigned int idx;
+
+    for(idx = 0; idx < Threads[tid]->num_PTs; idx++) {
+        if (!is_out_channel_empty(Threads[tid]->PTs[idx]->tid)){
+            return false;
+        }
+    }
+    return true;
+}
+
 void asym_extract_generated_msgs(void) {
+
     struct lp_struct *lp_sender, *lp_receiver;
     unsigned int i;
     msg_t *msg;
     msg_hdr_t *msg_hdr;
     for(i = 0; i < Threads[tid]->num_PTs; i++) {
+
             // printf("Output port size for PT %u: %d\n", Threads[tid]->PTs[i]->tid), atomic_read(&Threads[tid]->PTs[i]->output_port->size);
         while((msg = pt_get_out_msg(Threads[tid]->PTs[i]->tid)) != NULL) {
 
@@ -602,6 +617,7 @@ void asym_extract_generated_msgs(void) {
                 msg_release(msg);
                 continue;
             }
+
 
             Send(msg);
 

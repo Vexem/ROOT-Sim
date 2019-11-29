@@ -172,3 +172,11 @@ struct lp_struct *find_lp_by_gid(GID_t gid) {
 	}
 	return NULL;
 }
+
+void update_last_processed(void){
+    foreach_bound_lp(lp){
+        if (lp->last_processed != lp->next_last_processed) {
+            lp->last_processed = lp->next_last_processed;
+        }
+    }
+}

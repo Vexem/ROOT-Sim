@@ -60,11 +60,18 @@ int controller_committed_events = 0;
 atomic_t final_processed_events;
 __thread int my_processed_events = 0;
 timer threads_config_timer;
-double check_interval = 6.5;
+double check_interval = 4.5;
 static int reassign = false;
 
-/// A guard to know whether WTs are initialized or not
-static unsigned int starting_controllers;
+/// How many CTs have been stopped for thread reassignation (needed for the PT)
+static atomic_t CTs_to_stop;
+
+/// How many CTs have been stopped for thread reassignation (needed for the PT)
+static atomic_t PTs_to_stop;
+
+static unsigned int init_counter = 0;
+static bool first_init = true;
+
 
 /**
  * This jump buffer allows rootsim_error, in case of a failure, to jump
@@ -99,7 +106,7 @@ static bool end_computing(void) {
 	return false;
 }
 
-static void finish() {
+static void finish(void) {
 
     thread_barrier(&all_thread_barrier);
 
@@ -109,11 +116,11 @@ static void finish() {
     simulation_shutdown(EXIT_SUCCESS);
 }
 
-static void wait(){
+static void wait(void){
     thread_barrier(&all_thread_barrier);
 }
 
-static void symmetric_execution() {
+static void symmetric_execution(void) {
 
     simtime_t my_time_barrier = -1.0;
 
@@ -178,24 +185,31 @@ static void symmetric_execution() {
     }
 }
 
-static void asymmetric_execution() {
+static void asymmetric_execution(void) {
 
     simtime_t my_time_barrier = -1.0;
     timer_start(threads_config_timer);
-    starting_controllers = rootsim_config.num_controllers;
+
+    if(master_kernel() && master_thread ()){
+        atomic_set(&CTs_to_stop, rootsim_config.num_controllers);
+        atomic_set(&PTs_to_stop, n_cores-rootsim_config.num_controllers);
+    }
 
     BEGINNING:
 
-    if (Threads[local_tid]->incarnation == THREAD_CONTROLLER) {
+    if (Threads[tid]->incarnation == THREAD_CONTROLLER) {
 
-        if (unlikely(starting_controllers > 0)) {        //NO NEED OF AN ATOMIC OPERATION
-            initialize_worker_thread();  //Do the initial (local) LP binding, then execute INIT at all (local) LPs
-            starting_controllers -= 1;
+        if(first_init){
+            initialize_worker_thread();//Do the initial (local) LP binding, then execute INIT at all (local) LPs
+            init_counter ++;
+            if(init_counter == rootsim_config.num_controllers)
+                first_init = false;
         }
 
         #ifdef HAVE_MPI
         syncronize_all();
         #endif
+
 
         while (!end_computing()) {
 
@@ -215,6 +229,8 @@ static void asymmetric_execution() {
             receive_remote_msgs();
             prune_outgoing_queues();
             #endif
+
+            update_last_processed();
 
             asym_extract_generated_msgs();  //Read output ports of all bound PTs
 
@@ -251,26 +267,48 @@ static void asymmetric_execution() {
             collect_termination();
             #endif
 
-            if (timer_value_seconds(threads_config_timer) > check_interval && master_kernel() && master_thread () ) {
-                reassign = true;
-                fprintf(stdout,"REASSIGNATION...\n");
+            if (timer_value_seconds(threads_config_timer) > check_interval && master_kernel() && master_thread () && is_idle() ) {
+                if (reassign == false){
+                    reassign = true;
+                }
+                else{
+                    printf("'false' reassign status expected\n");
+                    abort();
+                }
+                fprintf(stdout,"\nREASSIGNATION... \n");
             }
 
             if(reassign == true) {
+                atomic_dec(&CTs_to_stop);
+
+                while(atomic_read(&PTs_to_stop) != 0);
+
+                asym_extract_generated_msgs();
+
+                if(check_output_channels_emptiness()==false) {
+                    printf("Channels are not empty\n");
+                    abort();
+                }
+
                 wait();
-                if(master_thread()) {
+                if(master_kernel() && master_thread ()) {
                     threads_reassign();
                     update_participants();
-                    fprintf(stdout, "REASSIGNATION DONE !\n");
+                    fprintf(stdout, "REASSIGNATION DONE !\n\n");
                     reassign = false;
-                    wait();
+                    atomic_set(&CTs_to_stop, rootsim_config.num_controllers);
+                    atomic_set(&PTs_to_stop, n_cores-rootsim_config.num_controllers);
+
                     timer_restart(threads_config_timer);
+                    wait();
                 }
                 else {
                     wait();
                 }
 
-                if(Threads[local_tid]->incarnation == THREAD_PROCESSING) goto BEGINNING;
+                if(Threads[local_tid]->incarnation == THREAD_PROCESSING){
+                    goto BEGINNING;
+                }
 
                 reassignation_rebind();
             }
@@ -290,22 +328,37 @@ static void asymmetric_execution() {
             asym_process();
 
             if(reassign == true){
-                do{
-                    asym_process();
-                   // fprintf(stdout, "Thread %d: MSGS in lo_prio: %d \n",local_tid,get_port_current_size(Threads[local_tid]->input_port[PORT_PRIO_LO]));
-                   // fprintf(stdout, "Thread %d: MSGS in hi_prio: %d \n",local_tid,get_port_current_size(Threads[local_tid]->input_port[PORT_PRIO_HI]));
-                } while (get_port_current_size(Threads[local_tid]->input_port[PORT_PRIO_LO]) != 0 &&
-                get_port_current_size(Threads[local_tid]->input_port[PORT_PRIO_HI]) != 0);
+                while (atomic_read(&CTs_to_stop) != 0);
 
-                wait();
+                while (!are_input_channels_empty()){
+                    asym_process();
+                }
+
+                if(!are_input_channels_empty()){
+                    printf("channels are not empty\n");
+                    abort();
+                }
+
+                atomic_dec(&PTs_to_stop);
+
+                while(get_port_current_size(Threads[local_tid]->output_port) != 0);
+
+                if(are_input_channels_empty()&&is_out_channel_empty(tid)){
+                    wait();
+                }
+                else {
+                    printf("OUTPUT or INPUT CHANNELS NOT EMPTY\n");
+                    abort();
+                }
+
                 wait();
                 if(Threads[local_tid]->incarnation == THREAD_CONTROLLER){
                     reassignation_rebind();
+                    update_GVT();
                     goto BEGINNING;
                 }
             }
         }
-
         atomic_add(&final_processed_events, my_processed_events);
         finish();
     }
@@ -327,7 +380,7 @@ static void *main_simulation_loop(void *arg) __attribute__((noreturn));
 static void *main_simulation_loop(void *arg) {
     (void)arg;
 
-    enum thread_incarnation incarnation = Threads[tid]->incarnation;
+    enum thread_incarnation incarnation = Threads[local_tid]->incarnation;
 
     if(incarnation == THREAD_SYMMETRIC) {
         symmetric_execution();

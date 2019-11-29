@@ -112,6 +112,8 @@ static atomic_t counter_B;
  */
 static __thread simtime_t last_gvt = 0.0;
 
+static simtime_t updated_gvt = 0.0;
+
 // last agreed KVT
 static volatile simtime_t new_gvt = 0.0;
 
@@ -204,13 +206,14 @@ inline simtime_t get_last_gvt(void) {
 
 static inline void reduce_local_gvt(void) {
 
+
 	foreach_bound_lp(lp) {
 		// If no message has been processed, local estimate for
 		// GVT is forced to 0.0. This can happen, e.g., if
 		// GVT is computed very early in the run
 		if (unlikely(lp->last_processed == NULL)) {
 			local_min[local_tid] = 0.0;
-			break;
+            break;
 		}
 
 		// GVT inheritance: if the current LP has no scheduled
@@ -225,6 +228,8 @@ static inline void reduce_local_gvt(void) {
 
         local_min[local_tid] = min(local_min[local_tid], lp->last_processed->timestamp);
         local_min[local_tid] = min(local_min[local_tid], lp->bound->timestamp);
+
+     //   printf("ROUND: %u, Thread:%d, gid:%u, last_proc:%f, bound_ts:%f\n", current_GVT_round,local_tid,lp->gid.to_int,lp->last_processed->timestamp,lp->bound->timestamp);
 
     }
 }
@@ -246,7 +251,8 @@ simtime_t GVT_phases(void) {
 
 		thread_phase = tphase_send;	// Entering phase send
 		atomic_dec(&counter_A);	// Notify finalization of phase A
-		return -1.0;
+
+        return -1.0;
 	}
 
 	if (thread_phase == tphase_send && atomic_read(&counter_A) == 0) {
@@ -269,6 +275,7 @@ simtime_t GVT_phases(void) {
 
         thread_phase = tphase_B;
         atomic_dec(&counter_send);
+
         return -1.0;
     }
 
@@ -292,7 +299,8 @@ simtime_t GVT_phases(void) {
 		thread_phase = tphase_aware;
 		atomic_dec(&counter_B);
 
-		if (atomic_read(&counter_B) == 0) {
+
+        if (atomic_read(&counter_B) == 0) {
 			simtime_t agreed_vt = INFTY;
             for (i = 0; i < gvt_participants; i++) {
                 agreed_vt = min(local_min[i], agreed_vt);
@@ -347,7 +355,7 @@ simtime_t gvt_operations(void) {
 
 			timer_start(gvt_round_timer);
 
-            #ifdef HAVE_MPI
+		    #ifdef HAVE_MPI
 			//inform all the other kernels about the new gvt
 			if (master_kernel()) {
 				broadcast_gvt_init(current_GVT_round);
@@ -431,10 +439,10 @@ simtime_t gvt_operations(void) {
 	/* KVT phase:
 	 * make all the threads agree on a common virtual time for this kernel */
 	if (kernel_phase == kphase_kvt && thread_phase != tphase_aware) {
-		simtime_t kvt = GVT_phases();
+ 		simtime_t kvt = GVT_phases();
 		if (D_DIFFER(kvt, -1.0)) {
             if (iCAS(&commit_kvt_tkn, 1, 0)) {
-#ifdef HAVE_MPI
+    #ifdef HAVE_MPI
 				join_gvt_redux(kvt);
 				kernel_phase = kphase_gvt_redux;
 
@@ -465,7 +473,7 @@ simtime_t gvt_operations(void) {
 	 * the last agreed GVT needs to be adopted by every thread */
 	if (kernel_phase == kphase_fossil && thread_phase == tphase_aware) {
 
-		// Execute fossil collection and termination detection
+  		// Execute fossil collection and termination detection
 		// Each thread stores the last computed value in last_gvt,
 		// while the return value is the gvt only for the master
 		// thread. To check for termination based on simulation time,
@@ -481,9 +489,10 @@ simtime_t gvt_operations(void) {
 		thread_phase = tphase_idle;
 		atomic_dec(&counter_finalized);
 
-		if (atomic_read(&counter_finalized) == 0) {
+        if (atomic_read(&counter_finalized) == 0) {
 			if (iCAS(&idle_tkn, 1, 0)) {
 				kernel_phase = kphase_idle;
+                updated_gvt = last_gvt;
                 // Notify the power cap module that a new statistic sample is available
             /*    if(rootsim_config.num_controllers > 0)
                     gvt_interval_passed = 1         */      //COINVOLGE power.h
@@ -492,4 +501,16 @@ simtime_t gvt_operations(void) {
 		return last_gvt;
 	}
 	return -1.0;
+}
+
+bool is_idle(void){
+    if (kernel_phase == kphase_idle){
+        return true;
+    }
+    return false;
+}
+
+void update_GVT(void){
+    my_GVT_round = current_GVT_round;
+    last_gvt = updated_gvt;
 }
