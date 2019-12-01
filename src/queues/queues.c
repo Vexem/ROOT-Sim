@@ -120,13 +120,6 @@ void insert_bottom_half(msg_t * msg)
 
 	validate_msg(msg);
 
-    if(msg->timestamp <get_last_gvt()){
-        printf("eccolo->");
-        dump_msg_content(msg);
-        abort();
-    }
-
-
     insert_msg(lp->bottom_halves, msg);
 #ifdef HAVE_PREEMPTION
 	update_min_in_transit(lp->worker_thread, msg->timestamp);

@@ -228,6 +228,7 @@ void ProcessEvent(int curr_lp, simtime_t event_ts, int event_type, event_content
 
             for(f = 0; f < FANOUT;f++){
                 ScheduleNewEvent(FindReceiver(), timestamp, LOOP, NULL, 0);
+                timestamp = event_ts + (simtime_t)(Expent(TAU));
             }
 
             /*
@@ -298,8 +299,10 @@ void ProcessEvent(int curr_lp, simtime_t event_ts, int event_type, event_content
 
 bool OnGVT(unsigned int me, lp_state_type *snapshot) {
 	(void)me;
-
-    fprintf(stdout,"PT%d: %.1f%% (%d events)\n", me, (double)snapshot->events/COMPLETE_EVENTS*100.0,snapshot->events);
+    if((double)snapshot->events<COMPLETE_EVENTS)
+        fprintf(stdout,"PT%d: %.1f%% (%d events)\n", me, (double)snapshot->events/COMPLETE_EVENTS*100.0,snapshot->events);
+    else
+        fprintf(stdout,"PT%d: COMPLETE (%d events)\n", me, snapshot->events);
 
 	if(snapshot->traditional) {
 		if(snapshot->events < COMPLETE_EVENTS)

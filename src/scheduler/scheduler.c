@@ -309,8 +309,13 @@ void activate_LP(struct lp_struct *next_LP, msg_t *next_evt) {
 		lp_alloc_deschedule();
 	}
     #endif
+	if(rootsim_config.num_controllers > 0){
+	    next_LP->next_last_processed = next_evt;
+	}
+	else
+	    next_LP->last_processed = next_evt;
 
-    next_LP->next_last_processed = next_evt;
+
     next_evt->unprocessed = false;      ///CONTROLLARE
 
     current = NULL;
@@ -792,7 +797,8 @@ void schedule_on_init(struct lp_struct *next)
 	next->state = LP_STATE_RUNNING;
 
 	activate_LP(next, event);
-	next->last_processed = next->next_last_processed;
+	if(rootsim_config.num_controllers>0)
+	    next->last_processed = next->next_last_processed;
 
 	if (!is_blocked_state(next->state)) {
 		next->state = LP_STATE_READY;

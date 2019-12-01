@@ -183,6 +183,7 @@ static void symmetric_execution(void) {
         collect_termination();
         #endif
     }
+    finish();
 }
 
 static void asymmetric_execution(void) {

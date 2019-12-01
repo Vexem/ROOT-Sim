@@ -53,7 +53,8 @@ struct lp_cost_id {
 struct lp_cost_id *lp_cost;
 
 /// A guard to know whether this is the first invocation or not
-static  bool first_lp_binding = true;
+static  bool asym_first_lp_binding = true;
+static __thread bool first_lp_binding = true;
 static  unsigned int binding_counter = 0;
 
 
@@ -178,6 +179,9 @@ static inline void LP_knapsack(void) {
 	bool assigned;
 	double assignments[n_cores];
 
+    if(rootsim_config.num_controllers == 0)
+        binding_threads = n_cores;
+
 	if (!master_thread())
 		return;
 
@@ -297,13 +301,20 @@ void rebind_LPs(void) {
         bt_updated = true;
     }
 
-    if(unlikely(first_lp_binding)) {
+    if(unlikely(asym_first_lp_binding)&&first_lp_binding) {
 
-        binding_counter++;
-
-        if(binding_counter == rootsim_config.num_controllers){
+        if(rootsim_config.num_controllers == 0){ //SYMMETRIC CASE
             first_lp_binding = false;
         }
+
+        else if (rootsim_config.num_controllers > 0) { //ASYMMETRIC CASE
+            binding_counter++;
+
+            if (binding_counter == rootsim_config.num_controllers) {
+                asym_first_lp_binding = false;
+            }
+        }
+
 
         initialize_binding_blocks();
 
