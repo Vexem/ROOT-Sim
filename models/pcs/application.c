@@ -318,8 +318,8 @@ bool OnGVT(unsigned int me, lp_state_type *snapshot) {
 	(void)me;
     if((double)snapshot->complete_calls/complete_calls*100.0<100.0)
         fprintf(stdout,"LP%d: %.1f%%\n", me, (double)snapshot->complete_calls/complete_calls*100.0);
-    else
-        fprintf(stdout,"LP%d: COMPLETE\n", me);
+   /* else
+        fprintf(stdout,"LP%d: COMPLETE\n", me);*/
 
 	if (snapshot->complete_calls < complete_calls)
 		return false;

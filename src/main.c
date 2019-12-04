@@ -328,35 +328,24 @@ static void asymmetric_execution(void) {
         while (!end_computing()) {
             asym_process();
 
-            if(reassign == true){
-                while (atomic_read(&CTs_to_stop) != 0);
+            if(are_input_channels_empty()){
+                if(reassign == true && atomic_read(&CTs_to_stop) == 0){
+                    atomic_dec(&PTs_to_stop);
 
-                while (!are_input_channels_empty()){
-                    asym_process();
-                }
-
-                if(!are_input_channels_empty()){
-                    printf("channels are not empty\n");
-                    abort();
-                }
-
-                atomic_dec(&PTs_to_stop);
-
-                while(get_port_current_size(Threads[local_tid]->output_port) != 0);
-
-                if(are_input_channels_empty()&&is_out_channel_empty(tid)){
+                    while(get_port_current_size(Threads[local_tid]->output_port) != 0);
+                    if(are_input_channels_empty()&&is_out_channel_empty(tid)){
+                        wait();
+                    }
+                    else {
+                        printf("OUTPUT or INPUT CHANNELS NOT EMPTY\n");
+                        abort();
+                    }
                     wait();
-                }
-                else {
-                    printf("OUTPUT or INPUT CHANNELS NOT EMPTY\n");
-                    abort();
-                }
-
-                wait();
-                if(Threads[local_tid]->incarnation == THREAD_CONTROLLER){
-                    reassignation_rebind();
-                    update_GVT();
-                    goto BEGINNING;
+                    if(Threads[local_tid]->incarnation == THREAD_CONTROLLER){
+                        reassignation_rebind();
+                        update_GVT();
+                        goto BEGINNING;
+                    }
                 }
             }
         }
