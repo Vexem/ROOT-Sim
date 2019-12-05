@@ -232,7 +232,7 @@ extern void barrier_init(barrier_t * b, int t);
 extern bool thread_barrier(barrier_t * b);
 extern void create_threads(unsigned short int n, void *(*start_routine)(void *), void *arg);
 void threads_init(void);
-void threads_reassign(void);
+void threads_reassign(int modifier);
 
 
 // Macros to retrieve messages from PT port

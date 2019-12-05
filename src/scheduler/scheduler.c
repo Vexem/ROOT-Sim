@@ -64,6 +64,8 @@
 #include <statistics/statistics.h>
 #include <arch/x86/linux/cross_state_manager/cross_state_manager.h>
 #include <queues/xxhash.h>
+#include <score/score.h>
+
 
 /// This is used to keep track of how many LPs were bound to the current KLT
 __thread unsigned int n_lp_per_thread;
@@ -527,12 +529,14 @@ void asym_schedule(void) {
         ///The bigger the utilization rate is, the smaller amount of free space the port can offer
         //   printf("port_current_size[PT->tid]: %d, utilization_rate: %f, port_batch_size: %d \n",port_current_size[PT->tid], utilization_rate,PT->port_batch_size);
         if (utilization_rate > UPPER_PORT_THRESHOLD) {
+            modify_score(UPPER_THRESHOLD_MODIFIER);
             if (PT->port_batch_size <= (MAX_PORT_SIZE - BATCH_STEP)) {
                 PT->port_batch_size += BATCH_STEP;
             } else if (PT->port_batch_size < MAX_PORT_SIZE) {
                 PT->port_batch_size++;
             }
         } else if (utilization_rate < LOWER_PORT_THRESHOLD) {
+            modify_score(LOWER_THRESHOLD_MODIFIER);
             if (PT->port_batch_size > BATCH_STEP) {
                 PT->port_batch_size -= BATCH_STEP;
             } else if (PT->port_batch_size > 1) {
@@ -591,6 +595,7 @@ void asym_schedule(void) {
                      chosen_LP->bound->timestamp, 0, NULL);// Send rollback notice in the high priority port
             rb_management->message_kind = control;
             rb_management->mark = mark;
+            chosen_LP->start = clock();   ///Start the turnaround timer
             pt_put_hi_prio_msg(chosen_LP->processing_thread, rb_management);
 
             chosen_LP->state = LP_STATE_WAIT_FOR_ROLLBACK_ACK;  //BLOCKED STATE
@@ -633,12 +638,17 @@ void asym_schedule(void) {
         if (unlikely(!to_be_sent_to_LP(chosen_EVT))) {    //NOT a message to be passed to the LP (a control msg)
             return;
         }
+        if(are_input_channels_empty(chosen_LP->processing_thread)){
+            moving_avg(1, EMPTY_PT_ID);
+        }
+        else
+            moving_avg(0,EMPTY_PT_ID);
 
         chosen_EVT->unprocessed = true;
         pt_put_lo_prio_msg(chosen_LP->processing_thread, chosen_EVT);
         sent_events++;
         events_to_fill_PT_port[chosen_LP->processing_thread]--;
-        int chosen_LP_id = chosen_LP->lid.to_int;
+        unsigned int chosen_LP_id = chosen_LP->lid.to_int;
 
         if (rootsim_config.scheduler == SCHEDULER_STF) {
 

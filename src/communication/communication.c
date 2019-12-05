@@ -45,6 +45,7 @@
 #include <mm/mm.h>
 #include <arch/atomic.h>
 #include <src/arch/thread.h>
+#include <score/score.h>
 
 #ifdef HAVE_MPI
 #include <communication/mpi.h>
@@ -555,6 +556,7 @@ void asym_extract_generated_msgs(void) {
 
     struct lp_struct *lp_sender, *lp_receiver;
     unsigned int i;
+    double cpu_time_used;
     msg_t *msg;
     msg_hdr_t *msg_hdr;
     for(i = 0; i < Threads[tid]->num_PTs; i++) {
@@ -565,6 +567,7 @@ void asym_extract_generated_msgs(void) {
             validate_msg(msg);
 
             if(is_control_msg(msg->type) && msg->type == ASYM_ROLLBACK_ACK) {
+
 
                 lp_receiver = find_lp_by_gid(msg->receiver);
 
@@ -606,6 +609,9 @@ void asym_extract_generated_msgs(void) {
 
                     lp_receiver->state = LP_STATE_ROLLBACK_ALLOWED;
                     lp_receiver->rollback_status = IDLE;
+                    lp_receiver->end = clock();
+                    cpu_time_used = (((double) (lp_receiver->end - lp_receiver->start)) / CLOCKS_PER_SEC)*100;
+                    moving_avg(cpu_time_used, BUBBLE_TURNAROUND_ID);
                     goto discard;
                 }
 

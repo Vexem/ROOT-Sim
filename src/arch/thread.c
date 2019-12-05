@@ -226,19 +226,12 @@ bool thread_barrier(barrier_t * b) {
 	return false;
 }
 
-void threads_reassign(void){
+void threads_reassign(int modifier){
 
-    unsigned int max_controllers = n_cores/2;
     unsigned int idx;
     unsigned int curr_ct = 0;
 
-
-    if(rootsim_config.num_controllers+1<= max_controllers){
-        rootsim_config.num_controllers += 1 ;
-    }
-    else if(rootsim_config.num_controllers-1 >= 1){
-        rootsim_config.num_controllers -= 1 ;
-    }
+    rootsim_config.num_controllers += modifier ;
 
     for(idx = 0; idx < n_cores; idx++) {
 

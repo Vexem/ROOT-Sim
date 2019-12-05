@@ -44,6 +44,7 @@
 #include <scheduler/process.h>
 #include <gvt/gvt.h>
 #include <mm/mm.h>
+#include <score/score.h>
 
 #ifdef HAVE_CROSS_STATE
 #include <mm/ecs.h>
@@ -60,7 +61,7 @@ int controller_committed_events = 0;
 atomic_t final_processed_events;
 __thread int my_processed_events = 0;
 timer threads_config_timer;
-double check_interval = 4.5;
+double check_interval = 0.5;
 static int reassign = false;
 
 /// How many CTs have been stopped for thread reassignation (needed for the PT)
@@ -71,6 +72,9 @@ static atomic_t PTs_to_stop;
 
 static unsigned int init_counter = 0;
 static bool first_init = true;
+
+///add or remove CTs
+static int thread_configuration_modifier;
 
 
 /**
@@ -105,6 +109,7 @@ static bool end_computing(void) {
 
 	return false;
 }
+
 
 static void finish(void) {
 
@@ -214,6 +219,8 @@ static void asymmetric_execution(void) {
 
         while (!end_computing()) {
 
+            reset_score();
+
             // We assume that thread with tid 0 should be a controller.
             // Should be adapted for MPI.
 
@@ -268,15 +275,27 @@ static void asymmetric_execution(void) {
             collect_termination();
             #endif
 
-            if (timer_value_seconds(threads_config_timer) > check_interval && master_kernel() && master_thread () && is_idle() ) {
-                if (reassign == false){
-                    reassign = true;
+            if (/*timer_value_seconds(threads_config_timer) > check_interval && */master_kernel() && master_thread () && is_idle() ) {
+                if(get_score() >= SCORE_HIGHER_THRESHOLD && rootsim_config.num_controllers+1<= n_cores/2){
+                    printf(">= SCORE_HIGHER_THRESHOLD - SCORE: %d\n",get_score());
+                    thread_configuration_modifier = 1;
+                }
+                else if(get_score() <= SCORE_LOWER_THRESHOLD && rootsim_config.num_controllers-1 >= 1){
+                    printf("<= SCORE_LOWER_THRESHOLD - SCORE: %d\n",get_score());
+                    thread_configuration_modifier = -1;
                 }
                 else{
+                    thread_configuration_modifier = 0;
+                }
+
+                if (reassign == false && thread_configuration_modifier!=0 ){
+                    reassign = true;
+                    fprintf(stdout,"\nREASSIGNATION... \n");
+                }
+                else if (reassign == true){
                     printf("'false' reassign status expected\n");
                     abort();
                 }
-                fprintf(stdout,"\nREASSIGNATION... \n");
             }
 
             if(reassign == true) {
@@ -293,7 +312,7 @@ static void asymmetric_execution(void) {
 
                 wait();
                 if(master_kernel() && master_thread ()) {
-                    threads_reassign();
+                    threads_reassign(thread_configuration_modifier);
                     update_participants();
                     fprintf(stdout, "REASSIGNATION DONE !\n\n");
                     reassign = false;
@@ -328,12 +347,12 @@ static void asymmetric_execution(void) {
         while (!end_computing()) {
             asym_process();
 
-            if(are_input_channels_empty()){
+            if(are_input_channels_empty(local_tid)){
                 if(reassign == true && atomic_read(&CTs_to_stop) == 0){
                     atomic_dec(&PTs_to_stop);
 
                     while(get_port_current_size(Threads[local_tid]->output_port) != 0);
-                    if(are_input_channels_empty()&&is_out_channel_empty(tid)){
+                    if(are_input_channels_empty(local_tid)&&is_out_channel_empty(tid)){
                         wait();
                     }
                     else {

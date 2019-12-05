@@ -163,9 +163,10 @@ int get_port_current_size(msg_channel *mc){
 }
 
 
-bool are_input_channels_empty(void){
-    return(get_port_current_size(Threads[local_tid]->input_port[PORT_PRIO_LO]) == 0 &&
-           get_port_current_size(Threads[local_tid]->input_port[PORT_PRIO_HI]) == 0);
+
+bool are_input_channels_empty(int id){
+    return(get_port_current_size(Threads[id]->input_port[PORT_PRIO_LO]) == 0 &&
+           get_port_current_size(Threads[id]->input_port[PORT_PRIO_HI]) == 0);
 }
 
 

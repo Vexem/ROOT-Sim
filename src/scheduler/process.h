@@ -144,6 +144,9 @@ struct lp_struct {
     /// avoid nested rollback processing
     unsigned long long rollback_mark;
 
+    /// A per-LP timer to measure to turnaroud time of a rollback notice/ack message exchange
+    clock_t start, end;
+
 	/// Buffer used by KLTs for buffering outgoing messages during the execution of an event
 	outgoing_t outgoing_buffer;
 
