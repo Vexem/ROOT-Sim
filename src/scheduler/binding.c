@@ -57,6 +57,7 @@ static  bool asym_first_lp_binding = true;
 static __thread bool first_lp_binding = true;
 static  unsigned int binding_counter = 0;
 
+static bool green_flag = false;
 
 static unsigned int *new_LPS_binding;
 static timer rebinding_timer;
@@ -370,6 +371,8 @@ void rebind_LPs(void) {
         #ifdef HAVE_PREEMPTION
 		reset_min_in_transit(local_tid);
         #endif
+		if (controller_barrier.num_threads !=rootsim_config.num_controllers)
+		    barrier_init(&controller_barrier, rootsim_config.num_controllers);
 		if (thread_barrier(&controller_barrier)) {
 			atomic_set(&worker_thread_reduction, binding_threads);
 		}

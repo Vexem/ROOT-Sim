@@ -70,8 +70,6 @@ static atomic_t CTs_to_stop;
 /// How many CTs have been stopped for thread reassignation (needed for the PT)
 static atomic_t PTs_to_stop;
 
-static unsigned int init_counter = 0;
-static bool first_init = true;
 
 ///add or remove CTs
 static int thread_configuration_modifier;
@@ -201,21 +199,15 @@ static void asymmetric_execution(void) {
         atomic_set(&PTs_to_stop, n_cores-rootsim_config.num_controllers);
     }
 
-    BEGINNING:
-
     if (Threads[tid]->incarnation == THREAD_CONTROLLER) {
 
-        if(first_init){
-            initialize_worker_thread();//Do the initial (local) LP binding, then execute INIT at all (local) LPs
-            init_counter ++;
-            if(init_counter == rootsim_config.num_controllers)
-                first_init = false;
-        }
+        initialize_worker_thread();//Do the initial (local) LP binding, then execute INIT at all (local) LPs
 
         #ifdef HAVE_MPI
         syncronize_all();
         #endif
 
+        CONTROLLER_THREAD:
 
         while (!end_computing()) {
 
@@ -327,7 +319,7 @@ static void asymmetric_execution(void) {
                 }
 
                 if(Threads[local_tid]->incarnation == THREAD_PROCESSING){
-                    goto BEGINNING;
+                    goto PROCESSING_THREAD;
                 }
 
                 reassignation_rebind();
@@ -337,12 +329,14 @@ static void asymmetric_execution(void) {
         finish();
     }
 
+
     if (Threads[local_tid]->incarnation == THREAD_PROCESSING) {
 
         #ifdef HAVE_CROSS_STATE
         lp_alloc_thread_init();
         #endif
 
+        PROCESSING_THREAD:
 
         while (!end_computing()) {
             asym_process();
@@ -363,7 +357,7 @@ static void asymmetric_execution(void) {
                     if(Threads[local_tid]->incarnation == THREAD_CONTROLLER){
                         reassignation_rebind();
                         update_GVT();
-                        goto BEGINNING;
+                        goto CONTROLLER_THREAD;
                     }
                 }
             }

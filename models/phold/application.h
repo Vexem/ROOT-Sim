@@ -25,7 +25,7 @@
 
 #define COMPLETE_EVENTS 1000	// for the LOOP traditional case
 #define LOOP_COUNT	100000
-#define FANOUT 10
+#define FANOUT 5
 
 
 // This is the events' payload which is exchanged across LPs
