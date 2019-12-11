@@ -58,6 +58,7 @@
 #ifdef INIT
 #undef INIT
 #endif
+
 /// This is the message code which is sent by the simulation kernel upon startup
 #define INIT	1
 

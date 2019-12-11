@@ -371,8 +371,12 @@ void rebind_LPs(void) {
         #ifdef HAVE_PREEMPTION
 		reset_min_in_transit(local_tid);
         #endif
-		if (controller_barrier.num_threads !=rootsim_config.num_controllers)
-		    barrier_init(&controller_barrier, rootsim_config.num_controllers);
+		if (controller_barrier.num_threads != rootsim_config.num_controllers && rootsim_config.num_controllers > 0){
+		    if (master_kernel() && master_thread())
+		        barrier_init(&controller_barrier, rootsim_config.num_controllers);
+		    else
+		        while (controller_barrier.num_threads != rootsim_config.num_controllers);
+		}
 		if (thread_barrier(&controller_barrier)) {
 			atomic_set(&worker_thread_reduction, binding_threads);
 		}

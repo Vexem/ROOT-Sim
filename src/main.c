@@ -63,6 +63,8 @@ __thread int my_processed_events = 0;
 timer threads_config_timer;
 double check_interval = 0.5;
 static int reassign = false;
+clock_t start, end;
+
 
 /// How many CTs have been stopped for thread reassignation (needed for the PT)
 static atomic_t CTs_to_stop;
@@ -112,6 +114,10 @@ static bool end_computing(void) {
 static void finish(void) {
 
     thread_barrier(&all_thread_barrier);
+    if(master_kernel() && master_thread()){
+        end = clock();
+        printf("Execution time: %f\n", (((double) (end - start)) / CLOCKS_PER_SEC)*100);
+    }
 
     if (simulation_error()) {  //If we're exiting due to an error, we neatly shut down the simulation
         simulation_shutdown(EXIT_FAILURE);
@@ -382,6 +388,8 @@ extern atomic_t would_preempt;
 static void *main_simulation_loop(void *arg) __attribute__((noreturn));
 static void *main_simulation_loop(void *arg) {
     (void)arg;
+    if(master_kernel() && master_thread ())
+        start = clock();
 
     enum thread_incarnation incarnation = Threads[local_tid]->incarnation;
 
