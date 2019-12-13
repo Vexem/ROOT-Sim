@@ -63,7 +63,7 @@ __thread int my_processed_events = 0;
 timer threads_config_timer;
 double check_interval = 0.5;
 static int reassign = false;
-clock_t start, end;
+time_t start, end;
 
 
 /// How many CTs have been stopped for thread reassignation (needed for the PT)
@@ -115,8 +115,8 @@ static void finish(void) {
 
     thread_barrier(&all_thread_barrier);
     if(master_kernel() && master_thread()){
-        end = clock();
-        printf("Execution time: %f\n", (((double) (end - start)) / CLOCKS_PER_SEC)*100);
+        end = time(NULL);
+        printf("Execution time: %lld seconds\n", end - start);
     }
 
     if (simulation_error()) {  //If we're exiting due to an error, we neatly shut down the simulation
@@ -253,7 +253,7 @@ static void asymmetric_execution(void) {
                     #ifdef HAVE_PREEMPTION
                     printf("TIME BARRIER %f - %d preemptions - %d in platform mode - %d would preempt\n", my_time_barrier, atomic_read(&preempt_count), atomic_read(&overtick_platform), atomic_read(&would_preempt));
                     #else
-                    fprintf(stdout,"TIME BARRIER %f\n", my_time_barrier);
+                    fprintf(stdout,"TIME BARRIER %f, # controllers: %d\n", my_time_barrier, rootsim_config.num_controllers);
                     #endif
 
                     fprintf(stdout,"\tPorts-> ");
@@ -275,11 +275,11 @@ static void asymmetric_execution(void) {
 
             if (/*timer_value_seconds(threads_config_timer) > check_interval && */master_kernel() && master_thread () && is_idle() ) {
                 if(get_score() >= SCORE_HIGHER_THRESHOLD && rootsim_config.num_controllers+1<= n_cores/2){
-                    printf(">= SCORE_HIGHER_THRESHOLD - SCORE: %d\n",get_score());
+                   // printf(">= SCORE_HIGHER_THRESHOLD - SCORE:%d\n",get_score());
                     thread_configuration_modifier = 1;
                 }
                 else if(get_score() <= SCORE_LOWER_THRESHOLD && rootsim_config.num_controllers-1 >= 1){
-                    printf("<= SCORE_LOWER_THRESHOLD - SCORE: %d\n",get_score());
+                   // printf("<= SCORE_LOWER_THRESHOLD - SCORE:%d\n",get_score());
                     thread_configuration_modifier = -1;
                 }
                 else{
@@ -288,7 +288,7 @@ static void asymmetric_execution(void) {
 
                 if (reassign == false && thread_configuration_modifier!=0 ){
                     reassign = true;
-                    fprintf(stdout,"\nREASSIGNATION... \n");
+                    //fprintf(stdout,"\nREASSIGNATION... \n");
                 }
                 else if (reassign == true){
                     printf("'false' reassign status expected\n");
@@ -312,7 +312,7 @@ static void asymmetric_execution(void) {
                 if(master_kernel() && master_thread ()) {
                     threads_reassign(thread_configuration_modifier);
                     update_participants();
-                    fprintf(stdout, "REASSIGNATION DONE !\n\n");
+                    //fprintf(stdout, "REASSIGNATION DONE !\n\n");
                     reassign = false;
                     atomic_set(&CTs_to_stop, rootsim_config.num_controllers);
                     atomic_set(&PTs_to_stop, n_cores-rootsim_config.num_controllers);
@@ -389,7 +389,7 @@ static void *main_simulation_loop(void *arg) __attribute__((noreturn));
 static void *main_simulation_loop(void *arg) {
     (void)arg;
     if(master_kernel() && master_thread ())
-        start = clock();
+        start = time(NULL);
 
     enum thread_incarnation incarnation = Threads[local_tid]->incarnation;
 

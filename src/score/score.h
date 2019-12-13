@@ -1,5 +1,7 @@
 #pragma once
 
+#define TEMPORAL_PERIOD 3
+
 #define SCORE_HIGHER_THRESHOLD 4
 #define SCORE_LOWER_THRESHOLD -4
 
@@ -24,6 +26,6 @@
 extern void reset_score(void);
 extern void modify_score(int modifier);
 extern int get_score(void);
-extern void moving_avg(double value, int id);
+extern void exponential_moving_avg(double value, int id);
 extern void evaluate_avg(int id);
 extern void post_stragglers_percentage(double percentage);

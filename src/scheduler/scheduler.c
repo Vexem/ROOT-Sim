@@ -639,10 +639,10 @@ void asym_schedule(void) {
             return;
         }
         if(are_input_channels_empty(chosen_LP->processing_thread)){
-            moving_avg(1, EMPTY_PT_ID);
+            exponential_moving_avg(1, EMPTY_PT_ID);
         }
         else
-            moving_avg(0,EMPTY_PT_ID);
+            exponential_moving_avg(0, EMPTY_PT_ID);
 
         chosen_EVT->unprocessed = true;
         pt_put_lo_prio_msg(chosen_LP->processing_thread, chosen_EVT);

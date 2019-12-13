@@ -299,7 +299,7 @@ void ProcessEvent(int curr_lp, simtime_t event_ts, int event_type, event_content
 
 bool OnGVT(unsigned int me, lp_state_type *snapshot) {
 	(void)me;
-    if((double)snapshot->events<COMPLETE_EVENTS)
+   /* if((double)snapshot->events<COMPLETE_EVENTS)
         fprintf(stdout,"PT%d: %.1f%% (%d events)\n", me, (double)snapshot->events/COMPLETE_EVENTS*100.0,snapshot->events);
     else
         fprintf(stdout,"PT%d: COMPLETE (%d events)\n", me, snapshot->events);
@@ -308,7 +308,7 @@ bool OnGVT(unsigned int me, lp_state_type *snapshot) {
 		if(snapshot->events < COMPLETE_EVENTS)
 			return false;
 		return true;
-	}
+	}*/
 
 
 	// Did we perform enough allocations?

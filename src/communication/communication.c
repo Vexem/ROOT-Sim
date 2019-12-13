@@ -578,20 +578,17 @@ void asym_extract_generated_msgs(void) {
                  *  - LP_y is picked by STF: NOTICE/BUBBLES are sent to PT
                  *  - PT sends back ACK for LP_x, for the first incarnation of rollback
                  */
-                if(lp_receiver->rollback_status == REQUESTED) {
+
+                if(lp_receiver->rollback_status == REQUESTED || lp_receiver->rollback_mark > msg->mark) {
                     goto discard;
                 }
 
-                if(lp_receiver->rollback_status == PROCESSING && lp_receiver->rollback_mark > msg->mark) {
-                    goto discard;
-                }
-
-                if(lp_receiver->rollback_status == IDLE) {  //integrity check
+               /* if(lp_receiver->rollback_status == IDLE) {  //integrity check
                     printf("\tERROR: The impossible happened, LP%u with rollback_mark = %llu and rb_status IDLE just received a ROLLBACK_ACK",
                             lp_receiver->gid.to_int,lp_receiver->rollback_mark);
                     dump_msg_content(msg);
                     abort();
-                }
+                }*/
 
                 if(lp_receiver->rollback_mark < msg->mark) {    //integrity check
                     printf("\tERROR: msg mark (%llu) CANNOT BE BIGGER than LP%u's rollback mark (%llu)\n",msg->mark,lp_receiver->gid.to_int,lp_receiver->rollback_mark);
@@ -611,7 +608,7 @@ void asym_extract_generated_msgs(void) {
                     lp_receiver->rollback_status = IDLE;
                     lp_receiver->end = clock();
                     cpu_time_used = (((double) (lp_receiver->end - lp_receiver->start)) / CLOCKS_PER_SEC)*100;
-                    moving_avg(cpu_time_used, BUBBLE_TURNAROUND_ID);
+                    exponential_moving_avg(cpu_time_used, BUBBLE_TURNAROUND_ID);
                     goto discard;
                 }
 

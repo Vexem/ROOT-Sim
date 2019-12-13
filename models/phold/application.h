@@ -15,7 +15,7 @@
 #define MIN_SIZE		32
 #define OBJECT_TOTAL_SIZE	16000
 #define NUM_BUFFERS		3
-#define TAU			5
+#define TAU			1.5
 #define COMPLETE_ALLOC		5000
 
 // Event types
@@ -23,7 +23,7 @@
 #define DEALLOC 	2
 #define LOOP		3
 
-#define COMPLETE_EVENTS 1000	// for the LOOP traditional case
+#define COMPLETE_EVENTS 2000	// for the LOOP traditional case
 #define LOOP_COUNT	100000
 #define FANOUT 5
 

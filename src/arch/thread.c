@@ -260,8 +260,8 @@ void threads_reassign(int modifier){
             Threads[idx]->CT = Threads[curr_ct];
             Threads[curr_ct]->PTs[Threads[curr_ct]->num_PTs] = Threads[idx];
 
-            printf("PT %d sees as its CT: %d\n", Threads[idx]->tid, Threads[idx]->CT->tid);
-            printf("CT %d has got a new PT: %d\n", Threads[curr_ct]->tid, Threads[curr_ct]->PTs[Threads[curr_ct]->num_PTs]->tid);
+            //printf("PT %d sees as its CT: %d\n", Threads[idx]->tid, Threads[idx]->CT->tid);
+            //printf("CT %d has got a new PT: %d\n", Threads[curr_ct]->tid, Threads[curr_ct]->PTs[Threads[curr_ct]->num_PTs]->tid);
 
             Threads[curr_ct]->num_PTs++;
             curr_ct = (curr_ct + 1) % rootsim_config.num_controllers;
